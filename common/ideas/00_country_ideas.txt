@@ -4083,7 +4083,7 @@ javan_ideas = {
 	
 	trigger = {
 		OR = {
-			tag = MAJ
+			#tag = MAJ
 			tag = SUN
 		}
 	}
