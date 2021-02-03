@@ -112,7 +112,9 @@ new_world_player_nerf = {
 			}	
 			capital_scope = {
 				continent = oceania
-			}	
+			}
+			is_former_colonial_nation = yes
+			has_country_flag = changed_from_colonial_nation
 		}
 	}
 
