@@ -22,12 +22,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						colonial_region = colonial_alaska
+						colonial_region = colonial_california
 						is_core = ROOT
 					}
 				}
 			}
-			colonial_alaska = {
+			colonial_california = {
 				owned_by = ROOT
 			}
 			ai = no
@@ -45,7 +45,7 @@ country_decisions = {
 			is_at_war = no
 			NOT = { exists = CAL }
 			capital_scope = {
-				colonial_region = colonial_alaska
+				colonial_region = colonial_california
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
@@ -91,7 +91,7 @@ country_decisions = {
 				}
 				change_primary_culture = mexican
 			}
-			colonial_alaska = {
+			colonial_california = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
