@@ -44,4 +44,22 @@ country_decisions = {
 	#		factor = 0
 	#	}
 	#}
+	#ARUMBA LINES
+	dev_sum_clicks_decision = {
+		major = yes
+		potential = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = dev_sum_clicks_decision_tooltip
+				always = no
+			}
+		}
+		effect = {
+		}
+	}
 }

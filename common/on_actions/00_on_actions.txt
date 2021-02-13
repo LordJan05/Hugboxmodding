@@ -53,6 +53,76 @@ on_startup = {
 			disaster = french_revolution
 		}
 	}
+	#### Dev click counter ###
+
+	every_country = {
+		if = {
+			limit = {
+				check_variable = {
+					which = dev_adm_clicks					
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = dev_adm_clicks
+				value = 0
+			}
+		}
+	}
+	
+	#ARUMBA LINES
+	every_country = {
+		if = {
+			limit = {
+				check_variable = {
+					which = dev_dip_clicks					
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = dev_dip_clicks
+				value = 0
+			}
+		}
+	}
+	
+	every_country = {
+		if = {
+			limit = {
+				check_variable = {
+					which = dev_mil_clicks					
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = dev_mil_clicks
+				value = 0
+			}
+		}
+	}
+	
+	every_country = {
+		if = {
+			limit = {
+				check_variable = {
+					which = dev_sum_clicks					
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = dev_sum_clicks
+				value = 0
+			}
+		}
+	}
 }
 
 # country
@@ -1495,14 +1565,53 @@ on_dismantle_revolution = {
 
 # province
 on_adm_development = {
+	#ARUMBA LINES
+    hidden_effect = {
+		owner = {
+			change_variable = {
+				which = dev_adm_clicks
+				value = 1
+			}
+			change_variable = {
+				which = dev_sum_clicks
+				value = 1
+			}
+		}
+	}
 }
 
 # province
 on_dip_development = {
+	#ARUMBA LINES
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = dev_dip_clicks
+				value = 1
+			}
+			change_variable = {
+				which = dev_sum_clicks
+				value = 1
+			}
+		}
+	}
 }
 
 # province
 on_mil_development = {
+	#ARUMBA LINES
+    hidden_effect = {
+		owner = {
+			change_variable = {
+				which = dev_mil_clicks
+				value = 1
+			}
+			change_variable = {
+				which = dev_sum_clicks
+				value = 1
+			}
+		}
+	}
 }
 
 on_overextension_pulse = {
