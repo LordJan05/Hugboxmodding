@@ -344,7 +344,7 @@ emp_hab_netherlands_branch = {
 			}
 		}
 		effect = {
-			west_guangdong_area = {
+			guangzhou_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }

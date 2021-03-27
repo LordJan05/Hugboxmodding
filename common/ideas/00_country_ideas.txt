@@ -2154,12 +2154,12 @@ MJZ_ideas = {
 
 MCH_ideas = {
 	start = {
-		leader_land_shock = 1	
+		land_morale = 0.1
 		land_maintenance_modifier = -0.05
 	}
 	
 	bonus = {
-		land_morale = 0.15	
+		land_morale = 0.05
 	}
 	
 	trigger = {
@@ -2188,6 +2188,7 @@ MCH_ideas = {
 	}
 	manchu_chinese_learning = {
 		mil_tech_cost_modifier = -0.1
+		leader_land_shock = 1	
 	}
 	seven_grievances = {
 		ae_impact = -0.1
@@ -8075,45 +8076,6 @@ LON_ideas = {
 	}
 	lon_nationalism = {
 		infantry_power = 0.1
-	}
-}
-
-CYI_ideas = {
-	start = {
-		defensiveness = 0.2
-		shock_damage_received = -0.1
-	}
-
-	bonus = {
-		manpower_recovery_speed = 0.1
-	}
-	
-	trigger = {
-		tag = CYI
-	}
-	free = yes
-	
-	cyi_strengthen_yi_caste_system = {
-		stability_cost_modifier = -0.1
-	}
-	cyi_deep_in_mountains = {
-		hostile_attrition = 1.0
-	}
-	cyi_chain_of_zimo_domains = {
-		reinforce_speed = 0.15
-	}
-	cyi_solar_calendar = {
-		global_tax_modifier = 0.1
-	}
-	cyi_promote_bimoism = {
-		tolerance_own = 2
-	}
-	cyi_renovate_skyward_tombs = {
-		legitimacy = 1
-		devotion = 1
-	}
-	cyi_children_of_the_black_tiger = {
-		land_morale = 0.1
 	}
 }
 
@@ -14668,49 +14630,6 @@ CHG_ideas = {
 	}
 	glory_of_conquest = {
 		#global_manpower_modifier = 0.25 (effect taken in OIR idea)
-	}
-}
-
-CSH_ideas = {
-	start = {
-		global_manpower_modifier = 0.25
-		shock_damage_received = -0.15
-	}
-	
-	bonus = {
-		prestige = 1
-		manpower_recovery_speed = 0.15
-	}
-	
-	trigger = {
-		tag = CSH
-	}
-	free = yes
-	
-	shun_survive_against_hordes = {
-		defensiveness = 0.2
-		garrison_size = 0.3
-	}
-	shun_dashing_king = {
-		diplomatic_reputation = 1
-	}
-	shun_hidden_treasury = {
-		interest = -0.5
-	}
-	shun_obedient_to_heaven = {
-		land_morale = 0.1
-		stability_cost_modifier = -0.1
-	}
-	shun_money_goes_brrr = {
-		global_tax_modifier = 0.1
-	}
-	shun_from_sticks_to_guns = {
-		infantry_power = 0.15
-	}
-	shun_claim_to_the_mandate = {
-		imperial_mandate = 0.03
-		meritocracy = 0.5
-		legitimacy = 0.5
 	}
 }
 
