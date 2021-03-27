@@ -1574,6 +1574,9 @@ on_dismantle_revolution = {
 
 # province
 on_adm_development = {
+	owner = {
+			set_country_flag = zlewikk_eco_dev
+	}
 	#ARUMBA LINES
     hidden_effect = {
 		owner = {

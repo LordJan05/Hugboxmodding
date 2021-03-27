@@ -1,6 +1,0 @@
-on_adm_development = {
-	owner = {
-			set_country_flag = zlewikk_eco_dev
-		}
-}
-
