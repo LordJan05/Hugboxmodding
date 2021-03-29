@@ -13,13 +13,17 @@ on_startup = {
 	}
 	events = {
 		muslim_school_events.20 #Pick School
+		foffychina.31
 		mjl_events.4
-		mjl_events.2
+		#mjl_events.2
+		mjl_events.14
 		mjl_events.7
 		mjl_events.9
+		mjl_merc_events.1
 		mjl_merc_events.2
-		foffychina.31
+		mjl_mongol_events.1
 #		flavor_fra.15000 #Make the French Revolution happen if starting in 1789
+		flavor_brapru.15
 	}
 	if = {
 		limit = {
