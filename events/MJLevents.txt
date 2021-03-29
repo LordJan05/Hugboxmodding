@@ -732,3 +732,72 @@ country_event = {
 #		add_prestige = 5
 #	}
 #}
+
+country_event = {
+	id = mjl_events.14
+	title = "mjl_events.EVTNAME14"
+	desc = "mjl_events.EVTDESC14"
+	picture = Danny_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = HAB
+			tag = BRA
+			tag = SWI
+			tag = LAN
+			tag = BOH
+			tag = HES
+			tag = DAN
+			tag = HSA
+			tag = HAM
+			tag = SAX
+			tag = UBV
+			tag = ING
+			tag = LBV
+			tag = KOL
+			tag = HOL
+			tag = MLO
+			tag = DTT
+		}
+		NOT = { has_country_flag = mjl_hre_capital_spy_boost_flag }
+		is_part_of_hre = yes
+		capital_scope = {
+			is_part_of_hre = yes
+		}
+	}
+	immediate = {
+		set_country_flag = mjl_hre_capital_spy_boost_flag
+		add_country_modifier = {
+			name = "mjl_hre_spy_boost_modifier"
+			duration = 36500
+		}
+	}
+	option = {
+		name = "mjl_events.EVTOPTA14"
+	}
+}
+
+country_event = {
+	id = mjl_events.15
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+		add_country_modifier = {
+			name = "mjl_absolutism_age_max_abso"
+			duration = -1
+		}
+	}
+	option = {
+		name = "mjl_events.EVTOPTA15"
+	}
+}
