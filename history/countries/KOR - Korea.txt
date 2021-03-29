@@ -9,6 +9,11 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+add_country_modifier = {
+	name = "MJL_harmonized_mahayana"
+	duration = -1
+}
+
 
 
 1393.1.1 = {
