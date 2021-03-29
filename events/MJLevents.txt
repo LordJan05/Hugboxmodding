@@ -641,6 +641,36 @@ country_event = {
                 discover_province = PREV
             }
         }
+        te_waipounamu_area = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        te_ika_a_maui_area = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        melanesia_area = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        1431 = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        1430 = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        1432 = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
     }
     option = {
     }
