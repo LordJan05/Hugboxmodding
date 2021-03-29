@@ -315,6 +315,14 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
+			#inflation reset
+			if = {
+				limit = {
+					inflation = 5
+				}
+				add_inflation = -100
+				set_country_flag = mjl_colony_inflation_reset
+			}
 			#corruption reset
 			if = {
 				limit = {
@@ -355,18 +363,21 @@ country_event = {
 					has_reform = republican_authoritarianism_reform
 				}
 				remove_government_reform = republican_authoritarianism_reform
+				change_government_reform_progress = 100
 			}
 			if = {
 				limit = {
 					has_reform = nepotism_reform
 				}
 				remove_government_reform = nepotism_reform
+				change_government_reform_progress = 100
 			}
 			if = {
 				limit = {
 					has_reform = republicanism_reform
 				}
 				remove_government_reform = republicanism_reform
+				change_government_reform_progress = 100
 			}
 			#t3
 			if = {
@@ -374,12 +385,14 @@ country_event = {
 					has_reform = frequent_elections_reform
 				}
 				remove_government_reform = frequent_elections_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = consolidation_of_power_reform
 				}
 				remove_government_reform = consolidation_of_power_reform
+				change_government_reform_progress = 50
 			}
 			#t4
 			if = {
@@ -387,18 +400,21 @@ country_event = {
 					has_reform = provincial_governments_reform
 				}
 				remove_government_reform = provincial_governments_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = administrative_divisions_reform
 				}
 				remove_government_reform = administrative_divisions_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = union_of_states_reform
 				}
 				remove_government_reform = union_of_states_reform
+				change_government_reform_progress = 50
 			}
 			#t5
 			if = {
@@ -406,12 +422,14 @@ country_event = {
 					has_reform = parliamentary_reform
 				}
 				remove_government_reform = parliamentary_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = presidential_reform
 				}
 				remove_government_reform = presidential_reform
+				change_government_reform_progress = 50
 			}
 			#t6
 			if = {
@@ -419,12 +437,14 @@ country_event = {
 					has_reform = broaden_executive_powers_reform
 				}
 				remove_government_reform = broaden_executive_powers_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = devolution_of_powers_reform
 				}
 				remove_government_reform = devolution_of_powers_reform
+				change_government_reform_progress = 50
 			}
 			#t7
 			if = {
@@ -432,12 +452,14 @@ country_event = {
 					has_reform = political_principle_reform
 				}
 				remove_government_reform = political_principle_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = moral_principle_reform
 				}
 				remove_government_reform = moral_principle_reform
+				change_government_reform_progress = 50
 			}
 			#t8
 			if = {
@@ -445,18 +467,21 @@ country_event = {
 					has_reform = landholders_reform
 				}
 				remove_government_reform = landholders_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = citizenry_reform
 				}
 				remove_government_reform = citizenry_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = admiralty_reform
 				}
 				remove_government_reform = admiralty_reform
+				change_government_reform_progress = 50
 			}
 			#t9
 			if = {
@@ -464,18 +489,21 @@ country_event = {
 					has_reform = appointment_by_committee_reform
 				}
 				remove_government_reform = appointment_by_committee_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = bureaucratic_aparatus_reform
 				}
 				remove_government_reform = bureaucratic_aparatus_reform
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = universal_suffrage_reform
 				}
 				remove_government_reform = universal_suffrage_reform
+				change_government_reform_progress = 50
 			}
 			#t10
 			if = {
@@ -483,20 +511,28 @@ country_event = {
 					has_reform = strengthen_executive_powers_reform 
 				}
 				remove_government_reform = strengthen_executive_powers_reform 
-				change_government_reform_progress = 500
+				change_government_reform_progress = 50
 			}
 			if = {
 				limit = {
 					has_reform = reinforce_republican_values_reform
 				}
 				remove_government_reform = reinforce_republican_values_reform
-				change_government_reform_progress = 500
+				change_government_reform_progress = 50
 			}
 		}
 	}
 	option = {
 		name = "mjl_events.EVTOPTA7"
 		set_country_flag = mjl_cn_clean_up_ai_mess
+		if = {
+			limit = {
+				has_country_flag = mjl_colony_inflation_reset
+			}
+			clr_country_flag = mjl_colony_inflation_reset
+			custom_tooltip = mjl_colony_inflation_reset_tt
+		}
+
 		if = {
 			limit = {
 				has_country_flag = mjl_colony_stability_fix_3
