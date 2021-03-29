@@ -9,6 +9,11 @@ capital = 45	# Lübeck
 historical_friend = HAM #Hamburg
 historical_friend = BRE #Bremen
 historical_friend = RIG #Riga
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1444.11.11 = {
 	monarch = {

@@ -4,6 +4,11 @@ primary_culture = moluccan
 religion = animism
 technology_group = chinese
 capital = 649	# Ternate
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1377.1.1 = {
 	monarch = {

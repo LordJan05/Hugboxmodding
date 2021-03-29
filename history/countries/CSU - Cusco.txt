@@ -6,6 +6,11 @@ technology_group = andean
 unit_type = south_american
 capital = 808	# Cuzco
 fixed_capital = 808 # Cannot move capital away from this province & no power cost to move to it
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1399.1.1 = {
 	monarch = {

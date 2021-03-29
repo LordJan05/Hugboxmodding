@@ -5,6 +5,11 @@ technology_group = western
 primary_culture = irish
 religion = catholic
 capital = 4380	# Donegal
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1439.1.1 = {
 	monarch = {

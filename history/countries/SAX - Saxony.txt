@@ -6,6 +6,11 @@ religion = catholic
 elector = yes
 technology_group = western
 capital = 62 # Leipzig
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 
 #Elector

@@ -4,6 +4,11 @@ primary_culture = burmese
 religion = buddhism
 technology_group = chinese
 capital = 585 # Toungoo
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 
 1399.1.1 = {

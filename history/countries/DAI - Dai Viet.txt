@@ -4,6 +4,11 @@ primary_culture = vietnamese
 religion = mahayana
 technology_group = chinese
 capital = 613	# Hanoi
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 # Tran Dynasty, Later Le Dynasty, Mac Dynasty and Tay Son Dynasty
 

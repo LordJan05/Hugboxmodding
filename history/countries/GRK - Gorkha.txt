@@ -4,6 +4,11 @@ technology_group = indian
 primary_culture = nepali
 religion = hinduism
 capital = 4485	#Palpa
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 
 # Rajas of Ribdikot

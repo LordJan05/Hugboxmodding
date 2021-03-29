@@ -6,6 +6,11 @@ technology_group = muslim
 capital = 390	# Sana'a
 government_rank = 1
 religious_school = zaidi_school
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 
 #Imams of Yemen

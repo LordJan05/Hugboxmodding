@@ -5,6 +5,11 @@ religion = sunni
 primary_culture = crimean
 capital = 284	# Crimea
 religious_school = hanafi_school
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1441.1.1 = {
 	monarch = {

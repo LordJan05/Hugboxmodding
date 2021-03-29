@@ -9,6 +9,11 @@ capital = 1792	# Imerina
 unlock_cult = enkai_cult
 unlock_cult = waaq_cult
 unlock_cult = zanahary_cult
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1440.1.1 = {
 	monarch = {

@@ -5,6 +5,11 @@ religion = orthodox
 technology_group = eastern
 capital = 4176	# Krusevac
 historical_friend = BOS
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1389.1.1 = {
 	government_rank = 1

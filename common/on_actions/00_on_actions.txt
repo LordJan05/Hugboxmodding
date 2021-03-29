@@ -4097,6 +4097,10 @@ on_create_vassal = {
 			}
 		}
 	}
+	add_country_modifier = {
+		name = "mjl_privateer_efficiency_debuff"
+		duration = -1
+	}
 }
 
 # ROOT = Country establishing it
@@ -4189,6 +4193,10 @@ on_country_released = {
 				id = confucianism_reworked.3
 			}
 		}
+	}
+	add_country_modifier = {
+		name = "mjl_privateer_efficiency_debuff"
+		duration = -1
 	}
 }
 
@@ -4321,6 +4329,10 @@ on_create_client_state = {
 				id = confucianism_reworked.3
 			}
 		}
+	}
+	add_country_modifier = {
+		name = "mjl_privateer_efficiency_debuff"
+		duration = -1
 	}
 }
 
@@ -4576,5 +4588,9 @@ on_country_creation = {
 				id = confucianism_reworked.3
 			}
 		}
+	}
+	add_country_modifier = {
+		name = "mjl_privateer_efficiency_debuff"
+		duration = -1
 	}
 }

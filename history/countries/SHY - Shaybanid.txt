@@ -6,6 +6,11 @@ primary_culture = uzbehk
 capital = 1075 #Chimgi-Tura
 historical_rival = TIM
 religious_school = hanafi_school
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1425.1.1 = { 
 	monarch = { 

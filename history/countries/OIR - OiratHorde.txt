@@ -5,6 +5,11 @@ religion = tengri_pagan_reformed
 primary_culture = oirats
 capital = 718
 add_accepted_culture = khalkha
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 #Khans of the Oirats (Kalmyks, Dzungars)
 1399.1.1 = {
@@ -51,7 +56,8 @@ add_accepted_culture = khalkha
 		birth_date = 1393.1.1
 		leader = {
 			name = "Esen Taishi"
-			type = general
+			type = general
+
 			fire = 2
 			shock = 5
 			manuever = 5

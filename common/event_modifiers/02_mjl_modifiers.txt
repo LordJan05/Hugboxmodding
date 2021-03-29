@@ -91,3 +91,28 @@ mjl_boon_of_szyna = {
 	allowed_num_of_buildings = 1
 	local_unrest = -3
 }
+
+mjl_hre_spy_boost_modifier = {
+	spy_offence = 0.2
+}
+
+mjl_mongolia_movespeed_boost = {
+	local_hostile_movement_speed = 0.15
+	local_friendly_movement_speed = 0.15
+}
+
+mjl_privateer_efficiency_debuff = {
+	privateer_efficiency = -0.4
+}
+
+mjl_absolutism_age_max_abso = {
+	max_absolutism = 25
+}
+
+PR_commandant_cooldown = {
+	discipline = 0.001
+}
+
+PR_grand_captain_cooldown = {
+	land_morale = 0.001
+}

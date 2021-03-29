@@ -6,6 +6,11 @@ elector = yes
 technology_group = western
 capital = 85	# Köln
 fixed_capital = 85 # Cannot move capital away from this province & no power cost to move to it
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1372.1.1 = {
 	monarch = {

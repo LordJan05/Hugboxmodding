@@ -5,6 +5,11 @@ technology_group = western
 religion = catholic
 primary_culture = irish
 capital = 4118	# Cork
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 # Earls of Desmond
 

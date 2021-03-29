@@ -6,6 +6,11 @@ religion = sunni
 primary_culture = somali
 capital = 2775 #Merca
 religious_school = shafii_school
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
 
 1444.1.1 = {
 	monarch = {
