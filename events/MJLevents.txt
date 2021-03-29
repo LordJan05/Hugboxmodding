@@ -74,14 +74,13 @@ country_event = {
 	desc = "mjl_events.EVTDESC4"
 	picture = COURT_eventPicture
 	
+	is_triggered_only = yes
+
 	trigger = {
 		ai = no
 		has_dlc = "Cradle of Civilization"
 		religion_group = muslim
 		NOT = { has_country_flag = mjl_1444_change_school }
-	}
-	mean_time_to_happen = {
-		months = 1
 	}
 	option = {
 		name = "mjl_events.EVTOPTA4"
