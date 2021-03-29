@@ -31,6 +31,7 @@ NDefines.NEconomy.CARAVAN_FACTOR = 3
 NDefines.NEconomy.CARAVAN_POWER_MAX = 25
 NDefines.NEconomy.CARAVAN_POWER_MIN = 2
 NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 20
+NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
 
 
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 35
