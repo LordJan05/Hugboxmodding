@@ -212,12 +212,14 @@ estate_church =
 		estate_church_inwards_perfection
 		estate_church_enforced_one_faith
 		estate_church_for_the_faith
+		h_shun_mountains
+		estate_church_piety_privilege
+		estate_tun_church_piety_privilege
 		estate_church_monopoly_of_incense
 		estate_church_monopoly_of_wool
 		estate_church_monopoly_of_wine
 		estate_church_monopoly_of_slaves
 		estate_church_statutory_rights
-		h_shun_mountains
 	}
 
 	agendas = {
