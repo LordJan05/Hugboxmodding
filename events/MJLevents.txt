@@ -70,9 +70,9 @@ normal_or_historical_nations = yes
 
 country_event = {
 	id = mjl_events.4
-	title = "mjl_events.EVTNAME4"
-	desc = "mjl_events.EVTDESC4"
-	picture = COURT_eventPicture
+	title = muslim_school_events.20.t
+	desc = muslim_school_events.20.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
 	
 	is_triggered_only = yes
 
@@ -80,10 +80,23 @@ country_event = {
 		ai = no
 		has_dlc = "Cradle of Civilization"
 		religion_group = muslim
-		NOT = { has_country_flag = mjl_1444_change_school }
+		NOT = { has_country_modifier = change_school_modifier }
+		NOT = { has_country_flag = mjl_1444_change_school_on_start }
 	}
+
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_country_flag = mjl_1444_change_school
+			set_country_flag = mjl_1444_change_school_on_start
+		}
+	}
+
 	option = {
-		name = "mjl_events.EVTOPTA4"
+		name = muslim_school_events.20.b
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -91,10 +104,33 @@ country_event = {
 			group = muslim
 			school = hanafi_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTB4"
+		name = muslim_school_events.20.c
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -102,10 +138,33 @@ country_event = {
 			group = muslim
 			school = hanbali_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTC4"
+		name = muslim_school_events.20.dd
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -113,10 +172,33 @@ country_event = {
 			group = muslim
 			school = maliki_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTD4"
+		name = muslim_school_events.20.e
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -124,10 +206,33 @@ country_event = {
 			group = muslim
 			school = shafii_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTE4"
+		name = muslim_school_events.20.f
 		trigger = {
 			NOT = { religion = sunni }
 		}
@@ -135,10 +240,33 @@ country_event = {
 			group = muslim
 			school = jafari_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTF4"
+		name = muslim_school_events.20.g
 		trigger = {
 			NOT = { religion = sunni }
 		}
@@ -146,10 +274,33 @@ country_event = {
 			group = muslim
 			school = ismaili_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTG4"
+		name = muslim_school_events.20.h
 		trigger = {
 			NOT = { religion = sunni }
 		}
@@ -157,20 +308,43 @@ country_event = {
 			group = muslim
 			school = zaidi_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 }
 
 country_event = {
 	id = mjl_events.5
-	title = "mjl_events.EVTNAME5"
-	desc = "mjl_events.EVTDESC5"
-	picture = COURT_eventPicture
+	title = muslim_school_events.20.t
+	desc = muslim_school_events.20.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "mjl_events.EVTOPTA5"
+		name = muslim_school_events.20.b
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -178,10 +352,33 @@ country_event = {
 			group = muslim
 			school = hanafi_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTB5"
+		name = muslim_school_events.20.c
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -189,10 +386,33 @@ country_event = {
 			group = muslim
 			school = hanbali_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTC5"
+		name = muslim_school_events.20.dd
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -200,10 +420,33 @@ country_event = {
 			group = muslim
 			school = maliki_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTD5"
+		name = muslim_school_events.20.e
 		trigger = {
 			NOT = { religion = shiite }
 		}
@@ -211,10 +454,33 @@ country_event = {
 			group = muslim
 			school = shafii_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTE5"
+		name = muslim_school_events.20.f
 		trigger = {
 			NOT = { religion = sunni }
 		}
@@ -222,10 +488,33 @@ country_event = {
 			group = muslim
 			school = jafari_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTF5"
+		name = muslim_school_events.20.g
 		trigger = {
 			NOT = { religion = sunni }
 		}
@@ -233,18 +522,64 @@ country_event = {
 			group = muslim
 			school = ismaili_school
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 	option = {
-		name = "mjl_events.EVTOPTG5"
+		name = muslim_school_events.20.h
 		trigger = {
 			NOT = { religion = sunni }
 		}
 		set_religious_school = {
 			group = muslim
-			school = zaidi_school
+			school = zaidi_school 
 		}
-		set_country_flag = mjl_1444_change_school
+		hidden_effect = {
+			export_to_variable = {
+				which = change_school_modifier_was_set_year
+				value = trigger_value:is_year
+			}
+			export_to_variable = {
+				which = change_school_modifier_was_set_month
+				value = trigger_value:is_month
+			}
+			set_variable = {
+				which = change_school_modifier_length
+				value = 25
+			}
+			change_variable = {
+				which = change_school_modifier_length
+				which = change_school_modifier_was_set_year
+			}
+		}
+		add_country_modifier = {
+			name = change_school_modifier
+			duration = 9125
+			hidden = yes
+		}
+		clr_country_flag = mjl_1444_change_school
 	}
 }
 

@@ -37,6 +37,7 @@ monarchy = {
 				h_reform_warlord_3
 				h_reform_warlord_4
 				h_reform_sinicized_horde
+				seljuk_empire_government
 			}
 		}
 		hereditary_vs_nobility = {
@@ -140,6 +141,7 @@ monarchy = {
 		principality_legacy
 		tsardom_legacy
 		holy_state_legacy
+		seljuk_empire_government_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -405,6 +407,7 @@ tribal = {
 		tribal_federation_legacy
 		steppe_horde_legacy
 		siberian_native_council
+		seljuk_empire_government_legacy
 	}
 
 	reform_levels = {
@@ -417,6 +420,7 @@ tribal = {
 				siberian_tribe
 				gond_kingdom
 				great_mongol_state_reform
+				seljuk_empire_government
 			}
 		}
 		tribal_cultural_values = {
@@ -470,6 +474,7 @@ theocracy = {
 		theocratic_government
 		monastic_order_government
 		holy_state_legacy
+		crusade_against_the_world_legacy
 	}
 	reform_levels = {
 		theocratic_leadership = {
@@ -479,6 +484,7 @@ theocracy = {
 				papacy_reform
 				holy_state_reform
 				united_cantons_reform
+				crusade_against_the_world
 			}
 		}
 		internal_vs_external_mission = {
@@ -778,5 +784,13 @@ pre_dharma_mapping = {
 	h_reform_sinicized_horde = {
 		government = monarchy
 		legacy_government = despotic_monarchy
+	}
+	crusade_against_the_world = {
+		government = theocracy
+		legacy_government = crusade_against_the_world_legacy
+	}
+	seljuk_empire_government = {
+		government = monarchy
+		legacy_government = seljuk_empire_government_legacy
 	}
 }

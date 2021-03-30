@@ -2,3 +2,7 @@
 CHW = "countries/Bachwezi.txt"
 AFR = "countries/Toto.txt"
 GZW = "countries/Great Zimbabwe.txt"
+
+########################
+# Added by Sealand
+SJK = "countries/SeljukEmpire.txt"

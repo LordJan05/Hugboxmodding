@@ -1,0 +1,81 @@
+sea_TEU_ideas = {
+	start = {
+		cavalry_power = 0.1
+		discipline = 0.05
+	}
+	
+	bonus = {
+		global_institution_spread = 0.1
+	}
+	
+	trigger = {
+		tag = TEU
+		has_country_flag = the_spirits_of_tannenberg_flag
+	}
+	free = yes
+	
+	teu_idea_1 = {
+		cavalry_cost = -0.1	
+		infantry_cost = -0.1
+	}
+	teu_idea_2 = {
+		manpower_recovery_speed = 0.15
+	}
+	brother_knight_idea = { # Part of the_spirits_of_tannenberg mission.
+		infantry_power = 0.2
+		land_morale = 0.1
+	}
+	teu_idea_4 = {
+		papal_influence = 1
+		church_power_modifier = 0.05
+		global_missionary_strength = 0.02
+	}
+	teu_idea_5 = {
+		defensiveness = 0.15
+	}
+	teu_idea_6 = {
+		missionaries = 1
+	}
+	teu_idea_7 = {
+		tolerance_own = 1
+	}
+}
+
+SJK_ideas = { # Seljuk Empire
+	start = {
+		leader_land_shock = 1
+		cavalry_power = 0.33
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = SJK
+	}
+	free = yes
+	
+	unlimited_manpower = {
+		global_manpower_modifier = 0.33
+	}
+	masters_of_conquerors = {
+		province_warscore_cost = -0.05
+		core_creation = -0.1
+	}
+	the_grey_sheeps_of_qoyunlus = {
+		land_morale = 0.07
+		yearly_tribal_allegiance = 3
+	}
+	qar_dynamic_warfare = {
+		leader_land_manuever = 1
+	}
+	loyal_subjects_for_the_cause = {
+		reduced_liberty_desire = 10
+	}
+	wastness_of_seljuk_empire = {
+		governing_capacity_modifier = 0.2
+	}
+	seljuk_workmachines = {
+		global_trade_goods_size_modifier = 0.05
+		production_efficiency = 0.05
+	}
+}

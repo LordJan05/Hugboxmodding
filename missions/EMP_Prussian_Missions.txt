@@ -11,6 +11,7 @@ emp_bra_pru_1 = {
 		OR = {
 			tag = BRA
 			tag = PRU
+			has_country_flag = chose_join_the_empire_flag # Sealand (using it to find my added stuff faster)
 		}
 	}
 	has_country_shield = yes
@@ -164,10 +165,28 @@ emp_bra_pru_1 = {
 			country_event = { id = flavor_brapru.11 }
 		}
 	}
+}
+emp_bra_pru_1_2 = { # Sealand. Added this to not show for Teutons.
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		NOT = { map_setup = map_setup_random }
+		OR = {
+			tag = BRA
+			tag = PRU
+		}
+	}
+	has_country_shield = yes
 	
 	emp_brapru_army_reforms_1 = {
 		icon = professional_army
 		required_missions = {  }
+		position = 5
 		provinces_to_highlight = {
 		}
 		trigger = {

@@ -49,13 +49,15 @@ country_decisions = {
 					}
 				}
 			}
-			change_tag = JAP
+			#change_tag = JAP
+			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			set_country_flag = formed_japan_flag
 			swap_non_generic_missions = yes
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
 		}
 		ai_will_do = {
 			factor = 1
@@ -91,7 +93,8 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			change_tag = JAP
+			#change_tag = JAP
+			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			remove_government_reform = shogunate
 			#set_legacy_government = despotic_monarchy
 			set_country_flag = formed_japan_flag
@@ -105,6 +108,7 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
 		}
 		ai_will_do = {
 			factor = 1
@@ -147,7 +151,8 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			change_tag = JAP
+			#change_tag = JAP
+			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			set_country_flag = formed_japan_flag
 			remove_non_electors_emperors_from_empire_effect = yes
 			remove_government_reform = daimyo
@@ -163,6 +168,7 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
 		}
 		ai_will_do = {
 			factor = 1
@@ -288,6 +294,33 @@ country_decisions = {
 					duration = -1
 				}
 			}
+		}
+	}
+
+
+########################## Added, in case player wants Japan tag colours instead.
+	gain_japan_colour_decision = {
+		potential = {
+			NOT = { tag = JAP }
+			NOT = { has_country_flag = formed_japan_flag_2 }
+			has_country_flag = formed_japan_as_original_colour
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = gain_japan_colour_decision_tooltip_1
+				NOT = { exists = JAP }
+				has_country_flag = formed_japan_as_original_colour
+			}
+		}
+		effect = {
+			hidden_effect = {
+				change_tag = JAP
+				set_country_flag = formed_japan_flag_2
+			}
+			custom_tooltip = gain_japan_colour_decision_tooltip_2
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	

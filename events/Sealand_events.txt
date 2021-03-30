@@ -1,0 +1,235 @@
+########################################################################
+#Teutonic Order mission event:
+namespace = teutonic_events
+
+country_event = { # Centralize The Order mission event
+	id = teutonic_events.1
+	title = flavor_brapru.15.t
+	desc = teutonic_events.1.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_brandeburg_event_for_neumark } # Because original Neumark event fired
+	}
+
+	immediate = { set_country_flag = fired_teutonic_event_for_neumark } # To stop the other event from firing
+	
+	option = { # Send offer to sell lands to Brandenburg.
+		name = teutonic_events.1.a
+		custom_tooltip = teutonic_events.1.a.tt
+		tooltip = {
+			add_country_modifier = {
+				name = "centralized_the_order_modifier"
+				duration = 1825
+			}
+			take_estate_land_share_gigantic = { estate = estate_burghers }
+		}
+		BRA = {
+			country_event = { id = teutonic_events.2 }
+		}
+	}
+	option = { # Keep the lands.
+		name = flavor_brapru.16.b
+		add_stability = 1
+	}
+}
+country_event = { # Brandenburg response
+	id = teutonic_events.2
+	title = flavor_brapru.15.t
+	desc = teutonic_events.2.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept the offer
+		name = teutonic_events.2.a
+		ai_chance = { factor = 100 }
+		tooltip = {
+			49 = {
+				if = {
+					limit = {
+						owned_by = FROM
+						controlled_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					remove_core = FROM
+				}
+			}
+			4747 = {
+				if = {
+					limit = {
+						owned_by = FROM
+						controlled_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					remove_core = FROM
+				}
+			}
+		}
+		add_treasury = -100
+		FROM = {
+			country_event = { id = teutonic_events.3 }
+			add_opinion = {
+				who = ROOT
+				modifier = pawning_of_neumark
+			}
+		}
+	}
+	option = { # Decline the offer
+		name = flavor_brapru.15.b
+		ai_chance = { factor = 0 }
+		custom_tooltip = flavor_brapru.15.b.tt
+		add_prestige = -5
+		FROM = {
+			country_event = { id = teutonic_events.4 }
+		}
+	}
+}
+country_event = { # Brandenburg accepts
+	id = teutonic_events.3
+	title = flavor_brapru.17.t
+	desc = teutonic_events.3.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_brapru.17.a
+		49 = {
+			if = {
+				limit = {
+					owned_by = ROOT
+					controlled_by = ROOT
+				}
+				cede_province = FROM
+				add_core = FROM
+				remove_core = ROOT
+			}
+		}
+		4747 = {
+			if = {
+				limit = {
+					owned_by = ROOT
+					controlled_by = ROOT
+				}
+				cede_province = FROM
+				add_core = FROM
+				remove_core = ROOT
+			}
+		}
+		add_treasury = 100
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = pawning_of_neumark
+			}
+		}
+		add_country_modifier = {
+			name = "centralized_the_order_modifier"
+			duration = 1825
+		}
+		take_estate_land_share_gigantic = { estate = estate_burghers }
+	}
+}
+country_event = { # Brandenburg declines
+	id = teutonic_events.4
+	title = teutonic_events.4.t
+	desc = teutonic_events.4.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = teutonic_events.4.a
+		add_stability = 1
+	}
+}
+
+######################
+# Partition of Commonwealth mission event:
+
+country_event = {
+	id = teutonic_events.5
+	title = teutonic_events.5.t
+	desc = teutonic_events.5.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = teutonic_events.5.a
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				owns = 4128
+			}
+			country_event = { id = teutonic_events.6 }
+		}
+		custom_tooltip = teutonic_events.5.aa.tt
+		tooltip = {
+			4128 = {
+				add_core = FROM
+				cede_province = FROM
+				remove_core = ROOT
+				change_culture = saxon
+				if = {
+					limit = {
+						NOT = { religion = catholic }
+					}
+					change_religion = catholic
+				}
+			}
+		}
+		custom_tooltip = teutonic_events.5.ab.tt
+		tooltip = {
+			4128 = {
+				add_core = FROM
+			}
+		}
+	}
+	option = {
+		name = teutonic_events.5.b
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = { # Whoever owns, response.
+	id = teutonic_events.6
+	title = teutonic_events.6.t
+	desc = teutonic_events.6.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = teutonic_events.6.a
+		ai_chance = { factor = 100 }
+		4128 = {
+			add_core = FROM
+			cede_province = FROM
+			remove_core = ROOT
+			change_culture = saxon
+			if = {
+				limit = {
+					NOT = { religion = catholic }
+				}
+				change_religion = catholic
+			}
+		}
+	}
+	option = {
+		name = teutonic_events.6.b
+		ai_chance = { factor = 0 }
+		4128 = {
+			add_core = FROM
+		}
+	}
+}
+########################################################################
