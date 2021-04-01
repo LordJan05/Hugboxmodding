@@ -968,6 +968,8 @@ colonial_government = {
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
 		governing_capacity = 100
+		#Loyalty buff
+		liberty_desire = -30
 	}
 
 	custom_attributes = {
