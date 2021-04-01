@@ -6137,7 +6137,16 @@ estate_burghers_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_country_flag = mjl_mercantilism_exploit_flag }
+					had_country_flag = { flag = mjl_mercantilism_exploit_flag days = 3650 }
+				}
+			}
+			set_country_flag = mjl_mercantilism_exploit_flag
+			add_mercantilism = 3
+		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
@@ -6212,7 +6221,16 @@ estate_vaisyas_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_country_flag = mjl_mercantilism_exploit_flag }
+					had_country_flag = { flag = mjl_mercantilism_exploit_flag days = 3650 }
+				}
+			}
+			set_country_flag = mjl_mercantilism_exploit_flag
+			add_mercantilism = 3
+		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
@@ -6288,7 +6306,16 @@ estate_jains_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_country_flag = mjl_mercantilism_exploit_flag }
+					had_country_flag = { flag = mjl_mercantilism_exploit_flag days = 3650 }
+				}
+			}
+			set_country_flag = mjl_mercantilism_exploit_flag
+			add_mercantilism = 3
+		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
