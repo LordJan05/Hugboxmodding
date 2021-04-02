@@ -109,6 +109,10 @@ mjl_absolutism_age_max_abso = {
 	max_absolutism = 25
 }
 
+mjl_tun_income_boost = {
+	global_tax_income = 48
+}
+
 PR_commandant_cooldown = {
 	discipline = 0.001
 }
