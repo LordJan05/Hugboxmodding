@@ -640,7 +640,8 @@ maritime_ideas = {
 	}
 
 	bonus = {
-		sea_repair = yes
+		#sea_repair = yes
+		naval_attrition = -0.6
 	}
 
 	merchant_traditions = {
