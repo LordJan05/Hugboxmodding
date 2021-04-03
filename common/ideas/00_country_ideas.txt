@@ -1991,7 +1991,7 @@ OMA_ideas = {
 
 KOR_ideas = {
 	start = {
-		global_own_trade_power = 0.25
+		range = 0.3
 		build_cost = -0.1
 	}
 	
@@ -2008,13 +2008,13 @@ KOR_ideas = {
 		technology_cost = -0.05
 	}
 	grand_code = {
-		stability_cost_modifier = -0.10
+		global_colonial_growth = 10
 	}
 	hyanyak_system = {
 		production_efficiency = 0.10
 	}
 	geobukseon = {
-		ship_durability = 0.1
+		naval_morale = 0.10
 	}
 	hopae_system = {
 		global_manpower_modifier = 0.10
@@ -2023,7 +2023,7 @@ KOR_ideas = {
 		idea_cost = -0.1
 	}
 	kor_economy_reform = {
-		global_tax_modifier = 0.10
+		trade_efficiency = 0.10
 	}
 	
 }
