@@ -891,6 +891,7 @@ devotion = {
 	global_tax_modifier = 0.50
 	church_loyalty_modifier = 0.05
 	brahmins_hindu_loyalty_modifier = 0.05
+	monthly_militarized_society = 0.05
 }
 
 # Multiplied by current meritocracy - 50

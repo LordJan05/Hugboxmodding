@@ -84,7 +84,7 @@
         continue_prussian_crusade_tooltip:0 "§Y[Root.GetName]§! gains a claim on §YNovgorod§! country.\n§Y[Root.GetName]§! gains a claim on §YMuscovy§! country."
         crusader_kings_title:0 "Crusader Kings"
         crusader_kings_desc:0 "Crusader Kings"
-        crusader_kings_tooltip:0 "\n§RGovernment Reform will be removed if religion is other than §YCatholic§! or country is not §YTeutonic Order§!.§!"
+        crusader_kings_tooltip:0 "\n§RGovernment Reform will be removed if religion is other than §YCatholic§! and country is not §YTeutonic Order§!.§!"
 
       # Events that come with "Centralize The Order" mission:
         # The Prussian Confederation start event:

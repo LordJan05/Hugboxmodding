@@ -20,9 +20,9 @@ crusade_against_the_world_legacy = {
 	modifiers = {
 		cb_on_religious_enemies = yes
 		enforce_religion_cost = -1
-		devotion = 2
+		devotion = 1
 		papal_influence = 2
-		monthly_militarized_society = 0.05
+		governing_capacity_modifier = -0.3
 	}
 
 	conditional = {
