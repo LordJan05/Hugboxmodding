@@ -812,12 +812,12 @@ restore_old_nation_on_formation_effect = {
 				}
 				grant_independence = yes
 			}
-			every_subject_country = {
-				limit = {
-					is_subject_of_type = colony
-				}
-				#ROOT = { inherit = PREV }
-			}
+			#every_subject_country = {
+			#	limit = {
+			#		is_subject_of_type = colony
+			#	}
+			#	#ROOT = { inherit = PREV }
+			#}
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
