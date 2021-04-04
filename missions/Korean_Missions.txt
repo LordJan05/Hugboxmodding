@@ -1140,7 +1140,7 @@ kor_turtle_ships_tree = {
 		trigger = {
 			has_global_modifier_value = {
 				which = ship_durability
-				value = 0.5
+				value = 0.05
 			}
 		}
 		effect = {
