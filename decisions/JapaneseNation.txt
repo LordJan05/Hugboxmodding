@@ -310,6 +310,7 @@ country_decisions = {
 			NOT = { tag = JAP }
 			NOT = { has_country_flag = formed_japan_flag_2 }
 			has_country_flag = formed_japan_as_original_colour
+			culture_group = japanese_g
 		}
 		allow = {
 			custom_trigger_tooltip = {
