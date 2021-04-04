@@ -23,8 +23,10 @@
         the_way_to_god_title:0 "The Way to God"
         the_way_to_god_desc:0 "The Way to God"
         the_way_to_god_modifier:0 "Masjid al-Haram"
-        become_caliphate_title:0 "Become Caliphate"
-        become_caliphate_desc:0 "Become Caliphate"
+        restore_rashidun_caliphate_title:0 "Restore Rashidun" # Updated
+        restore_rashidun_caliphate_desc:0 "Restore Rashidun" # Updated
+        RASHIDUN_CALIPHATE:0 "Rashidun Caliphate" # Updated
+        RASHIDUN_CALIPHATE_ADJ:0 "Rashidun Caliphal" # Updated
         hormuz_trade_power_title:0 "Hormuz Trade Power"
         hormuz_trade_power_desc:0 "Hormuz Trade Power"
         push_into_persia_title:0 "Push Into Persia"
