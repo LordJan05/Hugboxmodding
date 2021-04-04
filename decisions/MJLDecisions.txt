@@ -298,4 +298,18 @@ country_decisions = {
 		effect = {
 		}
 	}
+
+	mjl_jap_restore_name_effect = {
+		potential = {
+			NOT = { tag = JAP }
+			has_country_flag = mjl_japan_name_overridden
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			restore_country_name = yes
+			clr_country_flag = mjl_japan_name_overridden
+		}
+	}
 }

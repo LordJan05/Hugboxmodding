@@ -59,6 +59,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
+			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
@@ -111,6 +112,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
+			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
@@ -172,6 +174,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
+			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
