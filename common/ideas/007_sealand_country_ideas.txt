@@ -79,3 +79,48 @@ SJK_ideas = { # Seljuk Empire
 		production_efficiency = 0.05
 	}
 }
+
+
+JAP_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		discipline = 0.05
+	}
+	
+	bonus = {
+		infantry_power = 0.2
+	}
+	
+	trigger = {
+		OR = {
+	        tag = JAP
+	        has_country_flag = mjl_formed_japan_flag
+		}
+	}
+	free = yes
+	
+	jap_unification_under_the_emperor = {
+		global_unrest = -2
+	}
+	reformed_land_holding = {
+		global_manpower_modifier = 0.2
+	}
+	jap_modernization = {
+		technology_cost = -0.05
+		global_institution_spread = 0.1
+	}
+	jap_maritime_legacy = {
+		naval_forcelimit_modifier = 0.25
+		heavy_ship_power = 0.15
+	}
+	jap_land_of_the_rising_sun = {
+		prestige = 1
+	}
+	jap_kaitakudan = {
+		global_colonial_growth = 20
+		colonists = 1
+	}
+	jap_great_power_diplomacy = {
+		idea_cost = -0.05
+	}
+}

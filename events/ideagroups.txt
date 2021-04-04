@@ -8125,10 +8125,22 @@ country_event = {
 		ai_chance = { factor = 1 }
 		trigger = { has_custom_ideas = no }
 		swap_free_idea_group = yes		#keep progress
+        if = {
+            limit = {
+                has_country_flag = mjl_formed_japan_flag
+            }
+            clr_country_flag = mjl_formed_japan_flag
+        }
 	}
 	option = {
 		name = ideagroups.1.b #No, we cannot abandon our roots.
 		#No Effect
 		ai_chance = { factor = 0 }
+        if = {
+            limit = {
+                has_country_flag = mjl_formed_japan_flag
+            }
+            clr_country_flag = mjl_formed_japan_flag
+        }
 	}
 }
