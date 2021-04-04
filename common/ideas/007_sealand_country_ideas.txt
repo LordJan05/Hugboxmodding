@@ -1,6 +1,6 @@
 sea_TEU_ideas = {
 	start = {
-		cavalry_power = 0.1
+		cavalry_power = 0.2
 		discipline = 0.05
 	}
 	
