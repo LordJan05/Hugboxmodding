@@ -22,7 +22,7 @@ sea_TEU_ideas = {
 		manpower_recovery_speed = 0.15
 	}
 	brother_knight_idea = { # Part of the_spirits_of_tannenberg mission.
-		infantry_power = 0.2
+		shock_damage = 0.2
 		land_morale = 0.1
 	}
 	teu_idea_4 = {
