@@ -83,3 +83,14 @@ prepare_for_europe_hugbox_modifier = {
 	manpower_recovery_speed = 0.3
 	reinforce_speed = 0.3
 }
+
+# Korea:
+asian_dragon_modifier = {
+	local_build_cost = -0.1
+	allowed_num_of_buildings = 1
+}
+four_asian_dragons_modifier = {
+	build_cost = -0.05
+	global_tax_modifier = 0.1
+	inflation_reduction = 0.05
+}
