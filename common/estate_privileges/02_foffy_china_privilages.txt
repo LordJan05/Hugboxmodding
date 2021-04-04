@@ -1,4 +1,4 @@
-h_shun_mountains = {
+mjl_shun_mountains = {
 	icon = privilege_grant_new_world_charter
 	land_share = 5
 	max_absolutism = -5
@@ -9,7 +9,7 @@ h_shun_mountains = {
 		tag = CSH
 	}
 	on_granted = {
-		custom_tooltip = h_shun_mountains_effect_tooltip
+		custom_tooltip = mjl_shun_mountains_effect_tooltip
 		hidden_effect = {
 			every_owned_province = {
 				limit = { 
@@ -17,18 +17,18 @@ h_shun_mountains = {
 					superregion = china_superregion
 				}
 				add_province_modifier = {
-					name = h_shun_mountains_mod
+					name = mjl_shun_mountains_mod
 					duration = -1
 				}
 			}
 		}
 	}
 	on_revoked = {
-		custom_tooltip = h_shun_mountains_mod_revoke_tooltip
+		custom_tooltip = mjl_shun_mountains_mod_revoke_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = h_shun_mountains_mod }
-				remove_province_modifier = h_shun_mountains_mod
+				limit = { has_province_modifier = mjl_shun_mountains_mod }
+				remove_province_modifier = mjl_shun_mountains_mod
 			}
 		}
 	}
@@ -45,7 +45,7 @@ h_shun_mountains = {
 					influence = 75
 				}
 			}
-			NOT = { has_estate_privilege = h_shun_mountains }
+			NOT = { has_estate_privilege = mjl_shun_mountains }
 		}
 		modifier = {
 			factor = 0
