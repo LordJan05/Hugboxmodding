@@ -115,9 +115,9 @@ add_country_modifier = {
 	monarch = {
 		name = "Leeyti Tyukuli"
 		dynasty = "Ndiaye"
-		adm = 2
-		dip = 1
-		mil = 1
+		adm = 3
+		dip = 3
+		mil = 3
 	}
 }
 
