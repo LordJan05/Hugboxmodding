@@ -22,12 +22,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						colonial_region = colonial_california
+						colonial_region = colonial_alaska
 						is_core = ROOT
 					}
 				}
 			}
-			colonial_california = {
+			colonial_alaska = {
 				owned_by = ROOT
 			}
 			ai = no

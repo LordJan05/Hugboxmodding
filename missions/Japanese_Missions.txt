@@ -690,7 +690,7 @@ japanse_missions_the_empire = {
 		required_missions = { JAP_secure_the_pacific }
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_california
+			region = california_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -709,12 +709,12 @@ japanse_missions_the_empire = {
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = JAP_californian_colonization
-					colonial_california = {
+					california_region = {
 						has_discovered = ROOT
 					}
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 1
-						colonial_region = colonial_california
+						region = california_region
 						is_city = yes
 					}
 				}
