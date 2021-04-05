@@ -1649,6 +1649,7 @@ estate_burghers_indebted_to_burghers = {
 			add_inflation = 0.5
 		}
 		hidden_effect = {
+			country_event = { id = zlewikk.2 }
 			add_loan = {
 				fixed_interest = 1
 				duration = 60
@@ -2509,6 +2510,7 @@ estate_jains_indebted_to_jains = {
 			add_inflation = 0.5
 		}
 		hidden_effect = {
+			country_event = { id = zlewikk.2 }
 			add_loan = {
 				fixed_interest = 1
 				duration = 60
