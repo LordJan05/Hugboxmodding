@@ -11,7 +11,7 @@ add_country_modifier = {
 
 
 change_brahmins_or_church_land_share_effect = {
-	share = 22.78
+	share = 22.72
 }
 
 

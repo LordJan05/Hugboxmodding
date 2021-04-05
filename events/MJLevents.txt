@@ -1164,6 +1164,7 @@ country_event = {
 			tag = HOL
 			tag = MLO
 			tag = DTT
+			tag = SAV
 		}
 		NOT = { has_country_flag = mjl_hre_capital_spy_boost_flag }
 		is_part_of_hre = yes
