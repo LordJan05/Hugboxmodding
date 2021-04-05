@@ -8,6 +8,11 @@ technology_group = muslim
 capital = 2213 # Qom
 religious_school = ismaili_school
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -0.5
+}
+
 1442.1.1 = { #Appointed as governor of Sultaniyya, Qazvin, Rayy and Qom, but takes up tribute from Kashan, Qazvin, Sari, Isfahan, Natanz, Firuzkuh, Sultaniyya, Tarum, Azerbaijan as well.
 	religion = sunni
 	religious_school = hanafi_school

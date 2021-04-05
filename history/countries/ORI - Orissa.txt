@@ -10,6 +10,11 @@ add_country_modifier = {
 }
 
 
+change_brahmins_or_church_land_share_effect = {
+	share = 22.78
+}
+
+
 #Rajas of Orissa
 
 1434.1.1 = {

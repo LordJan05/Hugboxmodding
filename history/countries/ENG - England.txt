@@ -13,14 +13,13 @@ add_country_modifier = {
 	duration = -1
 }
 
-
 change_estate_land_share = {
 	estate = estate_church
-	share = -10
+	share = -7
 }
 change_estate_land_share = {
 	estate = estate_burghers
-	share = -10
+	share = -10.08
 }
 
 #1422.8.31 = { #Succession

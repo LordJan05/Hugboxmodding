@@ -10,19 +10,18 @@ add_country_modifier = {
 	duration = -1
 }
 
-
 change_jains_or_burghers_land_share_effect = {
-	share = 20
+	share = 18
 }
 change_rajputs_or_marathas_or_nobles_land_share_effect = {
-	share = -3
+	share = -5.68
 }
 change_estate_land_share = {
 	estate = estate_nobles
-	share = -10
+	share = -10.06
 }
 change_brahmins_or_church_land_share_effect = {
-	share = -2
+	share = 5
 }
 
 #Sultans of Gujarat

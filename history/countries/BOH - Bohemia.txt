@@ -12,10 +12,9 @@ add_country_modifier = {
 	duration = -1
 }
 
-
 change_estate_land_share = {
 	estate = estate_burghers
-	share = -5
+	share = -0.502
 }
 
 1378.11.29 = {

@@ -10,6 +10,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -0.502
+}
+
 
 1444.1.1 = { #Magginis clan gained control of much of this province following the collapse of English control of the Earldom of Ulster. Date and name fictional as we haven't found a list of these Magginises.
 	monarch = {

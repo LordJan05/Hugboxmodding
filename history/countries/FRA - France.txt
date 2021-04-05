@@ -20,7 +20,7 @@ change_estate_land_share = {
 }
 change_estate_land_share = {
 	estate = estate_church
-	share = -5
+	share = -5.502
 }
 change_estate_land_share = {
 	estate = estate_burghers

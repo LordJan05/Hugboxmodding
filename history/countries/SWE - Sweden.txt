@@ -16,7 +16,7 @@ national_focus = MIL
 
 change_estate_land_share = {
 	estate = estate_church
-	share = -6
+	share = -10.5
 }
 change_estate_land_share = {
 	estate = estate_nobles

@@ -9,6 +9,9 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_brahmins_or_church_land_share_effect = {
+	share = 24.505
+}
 
 
 # Rajas of Ribdikot

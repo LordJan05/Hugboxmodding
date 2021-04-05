@@ -11,6 +11,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -0.502
+}
+
 
 1444.1.1 = { #At start this represents Astarabad, with alegience to Babur bin Baysunkur.
 	#capital = 2214 #Astarabad

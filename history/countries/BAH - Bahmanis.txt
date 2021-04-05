@@ -12,6 +12,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_estate_land_share = {
+	estate = estate_church
+	share = 2.799
+}
+
 
 change_rajputs_or_marathas_or_nobles_land_share_effect = {
 	share = 3

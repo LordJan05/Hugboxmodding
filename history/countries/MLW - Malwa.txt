@@ -11,7 +11,11 @@ add_country_modifier = {
 	duration = -1
 }
 
- 
+change_estate_land_share = {
+	estate = estate_church
+	share = 5.799
+}
+
 #Sultans of Malwa
 1390.1.1 = {
 	monarch = {

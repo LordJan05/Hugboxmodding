@@ -10,6 +10,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_estate_land_share = {
+	estate = estate_nomadic_tribes
+	share = -0.5
+}
+
 
 #Khans of the Oirats (Kalmyks, Dzungars)
 1399.1.1 = {

@@ -14,6 +14,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -0.502
+}
+
 
 add_army_professionalism = 0.1
 
