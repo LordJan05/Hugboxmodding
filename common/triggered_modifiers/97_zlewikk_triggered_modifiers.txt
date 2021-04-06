@@ -1,0 +1,25 @@
+zlewikk_fort = {
+	potential = {
+		mission_completed = npl_rebuild_simroungarh_fort
+	}
+
+	trigger = {
+		4483 = {
+			fort_level = 4
+		}
+	}
+	global_tax_income = 12	
+}
+
+zlewikk_fort2 = {
+	potential = {
+		mission_completed = npl_rebuild_simroungarh_fort
+	}
+
+	trigger = {
+		4485 = {
+			fort_level = 4
+		}
+	}
+	global_tax_income = 12	
+}
