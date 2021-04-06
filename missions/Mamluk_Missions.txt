@@ -428,8 +428,11 @@ sea_mam_missions_2 = {
 				}
 				ai = no
 			}
-			galley_fraction = 0.6
-			navy_size = 60
+			galley_fraction = 0.6            
+			custom_trigger_tooltip = {
+                tooltip = construct_a_grand_fleet_tooltip
+                navy_size = 60
+            }
 		}
 		effect = {
 			add_country_modifier = {

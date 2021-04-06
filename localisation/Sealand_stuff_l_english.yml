@@ -225,6 +225,7 @@
         convert_ethiopian_heathens_modifier:0 "Convert Ethiopian Heathens"
         construct_a_grand_fleet_title:0 "Construct a Grand Fleet"
         construct_a_grand_fleet_desc:0 "Construct a Grand Fleet"
+        construct_a_grand_fleet_tooltip:0 "Have a fleet equal or larger than §Y60§!"
         invasion_to_italy_modifier:0 "Invasion to Italy"
         cross_mediterranean_sea_title:0 "Land on Sicily"
         cross_mediterranean_sea_desc:0 "Land on Sicily"
