@@ -443,9 +443,9 @@ colony = {
 	relative_power_class = 0
 
 	can_fight = {
-		other_overlord = colony
+		#other_overlord = colony
 		neighboring_primitives = yes
-		colonial_region_nations = yes
+		#colonial_region_nations = yes
 	}
 	can_rival = {
 		other_overlord = colony
