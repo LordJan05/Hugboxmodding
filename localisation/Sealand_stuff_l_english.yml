@@ -19,7 +19,7 @@
         tame_the_desert_title:0 "Tame the Desert"
         tame_the_desert_desc:0 "Tame the Desert"
         tamed_the_desert_modifier:0 "Tamed the Desert"
-        tamed_the_desert_modifier_tooltip:0 "Grants new '§YTame the Desert§!' privilege that gives to all owned desert provinces in Arabia region '§YTamed the Desert§!' nodifier, giving the following effects:\nLocal Development Cost: §G-15.0%§!"
+        tamed_the_desert_modifier_tooltip:0 "Grants new '§YTame the Desert§!' privilege that gives to all owned desert provinces in Arabia region '§YTamed the Desert§!' modifier, giving the following effects:\nLocal Development Cost: §G-15.0%§!"
         the_way_to_god_title:0 "The Way to God"
         the_way_to_god_desc:0 "The Way to God"
         the_way_to_god_modifier:0 "Masjid al-Haram"

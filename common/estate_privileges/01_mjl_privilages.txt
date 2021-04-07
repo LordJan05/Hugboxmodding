@@ -325,3 +325,117 @@ mjl_estate_church_orm_tamed_deserts = {
 		}
 	}
 }
+
+mjl_estate_church_npl_tamed_mountains = {
+	icon = privilege_grant_new_world_charter
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		mission_completed = npl_tame_the_mountains
+	}
+	on_granted = {
+		custom_tooltip = mjl_estate_church_npl_tamed_mountains_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					has_climate = arctic
+					region = tibet_region
+				}
+				add_province_modifier = {
+					name = "zlewikk_artic_adaptation_npl"
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
+				remove_province_modifier = "zlewikk_artic_adaptation_npl"
+			}
+		}
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_church
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = mjl_estate_church_npl_tamed_mountains }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+mjl_estate_brahmins_npl_tamed_mountains = {
+	icon = privilege_grant_new_world_charter
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		mission_completed = npl_tame_the_mountains
+		OR = {
+			religion = hinduism
+			religion = sikhism
+		}
+	}
+	on_granted = {
+		custom_tooltip = mjl_estate_church_npl_tamed_mountains_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					has_climate = arctic
+					region = tibet_region
+				}
+				add_province_modifier = {
+					name = "zlewikk_artic_adaptation_npl"
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
+				remove_province_modifier = "zlewikk_artic_adaptation_npl"
+			}
+		}
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_church
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = mjl_estate_brahmins_npl_tamed_mountains }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}

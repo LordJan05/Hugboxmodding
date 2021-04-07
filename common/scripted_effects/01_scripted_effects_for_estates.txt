@@ -1059,6 +1059,33 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		remove_province_modifier = "tamed_the_desert_modifier"
 	}
+	if = {
+		limit = {
+			has_climate = arctic
+			owner = {
+				OR = {
+					has_estate_privilege = mjl_estate_church_npl_tamed_mountains
+					has_estate_privilege = mjl_estate_brahmins_npl_tamed_mountains
+				}
+			}
+			NOT = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
+		}
+		add_province_modifier = {
+			name = "zlewikk_artic_adaptation_npl"
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_climate = arctic
+			has_province_modifier = "zlewikk_artic_adaptation_npl"
+			owner = {
+				NOT = { has_estate_privilege = mjl_estate_church_npl_tamed_mountains }
+				NOT = { has_estate_privilege = mjl_estate_brahmins_npl_tamed_mountains }
+			}
+		}
+		remove_province_modifier = "zlewikk_artic_adaptation_npl"
+	}
 }
 
 on_trade_good_changed_estate_privileges_effect = {

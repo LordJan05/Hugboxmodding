@@ -4,119 +4,94 @@ zlewikk_npl_big1 = {
 	ai = yes
 	potential = {
 		tag = NPL
-		NOT = {
-			was_tag = BNG
-		}
 	}
 	has_country_shield = yes
 	
-	npl_consolidate_army = {
-		position = 1
-		icon = mission_assemble_an_army
-		required_missions = {  }
-		trigger = {
-			army_size_percentage = 1.0
-		}
-		effect = {
-			north_bengal_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			gaur_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			nadia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			dhaka_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	npl_war_bng = {
+	npl_conquer_bhutan = {
 		position = 2
-		icon = mission_indian_soldier_elephant
+		icon = mission_cossack_cavalry
 		required_missions = { npl_consolidate_army }
 		provinces_to_highlight = {
-			OR = {
-				area = north_bengal_area
-				area = gaur_area
-			}
+			area = bhutan_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			OR = {
-				war_with = BNG
-				AND = {
-					north_bengal_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					gaur_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}	
-				}
+			bhutan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-   			add_country_modifier = {
-   				name = npl_war_bng
-   				duration = 3650
-   			}
-
+			tsang_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			utsang_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			ngari_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
-	push_into_bng = {
+	npl_conquer_tibet = {
 		position = 3
-		icon = mission_early_game_buildings
-		required_missions = { npl_war_bng }
+		icon = mission_impaled_soldies
+		required_missions = { npl_conquer_bhutan }
 		provinces_to_highlight = {
 			OR = {
-				area = west_bengal_area
-				area = east_bengal_area
+				area = tsang_area
+				area = utsang_area
+				area = ngari_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			west_bengal_area = {
+			tsang_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_bengal_area = {
+			utsang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ngari_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			jharkhand_area = {
+			kham_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			orissa_area = {
+			amdo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kashmir_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -126,262 +101,60 @@ zlewikk_npl_big1 = {
 		}
 	}
 
-	push_into_orissa = {
+	npl_tame_the_mountains = {
 		position = 4
-		icon = mission_unite_home_region
-		required_missions = { push_into_bng }
+		icon = mission_early_modern_university
+		required_missions = { npl_conquer_tibet }
 		provinces_to_highlight = {
 			OR = {
-				area = jharkhand_area
-				area = orissa_area
+				area = tsang_area
+				area = utsang_area
+				area = ngari_area
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			is_prosperous = no
 		}
 		trigger = {
-			orissa_area = {
+			custom_trigger_tooltip = {
+			 	tooltip = zlewikk_prosperity_tt
+			 	tsang_area = {
+					is_prosperous = yes
+				}
+				utsang_area = {
+					is_prosperous = yes
+				}
+				ngari_area = {
+					is_prosperous = yes
+				}
+			}
+			tsang_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			jharkhand_area = {
+			utsang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ngari_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		effect = {
-			upper_mahanadi_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			garjat_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			andhra_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
 
-	npl_palpa_district = {
-		position = 5
-		icon = mission_scholar_officials
-		required_missions = { }
-		provinces_to_highlight = {
-			province_id = 4485
-		}
-		trigger = {
-			has_institution = global_trade
-		}
-		effect = {
-			4485 = {
-				change_trade_goods = coffee
-			}
-		}	
-	}
-
-	npl_palpa_coffee = {
-		position = 7
-		icon = mission_war_chest
-		required_missions = { npl_palpa_district }
-		provinces_to_highlight = {
-			province_id = 4485
-		}
-		trigger = {
-			4485 = {
-				development = 30
-			}
-		}
-		effect = {
-			4485 = {
+		effect = {	
+			custom_tooltip = npl_tame_the_mountains_tt
+			677 = {
 				add_province_modifier = {
-					name = zlewikk_palpa_district_npl
+					name = "zlewikk_mountains_npl"
 					duration = -1
 				}
 			}
-		}	
-	}
-}
-
-zlewikk_npl_big1_bng = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		tag = NPL
-		was_tag = BNG
-		NOT = {
-			OR = {
-				was_tag = JNP
-				was_tag = DLH
-			}
-		}
-	}
-	has_country_shield = yes
-	
-	npl_consolidate_army = {
-		position = 1
-		icon = mission_assemble_an_army
-		required_missions = {  }
-		trigger = {
-			army_size_percentage = 1.0
-		}
-		effect = {
-			north_bengal_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			gaur_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			nadia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			dhaka_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	npl_war_bng = {
-		position = 2
-		icon = mission_indian_soldier_elephant
-		required_missions = { npl_consolidate_army }
-		provinces_to_highlight = {
-			OR = {
-				area = north_bengal_area
-				area = gaur_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			
-		}
-		effect = {
-   			
-		}
-	}
-
-	push_into_bng = {
-		position = 3
-		icon = mission_early_game_buildings
-		required_missions = { npl_war_bng }
-		provinces_to_highlight = {
-			OR = {
-				area = west_bengal_area
-				area = east_bengal_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			west_bengal_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_bengal_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			jharkhand_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			orissa_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	push_into_orissa = {
-		position = 4
-		icon = mission_unite_home_region
-		required_missions = { push_into_bng }
-		provinces_to_highlight = {
-			OR = {
-				area = jharkhand_area
-				area = orissa_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			orissa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			jharkhand_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			upper_mahanadi_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			garjat_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			andhra_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
 	npl_palpa_district = {
 		position = 5
 		icon = mission_scholar_officials
-		required_missions = { }
+		required_missions = { npl_eliminate_malla }
 		provinces_to_highlight = {
 			province_id = 4485
 		}
@@ -396,7 +169,7 @@ zlewikk_npl_big1_bng = {
 	}
 
 	npl_palpa_coffee = {
-		position = 7
+		position = 6
 		icon = mission_war_chest
 		required_missions = { npl_palpa_district }
 		provinces_to_highlight = {
@@ -427,6 +200,49 @@ zlewikk_npl_big2 = {
 	}
 	has_country_shield = yes
 	
+	npl_consolidate_army = {
+		position = 1
+		icon = mission_assemble_an_army
+		required_missions = {  }
+		trigger = {
+			army_size_percentage = 1.0
+		}
+		effect = {
+			add_country_modifier = {
+				name = "npl_thriving_arms_industry"
+				duration = 5475
+			}
+			north_bengal_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			gaur_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			bhutan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			baisi_rajya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
 	npl_rebuild_simroungarh_fort = {
 		position = 2
 		icon = mission_conquer_50_development
@@ -435,19 +251,12 @@ zlewikk_npl_big2 = {
 			province_id = 4483
 		}
 		trigger = {
+			4483 = {
+				fort_level = 2
+			}
 			OR = {
-				AND = {
-					was_tag = GRK
-					4483 = {
-						fort_level = 2
-					}
-				}
-				AND = {
-					mil_tech = 10
-					4483 = {
-						fort_level = 2
-					}
-				}
+				mil_tech = 12
+				was_tag = GRK
 			}
 		}
 		effect = {
@@ -457,50 +266,76 @@ zlewikk_npl_big2 = {
 						fort_level = 4
 					}
 				}
-				add_treasury = 100
-				4483 = {
-					add_province_triggered_modifier = zlewikk_fort
-				}
-				custom_tooltip = zlewikk_fort_tt
+				add_treasury = 200
 			}
 			else = {
 				4483 = {
 					add_building = fort_16th
-					add_province_triggered_modifier = zlewikk_fort
 				}
-				custom_tooltip = zlewikk_fort_tt
+			}
+			4483 = {
+				add_province_modifier = {
+					name = "npl_simroungarh_maintenance_mission_reward"
+					duration = -1
+				}
 			}
 		}	
 	}
 
-	npl_trade_power = {
+	push_into_orissa = {
 		position = 4
-		icon = mission_asian_trader
-		required_missions = { npl_rebuild_simroungarh_fort }
+		icon = mission_unite_home_region
 		required_missions = { push_into_bng }
-		required_missions = { npl_push_east }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			any_owned_province = {
-				province_has_center_of_trade_of_level = 3
+		provinces_to_highlight = {
+			OR = {
+				area = jharkhand_area
+				area = orissa_area
 			}
-			monthly_income = 100
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			orissa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jharkhand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = zlewikk_trade
-				duration = 5475
+			upper_mahanadi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			garjat_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			andhra_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 
 	npl_chinese_delagation = {
-		position = 6
+		position = 5
 		icon = mission_buddhist_monk_praying
 		required_missions = { npl_eliminate_malla }
-		#provinces_to_highlight = {
-		#}
+		provinces_to_highlight = {
+		}
 		trigger = {
 			prestige = 50
 			legitimacy = 90
@@ -514,11 +349,142 @@ zlewikk_npl_big2 = {
 			}
 		}	
 	}
-
 }
 
 zlewikk_npl_big3 = {
 	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = NPL
+	}
+	has_country_shield = yes
+
+	npl_war_bng = {
+		position = 2
+		icon = mission_indian_soldier_elephant
+		required_missions = { npl_consolidate_army }
+		provinces_to_highlight = {
+			OR = {
+				area = north_bengal_area
+				area = gaur_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				war_with = BNG
+				AND = {
+					north_bengal_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					gaur_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}	
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					was_tag = BNG
+				}
+				add_prestige = 5
+			}
+			else = {
+	   			add_country_modifier = {
+	   				name = npl_war_bng
+	   				duration = 3650
+	   			}
+			}
+		}
+	}
+
+	push_into_bng = {
+		position = 3
+		icon = mission_early_game_buildings
+		required_missions = { npl_war_bng }
+		provinces_to_highlight = {
+			OR = {
+				area = west_bengal_area
+				area = east_bengal_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			jharkhand_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			orissa_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	npl_eliminate_malla = {
+		position = 4
+		icon = mission_have_two_subjects
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 4492
+		}
+		trigger = {
+			4492 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_legitimacy = 30
+		}	
+	}
+
+	npl_malla_influence = {
+		position = 6
+		icon = mission_monarch_in_throne_room
+		required_missions = { npl_eliminate_malla }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			legitimacy = 100
+			dip_tech = 9
+		}
+		effect = {
+			add_country_modifier = {
+				name = "zlewikk_malla_influence_npl"
+				duration = -1
+			}
+			add_legitimacy = -30
+		}	
+	}
+
+}
+
+zlewikk_npl_big4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -542,19 +508,12 @@ zlewikk_npl_big3 = {
 		trigger = {
 			owns_core_province = 554
 			owns_core_province = 4491
+			4485 = {
+				fort_level = 2
+			}
 			OR = {
-				AND = {
-					was_tag = GRK
-					4485 = {
-						fort_level = 2
-					}
-				}
-				AND = {
-					mil_tech = 10
-					4485 = {
-						fort_level = 2
-					}
-				}
+				mil_tech = 12
+				was_tag = GRK
 			}
 		}
 		effect = {
@@ -564,18 +523,18 @@ zlewikk_npl_big3 = {
 						fort_level = 4
 					}
 				}
-				add_treasury = 100
-				4485 = {
-					add_province_triggered_modifier = zlewikk_fort
-				}
-				custom_tooltip = zlewikk_fort_tt
+				add_treasury = 200
 			}
 			else = {
 				4485 = {
 					add_building = fort_16th
-					add_province_triggered_modifier = zlewikk_fort
 				}
-				custom_tooltip = zlewikk_fort_tt
+			}
+			4485 = {
+				add_province_modifier = {
+					name = "npl_palpa_maintenance_mission_reward"
+					duration = -1
+				}
 			}
 		}
 	}
@@ -649,55 +608,53 @@ zlewikk_npl_big3 = {
 		}
 	}
 
-	npl_eliminate_malla = {
-		position = 5
-		icon = mission_have_two_subjects
-		required_missions = { }
+	npl_trade_power = {
+		position = 4
+		icon = mission_asian_trader
+		required_missions = { push_into_bng npl_push_east }
 		provinces_to_highlight = {
-			province_id = 4492
 		}
 		trigger = {
-			4492 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 3
 			}
-		}
-		effect = {
-			add_legitimacy = 30
-		}	
-	}
-
-	npl_malla_influence = {
-		position = 7
-		icon = mission_monarch_in_throne_room
-		required_missions = { npl_eliminate_malla }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			legitimacy = 100
-			dip_tech = 9
+			monthly_income = 100
 		}
 		effect = {
 			add_country_modifier = {
-				name = zlewikk_malla_influence_npl
-				durtaion = -1
+				name = zlewikk_trade
+				duration = 5475
 			}
-		add_legitimacy = -30
+		}
+	}
+
+	npl_sanskritization = {
+		position = 5
+		icon = mission_rice_field
+		required_missions = { npl_eliminate_malla }
+		provinces_to_highlight = {
+		}	
+		trigger = {
+			OR = {
+			 	full_idea_group = economic_ideas
+			 	full_idea_group = administrative_ideas
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = zlewikk_malla_goods
+				duration = 9125
+			}
 		}	
 	}
 }
 
-zlewikk_npl_big4 = {
-	slot = 4
+zlewikk_npl_big5 = {
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = NPL
-		NOT = {
-			OR = {
-				was_tag = JNP
-				was_tag = DLH
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -705,8 +662,8 @@ zlewikk_npl_big4 = {
 		position = 1
 		icon = mission_landsknecht_soldier
 		required_missions = {  }
-		#provinces_to_highlight = {
-		#}
+		provinces_to_highlight = {
+		}
 		trigger = {
 			grown_by_development = 50
 		}
@@ -748,7 +705,7 @@ zlewikk_npl_big4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = purvanchal_area
-				area = saran_area
+				area = mithila_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -763,7 +720,7 @@ zlewikk_npl_big4 = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					saran_area = {
+					mithila_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}	
@@ -771,9 +728,20 @@ zlewikk_npl_big4 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = npl_war_jnp
-				duration = 3650
+			if = {
+				limit = {
+					OR = {
+						was_tag = DLH
+						was_tag = JNP
+					}
+				}
+				add_prestige = 5
+			}
+			else = {
+				add_country_modifier = {
+					name = npl_war_jnp
+					duration = 3650
+				}
 			}
 		}
 	}
@@ -837,12 +805,13 @@ zlewikk_npl_big4 = {
 			}
 		}
 	}
+
 	npl_strongest_power_india = {
 		position = 3
 		icon = mission_empire
 		required_missions = { npl_conquer_jaunpur }
-		#provinces_to_highlight = {
-		#}
+		provinces_to_highlight = {
+		}
 		trigger = {
             army_size = 100
             custom_trigger_tooltip = {
@@ -870,420 +839,29 @@ zlewikk_npl_big4 = {
 		}
 	}
 
-	npl_sanskritization = {
-		position = 6
-		icon = mission_rice_field
-		required_missions = { npl_eliminate_malla }
-		#provinces_to_highlight = {
-		#}	
-		trigger = {
-			custom_trigger_tooltip = {
-				 	tooltip = zlewikk_sans_tt
-				 	economic_ideas = 7
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = zlewikk_malla_goods
-				duration = 9125
-			}
-		}	
-	}
-}
-
-zlewikk_npl_big4_jnp = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential = {
-		tag = NPL
-		OR = {
-			was_tag = JNP
-			was_tag = DLH
-		}
-		NOT = {
-			was_tag = BNG
-		}
-	}
-	has_country_shield = yes
-
-	npl_prepare_to_fight_threat = {
-		position = 1
-		icon = mission_landsknecht_soldier
-		required_missions = {  }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			grown_by_development = 50
-		}
-		effect = {
-			oudh_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			purvanchal_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			bihar_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			nepal_area = {
-				add_province_modifier = {
-					name = zlewikk_npl_defense_forts
-					duration = -1
-				}
-			}
-		}
-	}
-
-	npl_conquer_jaunpur = {
-		position = 3
-		icon = mission_conquer_5_states
-		required_missions = { npl_prepare_to_fight_threat }
-		provinces_to_highlight = {
-			OR = {
-				area = bihar_area
-				area = oudh_area
-				area = baisi_rajya_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			bihar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			oudh_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			 baisi_rajya_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			katehar_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_doab_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_doab_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			sirhind_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	npl_strongest_power_india = {
-		position = 3
-		icon = mission_empire
-		required_missions = { npl_conquer_jaunpur }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			army_size = BNG
-			army_size = JNP
-			army_size = VIJ
-			army_size = BAH
-			army_size = ORI
-			army_size = MER
-			army_size = MLW
-			army_size = DLH
-			army_size = SRH
-			army_size = GUJ
-		}
-		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 50
-			}
-			add_country_modifier = {
-				name = zlewikk_stronk_nepal
-				duration = -1
-			}
-		}
-	}
-
-	npl_sanskritization = {
-		position = 6
-		icon = mission_rice_field
-		required_missions = { npl_eliminate_malla }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			adm_tech = 6
-		}
-		effect = {
-			add_country_modifier = {
-				name = zlewikk_malla_goods
-				duration = 18250
-			}
-		}	
-	}
-}
-
-zlewikk_npl_big5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		tag = NPL
-	}
-	has_country_shield = yes
-	
-	npl_conquer_bhutan = {
-		position = 1
-		icon = mission_cossack_cavalry
-		required_missions = {  }
-		provinces_to_highlight = {
-			area = bhutan_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			bhutan_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-		}
-		effect = {
-			tsang_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			utsang_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			ngari_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	npl_conquer_tibet = {
-		position = 2
-		icon = mission_impaled_soldies
-		required_missions = { npl_conquer_bhutan }
-		provinces_to_highlight = {
-			OR = {
-				area = tsang_area
-				area = utsang_area
-				area = ngari_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			tsang_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-			utsang_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-			ngari_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-		}
-		effect = {
-			kham_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			amdo_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			kashmir_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	npl_tame_the_mountains = {
-		position = 3
-		icon = mission_early_modern_university
-		required_missions = { npl_conquer_tibet }
-		#provinces_to_highlight = {
-		#}
-		trigger = {
-			custom_trigger_tooltip = {
-			 	tooltip = zlewikk_prosperity_tt
-			 	tsang_area = {
-					is_prosperous = yes
-				}
-				utsang_area = {
-					is_prosperous = yes
-				}
-				ngari_area = {
-					is_prosperous = yes
-				}
-			}
-			
-		}
-
-		effect = {
-			tsang_area = {
-				add_permanent_province_modifier = {
-					name = zlewikk_mountains_npl
-					duration = -1
-				}
-			}
-			utsang_area = {
-				add_permanent_province_modifier = {
-					name = zlewikk_mountains_npl
-					duration = -1
-				}
-			}
-			ngari_area = {
-				add_permanent_province_modifier = {
-					name = zlewikk_mountains_npl
-					duration = -1
-				}
-			}
-			bhutan_area = {
-				add_permanent_province_modifier = {
-					name = zlewikk_mountains_npl
-					duration = -1
-				}
-			}
-			4205 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4519 = {
-				add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4518 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			676 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4514 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4515 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4516 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			2128 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-			4520 = {
-add_permanent_province_modifier = {
-					name = zlewikk_artic_adaptation_npl
-					duration = -1
-				}
-			}
-		}
-	}
-
 	npl_niyampal = {
 		position = 5
 		icon = mission_hands_praying
-		required_missions = {  }
-		#provinces_to_highlight = {
-		#}
+		required_missions = { npl_eliminate_malla }
+		provinces_to_highlight = {
+		}
 		trigger = {
 			religious_unity = 0.99
 		}
 		effect = {
 			add_country_modifier = {
-				name = zlewikk_npl_faith
+				name = "zlewikk_npl_faith"
 				duration = -1
 			}
 		}	
 	}
 
 	npl_nation_of_faith = {
-		position = 7
+		position = 6
 		icon = mission_crusade_for_varna
 		required_missions = { npl_niyampal }
-		#provinces_to_highlight = {
-		#}
+		provinces_to_highlight = {
+		}
 		trigger = {
 			religious_unity = 0.99
 			army_size = 100
@@ -1291,10 +869,9 @@ add_permanent_province_modifier = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = zlewikk_npl_faith_manpower
-				duration = 5475
+				name = "zlewikk_npl_faith_manpower"
+				duration = 9125
 			}
 		}	
 	}
 }
-

@@ -143,6 +143,7 @@ estate_brahmins = {
 		estate_brahmins_legitimacy_to_rule
 		estate_brahmins_flexible_deities
 		estate_brahmins_brahmin_leadership
+		mjl_estate_brahmins_npl_tamed_mountains
 		estate_brahmins_loyalty_privilege
 		estate_brahmins_guaranteed_autonomy
 		estate_brahmins_for_the_faith

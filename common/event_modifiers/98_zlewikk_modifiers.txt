@@ -17,7 +17,7 @@ zlewikk_mountains_npl = {
 	local_development_cost = -0.10
 }
 zlewikk_artic_adaptation_npl = {
-	local_development_cost = -0.10
+	local_development_cost = -0.35
 }
 zlewikk_palpa_district_npl = {
 	trade_goods_size_modifier = 0.25
@@ -28,12 +28,24 @@ zlewikk_malla_influence_npl = {
 	monarch_diplomatic_power = 1
 }
 zlewikk_malla_goods = {
-	global_trade_goods_size_modifier = 0.05
-	tolerance_own = 0.5
+	global_trade_goods_size_modifier = 0.1
+	tolerance_own = 1
 }
 zlewikk_npl_faith = {
 	tolerance_own = 1
 }
 zlewikk_npl_faith_manpower = {
 	manpower_in_true_faith_provinces= 0.10
+}
+
+npl_thriving_arms_industry = {
+	land_maintenance_modifier = -0.1
+}
+
+npl_simroungarh_maintenance_mission_reward = {
+	global_tax_income = 12	
+}
+
+npl_palpa_maintenance_mission_reward = {
+	global_tax_income = 12	
 }
