@@ -15,13 +15,13 @@ aristocracy_ideas = {
 		nobles_loyalty_modifier = 0.1
 	}
 
-	trigger = {
-		OR = {
-			has_government_attribute = enables_aristocratic_idea_group
-			government = theocracy
-			government = tribal
-		}
-	}
+	#trigger = {
+	#	OR = {
+	#		has_government_attribute = enables_aristocratic_idea_group
+	#		government = theocracy
+	#		government = tribal
+	#	}
+	#}
 	
 	noble_knights = {
 		cavalry_power = 0.10
@@ -71,9 +71,9 @@ plutocracy_ideas = {
 		vaisyas_loyalty_modifier = 0.1
 	}
 
-	trigger = {
-		has_government_attribute = enables_plutocratic_idea_group
-	}
+	#trigger = {
+	#	has_government_attribute = enables_plutocratic_idea_group
+	#}
 
 	tradition_of_payment = {
 		fire_damage = 0.1
