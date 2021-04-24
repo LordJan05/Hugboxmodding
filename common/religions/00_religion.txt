@@ -327,8 +327,9 @@ christian = {
 			catholic
 		}
 		country = {
-			development_cost = -0.1
-			innovativeness_gain = 0.5
+			development_cost = -0.075
+			#innovativeness_gain = 0.5
+			fire_damage = 0.15
 		}
 		
 		country_as_secondary = {
