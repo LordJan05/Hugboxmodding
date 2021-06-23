@@ -1,5 +1,4 @@
 country_decisions = {
-
 	california_nation = {
 		major = yes
 		potential = {
