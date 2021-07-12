@@ -11,7 +11,7 @@ normal_or_historical_nations = yes
 
 
 
-### Dutch Revolt ###
+### Dutch Revolt ###šdsdsdss
 
 # This is now the on_start event for dutch revolt disaster
 # PROVINCENAME Revolts!
@@ -27,10 +27,10 @@ country_event = { # changed from province to country event
 		set_global_flag = dutch_revolt
 		set_country_flag = dutch_revolt_target # used in incident
 	}
-	
+
 	option = {
 		name = "flavor_bur.EVTOPTA8"
-		
+
 		add_stability = -2
 		random_owned_province = {
 			limit = {
