@@ -381,7 +381,7 @@ country_event = {
 	}
 }
 
-# Kiliç alayi
+# KiliÃ§ alayi
 country_event = {
 	id = harem_events.2
 	title = harem_events.2.t
@@ -411,7 +411,7 @@ country_event = {
 	}
 }
 
-#Sancaga çikma
+#Sancaga Ã§ikma
 country_event = {
 	id = harem_events.3
 	title = harem_events.3.t

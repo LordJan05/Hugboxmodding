@@ -1,3 +1,36 @@
+PR_smz_missions1_slot = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SMZ
+			tag = UES
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+
+	PR_smz_missions1_desc = {
+		icon = mission_japanese_samurai
+		position = 1
+		required_missions = {  }
+		trigger = {
+			AND = {
+				war_with = ASK
+				NOT = {
+					defensive_war_with = ASK
+				}
+			}
+		}
+		effect = {
+			add_stability = 3
+			add_war_exhaustion = -3
+		}
+	}
+}
+
 japanse_missions_sea = {
 	slot = 1
 	generic = no
@@ -8,14 +41,14 @@ japanse_missions_sea = {
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
-			has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	JAP_pacify_the_north = {
 		icon = mission_japanese_samurai
+		position = 2
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
@@ -180,7 +213,6 @@ japanse_missions_china = {
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
-			has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -219,7 +251,6 @@ japanse_missions_china = {
 			OR = {
 				has_reform = shogunate
 				tag = JAP
-				has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			}
 			south_korea_area = {
 				type = all
@@ -293,7 +324,6 @@ japanse_missions_china = {
 			OR = {
 				has_reform = shogunate
 				tag = JAP
-				has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			}
 			ningguta_area = {
 				type = all
@@ -346,10 +376,7 @@ japanse_missions_china = {
 		}
 		
 		trigger = {
-			OR = {
-				tag = JAP
-				has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
-			}
+			tag = JAP
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
@@ -502,7 +529,6 @@ japanse_missions_the_empire = {
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
-			has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -530,7 +556,6 @@ japanse_missions_the_empire = {
 			OR = {
 				has_reform = shogunate
 				tag = JAP
-				has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 			}
 		}
 		effect = {
@@ -617,25 +642,7 @@ japanse_missions_the_empire = {
 				}
 				add_claim = ROOT
 			}
-			1240 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			1994 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			1997 = {
+			northern_polynesia_area = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -651,11 +658,7 @@ japanse_missions_the_empire = {
 		icon = mission_invade_island
 		required_missions = { jap_colonize_taiwan }
 		provinces_to_highlight = {
-			OR = {
-				province_id = 1240 # Hawaii
-				province_id = 1994 # Wake Island
-				province_id = 1997 # Midway
-			}
+			area = northern_polynesia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -672,9 +675,10 @@ japanse_missions_the_empire = {
 				}
 			}
 			else = {
-				owns_core_province = 1240
-				owns_core_province = 1994
-				owns_core_province = 1997
+				northern_polynesia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -737,7 +741,6 @@ japanse_missions_domestic = {
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
-			has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -783,10 +786,7 @@ japanse_missions_domestic = {
 			}
 		}
 		trigger = {
-			OR = {
-				tag = JAP
-				has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
-			}
+			tag = JAP
 			hokuriku_area = {
 				type = all
 				owned_by = ROOT
@@ -960,7 +960,6 @@ japanse_missions_economic = {
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
-			has_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
 		}
 		NOT = { map_setup = map_setup_random }
 	}

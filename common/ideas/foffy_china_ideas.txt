@@ -140,8 +140,8 @@ citystate_ideas = { #Chinese City States
 
 CSH_ideas = {
 	start = {
-		leader_land_shock = 1
-		development_cost = -0.1
+		shock_damage_received = -0.1
+		land_morale = 0.1
 	}
 	
 	bonus = {
@@ -154,17 +154,16 @@ CSH_ideas = {
 	free = yes
 	
 	shun_humble_beginnings = {
-		manpower_recovery_speed = 0.15
+		leader_land_shock = 1
 	}
 	shun_dashing_king = {
-		diplomatic_reputation = 1
-		diplomatic_upkeep = 1
+		development_cost = -0.1
 	}
 	shun_hidden_treasury = {
 		global_tax_modifier = 0.2
 	}
 	shun_obedient_to_heaven = {
-		land_morale = 0.1
+		manpower_recovery_speed = 0.15
 	}
 	shun_perfection_of_sieging = {
 		siege_ability = 0.1
@@ -222,7 +221,7 @@ CYI_ideas = {
 WUU_ideas = { #Wu
 	start = {
 		infantry_power = 0.1
-		fire_damage = 0.1
+		fire_damage = 0.15
 	}
 	
 	bonus = {
@@ -246,7 +245,7 @@ WUU_ideas = { #Wu
 		development_cost = -0.1
 	}
 	WUU_4 = {
-		amount_of_banners = 0.25
+		amount_of_banners = 0.4
 	}
 	WUU_5 = {
 		ship_durability = 0.05

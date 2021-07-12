@@ -93,7 +93,12 @@ country_event = {
 				dip = 3
 				mil = 5
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			set_ruler_flag = historical_pirate
 			swap_non_generic_missions = yes
 		}
@@ -130,9 +135,24 @@ country_event = {
 				dip = 3
 				mil = 5
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			set_ruler_flag = historical_pirate
 			swap_non_generic_missions = yes
+		}
+	}
+
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			NSS = {
+				country_event = {
+					id = pirates.25
+				}
+			}
 		}
 	}
 }
@@ -238,7 +258,12 @@ country_event = {
 				name = "Signor Caraccioli"
 				cost_multiplier = 0.25
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -277,11 +302,26 @@ country_event = {
 				name = "Signor Caraccioli"
 				cost_multiplier = 0.25
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
 		create_march = LIB
+	}
+
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			LIB = {
+				country_event = {
+					id = pirates.25
+				}
+			}
+		}
 	}
 }
 
@@ -375,7 +415,12 @@ country_event = {
 				dip = 3
 				mil = 4
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = barbary_pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -413,7 +458,12 @@ country_event = {
 				dip = 3
 				mil = 4
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = barbary_pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -504,7 +554,12 @@ country_event = {
 				female = yes
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = barbary_pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -544,7 +599,12 @@ country_event = {
 				female = yes
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = barbary_pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -662,7 +722,12 @@ country_event = {
 				mil = 5
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -698,9 +763,24 @@ country_event = {
 				mil = 5
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
+		}
+	}
+
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			PRY = {
+				country_event = {
+					id = pirates.25
+				}
+			}
 		}
 	}
 }
@@ -801,7 +881,12 @@ country_event = {
 				mil = 4
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
@@ -837,9 +922,24 @@ country_event = {
 				mil = 4
 				fixed = yes
 			}
-			swap_free_idea_group = yes
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
+		}
+	}
+
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			TOR = {
+				country_event = {
+					id = pirates.25
+				}
+			}
 		}
 	}
 }
@@ -848,7 +948,14 @@ country_event = {
 country_event = {
 	id = pirates.8
 	title = "pirates.8.t"
-	picture = SMUGGLERS_eventPicture
+	picture = {
+		trigger = { has_dlc = "Leviathan" }
+		picture = MALAYAN_PORT_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Leviathan" } }
+		picture = SMUGGLERS_eventPicture
+	}
 	desc = "pirates.8.d"
 	
 	fire_only_once = yes
@@ -867,9 +974,20 @@ country_event = {
 	
 	option = {
 		name = "pirates.8.a"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				MAJ = {
+					ai = no
+				}
+			}
+		}
+		grant_independence = yes
 		change_government = republic
 		add_government_reform = pirate_republic_reform
 		define_ruler = {
+			force_republican_names = yes
 			culture = wu
 		}
 		add_republican_tradition = 50
@@ -878,7 +996,10 @@ country_event = {
 	
 	option = {
 		name = "pirates.8.b"
-		add_stability = -1
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 1
 	}
 }
 
@@ -886,7 +1007,14 @@ country_event = {
 country_event = {
 	id = pirates.9
 	title = "pirates.9.t"
-	picture = SMUGGLERS_eventPicture
+	picture = {
+		trigger = { has_dlc = "Leviathan" }
+		picture = MALAYAN_PORT_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Leviathan" } }
+		picture = SMUGGLERS_eventPicture
+	}
 	desc = "pirates.9.d"
 	
 	fire_only_once = yes
@@ -975,7 +1103,8 @@ country_event = {
 	}
 	option = {
 		name = "pirates.20.a"
-		add_prestige = 5
+		#set_global_flag = golden_age_of_piracy
+		#custom_tooltip = golden_age_of_piracy_tooltip
 	}
 }
 
@@ -1063,7 +1192,8 @@ country_event = {
 		change_government = republic
 		add_government_reform = pirate_republic_reform
 		define_ruler = {
-			dynasty = "Störtebeker"
+			force_republican_names = yes
+			dynasty = "StÃ¶rtebeker"
 			culture = pommeranian
 		}
 		add_republican_tradition = 50
@@ -1119,6 +1249,7 @@ country_event = {
 		change_government = republic
 		add_government_reform = pirate_republic_reform
 		define_ruler = {
+			force_republican_names = yes
 			dynasty = "Carter"
 		}
 		233 = { rename_capital = "Penzance" }
@@ -1189,5 +1320,25 @@ country_event = {
 			dip = 2
 			mil = 2
 		}
+	}
+}
+
+
+# Give the Pirate nations their righful ideas
+country_event = {
+	id = pirates.25
+	title = "pirates.25.t"
+	picture = SMUGGLERS_eventPicture
+	desc = "pirates.25.d"
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "pirates.25.a"
+		ai_chance = {
+			factor = 1
+		}
+		swap_free_idea_group = yes
 	}
 }

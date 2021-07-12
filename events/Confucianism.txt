@@ -2042,7 +2042,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 1
 	}
 	
 	option = {
@@ -2054,7 +2054,6 @@ country_event = {
 			set_heir_religion = confucianism
 		}
 		add_harmonized_religion = mahayana
-		country_event = { id = confucian_events.9 }
 	}
 	option = {
 		name = "confucian_events.21.b"

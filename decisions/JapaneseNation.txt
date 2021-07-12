@@ -49,17 +49,13 @@ country_decisions = {
 					}
 				}
 			}
-			#change_tag = JAP
-			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
+			change_tag = JAP
 			set_country_flag = formed_japan_flag
-			set_country_flag = mjl_formed_japan_flag
 			swap_non_generic_missions = yes
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
-			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
@@ -95,12 +91,10 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			#change_tag = JAP
-			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
+			change_tag = JAP
 			remove_government_reform = shogunate
 			#set_legacy_government = despotic_monarchy
 			set_country_flag = formed_japan_flag
-			set_country_flag = mjl_formed_japan_flag
 			set_government_rank = 3
 			add_legitimacy = 100
 			add_adm_power = 100
@@ -111,8 +105,6 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
-			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
@@ -155,10 +147,8 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			#change_tag = JAP
-			set_country_flag = formed_japan_as_original_colour # Sealand (using it to find my added stuff faster)
+			change_tag = JAP
 			set_country_flag = formed_japan_flag
-			set_country_flag = mjl_formed_japan_flag
 			remove_non_electors_emperors_from_empire_effect = yes
 			remove_government_reform = daimyo
 			#remove_government_reform = indep_daimyo
@@ -173,8 +163,6 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			override_country_name = JAP # Sealand (this had to put at the end, otherwise messes up in-game text)
-			set_country_flag = mjl_japan_name_overridden
 		}
 		ai_will_do = {
 			factor = 1
@@ -300,34 +288,6 @@ country_decisions = {
 					duration = -1
 				}
 			}
-		}
-	}
-
-
-########################## Added, in case player wants Japan tag colours instead.
-	gain_japan_colour_decision = {
-		potential = {
-			NOT = { tag = JAP }
-			NOT = { has_country_flag = formed_japan_flag_2 }
-			has_country_flag = formed_japan_as_original_colour
-			culture_group = japanese_g
-		}
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = gain_japan_colour_decision_tooltip_1
-				NOT = { exists = JAP }
-				has_country_flag = formed_japan_as_original_colour
-			}
-		}
-		effect = {
-			hidden_effect = {
-				change_tag = JAP
-				set_country_flag = formed_japan_flag_2
-			}
-			custom_tooltip = gain_japan_colour_decision_tooltip_2
-		}
-		ai_will_do = {
-			factor = 0
 		}
 	}
 	

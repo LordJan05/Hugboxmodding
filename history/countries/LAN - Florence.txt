@@ -7,16 +7,16 @@ religion = catholic
 technology_group = western
 capital = 116 # Firenze
 add_army_professionalism = 0.05
+set_country_flag = mjl_tuscan_mission_flag
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
 
 change_estate_land_share = {
-	estate = estate_nobles
+	estate = estate_burghers
 	share = -0.5
 }
-
 
 1421.1.1 = {
 	monarch = {

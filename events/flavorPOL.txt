@@ -1,7 +1,7 @@
 ######################################## 
 # Flavor events for Poland
 # 
-# written by Sara Wendel-Örtqvist
+# written by Sara Wendel-Ã–rtqvist
 ######################################## 
 
 namespace = flavor_pol
@@ -1067,7 +1067,7 @@ country_event = {
 	}
 }
 
-# Michal Sedziwój
+# Michal SedziwÃ³j
 country_event = {
 	id = flavor_pol.6
 	title = "flavor_pol.EVTNAME6"
@@ -1098,7 +1098,7 @@ country_event = {
 		add_adm_power = 100
 		define_advisor = {
 			type = philosopher
-			name = "Michal Sedziwój"
+			name = "Michal SedziwÃ³j"
 			culture = polish
 			discount = yes
 			skill = 3
@@ -1657,7 +1657,10 @@ country_event = {
 			exists = yes
 			is_subject = no
 			NOT = { junior_union_with = POL }
-			dynasty = "Jagiellon"
+			OR = {
+				dynasty = "Jagiellon"
+				government = republic
+			}
 		}
 		NOT = { is_year = 1450 }
 	}
@@ -1742,6 +1745,7 @@ country_event = {
 
 	trigger = {
 		NOT = {	num_of_estate_privileges = { estate = estate_nobles	value = 4 } }
+		always = yes
 	}
 	
 	option = {

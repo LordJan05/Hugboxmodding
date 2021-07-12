@@ -101,7 +101,7 @@ change_estate_land_share = {
 		dynasty = "Taungu"
 		adm = 4
 		dip = 3
-		mil = 4
+		mil = 5
 	}
 	#heir = {
 	#	name = "Minkhaung"

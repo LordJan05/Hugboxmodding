@@ -551,6 +551,50 @@ on_province_religion_converted_estate_privileges_effect = {
 	if = {
 		limit = {
 			owner = {
+				has_estate_privilege = estate_church_brahmins_at_court
+			}
+		}
+		if = {
+			limit = {
+				religion = hinduism
+				NOT = { has_province_modifier = estate_brahmins_guaranteed_autonomy_mod }
+			}
+			add_province_modifier = {
+				name = estate_brahmins_guaranteed_autonomy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = hinduism }
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_church_lao_animism
+			}
+		}
+		if = {
+			limit = {
+				religion = animism
+				NOT = { has_province_modifier = estate_church_lao_animism_mod }
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = animism }
+				has_province_modifier = estate_church_lao_animism_mod
+			}
+			remove_province_modifier = estate_church_lao_animism_mod
+		}
+	}
+	if = {
+		limit = {
+			owner = {
 				has_estate_privilege = estate_maratha_levies_for_muslims
 			}
 		}
@@ -652,6 +696,18 @@ on_province_owner_change_estate_privileges_effect = {
 				has_estate_privilege = estate_brahmins_guaranteed_autonomy
 			}
 			NOT = { religion_group = muslim }
+		}
+		add_province_modifier = {
+			name = estate_brahmins_guaranteed_autonomy_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_church_brahmins_at_court
+			}
+			religion = hinduism
 		}
 		add_province_modifier = {
 			name = estate_brahmins_guaranteed_autonomy_mod
@@ -1012,6 +1068,57 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			trade_goods = grain
+			owner = {
+				OR = {
+					has_estate_privilege = estate_burghers_khmer_irrigation
+					has_estate_privilege = estate_vaisyas_khmer_irrigation
+				}
+			}
+		}
+		add_province_modifier = { 
+			name = estate_burghers_khmer_irrigation_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_climate = tropical
+			owner = {
+				has_estate_privilege = estate_burghers_tropical_nation
+			}
+		}
+		add_province_modifier = { 
+			name = estate_burghers_tropical_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			religion = animism
+			owner = {
+				has_estate_privilege = estate_church_lao_animism
+			}
+		}
+		add_province_modifier = { 
+			name = estate_church_lao_animism_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			religion = hinduism
+			owner = {
+				has_estate_privilege = estate_maratha_levies_for_muslims
+			}
+		}
+		add_province_modifier = {
+			name = estate_maratha_levies_for_muslims_mod
+			duration = -1
+		}
+	}
 	#NEW STUFF
 	if = {
 		limit = {
@@ -1061,31 +1168,52 @@ on_province_owner_change_estate_privileges_effect = {
 	}
 	if = {
 		limit = {
-			has_climate = arctic
+			has_terrain = mountain
 			owner = {
-				OR = {
-					has_estate_privilege = mjl_estate_church_npl_tamed_mountains
-					has_estate_privilege = mjl_estate_brahmins_npl_tamed_mountains
-				}
+				has_estate_privilege = h_populate_altai_mountains
 			}
-			NOT = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
+			NOT = { has_province_modifier = h_populate_altai_mountains_mod }
 		}
 		add_province_modifier = {
-			name = "zlewikk_artic_adaptation_npl"
+			name = h_populate_altai_mountains_mod
 			duration = -1
 		}
 	}
 	else_if = {
 		limit = {
-			has_climate = arctic
-			has_province_modifier = "zlewikk_artic_adaptation_npl"
+			has_terrain = mountain
+			has_province_modifier = h_populate_altai_mountains_mod
 			owner = {
-				NOT = { has_estate_privilege = mjl_estate_church_npl_tamed_mountains }
-				NOT = { has_estate_privilege = mjl_estate_brahmins_npl_tamed_mountains }
+				NOT = { has_estate_privilege = h_populate_altai_mountains }
 			}
 		}
-		remove_province_modifier = "zlewikk_artic_adaptation_npl"
+		remove_province_modifier = h_populate_altai_mountains_mod
 	}
+############################################ Sealand. Part of Norway mission
+	if = {
+		limit = {
+			has_terrain = forest
+			owner = {
+				has_estate_privilege = estate_burghers_nor_production_on_wood
+			}
+			NOT = { has_province_modifier = "production_on_wood_modifier" }
+		}
+		add_province_modifier = {
+			name = "production_on_wood_modifier"
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_terrain = forest
+			has_province_modifier = "production_on_wood_modifier"
+			owner = {
+				NOT = { has_estate_privilege = estate_burghers_nor_production_on_wood }
+			}
+		}
+		remove_province_modifier = "production_on_wood_modifier"
+	}
+############################################
 }
 
 on_trade_good_changed_estate_privileges_effect = {

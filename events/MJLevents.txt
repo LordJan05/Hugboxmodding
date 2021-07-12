@@ -691,6 +691,8 @@ country_event = {
 				add_stability = 1
 				set_country_flag = mjl_colony_stability_fix_1
 			}
+			# Stab for native policy
+			add_stability = 1
 			#### gov cleanup ####
 			#t2
 			if = {
@@ -897,35 +899,36 @@ country_event = {
 			custom_tooltip = mjl_colony_corruption_reset_tt
 		}
 		custom_tooltip = mjl_colony_government_fix_tt
+		custom_tooltip = mjl_colony_stabup_nativepolicy_tt
 	}
 }
 
-#country_event = {
-#	id = mjl_events.8
-#	title = "mjl_events.EVTNAME8"
-#	desc = "mjl_events.EVTDESC8"
-#	picture = COURT_eventPicture
-#	
-#	trigger = {
-#		is_colonial_nation = yes
-#		capital_scope = {
-#			colonial_region = colonial_louisiana
-#			is_core = ROOT
-#		}
-#		NOT = { has_country_flag = mjl_louisiana_naval_fl_buff }
-#	}
-#	mean_time_to_happen = {
-#		months = 1
-#	}
-#	option = {
-#		name = "mjl_events.EVTOPTA8"
-#		set_country_flag = mjl_louisiana_naval_fl_buff
-#		add_country_modifier = {
-#			name = "mjl_lousiana_fl_buff"
-#			duration = -1
-#		}
-#	}
-#}
+country_event = {
+	id = mjl_events.8
+	title = "mjl_events.EVTNAME8"
+	desc = "mjl_events.EVTDESC8"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			colonial_region = colonial_louisiana
+			is_core = ROOT
+		}
+		NOT = { has_country_flag = mjl_louisiana_naval_fl_buff }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "mjl_events.EVTOPTA8"
+		set_country_flag = mjl_louisiana_naval_fl_buff
+		add_country_modifier = {
+			name = "mjl_lousiana_fl_buff"
+			duration = -1
+		}
+	}
+}
 
 country_event = {
     id = mjl_events.9
@@ -938,14 +941,7 @@ country_event = {
     
     trigger = {
         NOT = { has_country_flag = discovered_australia_event }
-        ai = no
-        capital_scope = {
-            OR = {
-                region = moluccas_region
-                region = indonesia_region
-                region = malaya_region
-            }
-        }
+        technology_group = chinese
     }
 
     immediate = {
@@ -981,12 +977,17 @@ country_event = {
                 discover_province = PREV
             }
         }
-        te_ika_a_maui_area = {
+        te_ika_a_maui_hauauru_area = {
             ROOT = {
                 discover_province = PREV
             }
         }
-        melanesia_area = {
+        te_ika_a_maui_waho_area = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+		melanesia_area = {
             ROOT = {
                 discover_province = PREV
             }
@@ -1002,6 +1003,11 @@ country_event = {
             }
         }
         1432 = {
+            ROOT = {
+                discover_province = PREV
+            }
+        }
+        1726 = {
             ROOT = {
                 discover_province = PREV
             }

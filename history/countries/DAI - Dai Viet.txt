@@ -1,16 +1,20 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = confucian_bureaucracy
 primary_culture = vietnamese
 religion = mahayana
 technology_group = chinese
 capital = 613	# Hanoi
+
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
 
-
 # Tran Dynasty, Later Le Dynasty, Mac Dynasty and Tay Son Dynasty
+
+1390.1.1 = {
+	set_estate_privilege = estate_nobles_command_of_the_military
+}
 
 1398.1.1 = {
 	monarch = {
@@ -108,20 +112,20 @@ add_country_modifier = {
 
 1427.1.1 = {
 	monarch = {
-		name = "Loi" #Lê Loi
+		name = "Loi" #LÃª Loi
 		dynasty = "Le"
 		adm = 3
 		dip = 3
 		mil = 5
-		leader = { name = "Lê Loi"	type = general	fire = 4	shock = 4	manuever = 5	siege = 0 }
+		leader = { name = "LÃª Loi"	type = general	fire = 4	shock = 4	manuever = 5	siege = 0 }
 	}
 }
 
 1427.1.1 = {
 	heir = {
-		name = "Nguyen Long" #Lê Thai Tong
+		name = "Nguyen Long" #LÃª Thai Tong
 		monarch_name = "Nguyen Long"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1423.1.1
 		death_date = 1442.9.8
 		claim = 95
@@ -131,21 +135,43 @@ add_country_modifier = {
 	}
 }
 
+1427.1.1 = {
+	leader = {
+		name = "Trinh Kha"
+		type = general
+		fire = 2
+		shock = 3
+		manuever = 5
+		siege = 1
+		death_date = 1451.1.1
+		personality = inspirational_leader_general_personality
+	}
+}
+
 1438.1.1 = {
 	monarch = {
-		name = "Nguyen Long" #Lê Thai Tong
-		dynasty = "Lê"
+		name = "Nguyen Long" #LÃª Thai Tong
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 2
 	}
 }
 
-1441.1.1 = {
+1442.9.8 = {
+	monarch = {
+		name = "Nguyen Thi Anh"
+		monarch_name = "Nguyen Thi Anh"
+		regent = yes
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 3
+	}
 	heir = {
-		name = "Bang Co" #Lê Nhan Tong
+		name = "Bang Co" #LÃª Nhan Tong
 		monarch_name = "Bang Co"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1441.1.1
 		death_date = 1459.10.29
 		claim = 95
@@ -155,20 +181,10 @@ add_country_modifier = {
 	}
 }
 
-1442.9.8 = {
-	monarch = {
-		name = "Bang Co" #Lê Nhan Tong
-		dynasty = "Lê"
-		adm = 3
-		dip = 3
-		mil = 1
-	}
-}
-
 1459.1.1 = {
 	monarch = {
 		name = "Nghi Dan"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 2
@@ -177,9 +193,9 @@ add_country_modifier = {
 
 1459.1.1 = {
 	heir = {
-		name = "Tu Thanh" #Lê Thanh Tong
+		name = "Tu Thanh" #LÃª Thanh Tong
 		monarch_name = "Tu Thanh"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1442.1.1
 		death_date = 1497.3.4
 		claim = 95
@@ -191,8 +207,8 @@ add_country_modifier = {
 
 1460.6.29 = {
 	monarch = {
-		name = "Tu Thanh" #Lê Thanh Tong
-		dynasty = "Lê"
+		name = "Tu Thanh" #LÃª Thanh Tong
+		dynasty = "LÃª"
 		adm = 5
 		dip = 4
 		mil = 4
@@ -201,9 +217,9 @@ add_country_modifier = {
 
 1460.6.29 = {
 	heir = {
-		name = "Tranh" #Lê Hien Tong
+		name = "Tranh" #LÃª Hien Tong
 		monarch_name = "Tranh"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1460.1.1
 		death_date = 1504.6.25
 		claim = 95
@@ -217,8 +233,8 @@ add_country_modifier = {
 
 1497.3.4 = {
 	monarch = {
-		name = "Tranh" #Lê Hien Tong
-		dynasty = "Lê"
+		name = "Tranh" #LÃª Hien Tong
+		dynasty = "LÃª"
 		adm = 1
 		dip = 1
 		mil = 0
@@ -227,9 +243,9 @@ add_country_modifier = {
 
 1497.3.4 = {
 	heir = {
-		name = "Thuan" #Lê Tuc Tong
+		name = "Thuan" #LÃª Tuc Tong
 		monarch_name = "Thuan"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1487.1.1
 		death_date = 1504.12.9
 		claim = 95
@@ -241,8 +257,8 @@ add_country_modifier = {
 
 1504.6.25 = {
 	monarch = {
-		name = "Thuan" #Lê Tuc Tong
-		dynasty = "Lê"
+		name = "Thuan" #LÃª Tuc Tong
+		dynasty = "LÃª"
 		adm = 1
 		dip = 0
 		mil = 0
@@ -253,7 +269,7 @@ add_country_modifier = {
 	heir = {
 		name = "Tuan"
 		monarch_name = "Tuan"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1487.1.1
 		death_date = 1510.6.11
 		claim = 95
@@ -266,7 +282,7 @@ add_country_modifier = {
 1504.12.9 = {
 	monarch = {
 		name = "Tuan"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 0
@@ -277,7 +293,7 @@ add_country_modifier = {
 	heir = {
 		name = "Oanh" # Tuong Duc
 		monarch_name = "Oanh"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1492.1.1
 		death_Date = 1516.5.9
 		claim = 95
@@ -290,7 +306,7 @@ add_country_modifier = {
 1510.6.11 = {
 	monarch = {
 		name = "Oanh" #Tuong Duc
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 0
@@ -299,9 +315,9 @@ add_country_modifier = {
 
 1510.6.11 = {
 	heir = {
-		name = "Y" #Lê Chieu Tong 
+		name = "Y" #LÃª Chieu Tong 
 		monarch_name = "Y"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1496.1.1
 		death_date = 1522.1.20
 		claim = 95
@@ -314,7 +330,7 @@ add_country_modifier = {
 1516.5.9 = {
 	monarch = {
 		name = "Y" #Le Chieu Tong
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 0
@@ -325,7 +341,7 @@ add_country_modifier = {
 	heir = {
 		name = "Xuan" #Cung Hoang
 		monarch_name = "Xuan"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1506.1.1
 		death_date = 1527.7.13
 		claim = 95
@@ -338,7 +354,7 @@ add_country_modifier = {
 1522.1.20 = {
 	monarch = {
 		name = "Xuan" #Cung Hoang
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 0
@@ -496,7 +512,7 @@ add_country_modifier = {
 1677.1.1 = {
 	monarch = {
 		name = "Duy Hop"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 1
 		mil = 0
@@ -507,7 +523,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Duong"
 		monarch_name = "Duy Duong"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1676.1.1
 		death_date = 1729.4.1
 		claim = 95
@@ -522,7 +538,7 @@ add_country_modifier = {
 1705.5.23 = {
 	monarch = {
 		name = "Duy Duong"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 1
 		dip = 0
 		mil = 1
@@ -533,7 +549,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Phuong"
 		monarch_name = "Duy Phuong"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1705.5.23
 		death_date = 1732.11.1
 		claim = 95
@@ -559,7 +575,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Tuong"
 		monarch_name = "Duy Tuong"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1698.1.1
 		death_date = 1735.5.8
 		claim = 95
@@ -572,7 +588,7 @@ add_country_modifier = {
 1732.11.1 = {
 	monarch = {
 		name = "Duy Toung"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 1
 		dip = 1
 		mil = 2
@@ -583,7 +599,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Than"
 		monarch_name = "Duy Than"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1699.1.1
 		death_date = 1740.6.1
 		claim = 95
@@ -596,7 +612,7 @@ add_country_modifier = {
 1735.5.8 = {
 	monarch = {
 		name = "Duy Than"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 1
 		dip = 1
 		mil = 1
@@ -607,7 +623,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Dieu"
 		monarch_name = "Duy Dieu"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1716.1.1
 		death_date = 1776.1.1
 		claim = 95
@@ -622,7 +638,7 @@ add_country_modifier = {
 1740.6.1 = {
 	monarch = {
 		name = "Duy Dieu"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 1
 		dip = 2
 		mil = 2
@@ -633,7 +649,7 @@ add_country_modifier = {
 	heir = {
 		name = "Duy Khiem"
 		monarch_name = "Duy Khiem"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		birth_date = 1765.1.1
 		death_date = 1793.1.1
 		claim = 95
@@ -648,7 +664,7 @@ add_country_modifier = {
 1776.1.1 = {
 	monarch = {
 		name = "Duy Khiem"
-		dynasty = "Lê"
+		dynasty = "LÃª"
 		adm = 0
 		dip = 0
 		mil = 0

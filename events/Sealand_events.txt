@@ -233,3 +233,160 @@ country_event = { # Whoever owns, response.
 	}
 }
 ########################################################################
+#Denmark mission event:
+namespace = sea_denmark_events
+
+country_event = {
+	id = sea_denmark_events.1
+	title = sea_denmark_events.1.t
+	desc = sea_denmark_events.1.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						normandy_area = {
+							type = all
+							NOT = { is_core = NRM }
+						}
+					}
+				}
+				normandy_area = { add_core = NRM }
+			}
+		}
+	}
+
+	option = {
+		name = sea_denmark_events.1.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			release = NRM
+		}
+		vassalize = NRM
+		hidden_effect = {
+			NRM = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+		}
+		NRM = {
+			define_heir = {
+				name = "Rollo"
+				dynasty = "Ragnvaldsson"
+				religion = norse_pagan_reformed
+				claim = 100
+				birth_date = 860.1.1
+			}
+			hidden_effect = {
+				kill_ruler = yes
+			}
+			add_ruler_modifier = {
+				name = live_long_and_prosper_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				normandy_area = {
+					is_core = ROOT
+				}
+			}
+			normandy_area = { remove_core = ROOT }
+		}
+	}
+	option = {
+		name = sea_denmark_events.1.b
+		ai_chance = { factor = 0 }
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+	}
+}
+########################################################################
+namespace = sealand_events
+# New World and Colonial Australia nerf:
+
+country_event = {
+	id = sealand_events.1
+	title = sealand_events.1.t
+	desc = sealand_events.1.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					colonial_region = colonial_australia
+					continent = north_america
+					continent = south_america
+				}
+			}
+			add_permanent_province_modifier	= {
+				name = new_wrold_nerfs_modifier
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = sealand_events.1.a
+	}
+}
+
+country_event = {
+	id = sealand_events.2
+	title = sealand_events.2.t
+	desc = sealand_events.2.d
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		ai = no
+		te_ika_a_maui_hauauru_area = {
+			type = all
+			owned_by = ROOT	
+		}
+		te_ika_a_maui_waho_area = {
+			type = all
+			owned_by = ROOT	
+		}
+		te_waipounamu_area = {
+			type = all
+			owned_by = ROOT	
+		}
+	}
+	option = {
+		name = sealand_events.2.a
+	}
+}
+country_event = {
+	id = sealand_events.3
+	title = sealand_events.3.t
+	desc = sealand_events.3.d
+	picture = EP_ISLAND_eventPicture
+
+	trigger = {
+		ai = no
+		num_of_owned_provinces_with = {
+			value = 20
+			is_island = yes
+		}
+		NOT = { has_country_flag = fired_sealand_event_3 }
+	}
+	option = {
+		name = sealand_events.3.a
+		set_country_flag = fired_sealand_event_3
+		add_country_modifier = {
+			name = sealand_modifier
+			duration = -1
+		}
+	}
+}

@@ -61,6 +61,7 @@ country_event = {
 	option = {
 		name = "shinto_events.1.a" #We must control this so we can be the ones making the money from it.
 		custom_tooltip = shinto_incident_wokou_start.tt
+		custom_tooltip = shinto_events.1.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_adm_power = -25
 		add_incident_variable_value = {
@@ -72,12 +73,17 @@ country_event = {
 				id = shinto_events.2
 				days = 1095
 			}
+			set_variable = {
+				which = incident_wokou_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.1.b" #We must stop these Picaroons!
 		custom_tooltip = shinto_events.isolation.tt
+		custom_tooltip = shinto_events.1.bb.tt
 		custom_tooltip = shinto_incident_wokou_start.tt
 		add_mil_power = -25
 		add_dip_power = -25
@@ -89,6 +95,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.2
 				days = 1095
+			}
+			set_variable = {
+				which = incident_wokou_tt
+				value = 3
 			}
 		}
 	}
@@ -123,6 +133,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.2.a" #We should seek funding from foreign investors.
+		custom_tooltip = shinto_events.2.aa.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_years_of_income = 0.35
 		custom_tooltip = shinto_events.2.b.tt
@@ -148,11 +159,16 @@ country_event = {
 				id = shinto_events.3
 				days = 1095
 			}
+			change_variable = {
+				which = incident_wokou_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.2.b" #We can turn a blind eye to it all.
+		custom_tooltip = shinto_events.2.bb.tt
 		custom_tooltip = shinto_events.much.openness.tt
 		custom_tooltip = shinto_events.2.b.tt
 		add_dip_power = 75
@@ -178,11 +194,16 @@ country_event = {
 				id = shinto_events.3
 				days = 1095
 			}
+			change_variable = {
+				which = incident_wokou_tt
+				value = -1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.2.c" #Let us help protect the foreign countries.
+		custom_tooltip = shinto_events.2.cc.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		custom_tooltip = shinto_events.2.c.tt
 		hidden_effect = {
@@ -206,6 +227,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.3
 				days = 1095
+			}
+			change_variable = {
+				which = incident_wokou_tt
+				value = 3
 			}
 		}
 	}
@@ -242,6 +267,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.3.a" #What do we care if he lives of the wealth of foreigners?
+		custom_tooltip = shinto_events.3.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		
 		event_target:save_wokou_target = {
@@ -254,11 +280,18 @@ country_event = {
 			incident = incident_wokou
 			value = 1
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_wokou_tt
+				value = 1
+			}
+		}
 		set_country_flag = end_of_wokou_chain
 	}
 	
 	option = {
 		name = "shinto_events.3.b" #Perhaps he could be made a servant of our state...
+		custom_tooltip = shinto_events.3.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_years_of_income = -0.5
 		create_admiral = {
@@ -274,11 +307,18 @@ country_event = {
 			incident = incident_wokou
 			value = 2
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_wokou_tt
+				value = 2
+			}
+		}
 		set_country_flag = end_of_wokou_chain
 	}
 	
 	option = {
 		name = "shinto_events.3.c" #We must pull out these weeds of decay from our garden!
+		custom_tooltip = shinto_events.3.cc.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_stability = -1
 		event_target:save_wokou_target = {
@@ -290,6 +330,12 @@ country_event = {
 		add_incident_variable_value = {
 			incident = incident_wokou
 			value = 3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_wokou_tt
+				value = 3
+			}
 		}
 		set_country_flag = end_of_wokou_chain
 	}
@@ -493,6 +539,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.7.a" #They will have what they require.
+		custom_tooltip = shinto_events.7.aa.tt
 		custom_tooltip = shinto_incident_urbanisation.tt
 		custom_tooltip = shinto_events.open.tt
 		add_years_of_income = -1
@@ -509,12 +556,16 @@ country_event = {
 				id = shinto_events.8
 				days = 1095
 			}
+			set_variable = {
+				which = incident_urbanization_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.7.b" #Impose restrictions on who can move into [Root.Capital.GetCapitalName].
-		custom_tooltip = shinto_incident_urbanisation.tt
+		custom_tooltip = shinto_events.7.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		random_owned_province = {
 			limit = { is_capital = no }
@@ -528,6 +579,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.8
 				days = 1095
+			}
+			set_variable = {
+				which = incident_urbanization_tt
+				value = 3
 			}
 		}
 	}
@@ -545,6 +600,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.8.a" #Decree that no man may move without permission.
+		custom_tooltip = shinto_events.8.aa.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
 			name = "movement_restrictions"
@@ -559,11 +615,16 @@ country_event = {
 				id = shinto_events.9
 				days = 1095
 			}
+			change_variable = {
+				which = incident_urbanization_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.8.b" #We cannot stop the growth of the cities
+		custom_tooltip = shinto_events.8.bb.tt
 		custom_tooltip = shinto_events.open.tt
 		capital_scope = {
 			add_base_production = 1
@@ -582,6 +643,10 @@ country_event = {
 				id = shinto_events.9
 				days = 1095
 			}
+			change_variable = {
+				which = incident_urbanization_tt
+				value = -1
+			}
 		}
 	}
 }
@@ -597,6 +662,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.9.a" #We will abolish the old regulations that feed them!
+		custom_tooltip = shinto_events.9.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_mercantilism = -1
 		add_years_of_income = 1
@@ -604,29 +670,48 @@ country_event = {
 			incident = incident_urbanization
 			value = 1
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_urbanization_tt
+				value = 1
+			}
+		}
 		set_country_flag = end_of_urbanisation_chain
 	}
 	
 	option = {
 		name = "shinto_events.9.b" #Monopolies work well but we should not grant them based on tradition.
-		custom_tooltip = shinto_events.isolation.tt
+		custom_tooltip = shinto_events.9.bb.tt
 		add_mercantilism = 1
 		add_years_of_income = 0.5
 		add_incident_variable_value = {
 			incident = incident_urbanization
 			value = 2
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_urbanization_tt
+				value = 2
+			}
+		}
 		set_country_flag = end_of_urbanisation_chain
 	}
 	
 	option = {
 		name = "shinto_events.9.c" #We must protect the arrangements of our ancestors.
+		custom_tooltip = shinto_events.9.cc.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_mercantilism = 2
 		add_years_of_income = -0.25
 		add_incident_variable_value = {
 			incident = incident_urbanization
 			value = 3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_urbanization_tt
+				value = 3
+			}
 		}
 		set_country_flag = end_of_urbanisation_chain
 	}
@@ -812,6 +897,7 @@ country_event = {
 	option = {
 		name = "shinto_events.13.a" #This fervor is inspiring! Let us patronize these temples.
 		custom_tooltip = shinto_incident_ikko.tt
+		custom_tooltip = shinto_events.13.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		event_target:ikko_province = {
 			add_local_autonomy = 75
@@ -822,12 +908,17 @@ country_event = {
 				id = shinto_events.14
 				days = 1095
 			}
+			set_variable = {
+				which = incident_ikko_shu_tt
+				value = 0
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.13.b" #It is hard to have something against the strong convictions of the faithful.
 		custom_tooltip = shinto_incident_ikko.tt
+		custom_tooltip = shinto_events.13.bb.tt
 		custom_tooltip = shinto_events.middle_way.tt
 		event_target:ikko_province = {
 			add_local_autonomy = 30
@@ -841,12 +932,17 @@ country_event = {
 				id = shinto_events.14
 				days = 1095
 			}
+			set_variable = {
+				which = incident_ikko_shu_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.13.c" #Let us be very restrictive against anything that empowers the poor.
 		custom_tooltip = shinto_incident_ikko.tt
+		custom_tooltip = shinto_events.13.cc.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_stability_or_adm_power = yes
 		event_target:ikko_province = {
@@ -865,6 +961,10 @@ country_event = {
 				id = shinto_events.14
 				days = 1095
 			}
+			set_variable = {
+				which = incident_ikko_shu_tt
+				value = 3
+			}
 		}
 	}
 }
@@ -881,6 +981,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.14.a" #We must undercut these hornets nests.
+		custom_tooltip = shinto_events.14.aa.tt
 		custom_tooltip = shinto_events.isolation.tt
 		event_target:ikko_province = {
 			add_province_modifier = {
@@ -898,10 +999,15 @@ country_event = {
 				id = shinto_events.15
 				days = 1095
 			}
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 3
+			}
 		}
 	}
 	option = {
 		name = "shinto_events.14.b" #Let us strive to work together with these armies of the faithful.
+		custom_tooltip = shinto_events.14.bb.tt
 		custom_tooltip = shinto_events.middle_way.tt
 		event_target:ikko_province = {
 			add_local_autonomy = 10
@@ -916,11 +1022,16 @@ country_event = {
 				id = shinto_events.15
 				days = 1095
 			}
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.14.c" #Authorize more Temple Towns to be built.
+		custom_tooltip = shinto_events.14.cc.tt
 		custom_tooltip = shinto_events.open.tt
 		event_target:ikko_province = {
 			add_local_autonomy = 45
@@ -934,6 +1045,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.15
 				days = 1095
+			}
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 1
 			}
 		}
 	}
@@ -951,6 +1066,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.15.c" #This is only their right.
+		custom_tooltip = shinto_events.15.cc.tt
 		set_country_flag = end_of_ikko_chain
 		custom_tooltip = shinto_events.open.tt
 		event_target:ikko_province = {
@@ -966,10 +1082,17 @@ country_event = {
 			incident = incident_ikko_shu
 			value = 1
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 1
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.15.b" #They cannot spread beyond their current borders.
+		custom_tooltip = shinto_events.15.bb.tt
 		set_country_flag = end_of_ikko_chain
 		custom_tooltip = shinto_events.middle_way.tt
 		add_stability = -1
@@ -977,10 +1100,17 @@ country_event = {
 			incident = incident_ikko_shu
 			value = 2
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 2
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.15.a" #The time has come to crush these peasants!
+		custom_tooltip = shinto_events.15.aa.tt
 		set_country_flag = end_of_ikko_chain
 		custom_tooltip = shinto_events.isolation.tt
 		event_target:ikko_province = {
@@ -998,6 +1128,12 @@ country_event = {
 		add_incident_variable_value = {
 			incident = incident_ikko_shu
 			value = 3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_ikko_shu_tt
+				value = 3
+			}
 		}
 	}
 }
@@ -1179,6 +1315,7 @@ country_event = {
 	option = {
 		name = "shinto_events.19.b" #We should strive to attract the thinkers of this new strand of moral philosophy.
 		custom_tooltip = shinto_incident_confucianism.tt
+		custom_tooltip = shinto_events.19.bb.tt
 		custom_tooltip = shinto_events.open.tt
 		define_advisor = {
 			type = philosopher
@@ -1196,12 +1333,17 @@ country_event = {
 				id = shinto_events.20
 				days = 1095
 			}
+			set_variable = {
+				which = incident_neo_confucianism_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.19.a" #Let us patronize the institutions of the Imperial Court.
 		custom_tooltip = shinto_incident_confucianism.tt
+		custom_tooltip = shinto_events.19.aa.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
 			name = "shinto_support_for_court"
@@ -1215,6 +1357,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.20
 				days = 1095
+			}
+			set_variable = {
+				which = incident_neo_confucianism_tt
+				value = 3
 			}
 		}
 	}
@@ -1233,6 +1379,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.20.a" #This is an initiative we must support.
+		custom_tooltip = shinto_events.20.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_country_modifier = {
 			name = "shinto_self_made_men"
@@ -1247,10 +1394,15 @@ country_event = {
 				id = shinto_events.21
 				days = 1095
 			}
+			change_variable = {
+				which = incident_neo_confucianism_tt
+				value = 1
+			}
 		}
 	}
 	option = {
 		name = "shinto_events.20.b" #We cannot allow social order to be threatened in this way!
+		custom_tooltip = shinto_events.20.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_legitimacy = 10
 		add_incident_variable_value = {
@@ -1261,6 +1413,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.21
 				days = 1095
+			}
+			change_variable = {
+				which = incident_neo_confucianism_tt
+				value = 3
 			}
 		}
 	}
@@ -1278,6 +1434,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.21.a" #Merit should be the guiding principle
+		custom_tooltip = shinto_events.21.aa.tt
 		set_country_flag = end_of_neo_confucianism_chain
 		custom_tooltip = shinto_events.open.tt
 		add_country_modifier = {
@@ -1288,10 +1445,17 @@ country_event = {
 			incident = incident_neo_confucianism
 			value = 2
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_neo_confucianism_tt
+				value = 2
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.21.b" #We must support those loyal to us.
+		custom_tooltip = shinto_events.21.bb.tt
 		set_country_flag = end_of_neo_confucianism_chain
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
@@ -1301,6 +1465,12 @@ country_event = {
 		add_incident_variable_value = {
 			incident = incident_neo_confucianism
 			value = 3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_neo_confucianism_tt
+				value = 3
+			}
 		}
 	}
 	
@@ -1432,7 +1602,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "shinto_events.24.a" #
+		name = "shinto_events.24.a"
 		
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
@@ -1473,12 +1643,17 @@ country_event = {
 				}
 				save_event_target_as = nanban_traders_here
 			}
+			set_variable = {
+				which = incident_nanban_tt
+				value = 4
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.25.a" #Encourage them to make it a permanent stop.
 		custom_tooltip = shinto_incident_nanban.tt
+		custom_tooltip = shinto_events.25.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_incident_variable_value = {
 			incident = incident_nanban
@@ -1495,17 +1670,26 @@ country_event = {
 				id = shinto_events.26
 				days = 1095
 			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = -1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.25.c" #We will accept their goods but offer no guarantees in the future.
 		custom_tooltip = shinto_incident_nanban.tt
+		custom_tooltip = shinto_events.25.cc.tt
 		add_years_of_income = 0.5
 		hidden_effect = {
 			country_event = {
 				id = shinto_events.26
 				days = 1095
+			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = 0
 			}
 		}
 	}
@@ -1513,6 +1697,7 @@ country_event = {
 	option = {
 		name = "shinto_events.25.b" #We will enforce strict rules for who they can meet or do business with.
 		custom_tooltip = shinto_incident_nanban.tt
+		custom_tooltip = shinto_events.25.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
 			name = "nanban_trade_restrictions"
@@ -1526,6 +1711,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.26
 				days = 1095
+			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = 1
 			}
 		}
 	}
@@ -1542,6 +1731,7 @@ country_event = {
 
 	option = {
 		name = "shinto_events.26.a" #We will allow them to expand their presence.
+		custom_tooltip = shinto_events.26.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_prestige = -20
 		event_target:nanban_traders_here = {
@@ -1557,11 +1747,16 @@ country_event = {
 				id = shinto_events.27
 				days = 1095
 			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = -1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.26.b" #Limit their influence to a few more ports.
+		custom_tooltip = shinto_events.26.bb.tt
 		add_prestige = -10
 		event_target:nanban_traders_here = {
 			add_base_production = 1
@@ -1572,11 +1767,16 @@ country_event = {
 				id = shinto_events.27
 				days = 1095
 			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = 0
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.26.c" #Their business must be kept limted to [nanban_traders_here.GetCapitalName].
+		custom_tooltip = shinto_events.26.cc.tt
 		custom_tooltip =shinto_events.isolation.tt
 		add_prestige = 5
 		add_legitimacy = 10
@@ -1588,6 +1788,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.27
 				days = 1095
+			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = 1
 			}
 		}
 	}
@@ -1605,6 +1809,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.27.a" #We must do our best to encourage dissemination of western science.
+		custom_tooltip = shinto_events.27.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_incident_variable_value = {
 			incident = incident_nanban
@@ -1619,11 +1824,16 @@ country_event = {
 				id = shinto_events.28
 				days = 1095
 			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = -1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.27.b" #Let us limit the spread of dangerous ideas.
+		custom_tooltip = shinto_events.27.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_prestige = 15
 		add_incident_variable_value = {
@@ -1634,6 +1844,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.28
 				days = 1095
+			}
+			change_variable = {
+				which = incident_nanban_tt
+				value = 1
 			}
 		}
 	}
@@ -1652,6 +1866,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.28.b" #There is no need to attempt what others do better!
+		custom_tooltip = shinto_events.28.bb.tt
 		set_country_flag = end_of_nanban_chain
 		custom_tooltip = shinto_events.open.tt
 		add_years_of_income = 1
@@ -1663,10 +1878,17 @@ country_event = {
 			incident = incident_nanban
 			value = -1
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_nanban_tt
+				value = -1
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.28.a" #An excellent investment!
+		custom_tooltip = shinto_events.28.aa.tt
 		add_years_of_income = -1
 		custom_tooltip = shinto_events.isolation.tt
 		set_country_flag = end_of_nanban_chain
@@ -1677,6 +1899,12 @@ country_event = {
 		add_incident_variable_value = {
 			incident = incident_nanban
 			value = 2
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_nanban_tt
+				value = 2
+			}
 		}
 	}
 	
@@ -1840,9 +2068,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = incident_firearms_tt
+				value = 1
+			}
+		}
+	}
+
 	option = {
 		name = "shinto_events.32.a" #Strength in numbers! Produce as many as we can.
 		custom_tooltip = shinto_incident_tanegashima.tt
+		custom_tooltip = shinto_events.32.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_mil_power = 50
 		add_incident_variable_value = {
@@ -1854,12 +2092,17 @@ country_event = {
 				id = shinto_events.33
 				days = 1095
 			}
+			change_variable = {
+				which = incident_firearms_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.32.b" #We will make just enough for a small force of trusted men.
 		custom_tooltip = shinto_incident_tanegashima.tt
+		custom_tooltip = shinto_events.32.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_army_tradition = 10
 		add_incident_variable_value = {
@@ -1870,6 +2113,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.33
 				days = 1095
+			}
+			change_variable = {
+				which = incident_firearms_tt
+				value = 3
 			}
 		}
 	}
@@ -1887,6 +2134,7 @@ country_event = {
 
 	option = {
 		name = "shinto_events.33.a" #Doing so would only weaken our armies.
+		custom_tooltip = shinto_events.33.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_yearly_manpower = 1
 		add_incident_variable_value = {
@@ -1898,11 +2146,16 @@ country_event = {
 				id = shinto_events.34
 				days = 1095
 			}
+			change_variable = {
+				which = incident_firearms_tt
+				value = -1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.33.b" #Ban the use of guns entirely for commoners.
+		custom_tooltip = shinto_events.33.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
 			name = "firearm_restrictions"
@@ -1916,6 +2169,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.34
 				days = 1095
+			}
+			change_variable = {
+				which = incident_firearms_tt
+				value = 1
 			}
 		}
 	}
@@ -1933,6 +2190,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.34.a" #An excellent investment!
+		custom_tooltip = shinto_events.34.aa.tt
 		set_country_flag = end_of_incident_firearms_chain
 		custom_tooltip = shinto_events.open.tt
 		add_years_of_income = -1
@@ -1941,16 +2199,29 @@ country_event = {
 			incident = incident_firearms
 			value = -1
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_firearms_tt
+				value = -1
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.34.b" #There is no need to attempt what others do better!
+		custom_tooltip = shinto_events.34.bb.tt
 		set_country_flag = end_of_incident_firearms_chain
 		custom_tooltip = shinto_events.isolation.tt
 		add_prestige = 10
 		add_incident_variable_value = {
 			incident = incident_firearms
 			value = 1
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_firearms_tt
+				value = 1
+			}
 		}
 	}
 	
@@ -2028,7 +2299,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "shinto_events.36.a" #
+		name = "shinto_events.36.a"
 		if = {
 			limit = { NOT = { religion = shinto } }
 			hidden_effect = {
@@ -2115,6 +2386,7 @@ country_event = {
 	option = {
 		name = "shinto_events.38.a" #Preposterous! They have no business here!
 		custom_tooltip = shinto_incident_kirishitan.tt
+		custom_tooltip = shinto_events.38.aa.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_legitimacy = 10
 		add_country_modifier = {
@@ -2130,12 +2402,17 @@ country_event = {
 				id = shinto_events.39
 				days = 1095
 			}
+			set_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.38.b" #We will allow them to stay as long as they behave.
 		custom_tooltip = shinto_incident_kirishitan.tt
+		custom_tooltip = shinto_events.38.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
@@ -2146,12 +2423,17 @@ country_event = {
 				id = shinto_events.39
 				days = 1095
 			}
+			set_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.38.c" #Let us hear what their God can teach us.
 		custom_tooltip = shinto_incident_kirishitan.tt
+		custom_tooltip = shinto_events.38.cc.tt
 		custom_tooltip = shinto_events.open.tt
 		add_country_modifier = {
 			name = "shinto_religious_tensions"
@@ -2165,6 +2447,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.39
 				days = 1095
+			}
+			set_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 3
 			}
 		}
 	}
@@ -2195,6 +2481,7 @@ country_event = {
 	option = {
 		name = "shinto_events.39.a" #[Root.Heir.GetName] will be happy to learn of their god.
 		trigger = { has_heir = yes }
+		custom_tooltip = shinto_events.39.aa.tt
 		custom_tooltip = shinto_events.much.openness.tt
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
@@ -2218,11 +2505,16 @@ country_event = {
 				id = shinto_events.40
 				days = 1095
 			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 3
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.39.b" #We can allow them to spread their faith here.
+		custom_tooltip = shinto_events.39.bb.tt
 		custom_tooltip = shinto_events.open.tt
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
@@ -2239,11 +2531,16 @@ country_event = {
 				id = shinto_events.40
 				days = 1095
 			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.39.c" #We must defend the faith of our ancestors!
+		custom_tooltip = shinto_events.39.cc.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_stability_or_adm_power = yes
 		add_country_modifier = {
@@ -2258,6 +2555,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.40
 				days = 1095
+			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = -1
 			}
 		}
 	}
@@ -2275,6 +2576,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.40.a" #Let them come!
+		custom_tooltip = shinto_events.40.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		random_owned_province = {
 			limit = { NOT = { has_province_modifier = shinto_local_christian_mission } }
@@ -2288,6 +2590,10 @@ country_event = {
 				id = shinto_events.41
 				days = 1095
 			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 2
+			}
 		}
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
@@ -2297,6 +2603,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.40.b" #We cannot allow this.
+		custom_tooltip = shinto_events.40.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_country_modifier = {
 			name = "shinto_strenghtened_local_traders"
@@ -2306,6 +2613,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.41
 				days = 1095
+			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = -1
 			}
 		}
 		add_incident_variable_value = {
@@ -2327,6 +2638,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.41.a" #Write a letter.
+		custom_tooltip = shinto_events.41.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_prestige = -10
 		define_advisor = {
@@ -2340,6 +2652,10 @@ country_event = {
 				id = shinto_events.42
 				days = 1095
 			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 3
+			}
 		}
 		
 		add_incident_variable_value = {
@@ -2350,6 +2666,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.41.b" #We cannot do that.
+		custom_tooltip = shinto_events.41.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		define_advisor = {
 			type = army_reformer
@@ -2360,6 +2677,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.42
 				days = 1095
+			}
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 1
 			}
 		}
 		add_incident_variable_value = {
@@ -2381,6 +2702,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.42.a" #An inquisition they will have then.
+		custom_tooltip = shinto_events.42.aa.tt
 		custom_tooltip = shinto_events.42.a.tt
 		hidden_effect = {
 			random_list = {
@@ -2400,10 +2722,17 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.42.b" #It is not their place. Mind cannot reason over faith.
+		custom_tooltip = shinto_events.42.bb.tt
 		custom_tooltip = shinto_events.42.b.tt
 		add_prestige = 10
 		add_legitimacy = -5
 		set_country_flag = end_of_incident_spread_of_christianity_chain
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 0
+			}
+		}
 	}
 }
 
@@ -2418,6 +2747,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.43.a" #We shall have to allow it then.
+		custom_tooltip = shinto_events.43.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_stability_or_adm_power = yes
 		set_country_flag = end_of_incident_spread_of_christianity_chain
@@ -2425,16 +2755,29 @@ country_event = {
 			incident = incident_spread_of_christianity
 			value = 2
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 2
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.43.b" #Preposterous! We must follow the advice of our Kokujin!
+		custom_tooltip = shinto_events.43.bb.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_stability = -1
 		set_country_flag = end_of_incident_spread_of_christianity_chain
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
 			value = -5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = -5
+			}
 		}
 	}
 }
@@ -2450,6 +2793,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.44.a" #This is the land of the Gods!
+		custom_tooltip = shinto_events.44.aa.tt
 		set_country_flag = end_of_incident_spread_of_christianity_chain
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_stability_or_adm_power = yes
@@ -2457,16 +2801,29 @@ country_event = {
 			incident = incident_spread_of_christianity
 			value = -5
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = -5
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.44.b" #While we respect their judgement the Christians must stay.
+		custom_tooltip = shinto_events.44.bb.tt
 		custom_tooltip = shinto_events.open.tt
 		add_stability = -1
 		set_country_flag = end_of_incident_spread_of_christianity_chain
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
 			value = 2
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 2
+			}
 		}
 	}
 }
@@ -2499,16 +2856,24 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.45.a" #Conduct an investigation to punish the perpetrators.
+		custom_tooltip = shinto_events.45.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
 			value = 1
 		}
 		add_adm_power = -15
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = 1
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.45.b" #There is little we can do about accidents.
+		custom_tooltip = shinto_events.45.bb.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		event_target:christian_port_event_target = {
 			remove_province_modifier = shinto_local_christian_mission
@@ -2517,6 +2882,12 @@ country_event = {
 		add_incident_variable_value = {
 			incident = incident_spread_of_christianity
 			value = -2
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_spread_of_christianity_tt
+				value = -2
+			}
 		}
 	}
 }
@@ -2743,6 +3114,7 @@ country_event = {
 	option = {
 		name = "shinto_events.50.a" #Nobody will touch my right to tax collection!
 		custom_tooltip = shinto_incident_shogunate_authority.tt
+		custom_tooltip = shinto_events.50.aa.tt
 		custom_tooltip = shinto_events.much.isolation.tt
 		overlord = {
 			add_trust = {
@@ -2759,12 +3131,17 @@ country_event = {
 				id = shinto_events.51
 				days = 1095
 			}
+			set_variable = {
+				which = incident_shogunate_authority_tt
+				value = 1
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.50.b" #Offer to perform such a count and present the result to [Root.Overlord.Monarch.GetName]
 		custom_tooltip = shinto_incident_shogunate_authority.tt
+		custom_tooltip = shinto_events.50.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		overlord = {
 			add_trust = {
@@ -2785,12 +3162,17 @@ country_event = {
 				id = shinto_events.51
 				days = 1095
 			}
+			set_variable = {
+				which = incident_shogunate_authority_tt
+				value = 2
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.50.c" #We welcome the [Root.Overlord.GetAdjective] administrators.
 		custom_tooltip = shinto_incident_shogunate_authority.tt
+		custom_tooltip = shinto_events.50.cc.tt
 		custom_tooltip = shinto_events.open.tt
 		add_incident_variable_value = {
 			incident = incident_shogunate_authority
@@ -2804,6 +3186,10 @@ country_event = {
 			country_event = {
 				id = shinto_events.51
 				days = 1095
+			}
+			set_variable = {
+				which = incident_shogunate_authority_tt
+				value = 3
 			}
 		}
 	}
@@ -2820,6 +3206,7 @@ country_event = {
 
 	option = {
 		name = "shinto_events.51.a" #By all means let us do so.
+		custom_tooltip = shinto_events.51.aa.tt
 		custom_tooltip = shinto_events.open.tt
 		add_legitimacy = -10
 		if = {
@@ -2835,11 +3222,16 @@ country_event = {
 				id = shinto_events.52
 				days = 1095
 			}
+			change_variable = {
+				which = incident_shogunate_authority_tt
+				value = 3
+			}
 		}
 	}
 	
 	option = {
 		name = "shinto_events.51.b" #The [Root.Overlord.GetAdjective] are weak and weak willed.
+		custom_tooltip = shinto_events.51.bb.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_incident_variable_value = {
 			incident = incident_shogunate_authority
@@ -2856,6 +3248,10 @@ country_event = {
 				id = shinto_events.52
 				days = 1095
 			}
+			change_variable = {
+				which = incident_shogunate_authority_tt
+				value = 1
+			}
 		}
 	}
 }
@@ -2871,6 +3267,7 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.52.a" #We must serve the Shogun and the Emperor
+		custom_tooltip = shinto_events.52.aa.tt
 		set_country_flag = end_of_incident_shogunate_authority_chain
 		custom_tooltip = shinto_events.open.tt
 		add_dip_power = -50
@@ -2882,10 +3279,17 @@ country_event = {
 			incident = incident_shogunate_authority
 			value = 3
 		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_shogunate_authority_tt
+				value = 3
+			}
+		}
 	}
 	
 	option = {
 		name = "shinto_events.52.b" #We cannot partake in this charade, refuse the appointment.
+		custom_tooltip = shinto_events.52.bb.tt
 		set_country_flag = end_of_incident_shogunate_authority_chain
 		custom_tooltip = shinto_events.isolation.tt
 		custom_tooltip = shinto_events.52.b.tt
@@ -2896,6 +3300,12 @@ country_event = {
 		overlord = {
 			country_event = {
 				id = shinto_events.53
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = incident_shogunate_authority_tt
+				value = -1
 			}
 		}
 	}
@@ -2943,12 +3353,19 @@ country_event = {
 	
 	option = {
 		name = "shinto_events.54.a" #
+		custom_tooltip = shinto_events.54.aa.tt
 		custom_tooltip = shinto_events.isolation.tt
 		add_incident_variable_value = {
 			incident = incident_shogunate_authority
 			value = -3
 		}
 		add_legitimacy = 10
+		hidden_effect = {
+			change_variable = {
+				which = incident_shogunate_authority_tt
+				value = -3
+			}
+		}
 	}
 }
 
@@ -3134,7 +3551,87 @@ country_event = {
 	}
 	
 	option = {
-		name = "shinto_events.58.b" #
+		name = "shinto_events.58.b" # Theocratic Government
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				NOT = { tag = JAP }
+				NOT = { tag = TKD }
+				any_known_country = {
+					capital_scope = { region = japan_region }
+					religion = mahayana
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ikko_ikki_peasants_flag
+		}
+		change_government_to_theocracy = yes
+		add_government_reform = leading_clergy_reform
+		add_stability = -2
+		change_religion = mahayana
+		capital_scope = {
+			change_religion = mahayana
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				spawn_rebels = {
+					type = shinto_rebels
+					size = 1
+				}
+			}
+		}
+
+		add_country_modifier = {
+			name = "shinto_converted_to_mahayana"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "shinto_events.58.c" # Peasant Government
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				NOT = { tag = JAP }
+				NOT = { tag = TKD }
+				any_known_country = {
+					capital_scope = { region = japan_region }
+					religion = mahayana
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ikko_ikki_peasants_flag
+		}
+		change_government_to_republic = yes
+		add_government_reform = peasants_republic
+		add_stability = -2
+		change_religion = mahayana
+		capital_scope = {
+			change_religion = mahayana
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				spawn_rebels = {
+					type = shinto_rebels
+					size = 1
+				}
+			}
+		}
+
+		add_country_modifier = {
+			name = "shinto_converted_to_mahayana"
+			duration = 3650
+		}
+	}
+
+		option = {
+		name = "shinto_events.58.e" # Become Buddhist, but stay a Daimyo
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -3150,6 +3647,10 @@ country_event = {
 		change_religion = mahayana
 		capital_scope = {
 			change_religion = mahayana
+			spawn_rebels = {
+				type = ikko_ikki_rebels
+				size = 2
+			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
@@ -3213,6 +3714,5 @@ country_event = {
 		}
 		change_religion = confucianism
 		add_harmonized_religion = shinto
-		country_event = { id = confucian_events.7 }
 	}
 }

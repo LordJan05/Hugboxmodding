@@ -120,3 +120,8 @@ PR_commandant_cooldown = {
 PR_grand_captain_cooldown = {
 	land_morale = 0.001
 }
+
+mjl_angkorian_empire_modifier = {
+	prestige = 0.5
+	development_cost = -0.05
+}

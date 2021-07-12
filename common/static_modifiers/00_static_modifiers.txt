@@ -2,12 +2,7 @@
 #
 # Effects are fully scriptable here.
 
-# These names can NOT be removed or changes, as the code uses them....
-
-################
-null_modifier = {
-}
-################
+# Missing static modifiers expected by code will print to the errorlog
 
 ##########################################################################
 # Handicap Modifiers for human player
@@ -104,6 +99,7 @@ city = {
 	allowed_num_of_buildings = 2
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
+	allowed_num_of_manufactories = 1
 }
 
 port = {
@@ -136,7 +132,7 @@ non_coastal = {
 }
 
 coastal_sea = {
-	local_naval_engagement_modifier = 0.10
+	local_naval_engagement_modifier = -0.20
 }
 
 tropical = {
@@ -252,9 +248,6 @@ manpower = {
 	garrison_growth = 0.01					#1% increase from manpower.
 }
 
-sailors = {
-}
-
 # Caps at 600
 horde_development = {
 	horde_unity = -3
@@ -270,7 +263,7 @@ development = {
 	local_missionary_strength = -0.001
 	land_forcelimit	= 0.1			# special case, affected by autonomy
 	naval_forcelimit = 0.1			# special case, affected by autonomy & set to 0 by code if not port
-	local_sailors = 30			# special case, affected by autonomy & set to 0 by code if not port
+	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 }
 
@@ -328,6 +321,15 @@ core = {
 
 non_core = {
 	local_missionary_strength = -0.02
+}
+
+colonial_core = {
+	local_tax_modifier = 0.75				#90% more in a core
+	local_manpower_modifier = 0.75			#75% more in a core
+	local_sailors_modifier = 0.75
+	local_missionary_strength = -0.02
+	min_local_autonomy = 50
+	local_governing_cost = -0.75
 }
 
 territory_core = {
@@ -475,6 +477,7 @@ local_autonomy_trade_company = {
 
 recent_uprising = {
 	local_unrest = -100
+	picture = "recent_uprising"
 }
 
 
@@ -494,7 +497,7 @@ national_defense = {
 
 
 resource_depleted = {
-	local_tax_modifier = -0.50				# penalty when migrant have been there recently.
+	# Not used anymore, however if you add it, will be applied again. Kept it for modders
 }
 
 in_trade_company = {
@@ -547,6 +550,7 @@ base_values = {
 	artillery_bonus_vs_fort = 5
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
+	monthly_heir_claim_increase = 0.417
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -592,7 +596,7 @@ negative_stability = {
 	global_unrest = -2					#-1% EXTRA revolt risk each step
 	legitimacy = 1
 	interest = -1
-	migration_cooldown = 0.1
+	migration_cost = 0.1
 	devotion = 1
 	caravan_power = 0.05
 }
@@ -667,6 +671,7 @@ bankruptcy = {
 	technology_cost = 0.5
 	idea_cost = 0.5
 	imperial_mandate = -0.1
+	amount_of_banners = -0.75
 }
 
 
@@ -721,7 +726,7 @@ authority = {
 }
 
 regency_council = {
-	legitimacy = -2
+	stability_cost_modifier = 0.25
 }
 
 trade_efficiency = {
@@ -927,6 +932,8 @@ corruption = {
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
 
+	monthly_heir_claim_increase = 0.025
+
 }
 
 root_out_corruption = {
@@ -946,7 +953,7 @@ recovery_motivation = {
 
 militarized_society = {
 
-	discipline = 0.10
+	discipline = 0.05
 	manpower_recovery_speed = 0.20
 	land_maintenance_modifier = -0.20
 
@@ -1006,6 +1013,8 @@ prestige = {
 	monthly_fervor_increase = 1
 	ae_impact = -0.10
 	embracement_cost = -0.1
+
+	monthly_heir_claim_increase = 0.05
 
 	brahmins_hindu_loyalty_modifier = 0.05
 	brahmins_muslim_loyalty_modifier = 0.05
@@ -1193,15 +1202,40 @@ trade_company_strong = {
 	merchants = 1
 }
 
-trade_company_dominant = {
-}
-
-
 large_colonial_nation = {
 	merchants = 1
 	global_trade_power = 0.05
 	naval_forcelimit = 10
 	land_forcelimit = 5
+}
+
+crown_colony_overlord = {
+}
+
+private_enterprise_overlord = {
+	global_tariffs = -0.05
+}
+
+self_governing_colony_overlord = {
+	global_tariffs = -0.10
+}
+
+crown_colony_subject = {
+	global_autonomy = -0.05
+	global_colonial_growth = 10
+}
+
+private_enterprise_subject = {
+	global_ship_trade_power = 0.2
+	global_trade_goods_size_modifier = 0.2
+	naval_tradition_from_trade = 0.1
+	ship_power_propagation = 0.1
+}
+
+self_governing_colony_subject = {
+	colonists = 1
+	development_cost = -0.1
+	liberty_desire = 25
 }
 
 march_subject = {
@@ -1278,6 +1312,8 @@ gov_rank_10 = {
 # For autonomy mechanics
 autonomy_increased = {
 	local_unrest = -10
+	
+	picture="autonomy_increased"
 }
 
 autonomy_decreased = {
@@ -1694,6 +1730,23 @@ at_peace_revolutionary = { # Applied if at peace while reactionaries are borderi
 	yearly_revolutionary_zeal = -4
 }
 
+expanded_infrastructure = {
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+	local_governing_cost_increase = 50
+	local_governing_cost = 1.0
+}
+
+centralize_state = {
+	state_governing_cost_increase = -20
+	picture = "centralize_state"
+}
+
+# Applied once for each guru teaching
+guru_teaching = {
+	global_missionary_strength = -0.01
+}
+
 
 #################################################
 #           new ones
@@ -1702,4 +1755,15 @@ at_peace_revolutionary = { # Applied if at peace while reactionaries are borderi
 mjl_subject_cavaran_malus = {
 	caravan_power = -0.5
 	cav_to_inf_ratio = 0.5
+}
+
+#Tumen
+tumen_subject = {
+	land_forcelimit = 1
+}
+
+tumen_subject_nation = {
+	core_creation = -0.2
+	years_of_nationalism = -10
+	horde_unity = 3
 }

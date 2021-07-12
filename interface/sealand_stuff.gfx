@@ -1,0 +1,32 @@
+spriteTypes = {
+##############
+#### MISSIONS
+
+	spriteType = {
+		name = "become_new_yemen_pic"
+		texturefile = "gfx//interface//missions//become_new_yemen_pic.dds"
+	}
+	
+	spriteType = {
+		name = "become_new_persia_pic"
+		texturefile = "gfx//interface//missions//become_new_persia_pic.dds"
+	}
+
+	spriteType = {
+		name = "back_to_our_roots_pic"
+		texturefile = "gfx//interface//missions//back_to_our_roots_pic.dds"
+	}
+
+	spriteType = {
+		name = "reclaim_danelaw_pic"
+		texturefile = "gfx//interface//missions//reclaim_danelaw_pic.dds"
+	}
+
+	spriteType = {
+		name = "reclaim_jorvik_pic"
+		texturefile = "gfx//interface//missions//reclaim_jorvik_pic.dds"
+	}
+
+##############
+
+}

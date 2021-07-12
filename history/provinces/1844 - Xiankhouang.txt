@@ -1,11 +1,7 @@
 #1844 - Xiankhouang
 
-#owner = LXA
-#controller = LXA
-add_core = LXA
-owner = DAI
-controller = DAI
-add_core = DAI
+owner = MPH
+controller = MPH
 culture = lao
 religion = buddhism
 capital = "Muang Khoun"
@@ -22,8 +18,12 @@ add_core = MPH
 discovered_by = chinese
 discovered_by = indian
 
-
 1483.1.1 = { add_core = DAI } # Vietnamese Invasion
+1531.1.1 = {
+	add_core = LXA
+	owner = LXA
+	controller = LXA
+}
 1579.1.1 = { unrest = 5 } # Revolt against vassalization
 1580.1.1 = { unrest = 0 }
 1593.1.1 = { unrest = 4 } # Revolt against Burmese vassalization

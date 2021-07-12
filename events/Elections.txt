@@ -33,12 +33,18 @@ country_event = {
 		NOT = { has_reform = admiralty_reform }
 		NOT = { has_reform = prussian_republic_reform }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
-		is_colonial_nation = no
 		if = {
 			limit = {
 				has_country_flag = caretaker_revolutionary_government
 			}
 			republican_tradition = 50
+		}
+		OR = {
+			is_colonial_nation = no
+			AND = {
+				is_colonial_nation = yes
+				republican_tradition = 55
+			}
 		}
 	}
 
@@ -321,7 +327,6 @@ country_event = {
 		NOT = { has_reform = prussian_republic_reform }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		NOT = { has_country_modifier = just_had_revolution_bringing_someone_to_power_timer }
-		is_colonial_nation = no
 		if = {
 			limit = {
 				has_reform = junior_revolutionary_republic_reform
@@ -511,7 +516,7 @@ country_event = {
 	id = 702
 	title = "EVTNAME700"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
+
 	desc = {
 		trigger = {
 			republican_tradition = 20
@@ -536,17 +541,23 @@ country_event = {
 		NOT = { has_reform = admiralty_reform }
 		NOT = { has_reform = prussian_republic_reform }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
-		is_colonial_nation = yes
+		NOT = { has_country_modifier = just_had_revolution_bringing_someone_to_power_timer }
 		if = {
 			limit = {
+				has_reform = junior_revolutionary_republic_reform
 				has_country_flag = caretaker_revolutionary_government
 			}
 			republican_tradition = 50
 		}
-	}
-
-	after = {
-		clr_country_flag = caretaker_revolutionary_government
+		AND = {
+			is_colonial_nation = yes
+			AND = {
+				NOT = {
+					republican_tradition = 55
+				}
+				republican_tradition = 40
+			}
+		}
 	}
 
 	option = {
@@ -633,7 +644,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB700"	# An administrator type
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 40 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
@@ -661,11 +672,10 @@ country_event = {
 				influence = 20
 			}				
 		}
-		add_karma = 10
 	}
 	option = {
 		name = "EVTOPTC700"	# A diplomat
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 30 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
@@ -692,12 +702,11 @@ country_event = {
 				faction = mr_traders
 				influence = 20
 			}				
-		}
-		add_karma = 10		
+		}	
 	}
 	option = {
 		name = "EVTOPTD700"	# A military man
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 30 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
@@ -725,7 +734,6 @@ country_event = {
 				influence = 20
 			}				
 		}
-		add_karma = 10
 	}
 
 	option = { # Nepotism choice, re-electing within dynasty
@@ -775,14 +783,17 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { has_reform = signoria_reform }
+			limit = { 
+				has_reform = signoria_reform
+			}
 			define_ruler = {
-				mil = -2
 				adm = -2
 				dip = -2
+				mil = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
+				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
@@ -825,7 +836,6 @@ country_event = {
 		NOT = { has_reform = prussian_republic_reform }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		NOT = { has_country_modifier = just_had_revolution_bringing_someone_to_power_timer }
-		is_colonial_nation = yes
 		if = {
 			limit = {
 				has_reform = junior_revolutionary_republic_reform
@@ -833,6 +843,12 @@ country_event = {
 			}
 			republican_tradition = 50
 		}
+		AND = {
+			is_colonial_nation = yes
+			NOT = {
+				republican_tradition = 40
+			}
+		}	
 	}
 	
 	option = {
@@ -1009,8 +1025,6 @@ country_event = {
 		}
 	}
 }
-
-
 
 ########################################
 # Colonial Nations                     #

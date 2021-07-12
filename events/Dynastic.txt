@@ -39,7 +39,7 @@ country_event = {
 			claim = 30
 		}
 		add_papal_influence = -5
-		add_reform_desire = 0.01
+		add_reform_desire = 0.005
 	}
 	option = {
 		name = "EVTOPTB9450"
@@ -200,8 +200,8 @@ country_event = {
 	trigger = {
 		government = monarchy
 		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = mamluk_government }
 		is_month = 3
 		NOT = { is_month = 6 }
 		has_heir = no
@@ -278,7 +278,7 @@ country_event = {
 	}
 }
 
-# Soirée
+# SoirÃ©e
 country_event = {
 	id = 9455
 	title = "EVTNAME9455"
@@ -291,8 +291,8 @@ country_event = {
 		government = monarchy
 		has_regency = no
 		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = mamluk_government }
 		has_government_attribute = heir
 	}
 	
@@ -436,9 +436,9 @@ country_event = {
 		religion_group = christian
 		has_regency = no
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = seljuk_empire_government }
 		has_government_attribute = heir
 	}
 	
@@ -486,8 +486,8 @@ country_event = {
 		is_lesser_in_union = no
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = mamluk_government }
 		NOT = {
 			is_year = 1450
 		}
@@ -604,8 +604,8 @@ country_event = {
 		is_free_or_tributary_trigger = yes
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = celestial_empire }
 		NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = celestial_empire }
 		adm_tech = 20
 		adm_power = 200
 		has_factions = no
@@ -701,9 +701,9 @@ country_event = {
 		government = monarchy
 		NOT = { legitimacy_or_horde_unity = 50 }
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = celestial_empire }
 		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = seljuk_empire_government }
 		has_regency = yes
 		has_consort_regency = no
 		has_heir = yes
@@ -743,9 +743,9 @@ country_event = {
 	trigger = {
 		government = monarchy
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = seljuk_empire_government }
 		is_lesser_in_union = no
 		has_heir = no
 		has_regency = no
@@ -1189,8 +1189,8 @@ country_event = {
 		government = monarchy
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = mamluk_government }
 		has_regency = no
 		is_lesser_in_union = no
 		num_of_royal_marriages = 4
@@ -1201,8 +1201,8 @@ country_event = {
 			government = monarchy
 			NOT = { has_reform = elective_monarchy }
 			NOT = { has_reform = ottoman_government }
-			NOT = { has_reform = mamluk_government }
 			NOT = { has_reform = seljuk_empire_government }
+			NOT = { has_reform = mamluk_government }
 			marriage_with = ROOT
 			NOT = { dynasty = ROOT }
 			has_heir = no
@@ -1352,7 +1352,7 @@ province_event = {
 			religion_group = christian
 			NOT = { has_reform = elective_monarchy }
 			NOT = { has_reform = ottoman_government }
-			NOT = { has_reform = seljuk_empire_government }
+		NOT = { has_reform = seljuk_empire_government }
 			is_lesser_in_union = no
 			NOT = { has_country_flag = murdering_bastard }
 			NOT = { has_country_flag = contained_insanity }
@@ -1733,9 +1733,9 @@ country_event = {
 		is_lesser_in_union = no
 		government = monarchy
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = seljuk_empire_government }
 		has_heir = no
 		is_female = no
 		has_regency = no
@@ -1773,7 +1773,7 @@ country_event = {
 	}
 }
 
-### Suggestions by Ex Mudder, scripted by Sara Wendel-Örtqvist
+### Suggestions by Ex Mudder, scripted by Sara Wendel-Ã–rtqvist
 
 namespace = dynastic_events
 
@@ -1790,9 +1790,9 @@ country_event = {
 		government = monarchy
 		religion_group = christian
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = seljuk_empire_government }
 		is_lesser_in_union = no
 		has_government_attribute = heir
 	}
@@ -1832,6 +1832,7 @@ country_event = {
 			adm = 4
 			dip = 3
 			mil = 3
+			fixed = yes
 		}
 	}
 	
@@ -1845,6 +1846,7 @@ country_event = {
 			dip = 3
 			mil = 4
 			female = yes
+			fixed = yes
 		}
 	}
 	option = {
@@ -1868,6 +1870,7 @@ country_event = {
 			dip = 3
 			mil = 4
 			female = yes
+			fixed = yes
 		}
 	}
 }
@@ -1885,10 +1888,10 @@ country_event = {
 		government = monarchy
 		NOT = { religion_group = muslim }
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_reform = shogunate }
-		NOT = { has_reform = seljuk_empire_government }
 		is_lesser_in_union = no
 		NOT = {
 			has_country_modifier = dyn_newborn_daughter
@@ -1946,9 +1949,9 @@ country_event = {
 		NOT = { has_reform = elective_monarchy }
 		NOT = { religion_group = muslim }
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = shogunate }
-		NOT = { has_reform = seljuk_empire_government }
 		has_government_attribute = heir
 		is_lesser_in_union = no
 		NOT = { has_ruler_flag = talented_daughter_happened }
@@ -2042,9 +2045,9 @@ country_event = {
 		is_lesser_in_union = no
 		government = monarchy
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = seljuk_empire_government }
 		religion_group = christian
 		capital_scope = {
 			continent = europe
@@ -2053,8 +2056,8 @@ country_event = {
 			government = monarchy
 			religion_group = christian
 			NOT = { has_reform = ottoman_government }
-			NOT = { has_reform = elective_monarchy }
 			NOT = { has_reform = seljuk_empire_government }
+			NOT = { has_reform = elective_monarchy }
 			has_regency = no
 			is_free_or_tributary_trigger = yes
 			num_of_cities = ROOT
@@ -2079,8 +2082,8 @@ country_event = {
 				limit = {
 					government = monarchy
 					NOT = { has_reform = ottoman_government }
-					NOT = { has_reform = elective_monarchy }
 					NOT = { has_reform = seljuk_empire_government }
+					NOT = { has_reform = elective_monarchy }
 					has_regency = no
 					is_free_or_tributary_trigger = yes
 					num_of_cities = ROOT
@@ -2186,11 +2189,12 @@ country_event = {
 		has_heir = no
 		government = monarchy
 		NOT = { has_reform = ottoman_government }
+		NOT = { has_reform = seljuk_empire_government }
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = seljuk_empire_government }
 		religion_group = christian
 		is_free_or_tributary_trigger = yes
+		has_consort = no
 		ruler_age = 16
 		NOT = {
 			ruler_age = 40
@@ -2198,8 +2202,8 @@ country_event = {
 		any_neighbor_country = {
 			government = monarchy
 			NOT = { has_reform = ottoman_government }
-			NOT = { has_reform = elective_monarchy }
 			NOT = { has_reform = seljuk_empire_government }
+			NOT = { has_reform = elective_monarchy }
 			religion_group = christian
 			has_heir = no
 			ruler_age = 16
@@ -2251,8 +2255,9 @@ country_event = {
 			limit = {
 				government = monarchy
 				NOT = { has_reform = ottoman_government }
-				NOT = { has_reform = elective_monarchy }
 				NOT = { has_reform = seljuk_empire_government }
+				NOT = { has_reform = elective_monarchy }
+				NOT = { has_reform = mamluk_government }
 				religion_group = christian
 				has_heir = no
 				ruler_age = 16
@@ -2293,47 +2298,15 @@ country_event = {
 				reverse_has_opinion = { who = ROOT value = 75 }
 				is_free_or_tributary_trigger = yes
 			}
-			save_event_target_as = nameless_neighbor_no_more
+			hidden_effect = {
+				save_event_target_as = nameless_neighbor_no_more
+			}
 		}
 	}
 	
 	option = {
 		name = dynastic_events.5.a
-		random_neighbor_country = {
-			limit = {
-				government = monarchy
-				NOT = { has_reform = ottoman_government }
-				NOT = { has_reform = elective_monarchy }
-				NOT = { has_reform = mamluk_government }
-				NOT = { has_reform = seljuk_empire_government }
-				has_heir = no
-				ruler_age = 16
-				religion_group = christian
-				NOT = {
-					ruler_age = 40
-				}
-				OR = {
-					AND = {
-						is_female = no
-						ROOT = {
-							is_female = yes
-						}
-					}
-					AND = {
-						is_female = yes
-						ROOT = {
-							is_female = no
-						}
-					}
-				}
-				OR = {
-					dynasty = ROOT
-					culture_group = ROOT
-				}
-				has_opinion = { who = ROOT value = 75 }
-				reverse_has_opinion = { who = ROOT value = 75 }
-				is_free_or_tributary_trigger = yes
-			}
+		event_target:nameless_neighbor_no_more = {
 			country_event = {
 				id = dynastic_events.6
 				tooltip = dynastic_events.6.t
@@ -2358,13 +2331,37 @@ country_event = {
 	
 	option = {
 		name = dynastic_events.6.a
-		add_legitimacy = 20
+		add_prestige = 20
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dlc = "Rights of Man"
+				}
+				if = {
+					limit = {
+						is_female = yes
+					}
+					FROM = {
+						set_country_flag = new_female_consort
+					}
+				}
+			}
+		}
 		FROM = {
 			set_country_flag = dyn_pu_accepted_flag
-			create_union = ROOT
+			tooltip = {
+				create_union = ROOT
+			}
 			country_event = {
 				id = dynastic_events.7
 				tooltip = dynastic_events.7.t
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 4
+				NOT = { total_development = FROM }
 			}
 		}
 	}
@@ -2387,6 +2384,13 @@ country_event = {
 				tooltip = dynastic_events.7.t
 			}
 		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 4
+				total_development = FROM
+			}
+		}
 	}
 }
 
@@ -2399,15 +2403,62 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				has_country_flag = dyn_pu_accepted_flag
+			}
+			export_to_variable = {
+				which = new_consort_religion
+				value = ruler_religion
+				who = FROM
+			}
+			export_to_variable = {
+				which = new_consort_culture
+				value = ruler_culture
+				who = FROM
+			}
+		}
+	}
+	
 	option = {
 		name = dynastic_events.7.a
 		trigger = {
 			has_country_flag = dyn_pu_accepted_flag
 		}
 		add_legitimacy = 20
-		tooltip = {
-			create_union = FROM
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+			}
+			if = {
+				limit = {
+					has_country_flag = new_female_consort
+				}
+				define_consort = {
+					country_of_origin = FROM
+					dynasty = FROM
+					female = yes
+					religion = FROM
+					culture = FROM
+				}
+			}
+			else = {
+				define_consort = {
+					country_of_origin = FROM
+					dynasty = FROM
+					male = yes
+					religion = FROM
+					culture = FROM
+				}
+			}
+			hidden_effect = {
+				set_consort_culture = variable:new_consort_culture
+				set_consort_religion = variable:new_consort_religion
+			}
 		}
+		create_union = FROM		
 	}
 	
 	option = {
@@ -2425,6 +2476,13 @@ country_event = {
 				type = cb_insult
 				months = 12
 			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			clr_country_flag = dyn_pu_accepted_flag
+			clr_country_flag = dyn_pu_refused_flag
 		}
 	}
 }

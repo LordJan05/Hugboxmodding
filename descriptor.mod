@@ -4,5 +4,5 @@ tags={
 }
 name="Zlewikk-MJL Multiplayer Rebalance Pack"
 picture="thumbnail.png"
-supported_version="1.30.*"
+supported_version="1.31.5"
 remote_file_id="2235590207"

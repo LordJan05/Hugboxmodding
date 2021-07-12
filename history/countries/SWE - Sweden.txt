@@ -14,14 +14,20 @@ add_country_modifier = {
 
 national_focus = MIL
 
-change_estate_land_share = {
-	estate = estate_church
-	share = -10.5
-}
+#change_estate_land_share = {
+#	estate = estate_church
+#	share = -6
+#}
+#change_estate_land_share = {
+#	estate = estate_nobles
+#	share = 10
+#}
+
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 10
+	share = -0.5
 }
+
 
 1444.1.1 = {
 	monarch = {
@@ -34,6 +40,19 @@ change_estate_land_share = {
 		
 	}
 }
+1444.10.10 = { # Sealand
+	heir = {
+		name = "James"
+		monarch_name = "James I"
+		dynasty = "Bonde"
+		birth_date = 1444.10.10
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 7
+	}
+}
+
 1448.6.20 = {
 	monarch = {
 		name = "Karl VIII"

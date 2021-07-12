@@ -180,6 +180,7 @@ inti_rebels = {
 				remove_province_modifier = "confucian_theravada_harmonization"
 				remove_province_modifier = "confucian_totemism_harmonization"
 				remove_province_modifier = "confucian_vajrayana_harmonization"
+				remove_province_modifier = "confucian_dreamtime_harmonization"
 			}
 		}
 		owner = {
@@ -269,7 +270,7 @@ inti_rebels = {
 		#}
 		change_estate_land_share = {
 			estate = estate_church
-			share = 10.0
+			share = 5.0
 		}
 	}
 }

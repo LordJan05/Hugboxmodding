@@ -15,7 +15,6 @@ change_estate_land_share = {
 }
 
 
-
 # Majapahit
 1390.1.1 = {
 	monarch = {
@@ -35,9 +34,9 @@ change_estate_land_share = {
 		birth_date = 1390.1.1
 		death_date = 1447.1.1
 		claim = 95
-		adm = 1
-		dip = 2
-		mil = 1
+		adm = 3
+		dip = 3
+		mil = 3
 		female = yes
 	}
 }
@@ -46,9 +45,9 @@ change_estate_land_share = {
 	monarch = {
 		name = "Suhita"
 		dynasty = "Rajasanagara"
-		adm = 1
-		dip = 2
-		mil = 1
+		adm = 3
+		dip = 3
+		mil = 3
 		female = yes
 	}
 }

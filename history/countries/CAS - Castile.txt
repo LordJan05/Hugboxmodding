@@ -58,10 +58,10 @@ change_estate_land_share = {
 
 1406.12.26 = {
 	monarch = {
-		name = "(Regency)"
 		adm = 2
 		dip = 2
 		mil = 2
+		regent = yes
 	}
 }
 
@@ -90,24 +90,6 @@ change_estate_land_share = {
 1422.1.1 = { leader = {	name = "Álvaro de Luna"	type = general	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.6.2 } }
 
 
-1425.1.5 = {
-	heir = {
-		name = "Enrique"
-		monarch_name = "Enrique IV"
-		dynasty = "de Trastámara"
-		birth_date = 1425.1.5
-		death_date = 1434.12.11
-		claim = 95
-		adm = 0
-		dip = 0
-		mil = 0
-	}
-	clear_scripted_personalities = yes
-	add_heir_personality = infertile_personality
-	add_ruler_personality = naive_personality
-	add_ruler_personality = zealot_personality
-	add_ruler_personality = well_advised_personality
-}
 
 1447.8.17 = {
 	queen = {
@@ -126,14 +108,6 @@ change_estate_land_share = {
 1450.1.1 = { decision = act_of_uniformity decision = blasphemy_act }
 
 1454.7.20 = {
-	monarch = {
-		name = "Enrique IV"
-		dynasty = "de Trastámara"
-		birth_date = 1425.1.5
-		adm = 0
-		dip = 0
-		mil = 0
-	}
 	queen = {
 		country_of_origin = POR
 		name = "Joana"

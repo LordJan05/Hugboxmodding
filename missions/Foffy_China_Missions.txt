@@ -120,6 +120,7 @@ h_china_all_5 = {
 		}
 	}	
 
+
 	#foffy_china_faith_question = {
 	#	icon = mission_buddhist_monk_praying
 	#	position = 4
@@ -154,4 +155,5 @@ h_china_all_5 = {
 	#		country_event = { id = foffy_china.1 }
 	#	}
 	#}
+	
 }

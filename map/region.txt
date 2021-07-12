@@ -167,6 +167,7 @@ ural_region = {
 		bashkiria_area
 		samara_area
 		volga_area
+		lower_ural_area
 	}
 }
 
@@ -425,6 +426,9 @@ arabia_region = {
 		qasim_area
 		yamamah_area
 		nafud_area
+		al_wusta_area #MJL Arabia
+		al_muthanna_area #MJL Arabia
+		tal_moreeb_area #MJL Arabia
 	}
 }
 
@@ -506,6 +510,7 @@ horn_of_africa_region = {
 		damot_area
 		aussa_area
 		shewa_area
+		bale_mountains_area #MJL Africa
 	}
 }
 
@@ -552,6 +557,7 @@ central_africa_region = {
 		rwanda_area
 		chokwe_area
 		bunyoro_area
+		imatong_area #MJL Africa
 	}
 	monsoon = {
 		00.10.01
@@ -571,6 +577,7 @@ kongo_region = {
 		matamba_area
 		lower_kasai
 		kasai_area
+		namibe_area #MJL Africa
 	}
 	monsoon = {
 		00.02.01
@@ -596,6 +603,12 @@ central_asia_region = {
 		shanshan_area
 		kyzylkum_area
 		termez_area
+		mangyshlak_area
+		turgay_area
+		qaraghandy_area
+		naryn_area
+		hotan_area
+		aqmola_area
 	}
 }
 
@@ -608,6 +621,8 @@ south_africa_region = {
 		butua_area
 		limpopo_area
 		transvaal_area
+		kunene_area #MJL Africa
+		karas_area #MJL Africa
 	}
 	monsoon = {
 		00.11.01
@@ -628,7 +643,8 @@ west_siberia_region = {
 		irkutsk_area
 		ishim_area
 		kara_area
-		aqmola_area
+		yenisei_area
+		lower_ob_area
 	}
 }
 
@@ -663,6 +679,7 @@ mongolia_region = {
 		ejin_area
 		alxa_area
 		chifeng_area
+		zungarian_gate
 	}
 }
 
@@ -690,6 +707,7 @@ korea_region = {
 		western_korea_area
 		eastern_korea_area
 		south_korea_area
+		fo1_area
 	}
 	monsoon = {
 		00.06.01
@@ -863,6 +881,11 @@ australia_region = {
 		southern_australia_area
 		top_end_area
 		murray_river_area
+		illawara_area
+		north_queensland_area
+		south_queensland_area
+		pilbara_area
+		tasmania_area
 	}
 	monsoon = {
 		00.10.01
@@ -1054,13 +1077,16 @@ malaya_region = {	#Western Indonesia Malaya.
 		north_sumatra_area
 		central_sumatra_area
 		south_sumatra_area
-		indian_ocean_islands_area
+		jambi_area
 		tenasserim_area
 		malaya_area
+		johor_area
+		north_malaya_area
 		north_tenasserim_area
 		malacca_area
 		batak_area
 		minangkabau_area
+		indian_ocean_islands_area
 	}
 	monsoon = {
 		00.10.01
@@ -1087,7 +1113,7 @@ moluccas_region = {
 		vogelkop_area
 		timor_area
 		south_sulawesi_area
-		ceram_area
+		makassar_area
 		spice_islands_area
 	}
 	monsoon = {
@@ -1107,11 +1133,15 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		kutai_area
 		brunei_area
 		kalimantan_area
+		banjar_area
+		sabah_area
 		east_java_area
 		central_java_area
 		west_java_area
 		lesser_sunda_islands_area
 		indonesian_islands_area
+		surabaya_area
+		banten_area
 	}
 	monsoon = {
 		00.11.01
@@ -1130,7 +1160,9 @@ oceanea_region = {
 		micronesia_area
 		west_micronesia_area
 		melanesia_area
-		te_ika_a_maui_area
+		fiji_area
+		te_ika_a_maui_hauauru_area
+		te_ika_a_maui_waho_area
 		te_waipounamu_area
 		northern_polynesia_area
 		eastern_polynesia_area
@@ -1144,15 +1176,19 @@ oceanea_region = {
 indo_china_region = {
 	areas = {
 		vietnam_area
-		south_laos_area
 		north_laos_area
 		central_thai_area
 		northern_thai_area
 		cambodia_area
 		mekong_area
+		angkor_area
 		champa_area
 		khorat_area
+		tay_nguyen_area
 		red_river_delta_area
+		sukhothai_area
+		champasak_area
+		vientiane_area
 	}
 	monsoon = {
 		00.05.01
@@ -1174,6 +1210,9 @@ canada_region = {
 		huronia_area
 		upper_ontario_area
 		greenland_area
+		st_john_valley_area
+		trois_rivieres_area
+		ottawa_valley_area
 	}
 }
 
@@ -1185,6 +1224,7 @@ great_lakes_region = {
 		miami_river_area
 		lake_superior_area 
 		wisconsin_area
+		southern_illinois_area
 	}
 }
 
@@ -1200,6 +1240,9 @@ northeast_america_region = {
 		susquehanna_area
 		maine_area
 		maryland_area
+		eastern_maine_area
+		new_york_area
+		westsylvania_area
 	}
 }
 
@@ -1211,9 +1254,11 @@ southeast_america_region =  {
 		american_georgia_area 
 		florida_area
 		carolinas_area
+		south_appalachia_area
 		south_carolina_area
 		upper_american_georgia_area
 		north_florida_area
+		south_carolina_piedmont_area
 	}
 	monsoon = {
 		00.06.01
@@ -1228,11 +1273,12 @@ mississippi_region = {
 		upper_louisiana_area
 		alabama_area
 		kentucky_area
-		appalachia_area
-		south_appalachia_area
 		mississippi_area
+		appalachia_area
 		choctaw_area
 		mississippi_plain_area
+		western_kentucky_area
+		ozarks_area
 	}
 	monsoon = {
 		00.06.01
@@ -1245,11 +1291,13 @@ great_plains_region = {
 		central_plains_area
 		lower_plains_area
 		high_plains_area
-		ozarks_area
 		dakota_area
 		south_dakota_area
 		upper_missouri_area
 		badlands_area
+		iowa_area
+		minnessota_area
+		kansas_area
 	}
 }
 
@@ -1291,6 +1339,7 @@ hudson_bay_region = {
 		athabasca_area
 		inner_ontario_area
 		assiniboia_area
+		manitoba_area
 	}
 }
 
@@ -1327,6 +1376,7 @@ rio_grande_region = {
 		pecos_area
 		llano_estacado_area
 		chihuahua_area
+		texas_plains_area
 	}
 	monsoon = {
 		00.06.01

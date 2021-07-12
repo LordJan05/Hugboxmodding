@@ -1309,6 +1309,10 @@ expansionist_personality = {
 	chance = {
 		modifier = {
 			factor = 1
+			num_of_colonists = 1
+		}
+		modifier = {
+			factor = 1
 			OR = {
 				num_of_conquistadors = 1
 				num_of_explorers = 1
@@ -1934,7 +1938,7 @@ fierce_negotiator_personality = {
 	
 	peace_desire = -10
 	
-	land_maintenance_modifier = -0.1
+	land_maintenance_modifier = -0.075
 	nation_designer_cost = 2
 } #1 easier event
 

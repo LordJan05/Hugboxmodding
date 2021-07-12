@@ -5,4 +5,11 @@ GZW = "countries/Great Zimbabwe.txt"
 
 ########################
 # Added by Sealand
-SJK = "countries/SeljukEmpire.txt"
+SJK = "countries/SeaSeljukEmpire.txt"
+VIN = "countries/SeaVinland.txt"
+NSE = "countries/SeaNorthSeaEmpire.txt"
+KLU = "countries/SeaKalmarUnion.txt"
+ABA = "countries/AbbasidCaliphate.txt"
+
+# Added by Chalky
+DRV = "countries/Dravidessa.txt"

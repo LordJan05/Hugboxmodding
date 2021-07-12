@@ -51,8 +51,6 @@ country_decisions = {
 				province_id = 4063 # Karagwe
 				province_id = 4069 # Bushubi
 				province_id = 4070 # Nkoma
-				province_id = 4097 # Luba
-				province_id = 1170 # Mpemba
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -73,8 +71,6 @@ country_decisions = {
 			owns_core_province = 4063 # Karagwe
 			owns_core_province = 4069 # Bushubi
 			owns_core_province = 4070 # Nkoma
-			owns_core_province = 4097 # Luba
-			owns_core_province = 1170 # Mpemba
 		}
 
 		effect = {
@@ -82,6 +78,7 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = CHW
+			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 
 			central_africa_region = {

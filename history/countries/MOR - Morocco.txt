@@ -11,9 +11,10 @@ add_country_modifier = {
 	duration = -1
 }
 
+
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 5
+	share = 4.498
 }
 change_estate_land_share = {
 	estate = estate_burghers
@@ -21,7 +22,7 @@ change_estate_land_share = {
 }
 change_estate_land_share = {
 	estate = estate_church
-	share = -10.502
+	share = -10
 }
 
 1399.1.1 = {
@@ -53,10 +54,11 @@ change_estate_land_share = {
 	monarch = {
 		name = "Abdalhaqq II"
 		dynasty = "Marinid"
-		adm = 0
+		adm = 3
 		dip = 2
-		mil = 1
+		mil = 3
 	}
+	add_ruler_personality = bold_fighter_personality
 	capital = 343 # Fez
 }
 
@@ -87,8 +89,8 @@ change_estate_land_share = {
 
 1544.1.1 = {
 	heir = {
-		name = "'Abd All‚h"
-		monarch_name = "'Abd All‚h"
+		name = "'Abd All√¢h"
+		monarch_name = "'Abd All√¢h"
 		dynasty = "Saadi"
 		birth_date = 1527.6.1
 		death_date = 1574.1.24
@@ -101,7 +103,7 @@ change_estate_land_share = {
 
 1557.10.24 = {
 	monarch = {
-		name = "'Abd All‚h I"
+		name = "'Abd All√¢h I"
 		dynasty = "Saadi"
 		adm = 6
 		dip = 3
@@ -185,8 +187,8 @@ change_estate_land_share = {
 
 1578.8.5 = {
 	heir = {
-		name = "'Abd All‚h"
-		monarch_name = "'Abd All‚h II"
+		name = "'Abd All√¢h"
+		monarch_name = "'Abd All√¢h II"
 		dynasty = "Saadi"
 		birth_date = 1564.1.1
 		death_Date = 1609.8.3
@@ -201,7 +203,7 @@ change_estate_land_share = {
 
 1603.8.20 = {
 	monarch = {
-		name = "'Abd All‚h II"
+		name = "'Abd All√¢h II"
 		dynasty = "Saadi"
 		adm = 1
 		dip = 0
@@ -211,8 +213,8 @@ change_estate_land_share = {
 
 1603.8.20 = {
 	heir = {
-		name = "Zayd‚n"
-		monarch_name = "Zayd‚n"
+		name = "Zayd√¢n"
+		monarch_name = "Zayd√¢n"
 		dynasty = "Saadi"
 		birth_date = 1580.1.1
 		death_date = 1627.9.29
@@ -225,7 +227,7 @@ change_estate_land_share = {
 
 1609.8.3 = {
 	monarch = {
-		name = "Zayd‚n"
+		name = "Zayd√¢n"
 		dynasty = "Saadi"
 		adm = 0
 		dip = 1
@@ -259,8 +261,8 @@ change_estate_land_share = {
 
 1627.9.29 = {
 	heir = {
-		name = "al-WalÓd"
-		monarch_name = "al-WalÓd"
+		name = "al-Wal√Æd"
+		monarch_name = "al-Wal√Æd"
 		dynasty = "Saadi"
 		birth_date = 1600.1.1
 		death_date = 1636.2.21
@@ -273,7 +275,7 @@ change_estate_land_share = {
 
 1631.1.1 = {
 	monarch = {
-		name = "al-WalÓd"
+		name = "al-Wal√Æd"
 		dynasty = "Saadi"
 		adm = 0
 		dip = 0
@@ -309,7 +311,7 @@ change_estate_land_share = {
 
 1655.1.30 = {
 	monarch = {
-		name = "al-WalÓd"
+		name = "al-Wal√Æd"
 		dynasty = "Saadi"
 		adm = 0
 		dip = 0
@@ -366,8 +368,8 @@ change_estate_land_share = {
 
 1668.9.7 = {
 	heir = {
-		name = "Ism‚'Ól"
-		monarch_name = "Ism‚'Ól"
+		name = "Ism√¢'√Æl"
+		monarch_name = "Ism√¢'√Æl"
 		dynasty = "Alaouite"
 		birth_date = 1645.1.1
 		death_Date = 1727.3.22
@@ -375,18 +377,18 @@ change_estate_land_share = {
 		adm = 6
 		dip = 5
 		mil = 6
-		leader = { name = "Ism‚'Ól"		type = general	fire = 3	shock = 2	manuever = 3	siege = 1}
+		leader = { name = "Ism√¢'√Æl"		type = general	fire = 3	shock = 2	manuever = 3	siege = 1}
 	}
 }
 
 1672.3.28 = {
 	monarch = {
-		name = "Ism‚'Ól"
+		name = "Ism√¢'√Æl"
 		dynasty = "Alaouite"
 		adm = 6
 		dip = 5
 		mil = 6
-		leader = { name = "Ism‚'Ól"		type = general	fire = 3	shock = 2	manuever = 3	siege = 1}
+		leader = { name = "Ism√¢'√Æl"		type = general	fire = 3	shock = 2	manuever = 3	siege = 1}
 	}
 	capital = 346 # Meknes
 }
@@ -418,8 +420,8 @@ change_estate_land_share = {
 
 1727.3.22 = {
 	heir = {
-		name = "'Abd All‚h"
-		monarch_name = "'Abd All‚h"
+		name = "'Abd All√¢h"
+		monarch_name = "'Abd All√¢h"
 		dynasty = "Alaouite"
 		birth_date = 1678.1.1
 		death_Date = 1757.11.10
@@ -432,7 +434,7 @@ change_estate_land_share = {
 
 1729.3.7 = {
 	monarch = {
-		name = "'Abd All‚h"
+		name = "'Abd All√¢h"
 		dynasty = "Alaouite"
 		adm = 5
 		dip = 1
@@ -480,7 +482,7 @@ change_estate_land_share = {
 
 1790.4.12 = {
 	monarch = {
-		name = "al-YazÓd"
+		name = "al-Yaz√Æd"
 		dynasty = "Alaouite"
 		adm = 0
 		dip = 3
@@ -490,8 +492,8 @@ change_estate_land_share = {
 
 1790.4.12 = {
 	heir = {
-		name = "Sulaym‚n"
-		monarch_name = "Sulaym‚n"
+		name = "Sulaym√¢n"
+		monarch_name = "Sulaym√¢n"
 		dynasty = "Alaouite"
 		birth_date = 1760.1.1
 		death_Date = 1822.1.1
@@ -504,7 +506,7 @@ change_estate_land_share = {
 
 1792.2.15 = {
 	monarch = {
-		name = "Sulaym‚n"
+		name = "Sulaym√¢n"
 		dynasty = "Alaouite"
 		adm = 0
 		dip = 2

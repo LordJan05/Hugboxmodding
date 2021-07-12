@@ -65,7 +65,7 @@ vassal = {
 #	first = OIR
 #	second = KHA
 #	start_date = 1434.1.1
-#	end_date = 1443.1.1
+#	end_date = 1454.1.1
 #}
 
 #Chagatai Subject
@@ -195,19 +195,4 @@ vassal = {
 #	second = MHX
 #	start_date = 1444.1.1
 #	end_date = 1618.1.1
-#}
-
-#dependency = {
-#	subject_type = "tributary_state"
-#	first = MNG
-#	second = TDO
-#	start_date = 1444.1.1
-#	end_date = 1521.1.1
-#}
-
-#vassal = {
-#	first = YUE
-#	second = CHC
-#	start_date = 1444.1.1
-#	end_date = 1462.1.1
 #}

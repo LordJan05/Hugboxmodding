@@ -382,3 +382,33 @@ GZW_ideas = {
 		siege_ability = 0.12
 	}
 }
+
+TAU_buffed_ideas = {
+	start = {
+		land_morale = 0.1
+		global_tax_modifier = 0.15
+	}
+	
+	bonus = {
+		core_creation = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = TAU
+			tag = BPR
+		}
+		has_country_flag = mjl_tau_empire_flag
+	}
+	free = yes
+	
+	mandala_system = { }
+	tau_elephant_battles = { }
+	nat_worship = { }
+	chakravartin = { }
+	the_hluttaw = { }
+	tau_organized_campaigns1 = {
+		discipline = 0.05
+	}
+	bayingyi = { }
+}

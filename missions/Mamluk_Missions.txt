@@ -741,24 +741,9 @@ sea_mam_missions_3 = {
 
 		provinces_to_highlight = {
 			OR = {
+				region = egypt_region
 				region = arabia_region
 				region = mashriq_region
-				area = fezzan_area
-				area = tunisia_area
-				area = djerba_area
-				area = kabylia_area
-				area = algiers_area
-				area = hautes_plaines_area
-				area = north_saharan_area
-				area = tafilalt_area
-				area = sus_area
-				area = marrekesh_area
-				area = ouled_nail_area
-				area = northern_morocco_area
-				area = southern_morocco_area
-				area = western_morocco_area
-				area = tripolitania_area
-				area = barbary_coast_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -774,6 +759,10 @@ sea_mam_missions_3 = {
 				}
 				ai = no
 			}
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			arabia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -782,70 +771,7 @@ sea_mam_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			fezzan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tunisia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			djerba_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kabylia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hautes_plaines_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			north_saharan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tafilalt_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sus_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			marrekesh_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ouled_nail_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_morocco_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_morocco_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			western_morocco_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tripolitania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			barbary_coast_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			is_at_war = no
 		}
 		effect = {
 			if = {
@@ -856,21 +782,17 @@ sea_mam_missions_3 = {
 				}
 				set_government_rank = 3
 			}
-			if = {
-				limit = {
-					government = monarchy
-					NOT = {
-						has_reform = feudal_theocracy
-					}
-					is_revolutionary = no
-				}
-				add_government_reform = feudal_theocracy
-			}
+			change_tag = ABA
 			add_prestige = 100
 			add_country_modifier = {
 				name = "unified_islam"
 				duration = -1
 			}
+			add_country_modifier = {
+				name = "abbasid_governors_modifier"
+				duration = -1
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = unified_islam
 			set_global_flag = unified_islam_global
 			persia_region = {
@@ -894,7 +816,9 @@ sea_mam_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			override_country_name = ABBASID_CALIPHATE
+			hidden_effect = {
+				complete_mission = restore_abbasid_caliphate
+			}
 		}
 	}
 }
@@ -1174,7 +1098,7 @@ sea_mam_missions_5 = {
 		effect = {
 			add_country_modifier = {
 				name = "mesopotamian_mamluks_modifier"
-				duration = 2555
+				duration = -1
 			}
 			add_years_of_income = -1.0
 			add_manpower = -10

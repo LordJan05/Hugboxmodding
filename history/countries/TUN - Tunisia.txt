@@ -11,13 +11,14 @@ add_country_modifier = {
 	duration = -1
 }
 
+
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 10
+	share = 9.498
 }
 change_estate_land_share = {
 	estate = estate_church
-	share = -20.502
+	share = -20
 }
 change_estate_land_share = {
 	estate = estate_burghers
@@ -28,7 +29,7 @@ change_estate_land_share = {
 	monarch = {
 		name = "'Uthman"
 		dynasty = "Hafsid"
-		adm = 2
+		adm = 4
 		dip = 3
 		mil = 3
 	}

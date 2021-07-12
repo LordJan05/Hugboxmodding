@@ -16,6 +16,9 @@ change_estate_land_share = {
 	share = -0.502
 }
 
+1390.1.1 = {
+	set_estate_privilege = estate_burghers_orang_laut_alliances
+}
 
 1399.1.1 = {
 	monarch = {
@@ -122,6 +125,7 @@ change_estate_land_share = {
 		adm = 1
 		dip = 2
 		mil = 1
+		religion = hinduism
 	}
 }
 

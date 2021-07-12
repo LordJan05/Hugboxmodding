@@ -3,11 +3,11 @@ estate_rajput_levies = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		NOT = { religion_group = muslim }
+		technology_group = indian
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.25
-		global_manpower_modifier = 0.5
+		global_tax_modifier = -0.10
+		global_manpower_modifier = 0.25
 	}
 	penalties = {
 	}
@@ -270,6 +270,41 @@ estate_tun_church_piety_privilege = {
 	}
 }
 
+estate_tribes_raise_host = {
+	icon = privilege_promote_purbias
+	influence = 0.1
+	loyalty = -0.05
+	is_valid = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	on_granted = {
+		random_owned_province = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 5
+				speed = 0.5
+				cost = 0
+			}
+		}
+		create_general = { tradition = 20 }
+		custom_tooltip = mjl_estate_grant_generalship_tt
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribes_raise_host
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
 mjl_estate_church_orm_tamed_deserts = {
 	icon = privilege_grant_new_world_charter
 	land_share = 5
@@ -300,6 +335,17 @@ mjl_estate_church_orm_tamed_deserts = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = { has_province_modifier = "tamed_the_desert_modifier" }
+				remove_province_modifier = "tamed_the_desert_modifier"
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = mjl_estate_church_orm_tamed_deserts_mod_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = "tamed_the_desert_modifier"
+				}
 				remove_province_modifier = "tamed_the_desert_modifier"
 			}
 		}
@@ -344,7 +390,7 @@ mjl_estate_church_npl_tamed_mountains = {
 					region = tibet_region
 				}
 				add_province_modifier = {
-					name = "zlewikk_artic_adaptation_npl"
+					name = "mirecek_artic_adaptation_npl"
 					duration = -1
 				}
 			}
@@ -354,8 +400,8 @@ mjl_estate_church_npl_tamed_mountains = {
 		custom_tooltip = mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
-				remove_province_modifier = "zlewikk_artic_adaptation_npl"
+				limit = { has_province_modifier = "mirecek_artic_adaptation_npl" }
+				remove_province_modifier = "mirecek_artic_adaptation_npl"
 			}
 		}
 	}
@@ -403,7 +449,7 @@ mjl_estate_brahmins_npl_tamed_mountains = {
 					region = tibet_region
 				}
 				add_province_modifier = {
-					name = "zlewikk_artic_adaptation_npl"
+					name = "mirecek_artic_adaptation_npl"
 					duration = -1
 				}
 			}
@@ -413,8 +459,8 @@ mjl_estate_brahmins_npl_tamed_mountains = {
 		custom_tooltip = mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = "zlewikk_artic_adaptation_npl" }
-				remove_province_modifier = "zlewikk_artic_adaptation_npl"
+				limit = { has_province_modifier = "mirecek_artic_adaptation_npl" }
+				remove_province_modifier = "mirecek_artic_adaptation_npl"
 			}
 		}
 	}

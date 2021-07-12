@@ -8,6 +8,15 @@ add_accepted_culture = bihari
 capital = 555	# Jaunpur
 fixed_capital = 555 # Cannot move capital away from this province & no power cost to move to it
 religious_school = hanafi_school
+historical_rival = BNG
+historical_rival = SRH
+historical_rival = DLH
+historical_rival = MER
+historical_rival = BAH
+historical_rival = VIJ
+historical_rival = MLW
+historical_rival = AFG
+
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1

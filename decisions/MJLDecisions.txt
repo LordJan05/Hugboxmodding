@@ -52,23 +52,72 @@ country_decisions = {
 			OR = {
 				tag = MCH
 				tag = QNG
+				tag = ZUN
+				tag = YUA
 			}
-			1056 = {
+			1053 = {
 				NOT = { trade_goods = gold }
 			}
+		}
+		provinces_to_highlight = {
+			province_id = 1053
 		}
 		ai_will_do = {
 			factor = 0
 		}
 		allow = {
-			owns_core_province = 1056 #Barguzin
-			dip_tech = 7
+			owns_core_province = 1053 #Hinggan
 			mil_tech = 7
 		}
 		effect = {
-			1056 = {
+			if = {
+				limit = {
+					1053 = {
+						has_building = tradecompany
+					}
+				}
+				1053 = {
+					remove_building = tradecompany
+				}
+				add_treasury = 500
+			}
+			1053 = {
 				change_trade_goods = gold
 			}
+		}
+	}
+	mjl_khmer_empire = {
+		major = yes
+		potential = {
+			tag = KHM
+			NOT = { has_country_flag = mjl_reforged_angkorian_empire_flag }
+		}
+		provinces_to_highlight = {
+			region = indo_china_region
+			NOT = { owned_by = ROOT }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 50
+				region = indo_china_region
+			}
+		}
+		effect = {
+			set_country_flag = mjl_reforged_angkorian_empire_flag
+			country_event = {
+				id = flavor_lna.3
+			}
+			add_country_modifier = {
+				name = "mjl_angkorian_empire_modifier"
+				duration = -1
+			}
+			override_country_name = MJL_Kambuja
 		}
 	}
 	mjl_educate_ruler = {
@@ -237,7 +286,8 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_years_of_income = -1
+			#add_years_of_income = -1
+			add_treasury = -100
 			change_adm = 1
 			change_dip = 1
 			change_mil = 1
@@ -266,7 +316,6 @@ country_decisions = {
 		effect = {
 		}
 	}
-	
 	# PR decision to check if critical events have fired
 	PR_critical_events = {
 		major = yes
@@ -296,20 +345,6 @@ country_decisions = {
 			always = no
 		}
 		effect = {
-		}
-	}
-
-	mjl_jap_restore_name_effect = {
-		potential = {
-			NOT = { tag = JAP }
-			has_country_flag = mjl_japan_name_overridden
-		}
-		allow = {
-			always = yes
-		}
-		effect = {
-			restore_country_name = yes
-			clr_country_flag = mjl_japan_name_overridden
 		}
 	}
 }

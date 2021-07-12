@@ -683,8 +683,8 @@ sealand_qq_missions_3 = {
 	}
 	restore_seljuk_empire = {
 		icon = mission_restore_caliphate_of_cordoba
-		required_missions = { liberate_egypt_from_mamluks rebuild_the_royal_road }
-		position = 6
+		required_missions = { secure_levant reach_to_gulf_of_persia }
+		position = 5
 
 		provinces_to_highlight = {
 			OR = {
@@ -1034,7 +1034,7 @@ sealand_qq_missions_4 = {
 		}
 	}
 	take_care_of_hormuz = {
-		icon = mission_arabian_trade_fixed
+		icon = mission_dharma_mission_arabian_trade
 		required_missions = { reach_to_gulf_of_persia }
 
 		provinces_to_highlight = {

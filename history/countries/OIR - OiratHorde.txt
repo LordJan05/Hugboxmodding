@@ -3,18 +3,13 @@ add_government_reform = steppe_horde
 technology_group = nomad_group
 religion = tengri_pagan_reformed
 primary_culture = oirats
-capital = 718
+#capital = 718
+capital = 2190 #Qaraqorum
 add_accepted_culture = khalkha
 add_country_modifier = {
-	name = "mjl_privateer_efficiency_debuff"
+	name = "mjl_oirat_buffs"
 	duration = -1
 }
-
-change_estate_land_share = {
-	estate = estate_nomadic_tribes
-	share = -0.5
-}
-
 
 #Khans of the Oirats (Kalmyks, Dzungars)
 1399.1.1 = {
@@ -40,7 +35,7 @@ change_estate_land_share = {
 1408.1.1 = {
 	heir = {
 		name = "Esen"
-		monarch_name = "Esen"
+		monarch_name = "Esen Taishi"
 		dynasty = "Choros"
 		birth_date = 1393.1.1
 		death_Date = 1455.1.1
@@ -53,7 +48,7 @@ change_estate_land_share = {
 
 1438.1.1 = {
 	monarch = {
-		name = "Esen"
+		name = "Esen Taishi"
 		dynasty = "Choros"
 		adm = 3
 		dip = 3

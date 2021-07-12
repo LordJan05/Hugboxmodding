@@ -14,7 +14,7 @@ add_country_modifier = {
 }
 
 change_estate_land_share = {
-	estate = estate_nobles
+	estate = estate_dhimmi
 	share = -0.502
 }
 
@@ -55,8 +55,8 @@ change_estate_land_share = {
 
 1420.1.1 = {
 	heir = {
-		name = "Jahân"
-		monarch_name = "Jahân Shâh"
+		name = "JahÃ¢n"
+		monarch_name = "JahÃ¢n ShÃ¢h"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		death_date = 1467.11.11
@@ -69,7 +69,7 @@ change_estate_land_share = {
 
 1438.4.22 = {
 	monarch = {
-		name = "Jahân Shâh"
+		name = "JahÃ¢n ShÃ¢h"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		adm = 3
