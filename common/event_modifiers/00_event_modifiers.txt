@@ -2282,7 +2282,7 @@ swedish_military_reforms = {
 }
 
 swedish_mercenary_core = {
-	merc_maintenance_modifier = -0.05
+	land_maintenance_modifier = -0.05
 	amount_of_banners = 0.25
 }
 
@@ -11514,7 +11514,7 @@ the_dying_of_the_light = {
 }
 
 an_eye_for_an_eye = {
-	mercenary_manpower = 0.5
+	amount_of_banners = 0.25
 	global_manpower_modifier = -0.25
 }
 

@@ -390,3 +390,65 @@ country_event = {
 		}
 	}
 }
+
+# Estate 30% crownland set.
+country_event = {
+	id = sealand_events.4
+	title = sealand_events.4.t
+	desc = sealand_events.4.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { crown_land_share = 30 }
+		NOT = { has_country_flag = fired_crownland_event }
+	}
+	immediate = {
+		if = {
+			limit = {
+				crown_land_share = 29
+			}
+			take_estate_land_share_small = { estate = all }
+		}
+		if = {
+			limit = {
+				crown_land_share = 28
+				NOT = { crown_land_share = 29 }
+			}
+			take_estate_land_share_medium = { estate = all }
+		}
+		if = {
+			limit = {
+				crown_land_share = 27
+				NOT = { crown_land_share = 28 }
+			}
+			take_estate_land_share_large = { estate = all }
+		}
+		if = {
+			limit = {
+				crown_land_share = 25
+				NOT = { crown_land_share = 27 }
+			}
+			take_estate_land_share_massive = { estate = all }
+		}
+		if = {
+			limit = {
+				crown_land_share = 24
+				NOT = { crown_land_share = 25 }
+			}
+			take_estate_land_share_massive = { estate = all }
+			take_estate_land_share_small = { estate = all }
+		}
+		else_if = {
+			limit = {
+				NOT = { crown_land_share = 30 }
+			}
+			take_estate_land_share_medium = { estate = all }
+		}
+		set_country_flag = fired_crownland_event
+	}
+	option = {
+		name = sealand_events.4.a
+	}
+}
