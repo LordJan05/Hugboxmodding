@@ -80,6 +80,9 @@ italy_region = {
 		lazio_area
 		po_valley_area
 		western_sicily_area
+		carinthia_area
+		corsica_area
+		torino_area
 	}
 }
 
@@ -118,7 +121,6 @@ south_german_region = {
 		tirol_area
 		austria_proper_area
 		inner_austria_area
-		carinthia_area
 		switzerland_area
 		lower_bavaria_area
 		upper_bavaria_area
@@ -131,6 +133,7 @@ south_german_region = {
 		romandie_area
 		palatinate_area
 		alsace_area
+		krain_area
 	}
 }
 
@@ -464,6 +467,7 @@ guinea_region = {
 		west_africa_coast_area
 		jolof_area
 		sao_tome_area
+		sierra_leione_area
 	}
 	monsoon = {
 		00.06.01
@@ -484,6 +488,12 @@ sahel_region = {
 		baghena_area
 		niger_bend_area
 		east_azbin_area
+		# Sealand
+		wadai_area
+		darfur_area
+		kobbe_area
+		bahiouda_desert_area
+		guera_area
 	}
 	monsoon = {
 		00.06.01
@@ -510,7 +520,10 @@ horn_of_africa_region = {
 		damot_area
 		aussa_area
 		shewa_area
-		bale_mountains_area #MJL Africa
+		#bale_mountains_area #MJL Africa
+		eritrea_area # Sealand
+		jubba_area # Sealand
+		marehan_area # Sealand
 	}
 }
 
@@ -529,9 +542,9 @@ east_africa_region = {
 		sakalava_area
 		southern_madagascar
 		uticulo_makuana_area
-		jubba_area
 		shire_area
 		mombasa_area
+		quelimane_area
 	}
 	monsoon = {
 		00.11.01
@@ -543,28 +556,44 @@ east_africa_region = {
 	}
 }
 
-central_africa_region = {
+middle_africa_region = { # Sealand Central Africa
+	areas = {
+		sanga_area 
+		karre_area 
+		sangha_area 
+		tandjile_area 
+		manjia_area 
+		mongala_area 
+		ubangi_area 
+		vakaga_area 
+		mbomou_area 
+		sudd_area
+		mbam_area
+		imatong_area # MJL Africa
+	}
+	monsoon = {
+		00.02.01
+		00.04.30
+	}
+}
+central_africa_region = { # African Great Lakes
 	areas = {
 		buha_area
 		katanga_area
 		zambia_area
 		luba_area
-		sankuru_area
 		tanzania_area
 		kenya_area
 		buzinza_area
 		uganda_area
 		rwanda_area
-		chokwe_area
-		bunyoro_area
-		imatong_area #MJL Africa
+		#bunyoro_area
+		sankuru_area
+		ituri_area # Sealand
+		turkana_area # Sealand
 	}
 	monsoon = {
-		00.10.01
-		00.12.30
-	}
-	monsoon = {
-		00.01.01
+		00.02.01
 		00.04.30
 	}
 }
@@ -578,6 +607,14 @@ kongo_region = {
 		lower_kasai
 		kasai_area
 		namibe_area #MJL Africa
+		# Sealand
+		bie_plateau_area
+		chokwe_area
+		gabon_area 
+		bateke_area 
+		mongo_area 
+		tshopo_area 
+		congo_basin_area 
 	}
 	monsoon = {
 		00.02.01
@@ -617,12 +654,27 @@ south_africa_region = {
 		south_african_plateau_area
 		cape_of_good_hope_area
 		zimbabwe_area
-		quelimane_area
 		butua_area
 		limpopo_area
 		transvaal_area
 		kunene_area #MJL Africa
 		karas_area #MJL Africa
+		# Sealand
+		kalahari_desert_area
+		west_limpopo_area
+		makgadikgadi_area
+		katanga_plateau_area
+		okavango_area
+		omuramba_area
+		etosha_area
+		east_limpopo_area
+		swazi_area
+		dragenberg_area
+		xhosa_area
+		highveld_area
+		tswana_area
+		roggeveld_area
+		namaqua_area
 	}
 	monsoon = {
 		00.11.01
@@ -886,6 +938,7 @@ australia_region = {
 		south_queensland_area
 		pilbara_area
 		tasmania_area
+		coastal_outback_area # Hunter
 	}
 	monsoon = {
 		00.10.01
@@ -1087,6 +1140,7 @@ malaya_region = {	#Western Indonesia Malaya.
 		batak_area
 		minangkabau_area
 		indian_ocean_islands_area
+		riau_area # Hunter
 	}
 	monsoon = {
 		00.10.01
@@ -1115,6 +1169,7 @@ moluccas_region = {
 		south_sulawesi_area
 		makassar_area
 		spice_islands_area
+		northern_new_guinea_area # Hunter
 	}
 	monsoon = {
 		00.10.01
@@ -1446,6 +1501,7 @@ american_east_coast_region = {
 		hudson_bay_sea_area
 		gulf_of_st_lawrence_area
 		gulf_stream_area
+		north_american_lake_area # Sealand
 	}
 }
 

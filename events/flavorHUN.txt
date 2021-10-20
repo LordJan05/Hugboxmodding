@@ -662,7 +662,10 @@ country_event = {
 		tag = HUN
 		is_year = 1490
 		NOT = { is_year = 1530 }
-		is_neighbor_of = TUR
+		OR = {
+			is_neighbor_of = TUR
+			is_neighbor_of = OSM
+		}
 		has_regency = no
 		NOT = { ADM = 5 }
 	}
@@ -743,18 +746,50 @@ country_event = {
 
 	trigger = {
 		tag = HUN
-		truce_with = TUR
+		if = {
+			limit = {
+				TUR = { exists = yes }
+			}
+			truce_with = TUR
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+			}
+			truce_with = OSM
+		}
 		exists = HAB
 		HAB = {
 			is_emperor = yes
 		}
-		TUR = {
-			any_owned_province = {
-				OR = {
-					area = alfold_area
-					area = transdanubia_area
+		if = {
+			limit = {
+				TUR = { exists = yes }
+			}
+			TUR = {
+				any_owned_province = {
+					OR = {
+						area = alfold_area
+						area = transdanubia_area
+					}
+					previous_owner = HUN
 				}
-				previous_owner = HUN
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+			}
+			OSM = {
+				any_owned_province = {
+					OR = {
+						area = alfold_area
+						area = transdanubia_area
+					}
+					previous_owner = HUN
+				}
 			}
 		}
 		NOT = { is_year = 1650 }
@@ -1407,8 +1442,21 @@ country_event = {
 		NOT = { is_year = 1500 }
 		OR = { #Big threathening power in the south, probably Ottomans
 			AND = {
-				is_neighbor_of = TUR
-				NOT = { num_of_cities = TUR }
+				if = {
+					limit = {
+						TUR = { exists = yes }
+					}
+					is_neighbor_of = TUR
+					NOT = { num_of_cities = TUR }
+				}
+				else_if = {
+					limit = {
+						TUR = { exists = no }
+						OSM = { exists = yes }
+					}
+					is_neighbor_of = OSM
+					NOT = { num_of_cities = OSM }
+				}
 			}
 			any_rival_country = {
 				exists = yes
@@ -1426,12 +1474,37 @@ country_event = {
 		hidden_effect = { #Used in Loc
 			if = {
 				limit = {
+					TUR = { exists = yes }
 					any_neighbor_country = {
 						tag = TUR
 						num_of_cities = ROOT
 					}
 				}
 				TUR = { save_event_target_as = threat_to_hungary }
+				else = {
+					random_rival_country = {
+						limit = {
+							capital_scope = {
+								OR = {
+									region = balkan_region
+									region = anatolia_region
+								}
+							}
+						}
+						save_event_target_as = threat_to_hungary
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					TUR = { exists = no }
+					OSM = { exists = yes }
+					any_neighbor_country = {
+						tag = OSM
+						num_of_cities = ROOT
+					}
+				}
+				OSM = { save_event_target_as = threat_to_hungary }
 				else = {
 					random_rival_country = {
 						limit = {
@@ -1457,8 +1530,16 @@ country_event = {
 			truce_with = TUR
 		}
 		modifier = {
+			factor = 0.75
+			truce_with = OSM
+		}
+		modifier = {
 			factor = 0.5
 			war_with = TUR
+		}
+		modifier = {
+			factor = 0.5
+			war_with = OSM
 		}
 	}
 
@@ -1506,11 +1587,30 @@ country_event = {
 		religion_group = christian
 		NOT = { exists = SER }
 		NOT = { alliance_with = TUR }
-		4239 = {
-			culture = serbian
-			any_neighbor_province = { #Best not have this event triggering from conquering Serbia yourself...
-				owned_by = TUR
+		NOT = { alliance_with = OSM }
+		if = {
+			limit = {
+				TUR = { exists = yes }
+			}
+			4239 = {
 				culture = serbian
+				any_neighbor_province = { #Best not have this event triggering from conquering Serbia yourself...
+					owned_by = TUR
+					culture = serbian
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+			}
+			4239 = {
+				culture = serbian
+				any_neighbor_province = { #Best not have this event triggering from conquering Serbia yourself...
+					owned_by = OSM
+					culture = serbian
+				}
 			}
 		}
 	}
@@ -1799,9 +1899,24 @@ country_event = {
 		any_owned_province = {
 			is_permanent_claim = HAB
 		}
-		TUR = {
-			owns = 153 #Pest
-			num_of_cities = HAB #Ottomans are bigger than Austria
+		if = {
+			limit = {
+				TUR = { exists = yes }
+			}
+			TUR = {
+				owns = 153 #Pest
+				num_of_cities = HAB #Ottomans are bigger than Austria
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+			}
+			OSM = {
+				owns = 153 #Pest
+				num_of_cities = HAB #Ottomans are bigger than Austria
+			}
 		}
 		HAB = {
 			num_of_cities = HUN #Austria is bigger than Hungary
@@ -1941,15 +2056,36 @@ country_event = {
 			}
 			senior_union_with = HUN
 		}
-		exists = TUR
-		is_neighbor_of = TUR
-		NOT = { num_of_cities = TUR }
-		NOT = { alliance_with = TUR }
-		NOT = { is_subject_of = TUR }
-		any_owned_province = {
-			region = balkan_region
-			any_neighbor_province = {
-				owned_by = TUR
+		if = {
+			limit = {
+				OSM = { exists = no }
+			}
+			exists = TUR
+			is_neighbor_of = TUR
+			NOT = { num_of_cities = TUR }
+			NOT = { alliance_with = TUR }
+			NOT = { is_subject_of = TUR }
+			any_owned_province = {
+				region = balkan_region
+				any_neighbor_province = {
+					owned_by = TUR
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+			}
+			exists = OSM
+			is_neighbor_of = OSM
+			NOT = { num_of_cities = OSM }
+			NOT = { alliance_with = OSM }
+			NOT = { is_subject_of = OSM }
+			any_owned_province = {
+				region = balkan_region
+				any_neighbor_province = {
+					owned_by = OSM
+				}
 			}
 		}
 	}

@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = berber
+add_accepted_culture = moroccan
+add_accepted_culture = tunisian
+religion = sunni
+technology_group = muslim
+capital = 344 # Marrakech
+religious_school = maliki_school

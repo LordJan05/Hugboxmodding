@@ -241,7 +241,7 @@ h_qic_col_war3_4 = {
 			}
 			if = {
 				limit = {
-					exists = SCO
+					exists = LNG
 				}
 				add_casus_belli = {
 					target = LNG

@@ -14,11 +14,6 @@ aristocracy_ideas = {
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
 	}
-
-	trigger = {
-		NOT = { has_reform = steppe_horde }
-		NOT = { has_idea = horse_lords }
-	}
 	
 	noble_knights = {
 		cavalry_power = 0.10
@@ -26,7 +21,7 @@ aristocracy_ideas = {
 	}
 	military_traditions = {
 		mil_tech_cost_modifier  = -0.1
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.5
 	}
 	local_nobility = {
 		global_autonomy = -0.025
@@ -107,12 +102,12 @@ horde_gov_ideas = {
 	}
 	
 	trigger = {
-		has_reform = steppe_horde
-		NOT = { has_idea = noble_knights }
+		government = tribal
 	}
 	
 	horse_lords = {
 		cavalry_cost = -0.33
+		cav_to_inf_ratio = 0.5
 	}
 	beyond_the_sun = {
 		ae_impact = -0.1
@@ -866,10 +861,10 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.50
+		land_forcelimit_modifier  = 0.4
 	}
 	mass_army = {
-		global_manpower_modifier = 0.50
+		global_manpower_modifier = 0.4
 	}
 	the_young_can_serve = {
 		manpower_recovery_speed = 0.20

@@ -97,6 +97,11 @@ feudalism = {
 					province_id = 461
 					province_id = 2368
 					province_id = 2125
+					# Swazi:
+					province_id = 7208
+					province_id = 4783
+					province_id = 7210
+					province_id = 7215
 				}
 			}
 			AND = {
@@ -254,6 +259,21 @@ feudalism = {
 				owner = {
 					has_institution = feudalism
 				}
+			}
+		}
+		modifier = { # Added
+			factor = 1
+			scale = yes
+			potential = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_development_5_post_1470
+				is_year = 1470
+				development = 5
 			}
 		}
 	}
@@ -431,11 +451,9 @@ renaissance = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				continent = europe
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_10
-				continent = europe
 				development = 10
 			}
 		}
@@ -443,23 +461,29 @@ renaissance = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				continent = europe
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_20
 				development = 20
-				continent = europe
+			}
+		}
+		modifier = { # Added
+			factor = 0.1
+			scale = yes
+			potential = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_development_30
+				development = 30
 			}
 		}
 		modifier = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				continent = europe
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_5_post_1500
-				continent = europe
 				is_year = 1500
 				development = 5
 			}
@@ -968,6 +992,17 @@ printing_press = {
 	
 	embracement_speed = {
 	
+		modifier = { # Added
+			factor = 2
+			scale = yes
+			potential = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_paper_getting_printed
+				trade_goods = paper
+			}
+		}
+
 		modifier = {
 			factor = 0.6
 			scale = yes
@@ -1033,16 +1068,25 @@ printing_press = {
 			}
 		}
 		modifier = {
-			factor = 0.05
+			factor = 0.1
 			scale = yes
 			potential = {
-				continent = europe
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_20_capital
 				development = 20
 				is_capital = yes
-				continent = europe
+			}
+		}
+		modifier = { # Added
+			factor = 0.2
+			scale = yes
+			potential = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_development_40_capital
+				development = 40
+				is_capital = yes
 			}
 		}
 		modifier = {
@@ -1108,6 +1152,28 @@ printing_press = {
 						religion = hussite
 					}
 				}
+			}
+		}
+		modifier = { # Added
+			factor = 2
+			potential = {
+				owner = {
+					religion = confucianism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_owner_confucianism
+				is_owned_by_trade_company = no
+				owner = {
+					religion = confucianism
+				}
+			}
+		}
+		modifier = { # Added
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_province_confucianism
+				religion = confucianism
 			}
 		}
 		modifier = {
@@ -1791,7 +1857,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -1809,7 +1875,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -1826,7 +1892,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.6
 			scale = yes
 			potential = {
 				OR = {
@@ -1845,7 +1911,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -1866,7 +1932,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -1887,7 +1953,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -1905,7 +1971,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -2170,7 +2236,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.4
 			potential = {
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
@@ -2230,7 +2296,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 1.5
 			potential = {
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
@@ -2262,7 +2328,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			potential = {
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
@@ -2293,7 +2359,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			potential = {
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
@@ -2346,7 +2412,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			scale = yes
 			potential = {
 				owner = {

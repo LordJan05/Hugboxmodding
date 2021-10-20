@@ -18,6 +18,7 @@ christian = {
 	
 	catholic = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 204 204 0 }
 		icon = 1
 		allowed_conversion = {
@@ -116,7 +117,7 @@ christian = {
 					}	
 					concilatory = {
 						relation_with_heretics = 10
-						curia_powers_cost = -0.10
+						papal_influence = 1
 					}
 				}
 			}
@@ -130,15 +131,34 @@ christian = {
 			# Papal Actions below!
 			
 			levy_church_tax = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					NOT = { war_with = PAP }
 					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_country_modifier = {
 						name = "papal_sanction_for_church_taxes"
 						duration = 7300
@@ -149,16 +169,35 @@ christian = {
 				}				
 			}			
 			bless_monarch = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					NOT = { war_with = PAP }
 					NOT = { prestige = 100 }
 					NOT = { has_country_modifier = papal_blessing }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_country_modifier = {
 						name = "papal_blessing"
 						duration = 7300
@@ -169,17 +208,18 @@ christian = {
 				}
 			}
 			indulgence_for_sins = {
-				cost = 50
+				cost = 0
 				potential = {
-					government = monarchy
 					NOT = { tag = PAP }
 				}
 				allow = {
+					papal_influence = 50
 					NOT = { war_with = PAP }
 					NOT = { legitimacy = 100 }
 					NOT = { has_country_modifier = papal_indulgence }
 				}
 				effect = {
+					add_papal_influence = -50
 					add_country_modifier = {
 						name = "papal_indulgence"
 						duration = 7300
@@ -190,15 +230,34 @@ christian = {
 				}
 			}	
 			local_saint = {
-				cost = 100
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 2000
+					}
+					else = { papal_influence = 100 }
 					NOT = { war_with = PAP }
 					NOT = { stability = 3 }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -2000
+					}
+					else = { add_papal_influence = -100 }
 					add_stability = 1
 				}
 				ai_will_do = {
@@ -210,15 +269,34 @@ christian = {
 				}
 			}
 			forgiveness_for_usury = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					NOT = { war_with = PAP }
 					NOT = { has_country_modifier = usury_forgiven }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_country_modifier = {
 						name = "usury_forgiven"
 						duration = 7300
@@ -233,16 +311,35 @@ christian = {
 				}
 			}			
 			proclaim_holy_war = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					is_at_war = yes
 					NOT = { war_with = PAP }
 					NOT = { has_country_modifier = papal_sanction_for_holy_war }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_country_modifier = {
 						name = "papal_sanction_for_holy_war"
 						duration = 7300
@@ -257,16 +354,40 @@ christian = {
 				}
 			}
 			send_papal_legate = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
-					is_papal_controller = no
+					if = {
+						limit = {
+							NOT = { tag = PAP }
+						}
+						is_papal_controller = no
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					NOT = { war_with = PAP }
 					NOT = { has_country_modifier = papal_legate }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_country_modifier = {
 						name = "papal_legate"
 						duration = 7300
@@ -277,15 +398,34 @@ christian = {
 				}
 			}	
 			sanction_commercial_monopoly = {
-				cost = 50
+				cost = 0
 				potential = {
-					NOT = { tag = PAP }
+					if = {
+						limit = {
+							tag = PAP
+						}
+						has_country_flag = papal_kingdom_flag
+					}
 				}
 				allow = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						curia_treasury_size = 1000
+					}
+					else = { papal_influence = 50 }
 					NOT = { war_with = PAP }
 					NOT = { mercantilism = 100 }
 				}
 				effect = {
+					if = {
+						limit = {
+							tag = PAP
+						}
+						add_curia_treasury = -1000
+					}
+					else = { add_papal_influence = -50 }
 					add_mercantilism = 1
 				}
 				ai_will_do = {
@@ -355,6 +495,7 @@ christian = {
 	
 	hussite = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 244 55 9 }
 		icon = 22
 
@@ -392,6 +533,7 @@ christian = {
 	
 	protestant = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 0 178 }
 		icon = 2
 
@@ -532,6 +674,7 @@ christian = {
 
 	reformed = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 76 76 229 }
 		icon = 3
 		allowed_conversion = {
@@ -653,6 +796,7 @@ christian = {
 
 	orthodox = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 178 127 0 }
 		icon = 4
 		country = {
@@ -789,6 +933,7 @@ christian = {
 	
 	coptic = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 	
 		flags_with_emblem_percentage = 20
 		flag_emblem_index_range = { 1 4 }
@@ -1129,6 +1274,7 @@ muslim = {
 	
 	sunni = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 153 0 }
 		icon = 5
 		country = {
@@ -1151,6 +1297,7 @@ muslim = {
 
 	shiite = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 204 0 }
 		icon = 6
 		country = {
@@ -1173,6 +1320,7 @@ muslim = {
 	
 	ibadi = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 102 0 }
 		icon = 16
 		country = {
@@ -1205,6 +1353,7 @@ eastern = {
 	flag_emblem_index_range = { 58 80 }
 	buddhism = { #Theravada
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 204 76 0 }
 		icon = 24
 		allowed_conversion = {
@@ -1238,6 +1387,7 @@ eastern = {
 	
 	vajrayana = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 204 76 76 }
 		icon = 25
 		allowed_conversion = {
@@ -1271,6 +1421,7 @@ eastern = {
 	
 	mahayana = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 204 76 127 }
 		icon = 23
 		allowed_conversion = {
@@ -1304,6 +1455,7 @@ eastern = {
 
 	confucianism = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 214 229 140 }
 		icon = 9
 		country = {
@@ -1321,6 +1473,7 @@ eastern = {
 
 	shinto = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 204 0 0 }
 		icon = 10
 		country = {
@@ -1353,6 +1506,7 @@ dharmic = {
 
 	hinduism = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 204 204 }
 		icon = 8
 		allowed_conversion = {
@@ -1386,6 +1540,7 @@ dharmic = {
 
 	sikhism = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 0 153 153 }
 		icon = 15
 		allowed_conversion = {
@@ -2001,6 +2156,7 @@ pagan = {
 
 	animism = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 127 0 0 }
 		icon = 11
 		country = {
@@ -2020,6 +2176,7 @@ pagan = {
 	}
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 127 76 76 }
 		icon = 12
 		country = {
@@ -2040,6 +2197,7 @@ pagan = {
 	}
 	totemism = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 127 115 115 }
 		icon = 13
 		country = {
@@ -2062,6 +2220,7 @@ pagan = {
 	
 	inti = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		color = { 64 115 115 }
 		icon = 18
 		country = {
@@ -2087,6 +2246,7 @@ pagan = {
 	}
 	
 	nahuatl = {
+		allow_female_defenders_of_the_faith = yes
 		color = { 64 115 64 }
 		icon = 17
 		country = {
@@ -2113,6 +2273,7 @@ pagan = {
 	
 	mesoamerican_religion = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		#color = { 76 25 178 }
 		color = { 127 25 178 }
 		icon = 19
@@ -2137,6 +2298,7 @@ pagan = {
 	
 	norse_pagan_reformed = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		icon = 21
 		color = { 191 191 191 }
 		country = {
@@ -2159,6 +2321,7 @@ pagan = {
 	
 	tengri_pagan_reformed = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		icon = 27
 		color = { 25 76 217 }
 		country = {
@@ -2171,6 +2334,7 @@ pagan = {
 	
 	dreamtime = {
 		declare_war_in_regency = yes
+		allow_female_defenders_of_the_faith = yes
 		icon = 29
 		color = { 197 133 43 }
 		country = {
@@ -2198,6 +2362,7 @@ jewish_group = {
 	flag_emblem_index_range = { 106 107 }
 
 	jewish = {
+		allow_female_defenders_of_the_faith = yes
 		declare_war_in_regency = yes
 		icon = 20
 		color = { 153 25 102 }
@@ -2228,6 +2393,7 @@ zoroastrian_group = {
 	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
 	zoroastrian = {
+		allow_female_defenders_of_the_faith = yes
 		declare_war_in_regency = yes
 		icon = 26
 		color = { 127 178 51 }

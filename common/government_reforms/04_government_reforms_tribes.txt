@@ -173,7 +173,7 @@ siberian_tribe = {
 	nation_designer_cost = -10
 	legacy_equivalent = siberian_native_council
 	native_mechanic = no
-	allow_migration = yes
+	#allow_migration = yes
 	fixed_rank = 1
 	lock_level_when_selected = yes
 	modifiers = {
@@ -187,6 +187,9 @@ stateless_society = {
 	valid_for_nation_designer = yes
 	lock_level_when_selected = yes
 	nation_designer_cost = 0
+	potential = {
+		is_subject = no
+	}
 	modifiers = {
 		governing_capacity_modifier = -0.99
 		defensiveness = 0.75
@@ -337,6 +340,10 @@ tribe_becomes_monarchy_reform = {
 	potential = {
 		NOT = { 
 			has_reform = stateless_society
+			tag = SWZ
+			tag = HER
+			tag = NAM
+			tag = KHE
 		}
 	}
 	effect = {
@@ -376,6 +383,12 @@ tribe_becomes_monarchy_reform = {
 			change_unit_type = chinese
 		}
 		change_government = monarchy
+		if = {
+			limit = {
+				tag = SWZ
+			}
+			add_government_reform = swazi_government_reform
+		}
 	}
 	ai = {
 		factor = 1
@@ -385,6 +398,13 @@ tribe_becomes_monarchy_reform = {
 tribe_becomes_republic_reform = {
 	icon = "parliament_highlighted"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			tag = HER
+			tag = NAM
+			tag = KHE
+		}
+	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
 	}
@@ -458,6 +478,9 @@ tribe_becomes_theocracy_reform = {
 	potential = {
 		NOT = { 
 			has_reform = stateless_society
+			tag = HER
+			tag = NAM
+			tag = KHE
 		}
 	}
 	trigger = {
@@ -520,6 +543,9 @@ tribe_becomes_horde_reform = {
 	potential = {
 		NOT = { 
 			has_reform = stateless_society
+			tag = HER
+			tag = NAM
+			tag = KHE
 		}
 	}
 	effect = {

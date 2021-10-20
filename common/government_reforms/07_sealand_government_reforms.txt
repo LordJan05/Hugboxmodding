@@ -1,0 +1,513 @@
+# Teutonic Order. From crusader_kings mission.
+crusade_against_the_world = {
+	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = yes
+	potential = {
+		tag = TEU
+		has_country_flag = crusade_against_the_world_flag
+		religion = catholic
+	}
+
+	modifiers = {
+		cb_on_religious_enemies = yes
+		enforce_religion_cost = -0.55
+		devotion = 2
+		papal_influence = 2
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	icon = "holy_state_reform"
+	allow_normal_conversion = yes
+	monastic = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+}
+
+# Seljuk Empire. From mission. Tribal Federation and Ottoman government hybrid.
+seljuk_empire_government = {
+	icon = "chieftain"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = seljuk_empire_government
+			have_had_reform = seljuk_empire_government
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	maintain_dynasty = yes
+	lock_level_when_selected = yes
+
+	modifiers = {
+		years_of_nationalism = -5
+		cav_to_inf_ratio = 0.25
+		province_warscore_cost = -0.10
+		governing_capacity = 250
+		max_absolutism = 5
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+		has_pashas = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		has_harem = yes
+	}
+}
+
+# Barbary States:
+barbary_states_reform = {
+	icon = "barbary_states"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = barbary_states_reform
+			have_had_reform = barbary_states_reform
+		}
+	}
+	modifiers = {
+		may_perform_slave_raid = yes
+		admiral_cost = -0.15
+		republican_tradition = -0.5
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	can_form_trade_league = no
+	
+	factions_frame = 9
+	factions = {
+		pr_buccaneers
+		pr_smugglers
+		pr_captains
+	}
+	
+	duration = 4
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			statists = {
+				prestige_from_naval = 0.5
+				naval_tradition_from_battle = 0.5
+				sailors_recovery_speed = 0.15
+				global_naval_barrage_cost = -0.5
+				capture_ship_chance = 0.33
+				may_perform_slave_raid_on_same_religion = yes
+				republican_tradition = 0.5
+			}
+
+			monarchists = {
+				prestige_from_land = 0.5
+				land_morale = 0.075
+				naval_morale = -0.1
+				land_forcelimit_modifier = 0.1
+				naval_forcelimit_modifier = -0.2
+				global_manpower_modifier = 0.1
+				global_sailors_modifier = -0.2
+				manpower_recovery_speed = 0.1
+				sailors_recovery_speed = -0.2
+				republican_tradition = -1
+				navy_tradition = -1
+			}
+		}
+	}
+}
+
+# South Africa Bushmen
+bushmen_tribe = {
+	icon = "tribal_religious_society"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = bushmen_tribe
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	native_mechanic = no
+	allow_migration = yes
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	modifiers = {
+		movement_speed = 0.1
+		global_institution_spread = -0.2
+	}
+}
+# Swazi government switch:
+tribe_becomes_monarchy_reform_swazi = {
+	icon = "swazi_reform_into"
+	allow_normal_conversion = yes
+	potential = {
+		tag = SWZ
+	}
+	effect = {
+		lose_reforms = 4
+		change_government = monarchy
+		add_government_reform = swazi_government_reform
+	}
+	ai = {
+		factor = 1000
+	}
+}
+# Swazi government:
+swazi_government_reform = {
+	icon = "tribal_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	potential = {
+		religion = shamanism
+		OR = {
+			tag = SWZ
+			have_had_reform = swazi_government_reform
+		}
+	}
+	lock_level_when_selected = yes
+	modifiers = {
+		block_introduce_heir = yes
+		max_absolutism = 20
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		election_on_death = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+# Great Moravia unique starting Goverment Reform.
+great_moravian_principality = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = GMV
+			have_had_reform = great_moravian_principality
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	lock_level_when_selected = yes
+
+	modifiers = {
+		land_forcelimit_modifier = 0.2
+		yearly_absolutism = 0.5
+		global_autonomy = -0.05
+		governing_capacity = 250
+	}
+
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			statists = {
+				#cavalry_power = 0.3
+				cavalry_cost = -0.2
+				cav_to_inf_ratio = 0.5
+			}
+
+			monarchists = {
+				#infantry_power = 0.2
+				infantry_cost = -0.1
+			}
+		}
+	}
+}
+
+# Oirat special, to make AI Tumens fight each other.
+
+oirat_steppe_horde = {
+	icon = "horde_riding"
+	allow_normal_conversion = no
+	potential = {
+		tag = OIR
+	}
+	nomad = yes
+	raze_province = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		technology_group = nomad_group
+	}
+
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		loot_amount = 0.50
+		global_institution_spread = -0.15
+		reinforce_cost_modifier = -0.5
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.2
+		years_of_nationalism = -5
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+# Republic Tsardom
+veche_tsardom = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				religion = orthodox
+				OR = {
+					AND = {
+						tag = RUS
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = UKR
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = RMN
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = SER
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						is_playing_custom_nation = yes
+						have_had_reform = veche_tsardom
+					}
+				}
+			}
+			AND = {
+				religion_group = christian
+				tag = FIN
+				NOT = { map_setup = map_setup_random }
+			}
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	nation_designer_trigger = {
+		culture_group = east_slavic
+		religion = orthodox
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.20
+		merchants = 2
+		global_autonomy = -0.05
+		governing_capacity = 250
+	}
+
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	boost_income = yes
+
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = { has_dlc = "Third Rome" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_dlc = "Third Rome" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Third Rome" }
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = { has_dlc = "Res Publica" }
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			NOT = { has_dlc = "Mare Nostrum" }
+			has_dlc = "Res Publica"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			has_dlc = "Mare Nostrum"
+			has_dlc = "Res Publica"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	duration = 4
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+		claim_states = yes
+	}
+}
+
+# Eschatological Theocracy:
+eschatological_theocracy_georgia_reform = { # For Georgia
+	icon = "monastic_elections_reform"
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = eschatological_theocracy_georgia_reform_flag
+	}
+
+	modifiers = {
+		ae_impact = -0.1
+		church_influence_modifier = 0.1
+	}
+	rulers_can_be_generals = yes
+
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		heir = no
+		election_on_death = yes
+		states_general_mechanic = {
+			militarists = {
+				max_absolutism = 5
+				army_tradition_from_battle = 0.5
+				warscore_cost_vs_other_religion = -0.05
+			}
+
+			theocrats = {
+				devotion = 0.5
+				manpower_in_true_faith_provinces = 0.1
+				global_missionary_strength = 0.025
+			}
+		}
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
+	icon = "feudal_theocracy"
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = eschatological_theocracy_caliphate_reform_flag
+	}
+
+	modifiers = {
+		missionaries = 1
+		global_missionary_strength = 0.01
+		tolerance_own = 2
+		governing_capacity = 150
+		church_influence_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.1
+	}
+	rulers_can_be_generals = yes
+
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		heir = no
+		election_on_death = yes
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	effect = {
+		add_country_modifier = {
+			name = eschatological_theocracy_caliphate_reform_janissaries_boost
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = {
+				has_country_modifier = eschatological_theocracy_caliphate_reform_janissaries_boost
+			}
+			remove_country_modifier = eschatological_theocracy_caliphate_reform_janissaries_boost
+		}
+	}
+}

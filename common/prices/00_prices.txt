@@ -146,3 +146,8 @@ unknown = {
 bananas = {
 	base_price = 4.5
 }
+
+# Sealand
+macaroni = {
+	base_price = 4
+}

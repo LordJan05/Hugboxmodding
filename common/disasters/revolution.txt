@@ -1,6 +1,7 @@
 revolution = {
 	ended_by_country_breaking_to_rebels = no
 	potential = {
+		always = no
 		NOT = { has_country_flag = had_revolution }
 		NOT = { tag = PAP }
 		NOT = { has_reform = celestial_empire }

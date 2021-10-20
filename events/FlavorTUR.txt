@@ -20,7 +20,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 
 		is_year = 1444
 		NOT = { is_year = 1481 }
@@ -134,7 +137,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1450
 		NOT = { is_year = 1550 }
 		MIL = 3
@@ -185,7 +191,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		has_idea = timariot_system
 		has_country_modifier = the_devshirme_system
 	}
@@ -226,7 +235,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		religion_group = muslim
@@ -369,15 +381,15 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger ={
-		tag = TUR
+		tag = OSM
 		is_year = 1550
 		any_neighbor_country = {
 			tag = PER
 			any_owned_province = {
-				NOT = { is_core = TUR }
-				NOT = { is_claim = TUR }
+				NOT = { is_core = OSM }
+				NOT = { is_claim = OSM }
 				any_neighbor_province = {
-					owned_by = TUR
+					owned_by = OSM
 				}
 			}
 		}
@@ -403,13 +415,13 @@ country_event = {
 		PER = {
 			random_owned_province = {
 				limit = {
-					NOT = { is_core = TUR }
-					NOT = { is_claim = TUR }
+					NOT = { is_core = OSM}
+					NOT = { is_claim = OSM }
 					any_neighbor_province = {
-						owned_by = TUR
+						owned_by = OSM
 					}
 				}
-				add_claim = TUR
+				add_claim = OSM
 			}
 			add_opinion = {
 				who = ROOT
@@ -478,7 +490,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_at_war = no
 		is_year = 1520
 		NOT = { is_year = 1566 }
@@ -543,7 +558,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1500
 		NOT = { is_year = 1520 }
 		is_at_war = no
@@ -606,7 +624,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		is_at_war = no
@@ -658,7 +679,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1500
 		NOT = { is_year = 1550 }
 		is_at_war = no
@@ -721,7 +745,10 @@ country_event = {
 
 	
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_at_war = no
 		
 		owns = 361 # Cairo
@@ -758,7 +785,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		NOT = { exists = MAM }
 		any_owned_province = {
 			is_core = MAM
@@ -831,7 +861,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1519
 		NOT = { is_year = 1560 }
 		owns = 151
@@ -877,7 +910,10 @@ country_event = {
 		NOT = { has_country_flag = TUR_had_event_3375 }
 		is_year = 1500
 		NOT = { is_year = 1600 }
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		owns = 151
     }
 	
@@ -929,7 +965,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1600
 		NOT = { is_year = 1650 }
 		is_female = no
@@ -995,7 +1034,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		has_ruler_modifier = kosem_sultana
 		NOT = {
 			has_global_flag = wih_kosem_tur_flag
@@ -1022,7 +1064,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1600
 		NOT = { is_year = 1650 }
 	}
@@ -1078,7 +1123,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1600
 		NOT = { is_year = 1650 }
     	}
@@ -1113,7 +1161,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = TUR
+		tag = OSM
 		is_year = 1600
 		exists = PER
 		PER = { is_free_or_tributary_trigger = yes }
@@ -1191,10 +1239,10 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 0
-				army_size = TUR
+				army_size = OSM
 			}
 		}
-		TUR = {
+		OSM= {
 			add_opinion = {
 				who = ROOT
 				modifier = full_reconciliation
@@ -1211,10 +1259,10 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0.5
-				army_size = TUR
+				army_size = OSM
 			}
 		}
-		TUR = {
+		OSM= {
 			add_opinion = {
 				who = ROOT
 				modifier = moderate_treaty
@@ -1230,14 +1278,14 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 4
-				NOT = { army_size = TUR }
+				NOT = { army_size = OSM}
 			}
 		}
 		add_prestige = 5
 		hidden_effect = {
 			clr_country_flag = full_reconciliation
 			clr_country_flag = moderate_treaty
-			TUR = {
+			OSM= {
 				country_event = { id = flavor_tur.3 days = 10 }
 			}
 		}
@@ -1311,7 +1359,10 @@ country_event = {
 
 	
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1700
 		NOT = { exists = TUN }
 		any_owned_province = {
@@ -1386,7 +1437,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1700
 		NOT = { exists = TRI }
 		any_owned_province = {
@@ -1460,12 +1514,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger ={
-		tag = TUR
+		tag = OSM
 		is_year = 1700
 		war_with = RUS
 		
 		egypt_region = {
-			owned_by = TUR
+			owned_by = OSM
 			culture = al_misr_arabic
 			can_spawn_rebels = nationalist_rebels
 		}
@@ -1533,7 +1587,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1700
 	}
 	
@@ -1585,7 +1642,10 @@ country_event = {
 
 	
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		capital = 151
 		religion_group = muslim
 		NOT = { exists = BYZ }
@@ -1649,7 +1709,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger ={
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1700
 		NOT = { is_year = 1800 }
 		any_owned_province = {
@@ -1722,7 +1785,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = OSM
+		}
 		is_year = 1600
 		has_country_modifier = the_provincial_system
 		

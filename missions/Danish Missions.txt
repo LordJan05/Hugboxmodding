@@ -28,18 +28,26 @@ sealand_denmark_missions_1 = {
 		}
 		effect = {
 			1978 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			369 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			normandy_area = {
 				limit = {
@@ -67,22 +75,92 @@ sealand_denmark_missions_1 = {
 			}
 			sailors_percentage = 0.6
 			num_of_admirals = 1
-			is_rival = ENG
-			ENG = {
-				custom_trigger_tooltip = {
-					tooltip = has_been_insulted_by_root
-					OR = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = insulted
-						}
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
+			if = {
+				limit = {
+					exists = ENG
+				}
+				is_rival = ENG
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = ENG }
+					exists = GBR
+				}
+				is_rival = GBR
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = ENG }
+					NOT = { exists = GBR }
+					exists = IRE
+				}
+				is_rival = IRE
+			}
+			else = { num_of_heavy_ship = 8 }
+			if = {
+				limit = {
+					exists = ENG
+				}
+				ENG = {
+					custom_trigger_tooltip = {
+						tooltip = has_been_insulted_by_root
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
 						}
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					NOT = { exists = ENG }
+					exists = GBR
+				}
+				GBR = {
+					custom_trigger_tooltip = {
+						tooltip = has_been_insulted_by_root
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = ENG }
+					NOT = { exists = GBR }
+					exists = IRE
+				}
+				IRE = {
+					custom_trigger_tooltip = {
+						tooltip = has_been_insulted_by_root
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+						}
+					}
+				}
+			}
+			else = { navy_size_percentage = 0.60 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -204,6 +282,129 @@ sealand_denmark_missions_2 = {
 	}
 	has_country_shield = yes
 
+	strengthen_lubeck_trade = {
+		icon = mission_hanseatic_city
+		required_missions = { end_gryf_rebellion }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4141
+				province_id = 44
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			4141 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			44 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			1931= {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
 	subjugate_normandy = {
 		icon = mission_have_two_subjects
 		required_missions = { build_up_grand_fleet northern_threat }
@@ -233,6 +434,7 @@ sealand_denmark_missions_2 = {
 			}
 		}
 		effect = {
+			change_religion = norse_pagan_reformed
 			country_event = {
 				id = sea_denmark_events.1
 			}
@@ -320,10 +522,7 @@ sealand_denmark_missions_2 = {
 			num_of_generals_with_traits = 3
 		}
 		effect = {
-			add_country_modifier = {
-				name = "great_viking_army_modifier"
-				duration = -1
-			}
+			custom_tooltip = revive_great_viking_army_tooltip
 		}
 	}
 	north_sea_empire = {
@@ -364,6 +563,7 @@ sealand_denmark_missions_2 = {
 			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
+			NOT = { tag = KLU }
 			denmark_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -472,7 +672,6 @@ sealand_denmark_missions_3 = {
 				}
 				ai = no
 			}
-			is_at_war = no
 			NOT = { num_of_rebel_armies = 1 }
 			NOT = { num_of_rebel_controlled_provinces = 1 }
 		}
@@ -491,14 +690,15 @@ sealand_denmark_missions_3 = {
 				limit = {
 					dynasty = Gryf
 				}
-				add_country_modifier = {
-					name = "gryf_prevailed_modifier"
-					duration = -1
-				}
+				set_country_flag = end_gryf_rebellion_flag
+				custom_tooltip = end_gryf_rebellion_tooltip
 			}
 			else = { 
 				add_prestige = 33
 			}
+			4141 = { add_claim = ROOT }
+			45 = { add_claim = ROOT }
+			44 = { add_claim = ROOT }
 		}
 	}
 	northern_threat = {
@@ -653,6 +853,57 @@ sealand_denmark_missions_4 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
+
+	assume_direct_control = {
+		icon = defend_the_city
+		required_missions = { end_gryf_rebellion }
+		position = 2
+
+		provinces_to_highlight = {
+			province_id = 45
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			45 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			45 = { add_center_of_trade_level = 1 }
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
 
 	conquer_gotaland = {
 		icon = mission_unite_home_region
@@ -814,6 +1065,7 @@ sealand_denmark_missions_4 = {
 			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
+			NOT = { tag = NSE }
 			jutland_area = {
 				type = all
 				owned_by = ROOT

@@ -226,6 +226,7 @@ monastic_breweries_reform = {
 			religion = catholic
 			culture_group = gaelic
 			primary_culture = scottish
+			primary_culture = georgian
 		}
 	}
 	trigger = {
@@ -233,6 +234,7 @@ monastic_breweries_reform = {
 			religion = catholic
 			culture_group = gaelic
 			primary_culture = scottish
+			primary_culture = georgian
 		}
 		any_owned_province = {
 			OR = {
@@ -546,6 +548,7 @@ regionally_elected_commanders = {
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 	}
@@ -553,6 +556,7 @@ regionally_elected_commanders = {
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 		if = {
@@ -609,13 +613,17 @@ monastic_elections_reform = {
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 	}
 	
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 	}
@@ -651,12 +659,14 @@ commander_king_reform = {
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 	}
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 		full_idea_group = theocracy_gov_ideas
@@ -685,6 +695,7 @@ admiral_king_reform = {
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 		capital_scope = {
@@ -694,6 +705,7 @@ admiral_king_reform = {
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
+			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
 		has_reform = mission_to_kill_pirates_reform

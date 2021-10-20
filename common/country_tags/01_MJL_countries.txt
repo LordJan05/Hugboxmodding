@@ -2,14 +2,3 @@
 CHW = "countries/Bachwezi.txt"
 AFR = "countries/Toto.txt"
 GZW = "countries/Great Zimbabwe.txt"
-
-########################
-# Added by Sealand
-SJK = "countries/SeaSeljukEmpire.txt"
-VIN = "countries/SeaVinland.txt"
-NSE = "countries/SeaNorthSeaEmpire.txt"
-KLU = "countries/SeaKalmarUnion.txt"
-ABA = "countries/AbbasidCaliphate.txt"
-
-# Added by Chalky
-DRV = "countries/Dravidessa.txt"

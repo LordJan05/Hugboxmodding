@@ -1,6 +1,6 @@
 # Added by Sealand
 government = monarchy
-add_government_reform = ottoman_government
+add_government_reform = seljuk_empire_government
 government_rank = 3
 primary_culture = persian
 add_accepted_culture = turkish

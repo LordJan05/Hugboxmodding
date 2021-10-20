@@ -7,6 +7,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4049;4020;sea;1449;-1;-1;-1;-1;Comoros-Ibo MADAGASCAR
 4020;4022;sea;1449;-1;-1;-1;-1;Comoros-Iboina MADAGASCAR
 2982;126;sea;1305;-1;-1;-1;-1;Siracusa-Malta MEDITERRANEAN
+341;5774;sea;1302;-1;-1;-1;-1;Tunis-Pantelleria MEDITERRANEAN
+5774;4736;sea;1302;-1;-1;-1;-1;Pantelleria-Trapani MEDITERRANEAN
 321;2302;sea;1317;-1;-1;-1;-1;Cyprus-Icel MEDITERRANEAN
 320;319;sea;1319;-1;-1;-1;-1;Rhodes-Mentesha MEDITERRANEAN
 4624;2652;sea;1512;-1;-1;-1;-1;Guane-Ecab CARIBBEANS
@@ -22,8 +24,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 483;482;sea;1503;-1;-1;-1;-1;Turks Islands-Bahamas CARIBBEANS
 2654;489;sea;1516;-1;-1;-1;-1;Baracoa-Tortuga CARIBBEANS
 965;2010;sea;1500;-1;-1;-1;-1;Manahahttan-Pequot AMERICA
+839;837;sea;1559;-1;-1;-1;-1;Pipil-Nicaragua AMERICA
 778;2851;sea;1536;-1;-1;-1;-1;Rio de la Plata-Colonia AMERICA
+1777;4257;sea;1652;-1;-1;-1;-1;Kola-Mezen NOVGOROD
+282;1974;sea;1322;-1;-1;-1;-1;Yedisan-Yedishkul CRIMEA
+365;2320;sea;1328;-1;-1;-1;-1;Sina-Ras Gareb EGYPT
+4753;130;sea;1308;-1;-1;-1;-1;Zara-Istra DALMATIA
+112;4729;sea;1308;-1;-1;-1;-1;Venezia-Padova VENICE
+112;113;sea;1308;-1;-1;-1;-1;Venezia-Ferrara VENICE
+1983;1775;sea;1258;-1;-1;-1;-1;Lolland-Holstein LUBECK
+1775;2996;sea;1258;-1;-1;-1;-1;Holstein-Wismar LUBECK
 55;54;sea;1268;-1;-1;-1;-1;Oldenburg-Stade LUBECK
+235;87;sea;1271;-1;-1;-1;-1;Kent-Calais CHANNEL
 2999;2219;sea;1334;-1;-1;-1;-1;Hormuz-Bandar Langeh PERSIA
 2051;517;sea;1337;-1;-1;-1;-1;Gohilvad-Surat INDIA
 2051;4512;sea;1337;-1;-1;-1;-1;Gohilvad-Bharuch INDIA
@@ -32,8 +44,19 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 2039;4474;sea;1343;-1;-1;-1;-1;Sunderbans-Sonargaon INDIA
 668;5531;sea;1371;-1;-1;-1;-1;Macau-Shenzhen CHINA
 5556;5564;sea;1373;-1;-1;-1;-1;Ningbo-Huzhou CHINA
-5556;5564;sea;1373;-1;-1;-1;-1;Ningbo-Huzhou CHINA
+5556;5563;sea;1373;-1;-1;-1;-1;Ningbo-Shanghai CHINA
+623;624;sea;1360;-1;-1;-1;-1;Tulangbewang-Banten INDONESIA
 979;2611;sea;1680;-1;-1;-1;-1;Unangan-Kodiak ALASKA
+911;1001;sea;1661;-1;-1;-1;-1;Baawitigon-Marameg GREAT LAKES
+944;987;sea;1660;-1;-1;-1;-1;Bodewadmik-Onguhiara GREAT LAKES
+987;4872;sea;1660;-1;-1;-1;-1;Onguhiara-Wenrohonon GREAT LAKES
+4892;4912;sea;7056;-1;-1;-1;-1;Iroquet-Kaniatarowanen GREAT LAKES
+4892;2584;sea;7056;-1;-1;-1;-1;Iroquet-Masoliantekw GREAT LAKES
+993;2584;sea;7056;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
+990;2584;sea;7055;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
+990;4893;sea;7055;-1;-1;-1;-1;Maisouna-Nebesek GREAT LAKES
+994;4893;sea;7055;-1;-1;-1;-1;Stadacona-Nebesek GREAT LAKES
+994;2583;sea;7055;-1;-1;-1;-1;Stadacona-Kikonteku GREAT LAKES
 #############################################
 333;4559;sea;1300;-1;-1;-1;-1;Majorca-Minorca
 4560;333;sea;1295;-1;-1;-1;-1;Ibiza-Majorca
@@ -78,10 +101,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 112;1774;sea;1308;2995;1432;2994;1434;Venice-Treviso
 54;4141;sea;1268;2945;1599;2943;1597;Stade-Dithmarschen
 1820;1021;sea;1391;4912;1219;4919;1223;Awa-Settsu
-4131;4193;sea;1387;4999;1357;5005;1351;Oshima-Mutsu
+5668;4193;sea;1387;4999;1357;5005;1351;Aomori-Oshima
 1032;1852;sea;4225;5099;1408;5073;1386;Kurils-Tokachi
 1199;1201;sea;1448;-1;-1;-1;-1;Bagamoyo-Zanzibar
-1247;127;sea;1298;-1;-1;-1;-1;Corsica-Sardinia
+5781;127;sea;1298;-1;-1;-1;-1;Corte-Sardinia
 394;396;sea;4347;3589;1076;3592;1074;Al Hasa-Bahrain
 395;396;sea;4347;3596;1071;3601;1071;Qatar-Bahrain
 4354;4351;sea;4357;4726;791;4732;786;Zamboanga-Buglas
@@ -129,6 +152,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 146;3003;sea;1319;3174;1294;3175;1294;Athens - Euboea
 3003;164;sea;1319;3190;1287;3191;1286;Euboea - Cyclades
 31;4152;lake;4139;3232;1827;3235;1835;Savolax - Kuusamo
+5602;5566;sea;1896;-1;-1;-1;-1;Xuzhou-Yangzhou
 1751;226;sea;1293;-1;-1;-1;-1;Ceuta-Gibraltar
 4353;4352;sea;1397;-1;-1;-1;-1;Leyte-Cebu
 4351;4352;sea;1397;-1;-1;-1;-1;Buglas-Cebu

@@ -1,0 +1,52 @@
+SJK = "countries/SeaSeljukEmpire.txt"
+VIN = "countries/SeaVinland.txt"
+NSE = "countries/SeaNorthSeaEmpire.txt"
+KLU = "countries/SeaKalmarUnion.txt"
+ABA = "countries/AbbasidCaliphate.txt"
+GMV = "countries/SeaGreatMoravia.txt"
+LUS = "countries/Lusitania.txt"
+PRA = "countries/Prussia2.txt"
+OSM = "countries/SeaOttomanEmpire.txt"
+AUE = "countries/SeaAustrianEmpire.txt"
+AHE = "countries/SeaAustroHungarianEmpire.txt"
+HAE = "countries/SeaHungroAustrianEmpire.txt"
+BYS = "countries/SeaBarbaryStates.txt"
+
+SEX = "countries/SeaPayPalStates.txt"
+
+# Middle Africa:
+WAD = "countries/Wadai.txt"
+SHI = "countries/Shilluk.txt"
+BAG = "countries/Bagirmi.txt"
+KWA = "countries/Kwararafa.txt"
+DAJ = "countries/DarDaju.txt"
+TGL = "countries/Tegali.txt"
+KRD = "countries/Kordofan.txt"
+
+# Great Lakes Africa:
+SAI = "countries/Maasai.txt"
+TRK = "countries/Turkana.txt"
+HEH = "countries/Hehe.txt"
+ORO = "countries/Oromo.txt"
+GOG = "countries/Gogo.txt"
+
+# South Africa:
+SOT = "countries/Sotho.txt"
+XHO = "countries/Xhosa.txt"
+TSO = "countries/Tsonga.txt"
+TSW = "countries/Tswana.txt"
+SWZ = "countries/Swazi.txt"
+VNA = "countries/Venda.txt"
+NGU = "countries/Nguni.txt"
+KHE = "countries/Khoe.txt"
+NAM = "countries/Nama.txt"
+HER = "countries/Herero.txt"
+OVA = "countries/Ovambo.txt"
+OVI = "countries/Ovimbundu.txt"
+LOZ = "countries/Lozi.txt"
+MBU = "countries/Mbunda.txt"
+BEM = "countries/Bemba.txt"
+KLG = "countries/Kalanga.txt"
+
+# Added by Chalky
+DRV = "countries/Dravidessa.txt"

@@ -390,7 +390,6 @@ country_event = {
 		}
 	}
 }
-
 # Estate 30% crownland set.
 country_event = {
 	id = sealand_events.4
@@ -450,5 +449,666 @@ country_event = {
 	}
 	option = {
 		name = sealand_events.4.a
+	}
+}
+# Discover Africa for players
+country_event = {
+	id = sealand_events.5
+	title = sealand_events.5.t
+	desc = sealand_events.5.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+   	mean_time_to_happen = {
+        	days = 1
+    	}
+	trigger = {
+		NOT = { has_country_flag = discovered_africa_flag }
+		capital_scope = {
+			continent = africa
+		}
+		ai = no
+	}
+	immediate = {
+		every_province = {
+			limit = {
+				continent = africa
+				NOT = { area = mascarenes_area }
+				NOT = { area = sao_tome_area }
+				NOT = { area = macaronesia_area }
+				NOT = { province_id = 1098 }
+				NOT = { province_id = 1096 }
+			}
+			discover_country = ROOT
+		}
+		every_province = {
+			limit = {
+				continent = africa
+				NOT = { area = mascarenes_area }
+				NOT = { area = sao_tome_area }
+				NOT = { area = macaronesia_area }
+				NOT = { province_id = 1098 }
+				NOT = { province_id = 1096 }
+			}
+			sea_zone = {
+				discover_country = ROOT
+			}
+		}
+		mashriq_region {
+			discover_country = ROOT
+		}
+		arabia_region= {
+			discover_country = ROOT
+		}
+		arabian_sea_region = {
+			discover_country = ROOT
+		}
+		1450 = {
+			discover_country = ROOT
+		}
+		1453 = {
+			discover_country = ROOT
+		}
+		1618 = {
+			discover_country = ROOT
+		}
+		1616 = {
+			discover_country = ROOT
+		}
+		1619 = {
+			discover_country = ROOT
+		}
+		persia_region = {
+			limit = {
+				has_port = yes
+			}
+			discover_country = ROOT
+		}
+		khorasan_region = {
+			limit = {
+				has_port = yes
+			}
+			discover_country = ROOT
+		}
+		west_india_region = {
+			limit = {
+				has_port = yes
+			}
+			discover_country = ROOT
+		}
+		deccan_region = {
+			limit = {
+				has_port = yes
+			}
+			discover_country = ROOT
+		}
+		set_country_flag = discovered_africa_flag
+	}
+	option = {
+		name = sealand_events.5.a
+	}
+}
+
+# Theocracy government:
+namespace = theocracy_election_government
+
+# Georgia Eschatological Theocracy elections:
+country_event = {
+	id = theocracy_election_government.1
+	title = theocracy_election_government.1.t
+	desc = theocracy_election_government.1.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_reform = eschatological_theocracy_georgia_reform
+	}
+	option = {
+		name = theocracy_election_government.1.a
+		define_ruler = {
+		}
+		change_statists_vs_orangists = -0.33
+	}
+	option = {
+		name = theocracy_election_government.1.b
+		define_ruler = {
+		}
+		add_devotion = -5
+	}
+	option = {
+		name = theocracy_election_government.1.c
+		define_ruler = {
+		}
+		change_statists_vs_orangists = 0.33
+	}
+}
+# Caliphate Eschatological Theocracy elections:
+country_event = {
+	id = theocracy_election_government.2
+	title = theocracy_election_government.1.t
+	desc = theocracy_election_government.1.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_reform = eschatological_theocracy_caliphate_reform
+	}
+	immediate = {
+		hidden_effect = {
+			define_exiled_ruler = {
+				exiled_as = caliphate_candidate_a_@ROOT
+				option = 0
+			}
+			define_exiled_ruler = {
+				exiled_as = caliphate_candidate_b_@ROOT
+				option = 1
+			}
+			define_exiled_ruler = {
+				exiled_as = caliphate_candidate_c_@ROOT
+				option = 2
+			}
+		}
+	}
+	after = {
+		clear_exiled_ruler = caliphate_candidate_a_@ROOT
+		clear_exiled_ruler = caliphate_candidate_b_@ROOT
+		clear_exiled_ruler = caliphate_candidate_c_@ROOT
+	}
+	option = {
+		name = theocracy_election_government.2.a
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = caliphate_candidate_a_@ROOT
+		add_devotion = -5
+		add_prestige = 10
+	}
+	option = {
+		name = theocracy_election_government.2.b
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = caliphate_candidate_b_@ROOT
+		add_years_of_income = 0.35
+		add_devotion = -5
+	}
+	option = {
+		name = theocracy_election_government.2.c
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = caliphate_candidate_c_@ROOT
+		add_devotion = 10
+		add_prestige = -5
+	}
+}
+
+# Swazi Government elections:
+namespace = swazi_election_government
+country_event = {
+	id = swazi_election_government.1
+	title = swazi_election_government.1.t
+	desc = swazi_election_government.1.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_reform = swazi_government_reform
+		religion = shamanism
+	}
+	option = { # 1
+		name = swazi_election_government.1.a
+		trigger = {
+			has_unlocked_cult = cwezi_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 46
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_cwezi_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 2
+		name = swazi_election_government.1.b
+		trigger = {
+			has_unlocked_cult = central_african_ancestor_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 46
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_central_african_ancestor_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 3
+		name = swazi_election_government.1.c
+		trigger = {
+			has_unlocked_cult = mwari_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 46
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_mwari_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 4
+		name = swazi_election_government.1.e
+		trigger = {
+			has_unlocked_cult = yemoja_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 49
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_yemoja_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 5
+		name = swazi_election_government.1.f
+		trigger = {
+			has_unlocked_cult = roog_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 47
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_roog_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 6
+		name = swazi_election_government.1.g
+		trigger = {
+			has_unlocked_cult = nyame_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 48
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_nyame_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 7
+		name = swazi_election_government.1.h
+		trigger = {
+			has_unlocked_cult = enkai_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 50
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_enkai_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 8
+		name = swazi_election_government.1.i
+		trigger = {
+			has_unlocked_cult = waaq_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 45
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_waaq_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 9
+		name = swazi_election_government.1.j
+		trigger = {
+			has_unlocked_cult = zanahary_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 55
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_zanahary_cult_modifier
+			duration = -1
+		}
+	}
+	# ROTW Cults:
+	option = { # 10
+		name = swazi_election_government.1.k
+		trigger = {
+			has_unlocked_cult = christianity_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 53
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_christianity_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 11
+		name = swazi_election_government.1.l
+		trigger = {
+			has_unlocked_cult = islam_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 54
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_islam_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 12
+		name = swazi_election_government.1.m
+		trigger = {
+			has_unlocked_cult = buddhism_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 51
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_buddhism_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 13
+		name = swazi_election_government.1.n
+		trigger = {
+			has_unlocked_cult = dharmic_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 52
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_dharmic_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 14
+		name = swazi_election_government.1.o
+		trigger = {
+			has_unlocked_cult = south_central_american_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 47
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_south_central_american_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 15
+		name = swazi_election_government.1.p
+		trigger = {
+			has_unlocked_cult = norse_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 51
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_norse_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 16
+		name = swazi_election_government.1.q
+		trigger = {
+			has_unlocked_cult = jewish_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 49
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_jewish_cult_modifier
+			duration = -1
+		}
+	}
+	option = { # 17
+		name = swazi_election_government.1.r
+		trigger = {
+			has_unlocked_cult = zoroastrian_cult
+		}
+		hidden_effect = {
+			define_ruler = {
+				dynasty = Ndwandwe
+				min_age = 15
+				max_age = 30
+				claim = 90
+				male = yes
+			}
+		}
+		define_consort = {
+			country_of_origin = ROOT
+			dynasty = Ndwandwe
+			age = 50
+			female = yes
+		}
+		add_ruler_modifier = {
+			name = mini_zoroastrian_cult_modifier
+			duration = -1
+		}
+	}
+}
+# Swazi mission event:
+country_event = { # Become an Empire mission
+	id = swazi_election_government.2
+	title = swazi_election_government.2.t
+	desc = swazi_election_government.2.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = swazi_election_government.2.a
+		unlock_cult = yemoja_cult
+		custom_tooltip = zwz_yemoja_cult_tt
+		unlock_cult = roog_cult
+		custom_tooltip = zwz_roog_cult_tt
+		unlock_cult = nyame_cult
+		custom_tooltip = zwz_nyame_cult_tt
+	}
+	option = {
+		name = swazi_election_government.2.b
+		unlock_cult = enkai_cult
+		custom_tooltip = zwz_enkai_cult_tt
+		unlock_cult = waaq_cult
+		custom_tooltip = zwz_waaq_cult_tt
+		unlock_cult = zanahary_cult
+		custom_tooltip = zwz_zanahary_cult_tt
 	}
 }

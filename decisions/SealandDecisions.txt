@@ -1,6 +1,6 @@
 # Turkification 
-country_decisions = { # For Mamluks
-	turkify_mamluks_decision = {
+country_decisions = {
+	turkify_mamluks_decision = { # For Mamluks
 		major = yes
 		potential = {
 			has_country_flag = enact_mam_turkification_decision
@@ -38,10 +38,7 @@ country_decisions = { # For Mamluks
 			factor = 0
 		}
 	}
-}
-# Literally same like the previous one, just there, in case only one is being transferred.
-country_decisions = { # For QQ
-	turkify_qq_decision = {
+	turkify_qq_decision = { # For QQ
 		major = yes
 		potential = {
 			has_country_flag = enact_qq_turkification_decision
@@ -73,6 +70,1663 @@ country_decisions = { # For QQ
 			}
 			change_technology_group = ottoman
 			change_unit_type = ottoman
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+# Great Moravia
+country_decisions = {
+	sea_great_moravian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_great_moravia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GMV }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = czech
+				accepted_culture = slovak
+				accepted_culture = czech
+				primary_culture = slovak
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = silesia_area
+				area = moravia_area
+				area = slovakia_area
+				area = central_poland_area
+				area = malopolska_area
+				area = sandomierz_area
+				province_id = 266 # Prague
+				province_id = 153 # Pest
+				province_id = 61 # Dresden
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 10
+			NOT = { exists = GMV }
+			OR = {
+				tag = BOH
+				tag = HUN
+			}
+			OR = {
+				AND = {
+					primary_culture = czech
+					accepted_culture = slovak
+				}
+				AND = {
+					accepted_culture = czech
+					primary_culture = slovak
+				}
+			}
+			silesia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			moravia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			slovakia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_poland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			malopolska_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sandomierz_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 266 # Prague
+			owns_core_province = 153 # Pest
+			owns_core_province = 61 # Dresden
+		}
+		effect = {
+			4237 = { # Olomouc
+				move_capital_effect = yes
+			}
+			change_tag = GMV
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_government_reform = great_moravian_principality
+			lusatia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			erzgebirge_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			bohemia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			silesia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			malopolska_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			alfold_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			59 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			4744 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			2965 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			133 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			1770 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			259 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			2959 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			2424 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = GMV
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_great_moravia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	sea_greater_moravian_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_greater_moravia_flag }
+			tag = GMV
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			tag = GMV
+			total_development = 1000
+		}
+		effect = {
+			set_country_flag = formed_greater_moravia_flag
+			override_country_name = greater_moravia_name
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	sea_greatest_moravian_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_greatest_moravia_flag }
+			has_country_flag = formed_greater_moravia_flag
+			tag = GMV
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			tag = GMV
+			total_development = 2000
+		}
+		effect = {
+			set_country_flag = formed_greatest_moravia_flag
+			override_country_name = greatest_moravia_name
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+
+country_decisions = { # Serbia Tsardom
+	serbia_unite_jugosland = {
+		major = yes
+		potential = {
+			tag = SER
+			NOT = { has_country_flag = serbia_unite_jugosland_flag }
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 30
+				region = balkan_region
+				is_core = ROOT
+			}
+			tag = SER
+			religion = orthodox
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = serbia_unite_jugosland_flag
+			set_government_rank = 3
+			if = {
+				limit = {
+					government = republic
+					is_revolutionary = no
+				}
+				add_government_reform = veche_tsardom
+			}
+			if = {
+				limit = {
+					is_revolutionary = no
+					government = monarchy
+				}
+				add_government_reform = tsardom
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+
+country_decisions = { # Weaker Prussia
+	form_weaker_prussia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_prussia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				ai = no
+				is_religion_enabled = protestant
+				is_religion_enabled = reformed
+				is_religion_enabled = anglican
+			}
+			capital_scope = {
+				region = north_german_region
+			}
+			culture_group = germanic
+			NOT = { tag = PRA }
+			NOT = { exists = PRA }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { has_reform = celestial_empire } 
+		}
+		provinces_to_highlight = {
+			region = north_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			NOT = { exists = PRA }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = north_german_region
+			}
+			owns_core_province = 50
+			owns_core_province = 1758
+			owns_core_province = 82
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = {
+				religion = protestant
+ 				religion = reformed
+				religion = hussite
+				religion = anglican
+			}
+		}
+		effect = {
+			change_tag = PRA
+			set_country_flag = formed_prussia_flag
+			restore_country_name_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			custom_tooltip = form_weaker_prussia_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						culture_group = germanic
+						capital_scope = {
+							region = north_german_region
+						}
+					}
+					ROOT = { inherit = PREV }
+				}
+			}
+			north_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = PRU_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_austria_hungary_empire = { # Austra Hungary empire
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_austria_hungary_empire_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = HAB
+				tag = AUE
+				tag = HUN
+			}
+			NOT = { exists = AHE }
+			NOT = { exists = HAE }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = austria_proper_area
+				area = inner_austria_area
+				area = tirol_area
+				area = krain_area
+				area = slovakia_area
+				area = transdanubia_area
+				area = alfold_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = bohemia_area
+				area = moravia_area
+				area = erzgebirge_area
+				area = slavonia_area
+				area = croatia_area
+				area = bosnia_area
+				area = east_adriatic_coast_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					OR = {
+						tag = HAB
+						tag = AUE
+					}
+				}
+				tag = AUE
+				NOT = { exists = HUN }
+				NOT = { exists = AHE }
+				adm_tech = 20
+			}
+			if = {
+				limit = {
+					tag = HUN
+				}
+				tag = HUN
+				NOT = { exists = HAB }
+				NOT = { exists = AUE }
+				NOT = { exists = HAE }
+				adm_tech = 15
+			}
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			austria_proper_area = {
+				type = all
+				owned_by = ROOT
+			}
+			inner_austria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tirol_area = {
+				type = all
+				owned_by = ROOT
+			}
+			krain_area = {
+				type = all
+				owned_by = ROOT
+			}
+			slovakia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			transdanubia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			alfold_area = {
+				type = all
+				owned_by = ROOT
+			}
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			moravia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+			}
+			slavonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			croatia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bosnia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = HAB
+						tag = AUE
+					}
+				}
+				change_tag = AHE
+			}
+			if = {
+				limit = {
+					tag = HUN
+				}
+				change_tag = HAE
+			}
+			restore_country_name_effect = yes
+			set_country_flag = formed_austria_hungary_empire_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+
+# Barbary States
+country_decisions = {
+	unite_barbary_states = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = united_barbary_states_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = BYS }
+			NOT = { tag = ADU }
+			NOT = { tag = SPA }
+			NOT = { tag = PAP }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = andalucian
+				culture_group = maghrebi
+			}
+			religion_group = muslim
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = western_morocco_area
+				area = northern_morocco_area
+				area = marrekesh_area
+				area = algiers_area
+				area = barbary_coast_area
+				area = kabylia_area
+				area = tunisia_area
+				area = djerba_area
+				area = tripolitania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			NOT = { exists = BYS }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_tribal = no
+			religion_group = muslim
+			western_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			marrekesh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			algiers_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			barbary_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			djerba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			change_tag = BYS
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					NOT = {
+						government = republic
+					}
+				}
+				change_government = republic
+			}
+			add_government_reform = barbary_states_reform
+			baleares_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_country_flag = united_barbary_states_flag 
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				add_republican_tradition = 50
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+}
+
+# Decision to get Theocracy:
+country_decisions = {
+	eschatological_theocracy_georgia_decision = { # For Georgia
+		major = yes
+		potential = {
+			NOT = { has_country_flag = eschatological_theocracy_georgia }
+			tag = GEO
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = imereti_area
+				area = samtskhe_area
+				area = kartli_kakheti_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			tag = GEO
+			is_at_war = no
+			imereti_area = {
+				type = all
+				owned_by = ROOT
+			}
+			samtskhe_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kartli_kakheti_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = eschatological_theocracy_georgia
+			set_country_flag = eschatological_theocracy_georgia_reform_flag
+			change_government = theocracy
+			add_government_reform = eschatological_theocracy_georgia_reform
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	eschatological_theocracy_caliphate_decision = { # For Caliphate missions.
+		major = yes
+		potential = {
+			NOT = { has_country_flag = eschatological_theocracy_caliphate }
+			has_mission = restore_rashidun_caliphate
+		}
+		allow = {
+			mission_completed = restore_rashidun_caliphate
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = eschatological_theocracy_caliphate
+			set_country_flag = eschatological_theocracy_caliphate_reform_flag
+			change_government = theocracy
+			add_government_reform = eschatological_theocracy_caliphate_reform
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+# Khorosan Zoroastria:
+country_decisions = {
+	khorosan_to_zoroastrian = { # For Caliphate missions.
+		major = yes
+		potential = {
+			NOT = { has_country_flag = khorosan_zoroastrian_flag }
+			tag = KHO
+		}
+		allow = {
+			tag = KHO
+		}
+		effect = {
+			set_country_flag = khorosan_zoroastrian_flag
+			change_religion = zoroastrian
+			add_country_modifier = {
+				name = "khorosan_to_zoroastrian_modifier"
+				duration = 18250
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+# Sealand
+country_decisions = {
+	unite_estonia = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = united_estonia_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = EST }
+			ai = no
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				owns = 35
+				owns = 36
+				owns = 1842
+				owns = 37
+				owns = 1834
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 35
+				province_id = 36
+				province_id = 1842
+				province_id = 37
+				province_id = 1834
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			primary_culture = estonian
+			owns_core_province = 35
+			owns_core_province = 36
+			owns_core_province = 1842
+			owns_core_province = 37
+			owns_core_province = 1834
+			NOT = { num_of_cities = 6 }
+		}
+		effect = {
+			set_country_flag = united_estonia_flag
+			change_tag = EST
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			change_government = republic
+			add_government_reform = peasants_republic
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	unite_finland = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = united_finland_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = FIN }
+			ai = no
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				accepted_culture = finnish
+				accepted_culture = estonian
+				accepted_culture = karelian
+				accepted_culture = sapmi
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+				area = north_karelia
+				province_id = 30
+				province_id = 33
+				province_id = 1776
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = {
+				primary_culture = finnish
+				primary_culture = estonian
+				primary_culture = karelian
+				primary_culture = sapmi
+			}
+			finland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bothnia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_karelia = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 30
+			owns_core_province = 33
+			owns_core_province = 1776
+		}
+		effect = {
+			set_country_flag = united_finland_flag
+			if = {
+				limit = {
+					government = republic
+					is_revolutionary = no
+				}
+				add_government_reform = veche_tsardom
+			}
+			if = {
+				limit = {
+					is_revolutionary = no
+					government = monarchy
+				}
+				add_government_reform = tsardom
+			}
+			change_tag = FIN 
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+
+# Janissaries
+country_decisions = {
+	reform_ottoman_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_ottoman_empire_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = TUR
+			NOT = { exists = OSM }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				province_id = 377
+				province_id = 382
+				province_id = 379
+				province_id = 2327
+				province_id = 362
+				province_id = 358
+				province_id = 361
+				province_id = 4320
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			religion_group = muslim
+			tag = TUR
+			NOT = { exists = RUM }
+			NOT = { exists = MAM }
+			NOT = { exists = BYZ }
+			owns_core_province = 151
+			owns_core_province = 377
+			owns_core_province = 382
+			owns_core_province = 379
+			owns_core_province = 2327
+			owns_core_province = 362
+			owns_core_province = 358
+			owns_core_province = 361
+			owns_core_province = 4320
+		}
+		effect = {
+			change_tag = OSM
+			hidden_effect = {
+				swap_free_idea_group = yes
+			}
+			custom_tooltip = reform_ottoman_empire_tt
+			add_prestige = 25
+			set_country_flag = reformed_ottoman_empire_flag
+			add_country_modifier = {
+				name = reformed_janissary_alexandria_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_wallachia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_wallachia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+		}
+		provinces_to_highlight = {
+			area = wallachia_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_wallachia_flag
+			add_country_modifier = {
+				name = reformed_janissary_wallachia_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_levant = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_levant_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+		}
+		provinces_to_highlight = {
+			region = mashriq_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_levant_flag
+			add_country_modifier = {
+				name = reformed_janissary_levant_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_georgia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_georgia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = shirvan_area
+				area = armenia_area
+				area = imereti_area
+				area = samtskhe_area
+				area = kartli_kakheti_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			armenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			imereti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			samtskhe_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kartli_kakheti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_georgia_flag
+			add_country_modifier = {
+				name = reformed_janissary_georgia_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_persia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_persia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+			}
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_persia_flag
+			add_country_modifier = {
+				name = reformed_janissary_persia_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_arabia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_arabia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+		}
+		provinces_to_highlight = {
+			region = arabia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			arabia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_arabia_flag
+			add_country_modifier = {
+				name = reformed_janissary_arabia_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	reformed_janissary_balkan = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = reformed_janissary_balkan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bosnia_area
+				area = east_adriatic_coast_area
+				area = serbia_area
+				area = rascia_area
+				area = bulgaria_area
+				area = macedonia_area
+				area = northern_greece_area
+				area = morea_area
+				area = thrace_area
+				area = albania_area
+				area = silistria_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			if = {
+				limit = {
+					NOT = { tag = SJK }
+				}
+				religion_group = muslim
+			}
+			OR = {
+				tag = TUR
+				tag = OSM
+				tag = RUM
+				tag = SJK
+			}
+			bosnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rascia_area {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silistria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = reformed_janissary_balkan_flag
+			add_country_modifier = {
+				name = reformed_janissary_balkan_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	sjk_reformed_janissary_alexandria = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = sjk_reformed_janissary_alexandria_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = SJK
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				province_id = 377
+				province_id = 382
+				province_id = 379
+				province_id = 2327
+				province_id = 362
+				province_id = 358
+				province_id = 361
+				province_id = 4320
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no #Cannot even be a tributary
+			is_nomad = no
+			tag = SJK
+			owns_core_province = 151
+			owns_core_province = 377
+			owns_core_province = 382
+			owns_core_province = 379
+			owns_core_province = 2327
+			owns_core_province = 362
+			owns_core_province = 358
+			owns_core_province = 361
+			owns_core_province = 4320
+		}
+		effect = {
+			set_country_flag = sjk_reformed_janissary_alexandria_flag
+			add_country_modifier = {
+				name = sjk_reformed_janissary_alexandria_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+}
+
+# AFRICA:
+# Swazi:
+country_decisions = {
+	swz_norse_cult_decision = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = swz_norse_cult_decision_flag }
+			tag = SWZ
+			religion = shamanism
+			any_country = {
+				religion = norse_pagan_reformed
+			}
+		}
+		allow = {
+			tag = SWZ
+			religion = shamanism
+			custom_trigger_tooltip = {
+				tooltip = swz_norse_cult_decision_tt
+				any_country = {
+					religion = norse_pagan_reformed
+					alliance_with = ROOT
+				}
+			}
+		}
+		effect = {
+			set_country_flag = swz_norse_cult_decision_flag
+			unlock_cult = norse_cult
+			custom_tooltip = swz_norse_cult_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	swz_zoroastrian_cult_decision = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = swz_zoroastrian_cult_decision_flag }
+			tag = SWZ
+			religion = shamanism
+			any_country = {
+				religion = zoroastrian
+			}
+		}
+		allow = {
+			tag = SWZ
+			religion = shamanism
+			custom_trigger_tooltip = {
+				tooltip = swz_zoroastrian_cult_decision_tt
+				any_country = {
+					religion = zoroastrian
+					alliance_with = ROOT
+				}
+			}
+		}
+		effect = {
+			set_country_flag = swz_zoroastrian_cult_decision_flag
+			unlock_cult = zoroastrian_cult
+			custom_tooltip = swz_zoroastrian_cult_tt
 		}
 		ai_will_do = {
 			factor = 0

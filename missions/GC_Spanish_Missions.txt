@@ -1326,6 +1326,7 @@ gc_spain_4 = {
 					valid_for_personal_unions_trigger = yes
 					POR = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -1356,6 +1357,7 @@ gc_spain_4 = {
 					valid_for_personal_unions_trigger = yes
 					NAP = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -1641,6 +1643,7 @@ gc_spain_4_b = {
 					valid_for_personal_unions_trigger = yes
 					GBR = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 						NOT = { religion = ROOT }
 					}
 				}
@@ -1656,6 +1659,7 @@ gc_spain_4_b = {
 					valid_for_personal_unions_trigger = yes
 					ENG = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 						NOT = { religion = ROOT }
 					}
 				}
@@ -2131,6 +2135,7 @@ gc_spain_5_b = {
 					valid_for_personal_unions_trigger = yes
 					HAB = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {

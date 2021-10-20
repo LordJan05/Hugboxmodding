@@ -3,7 +3,10 @@ sealand_qq_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = QAR
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -238,7 +241,10 @@ sealand_qq_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = QAR
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -604,7 +610,10 @@ sealand_qq_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = QAR
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -644,6 +653,13 @@ sealand_qq_missions_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			armenia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			north_kurdistan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -681,6 +697,71 @@ sealand_qq_missions_3 = {
 			}
 		}
 	}
+}
+
+sea_sjk_missions_6 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = SJK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	sea_sjk_golden_age = {
+		icon = mission_non-western_soldiers
+		required_missions = { the_great_expansion }
+		position = 2
+
+		trigger = {
+			tag = SJK
+			has_country_modifier = sjk_reformed_janissary_alexandria_modifier
+			has_country_modifier = reformed_janissary_wallachia_modifier
+			has_country_modifier = reformed_janissary_levant_modifier
+			has_country_modifier = reformed_janissary_georgia_modifier
+			has_country_modifier = reformed_janissary_persia_modifier
+			has_country_modifier = reformed_janissary_arabia_modifier
+			has_country_modifier = reformed_janissary_balkan_modifier
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_disaster = janissary_decadence }
+				}
+				set_country_flag = had_janissary_decadence
+			}
+			hidden_effect = {
+				remove_country_modifier = sjk_reformed_janissary_alexandria_modifier
+				remove_country_modifier = reformed_janissary_wallachia_modifier
+				remove_country_modifier = reformed_janissary_levant_modifier
+				remove_country_modifier = reformed_janissary_georgia_modifier
+				remove_country_modifier = reformed_janissary_persia_modifier
+				remove_country_modifier = reformed_janissary_arabia_modifier
+				remove_country_modifier = reformed_janissary_balkan_modifier
+			}
+			custom_tooltip = sea_sjk_golden_age_tt
+			add_country_modifier = {
+				name = reformed_janissary_golden_age_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+sealand_qq_missions_3_5 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
 	restore_seljuk_empire = {
 		icon = mission_restore_caliphate_of_cordoba
 		required_missions = { secure_levant reach_to_gulf_of_persia }
@@ -810,6 +891,12 @@ sealand_qq_missions_3 = {
 			add_prestige = 100
 			change_primary_culture = persian
 			add_accepted_culture = turkish
+			set_country_flag = reformed_janissary_persia_flag
+			add_country_modifier = {
+				name = reformed_janissary_persia_modifier
+				duration = -1
+			}
+			swap_non_generic_missions = yes
 			caucasia_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -826,7 +913,10 @@ sealand_qq_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = QAR
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1117,7 +1207,10 @@ sealand_qq_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = QAR
+		OR = {
+			tag = QAR
+			tag = SJK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

@@ -1,0 +1,21 @@
+# Swazi + Nguni = Zulu
+vassal = {
+	first = SWZ
+	second = NGU
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+# Castille + Aragon = PU mission over Portugal.
+union = {
+	first = CAS
+	second = ARA
+	start_date = 1444.10.10
+	end_date = 1555.11.11
+}
+# Anti-France shield
+vassal = {
+	first = SAV
+	second = SZO
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}

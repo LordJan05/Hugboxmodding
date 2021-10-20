@@ -3,7 +3,10 @@ sea_mam_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -176,7 +179,7 @@ sea_mam_missions_1 = {
 				area = north_saharan_area
 				area = ouled_nail_area
 				area = kabylia_area
-				province_id = 1302
+				province_id = 341
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -192,7 +195,7 @@ sea_mam_missions_1 = {
 				}
 				ai = no
 			}
-			1302 = {
+			341 = {
 				is_strongest_trade_power = ROOT
 			}
 			north_saharan_area = {
@@ -235,7 +238,10 @@ sea_mam_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -544,7 +550,10 @@ sea_mam_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -759,6 +768,7 @@ sea_mam_missions_3 = {
 				}
 				ai = no
 			}
+			NOT = { tag = RUM }
 			egypt_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -828,7 +838,10 @@ sea_mam_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1028,7 +1041,10 @@ sea_mam_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1321,6 +1337,57 @@ sea_mam_missions_5 = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+		}
+	}
+}
+	
+sea_mam_missions_6 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = RUM
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	sea_rum_golden_age = {
+		icon = mission_non-western_soldiers
+		required_missions = { drive_out_ottomans }
+		position = 6
+
+		trigger = {
+			tag = RUM
+			religion_group = muslim
+			has_country_modifier = improve_ottoman_janissary_modifier
+			has_country_modifier = reformed_janissary_wallachia_modifier
+			has_country_modifier = reformed_janissary_levant_modifier
+			has_country_modifier = reformed_janissary_georgia_modifier
+			has_country_modifier = reformed_janissary_persia_modifier
+			has_country_modifier = reformed_janissary_arabia_modifier
+			has_country_modifier = reformed_janissary_balkan_modifier
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_disaster = janissary_decadence }
+				}
+				set_country_flag = had_janissary_decadence
+			}
+			hidden_effect = {
+				remove_country_modifier = improve_ottoman_janissary_modifier
+				remove_country_modifier = reformed_janissary_wallachia_modifier
+				remove_country_modifier = reformed_janissary_levant_modifier
+				remove_country_modifier = reformed_janissary_georgia_modifier
+				remove_country_modifier = reformed_janissary_persia_modifier
+				remove_country_modifier = reformed_janissary_arabia_modifier
+				remove_country_modifier = reformed_janissary_balkan_modifier
+			}
+			custom_tooltip = sea_rum_golden_age_tt
+			add_country_modifier = {
+				name = reformed_janissary_golden_age_modifier
+				duration = -1
 			}
 		}
 	}

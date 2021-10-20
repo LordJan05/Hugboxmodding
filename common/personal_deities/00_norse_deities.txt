@@ -10,7 +10,11 @@ odin =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 7
 	
@@ -34,7 +38,11 @@ freya =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 8
 	
@@ -58,7 +66,11 @@ tor =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 9
 	
@@ -94,7 +106,11 @@ tyr =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 10
 	
@@ -118,7 +134,11 @@ njord =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 11
 	
@@ -148,7 +168,11 @@ snotra =
 	
 	allow = {
 		religion = norse_pagan_reformed
-		tag = VIN
+		OR = {
+			tag = VIN
+			tag = NSE
+			was_tag = DAN
+		}
 	}
 	sprite = 12
 	

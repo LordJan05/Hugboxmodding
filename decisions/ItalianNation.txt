@@ -212,12 +212,23 @@ country_decisions = {
 		}
 		effect = {
 			country_event  = { id = catholic_flavor.2 }
-			every_province = {
+			set_country_flag = papal_kingdom_flag
+			custom_tooltip = estate_church_service_to_god_tt
+			swap_free_idea_group = yes
+			italy_region = {
 				limit = {
-					region = italy_region
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						NOT = { religion = catholic }
+					}
+					change_religion = catholic
+				}
+				add_cardinal = yes
 			}
 			override_country_name = KINGDOM_OF_GOD
 			set_country_flag = is_kingdom_of_god_flag

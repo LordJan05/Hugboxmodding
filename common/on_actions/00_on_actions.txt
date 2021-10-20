@@ -43,6 +43,7 @@ on_startup = {
 		flavor_brapru.15
 		sealand_events.1
 		sealand_events.4
+		flavor_dlh.5
 	}
 	if = {
 		limit = {
@@ -65,18 +66,18 @@ on_startup = {
 		set_country_flag = new_flavour_bav_13_has_been_triggered
 		country_event = { id = new_flavour_bav.13 days = 90 } #better not to allow almost instant DOWs
 	}
-	if = {
-		limit = {
-			tag = FRA
-			started_in = 1789.7.14
-			NOT = { is_year = 1790 }
-			NOT = { has_disaster = french_revolution }
-		}
-		add_disaster_progress = {
-			value = 100
-			disaster = french_revolution
-		}
-	}
+	#if = {# MOD removed
+	#	limit = {
+	#		tag = FRA
+	#		started_in = 1789.7.14
+	#		NOT = { is_year = 1790 }
+	#		NOT = { has_disaster = french_revolution }
+	#	}
+	#	add_disaster_progress = {
+	#		value = 100
+	#		disaster = french_revolution
+	#	}
+	#}
 	if = {
 		limit = {
 			exists = SUK
@@ -587,24 +588,24 @@ on_battle_won_province = {
 		}
 		owner = { country_event = { id = war_of_the_roses.200 days = 2 } }
 	}
-	if = {
-		limit = {
-			from = {
-				tag = REB
-				is_rebel_type = revolutionary_rebels
-			}
-			owner = {
-				any_owned_province = {
-					region = root
-					has_revolution_in_province = yes
-				}
-				NOT = { has_disaster = french_revolution }
-				NOT = { has_disaster = revolution }
-				NOT = { has_spawned_rebels = revolutionary_rebels }
-			}
-		}
-		owner = { country_event = { id = center_of_revolution.1600 } }
-	}
+	#if = { # MOD Removed
+	#	limit = {
+	#		from = {
+	#			tag = REB
+	#			is_rebel_type = revolutionary_rebels
+	#		}
+	#		owner = {
+	#			any_owned_province = {
+	#				region = root
+	#				has_revolution_in_province = yes
+	#			}
+	#			NOT = { has_disaster = french_revolution }
+	#			NOT = { has_disaster = revolution }
+	#			NOT = { has_spawned_rebels = revolutionary_rebels }
+	#		}
+	#	}
+	#	owner = { country_event = { id = center_of_revolution.1600 } }
+	#}
 	random_events = {
 		1000 = 0
 		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
@@ -781,24 +782,24 @@ on_siege_won_province = {
 	events = {
 		synthetic_dawn.4
 	}
-	if = {
-		limit = {
-			from = {
-				tag = REB
-				is_rebel_type = revolutionary_rebels
-			}
-			owner = {
-				any_owned_province = {
-					region = root
-					has_revolution_in_province = yes
-				}
-				NOT = { has_disaster = french_revolution }
-				NOT = { has_disaster = revolution }
-				NOT = { has_spawned_rebels = revolutionary_rebels }
-			}
-		}
-		owner = { country_event = { id = center_of_revolution.1600 } }
-	}
+	#if = { # MOD Removed
+	#	limit = {
+	#		from = {
+	#			tag = REB
+	#			is_rebel_type = revolutionary_rebels
+	#		}
+	#		owner = {
+	#			any_owned_province = {
+	#				region = root
+	#				has_revolution_in_province = yes
+	#			}
+	#			NOT = { has_disaster = french_revolution }
+	#			NOT = { has_disaster = revolution }
+	#			NOT = { has_spawned_rebels = revolutionary_rebels }
+	#		}
+	#	}
+	#	owner = { country_event = { id = center_of_revolution.1600 } }
+	#}
 }
 
 # province
@@ -868,7 +869,7 @@ on_new_monarch = {
 	thu_remain_von_wettin_effect = yes
 	ladislaus_postumus_union_effect = yes
 	events = {
-		tribal_succession.1		# Harsh anti-tribals.
+		#tribal_succession.1		# Harsh anti-tribals.
 		9492 					# Remove some event modifiers
 		flavor_boh.8			# Winter King in Prague
 		flavor_kol.1			# Bavarian Archbishop
@@ -1055,7 +1056,10 @@ on_death_election = {
 	}
 	if = {
 		limit = {
-			has_reform = pirate_republic_reform
+			OR = {
+				has_reform = pirate_republic_reform
+				has_reform = barbary_states_reform
+			}
 		}
 		set_country_flag = pirate_death_election
 		country_event = { id = pirates.1 }
@@ -1066,6 +1070,9 @@ on_death_election = {
 		elections.800	# Lottery election
 		flavor_tus.16 #Savonarola Leaves This World
 		703	# Colonial Election event
+		theocracy_election_government.1 # Eschatological Theocracy Georgia
+		theocracy_election_government.2 # Eschatological Theocracy Caliphate
+		swazi_election_government.1 # Swazi Government
 	}
 }
 

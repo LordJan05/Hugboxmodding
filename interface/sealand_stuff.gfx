@@ -1,4 +1,27 @@
 spriteTypes = {
+###################################################################
+######                     Embrace Monke                     ######
+
+# Yes, I, Sealand, made it.
+
+	spriteType = {
+		name = "GFX_icon_institution_embracemonke"
+		texturefile = "gfx//interface//institutions//embracemonke.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}	
+
+#########
+
+	spriteType = {
+		name = "GFX_institution_tab_embracemonke"
+		texturefile = "gfx/interface/institutions//institution_tab_embracemonke.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	
+######                     Embrace Monke                     ######
+###################################################################
 ##############
 #### MISSIONS
 
@@ -28,5 +51,16 @@ spriteTypes = {
 	}
 
 ##############
+#### GOVERNMENT REFORMS
+
+	spriteType = {
+		name = "government_reform_swazi_reform_into"
+		texturefile = "gfx//interface//government_reform_icons//swazi_reform_into.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_barbary_states"
+		texturefile = "gfx//interface//government_reform_icons//barbary_states.dds"
+	}
 
 }

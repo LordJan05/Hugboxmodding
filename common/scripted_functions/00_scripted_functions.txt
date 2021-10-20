@@ -172,41 +172,21 @@ can_colonize_province = {
 		}
 	}
 	condition = {
-		tooltip = "MJL_CANT_COLONIZE_WITH_AFRICA_GOV"
+		tooltip = "colonize_congo_basin_no_colonizing_outside"
 		potential = {
 			FROM = {
-				has_reform = african_colonists_reform
-				NOT = {
-					OR = {
-						has_idea = colonial_ventures
-						has_idea = additional_colonists
-					}
-				}
+				has_country_modifier = colonize_congo_basin
+				NOT = { has_idea = colonial_ventures }
+				NOT = { has_idea = additional_colonists }
+				NOT = { has_idea = swz_origin_of_first_human_1 }
 			}
 		}
 		allow = {
-			AND = {
-				continent = africa
-				is_island = no
+			OR = {
+				trade_company_region = trade_company_ubangian_charter
+				region = middle_africa_region
+				area = gulf_of_guinea_area
 			}
-		}
-	}
-	condition = {
-		tooltip = "MJL_AI_CANT_COLONIZE_WITH_AFRICA_GOV"
-		potential = {
-			FROM = {
-				ai = yes
-				has_reform = african_colonists_reform
-				NOT = {
-					OR = {
-						has_idea_group = expansion_ideas
-						has_idea_group = exploration_ideas
-					}
-				}
-			}
-		}
-		allow = {
-			always = no
 		}
 	}
 }

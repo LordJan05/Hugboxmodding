@@ -738,6 +738,7 @@ country_event = {
 
 		if = {
 			limit = {
+				TUR = { exists = yes }
 				NOT = {
 					has_casus_belli = {
 						type = cb_crusade
@@ -748,6 +749,23 @@ country_event = {
 			add_casus_belli = {
 				type = cb_crusade_pheasants
 				target = TUR
+				months = 60
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+				NOT = {
+					has_casus_belli = {
+						type = cb_crusade
+						target = OSM
+					}
+				}
+			}
+			add_casus_belli = {
+				type = cb_crusade_pheasants
+				target = OSM
 				months = 60
 			}
 		}
@@ -768,6 +786,7 @@ country_event = {
 		
 		if = {
 			limit = {
+				TUR = { exists = yes }
 				NOT = {
 					has_casus_belli = {
 						type = cb_crusade
@@ -778,6 +797,23 @@ country_event = {
 			add_casus_belli = {
 				type = cb_crusade_pheasants
 				target = TUR
+				months = 60
+			}
+		}
+		else_if = {
+			limit = {
+				TUR = { exists = no }
+				OSM = { exists = yes }
+				NOT = {
+					has_casus_belli = {
+						type = cb_crusade
+						target = OSM
+					}
+				}
+			}
+			add_casus_belli = {
+				type = cb_crusade_pheasants
+				target = OSM
 				months = 60
 			}
 		}

@@ -124,6 +124,7 @@ colonial_canada = {
 		2589 2590 2591 2592 2593 2594 2595 2596 2597 2670 2671
 		4890 4891 4892 4893 4894 4895 4896 4897 4919 4920
 		2004 2017 2018 2599 2600 2601 2602 2603
+		1104 1105
 	}
 	
 	# Specific
@@ -936,6 +937,7 @@ colonial_peru = {
 		815 816 817 818 819 820 821 2820 #quito from colombia
 		2816 822 4605 2817 2818 4604 823 #new provs, colombian amazonas, popayan and 1 prov from cordillera occidental
 		2840 793 796 #new provs. Part of North Chile
+		2002
 	}
 
 #	# Specific
@@ -1011,6 +1013,7 @@ colonial_la_plata = {
 		775 776 799 2882 2883 #Paraguay
 		2857 2879 2884 2887 #Rio Grande
 		#removed provs: 2840 793 796 - peru
+		1095 2025
 	}
 	
 	# Specific
@@ -1177,6 +1180,7 @@ colonial_australia = {
 		4846 4847 4848 4849 4850 4851 4852 4853 4854 4855 4856 4857 4858
 		4859 4860 4861 4862 4863 4864 4865 4866 4867 4868 4869 4939
 		#1236 1238 1239 1986 1242 1989 1243 1990 1992 #from micronesia
+		7023 7024 7025 # Hunter
 	}
 	
 	# Specific

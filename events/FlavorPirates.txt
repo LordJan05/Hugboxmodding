@@ -18,6 +18,7 @@ country_event = {
 		NOT = { exists = NSS }
 		has_global_flag = golden_age_of_piracy
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		OR = {
 			AND = {
 				owns_core_province = 482
@@ -173,6 +174,7 @@ country_event = {
 			continent = africa
 		}
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		kongo_region = {
 			owner = {
 				capital_scope = {
@@ -339,6 +341,7 @@ country_event = {
 		has_dlc = "Golden Century"
 		not = { exists = SLE }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		218 = {
 			owner = {
 				culture_group = iberian
@@ -485,6 +488,7 @@ country_event = {
 		is_year = 1515
 		NOT = { is_year = 1542 }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		NOT = { exists = TET }
 		NOT = { exists = GRA }
 		NOT = { exists = ADU }
@@ -625,6 +629,7 @@ country_event = {
 		NOT = { exists = PRY }
 		has_global_flag = golden_age_of_piracy
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		OR = {
 			AND = {
 				owns_core_province = 487
@@ -798,6 +803,7 @@ country_event = {
 		has_dlc = "Golden Century"
 		NOT = { exists = TOR }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 		489 = {
 			OR = {
 				religion = protestant
@@ -966,6 +972,7 @@ country_event = {
 		NOT = { is_year = 1446 }
 		has_dlc = "Golden Century"
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	mean_time_to_happen = {
@@ -1026,6 +1033,7 @@ country_event = {
 		is_year = 1563
 		NOT = { is_year = 1590 }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	mean_time_to_happen = {
@@ -1130,6 +1138,7 @@ country_event = {
 			}
 		}
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	mean_time_to_happen = {
@@ -1181,6 +1190,7 @@ country_event = {
 			is_subject = no
 		}
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	mean_time_to_happen = {
@@ -1235,6 +1245,7 @@ country_event = {
 		has_dlc = "Golden Century"
 		num_ships_privateering = 3
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	mean_time_to_happen = {

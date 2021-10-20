@@ -1,8 +1,8 @@
 #1191 - Tete
 
-owner = RZW
-controller = RZW
-add_core = RZW
+owner = LDU
+controller = LDU
+add_core = LDU
 add_core = ZIM
 culture = shona
 religion = shamanism

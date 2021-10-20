@@ -8,11 +8,38 @@ sealand_swedish_missions_1 = {
 	}
 	has_country_shield = yes
 
+	garpenber_gold_production = {
+		icon = mission_zambezi_gold
+		required_missions = { }
+		position = 1
+
+		provinces_to_highlight = {
+			province_id = 4
+			NOT = {
+				base_production = 12
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			4 = { base_production = 12 }
+		}
+		effect = {
+			4 = { change_trade_goods = gold }
+		}
+	}
+
 	every_swede_must_serve = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { swe_win_independence }
 		position = 2
-
 		trigger = {
 			if = {
 				limit = {
@@ -487,25 +514,37 @@ sealand_swedish_missions_3 = {
 				add_claim = ROOT
 			}
 			40 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			41 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			43 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 		}
 	}
@@ -671,32 +710,48 @@ sealand_swedish_missions_4 = {
 		}
 		effect = {
 			1777 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			1776 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			4124 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 			32 = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 		}
 	}
@@ -704,13 +759,6 @@ sealand_swedish_missions_4 = {
 		icon = mission_alliances
 		required_missions = { focus_on_offensive_doctrine }
 		position = 2
-
-		provinces_to_highlight = {
-			provinice_id = 8
-			NOT = {
-				owned_by = ROOT
-			}
-		}
 
 		trigger = {
 			if = {
@@ -729,10 +777,7 @@ sealand_swedish_missions_4 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "livgardet_modifier"
-				duration = -1
-			}
+			custom_tooltip = establish_livgardet_tooltip
 		}
 	}
 
@@ -1011,7 +1056,7 @@ sealand_swedish_missions_5 = {
 		position = 3
 
 		provinces_to_highlight = {
-			provinice_id = 295
+			province_id = 295
 			NOT = {
 				owned_by = ROOT
 			}

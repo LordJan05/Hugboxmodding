@@ -6,6 +6,7 @@ indonesians_3 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		is_colonial_nation = no
 	}
 	has_country_shield = yes
 	
@@ -148,6 +149,7 @@ indonesians_4 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		is_colonial_nation = no
 	}
 	has_country_shield = yes
 	
@@ -722,6 +724,7 @@ indonesians_5 = {
 	potential = {
 		technology_group = chinese
 		culture_group = malay
+		is_colonial_nation = no
 	}
 	has_country_shield = yes
 	

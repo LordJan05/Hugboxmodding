@@ -46,6 +46,10 @@ country_event = {
 				republican_tradition = 55
 			}
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 
 	after = {
@@ -334,6 +338,10 @@ country_event = {
 			}
 			republican_tradition = 50
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	option = {
@@ -558,6 +566,10 @@ country_event = {
 				republican_tradition = 40
 			}
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 
 	option = {
@@ -849,6 +861,10 @@ country_event = {
 				republican_tradition = 40
 			}
 		}	
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	option = {
@@ -1153,6 +1169,10 @@ country_event = {
 			is_lesser_in_union = no
 			is_statists_in_power = yes
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	option = {
@@ -1293,6 +1313,10 @@ country_event = {
 			is_lesser_in_union = no
 			is_statists_in_power = yes
 		}
+		NOT = { has_reform = eschatological_theocracy_georgia_reform }
+		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = barbary_states_reform }
 	}
 	
 	option = {

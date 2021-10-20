@@ -16,8 +16,13 @@ mass_load_cannons = {
                 OR = {
                     tag = CAS
                     tag = SPA
+		    tag = LUS
                 }
             }
+			NOT = {
+				has_country_modifier = new_world_player_nerf
+				has_country_modifier = new_world_player_nerf_600
+			}
             normal_or_historical_nations = no
         }
     }
@@ -40,6 +45,7 @@ trade_route_map = {
                 OR = {
                     tag = POR
                     tag = BRZ
+		    tag = LUS
                 }
             }
             normal_or_historical_nations = no
@@ -72,9 +78,12 @@ command_aftercastle = {
                 OR = {
                     tag = HOL
                     tag = NED
-                    is_colonial_nation = yes
                 }
             }
+			NOT = {
+				has_country_modifier = new_world_player_nerf
+				has_country_modifier = new_world_player_nerf_600
+			}
             normal_or_historical_nations = no
         }
     }
@@ -91,6 +100,12 @@ command_aftercastle = {
 }
 
 improved_crows_nest = {
+	trigger = {
+		NOT = {
+			has_country_modifier = new_world_player_nerf
+			has_country_modifier = new_world_player_nerf_600
+		}
+	}
 	modifier = {
         flagship_naval_engagement_modifier = 3
         naval_maintenance_flagship_modifier = 0.5
@@ -104,6 +119,12 @@ improved_crows_nest = {
 }
 
 mortars = {
+	trigger = {
+		NOT = {
+			has_country_modifier = new_world_player_nerf
+			has_country_modifier = new_world_player_nerf_600
+		}
+	}
 	modifier = {
         blockade_impact_on_siege_in_fleet_modifier = 1
         naval_maintenance_flagship_modifier = 1
@@ -138,6 +159,12 @@ standardized_signal_book = {
 }
 
 hull_sheating = {
+	trigger = {
+		NOT = {
+			has_country_modifier = new_world_player_nerf
+			has_country_modifier = new_world_player_nerf_600
+		}
+	}
 	modifier = {
         flagship_durability = 0.5
         naval_maintenance_flagship_modifier = 0.5
@@ -156,6 +183,7 @@ portuguese_navigators = {
 		OR = {
 			tag = POR
 			tag = BRZ
+		    	tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -180,6 +208,7 @@ portuguese_bombardier = {
 		OR = {
 			tag = POR
 			tag = BRZ
+		    	tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -204,6 +233,7 @@ portuguese_trade_route_map = {
 		OR = {
 			tag = POR
 			tag = BRZ
+		    	tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -228,6 +258,7 @@ spanish_grand_armada = {
         OR = {
             tag = SPA
             tag = CAS
+	    tag = LUS
         }
         normal_or_historical_nations = yes
     }
@@ -245,6 +276,7 @@ spanish_grand_armada = {
             OR = {
                 tag = SPA
                 tag = CAS
+	   	tag = LUS
             }
         }
     }
@@ -255,6 +287,7 @@ spanish_treasure_fleet = {
         OR = {
             tag = SPA
             tag = CAS
+	    tag = LUS
         }
         normal_or_historical_nations = yes
     }
@@ -272,6 +305,7 @@ spanish_treasure_fleet = {
             OR = {
                 tag = SPA
                 tag = CAS
+	   	tag = LUS
             }
         }
     }
@@ -282,6 +316,7 @@ spanish_mass_load_cannons = {
         OR = {
             tag = SPA
             tag = CAS
+	    tag = LUS
         }
         normal_or_historical_nations = yes
     }
@@ -299,6 +334,7 @@ spanish_mass_load_cannons = {
             OR = {
                 tag = SPA
                 tag = CAS
+	    	tag = LUS
             }
         }
     }
@@ -336,6 +372,7 @@ portuguese_corps_of_fusiliers = {
 		OR = {
 			tag = POR
 			tag = BRZ
+	   		tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -366,6 +403,7 @@ integrated_marines = {
                 OR = {
                     tag = POR
                     tag = BRZ
+	    	    tag = LUS
                 }
             }
             normal_or_historical_nations = no

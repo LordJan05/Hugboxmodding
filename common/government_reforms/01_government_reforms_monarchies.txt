@@ -425,7 +425,7 @@ iqta = {
 	}
 
 	legacy_equivalent = iqta_legacy
-	queen = no
+	queen = yes
 	modifiers = {
 		vassal_income = 0.33
 		global_tax_modifier = 0.05
@@ -476,6 +476,10 @@ ottoman_government = {
 		OR = {
 			AND = {
 				tag = TUR
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = OSM
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {
@@ -630,19 +634,36 @@ tsardom = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		religion = orthodox
 		OR = {
 			AND = {
-				tag = RUS
-				NOT = { map_setup = map_setup_random }
+				religion = orthodox
+				OR = {
+					AND = {
+						tag = RUS
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = UKR
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = RMN
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						tag = SER
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						is_playing_custom_nation = yes
+						have_had_reform = veche_tsardom
+					}
+				}
 			}
 			AND = {
-				tag = UKR
+				religion_group = christian
+				tag = FIN
 				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = tsardom
 			}
 		}
 	}
@@ -1358,7 +1379,7 @@ poligar_reform = {
 		}
 	}
 	modifiers = {
-		infantry_power = 0.1
+		infantry_power = 0.05
 		development_cost = -0.05
 	}
 	ai = {
@@ -1784,7 +1805,8 @@ royal_decree_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		max_absolutism = 5
+		max_absolutism = 10
+		global_tax_modifier = 0.05
 	}
 	ai = {
 		factor = 1
@@ -1795,7 +1817,8 @@ aristocratic_court_reform = {
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		army_tradition_decay = -0.003
+		army_tradition_decay = -0.005
+		mil_advisor_cost = -0.05
 	}
 	ai = {
 		factor = 1
@@ -1807,6 +1830,7 @@ states_general_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = { has_reform = great_moravian_principality }
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
@@ -1822,7 +1846,7 @@ states_general_reform = {
 	}
 
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		kill_ruler = yes
 	}
 
 	conditional = {
@@ -1974,7 +1998,7 @@ political_absolutism_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		max_absolutism = 5
+		max_absolutism = 10
 		yearly_absolutism = 0.5
 	}
 	ai = {

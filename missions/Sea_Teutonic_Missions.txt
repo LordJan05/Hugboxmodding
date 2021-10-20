@@ -331,6 +331,7 @@ sealand_teutonic_missions_1 = {
 		}
 		effect = {
 			add_stability = 2
+			1854 = { change_province_name = "Acre" }
 			if = {
 				limit = {
 					owns = 1854

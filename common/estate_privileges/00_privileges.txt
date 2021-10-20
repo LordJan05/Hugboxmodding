@@ -2460,7 +2460,7 @@ estate_church_papal_emissary = {
 		add_papal_influence = -5
 	}
 	penalties = {
-		curia_powers_cost = 0.05
+		#curia_powers_cost = 0.05
 	}
 	benefits = {
 		papal_influence = 1
@@ -4113,7 +4113,7 @@ estate_maratha_special_privilege = {
 		has_reform = permanent_marathas_council_reform
 	}
 	modifier_by_land_ownership = {
-		discipline = 0.1
+		discipline = 0.075
 		global_tax_modifier = -0.15
 	}
 	penalties = {
@@ -8423,7 +8423,7 @@ estate_burghers_tropical_nation = {
 	}
 	can_select = {
 		capital_scope = {
-			has_climate = tropical
+			has_terrain = jungle
 		}
 	}
 	on_granted = {
@@ -8431,7 +8431,7 @@ estate_burghers_tropical_nation = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					has_climate = tropical
+					has_terrain = jungle
 				}
 				add_province_modifier = {
 					name = estate_burghers_tropical_mod

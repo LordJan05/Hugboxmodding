@@ -31,23 +31,20 @@ sealand_norway_missions_5 = {
 			num_of_admirals = 1
 		}
 		effect = {
-			add_country_modifier = {
-				name = "do_a_little_raiding_modifier"
-				duration = -1
-			}
+			custom_tooltip = focus_on_north_sea_tooltip
 			kingdom_of_the_isles_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			highlands_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -77,7 +74,7 @@ sealand_norway_missions_5 = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -291,35 +288,51 @@ sealand_norway_missions_4 = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			373 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			4118 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			375 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			242 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -387,28 +400,28 @@ sealand_norway_missions_4 = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			connacht_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			leinster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -475,10 +488,7 @@ sealand_norway_missions_4 = {
 			army_tradition = 60
 		}
 		effect = {
-			add_country_modifier = {
-				name = "norwegian_army_modifier"
-				duration = -1
-			}
+			custom_tooltip = disciplined_peasants_tooltip
 		}
 	}
 }
@@ -1077,7 +1087,7 @@ sealand_norway_missions_2 = {
 				ai = no
 			}
 			owns_or_non_sovereign_subject_of = 981
-			total_development = 200
+			total_development = 100
 		}
 		effect = {
 			981 = {
@@ -1284,6 +1294,13 @@ sealand_norway_missions_1 = {
 		required_missions = { establish_markland establish_vinland }
 		position = 5
 
+		provinces_to_highlight = {
+			OR = {
+				region = canada_region
+				region = northeast_america_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -1294,94 +1311,103 @@ sealand_norway_missions_1 = {
 				}
 				ai = no
 			}
-			any_country = {
-				has_discovered = ROOT
-				technology_group = north_american
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					region = canada_region 
+					region = northeast_america_region 
+				}
+				is_city = yes
 			}
 		}
 		effect = {
-			custom_tooltip = good_contact_with_natives_tooltip
-			tooltip = {
-				add_country_modifier = {
-					name = "good_contact_with_the_natives_modifier"
-					duration = 9125
-				}
-			}
-			custom_tooltip = bad_contact_with_natives_tooltip
-			tooltip = {
-				add_country_modifier = {
-					name = "bad_contact_with_the_natives_modifier"
-					duration = 9125
-				}
-			}
-			custom_tooltip = contact_with_natives_available_tooltip
-			tooltip = {
-				if = {
-					limit = {
-						any_country = {
-							technology_group = north_american
-							has_opinion = {
-								who = ROOT
-								value = 100
-							}
-						}
-					}
-					add_country_modifier = {
-						name = "good_contact_with_the_natives_modifier"
-						duration = 9125
-					}
-				}
-				else_if = {
-					limit = {
-						any_country = {
-							technology_group = north_american
-							NOT = {
-								has_opinion = {
-									who = ROOT
-									value = 100
-								}
-							}
-						}
-					}
-					add_country_modifier = {
-						name = "bad_contact_with_the_natives_modifier"
-						duration = 9125
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						any_country = {
-							technology_group = north_american
-							has_opinion = {
-								who = ROOT
-								value = 100
-							}
-						}
-					}
-					add_country_modifier = {
-						name = "good_contact_with_the_natives_modifier"
-						duration = 9125
-					}
-				}
-				else_if = {
-					limit = {
-						any_country = {
-							technology_group = north_american
-							NOT = {
-								has_opinion = {
-									who = ROOT
-									value = 100
-								}
-							}
-						}
-					}
-					add_country_modifier = {
-						name = "bad_contact_with_the_natives_modifier"
-						duration = 9125
-					}
-				}
+				#custom_tooltip = good_contact_with_natives_tooltip
+				#tooltip = {
+				#	add_country_modifier = {
+				#		name = "good_contact_with_the_natives_modifier"
+				#		duration = 9125
+				#	}
+				#}
+				#custom_tooltip = bad_contact_with_natives_tooltip
+				#tooltip = {
+				#	add_country_modifier = {
+				#		name = "bad_contact_with_the_natives_modifier"
+				#		duration = 9125
+				#	}
+				#}
+				#custom_tooltip = contact_with_natives_available_tooltip
+				#tooltip = {
+				#	if = {
+				#		limit = {
+				#			any_country = {
+				#				technology_group = north_american
+				#				has_opinion = {
+				#					who = ROOT
+				#					value = 100
+				#				}
+				#			}
+				#		}
+				#		add_country_modifier = {
+				#			name = "good_contact_with_the_natives_modifier"
+				#			duration = 9125
+				#		}
+				#	}
+				#	else_if = {
+				#		limit = {
+				#			any_country = {
+				#				technology_group = north_american
+				#				NOT = {
+				#					has_opinion = {
+				#						who = ROOT
+				#						value = 100
+				#					}
+				#				}
+				#			}
+				#		}
+				#		add_country_modifier = {
+				#			name = "bad_contact_with_the_natives_modifier"
+				#			duration = 9125
+				#		}
+				#	}
+				#}
+				#hidden_effect = {
+				#	if = {
+				#		limit = {
+				#			any_country = {
+				#				technology_group = north_american
+				#				has_opinion = {
+				#					who = ROOT
+				#					value = 100
+				#				}
+				#			}
+				#		}
+				#		add_country_modifier = {
+				#			name = "good_contact_with_the_natives_modifier"
+				#			duration = 9125
+				#		}
+				#	}
+				#	else_if = {
+				#		limit = {
+				#			any_country = {
+				#				technology_group = north_american
+				#				NOT = {
+				#					has_opinion = {
+				#						who = ROOT
+				#						value = 100
+				#					}
+				#				}
+				#			}
+				#		}
+				#		add_country_modifier = {
+				#			name = "bad_contact_with_the_natives_modifier"
+				#			duration = 9125
+				#		}
+				#	}
+				#}
+			add_country_modifier = {
+				name = "good_contact_with_the_natives_modifier"
+				duration = 9125
 			}
 		}
 	}

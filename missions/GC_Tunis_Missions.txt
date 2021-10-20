@@ -725,10 +725,26 @@ gc_tunis_5 = {
 		}
 		
 		trigger = {	
-			OR = {
-				alliance_with = TUR
-				is_rival = TUR
-				NOT = { exists = TUR }
+			if = {
+				limit = {
+					TUR = { exists = yes }
+				}
+				OR = {
+					alliance_with = TUR
+					is_rival = TUR
+					NOT = { exists = TUR }
+				}
+			}
+			else_if = {
+				limit = {
+					TUR = { exists = no }
+					OSM = { exists = yes }
+				}
+				OR = {
+					alliance_with = OSM
+					is_rival = OSM
+					NOT = { exists = OSM }
+				}
 			}
 		}
 		effect = {

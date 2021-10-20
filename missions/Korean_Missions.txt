@@ -1577,7 +1577,7 @@ korea_economic_social_political_path_2 = {
 		position = 7
 
 		provinces_to_highlight = {
-			province_id = 5531
+			province_id = 7029
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
@@ -1586,7 +1586,7 @@ korea_economic_social_political_path_2 = {
 		
 		effect = {
 			add_adm_power = 50
-			5531 = {
+			7029 = {
 				add_province_modifier = {
 					name = "asian_dragon_modifier"
 					duration = -1
@@ -1656,22 +1656,34 @@ korea_colonialism_tree_1 = {
 		position = 6
 
 		provinces_to_highlight = {
-			area = taiwan_area
+			OR = {
+				province_id = 2154
+				province_id = 5155
+				province_id = 738
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			taiwan_area = {
-				type = all
-				owned_by = ROOT
-			}
+			2154 = { owned_by = ROOT }
+			5155 = { owned_by = ROOT }
+			738 = { owned_by = ROOT }
 		}
 		
 		effect = {
 			add_dip_power = 50
-			taiwan_area = {
-				limit = {
-					owned_by = ROOT
+			2154 = {
+				add_province_modifier = {
+					name = "asian_dragon_modifier"
+					duration = -1
 				}
+			}
+			5155 = {
+				add_province_modifier = {
+					name = "asian_dragon_modifier"
+					duration = -1
+				}
+			}
+			738 = {
 				add_province_modifier = {
 					name = "asian_dragon_modifier"
 					duration = -1
@@ -1710,7 +1722,6 @@ korea_colonialism_tree_1 = {
 				area = south_korea_area
 				area = eastern_korea_area
 				area = taiwan_area
-				province_id = 5531
 				province_id = 597
 			}
 			NOT = { owned_by = ROOT }
@@ -1728,7 +1739,6 @@ korea_colonialism_tree_1 = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 5531
 			owns_core_province = 597
 		}
 		

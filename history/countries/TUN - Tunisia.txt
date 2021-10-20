@@ -35,30 +35,6 @@ change_estate_land_share = {
 	}
 }
 
-1435.9.18 = {
-	heir = {
-		name = "Yahyâ"
-		monarch_name = "Yahyâ III"
-		dynasty = "Hafsid"
-		birth_date = 1435.9.18
-		death_date = 1443.1.1
-		claim = 95
-		adm = 2
-		dip = 0
-		mil = 1
-	}
-}
-
-1488.1.1 = {
-	monarch = {
-		name = "Yahyâ III"
-		dynasty = "Hafsid"
-		adm = 2
-		dip = 0
-		mil = 1
-	}
-}
-
 1488.1.1 = {
 	heir = {
 		name = "'Abd al-Mu'min"

@@ -1085,7 +1085,7 @@ on_province_owner_change_estate_privileges_effect = {
 	}
 	if = {
 		limit = {
-			has_climate = tropical
+			has_terrain = jungle
 			owner = {
 				has_estate_privilege = estate_burghers_tropical_nation
 			}
