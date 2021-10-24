@@ -189,7 +189,7 @@ swazi_government_reform = {
 	}
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
-		election_on_death = yes
+		foreign_slave_rulers = yes
 	}
 	ai = {
 		factor = 1
@@ -509,5 +509,36 @@ eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
 			}
 			remove_country_modifier = eschatological_theocracy_caliphate_reform_janissaries_boost
 		}
+	}
+}
+
+# Sasanian Empire:
+sasanian_government = {
+	icon = "sasan_dynasty"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = SAS
+			tag = ACE
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	maintain_dynasty = yes
+	lock_level_when_selected = yes
+
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+		vassal_forcelimit_bonus = 1
+		governing_capacity = 250
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		heir = no
+		foreign_slave_rulers = yes
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }

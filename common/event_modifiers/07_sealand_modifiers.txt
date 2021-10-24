@@ -8,10 +8,6 @@ new_wrold_nerfs_modifier = {
 	local_development_cost = 0.30
 	local_manpower_modifier = -0.2
 }
-khorosan_to_zoroastrian_modifier = {
-	missionaries = 1
-	global_missionary_strength = 0.03
-}
 
 ##########################################
 # Hormuz:
@@ -211,6 +207,15 @@ new_living_space_modifier = {
 sea_pap_naples_submission_modifier = {
 	ae_impact = -0.1
 }
+sea_papal_sanction_for_church_taxes = { # Papacy action for Pope
+	global_tax_modifier = 0.3
+	religion = yes
+}
+sea_usury_forgiven = { # Papacy action for Pope
+	interest = -0.5
+	inflation_reduction = 0.2
+	religion = yes
+}
 ##########################################
 # Ottoman:
 reformed_janissary_alexandria_modifier = {
@@ -264,6 +269,12 @@ sjk_reformed_janissary_alexandria_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
+}
+
+# Sasanid Empire:
+converted_to_zoroastrian_modifier = {
+	missionaries = 1
+	global_missionary_strength = 0.03
 }
 
 ##########################################

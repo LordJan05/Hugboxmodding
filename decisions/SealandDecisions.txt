@@ -871,48 +871,48 @@ country_decisions = {
 
 # Decision to get Theocracy:
 country_decisions = {
-	eschatological_theocracy_georgia_decision = { # For Georgia
-		major = yes
-		potential = {
-			NOT = { has_country_flag = eschatological_theocracy_georgia }
-			tag = GEO
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = imereti_area
-				area = samtskhe_area
-				area = kartli_kakheti_area
-			}
-			NOT = {
-				owned_by = ROOT
-			}
-		}
-		allow = {
-			tag = GEO
-			is_at_war = no
-			imereti_area = {
-				type = all
-				owned_by = ROOT
-			}
-			samtskhe_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kartli_kakheti_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			set_country_flag = eschatological_theocracy_georgia
-			set_country_flag = eschatological_theocracy_georgia_reform_flag
-			change_government = theocracy
-			add_government_reform = eschatological_theocracy_georgia_reform
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	#eschatological_theocracy_georgia_decision = { # For Georgia
+	#	major = yes
+	#	potential = {
+	#		NOT = { has_country_flag = eschatological_theocracy_georgia }
+	#		tag = GEO
+	#	}
+	#	provinces_to_highlight = {
+	#		OR = {
+	#			area = imereti_area
+	#			area = samtskhe_area
+	#			area = kartli_kakheti_area
+	#		}
+	#		NOT = {
+	#			owned_by = ROOT
+	#		}
+	#	}
+	#	allow = {
+	#		tag = GEO
+	#		is_at_war = no
+	#		imereti_area = {
+	#			type = all
+	#			owned_by = ROOT
+	#		}
+	#		samtskhe_area = {
+	#			type = all
+	#			owned_by = ROOT
+	#		}
+	#		kartli_kakheti_area = {
+	#			type = all
+	#			owned_by = ROOT
+	#		}
+	#	}
+	#	effect = {
+	#		set_country_flag = eschatological_theocracy_georgia
+	#		set_country_flag = eschatological_theocracy_georgia_reform_flag
+	#		change_government = theocracy
+	#		add_government_reform = eschatological_theocracy_georgia_reform
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
 	eschatological_theocracy_caliphate_decision = { # For Caliphate missions.
 		major = yes
 		potential = {
@@ -934,27 +934,275 @@ country_decisions = {
 		}
 	}
 }
-# Khorosan Zoroastria:
-country_decisions = {
-	khorosan_to_zoroastrian = { # For Caliphate missions.
+# Sasanid Empire
+country_decisions = { # converting to Zoroastrian:
+	converted_to_zoroastrian = { # converting to Zoroastrian.
 		major = yes
 		potential = {
-			NOT = { has_country_flag = khorosan_zoroastrian_flag }
-			tag = KHO
+			NOT = { has_country_flag = steps_becoming_sasanid_zoroastrian_flag }
+			OR = {
+				tag = TRS
+				tag = AFG
+				tag = KHO
+				tag = ORM
+				tag = QOM
+				capital_scope = {
+					OR = {
+						region = persia_region
+						region = khorasan_region
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 433
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			tag = KHO
+			capital_scope = {
+				OR = {
+					region = persia_region
+					region = khorasan_region
+				}
+			}
+			NOT = { tag = PER }
+			OR = {
+				owns_core_province = 433
+				religion = zoroastrian
+			}
 		}
 		effect = {
-			set_country_flag = khorosan_zoroastrian_flag
-			change_religion = zoroastrian
+			set_country_flag = steps_becoming_sasanid_zoroastrian_flag
+			if = {
+				limit = {
+					NOT = { religion = zoroastrian }
+				}
+				change_religion = zoroastrian
+			}
 			add_country_modifier = {
-				name = "khorosan_to_zoroastrian_modifier"
+				name = "converted_to_zoroastrian_modifier"
 				duration = 18250
 			}
 		}
 		ai_will_do = {
 			factor = 0
+		}
+	}
+	revive_sasanian_empire = {
+		major = yes
+		potential = {
+			OR = {
+				AND = {
+					has_country_flag = steps_becoming_sasanid_zoroastrian_flag
+					religion = zoroastrian
+				}
+				religion = zoroastrian
+			}
+			NOT = { has_country_flag = formed_sasanid_empire_flag }
+			OR = {
+				tag = TRS
+				tag = AFG
+				tag = KHO
+				tag = ORM
+				tag = QOM
+				capital_scope = {
+					OR = {
+						region = persia_region
+						region = khorasan_region
+					}
+				}
+			}
+			NOT = { exists = SAS }
+			NOT = { exists = PER }
+			NOT = { tag = PER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 433
+				province_id = 428
+				province_id = 429
+				province_id = 2218
+				province_id = 432
+				province_id = 2221
+				province_id = 446
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			religion = zoroastrian
+			NOT = { exists = PER }
+			owns_core_province = 433
+			owns_core_province = 428
+			owns_core_province = 429
+			owns_core_province = 2218
+			owns_core_province = 432
+			owns_core_province = 2221
+			owns_core_province = 446
+		}
+		effect = {
+			set_country_flag = formed_sasanid_empire_flag
+			change_tag = SAS
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+			}
+			add_government_reform = sasanian_government
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			define_ruler = {
+				name = "Yazdegerd IV"
+				dynasty = "Sasan"
+				adm = 6
+				dip = 6
+				mil = 6
+				claim = 100
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			swap_non_generic_missions = yes
+			if = {
+				limit = { 
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+	   		mashhad_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		herat_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		sistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		birjand_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		kerman_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		mogostan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		persian_gulf_coast = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		farsistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		isfahan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		iraq_e_ajam_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+	   		azerbaijan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_achaemenid_empire = {
+		major = yes
+		potential = {
+			has_country_flag = steps_becoming_achaemenid_empire_flag
+			NOT = { has_country_flag = formed_achaemenid_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = khorasan_region
+				region = persia_region
+				region = mashriq_region
+				region = anatolia_region
+				region = egypt_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			religion = zoroastrian
+			khorasan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = formed_achaemenid_empire_flag
+			change_tag = ACE
+			add_prestige = 100
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }
@@ -1103,6 +1351,7 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = united_finland_flag
+			change_tag = FIN 
 			if = {
 				limit = {
 					government = republic
@@ -1117,7 +1366,6 @@ country_decisions = {
 				}
 				add_government_reform = tsardom
 			}
-			change_tag = FIN 
 			add_prestige = 25
 			add_country_modifier = {
 				name = "centralization_modifier"

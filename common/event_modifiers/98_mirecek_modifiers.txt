@@ -49,3 +49,59 @@ npl_simroungarh_maintenance_mission_reward = {
 npl_palpa_maintenance_mission_reward = {
 	global_tax_income = 12	
 }
+
+# Georgia:
+georgia_strenght_is_in_unity_mod = {
+	global_regiment_cost = -0.10
+	land_morale = 0.05
+}
+georgia_crusade_against_ottomans = {
+	siege_ability = 0.10
+	land_morale = 0.10
+	shock_damage_received = -0.10
+}
+georgia_defence = {
+	local_defensiveness = 0.3
+}
+georgia_victory_monument = {
+	prestige = 0.5
+}
+georgia_victory_celebration = {
+	global_unrest = -2
+	global_tax_modifier = 0.10
+}
+georgia_fuck_turkey = {
+	land_morale = 0.05
+	tolerance_own = 1
+	prestige_from_land = 0.50
+}
+georgia_destroy_qq = {
+	shock_damage_received = -0.10
+	fire_damage_received = -0.10
+}
+georgia_convert_bombermen = {
+	global_missionary_strength = 0.02
+	global_autonomy = -0.05
+}
+georgia_revive_the_aznauri = {
+	cavalry_fire = 0.5
+	cavalry_shock = 0.5
+	cav_to_inf_ratio = 0.50
+	cavalry_cost = -0.2
+}
+georgia_conquer_heatens_mod = {
+	warscore_cost_vs_other_religion = -0.10
+}
+georgia_persia_uurah = {
+	trade_efficiency = 0.1
+}
+georgia_dev = {
+	local_development_cost = -0.1
+}
+georgia_wine = {
+	local_unrest = -1
+	trade_value_modifier = 0.25
+}
+georgia_manganese = {
+	global_trade_goods_size_modifier = 0.1
+}

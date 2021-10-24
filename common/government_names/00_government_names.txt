@@ -1442,8 +1442,13 @@ persian_monarchy = {
 	}
 
 	trigger = {
-		government = monarchy
-		culture_group = iranian
+		OR = {
+			AND = {
+				government = monarchy
+				culture_group = iranian
+			}
+			tag = SAS
+		}
 	}
 }
 

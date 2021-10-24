@@ -2,3 +2,6 @@
 CHW = "countries/Bachwezi.txt"
 AFR = "countries/Toto.txt"
 GZW = "countries/Great Zimbabwe.txt"
+
+# Sassanid:
+SAS = "countries/SasanidEmpire.txt" # Not fully direct copy-paste.

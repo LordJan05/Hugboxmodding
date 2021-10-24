@@ -568,8 +568,7 @@ sea_PAP_ideas = { # Kingdom of God
 	free = yes		#will be added at load.
 	
 	pap_ecclesiastical_primacy = {
-		tolerance_own = 2
-		unrest_catholic_provinces = -1
+		unrest_catholic_provinces = -2
 	}
 	pap_papal_investiture_and_tithes = {
 		global_tax_modifier = 0.33

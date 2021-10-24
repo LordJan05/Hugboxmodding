@@ -183,7 +183,7 @@
         seljuk_empire_government_legacy:0 "Seljuk Government"
         seljuk_empire_government_legacy_desc:0 "It is a hybrid of Tribal Federation and Ottoman Government."
         # New country idea:
-        SJK:0 "Seljuks"
+        SJK:0 "Seljuk Empire"
         SJK_ADJ:0 "Seljuki"
         sea_SJK_ideas:0 "Seljuki Ideas"
         sea_SJK_ideas_start:0 "Seljuki Traditions"
@@ -311,7 +311,7 @@
         pray_for_old_gods_2_tooltip:0 "Every core province in §YNorth America§! continent changes to §YNorse§! religion."
         focus_on_north_sea_title:0 "Focus on North Sea"
         focus_on_north_sea_desc:0 "Focus on North Sea"
-        focus_on_north_sea_tooltip:0 "§Y[Root.GetName]§! gets '§YVikings Reborn§!' until the end of the game, giving the following effects:\nMay Raid Coasts, including coasts of countries with same religion.\n§RModifier is locked for Norway and Vinland tag.§!"
+        focus_on_north_sea_tooltip:0 "§Y[Root.GetName]§! gets '§YVikings Reborn§!' until the end of the game, giving the following effects:\nMay Raid Coasts, including coasts of countries with same religion\n§RModifier is locked for Norway and Vinland tag.§!"
         do_a_little_raiding_modifier:0 "Vikings Reborn"
         raid_english_coast_title:0 "Raid English Coast"
         raid_english_coast_desc:0 "Raid English Coast"
@@ -338,7 +338,7 @@
         peasant_levies_modifier:0 "Peasant Levies"
         disciplined_peasants_title:0 "Disciplined Peasants"
         disciplined_peasants_desc:0 "Disciplined Peasants"
-        disciplined_peasants_tooltip:0 "§Y[Root.GetName]§! gets '§YViking Army§!' until the end of the game, giving the following effects:\nInfantry Combat Ability: §G+20.0%§!\nDiscipline: §G+2.5%§!\nInfantry Fire: §G+1.00§!.\n§RModifier is locked for Norway and Vinland tag.§!"
+        disciplined_peasants_tooltip:0 "§Y[Root.GetName]§! gets '§YViking Army§!' until the end of the game, giving the following effects:\nInfantry Combat Ability: §G+20.0%§!\nDiscipline: §G+2.5%§!\nInfantry Fire: §G+1.00§!\n§RModifier is locked for Norway and Vinland tag.§!"
         norwegian_army_modifier:0 "Viking Army"
         
     # Vinalnd. From Norway mission:
@@ -575,7 +575,19 @@
         sea_pap_naples_submission_title:0 "Naples Submission"
         sea_pap_naples_submission_desc:0 "Naples Submission"
         sea_pap_naples_submission_modifier:0 "Quest From God"
-       # I don't know:
+       # Events:
+        sea_papal_events.1.t:0 "The Naples Question"
+        sea_papal_events.1.d:0 "The new king of Naples, [NAP.Monarch.GetName], has refused to follow his father's footsteps and submit to the Holy See. This is a grave insult to the Church and a violation of the agreement made with King Alfons V of Aragon which, it can be argued, voids [NAP.Monarch.GetName]'s claim to the Neapolitan crown. We cannot allow such a grave insult to stand!"
+        sea_papal_events.1.a:0 "Force Naples to submit to us by military means."
+        sea_papal_events.1.b:0 "Remove the existance of Naples completely."
+        sea_papal_events.1.c:0 "There is no need to force the issue."
+       # Papacy Modifiers:
+        pap_bless_monarch_tt:0 "Spawns 7 §YMercenary Regiments§!"
+        sea_papal_sanction_for_church_taxes:0 "Papal Sanction for Increased Taxes"
+        desc_sea_papal_sanction_for_church_taxes:0 "The papacy has sanctioned our right to tax the faithful of our nation for a period, boosting our tax income substantially."
+        sea_usury_forgiven:0 "Usury Forgiven"
+        desc_sea_usury_forgiven:0 "The Pope has officially forgiven us for the sin of Usury."
+       # I don't even know:
         SEX:0 "PayPal States"
         SEX_ADJ:0 "PayPal"
        
@@ -593,7 +605,6 @@
         north_american_lake_area:0 "Great Lakes"
         PROV7055:0 "St. Lawrence"
         PROV7056:0 "St. Lawrence"
-        PROV7060:0 "St. Lawrence"
         # Oirat special government for AI Tumens to fight:
         oirat_steppe_horde:0 "Oirat Steppe Nomads"
         oirat_steppe_horde_desc:0 "A governmental form where a sovereign or military ruler rule a tribal chiefdom, with constant Casus Bellis on all their neighbors and troops who fight better on the plains."
@@ -892,7 +903,7 @@
         VNZ_religion_unity:0 "All Must Server Similar God"
         VNZ_religion_unity_desc:0 "All Must Server Similar God"
        
-      # Ottoman:
+    # Ottoman:
        # Missions:
        sea_ottoman_golden_age_title:0 "Golden Age of Janissaries"
        sea_ottoman_golden_age_desc:0 "Ottomans Golden Age"
@@ -943,12 +954,12 @@
        osm_ghazi_desc:0 "Our sultans emphasize their role as gazis, leaders in war against the non-believers. Warriors thus flock to our banner, seeking to win wealth, glory, and salvation in the fight to expand the Abode of Islam"
       
       
-     # Eschatological Theocracy:
-      # Decision:
-      eschatological_theocracy_georgia_decision_title:0 "So it Begins. Perpare for Third Age"
-      eschatological_theocracy_georgia_decision_desc:0 "The final Third Age is upon us, with Heathens to our south and Heretics in Rome, the Christian world is not ready for the return of Jesus Christ. The clergy of Georgia have realized this and at any time can take control of the government, and putting in charge talented and ambitious Bishops, to lead our nation and eventually all Christian people. Georgia must be the ones who lead the Christian world and prepare them for the return of Jesus himself!"
-      eschatological_theocracy_caliphate_decision_title:0 "Prepare the Umma for the Mahdi"
-      eschatological_theocracy_caliphate_decision_desc:0 "The Day of Judgment grows closer and with growing tensions between our people and the heretic sects of Islam, as well as the growing strength of the Christian nations, the world is not ready for the coming of the Mahdi. Over the years, Our nation’s Ulema have realized this and have been growing their power in the government through clever schemes and political maneuvering. With the restoration of the new Caliphate, our Ulema are stronger than ever and can now take control of government to prepare the Muslim Umma for the coming of the Mahdi."
+    # Eschatological Theocracy:
+      # Event to become:
+      theocracy_election_government.11.t:0 "The question of Theocracy"
+      theocracy_election_government.11.d:0 "The final Third age is upon us, with Heatens to our south and Heretics in Rome, the Christian world is not ready for the return of Jesus Christ. The clergy of Georgia have realized this and at any time can take control of the government, and putting in charge talented and ambitious Bishops, to lead our nation and eventually all Christian people. Georgia must be the ones who lead Christian world and prepare them for the return of Jesus himself!"
+      theocracy_election_government.11.a:0 "So it Begins. Prepare for Third Age"
+      theocracy_election_government.11.b:0 "I am sure we're best off staying a monarchy."       
       # Government:
       eschatological_theocracy_georgia_reform:0 "Eschatological Theocracy"
       eschatological_theocracy_georgia_reform_desc:0 "The Clergy of this nation have taken control of the government with the sole goal of preparing their people for the coming of a savior or god himself. The Clergy are dedicated towards this goal and rule absolutely."
@@ -964,9 +975,30 @@
       theocracy_election_government.2.a:0 "[caliphate_candidate_a_@ROOT.GetName] as our next $MONARCHTITLE$."
       theocracy_election_government.2.b:0 "[caliphate_candidate_b_@ROOT.GetName] as our next $MONARCHTITLE$."
       theocracy_election_government.2.c:0 "[caliphate_candidate_c_@ROOT.GetName] as our next $MONARCHTITLE$."
+    
+    # Sasanian Empire:
+        # Government:
+        sasanian_government:0 "Sasanian Government"
+        sasanian_government_desc:0 "It is like any other normal government of its time but since its time is long gone, this government has been revived to fulfill its purpouse, which is to treat your subjects well and always follow the roots of Sasan dynasty."
+        # Sasanian "elections":
+        theocracy_election_government.3.d: "Our beloved $MONARCHTITLE$ [Root.Monarch.GetName] has died, leaving for us to choose the new $MONARCHTITLE$, from the same royal family, to lead our nation into prosperity. Luckily for us, three canditates have been presented before us, leaving for us to choose..."
+        theocracy_election_government.3.a:0 "[sasanian_candidate_a_@ROOT.GetName] as our next $MONARCHTITLE$."
+        theocracy_election_government.3.b:0 "[sasanian_candidate_b_@ROOT.GetName] as our next $MONARCHTITLE$."
+        theocracy_election_government.3.c:0 "[sasanian_candidate_c_@ROOT.GetName] as our next $MONARCHTITLE$."
+        # Converting to Zoroastrian:
+        converted_to_zoroastrian_title:0 "Road to Sasanian Legacy aka Zoroastrianism"
+        converted_to_zoroastrian_desc:0 "This the only way to revive Sasanian Empire."
+        converted_to_zoroastrian_modifier:0 "All Must Follow Zoroastrianism"
+        # Form Sasanian Empire:
+        revive_sasanian_empire_title:0 "Revive Sasanian Empire"
+        revive_sasanian_empire_desc:0 "You have found ancient scrolls of Zoroastrian religion, that show you the way to bring back from the ruins the mighty nation of Sasaniad Empire."
+        # Merc Company:
+         merc_sasanian_zhayedan:0 "Zhayedan"
+    # Achaemenid Empire:
+        form_achaemenid_empire_title:0 "Become Achaemenid Empire"
+        form_achaemenid_empire_desc:0 "After all those centuries, we are finally able to fulfill our dream, which is to revive the borders of Achaemenid Empire and become one ourself."
+        ACE:0 "Achaemenid Empire" # Name slightly changed
+        ACE_ADJ:0 "Achaemenian"
       
-     # Khorosan Zoroastrian:
-     khorosan_to_zoroastrian_title:0 "Change Religion to Zoroastrian"
-     khorosan_to_zoroastrian_desc:0 "We all know why we want to emprace Zoroastrianism. It's not because of belief but because of '§YBaku Atesgah§!' Monument giving us +10% Discipline."
-     khorosan_to_zoroastrian_modifier:0 "All Must Follow Zoroastrianism"
+     
      

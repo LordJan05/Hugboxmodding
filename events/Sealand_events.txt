@@ -552,6 +552,29 @@ country_event = {
 # Theocracy government:
 namespace = theocracy_election_government
 
+country_event = { # For Georgia to become the government changed with Mirecek mission.
+	id = theocracy_election_government.11
+	title = theocracy_election_government.11.t
+	desc = theocracy_election_government.11.d
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = theocracy_election_government.11.a
+		set_country_flag = eschatological_theocracy_georgia
+		set_country_flag = eschatological_theocracy_georgia_reform_flag
+		change_government = theocracy
+		add_government_reform = eschatological_theocracy_georgia_reform
+	}
+	option = {
+		name = theocracy_election_government.11.b
+		change_government_reform_progress = 300
+		add_splendor = 500
+		add_prestige = 10
+	}
+}
 # Georgia Eschatological Theocracy elections:
 country_event = {
 	id = theocracy_election_government.1
@@ -640,6 +663,60 @@ country_event = {
 		set_ruler = caliphate_candidate_c_@ROOT
 		add_devotion = 10
 		add_prestige = -5
+	}
+}
+# Sasanian new ruler same dynasty "elections":
+country_event = {
+	id = theocracy_election_government.3
+	title = theocracy_election_government.1.t
+	desc = theocracy_election_government.3.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_reform = sasanian_government
+	}
+	immediate = {
+		hidden_effect = {
+			define_exiled_ruler = {
+				exiled_as = sasanian_candidate_a_@ROOT
+				option = 0
+			}
+			define_exiled_ruler = {
+				exiled_as = sasanian_candidate_b_@ROOT
+				option = 1
+			}
+			define_exiled_ruler = {
+				exiled_as = sasanian_candidate_c_@ROOT
+				option = 2
+			}
+		}
+	}
+	after = {
+		clear_exiled_ruler = sasanian_candidate_a_@ROOT
+		clear_exiled_ruler = sasanian_candidate_b_@ROOT
+		clear_exiled_ruler = sasanian_candidate_c_@ROOT
+	}
+	option = {
+		name = theocracy_election_government.3.a
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = sasanian_candidate_a_@ROOT
+	}
+	option = {
+		name = theocracy_election_government.3.b
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = sasanian_candidate_b_@ROOT
+	}
+	option = {
+		name = theocracy_election_government.3.c
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = sasanian_candidate_c_@ROOT
 	}
 }
 
@@ -1110,5 +1187,49 @@ country_event = { # Become an Empire mission
 		custom_tooltip = zwz_waaq_cult_tt
 		unlock_cult = zanahary_cult
 		custom_tooltip = zwz_zanahary_cult_tt
+	}
+}
+
+########################################################################
+# Papal State:
+namespace = sea_papal_events
+country_event = {
+	id = sea_papal_events.1
+	title = sea_papal_events.1.t
+	desc = sea_papal_events.1.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sea_papal_events.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 600
+			target = NAP
+		}
+	}
+	
+	option = {
+		name = sea_papal_events.1.b
+		ai_chance = {
+			factor = 0
+		}
+		NAP = {
+			every_owned_province = {
+				add_permanent_claim = PAP
+			}
+		}
+	}
+	
+	option = {
+		name = sea_papal_events.1.c
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = 1
 	}
 }

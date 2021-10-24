@@ -48,7 +48,6 @@ country_event = {
 		}
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 
@@ -340,7 +339,6 @@ country_event = {
 		}
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 	
@@ -568,7 +566,6 @@ country_event = {
 		}
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 
@@ -863,7 +860,6 @@ country_event = {
 		}	
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 	
@@ -1171,7 +1167,6 @@ country_event = {
 		}
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 	
@@ -1315,7 +1310,6 @@ country_event = {
 		}
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
-		NOT = { has_reform = swazi_government_reform }
 		NOT = { has_reform = barbary_states_reform }
 	}
 	

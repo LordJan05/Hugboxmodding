@@ -417,6 +417,13 @@ country_event = {
 	picture = COURT_eventPicture
 	
 	trigger = {
+		AND = {
+			NOT = { has_country_flag = reestablish_the_immortals_flag }
+			OR = {
+				NOT = { tag = SAS }
+				NOT = { tag = ACE }
+			}
+		}
 		ai = no
 		any_hired_mercenary_company = {
 			hired_for_months = 1
@@ -435,6 +442,44 @@ country_event = {
 	option = {
 		name = "mjl_merc_events.EVTOPTA10"
 		event_target:human_merc = {
+			disband_mercenary_company = THIS
+		}
+	}
+}
+country_event = { # SASANIANS
+	id = mjl_merc_events.11
+	title = "mjl_merc_events.EVTNAME10"
+	desc = "mjl_merc_events.EVTDESC10"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		AND = {
+			has_country_flag = reestablish_the_immortals_flag
+			OR = {
+				tag = SAS
+				tag = ACE
+			}
+		}
+		ai = no
+		any_hired_mercenary_company = {
+			NOT = { template = merc_sasanian_zhayedan }
+			hired_for_months = 1
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				NOT = { template = merc_sasanian_zhayedan }
+				save_event_target_as = human_merc_sas
+			}
+		}
+	}
+	option = {
+		name = "mjl_merc_events.EVTOPTA10"
+		event_target:human_merc_sas = {
 			disband_mercenary_company = THIS
 		}
 	}

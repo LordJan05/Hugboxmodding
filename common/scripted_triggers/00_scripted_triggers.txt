@@ -522,6 +522,11 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = WUU }
 			NOT = { was_tag = YUE }
 			NOT = { was_tag = CYI }
+			NOT = { was_tag = ACE }
+			NOT = { was_tag = OSM }
+			NOT = { was_tag = AHE }
+			NOT = { was_tag = HAE }
+			NOT = { was_tag = ABA }
 			NOT = { tag = TUR }
 			NOT = { tag = ROM }
 			NOT = { tag = HLR }
@@ -539,6 +544,11 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = WUU }
 			NOT = { tag = YUE }
 			NOT = { tag = CYI }
+			NOT = { tag = ACE }
+			NOT = { tag = OSM }
+			NOT = { tag = AHE }
+			NOT = { tag = HAE }
+			NOT = { tag = ABA }
 		}
 	}
 }

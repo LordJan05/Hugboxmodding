@@ -62,5 +62,10 @@ spriteTypes = {
 		name = "government_reform_barbary_states"
 		texturefile = "gfx//interface//government_reform_icons//barbary_states.dds"
 	}
+	
+	spriteType = {
+		name = "government_reform_sasan_dynasty"
+		texturefile = "gfx//interface//government_reform_icons//sasan_dynasty.dds"
+	}
 
 }

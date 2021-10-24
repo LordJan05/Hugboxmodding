@@ -323,13 +323,9 @@ emp_pap_slot_2 = {
 		effect = {
 			add_country_modifier = {
 				name = sea_pap_naples_submission_modifier
-				duration = 3650
+				duration = 5482
 			}
-			add_casus_belli = {
-				type = cb_vassalize_mission
-				months = 600
-				target = NAP
-			}
+			country_event = { id = sea_papal_events.1 }
 		}
 	}
 	emp_pap_swiss_guard = {
@@ -368,11 +364,11 @@ emp_pap_slot_2 = {
 		}
 		effect = {
 			set_country_flag = pap_swiss_guard_mission_flag
-			custom_tooltip = emp_pap_swiss_guard_mercs_enabled
+			#custom_tooltip = emp_pap_swiss_guard_mercs_enabled
 			tooltip = {
 				add_country_modifier = {
 					name = "pap_papal_swiss_guard"
-					duration = 7300
+					duration = -1
 				}
 			}
 			country_event = { id = papacy_events.1 }

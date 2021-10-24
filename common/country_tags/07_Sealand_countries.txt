@@ -11,6 +11,7 @@ AUE = "countries/SeaAustrianEmpire.txt"
 AHE = "countries/SeaAustroHungarianEmpire.txt"
 HAE = "countries/SeaHungroAustrianEmpire.txt"
 BYS = "countries/SeaBarbaryStates.txt"
+ACE = "countries/SeaAchaemenidEmpire.txt"
 
 SEX = "countries/SeaPayPalStates.txt"
 

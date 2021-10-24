@@ -43,6 +43,7 @@ monarchy = {
 				seljuk_empire_government
 				great_moravian_principality
 				swazi_government_reform
+				sasanian_government
 			}
 		}
 		hereditary_vs_nobility = {
@@ -572,6 +573,7 @@ theocracy = {
 				monastic_elections_reform
 				commander_king_reform
 				admiral_king_reform
+				kingdom_of_god_reform # Moved here
 			}
 		}
 		divine_cause = {
@@ -580,7 +582,6 @@ theocracy = {
 				combat_heresy_reform
 				expel_heathens_reform
 				guru_advisors_reform
-				kingdom_of_god_reform
 			}
 		}
 		clergy_in_administration = {

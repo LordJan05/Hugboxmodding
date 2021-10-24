@@ -7066,7 +7066,7 @@
  PAPAL_INFLUENCE:0 "Papal Influence"
  PAPAL_INFLUENCE_NOT_ENOUGH:0 "§R- You do not have enough papal influence.§!"
  levy_church_tax:0 "Levy Church Tax"
- bless_monarch:0 "Bless Ruler"
+ bless_monarch:0 "May God Bless Us"
  indulgence_for_sins:1 "Sanction Dynasty"
  local_saint:0 "Beatify Local Saint"
  PAPAL_INFLUENCE_NO_CARDINAL:0 "§R- It is not possible to invest papal influence if you have no active cardinals.§!"

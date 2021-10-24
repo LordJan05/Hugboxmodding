@@ -1,0 +1,54 @@
+sealand_khorosan_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KHO
+		has_country_flag = kho_convert_to_zoroastrian
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	khorosani_leadership = {
+		icon = mission_conquer_aden
+		required_missions = { }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = yemen_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			yemen_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 9125 #25 years
+			}
+			red_sea_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

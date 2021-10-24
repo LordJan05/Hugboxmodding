@@ -17,6 +17,11 @@ country_event = {
 	picture = THREE_HEIRS_eventPicture
 
 	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_reform = swazi_government_reform }
+		NOT = { has_reform = sasanian_government }
+	}
 	
 	immediate = {
 		hidden_effect = {

@@ -18,6 +18,7 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = PER }
+			NOT = { tag = SAS }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -111,6 +112,7 @@ country_decisions = {
 			NOT = { tag = PER }
 			NOT = { tag = TIM }
 			NOT = { tag = ARB }
+			NOT = { tag = SAS }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

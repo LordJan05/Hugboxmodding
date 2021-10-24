@@ -1070,9 +1070,9 @@ on_death_election = {
 		elections.800	# Lottery election
 		flavor_tus.16 #Savonarola Leaves This World
 		703	# Colonial Election event
+		# Sealand
 		theocracy_election_government.1 # Eschatological Theocracy Georgia
 		theocracy_election_government.2 # Eschatological Theocracy Caliphate
-		swazi_election_government.1 # Swazi Government
 	}
 }
 
@@ -1080,6 +1080,8 @@ on_death_election = {
 on_death_foreign_slave_ruler = {
 	events = {
 		mamluk_events.0 # Choose new ruler
+		swazi_election_government.1 # Swazi Government
+		theocracy_election_government.3 # Sasanian new ruler choices, nothing to do with Theocracy.ˇ
 	}
 }
 
