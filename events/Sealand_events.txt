@@ -1193,7 +1193,7 @@ country_event = { # Become an Empire mission
 ########################################################################
 # Papal State:
 namespace = sea_papal_events
-country_event = {
+country_event = { # Naples vassal or claims
 	id = sea_papal_events.1
 	title = sea_papal_events.1.t
 	desc = sea_papal_events.1.d
@@ -1201,6 +1201,12 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			kill_ruler = yes
+		}
+	}
+
 	option = {
 		name = sea_papal_events.1.a
 		ai_chance = {
@@ -1212,7 +1218,6 @@ country_event = {
 			target = NAP
 		}
 	}
-	
 	option = {
 		name = sea_papal_events.1.b
 		ai_chance = {
@@ -1224,12 +1229,121 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = sea_papal_events.1.c
 		ai_chance = {
 			factor = 0
 		}
 		add_stability = 1
+	}
+}
+country_event = { # new ruler choosing.
+	id = sea_papal_events.2
+	title = sea_papal_events.2.t
+	desc = sea_papal_events.2.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			define_exiled_ruler = {
+				exiled_as = pope_candidate_a_@ROOT
+				male = yes
+				min_age = 40
+				max_age = 70
+				adm = 5
+				max_random_dip = 4
+				max_random_mil = 4
+				option = 0
+			}
+			define_exiled_ruler = {
+				exiled_as = pope_candidate_b_@ROOT
+				male = yes
+				min_age = 40
+				max_age = 70
+				max_random_adm = 4
+				dip = 5
+				max_random_mil = 4
+				option = 1
+			}
+			define_exiled_ruler = {
+				exiled_as = pope_candidate_c_@ROOT
+				male = yes
+				min_age = 40
+				max_age = 70
+				max_random_adm = 4
+				max_random_dip = 4
+				mil = 5
+				option = 2
+			}
+		}
+	}
+	
+	after = {
+		clear_exiled_ruler = pope_candidate_a_@ROOT
+		clear_exiled_ruler = pope_candidate_b_@ROOT
+		clear_exiled_ruler = pope_candidate_c_@ROOT
+	}
+
+	option = {
+		name = sea_papal_events.2.a
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = pope_candidate_a_@ROOT
+		add_corruption = 0.10
+		add_curia_treasury = -100
+		random_country = {
+			limit = {
+				NOT = { tag = PAP }
+				is_papal_controller = yes
+			}
+			add_papal_influence = 50
+		}
+	}
+	option = {
+		name = sea_papal_events.2.b
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = pope_candidate_b_@ROOT
+		add_corruption = 0.10
+		add_prestige = -10
+		add_devotion = -5
+		random_country = {
+			limit = {
+				NOT = { tag = PAP }
+				is_papal_controller = yes
+			}
+			add_papal_influence = 50
+		}
+	}
+	option = {
+		name = sea_papal_events.2.c
+		ai_chance = {
+			factor = 0
+		}
+		set_ruler = pope_candidate_c_@ROOT
+		add_corruption = 0.10
+		add_prestige = -5
+		add_devotion = -10
+		random_country = {
+			limit = {
+				NOT = { tag = PAP }
+				is_papal_controller = yes
+			}
+			add_papal_influence = 50
+		}
+	}
+	option = {
+		name = sea_papal_events.2.e
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = 5
+		add_devotion = 5
+		add_splendor = 2
 	}
 }

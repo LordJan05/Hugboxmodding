@@ -87,7 +87,7 @@ georgia_1_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			erzurum_area_area = {
+			erzurum_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -344,11 +344,13 @@ georgia_3_missions = {
 				add_permanent_claim = ROOT
 			}
 			330 = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}

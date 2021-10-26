@@ -897,7 +897,6 @@ on_new_monarch = {
 		muslim_school_events.20 #No Religious School
 		flavor_daimyo.4			#Shiba Yoshikado
 		flavor_fra.9000			# François Villon
-		mjl_mongol_events.2		# Oirat Split Esen Death
 	}
 	random_events = {
 		1000 = 0
@@ -994,6 +993,18 @@ on_monarch_death = {
 		foffychina.36
 		foffychina.37
 		foffychina.38
+	}
+	if = {
+		limit = {
+			tag = PAP
+		}
+		country_event = { id = sea_papal_events.2 }
+	}
+	if = {
+		limit = {
+			tag = OIR
+		}
+		ZUN = { country_event = { id = mjl_mongol_events.2 } } # Oirat Split Esen Death
 	}
 }
 

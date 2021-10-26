@@ -576,11 +576,17 @@
         sea_pap_naples_submission_desc:0 "Naples Submission"
         sea_pap_naples_submission_modifier:0 "Quest From God"
        # Events:
-        sea_papal_events.1.t:0 "The Naples Question"
-        sea_papal_events.1.d:0 "The new king of Naples, [NAP.Monarch.GetName], has refused to follow his father's footsteps and submit to the Holy See. This is a grave insult to the Church and a violation of the agreement made with King Alfons V of Aragon which, it can be argued, voids [NAP.Monarch.GetName]'s claim to the Neapolitan crown. We cannot allow such a grave insult to stand!"
+        sea_papal_events.1.t:0 "Sudden death of our Pope"
+        sea_papal_events.1.d:0 "We have reasons to believe that the king of Naples, [NAP.Monarch.GetName], has organized the assassination of our Pope after hearing the rumours of Pope's interested in Naples crowns legitimacy. Of course him denying it, we have no other option than to demand his submission forcefully and face before us or send him to face the God at let him decide his fate."
         sea_papal_events.1.a:0 "Force Naples to submit to us by military means."
-        sea_papal_events.1.b:0 "Remove the existance of Naples completely."
+        sea_papal_events.1.b:0 "The Holy Father knows the best."
         sea_papal_events.1.c:0 "There is no need to force the issue."
+        sea_papal_events.2.t:0 "A Papal Conclave for the new Pope"
+        sea_papal_events.2.d:0 "With the passing of our previous pope, a meeting of the College of Cardinals has been arranged at Vatican for the new Papal election, where the new Pope ended up being [Root.Monarch.GetName].\nOf course we still have the ability to influence the votes for someone more favourable to us and from the following best three canditates, that have been presented before us, we should..."
+        sea_papal_events.2.a:0 "Have administratively focused Pope."
+        sea_papal_events.2.b:0 "Have diplomatically focused Pope."
+        sea_papal_events.2.c:0 "Have militarily focused Pope."
+        sea_papal_events.2.e:0 "Have none chosen and keep the current Pope."
        # Papacy Modifiers:
         pap_bless_monarch_tt:0 "Spawns 7 §YMercenary Regiments§!"
         sea_papal_sanction_for_church_taxes:0 "Papal Sanction for Increased Taxes"
@@ -631,6 +637,13 @@
         free_hong_kong_modifier:0 "Free Hong Kong"
         macaroni:0 "One Macaroni"
         macaroniDESC:0 "This is just a one single macaroni.\nFun fact: Macaroni is dry pasta shaped like narrow tubes."
+        sea_remove_state_edicts_title:0 "Ability to Enable State Edicts: §GEnabled§!"
+        sea_remove_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
+        sea_remove_state_edicts_tt:0 "Clicking this, will §RDisable§! the ability to enact State Edicts and current Edicts that are enabled, will be disabled on new month."
+        sea_remove_state_edicts_flag_tt:0 "Enable the ability to enact State Edict in the §YDecisions§! tab."
+        sea_enable_state_edicts_title:0 "Ability to Enable State Edicts: §RDisabled§!"
+        sea_enable_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
+        sea_enable_state_edicts_tt:0 "Clicking this, will §GEnable§! the ability to enact State Edicts."
 
     #Weaker Prussia:
         # Decision:
