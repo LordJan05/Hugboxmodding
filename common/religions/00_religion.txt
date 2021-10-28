@@ -181,16 +181,101 @@ christian = {
 						limit = {
 							tag = PAP
 						}
-						has_country_flag = papal_kingdom_flag
+						has_country_flag = sea_enable_swiss_guard_mercs
 					}
 				}
 				allow = {
 					if = {
 						limit = {
 							tag = PAP
+							has_institution = embracemonke
+						}
+						curia_treasury_size = 5200
+						NOT = { num_of_mercenaries = 182 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = industrialization
+						}
+						curia_treasury_size = 4400
+						NOT = { num_of_mercenaries = 154 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = enlightenment
+						}
+						curia_treasury_size = 3600
+						NOT = { num_of_mercenaries = 126 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = manufactories
+						}
+						curia_treasury_size = 2800
+						NOT = { num_of_mercenaries = 98 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = global_trade
 						}
 						curia_treasury_size = 2000
-						NOT = { num_of_mercenaries = 40 }
+						NOT = { num_of_mercenaries = 70 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = printing_press 
+						}
+						curia_treasury_size = 1200
+						NOT = { num_of_mercenaries = 42 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = new_world_i
+						}
+						curia_treasury_size = 800
+						NOT = { num_of_mercenaries = 28 }
+						any_owned_province = {
+							has_siege = no
+							controlled_by = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = renaissance
+						}
+						curia_treasury_size = 400
+						NOT = { num_of_mercenaries = 14 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -205,8 +290,338 @@ christian = {
 					if = {
 						limit = {
 							tag = PAP
+							has_institution = embracemonke
+						}
+						add_curia_treasury = -5200
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = industrialization
+						}
+						add_curia_treasury = -4400
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = enlightenment
+						}
+						add_curia_treasury = -3600
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = manufactories
+						}
+						add_curia_treasury = -2800
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = global_trade
 						}
 						add_curia_treasury = -2000
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = printing_press 
+						}
+						add_curia_treasury = -1200
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = new_world_i
+						}
+						add_curia_treasury = -800
+						if = {
+							limit = {
+								capital_scope = {
+									OR = {
+										has_siege = yes
+										NOT = { controlled_by = ROOT }
+									}
+								}
+							}
+							random_owned_province = {
+								limit = {
+									has_siege = no
+									controlled_by = ROOT
+								}
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+						else = {
+							capital_scope = {
+								custom_tooltip = pap_bless_monarch_tt
+								hidden_effect = {
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+									mercenary_infantry = ROOT
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PAP
+							has_institution = renaissance
+						}
+						add_curia_treasury = -400
 						if = {
 							limit = {
 								capital_scope = {

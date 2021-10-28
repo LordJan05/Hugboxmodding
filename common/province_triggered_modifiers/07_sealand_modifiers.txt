@@ -1,0 +1,14 @@
+# Vatican Library
+build_dev_vatican_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			tag = PAP
+		}
+	}
+	development_cost = -0.1
+	build_cost = -0.1
+	state_maintenance_modifier = -0.2
+}

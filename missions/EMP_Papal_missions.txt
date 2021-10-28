@@ -89,6 +89,10 @@ emp_pap_slot_1 = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = italian_trade_cities
+				duration = -1
+			}
 			venetia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -364,7 +368,7 @@ emp_pap_slot_2 = {
 		}
 		effect = {
 			set_country_flag = pap_swiss_guard_mission_flag
-			#custom_tooltip = emp_pap_swiss_guard_mercs_enabled
+			custom_tooltip = sea_emp_pap_swiss_guard_mercs_enabled
 			tooltip = {
 				add_country_modifier = {
 					name = "pap_papal_swiss_guard"

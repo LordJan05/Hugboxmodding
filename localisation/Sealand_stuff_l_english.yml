@@ -587,12 +587,17 @@
         sea_papal_events.2.b:0 "Have diplomatically focused Pope."
         sea_papal_events.2.c:0 "Have militarily focused Pope."
         sea_papal_events.2.e:0 "Have none chosen and keep the current Pope."
+        papacy_events.11.e:0 "Prioritize on the teachings of construction and development."
+        build_dev_vatican_library:0 "The Vatican Library - Development Edition"
+        build_dev_vatican_library_tt:0 "§YThe Vatican Library - Development Edition§! will be established in §Y[118.GetName]§!, giving the following effects:\nConstruction Cost: §G-10.0%§!\nDevelopment Cost: §G-10.0%§!\nState Maintenance: §G-20.0%§!"
+        sea_emp_pap_swiss_guard_mercs_enabled:0 "Enables '§YMay God Bless Us§!' Papacy action, which allows us to spawn §YSwiss Guards§!."
        # Papacy Modifiers:
-        pap_bless_monarch_tt:0 "Spawns 7 §YMercenary Regiments§!"
+        pap_bless_monarch_tt:0 "Spawns 7 §YSwiss Guard§!"
         sea_papal_sanction_for_church_taxes:0 "Papal Sanction for Increased Taxes"
         desc_sea_papal_sanction_for_church_taxes:0 "The papacy has sanctioned our right to tax the faithful of our nation for a period, boosting our tax income substantially."
         sea_usury_forgiven:0 "Usury Forgiven"
         desc_sea_usury_forgiven:0 "The Pope has officially forgiven us for the sin of Usury."
+        italian_trade_cities:0 "Italian Merchant Cities"
        # I don't even know:
         SEX:0 "PayPal States"
         SEX_ADJ:0 "PayPal"

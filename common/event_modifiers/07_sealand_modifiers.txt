@@ -216,6 +216,14 @@ sea_usury_forgiven = { # Papacy action for Pope
 	inflation_reduction = 0.2
 	religion = yes
 }
+italian_trade_cities = {
+	mercantilism_cost = -0.25
+}
+build_dev_vatican_library = {
+	development_cost = -0.1
+	build_cost = -0.1
+	state_maintenance_modifier = -0.2
+}
 ##########################################
 # Ottoman:
 reformed_janissary_alexandria_modifier = {

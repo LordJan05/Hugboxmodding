@@ -16,7 +16,6 @@ free_oarsmen =
 {
 	can_select = {
 		is_primitive = no
-		culture_group = iberian
 		NOT = { colony = 1 }
 	}
 

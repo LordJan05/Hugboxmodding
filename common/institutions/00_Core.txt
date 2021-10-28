@@ -478,7 +478,7 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			scale = yes
 			potential = {
 			}
@@ -691,6 +691,7 @@ new_world_i = {
 						continent = north_america
 						continent = south_america
 						continent = new_world
+						continent = oceania
 					}
 				}
 				any_subject_country = {
@@ -705,6 +706,7 @@ new_world_i = {
 							continent = north_america
 							continent = south_america
 							continent = new_world
+							continent = oceania
 						}
 					}
 				}
@@ -713,6 +715,7 @@ new_world_i = {
 				north_america = { has_discovered = PREV }
 				south_america = { has_discovered = PREV }
 				new_world = { has_discovered = PREV }
+				oceania = { has_discovered = PREV }
 			}
 		}
 	}
@@ -747,7 +750,7 @@ new_world_i = {
 		}
 		
 		modifier = {
-			factor = 0.7
+			factor = 0.5
 			scale = yes
 			potential = {
 				has_port = yes
@@ -766,25 +769,113 @@ new_world_i = {
 			}
 		}
 		modifier = { # Added
-			factor = 0.5
+			factor = 0.1
 			scale = yes
 			potential = {
 				has_port = yes
+				sea_zone = {
+					NOT = { region = mediterrenean_region }
+					NOT = { area = red_sea_area }
+					NOT = { area = baltic_area }
+				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = sea_tooltip_port_province_new_world
+				tooltip = sea_tooltip_port_open_sea_province_new_world
 				has_port = yes
+				sea_zone = {
+					NOT = { region = mediterrenean_region }
+					NOT = { area = red_sea_area }
+					NOT = { area = baltic_area }
+				}
 			}
 		}
 		modifier = { # Added
-			factor = 0.2
+			factor = 0.05
 			scale = yes
 			potential = {
-				has_port = no
+				has_port = yes
+				sea_zone = {
+					OR = {
+						region = mediterrenean_region
+						area = red_sea_area
+						area = baltic_area
+					}
+				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = sea_tooltip_no_port_province_new_world
-				has_port = no
+				tooltip = sea_tooltip_port_inland_sea_province_new_world
+				has_port = yes
+				sea_zone = {
+					OR = {
+						region = mediterrenean_region
+						area = red_sea_area
+						area = baltic_area
+					}
+				}
+			}
+		}
+		modifier = { # Added
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_port = yes
+				sea_zone = {
+					NOT = { region = mediterrenean_region }
+					NOT = { area = red_sea_area }
+					NOT = { area = baltic_area }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_port_7_dev_open_sea_province_new_world
+				has_port = yes
+				sea_zone = {
+					NOT = { region = mediterrenean_region }
+					NOT = { area = red_sea_area }
+					NOT = { area = baltic_area }
+				}
+				development = 7
+			}
+		}
+		modifier = { # Added
+			factor = 2
+			scale = no
+			potential = {
+				#OR = {
+					has_port = no
+					#sea_zone = {
+					#	OR = {
+					#		region = mediterrenean_region
+					#		area = red_sea_area
+					#		area = baltic_area
+					#	}
+					#}
+				#}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_no_port_20_dev_province_new_world
+				#OR = {
+					has_port = no
+					#sea_zone = {
+					#	OR = {
+					#		region = mediterrenean_region
+					#		area = red_sea_area
+					#		area = baltic_area
+					#	}
+					#}
+				#}
+				development = 20
+			}
+		}
+		modifier = { # Added
+			factor = 3
+			scale = no
+			potential = {
+				province_has_center_of_trade_of_level = 1
+				NOT = {  }
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_tooltip_level_3_cot_province_new_world
+				province_has_center_of_trade_of_level = 3
 			}
 		}
 		

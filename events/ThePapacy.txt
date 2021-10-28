@@ -40,6 +40,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = enable_swiss_guard
+			set_country_flag = sea_enable_swiss_guard_mercs
 		}
 	}
 	
@@ -49,7 +50,7 @@ country_event = {
 	
 	option = {
 		name = papacy_events.1.a
-		#custom_tooltip = emp_pap_swiss_guard_mercs_enabled
+		custom_tooltip = sea_emp_pap_swiss_guard_mercs_enabled
 		add_country_modifier = {
 			name = "pap_papal_swiss_guard"
 			duration = -1
@@ -408,6 +409,14 @@ country_event = {
 		custom_tooltip = mil_vatican_library_tt
 		118 = {
 			add_province_triggered_modifier = mil_vatican_library
+		}
+	}
+	option = {
+		goto = 118
+		name = papacy_events.11.e
+		custom_tooltip = build_dev_vatican_library_tt
+		118 = {
+			add_province_triggered_modifier = build_dev_vatican_library
 		}
 	}
 }

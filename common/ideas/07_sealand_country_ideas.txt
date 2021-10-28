@@ -535,7 +535,7 @@ sea_BYS_ideas = { # Barbary States
 		privateer_efficiency = 0.15
 	}
 	bys_tuareg_cavalry = {
-		cavalry_power = 0.2
+		cavalry_power = 0.25
 		cavalry_cost = -0.1
 	}
 	bys_dual_diplomacy = {
@@ -544,7 +544,7 @@ sea_BYS_ideas = { # Barbary States
 	}
 	bys_brothers_barbarossa = {
 		galley_power = 0.20
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 }	
 

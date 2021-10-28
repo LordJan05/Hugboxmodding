@@ -6730,16 +6730,19 @@ pap_swiss_guard = {
 	global_manpower_modifier = 0.1
 }
 mil_vatican_library = {
-	mil_tech_cost_modifier = -0.05
-	army_tradition_from_battle = 0.5
+	yearly_army_professionalism = 0.01 # 0.1% monthly
+	army_tradition_from_battle = 1
+	reinforce_speed = 0.5
 }
 dip_vatican_library = {
-	dip_tech_cost_modifier = -0.05
-	diplomatic_reputation = 1
+	technology_cost = -0.1
+	idea_cost = -0.1
+	possible_policy = 1
 }
 adm_vatican_library = {
-	adm_tech_cost_modifier = -0.05
-	global_unrest = -2
+	administrative_efficiency = 0.05
+	interest = -1
+	monthly_splendor = 5
 }
 pap_sistine_chapel = {
 	devotion = 0.1

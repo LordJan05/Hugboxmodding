@@ -74,7 +74,7 @@ change_estate_land_share = {
 
 1431.2.20 = {
 	monarch = {
-		name = "Eugenius IV"
+		name = "John Paul II"
 		culture = venetian
 		birth_date = 1383.1.1
 		adm = 1

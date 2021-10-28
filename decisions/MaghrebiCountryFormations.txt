@@ -13,6 +13,7 @@ country_decisions = {
 			NOT = { tag = MOR }
 			NOT = { was_tag = MOR }
 			NOT = { tag = TUN }
+			NOT = { was_tag = TUN }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = BYS }
@@ -309,6 +310,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { tag = MOR }
+			NOT = { was_tag = MOR }
 			NOT = { tag = TUN }
 			NOT = { was_tag = TUN }
 			NOT = { tag = PAP }
