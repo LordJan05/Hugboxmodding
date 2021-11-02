@@ -7,7 +7,7 @@ edict_centralization_effort = {
 		always = yes
 		custom_trigger_tooltip = {
 			tooltip = sea_remove_state_edicts_flag_tt
-			NOT = { has_country_flag = sea_remove_state_edicts_flag }
+			NOT = { has_country_flag = sea_state_edicts_flag }
 		}
 	}
 	

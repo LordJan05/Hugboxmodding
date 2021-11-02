@@ -2668,8 +2668,7 @@ mlo_lombard_renaissance = {
 }
 
 mlo_the_swiss_mercs = {
-	mercenary_cost = -0.1
-	mercenary_discipline = 0.05
+	infantry_cost = -0.1
 }
 
 mlo_capital_of_italy = {

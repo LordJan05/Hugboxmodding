@@ -364,7 +364,7 @@ swiss_missions_3 = {
 		}
 		effect = {
 			add_mil_power = 150
-			custom_tooltip = emp_swi_mercenaries_merc_tt
+			#custom_tooltip = emp_swi_mercenaries_merc_tt
 		}
 	}
 	emp_swi_swabia = {

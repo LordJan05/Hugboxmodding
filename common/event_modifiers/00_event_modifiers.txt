@@ -6730,7 +6730,7 @@ pap_swiss_guard = {
 	global_manpower_modifier = 0.1
 }
 mil_vatican_library = {
-	yearly_army_professionalism = 0.01 # 0.1% monthly
+	yearly_army_professionalism = 0.01 # 1% yearly
 	army_tradition_from_battle = 1
 	reinforce_speed = 0.5
 }

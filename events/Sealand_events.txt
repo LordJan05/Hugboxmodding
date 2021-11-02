@@ -1245,8 +1245,25 @@ country_event = { # new ruler choosing.
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		if = {
+			limit = {
+				has_country_flag = pope_got_elected_no_need_another_event
+			}
+			had_country_flag = {
+				flag = pope_got_elected_no_need_another_event
+				days = 3
+			}
+		}
+	}
 	
 	immediate = {
+		if = {
+			limit = {
+				has_country_flag = pope_got_elected_no_need_another_event
+			}
+			clr_country_flag = pope_got_elected_no_need_another_event
+		}
 		hidden_effect = {
 			define_exiled_ruler = {
 				exiled_as = pope_candidate_a_@ROOT
@@ -1289,6 +1306,7 @@ country_event = { # new ruler choosing.
 
 	option = {
 		name = sea_papal_events.2.a
+		set_country_flag = pope_got_elected_no_need_another_event
 		ai_chance = {
 			factor = 0
 		}
@@ -1305,6 +1323,7 @@ country_event = { # new ruler choosing.
 	}
 	option = {
 		name = sea_papal_events.2.b
+		set_country_flag = pope_got_elected_no_need_another_event
 		ai_chance = {
 			factor = 0
 		}
@@ -1322,6 +1341,7 @@ country_event = { # new ruler choosing.
 	}
 	option = {
 		name = sea_papal_events.2.c
+		set_country_flag = pope_got_elected_no_need_another_event
 		ai_chance = {
 			factor = 0
 		}
@@ -1339,6 +1359,7 @@ country_event = { # new ruler choosing.
 	}
 	option = {
 		name = sea_papal_events.2.e
+		set_country_flag = pope_got_elected_no_need_another_event
 		ai_chance = {
 			factor = 1
 		}
