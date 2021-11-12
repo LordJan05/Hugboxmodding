@@ -689,7 +689,7 @@ mil_vatican_library = {
 			tag = PAP
 		}
 	}
-	yearly_army_professionalism = 0.01 # 0.1% monthly
+	yearly_army_professionalism = 0.0033 # 0.1% monthly
 	army_tradition_from_battle = 1
 	reinforce_speed = 0.5
 }
