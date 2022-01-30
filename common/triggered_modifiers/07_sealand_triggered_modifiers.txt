@@ -13,7 +13,7 @@ livgardet_modifier = {
 	land_morale = 0.05
 	army_tradition = 1
 }
-
+##########################################
 # Denmark:
 gryf_prevailed_modifier = {
 	potential = {
@@ -46,6 +46,7 @@ great_viking_army_modifier = {
 	shock_damage = 0.1
 	prestige_from_land = 0.5
 }
+##########################################
 # Norway:
 do_a_little_raiding_modifier = {
 	potential = {
@@ -73,7 +74,7 @@ norwegian_army_modifier = {
 	infantry_power = 0.2
 	discipline = 0.025
 }
-
+##########################################
 # Swazi:
 # 1 tier:
 swz_autotax_modifier = {
@@ -143,7 +144,7 @@ swz_profdril_modifier = {
 			mission_completed = swz_right_2_middle
 		}
 	}
-	yearly_army_professionalism = 0.005
+	yearly_army_professionalism = 0.003
 	drill_decay_modifier = -0.5
 }
 # 3 tier:
@@ -245,36 +246,26 @@ swz_disc_modifier = {
 	}
 	discipline = 0.05
 }
-
-# Africa:
-colonize_congo_basin = {
+##########################################
+# Electors
+sea_elector_splendor_modifier = {
 	potential = {
-		OR = {
-			technology_group = east_african
-			technology_group = central_african
-			technology_group = sub_saharan
-		}
+		is_elector = yes
 	}
 	trigger = {
-		ai = no
-		capital_scope = {
-			continent = africa
-		}
-		NOT = { has_idea = colonial_ventures }
-		NOT = { has_idea = additional_colonists }
-		NOT = { has_idea = swz_origin_of_first_human_1 }
-		NOT = { tag = MAL }
-		OR = {
-			trade_company_ubangian_charter = {
-				is_city = no
-			}
-			middle_africa_region = {
-				is_city = no
-			}
-			gulf_of_guinea_area = {
-				is_city = no
-			}
-		}
+		is_elector = yes
 	}
-	colonists = 1
+	monthly_splendor = 2
+}
+##########################################
+# France:
+sea_fra_elan_modifier = {
+	potential = {
+		tag = FRA
+	}
+	trigger = {
+		mission_completed = emp_fra_conquer_picardy_fra
+	}
+	land_morale = 0.05
+	prestige = 1
 }

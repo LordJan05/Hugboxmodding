@@ -13,39 +13,7 @@ defender_of_faith_1 = {
 		missionary_maintenance_cost = -0.1
 	}
 	ai_will_do = {
-		factor = 0.1
-		modifier = {
-			factor = 0.75
-			full_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			full_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 20
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -64,39 +32,7 @@ defender_of_faith_2 = {
 		missionary_maintenance_cost = -0.1
 	}
 	ai_will_do = {
-		factor = 0.2
-		modifier = {
-			factor = 0.75
-			full_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			full_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 15
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -111,39 +47,7 @@ defender_of_faith_3 = {
 		prestige = 1
     }
 	ai_will_do = {
-		factor = 0.5
-		modifier = {
-			factor = 0.75
-			full_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			full_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -160,39 +64,7 @@ defender_of_faith_4 = {
 		manpower_in_true_faith_provinces = 0.1
     }
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			full_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			full_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -208,38 +80,6 @@ defender_of_faith_5 = {
 		manpower_in_true_faith_provinces = 0.2
     }
 	ai_will_do = {
-		factor = 1.5
-		modifier = {
-			factor = 0.75
-			full_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			full_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
+		factor = 0
 	}
 }

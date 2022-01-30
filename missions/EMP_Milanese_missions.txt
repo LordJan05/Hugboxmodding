@@ -14,9 +14,23 @@ emp_mlo_conquest_branch = {
 	}
 	has_country_shield = yes
 	
+	sea_mlo_march_on_coast = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			101 = {
+				add_core = ROOT
+			}
+		}
+	}
 	emp_mlo_subdue_genoa = {
 		icon = mission_dominate_genoa
-		required_missions = { }
+		required_missions = { sea_mlo_march_on_coast }
 		provinces_to_highlight = {
 			province_id = 101
 			NOT = { country_or_non_sovereign_subject_holds = root }
@@ -41,6 +55,13 @@ emp_mlo_conquest_branch = {
 					key = mlo_taken_genoa
 				}
 			}
+			if = {
+				limit = {
+					has_reform = ambrosian_republic
+				}
+				custom_tooltip = ambrosian_to_ambrosian_merchants_tt
+			}
+			set_country_flag = ambrosian_to_ambrosian_merchants_flag
 
 			emilia_romagna_area = {
 				limit = {

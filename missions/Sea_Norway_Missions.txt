@@ -1123,7 +1123,7 @@ sealand_norway_missions_2 = {
 			}
 			is_at_war = no
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 50
+				value = 35
 				OR = {
 					region = canada_region 
 					region = northeast_america_region 

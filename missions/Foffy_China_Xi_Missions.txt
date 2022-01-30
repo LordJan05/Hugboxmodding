@@ -10,6 +10,7 @@ h_cxi_col_war1_2 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -27,6 +28,7 @@ h_cxi_col_war1_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -43,6 +45,7 @@ h_cxi_col_war3_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -62,6 +65,7 @@ h_cxi_col_war3_4 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -94,6 +98,7 @@ h_cxi_col_war3_4 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -124,6 +129,7 @@ h_cxi_col_war1_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -322,6 +328,7 @@ h_cxi_col_war2_2 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -341,6 +348,7 @@ h_cxi_col_war2_2 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -388,6 +396,7 @@ h_cxi_col_war2_2 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -429,6 +438,7 @@ h_cxi_col_war2_2 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -470,6 +480,7 @@ h_cxi_col_war2_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -490,6 +501,7 @@ h_cxi_col_war2_4 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -540,6 +552,7 @@ h_cxi_col_war2_4 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -573,6 +586,7 @@ h_cxi_col_war2_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -589,6 +603,7 @@ h_cxi_col_war2_3 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -621,6 +636,7 @@ h_cxi_col_war2_5 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -637,6 +653,7 @@ h_cxi_col_war2_5 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -687,6 +704,7 @@ h_cxi_col_war3_5 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -702,6 +720,7 @@ h_cxi_col_war3_5 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -751,6 +770,7 @@ h_cxi_col_war3_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -766,6 +786,7 @@ h_cxi_col_war3_3 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {

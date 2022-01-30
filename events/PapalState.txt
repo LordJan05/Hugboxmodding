@@ -12,9 +12,9 @@ country_event = {
 		religion = catholic
 		NOT = { tag = ITA }
 		NOT = { tag = ROM }
+		NOT = { tag = HLR }
 		NOT = { exists = PAP }
 		NOT = { has_country_flag = no_support }
-		ai = yes
 	}
 	
 	mean_time_to_happen = {
@@ -54,7 +54,7 @@ country_event = {
 		name = "EVTOPTA1081" # We will never support such a state
 		ai_chance = { factor = 25 }
 		add_prestige = -10
-		add_stability = -1
+		#add_stability = -1
 		every_country = {
 			limit = {
 				religion = catholic
@@ -119,7 +119,6 @@ country_event = {
 				OR = {
 					NOT = { religion = catholic }
 					has_country_flag = no_support
-					ai = no
 				}
 			}
 		}

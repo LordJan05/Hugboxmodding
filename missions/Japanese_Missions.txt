@@ -210,6 +210,7 @@ japanse_missions_china = {
 	ai = yes
 	potential = {
 		OR = {
+			has_reform = indep_daimyo
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
@@ -249,6 +250,14 @@ japanse_missions_china = {
 		}
 		trigger = {
 			OR = {
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = SMZ
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = UES
+				}
 				has_reform = shogunate
 				tag = JAP
 			}
@@ -322,6 +331,14 @@ japanse_missions_china = {
 		}
 		trigger = {
 			OR = {
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = SMZ
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = UES
+				}
 				has_reform = shogunate
 				tag = JAP
 			}
@@ -376,7 +393,17 @@ japanse_missions_china = {
 		}
 		
 		trigger = {
-			tag = JAP
+			OR = {
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = SMZ
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = UES
+				}
+				tag = JAP
+			}
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
@@ -526,6 +553,7 @@ japanse_missions_the_empire = {
 	ai = yes
 	potential = {
 		OR = {
+			has_reform = indep_daimyo
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
@@ -554,6 +582,14 @@ japanse_missions_the_empire = {
 		
 		trigger = {
 			OR = {
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = SMZ
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = UES
+				}
 				has_reform = shogunate
 				tag = JAP
 			}
@@ -738,6 +774,7 @@ japanse_missions_domestic = {
 	ai = yes
 	potential = {
 		OR = {
+			has_reform = indep_daimyo
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP
@@ -786,7 +823,17 @@ japanse_missions_domestic = {
 			}
 		}
 		trigger = {
-			tag = JAP
+			OR = {
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = SMZ
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = UES
+				}
+				tag = JAP
+			}
 			hokuriku_area = {
 				type = all
 				owned_by = ROOT
@@ -957,6 +1004,7 @@ japanse_missions_economic = {
 	ai = yes
 	potential = {
 		OR = {
+			has_reform = indep_daimyo
 			has_reform = daimyo
 			has_reform = shogunate
 			tag = JAP

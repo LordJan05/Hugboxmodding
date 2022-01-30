@@ -16,6 +16,20 @@ historical_idea_groups = {
 	quantity_ideas
 }
 
+historical_units = {
+	indian_footsoldier
+	rajput_hill_fighters
+	indian_arquebusier
+	south_indian_musketeer
+	reformed_mughal_musketeer
+	indian_elephant
+	bhonsle_infantry
+	indian_shock_cavalry
+	maharathan_guerilla_warfare
+	sikh_rifle
+	tipu_sultan_rocket
+}
+
 monarch_names = {
 	"Pranab #0" = 20
 	"Pratibha #0" = 20
@@ -39,18 +53,12 @@ leader_names = {
 	Ahom
 }
 
-historical_units = {
-	indian_footsoldier
-	rajput_hill_fighters
-	indian_arquebusier
-	south_indian_musketeer
-	reformed_mughal_musketeer
-	indian_elephant
-	bhonsle_infantry
-	indian_shock_cavalry
-	maharathan_guerilla_warfare
-	sikh_rifle
-	tipu_sultan_rocket
+ship_names = {
+	Amirtha Amman Arul Bharatapuza
+	Bhavani Bhima Chellam Devi Durga
+	Gayatri Godavari Iniya Kabani
+	Kaveri Krishna Lakshmi Madhu
+	Meenakshi Nalini Pambar Parvati
+	Periyar Ponni Radha Ratri Sarasvati
+	Sita Tamarai Tungabhadra
 }
-
-capital = 542 # Golconda

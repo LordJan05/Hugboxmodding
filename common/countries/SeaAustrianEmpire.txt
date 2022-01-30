@@ -2,7 +2,7 @@
 
 graphical_culture = westerngfx
 
-color = { 200 200 200 }
+color = { 200 166 0 }
 
 revolutionary_colors = { 5  0  5 } # Copy of Austria
 

@@ -390,7 +390,7 @@ emp_hun_economy_political_branch = {
 				AND = {
 					province_id = 134
 					ROOT = {
-						capital_scope = {
+						153 = {
 							NOT = {
 								higher_development_than = 134
 							}
@@ -400,7 +400,7 @@ emp_hun_economy_political_branch = {
 				AND = {
 					province_id = 266
 					ROOT = {
-						capital_scope = {
+						153 = {
 							NOT = {
 								higher_development_than = 266
 							}
@@ -410,13 +410,13 @@ emp_hun_economy_political_branch = {
 			}
 		}
 		trigger = {
-			capital_scope = {
+			153 = {
 				higher_development_than = 134
 				higher_development_than = 266
 			}
 		}
 		effect = {
-			capital_scope = {
+			153 = {
 				add_province_modifier = {
 					name = hun_great_city
 					duration = 7300

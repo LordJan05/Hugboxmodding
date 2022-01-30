@@ -351,6 +351,7 @@ emp_pap_slot_2 = {
 		}
 
 		trigger = {
+			has_institution = renaissance
 			OR = {
 				any_owned_province = {
 					OR = {
@@ -1183,9 +1184,22 @@ emp_pap_slot_4 = {
 			if = {
 				limit = { has_dlc = "Leviathan" }
 				118 = {
-					add_great_project_tier = {
-						type = stpeters_cathedral
-						tier = 1
+					if = {
+						limit = {
+							NOT = {
+								has_great_project = {
+									type = stpeters_cathedral
+									tier = 3
+								}
+							}
+						}
+						add_great_project_tier = {
+							type = stpeters_cathedral
+							tier = 1
+						}
+					}
+					else = {
+						add_base_tax = 3
 					}
 				}
 			}

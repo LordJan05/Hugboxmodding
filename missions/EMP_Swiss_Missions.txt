@@ -423,12 +423,12 @@ swiss_missions_4 = {
 		provinces_to_highlight = {
 			has_terrain = mountain
 			owned_by = ROOT
-			NOT = { fort_level = 3 }
+			NOT = { fort_level = 2 }
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 2
-				fort_level = 3
+				value = 3
+				fort_level = 2
 				has_terrain = mountain
 			}
 		}

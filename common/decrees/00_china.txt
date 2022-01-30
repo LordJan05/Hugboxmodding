@@ -1,0 +1,99 @@
+# cost is the Meritocracy cost
+# duration is in days
+# ai_will_do has to be 10 for AI to do it (with >=99 Meritocracy).
+
+expand_bureaucracy_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		development_cost = -0.05
+		build_cost = -0.1
+		province_warscore_cost = -0.25
+		unjustified_demands = -0.25
+		imperial_mandate = 0.15
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+conduct_census_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		global_tax_modifier = 0.3
+		administrative_efficiency = 0.05
+		global_monthly_devastation = -0.1
+		global_prosperity_growth = 0.1
+		global_autonomy = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+promote_naval_officers_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		ship_durability = 0.1
+		naval_morale = 0.1
+		own_coast_naval_combat_bonus = 1
+		allowed_marine_fraction = 1
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+		leader_naval_shock = 1
+		global_ship_recruit_speed = -0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+increase_tariff_control_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		global_prov_trade_power_modifier = 0.25
+		production_efficiency = 0.25
+		global_tariffs = 0.25
+		embargo_efficiency = 0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+improve_defence_effort_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		defensiveness = 0.25
+		garrison_size = 0.25
+		reinforce_speed = 0.2
+		hostile_attrition = 2
+		global_regiment_recruit_speed = -0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+boost_officer_corps_decree = {
+	cost = 40
+	duration = 3650
+	modifier = {
+		army_tradition_from_battle = 0.5
+		yearly_army_professionalism = 0.0033
+		leader_land_fire = 1
+		leader_land_manuever = 1
+		leader_land_shock = 1
+		leader_siege = 1
+		free_leader_pool = 1
+		drill_gain_modifier = 0.5
+		drill_decay_modifier = -0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,6 +1,6 @@
 # Sealand
-government = monarchy
-add_government_reform = iqta
+government = republic
+add_government_reform = barbary_states_reform
 primary_culture = berber
 add_accepted_culture = moroccan
 add_accepted_culture = tunisian

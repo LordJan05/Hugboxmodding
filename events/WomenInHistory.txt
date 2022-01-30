@@ -1,7 +1,7 @@
 ########################################
 # Events for Women in History
 #
-# written by Sara Wendel-Ã–rtqvist
+# written by Sara Wendel-Örtqvist
 ########################################
 
 namespace = women_history_events
@@ -57,7 +57,6 @@ country_event = {
 			name = "Elizabeth"
 			dynasty = "Tudor"
 			culture = english
-			fixed = yes
 			adm = 6
 			dip = 6
 			mil = 5
@@ -141,7 +140,6 @@ country_event = {
 		define_ruler = {
 			name = "Yekaterina"
 			dynasty = "Romanov"
-			fixed = yes
 			adm = 6
 			dip = 6
 			mil = 5
@@ -178,7 +176,7 @@ country_event = {
 	}
 }
 
-# KÃ¶sem Sultan (1590-1651)
+# Kösem Sultan (1590-1651)
 country_event = {
 	id = women_history_events.3
 	title = women_history_events.3.t
@@ -224,10 +222,9 @@ country_event = {
 				NOT = { has_dlc = "Rights of Man" }
 			}
 			define_ruler = {
-				name = "KÃ¶sem Sultan"
+				name = "Kösem Sultan"
 				dynasty = "Osmanoglu"
 				culture = ruthenian
-				fixed = yes
 				adm = 5
 				dip = 4
 				mil = 5
@@ -247,7 +244,7 @@ country_event = {
 				has_government_attribute = queen
 			}
 			define_consort = {
-				name = "KÃ¶sem Sultan"
+				name = "Kösem Sultan"
 				culture = ruthenian
 				adm = 5
 				dip = 4
@@ -260,10 +257,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				name = "KÃ¶sem Sultan"
+				name = "Kösem Sultan"
 				dynasty = "Osmanoglu"
 				culture = ruthenian
-				fixed = yes
 				adm = 5
 				dip = 4
 				mil = 5
@@ -339,7 +335,6 @@ country_event = {
 			name = "Maria Theresia"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 5
 			dip = 5
 			mil = 4
@@ -475,7 +470,6 @@ country_event = {
 			dynasty = "Vasa"
 			female = yes
 			culture = swedish
-			fixed = yes
 			adm = 2
 			dip = 3
 			mil = 3
@@ -510,7 +504,7 @@ country_event = {
 	}
 }
 
-# Germaine de StaÃ«l (1766-1817)
+# Germaine de Staël (1766-1817)
 country_event = {
 	id = women_history_events.7
 	title = women_history_events.7.t
@@ -544,7 +538,7 @@ country_event = {
 			culture = swiss
 			discount = yes
 			skill = 2
-			name = "Germaine de StaÃ«l"
+			name = "Germaine de Staël"
 		}
 
 	}
@@ -557,7 +551,7 @@ country_event = {
 			culture = swiss
 			discount = yes
 			skill = 2
-			name = "Germaine de StaÃ«l"
+			name = "Germaine de Staël"
 		}
 	}
 }
@@ -771,7 +765,7 @@ country_event = {
 		add_meritocracy_effect = yes
 		define_heir = {
 			name = "Isabel"
-			dynasty = "de TrastÃ¡mara"
+			dynasty = "de Trastámara"
 			culture = castillian
 			claim = 95
 			adm = 5
@@ -779,13 +773,12 @@ country_event = {
 			mil = 3
 			age = 23
 			female = yes
-			fixed = yes
 		}
 		if = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality_ancestor = { key = expansionist } }	
+			hidden_effect = { add_heir_personality_ancestor = { key = expansionist } }	
 		}
 	}
 	option = {
@@ -800,7 +793,7 @@ country_event = {
 			discount = yes
 			skill = 2
 			culture = castillian
-			name = "Isabel de TrastÃ¡mara"
+			name = "Isabel de Trastámara"
 		}
 	}
 }
@@ -955,7 +948,6 @@ country_event = {
 			name = "Catherine"
 			dynasty = "de' Medici"
 			culture = tuscan
-			fixed = yes
 			adm = 4
 			dip = 2
 			mil = 3
@@ -1029,7 +1021,6 @@ country_event = {
 		define_ruler = {
 			name = "Amalie Elisabeth"
 			culture = hessian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 2
@@ -1253,7 +1244,6 @@ country_event = {
 	option = {
 		name = women_history_events.18.a
 		define_ruler = {
-			fixed = yes
 			name = "Jeanne"
 			dynasty = "d'Albret"
 			culture = basque
@@ -1297,7 +1287,18 @@ country_event = {
 	id = women_history_events.19
 	title = women_history_events.19.t
 	desc = women_history_events.19.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = {
+		trigger = {
+			has_dlc = "Origins"
+		}
+		picture = NZINGHA_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "Origins" }
+		}
+		picture = wihgfx_FEMALE_RULER_eventPicture
+	}
 
 	trigger = {
 		tag = NDO
@@ -1335,13 +1336,12 @@ country_event = {
 	option = {
 		name = women_history_events.19.a
 		define_ruler = {
-			fixed = yes
 			name = "Nzinga Mbandi"
 			dynasty = "Ngola"
 			culture = kongolese
-			DIP = 3
-			ADM = 2
-			MIL = 3
+			DIP = 5
+			ADM = 5
+			MIL = 5
 		}
 		if = {
 			limit = {
@@ -1416,7 +1416,6 @@ country_event = {
 	option = {
 		name = women_history_events.20.a
 		define_ruler = {
-			fixed = yes
 			name = "Tarabai"
 			culture = marathi
 			dynasty = "Mohite"
@@ -1503,7 +1502,7 @@ country_event = {
 	}
 }
 
-# GrÃ¡inne NÃ­ MhÃ¡ille
+# Gráinne Ní Mháille
 country_event = {
 	id = women_history_events.22
 	title = women_history_events.22.t
@@ -1585,7 +1584,6 @@ country_event = {
 			adm = 3
 			dip = 4
 			mil = 5
-			fixed = yes
 			culture = irish
 		}
 		if = {
@@ -1885,7 +1883,6 @@ country_event = {
 			name = "Margaret"
 			dynasty = "d'Anjou"
 			culture = cosmopolitan_french
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -1944,7 +1941,7 @@ country_event = {
 	}
 }
 
-# Louise of Mecklenburg-Strelitz (1776 â€“ 1810)
+# Louise of Mecklenburg-Strelitz (1776 – 1810)
 country_event = {
 	id = women_history_events.28
 	title = women_history_events.28.t
@@ -2038,7 +2035,6 @@ country_event = {
 	option = {
 		name = women_history_events.29.a
 		define_ruler = { #Change to Queen
-			fixed = yes
 			name = "Ayse Hafsa Sultan"
 			dynasty = "Osmanoglu"
 			culture = crimean
@@ -2121,7 +2117,6 @@ country_event = {
 			name = "Roshanara Begum"
 			dynasty = "Timurid"
 			culture = kanauji
-			fixed = yes
 			adm = 3
 			dip = 2
 			mil = 4
@@ -2162,7 +2157,7 @@ country_event = {
 	}
 }
 
-# Abigail Adams (1744 â€“ 1818)
+# Abigail Adams (1744 – 1818)
 country_event = {
 	id = women_history_events.31
 	title = women_history_events.31.t
@@ -2283,7 +2278,6 @@ country_event = {
 			name = "Abbakka"
 			dynasty = "Chowta"
 			culture = kannada
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -2312,7 +2306,7 @@ country_event = {
 	}
 }
 
-# Sacagawea (1787? â€“ 1812)
+# Sacagawea (1787? – 1812)
 country_event = {
 	id = women_history_events.33
 	title = women_history_events.33.t
@@ -2412,7 +2406,6 @@ country_event = {
 			name = "Pari Khan Khanum"
 			dynasty = "Safavid"
 			culture = persian
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -2549,7 +2542,6 @@ country_event = {
 		define_ruler = {
 			name = "Amina"
 			dynasty = "Zazzau"
-			fixed = yes
 			culture = hausa
 			dip = 4
 			adm = 5
@@ -2607,7 +2599,9 @@ country_event = {
 			is_year = 1650
 		}
 		is_female = no
+		has_regency = yes
 		is_lesser_in_union = no
+		government = monarchy
 		NOT = {
 			has_global_flag = wih_mandukhaikhatun_flag
 		}
@@ -2642,7 +2636,6 @@ country_event = {
 		define_ruler = {
 			name = "Mandukhai Khatun"
 			dynasty = "Borjigin"
-			fixed = yes
 			dip = 4
 			adm = 5
 			mil = 6
@@ -2770,7 +2763,6 @@ country_event = {
 			name = "Inion Dubh"
 			dynasty = "Dhomhnaill"
 			culture = irish
-			fixed = yes
 			dip = 4
 			adm = 5
 			mil = 4
@@ -2843,7 +2835,6 @@ country_event = {
 			name = "Durgavati"
 			dynasty = "Garha-Mandli"
 			culture = gondi
-			fixed = yes
 			ADM = 3
 			DIP = 4
 			MIL = 5
@@ -3243,7 +3234,7 @@ country_event = {
 	}
 }
 
-# Empress Dowager Xiaozhuang (1613 â€“ 1688)
+# Empress Dowager Xiaozhuang (1613 – 1688)
 country_event = {
 	id = women_history_events.48
 	title = women_history_events.48.t
@@ -3297,7 +3288,6 @@ country_event = {
 		define_ruler = {
 			name = "Xiaozhuang"
 			dynasty = "Aisin Gioro"
-			fixed = yes
 			culture = chihan
 			adm = 4
 			dip = 4
@@ -3319,7 +3309,7 @@ country_event = {
 	}
 }
 
-# InÃ©s de SuÃ¡rez
+# Inés de Suárez
 country_event = {
 	id = women_history_events.49
 	title = women_history_events.49.t
@@ -3629,7 +3619,6 @@ country_event = {
 		define_ruler = {
 			name = "Ilona"
 			dynasty = "Zrinyi"
-			fixed = yes
 			culture = croatian
 			adm = 3
 			dip = 4
@@ -4218,7 +4207,6 @@ country_event = {
 			name = "Mary"
 			dynasty = "von Habsburg"
 			culture = hungarian
-			fixed = yes
 			adm = 4
 			dip = 5
 			mil = 3
@@ -4292,7 +4280,6 @@ country_event = {
 			name = "Margaret"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 3
@@ -4373,7 +4360,6 @@ country_event = {
 			name = "Isabella Clara Eugenia"
 			dynasty = "von Habsburg"
 			culture = castillian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 3
@@ -4457,7 +4443,6 @@ country_event = {
 			name = "Urszula"
 			dynasty = "Meyerin"
 			culture = bavarian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 2
@@ -4541,7 +4526,6 @@ country_event = {
 			name = "Elzbieta Helena"
 			dynasty = "Sieniawska"
 			culture = polish
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 2
@@ -4633,7 +4617,6 @@ country_event = {
 			name = "Marie Louise"
 			dynasty = "Gonzaga"
 			culture = burgundian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 2
@@ -4713,7 +4696,6 @@ country_event = {
 			name = "Maria Carolina"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -5073,7 +5055,6 @@ country_event = {
 			name = "Tun Fatimah"
 			dynasty = "Srivijaya"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -5149,7 +5130,6 @@ country_event = {
 			name = "Khayr al-Nisa Begum"
 			dynasty = "Safavid" #Marashi
 			culture = mazandarani
-			fixed = yes
 			adm = 5
 			dip = 4
 			mil = 2
@@ -5225,7 +5205,6 @@ country_event = {
 			name = "Sophia"
 			dynasty = "Romanov"
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -5415,7 +5394,6 @@ country_event = {
 		define_ruler = {
 			name = "Ratu Hijau"
 			dynasty = "Inland"
-			fixed = yes
 			culture = malayan
 			adm = 4
 			dip = 3
@@ -5455,7 +5433,6 @@ country_event = {
 			name = "Ratu Biru"
 			dynasty = "Inland"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -5495,7 +5472,6 @@ country_event = {
 			name = "Ratu Ingu"
 			dynasty = "Inland"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -5574,7 +5550,6 @@ country_event = {
 		define_ruler = {
 			name = "Rani Mangammal"
 			dynasty = "Nayak"
-			fixed = yes
 			culture = tamil
 			adm = 4
 			dip = 3
@@ -5779,7 +5754,6 @@ country_event = {
 			name = "Nur Jahan"
 			dynasty = "Timurid"
 			culture = afghani
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 4
@@ -6106,7 +6080,6 @@ country_event = {
 			name = "Ahilyabai"
 			dynasty = "Holkar"
 			culture = marathi
-			fixed = yes
 			ADM = 6
 			DIP = 4
 			MIL = 2
@@ -6296,7 +6269,6 @@ country_event = {
 		define_ruler = {
 			name = "Mentewab"
 			dynasty = "Solomonid"
-			fixed = yes
 			culture = amhara
 			adm = 3
 			dip = 4
@@ -6491,7 +6463,6 @@ country_event = {
 			name = "Elizaveta"
 			dynasty = "Romanov"
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -6583,7 +6554,6 @@ country_event = {
 			name = "Anna"
 			dynasty = Romanov
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 2
@@ -6674,7 +6644,6 @@ country_event = {
 			define_ruler = {
 				name = "Nurbanu Sultan"
 				dynasty = "Osmanoglu"
-				fixed = yes
 				culture = greek
 				religion = sunni
 				adm = 4

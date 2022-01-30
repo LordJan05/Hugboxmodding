@@ -5,8 +5,16 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			OR = {
-				was_never_end_game_tag_trigger = yes
 				tag = PRU
+				tag = BAV
+				tag = POM
+				tag = FKN
+				tag = SWA
+				tag = SAX
+				tag = HAN
+				tag = WES
+				tag = SWI
+				tag = HAB
 			}
 			NOT = { has_country_flag = formed_germany_flag }
 			OR = {
@@ -143,7 +151,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 20
+			adm_tech = 15
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no

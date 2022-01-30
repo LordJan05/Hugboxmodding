@@ -31,6 +31,9 @@ crusade_against_the_world = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
 	}
+	ai = {
+		factor = 1000
+	}
 }
 
 # Seljuk Empire. From mission. Tribal Federation and Ottoman government hybrid.
@@ -67,6 +70,9 @@ seljuk_empire_government = {
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		has_harem = yes
+	}
+	ai = {
+		factor = 1000
 	}
 }
 
@@ -134,6 +140,9 @@ barbary_states_reform = {
 			}
 		}
 	}
+	ai = {
+		factor = 1000
+	}
 }
 
 # South Africa Bushmen
@@ -162,9 +171,16 @@ tribe_becomes_monarchy_reform_swazi = {
 		tag = SWZ
 	}
 	effect = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_church_heir_shrine
+			}
+			remove_estate_privilege= estate_church_heir_shrine
+		}
 		lose_reforms = 4
 		change_government = monarchy
 		add_government_reform = swazi_government_reform
+		country_event = { id = swazi_election_government.1 }
 	}
 	ai = {
 		factor = 1000
@@ -180,7 +196,10 @@ swazi_government_reform = {
 		religion = shamanism
 		OR = {
 			tag = SWZ
-			have_had_reform = swazi_government_reform
+			AND = {
+				have_had_reform = swazi_government_reform
+				NOT = { tag = ZUL }
+			}
 		}
 	}
 	lock_level_when_selected = yes
@@ -188,12 +207,8 @@ swazi_government_reform = {
 		block_introduce_heir = yes
 		max_absolutism = 20
 	}
-	conditional = {
-		allow = { has_dlc = "Res Publica" }
-		foreign_slave_rulers = yes
-	}
 	ai = {
-		factor = 1
+		factor = 1000
 	}
 }
 
@@ -227,16 +242,19 @@ great_moravian_principality = {
 		has_term_election = yes
 		states_general_mechanic = {
 			statists = {
-				#cavalry_power = 0.3
+				cavalry_power = 0.2
 				cavalry_cost = -0.2
 				cav_to_inf_ratio = 0.5
 			}
 
 			monarchists = {
-				#infantry_power = 0.2
+				infantry_power = 0.1
 				infantry_cost = -0.1
 			}
 		}
+	}
+	ai = {
+		factor = 1000
 	}
 }
 
@@ -274,6 +292,9 @@ oirat_steppe_horde = {
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	ai = {
+		factor = 1000
 	}
 }
 
@@ -423,6 +444,9 @@ veche_tsardom = {
 		}
 		claim_states = yes
 	}
+	ai = {
+		factor = 1000
+	}
 }
 
 # Eschatological Theocracy:
@@ -461,6 +485,9 @@ eschatological_theocracy_georgia_reform = { # For Georgia
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	ai = {
+		factor = 1000
 	}
 }
 eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
@@ -511,6 +538,9 @@ eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
 			remove_country_modifier = eschatological_theocracy_caliphate_reform_janissaries_boost
 		}
 	}
+	ai = {
+		factor = 1000
+	}
 }
 
 # Sasanian Empire:
@@ -532,6 +562,9 @@ sasanian_government = {
 	modifiers = {
 		global_trade_goods_size_modifier = 0.1
 		vassal_forcelimit_bonus = 1
+		vassal_income = 0.5
+		liberty_desire_from_subject_development = -0.5
+		diplomatic_upkeep = 2
 		governing_capacity = 250
 	}
 	conditional = {
@@ -541,5 +574,191 @@ sasanian_government = {
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+# Fatimid Caliphate:
+fatimid_government = {
+	icon = "mamluk_government"
+	allow_normal_conversion = yes
+	potential = {
+		tag = FAT
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		num_accepted_cultures = 3
+		global_autonomy = -0.05
+		governing_capacity = 150
+		country_admin_power = 1
+		country_diplomatic_power = 1
+		country_military_power = 1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	effect = {
+		add_country_modifier = {
+			name = fatimid_government_janissaries_boost_0
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = {
+				has_country_modifier = fatimid_government_janissaries_boost_0
+			}
+			remove_country_modifier = fatimid_government_janissaries_boost_0
+		}
+		if = {
+			limit = {
+				has_country_modifier = fatimid_government_janissaries_boost_1
+			}
+			remove_country_modifier = fatimid_government_janissaries_boost_1
+		}
+		if = {
+			limit = {
+				has_country_modifier = fatimid_government_janissaries_boost_2
+			}
+			remove_country_modifier = fatimid_government_janissaries_boost_2
+		}
+		if = {
+			limit = {
+				has_country_modifier = fatimid_government_janissaries_boost_3
+			}
+			remove_country_modifier = fatimid_government_janissaries_boost_3
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+# Exodus Leleges:
+leleges_military_government = {
+	icon = "leleges_reform"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		tag = LEL
+	}
+	trigger = {
+		tag = LEL
+	}
+	modifiers = {
+		global_unrest = -2
+		war_exhaustion = -0.04
+		yearly_army_professionalism = 0.0033
+		monthly_militarized_society = 0.05
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		militarised_society = yes
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+# Milan Ambrocian trade rebublic:
+ambrosian_merchants_republic = {
+	icon = "ambrosian_republic"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = ambrosian_merchants_republic
+			have_had_reform = ambrosian_merchants_republic
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		global_tax_modifier = 0.1
+		#land_morale = 0.05
+		governing_capacity = 50
+		max_absolutism = -30
+		merchants = 1
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+	}
+	duration = 4
+	boost_income = yes
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+# Portugal:
+portugal_feudalism_reform = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	modifiers = {
+		vassal_income = 0.25
+		nobles_influence_modifier = 0.05
+		maratha_exclusive_influence_modifier = 0.05
+		rajput_exclusive_influence_modifier = 0.05
+	}
+	factions = {
+		sea_por_trade
+		sea_por_explo
+		sea_por_conti
+	}
+	ai = {
+		factor = 100
 	}
 }

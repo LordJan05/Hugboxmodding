@@ -3,7 +3,7 @@
 culture = filipino
 religion = hinduism
 capital = "Panay"
-trade_goods = gold
+trade_goods = grain
 hre = no
 base_tax = 3 
 base_production = 4

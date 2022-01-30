@@ -41,6 +41,7 @@ change_estate_land_share = { #compensates for lack of nobles, distributes 20 bet
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = infertile_personality
+	set_ruler_flag = henry_vi_lancaster
 	add_ruler_modifier = {
 		name = mjl_english_cuck
 	}

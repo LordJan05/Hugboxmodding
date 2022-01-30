@@ -1,7 +1,8 @@
 #2024 - Garoowe
 
-owner = MJE
-controller = MJE
+owner = MRE
+controller = MRE
+add_core = MRE
 add_core = MJE
 culture = somali
 religion = sunni

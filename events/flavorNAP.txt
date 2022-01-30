@@ -42,6 +42,7 @@ country_event = {
 	option = {
 		ai_chance = { factor = 9 }
 		name = flavor_nap.1.a
+		#add_stability = -2
 		random_owned_province = {
 			noble_rebels = 2
 		}
@@ -606,6 +607,7 @@ country_event = {
 						type = nap_republican_rebels
 						size = 2
 						leader = nap_foreign_republican
+						friend = ROOT
 					}
 					set_province_flag = nap_foreigner_arrives_here
 				}
@@ -616,6 +618,7 @@ country_event = {
 						type = nap_republican_rebels
 						size = 2
 						leader = nap_foreign_republican
+						friend = ROOT
 					}
 					set_province_flag = nap_foreigner_arrives_here
 				}

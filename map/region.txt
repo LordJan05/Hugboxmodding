@@ -224,7 +224,6 @@ baltic_region = {
 		curonia_area
 		west_prussia_area
 		east_prussia_area
-		pomerelia_area
 		samogitia_area
 	}
 }
@@ -569,7 +568,7 @@ middle_africa_region = { # Sealand Central Africa
 		mbomou_area 
 		sudd_area
 		mbam_area
-		imatong_area # MJL Africa
+		bunyoro_area # replaces imatong_area # MJL Africa
 	}
 	monsoon = {
 		00.02.01

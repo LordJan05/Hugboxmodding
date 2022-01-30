@@ -1,0 +1,102 @@
+###########################################
+# EXODUS SMOLL INCOME
+###########################################
+exodus_player_yearly_small_income = {
+	potential = {
+		OR = {
+			tag = NOR
+			tag = BRI
+		}
+	}
+	trigger = {
+		ai = no
+		NOT = {
+			num_of_cities = 20
+		}
+	}
+
+	
+	global_tax_income = 12
+}
+###########################################
+# EXODUS YEARLY TAX
+###########################################
+exodus_player_yearly_income = {
+	potential = {
+		OR = {
+			tag = KMC
+			tag = JOL
+			tag = TID
+			tag = TER
+			tag = NEH
+		}
+	}
+	trigger = {
+		ai = no
+		NOT = {
+			num_of_cities = 20
+		}
+	}
+
+	
+	global_tax_income = 48
+}
+###########################################
+# Player in new world nerf
+###########################################
+new_world_player_nerf = {
+	potential = {
+		OR = {
+			capital_scope = {
+				continent = north_america
+			}
+			capital_scope = {
+				continent = south_america
+			}	
+			capital_scope = {
+				continent = oceania
+			}	
+			is_former_colonial_nation = yes
+			has_country_flag = changed_from_colonial_nation
+		}
+		was_player = yes
+	}
+
+	trigger = {
+		total_development = 300
+	}
+
+	manpower_recovery_speed = -0.15
+	sailors_recovery_speed = -0.15
+	global_sailors_modifier = -0.2
+	naval_forcelimit_modifier = -0.1
+	land_forcelimit_modifier = -0.1
+}
+new_world_player_nerf_600 = {
+	potential = {
+		OR = {
+			capital_scope = {
+				continent = north_america
+			}
+			capital_scope = {
+				continent = south_america
+			}	
+			capital_scope = {
+				continent = oceania
+			}
+			is_former_colonial_nation = yes
+			has_country_flag = changed_from_colonial_nation
+		}
+		was_player = yes
+	}
+
+	trigger = {
+		total_development = 600
+	}
+
+	manpower_recovery_speed = -0.15
+	sailors_recovery_speed = -0.15
+	global_sailors_modifier = -0.2
+	naval_forcelimit_modifier = -0.15
+	land_forcelimit_modifier = -0.15
+}

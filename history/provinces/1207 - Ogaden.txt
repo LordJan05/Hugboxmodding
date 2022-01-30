@@ -1,15 +1,15 @@
 #1207 - Ogaden
 
-owner = MRE
-controller = MRE
-add_core = MRE
+owner = OGD
+controller = OGD
+add_core = OGD
 culture = somali
 religion = sunni
 capital = "Bale"
 native_size = 40
 native_ferocity = 4
 native_hostileness = 9 
-trade_goods = slaves
+trade_goods = incense
 is_city = yes
 hre = no
 base_tax = 2

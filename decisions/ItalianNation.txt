@@ -118,7 +118,9 @@ country_decisions = {
 				limit = {
 					NOT = { government_rank = 2 }
 				}
-				set_in_empire = no
+				hidden_effect = {
+					set_in_empire = no
+				}
 				set_government_rank = 2
 			}
 			change_tag = ITA
@@ -183,7 +185,7 @@ country_decisions = {
 			owns_core_province = 101	# Genoa
 			owns_core_province = 104	# Milano
 			owns_core_province = 106	# Modena
-			owns_core_province = 1774	# Treviso
+			#owns_core_province = 1774	# Treviso
 			owns_core_province = 112	# Venice
 			owns_core_province = 114	# Bologna + Ravenna
 			owns_core_province = 116	# Firenze

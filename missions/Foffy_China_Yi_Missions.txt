@@ -9,6 +9,7 @@ china_cyi_2 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -135,6 +136,7 @@ china_cyi_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -378,6 +380,7 @@ china_cyi_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -485,6 +488,7 @@ china_cyi_tier2_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -502,6 +506,7 @@ china_cyi_tier2_3 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -568,6 +573,7 @@ china_cyi_tier2_3 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -636,6 +642,7 @@ china_cyi_tier2_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -652,6 +659,7 @@ china_cyi_tier2_4 = {
 				has_reform = h_reform_warlord_2
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -698,6 +706,7 @@ china_cyi_tier3_2 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -713,6 +722,7 @@ china_cyi_tier3_2 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -748,6 +758,7 @@ china_cyi_tier3_3 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -762,6 +773,7 @@ china_cyi_tier3_3 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -795,6 +807,7 @@ china_cyi_tier3_4 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -812,6 +825,7 @@ china_cyi_tier3_4 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {
@@ -846,6 +860,7 @@ china_cyi_tier3_5 = {
 			has_reform = h_reform_warlord_2
 			has_reform = h_reform_warlord_3
 			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
 		}
 	}
 	has_country_shield = yes
@@ -862,6 +877,7 @@ china_cyi_tier3_5 = {
 			OR = {
 				has_reform = h_reform_warlord_3
 				has_reform = h_reform_warlord_4
+				has_reform = celestial_empire
 			}
 			if = {
 				limit = {

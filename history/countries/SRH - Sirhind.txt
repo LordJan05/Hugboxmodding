@@ -32,7 +32,6 @@ change_estate_land_share = {
 	religion = sunni
 	religious_school = hanafi_school
 	clear_scripted_personalities = yes
-	add_ruler_personality = strict_personality
 	add_ruler_personality = conqueror_personality
 	add_ruler_personality = industrious_personality
 }

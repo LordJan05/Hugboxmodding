@@ -61,7 +61,7 @@ holy_sacraments_aspect = {
 	ai_will_do = {
 		factor = 12
 		modifier = {
-			factor = 2
+			factor = 10
 			is_at_war = yes
 		}
 	}
@@ -76,7 +76,7 @@ saints_accept_prayers_aspect = {
 	ai_will_do = {
 		factor = 12
 		modifier = {
-			factor = 2
+			factor = 10
 			is_at_war = yes
 		}
 	}
@@ -181,7 +181,7 @@ allow_usury_aspect = {
 		factor = 17
 		modifier = {
 			factor = 0.5
-			treasury = 500
+			treasury = 1000
 		}
 		modifier = {
 			factor = 0

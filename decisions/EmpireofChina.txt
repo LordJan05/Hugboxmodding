@@ -1,50 +1,45 @@
 country_decisions = {
-
+	# Changed it only for Qing:
 	empire_of_china = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			has_dlc = "Mandate of Heaven"
-			always = no #Deprecated
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
+			#always = no #Deprecated
+			tag = QNG
+			ai = no
 			is_emperor_of_china = no
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 			OR = {
 				religion_group = eastern
 				religion_group = pagan
 			}
-			has_global_flag = empire_of_china_dismantled
+			#has_global_flag = empire_of_china_dismantled
+			NOT = { has_global_flag = empire_of_china_formed }
+		}
+		provinces_to_highlight = {
+			superregion = china_superregion
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			custom_trigger_tooltip = {
-				tooltip = empire_of_china_not_in_china
-				china_superregion = {
-					owner = {
-						is_emperor_of_china = no
-					}
-					type = all
-				}
+			#custom_trigger_tooltip = {
+			#	tooltip = empire_of_china_not_in_china
+			#	china_superregion = {
+			#		owner = {
+			#			is_emperor_of_china = no
+			#		}
+			#		type = all
+			#	}
+			#}
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				is_core = ROOT
+				value = 125
 			}
-			adm_power = 50
-			mil_power = 50
-			dip_power = 50
-			num_of_cities = 30
-			owns_core_province = 1816
-			owns_core_province = 1821
-			owns_core_province = 700
-			owns_core_province = 4765
 		}
 		effect = {
 			set_emperor_of_china = ROOT
@@ -52,12 +47,14 @@ country_decisions = {
 				limit = { has_global_flag = empire_of_china_dismantled }
 				clr_global_flag = empire_of_china_dismantled
 			}
-			add_adm_power = -50
-			add_dip_power = -50
-			add_mil_power = -50
+			add_government_reform = celestial_empire
+			hidden_effect = { # Has to be 2x
+				add_government_reform = celestial_empire
+			}
+			set_global_flag = empire_of_china_formed
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		ai_importance = 400
 	}

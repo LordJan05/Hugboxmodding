@@ -17,26 +17,6 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 
-
-###################################################################
-######                     Embrace Monke                     ######
-
-#I put it here, so it would be easy to see which .gfx part it belongs to.
-
-	spriteType = {
-		name = "Embracemonke_eventPicture"
-		texturefile = "gfx/event_pictures/Embracemonke_eventPicture.dds"
-		allwaystransparent = yes
-	}
-	spriteType = {
-		name = "ImMonke_eventPicture"
-		texturefile = "gfx/event_pictures/ImMonke_eventPicture.dds"
-		allwaystransparent = yes
-	}
-
-######                     Embrace Monke                     ######
-###################################################################
-
 	#END 
 
 	spriteType = {

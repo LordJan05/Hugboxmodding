@@ -29,9 +29,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1777;4257;sea;1652;-1;-1;-1;-1;Kola-Mezen NOVGOROD
 282;1974;sea;1322;-1;-1;-1;-1;Yedisan-Yedishkul CRIMEA
 365;2320;sea;1328;-1;-1;-1;-1;Sina-Ras Gareb EGYPT
+2348;164;sea;1319;-1;-1;-1;-1;Scio-Nasso AEGAN
+145;163;sea;1319;-1;-1;-1;-1;Morea-Crete AEGAN
+122;4174;sea;1310;-1;-1;-1;-1;Salento-Durazzo DALMATIA
 4753;130;sea;1308;-1;-1;-1;-1;Zara-Istra DALMATIA
 112;4729;sea;1308;-1;-1;-1;-1;Venezia-Padova VENICE
 112;113;sea;1308;-1;-1;-1;-1;Venezia-Ferrara VENICE
+3;5143;sea;1255;-1;-1;-1;-1;Kalmar-Öland SWEDEN
 1983;1775;sea;1258;-1;-1;-1;-1;Lolland-Holstein LUBECK
 1775;2996;sea;1258;-1;-1;-1;-1;Holstein-Wismar LUBECK
 55;54;sea;1268;-1;-1;-1;-1;Oldenburg-Stade LUBECK
@@ -50,13 +54,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 911;1001;sea;1661;-1;-1;-1;-1;Baawitigon-Marameg GREAT LAKES
 944;987;sea;1660;-1;-1;-1;-1;Bodewadmik-Onguhiara GREAT LAKES
 987;4872;sea;1660;-1;-1;-1;-1;Onguhiara-Wenrohonon GREAT LAKES
-4892;4912;sea;7056;-1;-1;-1;-1;Iroquet-Kaniatarowanen GREAT LAKES
-4892;2584;sea;7056;-1;-1;-1;-1;Iroquet-Masoliantekw GREAT LAKES
-993;2584;sea;7056;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
-990;2584;sea;7055;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
-990;4893;sea;7055;-1;-1;-1;-1;Maisouna-Nebesek GREAT LAKES
-994;4893;sea;7055;-1;-1;-1;-1;Stadacona-Nebesek GREAT LAKES
-994;2583;sea;7055;-1;-1;-1;-1;Stadacona-Kikonteku GREAT LAKES
+4892;4912;sea;4973;-1;-1;-1;-1;Iroquet-Kaniatarowanen GREAT LAKES
+4892;2584;sea;4973;-1;-1;-1;-1;Iroquet-Masoliantekw GREAT LAKES
+993;2584;sea;4973;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
+990;2584;sea;4972;-1;-1;-1;-1;Osheaga-Masoliantekw GREAT LAKES
+990;4893;sea;4972;-1;-1;-1;-1;Maisouna-Nebesek GREAT LAKES
+994;4893;sea;4972;-1;-1;-1;-1;Stadacona-Nebesek GREAT LAKES
+994;2583;sea;4972;-1;-1;-1;-1;Stadacona-Kikonteku GREAT LAKES
 #############################################
 333;4559;sea;1300;-1;-1;-1;-1;Majorca-Minorca
 4560;333;sea;1295;-1;-1;-1;-1;Ibiza-Majorca

@@ -175,7 +175,7 @@ merchants_reform = {
 	icon = "politician"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = -50
+		max_absolutism = -30
 		merchants = 1
 	}
 	valid_for_nation_designer = yes
@@ -191,6 +191,7 @@ merchants_reform = {
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
+		NOT = { has_reform = ambrosian_merchants_republic }
 	}
 	trigger = {
 		OR = {
@@ -265,7 +266,7 @@ venice_merchants_reform = {
 	icon = "trading_city"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = -50
+		max_absolutism = -30
 		merchants = 1
 		yearly_corruption = -0.1
 	}
@@ -780,6 +781,7 @@ ambrosian_republic = {
 			has_reform = ambrosian_republic
 			have_had_reform = ambrosian_republic
 		}
+		NOT = { has_reform = ambrosian_merchants_republic }
 	}
 	legacy_equivalent = ambrosian_republic_legacy
 	valid_for_nation_designer = yes
@@ -1024,6 +1026,7 @@ colonial_government = {
 		liberty_desire = -30
 
 		#COLONY DEBUFF
+		development_cost = 0.05
 		amount_of_banners = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
@@ -1060,7 +1063,7 @@ crown_colony_government = {
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
 		global_autonomy = -0.05
-		recover_army_morale_speed = 0.02
+		recover_army_morale_speed = 0.05
 		embracement_cost = -0.1
 		governing_capacity = 100
 
@@ -1068,9 +1071,11 @@ crown_colony_government = {
 		liberty_desire = -30
 
 		#COLONY DEBUFF
+		development_cost = 0.05
 		amount_of_banners = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		max_absolutism = -30
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1103,7 +1108,7 @@ private_enterprise_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		global_ship_trade_power = 0.2
+		global_ship_trade_power = 0.1
 		embracement_cost = -0.1
 		merchants = 1
 		production_efficiency = 0.05
@@ -1112,9 +1117,11 @@ private_enterprise_colony_government = {
 		liberty_desire = -30
 
 		#COLONY DEBUFF
+		development_cost = 0.05
 		amount_of_banners = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		max_absolutism = -30
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1155,9 +1162,11 @@ self_governing_colony_government = {
 		liberty_desire = -30
 
 		#COLONY DEBUFF
+		development_cost = 0.05
 		amount_of_banners = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		max_absolutism = -30
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1256,9 +1265,16 @@ cossacks_reform = {
 		}
 	}
 	
-	raze_province = yes
+	#raze_province = yes
 	government_abilities = {
 		cossacks_mechanic
+	}
+
+	conditional = {
+		allow = { has_dlc = "Origins" }
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
 	}
 	valid_for_new_country = yes
 
@@ -1282,6 +1298,7 @@ cossacks_reform = {
 		cav_to_inf_ratio = 0.2
 		governing_capacity = 150
 		max_absolutism = -40
+		republican_tradition = 0.2
 	}
 	duration = 4
 }
@@ -1303,7 +1320,7 @@ republican_authoritarianism_reform = {
 		global_unrest = -1
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1327,7 +1344,7 @@ nepotism_reform = {
 		enables_nepotism = yes
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1346,7 +1363,7 @@ republicanism_reform = {
 		republican_tradition = 0.2
 	}
 	ai = {
-		factor = 1.5
+		factor = 10
 	}
 }
 
@@ -1367,7 +1384,7 @@ council_of_captains_reform = {
 		naval_attrition = -0.15
 	}
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 
@@ -1387,7 +1404,7 @@ articles_of_agreement_reform = {
 		loot_amount = 0.15
 	}
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 
@@ -1406,7 +1423,7 @@ smugglers_haven_reform = {
 		global_naval_engagement_modifier = 0.1
 	}
 	ai = {
-		factor = 2.5
+		factor = 10
 	}
 }
 
@@ -1422,7 +1439,7 @@ liberte_reform = {
 		num_accepted_cultures = 2
 	}
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 
@@ -1455,7 +1472,7 @@ fraternite_reform = {
 		harsh_treatment_cost = -0.25
 	}
 	ai = {
-		factor = 2.5
+		factor = 10
 	}
 }
 
@@ -1484,7 +1501,7 @@ frequent_elections_reform = {
 		election_cycle = -1
 	}
 	ai = {
-		factor = 1
+		factor = 10
 	}
 }
 
@@ -1500,6 +1517,9 @@ consolidation_of_power_reform = {
 	modifiers = {
 		max_absolutism = 10
 		election_cycle = 1
+	}
+	ai = {
+		factor = 0
 	}
 }
 
@@ -1535,7 +1555,7 @@ lottery_reform = {
 	}
 	has_term_election = no
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1547,6 +1567,7 @@ consolidate_power_in_doge_reform = {
 			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
 			has_reform = veche_republic
+			has_reform = ambrosian_merchants_republic
 		}
 	}
 	trigger = {
@@ -1554,6 +1575,7 @@ consolidate_power_in_doge_reform = {
 			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
 			has_reform = veche_republic
+			has_reform = ambrosian_merchants_republic
 		}
 	}
 	modifiers = {
@@ -1561,13 +1583,7 @@ consolidate_power_in_doge_reform = {
 	}
 	has_term_election = no
 	ai = {
-		factor = 10
-		modifier = {
-			factor = 0
-			NOT = {
-				num_of_cities = 25
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -1579,6 +1595,7 @@ consolidate_power_in_cities_reform = {
 			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
 			has_reform = veche_republic
+			has_reform = ambrosian_merchants_republic
 		}
 	}
 	trigger = {
@@ -1586,6 +1603,7 @@ consolidate_power_in_cities_reform = {
 			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
 			has_reform = veche_republic
+			has_reform = ambrosian_merchants_republic
 		}
 	}
 	modifiers = {
@@ -1596,10 +1614,6 @@ consolidate_power_in_cities_reform = {
 	duration = 4
 	ai = {
 		factor = 10
-		modifier = {
-			factor = 0
-			num_of_cities = 25
-		}
 	}
 }
 
@@ -1630,7 +1644,7 @@ national_constituent_reform = {
 		diplomatic_upkeep = 1
 	}
 	ai = {
-		factor = 10
+		factor = 0
 	}
 }
 
@@ -1643,7 +1657,7 @@ provincial_governments_reform = {
 		state_maintenance_modifier = -0.25
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1654,33 +1668,7 @@ administrative_divisions_reform = {
 		governing_capacity = 250
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 0
-			has_reform = free_city
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				any_owned_province = {
-					is_territorial_core = root
-				}
-			}
-		}
-		modifier = {
-			factor = 2.5
-			num_of_owned_provinces_with = {
-				value = 10
-				is_territorial_core = root
-			}
-		}
-		modifier = {
-			factor = 0.25
-			OR = {
-				has_reform = merchants_reform
-				has_reform = venice_merchants_reform
-			}
-		}
+		factor = 10
 	}
 }
 
@@ -1691,19 +1679,7 @@ union_of_states_reform = {
 		global_trade_power = 0.1
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.35
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_reform = free_city
-				has_reform = merchants_reform
-				has_reform = venice_merchants_reform
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -1718,15 +1694,7 @@ presidential_reform = {
 		embracement_cost = -0.1
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 0
-			has_reform = free_city
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_cities = 2 }
-		}
+		factor = 0
 	}
 }
 
@@ -1757,7 +1725,7 @@ imperial_diplomacy_reform = {
 		}
 	}
 	ai = {
-		factor = 1.5
+		factor = 0
 	}
 }
 
@@ -1772,7 +1740,7 @@ municipal_self_defense_reform = {
 		global_manpower = 5
 	}
 	ai = {
-		factor = 1.5
+		factor = 10
 	}
 }
 
@@ -1825,7 +1793,7 @@ two_chamber_reform = {
 	}
 	
 	ai = {
-		factor = 1
+		factor = 10
 	}
 }
 
@@ -1839,7 +1807,7 @@ broaden_executive_powers_reform = {
 		stability_cost_modifier = -0.15
 	}
 	ai = {
-		factor = 1
+		factor = 10
 	}
 }
 
@@ -1850,7 +1818,7 @@ devolution_of_powers_reform = {
 		diplomats = 1
 	}
 	ai = {
-		factor = 1.5
+		factor = 0
 	}
 }
 
@@ -1874,7 +1842,7 @@ pirate_king_reform = {
 	#}
 	#has_term_election = no
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 
@@ -1899,7 +1867,7 @@ war_against_the_world_doctrine_reform = {
 		gives_war_against_the_world_tooltip_dummy = yes
 	}
 	ai = {
-		factor = 2.5
+		factor = 10
 	}
 }
 
@@ -1926,7 +1894,7 @@ black_market_consortium_reform = {
 	}
 	boost_income = yes
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 
@@ -1942,7 +1910,7 @@ absolute_president_reform = {
 		election_cycle = 1
 	}
 	ai = {
-		factor = 2
+		factor = 10
 	}
 }
 
@@ -1958,7 +1926,7 @@ revolutionary_council_reform = {
 		election_cycle = -1
 	}
 	ai = {
-		factor = 2
+		factor = 0
 	}
 }
 
@@ -1970,6 +1938,9 @@ political_principle_reform = {
 	modifiers = {
 		possible_adm_policy = 1
 	}
+	ai = {
+		factor = 10
+	}
 }
 
 moral_principle_reform = {
@@ -1977,6 +1948,9 @@ moral_principle_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_dip_policy = 1
+	}
+	ai = {
+		factor = 0
 	}
 }
 
@@ -1993,7 +1967,7 @@ revolutionary_principle_reform = {
 		global_manpower_modifier = 0.15
 	}
 	ai = {
-		factor = 2
+		factor = 100
 	}
 }
 
@@ -2010,7 +1984,7 @@ equality_principle_reform = {
 		rr_jacobins_influence = 0.1
 	}
 	ai = {
-		factor = 2
+		factor = 0
 	}
 }
 
@@ -2027,7 +2001,7 @@ imperial_principle_reform = {
 		province_warscore_cost = -0.1
 	}
 	ai = {
-		factor = 2
+		factor = 0
 	}
 }
 
@@ -2046,7 +2020,7 @@ landholders_reform = {
 		manpower_recovery_speed = 0.1
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2063,7 +2037,7 @@ citizenry_reform = {
 		land_morale = 0.1
 	}
 	ai = {
-		factor = 1.5
+		factor = 10
 	}
 }
 
@@ -2125,7 +2099,7 @@ three_classes_reform = {
 	}
 	
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2160,6 +2134,9 @@ appointment_by_committee_reform = {
 		advisor_pool = 1
 		advisor_cost = -0.05
 	}
+	ai = {
+		factor = 10
+	}
 }
 
 bureaucratic_aparatus_reform = {
@@ -2167,6 +2144,9 @@ bureaucratic_aparatus_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		min_autonomy_in_territories = -0.10
+	}
+	ai = {
+		factor = 0
 	}
 }
 
@@ -2178,16 +2158,7 @@ universal_suffrage_reform = {
 		num_accepted_cultures = 1
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 0.1
-			NOT = {
-				any_owned_province = {
-					NOT = { has_owner_accepted_culture = yes }
-					NOT = { has_owner_culture = yes }
-				}
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -2268,6 +2239,9 @@ strengthen_executive_powers_reform = {
 	modifiers = {
 		max_absolutism = 25
 	}
+	ai = {
+		factor = 0
+	}
 }
 
 reinforce_republican_values_reform = {
@@ -2276,6 +2250,9 @@ reinforce_republican_values_reform = {
 	modifiers = {
 		free_adm_policy = 1
 		reelection_cost = -0.1
+	}
+	ai = {
+		factor = 10
 	}
 }
 
@@ -2292,6 +2269,9 @@ president_for_life_reform = {
 		monarch_admin_power = 1
 		monarch_military_power = 1
 	}
+	ai = {
+		factor = 10
+	}
 }
 
 government_for_people_reform = {
@@ -2303,6 +2283,9 @@ government_for_people_reform = {
 	}
 	modifiers = {
 		max_revolutionary_zeal = 20
+	}
+	ai = {
+		factor = 0
 	}
 }
 
@@ -2381,6 +2364,6 @@ millenarian_theocracy_reform = {
 		election_on_death = yes
 	}
 	ai = {
-		factor = 10
+		factor = 0
 	}
 }

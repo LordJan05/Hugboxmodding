@@ -2,7 +2,7 @@
 
 graphical_culture = africangfx
 
-color = { 65 136 45 }
+color = { 166  161  139 } # With PDX making their own, then just copied their color over (original colour: { 65 136 45 } )
 revolutionary_colors = { 8 4 14 } # Copy of Yao
 
 historical_idea_groups = {

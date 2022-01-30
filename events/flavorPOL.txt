@@ -1396,7 +1396,7 @@ country_event = {
 			}
 			remove_government_reform = elective_monarchy
 			#set_legacy_government = administrative_monarchy
-			remove_heir = yes
+			remove_heir = {}
 			add_absolutism = 10
 		}
 	}
@@ -1670,7 +1670,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 		modifier = {
 			factor = 0.1
 			is_year = 1447
@@ -1694,7 +1694,7 @@ country_event = {
 			}
 		}
 		ai_chance = { 
-			factor = 75 
+			factor = 0
 		}
 		create_union = LIT
 		country_event = {
@@ -1708,12 +1708,9 @@ country_event = {
 			factor = 25
 		}
 		define_ruler = {
-			DIP = 3
-			ADM = 3
-			MIL = 3
-			max_random_adm = 5
-			max_random_dip = 5
-			max_random_mil = 5
+			adm = 5
+			dip = 5
+			mil = 4
 			claim = 100
 			culture = polish
 		}
@@ -1728,6 +1725,9 @@ country_event = {
 				who = ROOT
 				modifier = lit_denied_birthright
 			}
+		}
+		ai_chance = { 
+			factor = 100
 		}
 	}
 }

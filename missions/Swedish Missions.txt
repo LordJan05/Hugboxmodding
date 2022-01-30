@@ -16,7 +16,7 @@ sealand_swedish_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 4
 			NOT = {
-				base_production = 12
+				base_production = 10
 			}
 		}
 		trigger = {
@@ -29,7 +29,7 @@ sealand_swedish_missions_1 = {
 				}
 				ai = no
 			}
-			4 = { base_production = 12 }
+			4 = { base_production = 10 }
 		}
 		effect = {
 			4 = { change_trade_goods = gold }

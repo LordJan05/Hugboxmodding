@@ -842,6 +842,29 @@ sealand_denmark_missions_3 = {
 			}
 		}
 	}
+	boost_the_quality_of_troops = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+		position = 5
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			is_at_war = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = boosted_infantry_quality_modifier
+				duration = 5475
+			}
+		}
+	}
 }
 
 sealand_denmark_missions_4 = {
@@ -1010,7 +1033,7 @@ sealand_denmark_missions_4 = {
 					}
 					add_province_modifier = {
 						name = "subjugation_of_sweden_modifier"
-						duration = 3650
+						duration = 1825
 					}
 				}
 			}

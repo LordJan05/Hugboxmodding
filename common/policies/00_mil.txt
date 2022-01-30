@@ -16,11 +16,7 @@ privy_council_establishment_act = {
 	yearly_corruption = -0.1
 	
 	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0.2
-			is_at_war = yes
-		}
+		factor = 0
 	}
 
 }
@@ -42,11 +38,7 @@ the_mercenary_registration_act = {
 	land_maintenance_modifier = -0.05
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 the_provincial_taxation_system = {
@@ -66,11 +58,7 @@ the_provincial_taxation_system = {
 	manpower_recovery_speed = 0.15
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 	
 }
@@ -90,11 +78,7 @@ the_mining_act = {
 	leader_land_fire = 1
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -116,7 +100,7 @@ the_liquor_act = {
 	reinforce_speed = 0.15
 
 	ai_will_do = {
-		factor = 0.6
+		factor = 0
 	}
 }
 
@@ -135,22 +119,14 @@ horse_artillery = {
 	artillery_power = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { artillery_fraction = 0.2 }
-		}			
-		modifier = {
-			factor = 1.5
-			artillery_fraction = 0.28
 		}
 		modifier = {
-			factor = 1.5
-			artillery_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			artillery_fraction = 0.45
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -172,27 +148,7 @@ public_road_act = {
 	trade_efficiency = 0.10
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.6
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
+		factor = 0
 	}
 }
 
@@ -213,11 +169,7 @@ superior_supply_system = {
 	land_attrition = -0.25
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -239,11 +191,7 @@ modern_siege_weapons = {
 	leader_siege = 1
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -265,7 +213,7 @@ superior_fortification_act = {
 
 
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -285,18 +233,10 @@ modern_firearm_techniques = {
 	infantry_power = 0.2
 
 	ai_will_do = {
-		factor = 1.2		
+		factor = 1000
 		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -318,7 +258,7 @@ the_garrison_act = {
 	garrison_size = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -339,10 +279,10 @@ military_zeal_act = {
 	siege_ability = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 1000
 		modifier = {
-			factor = 1.5
-			is_at_war = yes
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -364,10 +304,10 @@ field_priests = {
 	recover_army_morale_speed = 0.05
 	
 	ai_will_do = {
-		factor = 1.2
+		factor = 1000
 		modifier = {
-			factor = 1.5
-			is_at_war = yes
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -389,27 +329,7 @@ pen_rely_on_sword_act = {
 
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { army_size_percentage = 0.9 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2.5
-		}
+		factor = 0
 	}
 }
 
@@ -429,7 +349,7 @@ local_army_organisation = {
 	recover_army_morale_speed = 0.05
 
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -449,7 +369,7 @@ underhanded_diplomacy_act = {
 	diplomatic_reputation = 1
 
 	ai_will_do = {
-		factor = 0.6
+		factor = 0
 	}
 }
 
@@ -471,11 +391,7 @@ hired_adventurers_act = {
 
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }	
 	
@@ -497,7 +413,7 @@ the_tenures_abolition_act = {
 	diplomats = 1
 		
 	ai_will_do = {
-		factor = 0.6
+		factor = 0
 	}	
 }
 
@@ -670,11 +586,7 @@ inspirational_leaders = {
 	leader_land_shock = 1
 	
 	ai_will_do = {
-		factor = 1.2
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -720,11 +632,7 @@ the_preparation_act = {
 	war_exhaustion = -0.05
 	
 	ai_will_do = {
-		factor = 0.9
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -745,7 +653,7 @@ local_militias = {
 	defensiveness = 0.1
 	
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -766,27 +674,7 @@ foreign_conscription_centers = {
 	diplomatic_upkeep = 1
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}	
+		factor = 0
 	}
 }
 
@@ -807,7 +695,7 @@ guerilla_warfare = {
 	global_garrison_growth = 0.1
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 0
 	}
 }
 
@@ -826,11 +714,7 @@ weapon_quality_standards = {
 	discipline = 0.05
 	
 	ai_will_do = {
-		factor = 2
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 2000
 	}
 }
 
@@ -851,22 +735,26 @@ noble_loyalty_act = {
 	cav_to_inf_ratio = 0.25
 	
 	ai_will_do = {
-		factor = 1
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { cavalry_fraction = 0.2 }
 		}			
 		modifier = {
-			factor = 1.5
+			factor = 10
 			cavalry_fraction = 0.28
 		}
 		modifier = {
-			factor = 1.5
+			factor = 10
 			cavalry_fraction = 0.38
 		}
 		modifier = {
-			factor = 1.5
+			factor = 10
 			cavalry_fraction = 0.45
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -886,7 +774,7 @@ the_colonial_nobility_act = {
 	global_manpower_modifier = 0.33
 
 	ai_will_do = {
-		factor = 0.8
+		factor = 0
 	}
 }
 
@@ -929,7 +817,7 @@ military_allotment_act = {
 	global_manpower_modifier = 0.33
 
 	ai_will_do = {
-		factor = 0.8
+		factor = 0
 	}
 }
 
@@ -950,27 +838,7 @@ unified_army_command = {
 	reduced_liberty_desire = 10
 	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}	
+		factor = 0
 	}
 }
 
@@ -990,27 +858,7 @@ trade_kontor_network = {
 	global_regiment_cost = -0.1
 
 	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
+		factor = 0
 	}
 }
 
@@ -1030,23 +878,7 @@ deserteur_act = {
 	army_tradition_decay = -0.005
 	
 	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
-		}
+		factor = 0
 	}
 }
 
@@ -1067,23 +899,7 @@ war_horses_policy = {
 	shock_damage = 0.1
 	
 	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
-		}
+		factor = 0
 	}
 }
 
@@ -1104,11 +920,7 @@ the_best_defense_policy = {
 	fire_damage_received = -0.05
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1129,11 +941,7 @@ omne_datum_optimum_policy = {
 	recover_army_morale_speed = 0.05
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1154,11 +962,7 @@ wielders_of_the_flaming_sword_policy = {
 	shock_damage = 0.05
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1179,11 +983,7 @@ the_three_sisters_policy = {
 	infantry_cost = -0.15
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1204,11 +1004,7 @@ by_the_people_for_the_people_policy = {
 	garrison_size = 0.1
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1229,11 +1025,7 @@ war_on_our_terms_policy = {
 	land_morale = 0.1
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 2.5
-			is_at_war = yes
-		}
+		factor = 2000
 	}
 }
 
@@ -1254,11 +1046,7 @@ fear_tactics_policy = {
 	siege_ability = 0.1
 	
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1279,10 +1067,26 @@ psychological_warfare_policy = {
 	cavalry_power = 0.1
 
 	ai_will_do = {
-		factor = 1.0
+		factor = 1000
 		modifier = {
-			factor = 1.5
-			is_at_war = yes
+			factor = 0
+			NOT = { cavalry_fraction = 0.2 }
+		}			
+		modifier = {
+			factor = 10
+			cavalry_fraction = 0.28
+		}
+		modifier = {
+			factor = 10
+			cavalry_fraction = 0.38
+		}
+		modifier = {
+			factor = 10
+			cavalry_fraction = 0.45
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
 		}
 	}
 }
@@ -1304,11 +1108,7 @@ kharash_policy = {
 	vassal_forcelimit_bonus = 1.0
 
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1328,11 +1128,7 @@ my_word_is_my_bond_policy = {
 	siege_ability = 0.2
 
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }
 
@@ -1353,10 +1149,6 @@ render_unto_caesar_policy = {
 	land_forcelimit_modifier = 0.05
 
 	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
+		factor = 0
 	}
 }

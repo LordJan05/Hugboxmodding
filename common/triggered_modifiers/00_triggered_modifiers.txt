@@ -2,161 +2,7 @@
 # these are checked for each countries once/month and then applied.
 #
 # Effects are fully scriptable here.
-###########################################
-# AI Stuff
-###########################################
-#ai_colony_nation_loyalty = {
-#	potential = {
-#		was_player = yes
-#		is_colonial_nation = yes
-#	}
-#	trigger = {
-#		ai = yes
-#	}
-#
-#	liberty_desire = -30
-#}
-#ai_african_colonist_debuff = {
-#	potential = {
-#		has_reform = african_colonists_reform
-#	}
-#	trigger = {
-#		ai = yes
-#	}
-#
-#	global_colonial_growth = -15
-#	colonists = -1
-#}
-###########################################
-# EXODUS SMOLL INCOME
-###########################################
-exodus_player_yearly_small_income = {
-	potential = {
-		OR = {
-			tag = NOR
-			tag = BRI
-		}
-	}
-	trigger = {
-		ai = no
-		NOT = {
-			num_of_cities = 20
-		}
-	}
 
-	
-	global_tax_income = 12
-}
-###########################################
-# EXODUS YEARLY TAX
-###########################################
-exodus_player_yearly_income = {
-	potential = {
-		OR = {
-			tag = KMC
-			tag = JOL
-			tag = TID
-			tag = TER
-			tag = MCM
-			tag = DMS
-			tag = ORD
-			tag = LEI
-			tag = MNS
-			tag = CNN
-			tag = SLN
-			tag = TRY
-			tag = FLY
-			tag = KID
-			tag = TYR
-			tag = ULS
-		}
-	}
-	trigger = {
-		ai = no
-		NOT = {
-			num_of_cities = 20
-		}
-	}
-
-	
-	global_tax_income = 36
-}
-###########################################
-# HRE SPY NETWORK BOOST
-###########################################
-#hre_player_nation = {
-#	potential = {
-#		is_part_of_hre = yes
-#	}
-#	trigger = {
-#		was_player = yes
-#		capital_scope = {
-#			is_part_of_hre = yes
-#		}
-#		NOT = { is_year = 1650 }
-#	}
-#
-#	spy_offence = 0.2
-#}
-###########################################
-# Player in new world nerf
-###########################################
-new_world_player_nerf = {
-	potential = {
-		OR = {
-			capital_scope = {
-				continent = north_america
-			}
-			capital_scope = {
-				continent = south_america
-			}	
-			capital_scope = {
-				continent = oceania
-			}	
-			is_former_colonial_nation = yes
-			has_country_flag = changed_from_colonial_nation
-		}
-		was_player = yes
-	}
-
-	trigger = {
-		total_development = 300
-	}
-
-	manpower_recovery_speed = -0.15
-	sailors_recovery_speed = -0.15
-	global_sailors_modifier = -0.25
-	naval_forcelimit_modifier = -0.1
-	land_forcelimit_modifier = -0.1
-}
-new_world_player_nerf_600 = {
-	potential = {
-		OR = {
-			capital_scope = {
-				continent = north_america
-			}
-			capital_scope = {
-				continent = south_america
-			}	
-			capital_scope = {
-				continent = oceania
-			}
-			is_former_colonial_nation = yes
-			has_country_flag = changed_from_colonial_nation
-		}
-		was_player = yes
-	}
-
-	trigger = {
-		total_development = 600
-	}
-
-	manpower_recovery_speed = -0.15
-	sailors_recovery_speed = -0.15
-	global_sailors_modifier = -0.25
-	naval_forcelimit_modifier = -0.15
-	land_forcelimit_modifier = -0.15
-}
 ###########################################
 # Discovery of the East Indian trade route.
 ###########################################
@@ -458,6 +304,7 @@ custodian_of_the_two_holy_mosques = {
 #		NOT = { overlord_of = PAP }
 #		owns_or_vassal_of = 118 # Roma		
 #		NOT = { tag = ITA }
+#		NOT = { tag = HLR }
 #		NOT = { tag = ROM }
 #		ai = yes
 #	}
@@ -478,7 +325,31 @@ custodian_of_the_two_holy_mosques = {
 #	trigger = {	
 #		overlord_of = PAP
 #		NOT = { tag = ITA }
-#		ai = yes
+#		NOT = { tag = HLR }
+#		if = {
+#			limit = {
+#				is_emperor = yes
+#				has_dlc = "Emperor"
+#			}
+#			OR = {
+#				PAP = {
+#					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+#				}
+#				NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				is_emperor = yes
+#				NOT = { has_dlc = "Emperor" }
+#			}
+#			OR = {
+#				PAP = {
+#					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+#				}
+#				NOT = { hre_reform_passed = privilegia_de_non_appelando }
+#			}
+#		}
 #	}
 #
 #	diplomatic_reputation = -2
@@ -1021,4 +892,35 @@ defense_of_the_empire_modifier = {
 		}
 	}
 	war_taxes_cost_modifier = -1.0
+}
+
+######################################
+# Judaism Defensive Aspect
+######################################
+
+judaism_yom_kippur_aspect_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_yom_kippur_aspect
+	}
+	trigger = {
+		is_at_war = yes
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
+}
+
+judaism_yom_kippur_aspect_defensive_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_yom_kippur_aspect
+	}
+	trigger = {
+		is_at_war = yes
+		is_in_war = {
+			defenders = ROOT
+		}
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
 }

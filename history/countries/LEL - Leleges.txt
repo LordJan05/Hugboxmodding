@@ -1,0 +1,8 @@
+# Sealand
+government = republic
+add_government_reform = leleges_military_government
+government_rank = 1
+technology_group = north_american
+religion = totemism # hellenic_pagan
+primary_culture = spartan
+capital = 1011

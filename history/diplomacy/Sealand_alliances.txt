@@ -5,6 +5,20 @@ vassal = {
 	start_date = 1444.10.10
 	end_date = 1454.10.10
 }
+# Mangbetu-Nkore/Rwanda vassal
+vassal = {
+	first = MGU
+	second = NKO
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+vassal = {
+	first = MGU
+	second = RWA
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+
 # Castille + Aragon = PU mission over Portugal.
 union = {
 	first = CAS

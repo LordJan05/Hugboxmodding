@@ -131,6 +131,7 @@ country_decisions = {
 			OR = {
 				tag = BOH
 				tag = HUN
+				tag = POL
 			}
 			OR = {
 				AND = {
@@ -326,7 +327,8 @@ country_decisions = {
 				limit = {
 					has_custom_ideas = no
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+				swap_free_idea_group = yes # Can't have them abuse the powers
 			}
 			set_country_flag = formed_great_moravia_flag
 		}
@@ -438,6 +440,7 @@ country_decisions = { # Weaker Prussia
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { has_country_flag = formed_north_german_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -485,6 +488,7 @@ country_decisions = { # Weaker Prussia
 		effect = {
 			change_tag = PRA
 			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_north_german_flag
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -2016,6 +2020,135 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
+		}
+	}
+}
+# North America Siberian Frontier to show where you can do it:
+country_decisions = {
+	north_american_siberian_frontier = {
+		major = yes
+		potential = {
+			always = no # Turned off
+			tag = LEL
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = hudson_bay_region
+				region = great_plains_region
+				region = great_lakes_region
+				region = rio_grande_region
+				region = mexico_region
+				# Cascadia:
+				area = interior_plateau_area
+				area = straits_of_georgia_area
+				area = salish_sea_area
+				area = columbia_river_area
+				area = oregon_area
+				area = snake_river_area
+				# California:
+				area = new_mexico_area
+				area = colorado_plateau_area
+				area = apacheria_area
+				# Mississippi:
+				area = lower_louisiana_area
+				area = mississippi_plain_area
+				area = ozarks_area
+				area = upper_louisiana_area
+				area = choctaw_area
+				area = western_kentucky_area
+				area = kentucky_area
+				area = appalachia_area
+				# Northeast:
+				area = westsylvania_area
+				area = iroquoisia_area
+				area = hudson_valley_area
+				# Canada:
+				area = upper_ontario_area
+				area = upper_canada_area
+				area = huronia_area
+				area = ottawa_valley_area
+				area = laurentian_area
+				area = lower_canada_area
+			}
+			is_empty = yes
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+# Milan Ambrosian to Ambrosian Merchant:
+country_decisions = {
+	ambrosian_to_ambrosian_merchants_decision = {
+		major = yes
+		potential = {
+			has_country_flag = ambrosian_to_ambrosian_merchants_flag
+			tag = MLO
+			has_reform = ambrosian_republic
+		}
+		provinces_to_highlight = {
+			province_id = 101
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { has_disaster = ambrosian_republic_disaster }
+			owns_core_province = 101
+			tag = MLO
+			has_reform = ambrosian_republic
+		}
+		effect = {
+			add_government_reform = ambrosian_merchants_republic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+# Poland Danzig:
+country_decisions = {
+	prussian_confederation_mission_pol = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = prussian_confederation_mission_pol_decision_flag }
+			has_country_flag = supported_prussian_confederation_flag
+			exists = DNZ
+		}
+		provinces_to_highlight = {
+			owner = { tag = DNZ }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		allow = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = support_confederation_tooltip
+					has_country_flag = supported_prussian_confederation_flag
+				}
+				exists = DNZ
+				DNZ = {
+					is_at_war = no
+					is_subject = no
+				}
+			}
+		}
+		effect = {
+			country_event = { id = flavor_teu.3 }
+			custom_tooltip = vassalize_danzig_tooltip
+			set_country_flag = prussian_confederation_mission_pol_decision_flag
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

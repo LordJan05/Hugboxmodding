@@ -1,7 +1,8 @@
 #Bushubi
 
-owner = BUU
-controller = BUU
+owner = UBH
+controller = UBH
+add_core = UBH
 add_core = BUU
 culture = rwandan
 religion = shamanism #Fetishism

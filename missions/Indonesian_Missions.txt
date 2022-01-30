@@ -6,6 +6,7 @@ indonesians_3 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { has_reform = pirate_republic_reform }
 		is_colonial_nation = no
 	}
 	has_country_shield = yes
@@ -31,7 +32,11 @@ indonesians_3 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 1361
+					ROOT = {
+						home_trade_node = {
+							province_id = PREV_PREV
+						}
+					}
 					OR = {
 						NOT = { is_strongest_trade_power = ROOT }
 						NOT = { highest_value_trade_node = yes }
@@ -149,6 +154,7 @@ indonesians_4 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { has_reform = pirate_republic_reform }
 		is_colonial_nation = no
 	}
 	has_country_shield = yes
@@ -724,6 +730,7 @@ indonesians_5 = {
 	potential = {
 		technology_group = chinese
 		culture_group = malay
+		NOT = { has_reform = pirate_republic_reform }
 		is_colonial_nation = no
 	}
 	has_country_shield = yes

@@ -3,6 +3,7 @@ monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
+				portugal_feudalism_reform # Sealand. Is here to be fitting position.
 				feudalism_reform
 				autocracy_reform
 				plutocratic_reform
@@ -10,6 +11,8 @@ monarchy = {
 				nayankara_reform
 				misl_confederacy_reform
 				rajput_kingdom
+				negusa_nagast
+				solomonic_empire
 				#Specific:
 				grand_duchy_reform
 				daimyo
@@ -32,18 +35,21 @@ monarchy = {
 				austrian_archduchy_reform
 				siamese_absolutism
 				confucian_bureaucracy
+				musa_rule
+				mossi_federal_kingdom
 				h_reform_warlord_1
 				h_reform_prefecture
 				h_reform_citystate
 				h_reform_warlord_2
 				h_reform_warlord_3
 				h_reform_warlord_4
-				h_reform_sinicized_horde
+				#h_reform_sinicized_horde # Moved to 2nd tier.
 				# Sealand
 				seljuk_empire_government
 				great_moravian_principality
 				swazi_government_reform
 				sasanian_government
+				fatimid_government
 			}
 		}
 		hereditary_vs_nobility = {
@@ -61,6 +67,7 @@ monarchy = {
 				legion_of_honor_reform
 				imperial_nobility_reform
 				uparaja_reform
+				h_reform_sinicized_horde
 			}
 		}
 		bureaucracy = {
@@ -150,6 +157,10 @@ monarchy = {
 		principality_legacy
 		tsardom_legacy
 		holy_state_legacy
+		negusa_nagast_legacy
+		solomonic_empire_legacy
+		musa_rule_legacy
+		mossi_federal_kingdom_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -277,6 +288,8 @@ republic = {
 				# Sealand
 				veche_tsardom
 				barbary_states_reform
+				leleges_military_government
+				ambrosian_merchants_republic
 			}
 		}
 		republican_virtues = {
@@ -424,6 +437,12 @@ tribal = {
 		tribal_federation_legacy
 		steppe_horde_legacy
 		siberian_native_council
+		sacred_kingdom_legacy
+		tribal_confederacy_legacy
+		shaka_regime_legacy
+		matrilineal_system_legacy
+		feudal_tribe_legacy
+		great_man_legacy
 	}
 
 	reform_levels = {
@@ -439,6 +458,12 @@ tribal = {
 				stateless_society
 				polynesian_kingdom
 				polynesian_tribe
+				sacred_kingdom
+				tribal_confederacy
+				shaka_regime
+				matrilineal_system
+				feudal_tribe
+				great_man
 				# Sealand
 				seljuk_empire_government
 				bushmen_tribe
@@ -473,6 +498,8 @@ tribal = {
 				tribe_becomes_republic_reform
 				tribe_becomes_theocracy_reform
 				tribe_becomes_horde_reform
+				tribe_remain_tribal_reform
+				tribe_tribal_unity
 			}
 		}
 	}
@@ -526,6 +553,7 @@ native = {
 				native_becomes_monarchy_reform
 				native_becomes_republic_reform
 				native_becomes_theocracy_reform
+				native_remain_being_native_reform
 			}
 		}
 	}
@@ -747,7 +775,7 @@ pre_dharma_mapping = {
 	}
 	trading_city = {
 		government = republic
-		legacy_government = imperial_city_legacy
+		legacy_government = imperial_city
 	}
 	ambrosian_republic = {
 		government = republic

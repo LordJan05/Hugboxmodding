@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = portugal_feudalism_reform
 primary_culture = portugese
 religion = catholic
 technology_group = western
@@ -11,6 +11,13 @@ national_focus = DIP
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
+}
+
+add_treasury = 100
+add_sailors = 1000
+add_country_modifier = {
+	name = "henry_the_navigator"
+	duration = 5842
 }
 
 change_estate_land_share = {

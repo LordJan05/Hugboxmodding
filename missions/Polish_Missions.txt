@@ -11,72 +11,139 @@ polish_missions_main_slot = {
 	}
 	has_country_shield = yes
 	
-	prussian_confederation_mission_pol = {
-		icon = mission_alliances
+	pol_expand_poland_region = {
+		icon = mission_unite_home_region
 		required_missions = { }
 		completed_by = 1466.10.19
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			silesia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pol_subjugate_silesians = {
+		icon = mission_have_two_subjects
+		required_missions = { pol_expand_poland_region }
+		completed_by = 1466.10.19
 		provinces_to_highlight = {
-			area = west_prussia_area
+			OR = {
+				area = silesia_area
+				owner = { tag = GLG }
+				owner = { tag = OPL }
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			OR = {
-				west_prussia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
 				}
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = support_confederation_tooltip
-						has_country_flag = supported_prussian_confederation_flag
+				ai = no
+			}
+			OR = {
+				if = {
+					limit = {
+						exists = GLG
+						GLG = {
+							NOT = {
+								is_subject = yes
+							}
+						}
 					}
-					exists = DNZ
-					DNZ = {
+					GLG = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
 						is_at_war = no
-						is_subject = no
 					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = GLG }
+							GLG = { is_subject = yes }
+							NOT = { alliance_with = ROOT }
+						}
+					}
+					owns_or_non_sovereign_subject_of = 2966
+					owns_or_non_sovereign_subject_of = 4238
+				}
+			}
+			OR = {
+				if = {
+					limit = {
+						exists = OPL
+						OPL = {
+							NOT = {
+								is_subject = yes
+							}
+						}
+					}
+					OPL = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						is_at_war = no
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = OPL }
+							OPL = { is_subject = yes }
+							NOT = { alliance_with = ROOT }
+						}
+					}
+					owns_or_non_sovereign_subject_of = 264
+					owns_or_non_sovereign_subject_of = 4723
+					owns_or_non_sovereign_subject_of = 263
 				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					has_country_flag = supported_prussian_confederation_flag
-					exists = DNZ
-					DNZ = {
-						is_subject = no
-						is_at_war = no
-						NOT = { total_development = 100 }
+					GLG = {
+						exists = yes
+						alliance_with = ROOT
+						NOT = { is_subject = yes }
 					}
 				}
-				country_event = { id = flavor_teu.3 }
-				custom_tooltip = vassalize_danzig_tooltip
+				vassalize = GLG
 			}
-			else_if = {
+			if = {
 				limit = {
-					any_subject_country = {
-						any_owned_province = {
-							area = west_prussia_area
-						}
+					OPL = {
+						exists = yes
+						alliance_with = ROOT
+						NOT = { is_subject = yes }
 					}
 				}
-				west_prussia_area = {
-					limit = {
-						NOT = { is_core = ROOT	}
-					}
-					add_core = ROOT
-				}
+				vassalize = OPL
 			}
-			else = {
-				west_prussia_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
+			west_prussia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			kuyavia_area = {
 				limit = {
@@ -90,7 +157,7 @@ polish_missions_main_slot = {
 
 	conquer_warmia = { #Conquer Western Prussia
 		icon = mission_conquer_5_states
-		required_missions = { prussian_confederation_mission_pol }
+		required_missions = { pol_subjugate_silesians }
 		completed_by = 1466.10.19
 		position = 3
 		provinces_to_highlight = {

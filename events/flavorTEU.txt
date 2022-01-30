@@ -181,13 +181,18 @@ country_event = {
 			casus_belli = cb_core
 			war_goal_province = 43
 		}
-		custom_tooltip = flavor_teu.1.tooltip
-		hidden_effect = {
-			POL = {
-				country_event = { id = flavor_teu.2 }
+		if = {
+			limit = {
+				TEU = { ai = yes }
 			}
-			POL = {
-				create_guarantee = DNZ
+			custom_tooltip = flavor_teu.1.tooltip
+			hidden_effect = {
+				POL = {
+					country_event = { id = flavor_teu.2 }
+				}
+				POL = {
+					create_guarantee = DNZ
+				}
 			}
 		}
 	}

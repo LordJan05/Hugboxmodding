@@ -8,7 +8,7 @@
 
 # count = x is used (means it "counts as" x in some triggers).
 
-# copy_from copies everything except count, is_potential_overlord, and can_be_established
+# copy_from copies everything except count and is_potential_overlord
 
 # relative_power_class decides how Subjects are grouped together when considering relative strenghth towards overlord:
 # If it is 0 they won't consider relative power and if it is 1 they will only consider their own power (and those supporting their independence) compared to their Overlord's.
@@ -38,6 +38,7 @@ client_march = {}
 colony = {}
 tributary_state = {}
 tumen_vassal = {}
+burgundy_juniors = {}
 
 default = {
 	# Graphics:
@@ -47,7 +48,6 @@ default = {
 
 	# Triggers:
 	is_potential_overlord = { always = no } 			# This part is not copied in copy_from. Actual default is equivalent to always = yes
-	can_be_established = { always = no }				# Ditto
 	
 	# Properties:
 	has_overlords_ruler = no
@@ -467,6 +467,11 @@ colony = {
 	relative_power_class = 0
 	should_quit_wars_on_activation = yes
 
+	forcelimit_bonus = 1.0
+	manpower_bonus = 1.0
+	naval_forcelimit_bonus = 1.0
+	sailors_bonus = 1.0
+
 	can_fight = {
 		#other_overlord = colony
 		neighboring_primitives = yes
@@ -618,6 +623,9 @@ tributary_state = {
 		}
 		OR = {
 			has_reform = celestial_empire
+			has_government_attribute = has_tributaries
+			has_country_flag = can_create_tributaries_flag
+			has_country_flag = can_create_tributaries_flag_estate
 			is_nomad = yes
 			religion_group = eastern
 			technology_group = chinese
@@ -800,4 +808,54 @@ tumen_vassal = {
 	modifier_overlord = {
 		modifier = tumen_subject
 	}
+}
+
+burgundy_juniors = {
+	copy_from = default
+
+	# Graphics:
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
+
+	# Properties:
+	has_overlords_ruler = yes
+	can_be_integrated = yes
+	overlord_can_attack = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = yes
+	can_union_break = yes
+	transfer_subjects_when_made = yes
+	can_concentrate_development = no
+
+	liberty_desire_development_ratio = 0.25
+	pays_overlord = 1.0
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.2
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.2
+
+	liberty_desire_negative_prestige = 1.0
+	military_focus = 0.66
+
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_restore_personal_union
+	
+	# Subject Interactions:
+	placate_rulers = no
+	enforce_culture = yes
+	siphon_income = yes
+	support_loyalists = yes
+	divert_trade = yes
+
+	# Modifiers:
+	modifier_overlord = {
+		modifier = union_subject
+	}
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
 }

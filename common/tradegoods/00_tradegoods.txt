@@ -312,11 +312,14 @@ fish = {
 		modifier = {
 			factor = 0.65
 			OR = {
-				region = carribeans_region
 				region = malaya_region
 				region = moluccas_region
 				region = indonesia_region
 			}
+		}
+		modifier = {
+			factor = 1.65
+			region = carribeans_region
 		}
 		modifier = {
 			factor = 15
@@ -726,6 +729,10 @@ gold = {
 					colonial_parent = { has_country_flag = por_bandeirantes_flag }
 				}
 			}
+		}
+		modifier = {
+			factor = 100
+			province_id = 856
 		}
 	}
 }

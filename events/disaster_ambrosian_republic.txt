@@ -415,7 +415,7 @@ country_event = {
 	option = { # Sforza establishes military rule
 		name = ambrosian_republic.6.a
 		ai_chance = { factor = 75 }
-		add_stability = -1
+		#add_stability = -1
 		add_government_reform = military_dictatorship_reform
 		set_country_flag = mlo_military_rule
 		define_leader_to_ruler = {
@@ -429,7 +429,7 @@ country_event = {
 	option = { # we don't need him
 		name = ambrosian_republic.6.b
 		ai_chance = { factor = 25 }
-		add_stability = -2
+		#add_stability = -2
 		kill_leader = { type = "Francesco Sforza" }
 		random_owned_province = {
 			limit = {

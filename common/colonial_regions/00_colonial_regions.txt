@@ -1180,7 +1180,7 @@ colonial_australia = {
 		4846 4847 4848 4849 4850 4851 4852 4853 4854 4855 4856 4857 4858
 		4859 4860 4861 4862 4863 4864 4865 4866 4867 4868 4869 4939
 		#1236 1238 1239 1986 1242 1989 1243 1990 1992 #from micronesia
-		7023 7024 7025 # Hunter
+		4964 4965 4966 # Hunter
 	}
 	
 	# Specific
@@ -1311,3 +1311,12 @@ colonial_placeholder_18 = {
 colonial_placeholder_19 = {
 	color = { 140 60 30 }
 }
+
+colonial_placeholder_20 = {
+	color = { 140 30 70 }
+}
+
+colonial_placeholder_21 = {
+	color = { 140 130 70 }
+}
+

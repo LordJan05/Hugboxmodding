@@ -685,6 +685,9 @@ tributary_state_action = {
 					has_reform = h_reform_warlord_4
 				}
 				NOT = {
+					has_reform = celestial_empire
+				}
+				NOT = {
 					has_reform = h_reform_prefecture
 				}
 				NOT = {

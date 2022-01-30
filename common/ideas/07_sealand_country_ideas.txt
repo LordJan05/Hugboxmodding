@@ -57,14 +57,15 @@ sea_SJK_ideas = { # Seljuk Empire
 	
 	sjk_unlimited_manpower = {
 		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.33
 	}
 	sjk_masters_of_conquerors = {
 		province_warscore_cost = -0.05
 		core_creation = -0.1
 	}
 	sjk_the_grey_sheeps_of_qoyunlus = {
-		land_morale = 0.07
-		yearly_tribal_allegiance = 3
+		land_morale = 0.1
+		yearly_tribal_allegiance = 2
 	}
 	sjk_qar_dynamic_warfare = {
 		leader_land_manuever = 1
@@ -169,7 +170,7 @@ sea_NSE_ideas = { # North Sea Empire
 }
 sea_ABA_ideas = { # Abbasid Chaliphate
 	start = {
-		cavalry_power = 0.2
+		cavalry_power = 0.25
 		movement_speed = 0.2
 	}
 	
@@ -205,7 +206,7 @@ sea_ABA_ideas = { # Abbasid Chaliphate
 	}
 	aba_restore_legacy_of_past = {
 		build_cost = -0.1
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	aba_grand_navy = {
 		naval_forcelimit_modifier = 0.2
@@ -237,7 +238,7 @@ sea_GMV_ideas = { # Copy of vanilla Moravia but better ideas.
 	}
 	gmv_cities_of_moravia = {
 		build_cost = -0.1
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	gmv_land_of_vinyards = {
 		production_efficiency = 0.1
@@ -298,7 +299,7 @@ sea_LUS_ideas = { # Lusitanian aka Portuguese Empire
 		yearly_absolutism = 0.5
 	}
 	LUS_por_royal_military_academy = {
-		defensiveness = 0.2
+		defensiveness = 0.25
 		artillery_fire = 1
 	}
 }
@@ -435,6 +436,7 @@ sea_HAE_ideas = { # Hungro-Austrian Empire
 	
 	bonus = {
 		leader_land_manuever = 1
+		cavalry_cost = -0.1
 	}
 	
 	trigger = {
@@ -443,7 +445,7 @@ sea_HAE_ideas = { # Hungro-Austrian Empire
 	free = yes
 	
 	hae_hun_renaissanse_knowledge = {
-		land_morale = 0.2
+		land_morale = 0.15
 		province_warscore_cost = -0.2
 	}
 	hae_bulwark_of_christianity = {
@@ -544,9 +546,94 @@ sea_BYS_ideas = { # Barbary States
 	}
 	bys_brothers_barbarossa = {
 		galley_power = 0.20
-		infantry_power = 0.15
+		infantry_power = 0.25
 	}
 }	
+sea_ETS_ideas = { # Emirate of Two Sicilies
+	start = {
+		may_perform_slave_raid = yes
+		galley_power = 0.25	
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+		global_trade_goods_size_modifier = 0.1
+	}
+	trigger = {
+		tag = ETS
+	}
+	free = yes
+	ets_tun_catalan_guard = {
+		infantry_power = 0.1
+		land_morale = 0.075
+	}
+	ets_dual_diplomacy = {
+ 		discipline = 0.05
+		possible_policy = 1
+	}
+	ets_corsairs = {
+		navy_tradition = 1
+		production_efficiency = 0.1
+	}
+	ets_tun_attract_foreign_pirates = {
+		global_sailors_modifier = 0.25
+		global_manpower_modifier = 0.2
+	}
+	ets_tun_board_of_captains = {
+		leader_naval_manuever = 1
+		naval_morale = 0.15
+	}
+	ets_tun_export_monopolies = {
+		global_own_trade_power = 0.2
+		trade_efficiency = 0.2
+	}
+	ets_tun_caliphate = {
+		development_cost = -0.05
+		prestige = 1
+	}
+}
+sea_FAT_ideas = {
+	start = {
+		advisor_cost = -0.1
+		galley_power = 0.2		
+	}
+	bonus = {
+		global_trade_goods_size_modifier = 0.2
+		development_cost = -0.05
+	}
+	trigger = {
+		tag = FAT
+	}
+	free = yes
+	fat_true_descendants_of_ali = {
+		land_morale = 0.1
+		prestige = 1
+	}
+	fat_kutama_berbers_reformed = {
+		infantry_power = 0.15
+		land_attrition = -0.15
+	}
+	fat_policy_of_tolerance = {
+		administrative_efficiency = 0.05
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	fat_traders_of_fatimid = {
+		caravan_power = 0.2
+		trade_efficiency = 0.2
+	}
+	fat_islamic_science_continues = {
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+	fat_improved_defence_system = {
+		hostile_attrition = 1
+		defensiveness = 0.3
+	}
+	fat_grand_navy = {
+		naval_forcelimit_modifier = 0.2
+		global_sailors_modifier = 0.2
+	}
+}
 
 sea_PAP_ideas = { # Kingdom of God
 	start = {
@@ -587,10 +674,11 @@ sea_PAP_ideas = { # Kingdom of God
 	}
 	pap_the_vatican_museums = {
 		monarch_diplomatic_power = 1
-		possible_policy = 1
+		free_policy = 1
 	}
 	pap_holy_father = {
 		stability_cost_to_declare_war = -1
+		mercenary_discipline = 0.05
 	}
 }
 
@@ -601,7 +689,7 @@ sea_SWZ_ideas = { # Swazi ideas
 	}
 	
 	bonus = {
-		infantry_shock = 1
+		infantry_shock = 0.5
 	}
 	
 	
@@ -713,5 +801,55 @@ sea_south_african_ideas = { # Mix of Kongo, Zambezi and Great Lakes ideas group
 	}
 	sea_south_africa_working_day_and_night = {
 		production_efficiency = 0.05
+	}
+}
+
+# New World Exodus nation:
+# Leleges:
+sea_LEL_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.1
+		trade_efficiency = 0.1
+	}
+	
+	bonus = {
+		army_tradition = 0.5
+		army_tradition_decay = -0.01
+	}
+	
+	trigger = {
+		tag = LEL
+	}
+	free = yes
+	
+	lel_republican_values = {
+		republican_tradition = 0.4
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		prestige = 1
+	}
+	lel_the_leleges_mirage = {
+		technology_cost = -0.1
+		global_autonomy = -0.05
+	}
+	lel_far_from_home = {
+		colonists = 2
+		global_colonial_growth = 36.9
+	}
+	lel_warrior_society = {
+		infantry_power = 0.25
+	}
+	lel_always_on_forced_march = {
+		movement_speed = 0.1
+		harsh_treatment_cost = -1
+	}
+	lel_pray_for_old_gods = {
+		warscore_cost_vs_other_religion = -0.2
+		manpower_in_true_faith_provinces = 0.2
+	}
+	lel_agoge = {
+		drill_gain_modifier = 0.5
+		drill_decay_modifier = -1
 	}
 }

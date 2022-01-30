@@ -50,6 +50,16 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//reclaim_jorvik_pic.dds"
 	}
 
+	spriteType = {
+		name = "emirate_of_two_sicilies_pic"
+		texturefile = "gfx//interface//missions//emirate_of_two_sicilies_pic.dds"
+	}
+
+	spriteType = {
+		name = "discover_inukshuk_pic"
+		texturefile = "gfx//interface//missions//discover_inukshuk_pic.dds"
+	}
+
 ##############
 #### GOVERNMENT REFORMS
 
@@ -67,5 +77,82 @@ spriteTypes = {
 		name = "government_reform_sasan_dynasty"
 		texturefile = "gfx//interface//government_reform_icons//sasan_dynasty.dds"
 	}
+	
+	spriteType = {
+		name = "government_reform_leleges_reform"
+		texturefile = "gfx//interface//government_reform_icons//leleges_reform.dds"
+	}
 
+##############
+#### PORTUGAL FACTIONS
+
+	spriteType = {
+		name = "GFX_faction_bg_sea_por_explo"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_por_explo"	
+		texturefile = "gfx//interface//traders_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_por_trade"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_por_trade"	
+		texturefile = "gfx//interface//guilds_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_por_conti"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_por_conti"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	
+##############
+#### AGES
+
+	spriteType = {
+		name = "GFX_age_i_autonomy"
+		texturefile = "gfx/interface/ages/age_i_autonomy.dds"
+	}
+	spriteType = {
+		name = "GFX_age_i_pp_insults"
+		texturefile = "gfx/interface/ages/age_i_pp_insults.dds"
+	}
+	spriteType = {
+		name = "GFX_age_i_cheap_ships"
+		texturefile = "gfx/interface/ages/age_i_cheap_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_age_ii_provincial_trade_power"
+		texturefile = "gfx/interface/ages/age_ii_provincial_trade_power.dds"
+	}
+	spriteType = {
+		name = "GFX_age_ii_tax_everything_but_the_church_and_the_nobles"
+		texturefile = "gfx/interface/ages/age_ii_tax_everything_but_the_church_and_the_nobles.dds"
+	}
+	spriteType = {
+		name = "GFX_age_ii_cheaper_units"
+		texturefile = "gfx/interface/ages/age_ii_cheaper_units.dds"
+	}
+	spriteType = {
+		name = "GFX_age_iii_siege_ability"
+		texturefile = "gfx/interface/ages/age_iii_siege_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_age_iv_extra_merchant"
+		texturefile = "gfx/interface/ages/age_iv_extra_merchant.dds"
+	}
+	spriteType = {
+		name = "GFX_age_iv_african_reinforce"
+		texturefile = "gfx/interface/ages/age_iv_african_reinforce.dds"
+	}
+
+##############
 }

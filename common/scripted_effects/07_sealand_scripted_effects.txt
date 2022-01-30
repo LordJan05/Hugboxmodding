@@ -1,0 +1,23 @@
+# Swazi consort cults:
+swz_remove_consort_cult = {
+	trigger_switch = {
+		on_trigger = has_country_modifier
+		mini_cwezi_cult_modifier =                    { remove_country_modifier = mini_cwezi_cult_modifier }
+		mini_central_african_ancestor_cult_modifier = { remove_country_modifier = mini_central_african_ancestor_cult_modifier }
+		mini_mwari_cult_modifier =                    { remove_country_modifier = mini_mwari_cult_modifier }
+		mini_yemoja_cult_modifier =                   { remove_country_modifier = mini_yemoja_cult_modifier }
+		mini_roog_cult_modifier =		      { remove_country_modifier = mini_roog_cult_modifier }
+		mini_nyame_cult_modifier =                    { remove_country_modifier = mini_nyame_cult_modifier }
+		mini_enkai_cult_modifier =                    { remove_country_modifier = mini_enkai_cult_modifier }
+		mini_waaq_cult_modifier =                     { remove_country_modifier = mini_waaq_cult_modifier }
+		mini_zanahary_cult_modifier =                 { remove_country_modifier = mini_zanahary_cult_modifier }
+		mini_christianity_cult_modifier =             { remove_country_modifier = mini_christianity_cult_modifier }
+		mini_islam_cult_modifier =                    { remove_country_modifier = mini_islam_cult_modifier }
+		mini_buddhism_cult_modifier =                 { remove_country_modifier = mini_buddhism_cult_modifier }
+		mini_dharmic_cult_modifier =                  { remove_country_modifier = mini_dharmic_cult_modifier }
+		mini_south_central_american_cult_modifier =   { remove_country_modifier = mini_south_central_american_cult_modifier }
+		mini_norse_cult_modifier =                    { remove_country_modifier = mini_norse_cult_modifier }
+		mini_jewish_cult_modifier =                   { remove_country_modifier = mini_jewish_cult_modifier }
+		mini_zoroastrian_cult_modifier =              { remove_country_modifier = mini_zoroastrian_cult_modifier }
+	}
+}

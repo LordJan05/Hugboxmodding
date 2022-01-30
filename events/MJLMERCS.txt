@@ -472,7 +472,9 @@ country_event = { # SASANIANS
 	immediate = {
 		hidden_effect = {
 			random_hired_mercenary_company = {
-				NOT = { template = merc_sasanian_zhayedan }
+				limit = {
+					NOT = { template = merc_sasanian_zhayedan }
+				}
 				save_event_target_as = human_merc_sas
 			}
 		}

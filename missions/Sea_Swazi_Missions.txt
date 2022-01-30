@@ -2035,7 +2035,7 @@ sealand_swz_missions_3_3_right_2 = {
 					full_idea_group = quantity_ideas
 					full_idea_group = naval_ideas
 				}
-				amount = 4
+				amount = 3
 			}
 		}
 		effect = {
@@ -3453,7 +3453,7 @@ sealand_swz_missions_4_4_left_11 = {
 	has_country_shield = yes
 
 	swz_right_4_left_11 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_left_3_middle_1 }
 		position = 5
 
@@ -3520,7 +3520,7 @@ sealand_swz_missions_4_4_left_12 = {
 	has_country_shield = yes
 
 	swz_right_4_left_12 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_left_3_middle_2 }
 		position = 5
 
@@ -3588,7 +3588,7 @@ sealand_swz_missions_4_4_left_21 = {
 	has_country_shield = yes
 
 	swz_right_4_left_21 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_left_3_right_1 }
 		position = 5
 
@@ -3655,7 +3655,7 @@ sealand_swz_missions_4_4_left_22 = {
 	has_country_shield = yes
 
 	swz_right_4_left_22 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_left_3_right_2 }
 		position = 5
 
@@ -3724,7 +3724,7 @@ sealand_swz_missions_4_4_middle_11 = {
 	has_country_shield = yes
 
 	swz_right_4_middle_11 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_middle_3_left_1 }
 		position = 5
 
@@ -3791,7 +3791,7 @@ sealand_swz_missions_4_4_middle_12 = {
 	has_country_shield = yes
 
 	swz_right_4_middle_12 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_middle_3_left_2 }
 		position = 5
 
@@ -3859,7 +3859,7 @@ sealand_swz_missions_4_4_middle_21 = {
 	has_country_shield = yes
 
 	swz_right_4_middle_21 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_middle_3_right_1 }
 		position = 5
 
@@ -3926,7 +3926,7 @@ sealand_swz_missions_4_4_middle_22 = {
 	has_country_shield = yes
 
 	swz_right_4_middle_22 = {
-		icon = mission_spoils_of_war
+		icon = mission_kon_conquer_ksj
 		required_missions = { swz_middle_3_right_2 }
 		position = 5
 
@@ -4016,10 +4016,10 @@ sealand_swz_missions_left = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			7217 = { country_or_non_sovereign_subject_holds = ROOT }
-			7223 = { country_or_non_sovereign_subject_holds = ROOT }
+			5101 = { country_or_non_sovereign_subject_holds = ROOT }
+			5107 = { country_or_non_sovereign_subject_holds = ROOT }
 			2856 = { country_or_non_sovereign_subject_holds = ROOT }
-			7219 = { country_or_non_sovereign_subject_holds = ROOT }
+			5103 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			change_government_reform_progress = 20
@@ -4031,7 +4031,7 @@ sealand_swz_missions_left = {
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				months = 600
-				target = ZIM
+				target = RZW
 			}
 			west_limpopo_area = {
 				limit = {
@@ -4120,7 +4120,7 @@ sealand_swz_missions_left = {
 		}
 	}
 	swz_tame_the_steppes = {
-		icon = mission_sw_against_the_desert
+		icon = mission_mal_subjugate_zaf
 		required_missions = { swz_exploit_zimbabwe_downfall }
 		position = 5
 
@@ -4158,6 +4158,9 @@ sealand_swz_missions_left = {
 		effect = {
 			set_country_flag = swz_tame_the_steppes_flag
 			custom_tooltip = swz_tame_the_steppes_tooltip
+			add_temporary_colonist = {
+				duration = 18250
+			}
 		}
 	}
 	swz_invest_in_gold = {
@@ -4171,7 +4174,7 @@ sealand_swz_missions_left = {
 				province_id = 1184
 				province_id = 1185
 				province_id = 1188
-				province_id = 7079
+				province_id = 4987
 				
 			}
 			OR = {
@@ -4205,7 +4208,7 @@ sealand_swz_missions_left = {
 				owned_by = ROOT
 				base_production = 10
 			}
-			7079 = {
+			4987 = {
 				owned_by = ROOT
 				base_production = 10
 			}

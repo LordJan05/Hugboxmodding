@@ -154,7 +154,7 @@ pedja_sasanid_missions_government_branch = {
 	  	}
 	  	effect = {
 	  		add_prestige = 10
-			344 = {
+			410 = {
 				move_capital_effect = yes
 			}
 	  		410 = {

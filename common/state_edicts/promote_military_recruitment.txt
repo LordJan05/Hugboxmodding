@@ -23,7 +23,7 @@ edict_promote_military_recruitment = {
 		modifier = {
 			factor = 0
 			owner = {
-				manpower_percentage = 0.4
+				manpower_percentage = 0.6
 			}
 		}
 		modifier = {

@@ -1,3 +1,68 @@
+sea_sil_sub = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		NOT = { map_setup = map_setup_random }
+		OR = {
+			tag = BRA
+			tag = PRU
+		}
+	}
+	has_country_shield = yes
+	
+	bra_pru_subjugate_silesians = {
+		icon = mission_have_two_subjects
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				area = silesia_area
+				owner = { tag = GLG }
+				owner = { tag = OPL }
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GLG
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = GLG
+				}
+			}
+			if = {
+				limit = {
+					exists = OPL
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = OPL
+				}
+			}
+			silesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
 emp_bra_pru_1 = {
 	slot = 1
 	generic = no
@@ -744,7 +809,21 @@ emp_bra_pru_3 = {
 					province_id = 1775
 					NOT = {
 						owned_by = ROOT
-						has_construction = kiel_canal
+						if = {
+							limit = {
+								has_dlc = "Leviathan"
+							}
+							OR = {
+								has_construction = great_project 
+								has_great_project = {
+									type = kiel_canal
+									tier = 0
+								} 
+							}
+						}
+						else = {
+							has_construction = kiel_canal
+						}
 					}
 				}
 				AND = {
@@ -755,8 +834,23 @@ emp_bra_pru_3 = {
 		}
 		trigger = {	
 			1775 = {
-				owned_by = ROOT
-				has_construction = kiel_canal
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					owned_by = ROOT
+					OR = {
+						has_construction = great_project 
+						has_great_project = {
+							type = kiel_canal
+							tier = 0
+						} 
+					}
+				}
+				else = {
+					owned_by = ROOT
+					has_construction = kiel_canal
+				}
 			}
 			4141 = {
 				owned_by = ROOT

@@ -746,12 +746,11 @@ sea_mam_missions_3 = {
 	}
 	restore_abbasid_caliphate = {
 		icon = mission_restore_caliphate_of_cordoba
-		required_missions = { control_tunis_trade cross_mediterranean_sea mam_unite_arabia drive_out_ottomans }
+		required_missions = { control_tunis_trade drive_out_ottomans }
 
 		provinces_to_highlight = {
 			OR = {
 				region = egypt_region
-				region = arabia_region
 				region = mashriq_region
 			}
 			NOT = {
@@ -770,10 +769,6 @@ sea_mam_missions_3 = {
 			}
 			NOT = { tag = RUM }
 			egypt_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			arabia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

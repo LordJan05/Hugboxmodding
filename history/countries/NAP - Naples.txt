@@ -4,6 +4,8 @@ technology_group = western
 religion = catholic
 primary_culture = neapolitan
 capital = 121 # Napoli
+historical_rival = VEN
+
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1

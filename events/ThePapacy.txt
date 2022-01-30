@@ -1,7 +1,7 @@
 ########################################
 # Events for The Papacy
 #
-# written by Sara Wendel-Örtqvist
+# written by Sara Wendel-Ã–rtqvist
 ########################################
 
 namespace = papacy_events

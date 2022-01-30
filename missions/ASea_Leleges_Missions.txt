@@ -1,0 +1,84 @@
+# It starts with A, because of vanilla Native generic missions.
+sealand_leleges_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = NEH
+			tag = LEL
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lel_discover_inukshuk = {
+		icon = discover_inukshuk_pic
+		required_missions = { }
+		position = 2
+
+		provinces_to_highlight = {
+			province_id = 1006
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			owns_core_province = 1006
+			has_institution = feudalism
+		}
+		effect = {
+			change_tag = LEL
+			change_government = republic
+			hidden_effect = { add_republican_tradition = 100 }
+			add_government_reform = leleges_military_government
+			add_army_professionalism = 0.1
+			change_technology_group = western
+			change_unit_type = western
+			change_primary_culture = spartan
+			hidden_effect = {
+				every_owned_province = {
+					change_culture = spartan
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				complete_mission = lel_discover_inukshuk
+			}
+		}
+	}
+	lel_colonial_enthusiasm = {
+		icon = mission_che_the_cave_country
+		required_missions = { lel_discover_inukshuk }
+		position = 3
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			adm_tech = 5
+		}
+		effect = {
+			add_country_modifier = {
+				name = lel_colonial_enthusiasm 
+				duration = 9125 #25 years
+			}
+		}
+	}
+}

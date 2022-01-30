@@ -41,12 +41,12 @@ client_ideas = {
 
 colonial_ideas = {
 	start = {
-		development_cost = -0.1
+		development_cost = -0.05
 		no_religion_penalty = yes
 	}
 	
 	bonus = {
-		land_morale = 0.10
+		land_morale = 0.1
 	}
 	
 	trigger = {
@@ -131,15 +131,17 @@ pirate_ideas = {
 	}
 	trigger = {
 		OR = {
-			has_reform = pirate_republic_reform
+			AND = {
+				has_reform = pirate_republic_reform
+				NOT = { culture_group = maghrebi }
+				NOT = { tag = TET }
+				NOT = { tag = SLE }
+			}
 			tag = NSS
 			tag = PRY
 			tag = TOR
 			tag = LIB
 		}
-		NOT = { culture_group = maghrebi }
-		NOT = { tag = TET }
-		NOT = { tag = SLE }
 	}
 	free = yes
 	
@@ -1643,6 +1645,7 @@ ruthenian_ideas = {
 	}
 	zaporizhian_cossacs = {
 		cavalry_power = 0.15
+		fire_damage = 0.1
 	}
 	east_and_west = {
 		global_trade_power = 0.1
@@ -2753,7 +2756,7 @@ nw_native_ideas = {
 
 plains_native_ideas = {
 	start = {
-		tolerance_own = 1
+		global_autonomy = -0.1
 		state_maintenance_modifier = -0.25
 	}
 	
@@ -2770,18 +2773,16 @@ plains_native_ideas = {
 			primary_culture = kiowa
 			primary_culture = shoshone
 		}
+		NOT = { primary_culture = caddo }
 	}
 	free = yes
 	
-	dwellers_of_tipis = {
-		migration_cost = -0.20
-	}
-	bow_archery = {
-		fire_damage = 0.10
-	}
 	bison_hunters = {
 		development_cost = -0.10	
 		land_attrition = -0.10
+	}
+	bow_archery = {
+		fire_damage = 0.10
 	}
 	peaceful_people = {
 		diplomatic_reputation = 1
@@ -2797,6 +2798,9 @@ plains_native_ideas = {
 		cav_to_inf_ratio = 0.10
 		envoy_travel_time = -0.2
 		movement_speed = 0.10
+	}
+	dwellers_of_tipis = {
+		migration_cost = -0.20
 	}
 }
 
@@ -3247,7 +3251,7 @@ central_algonquian_federation_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	calg_teaching_scrolls = {
-		idea_cost = 0.1
+		idea_cost = -0.1
 	}
 	calg_seven_fires_prophecy = {
 		technology_cost = -0.1
@@ -3344,5 +3348,46 @@ generic_federation_ideas = {
 	}
 	fed_sunrise_invasion = {
 		global_colonial_growth = 30
+	}
+}
+
+horn_of_african_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		global_tax_modifier = 0.1
+	}
+	
+	bonus = {
+		prestige = 1
+	}
+	
+	trigger = {
+		culture_group = cushitic
+		NOT = { primary_culture = somali }
+		NOT = { primary_culture = tigray }
+		NOT = { tag = ETH }
+	}
+	free = yes
+	
+	horn_of_african_aksumite_legacy = {
+		global_unrest = -1
+	}
+	horn_of_african_punt_legend = {
+		trade_range_modifier = 0.2
+	}
+	horn_of_african_highland_cultivation = {
+		development_cost = -0.05
+	}
+	horn_of_african_oromon_warriors = {
+		infantry_power = 0.1
+	}
+	horn_of_african_religious_melting_pot = {
+		tolerance_heathen = 1
+	}
+	horn_of_african_cushitic_language = {
+		improve_relation_modifier = 0.15
+	}
+	horn_of_african_religious_defensive_nature = {
+		defensiveness = 0.2
 	}
 }

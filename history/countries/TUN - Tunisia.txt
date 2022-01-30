@@ -11,6 +11,7 @@ add_country_modifier = {
 	duration = -1
 }
 
+add_sailors = 1000
 
 change_estate_land_share = {
 	estate = estate_nobles
