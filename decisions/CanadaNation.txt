@@ -10,7 +10,6 @@ country_decisions = {
 				tag = QUE
 			}
 			was_never_end_game_tag_trigger = yes
-			is_nomad = no
 			is_random_new_world = no
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
@@ -68,6 +67,13 @@ country_decisions = {
 					}
 					ROOT = { save_event_target_as = old_tag_target }
 				}
+			}
+			if = {
+				limit = {
+					culture_group = french
+					NOT = { primary_culture = quebecois }
+				}
+				change_primary_culture = quebecois
 			}
 			change_tag = CAN
 			if = {

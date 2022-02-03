@@ -4,7 +4,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
 			was_never_end_game_tag_trigger = yes
 			is_random_new_world = no
 			NOT = { tag = HLR }
@@ -84,6 +83,14 @@ country_decisions = {
 					primary_culture = portugese
 				}
 				change_primary_culture = brazilian
+			}
+			if = {
+				limit = {
+					culture_group = iberian
+					NOT = { primary_culture = portugese }
+					NOT = { primary_culture = brazilian }
+				}
+				change_primary_culture = platinean
 			}
 			colonial_la_plata = {
 				limit = {

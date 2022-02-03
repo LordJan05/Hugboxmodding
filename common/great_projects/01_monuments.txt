@@ -2202,7 +2202,7 @@ kremlin = {
 
 machu_picchu = {
 	# province it starts in
-	start = 807
+	start = 808
 	
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
 	date = 1339.01.01
