@@ -1489,6 +1489,7 @@ sealand_swz_missions_3_1 = {
 			hidden_effect = {
 				swap_free_idea_group = yes
 			}
+			clr_country_flag = swz_explocolo_modifier_flag
 			custom_tooltip = swz_explocolo_modifier_tt
 		}
 	}
@@ -3998,8 +3999,10 @@ sealand_swz_missions_left = {
 			OR = {
 				area = transvaal_area
 				area = highveld_area
+				area = dragenberg_area
+				province_id = 4782
 			}
-			is_city = yes
+			is_empty = no
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -4014,12 +4017,26 @@ sealand_swz_missions_left = {
 			}
 			transvaal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
 			}
-			5101 = { country_or_non_sovereign_subject_holds = ROOT }
-			5107 = { country_or_non_sovereign_subject_holds = ROOT }
-			2856 = { country_or_non_sovereign_subject_holds = ROOT }
-			5103 = { country_or_non_sovereign_subject_holds = ROOT }
+			highveld_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			dragenberg_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			4782 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			change_government_reform_progress = 20
@@ -4158,9 +4175,9 @@ sealand_swz_missions_left = {
 		effect = {
 			set_country_flag = swz_tame_the_steppes_flag
 			custom_tooltip = swz_tame_the_steppes_tooltip
-			add_temporary_colonist = {
-				duration = 18250
-			}
+			#add_temporary_colonist = {
+			#	duration = 18250
+			#}
 		}
 	}
 	swz_invest_in_gold = {
@@ -4217,6 +4234,9 @@ sealand_swz_missions_left = {
 			add_country_modifier = {
 				name = swz_invest_in_gold_modifier
 				duration = 10950
+			}
+			4783 = {
+				change_trade_goods = gold
 			}
 			unlock_cult = jewish_cult
 			custom_tooltip = swz_jewish_cult_tt
@@ -4412,16 +4432,17 @@ sealand_swz_missions_middle = {
 				area = mombasa_area
 				area = central_swahili_coast_area
 				area = mozambique_area
-				area = sakalava_area
-				area = madagascar_highlands_area
-				area = betsimasaraka_area
-				area = betsimasaraka_area
-				area = southern_madagascar
+				area = quelimane_area
+				#area = sakalava_area 
+				#area = madagascar_highlands_area
+				#area = betsimasaraka_area
+				#area = southern_madagascar
 				trade_company_region = trade_company_zambezi
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			is_empty = no
 		}
 		trigger = {
 			if = {
@@ -4449,25 +4470,28 @@ sealand_swz_missions_middle = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			sakalava_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			madagascar_highlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			betsimasaraka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_madagascar = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#sakalava_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#madagascar_highlands_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#betsimasaraka_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#southern_madagascar = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			trade_company_zambezi = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
 			}
 		}
 		effect = {
@@ -4556,15 +4580,9 @@ sealand_swz_missions_right = {
 		position = 1
 
 		provinces_to_highlight = {
-			OR = {
-				area = limpopo_area
-				province_id = 1182
-				province_id = 1180
-				province_id = 833
-			}
-			NOT = {
-				owned_by = ROOT
-			}
+			area = limpopo_area
+			NOT = { owned_by = ROOT }
+			is_empty = no
 		}
 		trigger = {
 			if = {
@@ -4576,18 +4594,17 @@ sealand_swz_missions_right = {
 				}
 				ai = no
 			}
-			OR = {
-				limpopo_area = {
+			limpopo_area = {
+				OR = {
 					owned_by = ROOT
+					is_empty = yes
 				}
-				1182 = { owned_by = ROOT }
-				1180 = { owned_by = ROOT }
-				833 = { owned_by = ROOT }
+				type = all
 			}
 		}
 		effect = {
 			change_government_reform_progress = 15
-			4783= {
+			4783 = {
 				add_base_tax = 1
 				add_base_production = 2
 				add_base_manpower = 1
@@ -4634,7 +4651,7 @@ sealand_swz_missions_right = {
 				area = quelimane_area
 				area = east_limpopo_area
 			}
-			is_city = yes
+			is_empty = no
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -4647,11 +4664,19 @@ sealand_swz_missions_right = {
 				}
 				ai = no
 			}
-			1192 = { country_or_non_sovereign_subject_holds = ROOT }
-			1186 = { country_or_non_sovereign_subject_holds = ROOT }
+			quelimane_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
 			east_limpopo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
 			}
 		}
 		effect = {
@@ -4883,6 +4908,8 @@ sealand_swz_missions_right = {
 		effect = {
 			unlock_cult = buddhism_cult
 			custom_tooltip = swz_buddhism_cult_tt
+			set_country_flag = por_bandeirantes_flag
+			custom_tooltip = por_bandeirantes_tooltip
 		}
 	}
 }

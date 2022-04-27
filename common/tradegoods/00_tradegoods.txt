@@ -119,6 +119,8 @@ wine = {
 				has_climate = arid
 				region = canada_region
 				region = northeast_america_region
+				region = hudson_bay_region
+				region = great_lakes_region
 			}
 		}
 		modifier = {
@@ -126,6 +128,8 @@ wine = {
 			normal_or_historical_nations = yes
 			NOT = { region = canada_region }
 			NOT = { region = northeast_america_region }
+			NOT = { region = hudson_bay_region }
+			NOT = { region = great_lakes_region }
 			NOT = { continent = south_america }
 			NOT = { region = south_africa_region }
 			NOT = { area = cuyo_area }
@@ -172,6 +176,8 @@ wine = {
 				has_climate = arid
 				region = canada_region
 				region = northeast_america_region
+				region = hudson_bay_region
+				region = great_lakes_region
 			}
 			FROM = {
 				OR = {
@@ -285,12 +291,72 @@ cloth = {
 			area = newfoundland_area
 		}
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { development_discounting_tribal = 18 }
 		}
 		modifier = {
 			factor = 2.0
 			development_discounting_tribal = 22
+		}
+		modifier = {
+			factor = 0
+			normal_or_historical_nations = yes
+			NOT = { region = great_plains_region }
+			NOT = { region = great_lakes_region }
+			NOT = { region = mississippi_region }
+			NOT = { region = southeast_america_region }
+			NOT = { region = rio_grande_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				region = great_plains_region
+				region = great_lakes_region
+				region = mississippi_region
+				region = southeast_america_region
+				region = rio_grande_region
+			}
+			OR = { 
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = marsh
+			}
+		}
+		modifier = { # Sealand. Part of Leleges mission
+			factor = 0.1
+			OR = {
+				region = great_plains_region
+				region = great_lakes_region
+				region = mississippi_region
+				region = southeast_america_region
+				region = rio_grande_region
+				has_terrain = hills
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = { # Sealand. Part of Leleges mission
+			factor = 200
+			OR = {
+				region = great_plains_region
+				region = great_lakes_region
+				region = mississippi_region
+				region = southeast_america_region
+				region = rio_grande_region
+				has_terrain = hills
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+			FROM = {
+				OR = {
+					has_country_flag = establish_leleges_flag
+					colonial_parent = { has_country_flag = establish_leleges_tooltip }
+				}
+			}
 		}
 	}
 }
@@ -318,7 +384,7 @@ fish = {
 			}
 		}
 		modifier = {
-			factor = 1.65
+			factor = 3
 			region = carribeans_region
 		}
 		modifier = {

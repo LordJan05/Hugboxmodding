@@ -1,7 +1,12 @@
 #4189 - Sagami
 
-owner = UES
-controller = UES
+# Hogomod
+owner = TKD
+controller = TKD
+add_core = TKD
+#
+#owner = UES
+#controller = UES
 add_core = UES
 culture = togoku
 religion = shinto

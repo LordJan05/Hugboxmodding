@@ -246,6 +246,7 @@ WUU_ideas = { #Wu
 	}
 	WUU_4 = {
 		amount_of_banners = 0.4
+		#amount_of_cawa = 0.4
 	}
 	WUU_5 = {
 		ship_durability = 0.05

@@ -40,6 +40,7 @@ sealand_teutonic_missions_0_1 = {
 			hidden_effect = {
 				swap_non_generic_missions = yes
 			}
+			clr_country_flag = chose_join_the_empire_flag
 			set_in_empire = yes
 			set_country_flag = enable_prussian_confederation_decision
 			vorpommern_area = {
@@ -294,113 +295,6 @@ sealand_teutonic_missions_1 = {
 				}
 			}
 			custom_tooltip = rule_the_baltic_sea_tooltip
-			1854 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-					}
-				}
-				add_core = ROOT
-			}
-		}
-	}
-	back_to_our_roots = {
-		icon = back_to_our_roots_pic
-		required_missions = { rule_the_baltic_sea }
-		position = 6
-
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1854
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					OR = {
-						was_player = yes
-						is_colonial_nation = yes
-					}
-				}
-				ai = no
-			}
-			owns_core_province = 1854
-		}
-		effect = {
-			add_stability = 2
-			1854 = { change_province_name = "Acre" }
-			if = {
-				limit = {
-					owns = 1854
-					mil_tech = 1
-					NOT = { mil_tech = 14 }
-				}
-				1854 = {
-					add_building = fort_16th
-				}
-			}
-			else_if = {
-				limit = {
-					owns = 1854
-					NOT = { mil_tech = 19 }
-				}
-				1854 = {
-					add_building = fort_17th
-				}
-			}
-			else_if = {
-				limit = {
-					owns = 1854
-				}
-				1854 = {
-					add_building = fort_18th
-				}
-			}
-			palestine_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			trans_jordan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			syria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			aleppo_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			cukurova_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			dulkadir_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }
@@ -426,7 +320,7 @@ sealand_teutonic_missions_2 = {
 				area = kuyavia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
@@ -439,9 +333,10 @@ sealand_teutonic_missions_2 = {
 				}
 				ai = no
 			}
+			tag = TEU
 			kuyavia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -449,6 +344,7 @@ sealand_teutonic_missions_2 = {
 			hidden_effect = {
 				swap_free_idea_group = yes
 			}
+			clr_country_flag = the_spirits_of_tannenberg_flag
 			custom_tooltip = the_spirits_of_tannenberg_tooltip
 			wielkopolska_area = {
 				limit = {
@@ -464,18 +360,12 @@ sealand_teutonic_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			mazovia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	weaken_poland = {
 		icon = mission_conquer_5_states
 		required_missions = { the_spirits_of_tannenberg }
+		position = 5
 
 		provinces_to_highlight = {
 			OR = {
@@ -566,7 +456,7 @@ sealand_teutonic_missions_3 = {
 		trigger = {
 			ai = no
 			custom_trigger_tooltip = {
-				has_country_flag = pru_confederation_flag
+				has_country_flag = pru_confederation_flag_mission
 				tooltip = pru_confederation_flag_event_tooltip
 			}
 			OR = {
@@ -587,6 +477,7 @@ sealand_teutonic_missions_3 = {
 			hidden_effect = {
 				swap_non_generic_missions = yes
 			}
+			clr_country_flag = chose_centralize_the_order_flag
 			if = {
 				limit = {
 					has_country_flag = neumark_fate_flag
@@ -814,6 +705,15 @@ sealand_teutonic_missions_3 = {
 		trigger = {
 			if = {
 				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			if = {
+				limit = {
 					exists = LIV
 					LIV = {
 						NOT = {
@@ -826,7 +726,7 @@ sealand_teutonic_missions_3 = {
 						alliance_with = ROOT
 						has_opinion = {
 							who = ROOT
-							value = 190
+							value = 150
 						}
 						is_at_war = no
 					}
@@ -870,6 +770,12 @@ sealand_teutonic_missions_3 = {
 			add_country_modifier = {
 				name = "obedient_subjects"
 				duration = 9125 #25 years
+			}
+			if = {
+				limit = {
+					LIV = { NOT = { alliance_with = ROOT } }
+				}
+				custom_tooltip = subjugate_livonian_order_tt
 			}
 			if = {
 				limit = {
@@ -929,9 +835,92 @@ sealand_teutonic_missions_3 = {
 			}
 		}
 	}
+	provoke_poland = {
+		icon = personal_diplomacy
+		required_missions = { }
+		position = 4
+
+		provinces_to_highlight = {
+			owner = { tag = POL }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ai = yes
+			if = {
+				limit = { exists = POL }
+				POL = {
+					custom_trigger_tooltip = {
+						tooltip = rivalled_or_rival_of
+						OR = {
+							is_rival = root
+							root = { is_rival = prev }
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = has_been_insulted_by_root
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { exists = POL }
+				POL = { declare_war = ROOT }
+			}
+		}
+	}
+	sway_mazovia = {
+		icon = mission_noble_council
+		required_missions = { provoke_poland }
+		position = 5
+
+		provinces_to_highlight = {
+			province_id = 257
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			if = {
+				limit = { exists = POL }
+				OR = {
+					offensive_war_with = POL
+					defensive_war_with = POL
+				}
+			}
+			controls = 257
+		}
+		effect = {
+			if = {
+				limit = { exists = MAZ }
+				vassalize = MAZ
+			}
+			else = {
+				add_stability = 1
+				add_manpower = 20
+			}
+		}
+	}
 	partition_of_commonwealth = {
 		icon = mission_partition_poland
-		required_missions = { weaken_poland weaken_lithuania }
+		required_missions = { weaken_poland sway_mazovia weaken_lithuania }
 		position = 6
 
 		provinces_to_highlight = {
@@ -972,7 +961,7 @@ sealand_teutonic_missions_3 = {
 	}
 	crusader_kings = {
 		icon = levantine_missions
-		required_missions = { back_to_our_roots partition_of_commonwealth continue_prussian_crusade }
+		required_missions = { partition_of_commonwealth continue_prussian_crusade }
 		position = 7
 
 		trigger = {
@@ -985,6 +974,7 @@ sealand_teutonic_missions_3 = {
 				}
 				ai = no
 			}
+			tag = TEU
 			religion = catholic
 		}
 		effect = {
@@ -1017,6 +1007,112 @@ sealand_teutonic_missions_3 = {
 			add_government_reform = crusade_against_the_world
 			set_government_rank = 3
 			custom_tooltip = crusader_kings_tooltip
+			1854 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+	back_to_our_roots = {
+		icon = back_to_our_roots_pic
+		required_missions = { crusader_kings }
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1854
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			owns_core_province = 1854
+		}
+		effect = {
+			add_stability = 2
+			1854 = { change_province_name = "Acre" }
+			if = {
+				limit = {
+					owns = 1854
+					mil_tech = 1
+					NOT = { mil_tech = 14 }
+				}
+				1854 = {
+					add_building = fort_16th
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 1854
+					NOT = { mil_tech = 19 }
+				}
+				1854 = {
+					add_building = fort_17th
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 1854
+				}
+				1854 = {
+					add_building = fort_18th
+				}
+			}
+			palestine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			trans_jordan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aleppo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cukurova_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dulkadir_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -1031,6 +1127,56 @@ sealand_teutonic_missions_4 = {
 		NOT = { has_country_flag = chose_join_the_empire_flag }
 	}
 	has_country_shield = yes
+
+	teu_recover_manpower = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { centralize_the_order }
+		position = 2
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			NOT = { manpower_percentage = 0.1 }
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = teu_recover_manpower_modifier
+				duration = 2555
+			}
+		}
+	}
+	teu_knights_of_war = {
+		icon = mission_teutonic_knights
+		required_missions = { teu_recover_manpower }
+		position = 3
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			cavalry_fraction = 0.4
+		}
+		effect = {
+			add_country_modifier = {
+				name = teu_knights_of_war_modifier
+				duration = 3650
+			}
+		}
+	}
 
 	reclaim_samogitia = {
 		icon = mission_steppe_warriors
@@ -1087,6 +1233,7 @@ sealand_teutonic_missions_4 = {
 	weaken_lithuania = {
 		icon = mission_cossack_cavalry
 		required_missions = { reclaim_samogitia }
+		position = 5
 
 		provinces_to_highlight = {
 			OR = {

@@ -3,7 +3,7 @@
 owner = OLO
 controller = OLO
 add_core = OLO
-add_core = ZUN
+add_claim = ZUN
 #owner = CHG		# ruled by a Chagataiid 
 #controller = CHG
 #add_core = CHG

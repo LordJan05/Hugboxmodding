@@ -1468,7 +1468,7 @@ avar_nutsals = {
 
 georgian_monarchy = {
 	rank = {
-		1 = KHANATE
+		1 = PRINCEDOM
 		2 = KINGDOM
 		3 = EMPIRE
 	}
@@ -2938,8 +2938,13 @@ scanian_peasant_republic = {
 	}
 
 	trigger = {
-		has_reform = peasants_republic
-		primary_culture = scanian
+		OR = {
+			AND = {
+				has_reform = peasants_republic
+				primary_culture = scanian
+			}
+			has_reform = vinland_government
+		}	
 	}
 }
 
@@ -2987,13 +2992,16 @@ pagan_egyptian_monarchy = {
 	}
 
 	trigger = {
-		government = monarchy
 		OR = {
-			AND = {
-				primary_culture = al_misr_arabic #Egyptian
-				religion = animism
+			government = monarchy
+			OR = {
+				AND = {
+					primary_culture = al_misr_arabic #Egyptian
+					religion = animism
+				}
+				primary_culture = old_egyptian
 			}
-			primary_culture = old_egyptian
+			has_reform = kemet_government
 		}
 	}
 }
@@ -3042,15 +3050,18 @@ pagan_greek_monarchy = {
 	}
 
 	trigger = {
-		government = monarchy
 		OR = {
-			AND = {
-				primary_culture = greek
-				religion = animism
+			government = monarchy
+			OR = {
+				AND = {
+					primary_culture = greek
+					religion = animism
+				}
+				primary_culture = athenian
+				primary_culture = spartan
+				primary_culture = atlantean
 			}
-			primary_culture = athenian
-			primary_culture = spartan
-			primary_culture = atlantean
+			has_reform = leleges_military_government
 		}
 	}
 }

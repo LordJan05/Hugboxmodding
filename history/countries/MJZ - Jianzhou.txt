@@ -4,11 +4,12 @@ technology_group = nomad_group
 primary_culture = manchu
 religion = tengri_pagan_reformed
 secondary_religion = confucianism
-capital = 2108
+capital = 2111
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+
 
 change_estate_land_share = {
 	estate = estate_nomadic_tribes

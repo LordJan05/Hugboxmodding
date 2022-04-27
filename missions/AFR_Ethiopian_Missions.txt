@@ -125,25 +125,25 @@ ethiopia_european_slot = {
 				1293 = {
 					trade_share = {
 						country = ROOT
-						share = 5
+						share = 1
 					}
 				}
 				1295 = {
 					trade_share = {
 						country = ROOT
-						share = 5
+						share = 1
 					}
 				}
 				1298 = {
 					trade_share = {
 						country = ROOT
-						share = 5
+						share = 1
 					}
 				}
 				1308 = {
 					trade_share = {
 						country = ROOT
-						share = 5
+						share = 1
 					}
 				}
 			}
@@ -163,8 +163,11 @@ ethiopia_european_slot = {
 		required_missions = { eth_market_of_the_west }
 		position = 5
 		trigger = {
-			has_better_tech_than_westerns = yes
-			has_more_institutions_than_westerns = yes
+			OR = {
+				has_better_tech_than_westerns = yes
+				has_more_institutions_than_westerns = yes
+			}
+			innovativeness = 15
 		}
 		effect = {
 			if = {
@@ -347,7 +350,7 @@ ethiopia_policy_with_the_cushitic_people = {
 		required_missions = {}
 		position = 5
 		trigger = {
-			num_of_cawa = 30
+			#num_of_cawa = 30
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -836,9 +839,7 @@ ethiopia_trade_slot = {
 		position = 5
 		trigger = {
 			OR = {
-				has_reached_government_reform_tier = {
-					tier_6 = yes
-				}
+				reform_level = 6
 				NOT = { has_reform = negusa_nagast }
 			}
 			OR = {
@@ -1013,11 +1014,12 @@ ethiopia_slot_aksumite_empire = {
 			owns = 1210
 		}
 		effect = {
-			create_colony_mission_reward = {
-				province = 1207
-			}
-			create_colony_mission_reward = {
-				province = 2779
+			ogaden_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			marehan_area = {
 				limit = {

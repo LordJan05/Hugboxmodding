@@ -5,6 +5,7 @@ primary_culture = austrian
 religion = catholic
 technology_group = western
 capital = 134 # Wien
+elector = yes
 historical_friend = HUN
 historical_rival = TUR
 historical_rival = FRA
@@ -13,6 +14,7 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+
 
 change_estate_land_share = {
 	estate = estate_nobles

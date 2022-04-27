@@ -3,8 +3,8 @@
 owner = TAO
 controller = TAO
 add_core = TAO
-culture = xibei
-religion = confucianism
+culture = tibetan
+religion = vajrayana
 capital = "Taozhou"
 trade_goods = chinaware
 hre = no

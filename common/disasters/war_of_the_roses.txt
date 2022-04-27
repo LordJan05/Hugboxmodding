@@ -110,6 +110,7 @@ war_of_the_roses = {
 	modifier = {
 		global_unrest = 5
 		amount_of_banners = 0.1
+		#amount_of_cawa = 0.1
 	}	
 	
 	

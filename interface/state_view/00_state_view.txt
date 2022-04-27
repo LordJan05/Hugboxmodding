@@ -6,13 +6,13 @@
 #    }
 #}
 
-cawa = {
-    priority = 4
-    requires_country_state = yes
-    dlcs_required = {
-        "Origins"
-    }
-}
+#cawa = {
+#    priority = 4
+#    requires_country_state = yes
+#    dlcs_required = {
+#        "Origins"
+#    }
+#}
 
 patriarch = {
     priority = 1
@@ -31,7 +31,7 @@ pasha = {
 }
 
 trade_company = {
-    priority = 5
+    priority = 3
     requires_country_state = no
     dlcs_required = {
         "Dharma"
@@ -39,7 +39,7 @@ trade_company = {
 }
 
 holy_order = {
-    priority = 6
+    priority = 4
     requires_country_state = yes
     dlcs_required = {
         "Golden Century"

@@ -83,7 +83,7 @@
  sea_tooltip_level_3_cot_province_new_world:0 "Has Level 3 Center of Trade"
  tooltip_neighbor_port_province_global_trade:0 "Port neighboring province with §YGlobal Trade§!"
  tooltip_neighbor_non_port_province_global_trade:0 "Neighboring province with §YGlobal Trade§!"
- sea_tooltip_development_5_post_1460:0 "5 development province - post 1460"
+ sea_tooltip_development_5_post_1445:0 "5 development province - post 1445"
  tooltip_italian_capital:0 "Italian Capital"
  tooltip_development_10:0 "10 development province"
  tooltip_development_20:0 "20 development province"

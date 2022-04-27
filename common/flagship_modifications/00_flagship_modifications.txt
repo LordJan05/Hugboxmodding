@@ -46,6 +46,7 @@ trade_route_map = {
                     tag = POR
                     tag = BRZ
 		    tag = LUS
+		    tag = KOR
                 }
             }
             normal_or_historical_nations = no
@@ -184,6 +185,7 @@ portuguese_navigators = {
 			tag = POR
 			tag = BRZ
 		    	tag = LUS
+		    	tag = KOR
 		}
         normal_or_historical_nations = yes
     }
@@ -209,6 +211,7 @@ portuguese_bombardier = {
 			tag = POR
 			tag = BRZ
 		    	tag = LUS
+		    	tag = KOR
 		}
         normal_or_historical_nations = yes
     }
@@ -234,6 +237,7 @@ portuguese_trade_route_map = {
 			tag = POR
 			tag = BRZ
 		    	tag = LUS
+		    	tag = KOR
 		}
         normal_or_historical_nations = yes
     }
@@ -292,7 +296,7 @@ spanish_treasure_fleet = {
         normal_or_historical_nations = yes
     }
 	modifier = {
-        cannons_for_hunting_pirates_in_fleet = 1
+        cannons_for_hunting_pirates_in_fleet = 2
         naval_maintenance_flagship_modifier = 0.5
 	}
     ai_trade_score = {
@@ -373,6 +377,7 @@ portuguese_corps_of_fusiliers = {
 			tag = POR
 			tag = BRZ
 	   		tag = LUS
+		    	tag = KOR
 		}
         normal_or_historical_nations = yes
     }
@@ -404,6 +409,7 @@ integrated_marines = {
                     tag = POR
                     tag = BRZ
 	    	    tag = LUS
+		    tag = KOR
                 }
             }
             normal_or_historical_nations = no
@@ -483,9 +489,22 @@ flag_officers = {
     }
 }
 
-spare_jolly_roger = {
+spare_jolly_roger = {	
+    trigger = {
+        OR = {
+            NOT = {
+       		 OR = {
+           		 tag = SPA
+           		 tag = CAS
+	   		 tag = LUS
+       		 }
+            }
+            normal_or_historical_nations = no
+        }
+    }
     modifier = {
-        privateering_efficiency_in_fleet_modifier = 0.25
+        #privateering_efficiency_in_fleet_modifier = 0.25
+        cannons_for_hunting_pirates_in_fleet = 1
         naval_maintenance_flagship_modifier = 0.5
     }
     ai_trade_score = {

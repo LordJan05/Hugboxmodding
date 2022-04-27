@@ -8,8 +8,19 @@ country_event = {
 	
 	desc = {
 		trigger = {
+			OR = {
+				has_reform = leleges_military_government
+				has_reform = vinland_government
+			}
+			NOT = { republican_tradition = 20 }
+		}
+		desc = lel_vin_elections_d
+	}
+	desc = {
+		trigger = {
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
 			NOT = { has_country_flag = caretaker_revolutionary_government }
+			NOT = { has_reform = atlantis_government }
 		}
 		desc = EVTDESC700
 	}
@@ -21,6 +32,20 @@ country_event = {
 	desc = {
 		trigger = { has_country_flag = caretaker_revolutionary_government }
 		desc = elections.700.caretaker
+	}
+	desc = {
+		trigger = {
+			has_reform = atlantis_government
+			republican_tradition = 20
+		}
+		desc = atlantis_admiral_leader_election_d
+	}
+	desc = {
+		trigger = {
+			has_reform = atlantis_government
+			NOT = { republican_tradition = 20 }
+		}
+		desc = atlantis_admiral_leader_election_dd
 	}
 	
 	is_triggered_only = yes
@@ -49,6 +74,7 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = kemet_government }
 	}
 
 	after = {
@@ -60,6 +86,16 @@ country_event = {
 		trigger = {
 			has_regency = no
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
+			if = {
+				limit = {
+					OR = {
+						has_reform = leleges_military_government
+						has_reform = vinland_government
+						has_reform = atlantis_government
+					}
+				}
+				republican_tradition = 20
+			}
 		}
 		ai_chance = { 
 			factor = 60
@@ -120,24 +156,22 @@ country_event = {
 			custom_tooltip = strengthened_signoria_election_tt
 			clr_country_flag = strengthened_signoria_flag
 		}
+		if = {
+			limit = {
+				has_reform = atlantis_government
+			}
+			add_scaled_republican_tradition = -20
+		}
 		else = {
 			add_scaled_republican_tradition = -10
-		}
-		random_list = {
-			10 = {
-				add_adm_power = 50
-			}
-			10 = {
-				add_dip_power = 50
-			}
-			10 = {
-				add_mil_power = 50
-			}
 		}
 		add_karma = -5
 	}
 	option = {
 		name = "EVTOPTB700"	# An administrator type
+		trigger = {
+			NOT = { has_reform = atlantis_government }
+		}
 		ai_chance = { factor = 20 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
@@ -168,6 +202,9 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTC700"	# A diplomat
+		trigger = {
+			NOT = { has_reform = atlantis_government }
+		}
 		ai_chance = { factor = 20 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
@@ -198,6 +235,9 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTD700"	# A military man
+		trigger = {
+			NOT = { has_reform = atlantis_government }
+		}
 		ai_chance = { factor = 20 }
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
@@ -304,6 +344,16 @@ country_event = {
 			}				
 		}
 	}
+	option = {
+		name = "atlantis_admiral_leader_election_a"
+		trigger = {
+			has_reform = atlantis_government
+		}
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			kill_ruler = yes
+		}
+	}
 }
 
 # Election!
@@ -334,6 +384,8 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
+		NOT = { has_reform = kemet_government }
 	}
 	
 	option = {
@@ -555,6 +607,8 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
+		NOT = { has_reform = kemet_government }
 	}
 
 	option = {
@@ -625,17 +679,6 @@ country_event = {
 		}
 		else = {
 			add_scaled_republican_tradition = -10
-		}
-		random_list = {
-			10 = {
-				add_adm_power = 50
-			}
-			10 = {
-				add_dip_power = 50
-			}
-			10 = {
-				add_mil_power = 50
-			}
 		}
 		add_karma = -5
 	}
@@ -843,6 +886,8 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
+		NOT = { has_reform = kemet_government }
 	}
 	
 	option = {
@@ -1141,6 +1186,8 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
+		NOT = { has_reform = kemet_government }
 	}
 	
 	option = {
@@ -1284,6 +1331,8 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_georgia_reform }
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
+		NOT = { has_reform = kemet_government }
 	}
 	
 	option = {

@@ -163,3 +163,43 @@ country_event = {
 		}
 	}
 }
+
+
+namespace = sea_religious_reforms
+# Sealand. Animism reform
+country_event = {
+	id = sea_religious_reforms.4
+	title = religious_reforms.1.t
+	desc = religious_reforms.4.d
+	picture = COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "El Dorado"
+		religion = animism
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = { 
+			add_stability = -1
+			add_adm_power = -400
+			add_dip_power = -400
+			add_mil_power = -400
+		}
+	}
+	
+	option = {
+		name = religious_reforms.4.a
+		tooltip = {
+			add_stability = -1
+			add_adm_power = -400
+			add_dip_power = -400
+			add_mil_power = -400
+		}
+	}
+}

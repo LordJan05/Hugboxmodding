@@ -387,7 +387,7 @@ emp_burgundy_2 = {
 				limit = { owned_by = root }
 				add_province_modifier = {
 					name = bur_realm_united_mod
-					duration = 7300
+					duration = -1
 				}
 			}
 		}
@@ -1667,7 +1667,7 @@ emp_burgundy_5 = {
 				limit = { religion = catholic }
 				add_country_modifier = {
 					name = bur_special_place_in_popes_heart
-					duration = 7300
+					duration = -1
 				}
 			}
 			else = {

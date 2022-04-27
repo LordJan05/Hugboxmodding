@@ -1148,6 +1148,17 @@ sealand_norway_missions_2 = {
 					limit = {
 						NOT = { is_former_colonial_nation = yes }
 					}
+					every_subject_country = {
+						limit = {
+							OR = {
+								is_subject_of_type = colony
+								is_subject_of_type = crown_colony
+								is_subject_of_type = private_enterprise
+								is_subject_of_type = self_governing_colony
+							}
+						}
+						ROOT = { inherit = PREV }
+					}
 					every_province = {
 						limit = {
 							is_core = ROOT
@@ -1175,17 +1186,6 @@ sealand_norway_missions_2 = {
 							}
 						}
 						grant_independence = yes
-					}
-					every_subject_country = {
-						limit = {
-							OR = {
-								is_subject_of_type = colony
-								is_subject_of_type = crown_colony
-								is_subject_of_type = private_enterprise
-								is_subject_of_type = self_governing_colony
-							}
-						}
-						ROOT = { inherit = PREV }
 					}
 					if = {
 						limit = {

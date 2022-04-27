@@ -1,3 +1,4 @@
+# OTHER:
 # Change Muslim School:
 change_school_modifier = {
 	# Nothing is needed here
@@ -5,8 +6,60 @@ change_school_modifier = {
 
 # New World and Colonial Australia nerf:
 new_wrold_nerfs_modifier = {
-	local_development_cost = 0.30
-	local_manpower_modifier = -0.2
+	local_development_cost = 0.15
+	local_manpower_modifier = -0.1
+}
+
+
+colonial_ambitions_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+discover_new_land_modifier = {
+	range = 3
+}
+discover_new_land_short_modifier = {
+	range = 1
+}
+
+military_reform_cooldown_modifier = {
+	global_manpower = 0.001
+}
+##########################################
+# Buildings:
+road_workshop_modifier = {
+	local_production_efficiency = 0.05
+}
+road_temple_modifier = {
+	local_tax_modifier = 0.1
+}
+road_marketplace_modifier = {
+	province_trade_power_modifier = 0.15
+}
+##########################################
+# North-America:
+atw_extra_merchant_modifier = {
+	merchants = 1
+	global_trade_power = 0.1
+}
+# Atlantis:
+atl_ship_building_modifier = {
+	global_ship_cost = -0.25
+	global_ship_recruit_speed = -0.25
+}
+atl_focus_on_trading_modifier = {
+	merchants = 1
+	mercantilism_cost = -0.1
+}
+atl_massive_fleet_modifier = {
+	ship_durability = 0.2
+	naval_attrition = -0.2
+	global_naval_engagement_modifier = 0.1
+}
+# Kemet:
+kem_construction_modifier = {
+	build_cost = -0.15
+	build_time = -0.15
 }
 
 ##########################################
@@ -21,7 +74,7 @@ eschatological_theocracy_caliphate_reform_janissaries_boost = {
 	is_janissary_modifier = yes
 	infantry_power = 0.33
 }
-
+##########################################
 # Teutonic Order
 centralized_the_order_modifier = {
 	stability_cost_modifier = -0.20
@@ -29,6 +82,13 @@ centralized_the_order_modifier = {
 convert_baltics_modifier = {
 	local_culture_conversion_cost = -0.3
 	local_unrest = 1
+}
+teu_recover_manpower_modifier = {
+	manpower_recovery_speed = 0.33
+}
+teu_knights_of_war_modifier = {
+	cavalry_cost = -0.1
+	cavalry_fire = 0.5
 }
 ##########################################
 # Qara Qoyunlu:
@@ -51,7 +111,7 @@ subjugate_the_bedouins_modifier = {
 	local_autonomy = -0.1
 }
 royal_road_modifier = {
-	supply_limit_modifier = 0.15
+	supply_limit_modifier = 0.25
 	local_friendly_movement_speed = 0.15
 	local_hostile_movement_speed = 0.15
 }
@@ -73,10 +133,6 @@ convert_ethiopian_heathens_modifier = {
 invasion_to_italy_modifier = {
 	galley_power = 0.2
 	recover_navy_morale_speed = 0.1
-}
-colonial_ambitions_modifier = {
-	colonists = 1
-	global_colonial_growth = 33
 }
 australian_gold_modifier = {
 	global_tariffs = 0.25
@@ -214,7 +270,7 @@ sea_recruited_swiss_guard_mercs_modifier = { # Swiss Guard Mercs coodown.
 	# Nothing is needed here
 }
 sea_pap_naples_submission_modifier = {
-	ae_impact = -0.1
+	reduced_liberty_desire = 50
 }
 italian_trade_cities = {
 	mercantilism_cost = -0.25
@@ -225,7 +281,23 @@ build_dev_vatican_library = {
 	state_maintenance_modifier = -0.2
 }
 ##########################################
+##########################################
+# Switzerland
+swi_recruit_merc_inf_enabled_modifier = {
+	amount_of_banners = -0.5
+}
+##########################################
+# Morocco:
+mor_religious_reasons_modifier = {
+	discipline = 0.025
+	siege_ability = 0.2
+}
+##########################################
 # Tunis/Emirate of Two Sicilies:
+tunis_siege_modifier = {
+	siege_ability = 0.25
+}
+
 ets_mediterranean_pirates_modifier = {
 	allowed_marine_fraction = 0.5
 }
@@ -354,7 +426,7 @@ swz_exploit_zimbabwe_downfall_modifier = {
 swz_invest_in_gold_modifier = {
 	inflation_reduction = -0.25
 	interest = -1
-	build_cost = -0.3
+	build_cost = -0.15
 }
 swz_control_zambezi_charter_modifier = {
 	mercantilism_cost = -0.1
@@ -379,6 +451,10 @@ swz_control_madagascar_modifier = {
 	heavy_ship_power = 0.2
 	naval_attrition = -0.2
 	ship_durability = 0.2
+}
+swz_tame_the_steppes_modifier = {
+	supply_limit = 1
+	local_friendly_movement_speed = 0.2
 }
 ########
 # Central:
@@ -438,12 +514,6 @@ mini_zoroastrian_cult_modifier = {
 	merchants = 1
 }
 ##########################################
-# Leleges:
-lel_colonial_enthusiasm = {
-	colonists = 1
-	global_colonial_growth = 20
-}
-##########################################
 # Portugal:
 henry_the_navigator = {
 	range = 0.1
@@ -451,4 +521,154 @@ henry_the_navigator = {
 	global_ship_recruit_speed = -0.2
 	naval_attrition = -0.1
 	sea_por_explo_influence = 0.1 # Portugal faction
+}
+
+##########################################
+# Nogai:
+nog_crimean_development_modifier = {
+	local_development_cost = -0.1
+	local_build_cost = -0.15
+}
+nog_golden_horde_restored_modifier = {
+	horde_unity = 2
+	governing_capacity_modifier = 0.33
+	yearly_absolutism = 0.5
+	max_absolutism = 20
+}
+nog_industrialize_the_steppes_modifier = {
+	local_development_cost = -0.05
+	local_friendly_movement_speed = 0.05
+}
+nog_silk_road_modifier = {
+	province_trade_power_modifier = 0.05
+	supply_limit_modifier = 0.2
+	local_friendly_movement_speed = 0.1
+	local_hostile_movement_speed = 0.1
+}
+##########################################
+# 1.4.1 Decision stuff:
+# Military:
+the_recruiting_act = {
+	global_ship_recruit_speed = -0.1
+	global_ship_cost = -0.05
+	stability_cost_modifier = 0.1
+}
+the_military_act = {
+	discipline = 0.06
+	stability_cost_modifier = 0.05
+}
+the_navigation_act = {
+	trade_efficiency = 0.025
+	naval_forcelimit_modifier = 0.05
+	navy_tradition = 0.5
+	global_manpower_modifier = -0.05
+}
+hire_privateers = {
+	prestige = -0.5
+	navy_tradition = 0.2
+	trade_efficiency = 0.05
+	global_trade_power = 0.03
+	global_tariffs = 0.05
+}
+convoy_system = {
+	global_tariffs = 0.10
+	prestige_from_naval = 0.1
+}
+the_anti_piracy_act = {
+	ship_power_propagation = 0.2
+}
+the_land_recruiting_act = {
+	global_regiment_recruit_speed = -0.1
+	global_manpower_modifier = 0.1
+}
+# Civic:
+the_licensing_of_the_press_act = {
+	stability_cost_modifier = -0.1
+}
+the_tenures_abolition_act = {
+	stability_cost_modifier = -0.1
+	production_efficiency = -0.05
+}
+the_dissolution_act = {
+	stability_cost_modifier = -0.05
+}
+innovative_modifier = {
+	technology_cost = -0.05
+	global_missionary_strength = 0.01
+}
+the_dissolution_of_the_monasteries = {
+	global_tax_modifier = 0.1
+}
+the_witchcraft_act = {
+	global_missionary_strength = 0.02
+}
+the_education_act = {
+	prestige = 0.5
+	core_creation = 0.1
+}
+the_judiciary_act = {
+	global_unrest = -2
+	administrative_efficiency = 0.05
+}
+the_combination_act = {
+	production_efficiency = 0.05
+	global_tax_modifier = -0.1
+}
+the_school_establishment_act = {
+	production_efficiency = -0.05
+	stability_cost_modifier = -0.1
+	global_tax_modifier = 0.2
+	build_cost = 0.05
+}
+# Colonial:
+beneficial_neglect = {
+	colonist_placement_chance = 0.1
+}
+colonial_expansions = {
+	global_colonial_growth = 5
+}
+the_house_of_trade = {
+	global_trade_goods_size_modifier = 0.025
+	stability_cost_modifier = 0.05
+	light_ship_cost = -0.05
+}
+restrictions_for_colonies = {
+	production_efficiency = 0.05
+	stability_cost_modifier = -0.05
+	colonist_placement_chance = -0.1
+	global_colonial_growth = -10
+}
+# Economic:
+the_liquor_act = {
+	global_tax_modifier = 0.1
+	stability_cost_modifier = 0.05
+}
+the_joint_stock_companies_act = {
+	global_trade_power = 0.05
+}
+the_merchant_shipping_act = {
+	trade_efficiency = 0.025
+	global_tax_modifier = -0.05
+}
+the_court_of_wards_and_liveries = {
+	global_tax_modifier = 0.2
+}
+agricultural_cultivations = {
+	production_efficiency = 0.05
+	technology_cost = 0.025
+}
+the_importation_act = {
+	global_trade_goods_size_modifier = 0.05
+	production_efficiency = -0.05
+}
+the_mining_act = {
+	global_tax_modifier = 0.1
+	production_efficiency = 0.05
+	trade_efficiency = -0.1
+}
+gold_standard = {
+	inflation_reduction = 0.05
+}
+formalized_measures = {
+	global_tax_modifier = 0.05
 }

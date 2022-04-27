@@ -12,3 +12,7 @@ capital = 5051
 historical_rival = YAO
 historical_rival = KBO
 religious_school = maliki_school
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}

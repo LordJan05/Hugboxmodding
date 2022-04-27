@@ -78,7 +78,7 @@ seljuk_empire_government = {
 
 # Barbary States:
 barbary_states_reform = {
-	icon = "barbary_states"
+	icon = "sea_barbary_states"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
@@ -92,6 +92,7 @@ barbary_states_reform = {
 		may_perform_slave_raid = yes
 		admiral_cost = -0.15
 		republican_tradition = -0.5
+		max_absolutism = 30
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -165,7 +166,7 @@ bushmen_tribe = {
 }
 # Swazi government switch:
 tribe_becomes_monarchy_reform_swazi = {
-	icon = "swazi_reform_into"
+	icon = "sea_swazi_reform_into"
 	allow_normal_conversion = yes
 	potential = {
 		tag = SWZ
@@ -243,7 +244,7 @@ great_moravian_principality = {
 		states_general_mechanic = {
 			statists = {
 				cavalry_power = 0.2
-				cavalry_cost = -0.2
+				cavalry_cost = -0.1
 				cav_to_inf_ratio = 0.5
 			}
 
@@ -359,10 +360,10 @@ veche_tsardom = {
 	}
 	boost_income = yes
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -545,7 +546,7 @@ eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
 
 # Sasanian Empire:
 sasanian_government = {
-	icon = "sasan_dynasty"
+	icon = "sea_sasan_dynasty"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
@@ -648,7 +649,7 @@ fatimid_government = {
 
 # Exodus Leleges:
 leleges_military_government = {
-	icon = "leleges_reform"
+	icon = "sea_leleges_reform"
 	allow_normal_conversion = yes
 	valid_for_nation_designer = no
 	potential = {
@@ -662,6 +663,10 @@ leleges_military_government = {
 		war_exhaustion = -0.04
 		yearly_army_professionalism = 0.0033
 		monthly_militarized_society = 0.05
+		max_absolutism = 40
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 
 	conditional = {
@@ -669,6 +674,106 @@ leleges_military_government = {
 			has_dlc = "Rights of Man"
 		}
 		militarised_society = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+# Exodus Vinland:
+vinland_government = {
+	icon = "sea_vinland_reform"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		tag = VIN
+	}
+	trigger = {
+		tag = VIN
+	}
+	modifiers = {
+		naval_morale = 0.05
+		max_absolutism = 40
+		republican_tradition = 0.25
+		may_perform_slave_raid_on_same_religion = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+# Exodus Kemet
+kemet_government = {
+	icon = "sea_kemet_reform"
+	monarchy = yes
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	royal_marriage = yes
+	potential = {
+		tag = KEM
+	}
+	trigger = {
+		tag = KEM
+	}
+	modifiers = {
+		yearly_absolutism = 1
+		max_absolutism = 40
+		global_autonomy = -0.05
+		governing_capacity = 100
+		yearly_tribal_allegiance = 2
+		global_tax_modifier = 0.25
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+# Exodus Atlantis:
+atlantis_government = {
+	icon = "sea_atlantis_reform"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	duration = 6
+	potential = {
+		tag = ATL
+	}
+	trigger = {
+		tag = ATL
+	}
+	modifiers = {
+		admiral_cost = -0.2
+		max_absolutism = 50
+		global_ship_trade_power = 0.15
+		ship_power_propagation = 0.15
+		trade_efficiency = 0.15
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		admirals_become_rulers = yes
 	}
 
 	ai = {
@@ -692,12 +797,12 @@ ambrosian_merchants_republic = {
 		global_tax_modifier = 0.1
 		#land_morale = 0.05
 		governing_capacity = 50
-		max_absolutism = -30
+		max_absolutism = 10
 		merchants = 1
 	}
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
 	}
 	duration = 4
@@ -760,5 +865,73 @@ portugal_feudalism_reform = {
 	}
 	ai = {
 		factor = 100
+	}
+}
+
+# Germany:
+germany_monarchy = {
+	icon = "sea_germany_monachy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = GER
+	}
+	trigger = {
+		tag = GER
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		war_exhaustion = -0.05
+		max_absolutism = 50
+		nobles_loyalty_modifier = 0.2
+		yearly_army_professionalism = 0.06
+		army_tradition = 1
+		drill_gain_modifier = 1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+}
+germany_republic = {
+	icon = "sea_germany_monachy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = GER
+	}
+	trigger = {
+		tag = GER
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		monthly_militarized_society = 0.05
+		war_exhaustion = -0.05
+		max_absolutism = 50
+		nobles_loyalty_modifier = 0.2
+		yearly_army_professionalism = 0.06
+		army_tradition = 1
+		drill_gain_modifier = 1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+}
+
+# Tribal:
+
+diverse_society_reform = {
+	allow_normal_conversion = yes
+	icon = "tribal_council"
+	modifiers = {
+		num_accepted_cultures = 3
+		culture_conversion_cost = -0.1
+		promote_culture_cost = -0.1
+	}
+	ai = {
+		factor = 10
 	}
 }

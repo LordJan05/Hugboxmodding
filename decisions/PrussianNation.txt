@@ -78,12 +78,11 @@ country_decisions = {
 				NOT = { exists = PRU }
 				ai = no
 			}
-			OR = {
-				ai = no
-				is_religion_enabled = protestant
-				is_religion_enabled = reformed
-				is_religion_enabled = anglican
-			}
+			#OR = {
+			#	is_religion_enabled = protestant
+			#	is_religion_enabled = reformed
+			#	is_religion_enabled = anglican
+			#}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -104,6 +103,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = PRU }
+			NOT = { exists = PRA }
 			adm_tech = 10
 			OR = {
 				religion = protestant
@@ -210,6 +210,8 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		ai_importance = 1000
 	}
 	
 	prussian_nation = {
@@ -228,12 +230,11 @@ country_decisions = {
 				NOT = { exists = PRU }
 				ai = no
 			}
-			OR = {
-				ai = no
-				is_religion_enabled = protestant
-				is_religion_enabled = reformed
-				is_religion_enabled = anglican
-			}
+			#OR = {
+			#	is_religion_enabled = protestant
+			#	is_religion_enabled = reformed
+			#	is_religion_enabled = anglican
+			#}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -252,6 +253,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = PRU }
+			NOT = { exists = PRA }
 			adm_tech = 10
 			is_at_war = no
 			OR = {
@@ -335,6 +337,8 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		ai_importance = 1000
 	}
 	
 	prussian_nation_general = {
@@ -347,12 +351,11 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			OR = {
-				ai = no
-				is_religion_enabled = protestant
-				is_religion_enabled = reformed
-				is_religion_enabled = anglican
-			}
+			#OR = {
+			#	is_religion_enabled = protestant
+			#	is_religion_enabled = reformed
+			#	is_religion_enabled = anglican
+			#}
 			OR = {
 				primary_culture = pommeranian
 				primary_culture = saxon
@@ -400,6 +403,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = PRU }
+			NOT = { exists = PRA }
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
@@ -502,6 +506,8 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		ai_importance = 1000
 	}
 
 }

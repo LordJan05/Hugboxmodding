@@ -242,7 +242,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 	}
 	modifier = {
 		#improve_relation_modifier = 0.2
-		development_cost = -0.05
+		build_cost = -0.1
 	}
 	monarch_power = dip
 	ai_will_do = {

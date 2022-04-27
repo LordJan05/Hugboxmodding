@@ -168,7 +168,7 @@ hun_north_group = {
 	
 	hun_vassal_states_three = {
 		icon = mission_eastern_european_city
-		required_missions = { hun_vassal_states }
+		required_missions = { }
 		position = 3
 		
 		provinces_to_highlight = {
@@ -432,7 +432,7 @@ hun_ottoman_group = {
 					}
 					calc_true_if = {
 						desc = hun_ottoman_borders.tooltip
-						amount = 3
+						amount = 2
 						all_owned_province = {
 							fort_level = 1
 							any_neighbor_province = {

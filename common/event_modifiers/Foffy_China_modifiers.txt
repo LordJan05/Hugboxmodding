@@ -213,6 +213,7 @@ h_wuu_anc2_3 = {
 	
 h_wuu_anc3_1 = {
 	amount_of_banners = 0.3
+	#amount_of_cawa = 0.3
 	#mercenary_discipline = 0.05
 }
 
@@ -291,6 +292,7 @@ h_qic_legacy = {
 h_wuu_legacy = {
 	advisor_cost = -0.15
 	amount_of_banners = 0.3
+	#amount_of_cawa = 0.3
 	#mercenary_discipline = 0.05
 }
 
@@ -608,7 +610,7 @@ h_commandery_bonus_chengdu_reward = {
 }
 
 h_populate_altai_mountains_mod = {
-	local_development_cost = -0.2
+	local_development_cost = -0.1
 }
 
 mjl_oirat_buffs = {

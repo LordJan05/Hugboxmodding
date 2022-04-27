@@ -1238,12 +1238,12 @@ mali_slot_disaster_slot = {
 		required_missions = {  }
 		position = 1
 		trigger = {
-			monthly_adm = 6
-			monthly_dip = 6
-			monthly_mil = 6
+			monthly_adm = 8
+			monthly_dip = 8
+			monthly_mil = 8
 		}
 		effect = {
-			custom_tooltip = mal_get_competent_court_tt
+			#custom_tooltip = mal_get_competent_court_tt
 			hidden_effect = {
 				set_country_flag = mal_disaster_no_pretender_events
 			}

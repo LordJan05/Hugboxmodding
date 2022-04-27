@@ -11,6 +11,7 @@ add_country_modifier = {
 	duration = -1
 }
 
+add_treasury = 200
 
 change_estate_land_share = {
 	estate = estate_nobles
@@ -29,6 +30,7 @@ change_estate_land_share = {
 	monarch = {
 		name = "Abu-Sa'id Uthman III"
 		dynasty = "Marinid"
+		birth_date = 1383.1.1
 		adm = 1
 		dip = 2
 		mil = 3
@@ -54,12 +56,15 @@ change_estate_land_share = {
 	monarch = {
 		name = "Abdalhaqq II"
 		dynasty = "Marinid"
+		birth_date = 1416.1.1
 		adm = 3
 		dip = 2
 		mil = 3
+		leader = { name = "Abdalhaqq II"		type = general	fire = 3	shock = 3	manuever = 4	siege = 2}
 	}
 	add_ruler_personality = bold_fighter_personality
 	capital = 343 # Fez
+	leader = { name = "Abdalhaqq II"		type = admiral	fire = 3	shock = 3	manuever = 4	siege = 2}
 }
 
 1465.1.1 = {

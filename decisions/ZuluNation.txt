@@ -21,6 +21,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			NOT = { exists = ZUL }
+			NOT = { has_country_flag = formed_zulu_tag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -117,6 +118,7 @@ country_decisions = {
 			}
 			custom_tooltip = warning_zulu_nation_tt
 			clr_country_flag = can_attract_zulu
+			set_country_flag = formed_zulu_tag
 		}
 		ai_will_do = {
 			factor = 0	#An AI should NEVER spawn the Zulu before 1810

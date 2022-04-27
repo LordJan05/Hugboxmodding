@@ -269,3 +269,17 @@ sea_fra_elan_modifier = {
 	land_morale = 0.05
 	prestige = 1
 }
+##########################################
+# Castille/Spain:
+sea_cas_united_spain_modifier = {
+	potential = {
+		OR = {
+			tag = CAS
+			tag = SPA
+		}
+	}
+	trigger = {
+		mission_completed = sea_unite_spain
+	}
+	land_morale = 0.05
+}

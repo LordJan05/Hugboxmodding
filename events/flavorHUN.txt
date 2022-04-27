@@ -34,7 +34,8 @@ country_event = {
 	option = {
 		ai_chance = { factor = 50 }
 		trigger = {
-			HAB = { has_heir = "Ladislaus Postumus" }
+			#HAB = { has_heir = "Ladislaus Postumus" }
+			always = no
 		}
 		name = flavor_hun.1.a
 		define_ruler = {
@@ -88,7 +89,8 @@ country_event = {
 	option = {
 		name = flavor_hun.1.b
 		trigger = {
-			HAB = { has_heir = "Ladislaus Postumus" }
+			#HAB = { has_heir = "Ladislaus Postumus" }
+			always = no
 		}
 		ai_chance = { factor = 50 }
 		add_stability_or_adm_power = yes
@@ -119,9 +121,6 @@ country_event = {
 	}
 	option = {
 		ai_chance = { factor = 1 }
-		trigger = {
-			HAB = { NOT = { has_heir = "Ladislaus Postumus" } }
-		}
 		name = flavor_hun.1.c
 		define_ruler = {
 			name = "János"
@@ -137,8 +136,8 @@ country_event = {
 			culture = hungarian
 			dynasty = "Hunyadi"
 			adm = 4
-			dip = 5
-			mil = 6
+			dip = 4
+			mil = 5
 			claim = 50
 			birth_date = 1443.2.23
 		}
@@ -174,6 +173,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = HUN
 		is_year = 1450
 		NOT = { is_year = 1457 }
@@ -340,6 +340,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = HUN
 		is_year = 1450
 		NOT = { is_year = 1457 }
@@ -2910,8 +2911,13 @@ country_event = {
 
 	option = { #Go for it
 		name = new_flavour_hun.1.A
-		set_country_flag = hungary_flag_incident
-		set_imperial_incident = incident_hungary_mission
+		#set_country_flag = hungary_flag_incident
+		#set_imperial_incident = incident_hungary_mission
+		BOH = {
+			elector = no
+		}
+		set_in_empire = yes
+		elector = yes
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -2944,7 +2950,7 @@ country_event = {
 	option = { #Nah
 		name = new_flavour_hun.1.B
 
-		add_prestige = 15
+		add_prestige = 50
 
 		ai_chance = {
 			factor = 1

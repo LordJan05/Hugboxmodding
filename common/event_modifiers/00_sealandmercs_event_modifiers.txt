@@ -1,0 +1,11 @@
+sealand_cawa_fl_base = {
+	local_amount_of_cawa = 20
+}
+sealand_banners_fl_base = {
+	local_amount_of_banners = 20
+}
+#
+sealand_cawa_base_maintenance = {
+	land_maintenance_modifier = 1.5
+	is_cawa_modifier = yes
+}

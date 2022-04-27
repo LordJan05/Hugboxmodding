@@ -127,11 +127,11 @@ hab_holy_roman_ambitions = {
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 8
+								value = 6
 								OR = {
 									area = bohemia_area
 									area = erzgebirge_area
-									area = moravia_area
+									#area = moravia_area
 								}
 							}
 						}
@@ -139,7 +139,7 @@ hab_holy_roman_ambitions = {
 					OR = {
 						area = bohemia_area
 						area = erzgebirge_area
-						area = moravia_area
+						#area = moravia_area
 					}
 				}
 			}
@@ -149,11 +149,11 @@ hab_holy_roman_ambitions = {
 		trigger = {
 			owns_or_non_sovereign_subject_of = 266
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8
+				value = 6
 				OR = {
 					area = bohemia_area
 					area = erzgebirge_area
-					area = moravia_area
+					#area = moravia_area
 				}
 			}
 		}
@@ -162,7 +162,13 @@ hab_holy_roman_ambitions = {
 				name = "habsburg_bohemia"
 				duration = 5475 #15 years
 			}
+			lusatia_area = {
+				add_permanent_claim = ROOT
+			}
 			silesia_area = {
+				add_permanent_claim = ROOT
+			}
+			moravia_area = {
 				add_permanent_claim = ROOT
 			}
 			hidden_effect = {

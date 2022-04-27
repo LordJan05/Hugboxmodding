@@ -289,30 +289,38 @@ kongo_catholic_missions_slot = {
 		effect = {
 			if = {
 				limit = {
-					any_country = {
-						OR = {
-							alliance_with = ROOT
-							has_opinion = {
-								who = ROOT
-								value = 100
+					papacy_active = yes
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								alliance_with = ROOT
+								has_opinion = {
+									who = ROOT
+									value = 100
+								}
 							}
+							OR = {
+								tag = PAP
+								num_of_cardinals = 1
+							}
+							religion = catholic
 						}
-						OR = {
-							tag = PAP
-							num_of_cardinals = 1
-						}
-						religion = catholic
+					}
+					country_event = {
+						id = flavor_kon.11
 					}
 				}
-				country_event = {
-					id = flavor_kon.11
+				else = {
+					capital_scope = {
+						add_province_triggered_modifier = kongo_cardinal_modifier
+						add_cardinal = yes
+					}
 				}
 			}
 			else = {
-				capital_scope = {
-					add_province_triggered_modifier = kongo_cardinal_modifier
-					add_cardinal = yes
-				}
+				add_adm_power = 100
 			}
 		}
 	}
@@ -402,9 +410,7 @@ kongo_choose_path_missions_slot = {
 			has_institution = feudalism
 			stability = 1
 			legitimacy = 90
-			has_reached_government_reform_tier = {
-				tier_3 = yes
-			}
+			reform_level = 3
 			custom_trigger_tooltip = {
 				tooltip = kon_find_europe_ct
 				has_global_flag = kon_kongo_got_discovered_by_europeans
@@ -992,6 +998,7 @@ kongo_conquest_missions_slot = {
 			NOT = { is_core = ROOT }
 			NOT = { culture = sawabantu }
 			NOT = { culture = jukun }
+			is_empty = no
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1003,6 +1010,7 @@ kongo_conquest_missions_slot = {
 						NOT = { is_core = ROOT }
 						NOT = { culture = sawabantu }
 						NOT = { culture = jukun }
+						is_empty = no
 					}
 				}
 			}
@@ -1112,9 +1120,11 @@ kongo_colonies_centralization_missions_slot = {
 			}
 		}
 		effect = {
-			add_temporary_colonist = {
-				duration = 36500
-			}
+			#add_temporary_colonist = {
+			#	duration = 36500
+			#}
+			1167 = { add_siberian_construction = 400 }
+			5747 = { add_siberian_construction = 400 }
 		}
 	}
 
@@ -1125,13 +1135,13 @@ kongo_colonies_centralization_missions_slot = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1167
-				province_id = 1172
+				province_id = 5747
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1167
-			owns_or_non_sovereign_subject_of = 1172
+			owns_or_non_sovereign_subject_of = 5747
 			owns_or_non_sovereign_subject_of = 1171
 		}
 		effect = {
@@ -1139,7 +1149,7 @@ kongo_colonies_centralization_missions_slot = {
 				change_trade_goods = gems
 				add_base_production = 2
 			}
-			1172 = {
+			5747 = {
 				add_base_production = 2
 				if = {
 					limit = { NOT = { province_has_center_of_trade_of_level = 2  } }
@@ -1283,7 +1293,7 @@ kongo_colonies_centralization_missions_slot = {
 				else = {
 					absolutism = 75
 				}
-				NOT = { average_autonomy = 15 }
+				NOT = { average_home_autonomy = 15 }
 				NOT = { num_of_rebel_armies = 1 }
 				NOT = { num_of_rebel_controlled_provinces = 1 }
 			}

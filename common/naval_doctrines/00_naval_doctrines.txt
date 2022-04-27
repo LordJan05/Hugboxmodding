@@ -94,8 +94,8 @@ portuguese_marines =
 
 	country_modifier = {
 		siege_blockade_progress = 1
-		global_naval_barrage_cost = -0.4
-		allowed_marine_fraction = 0.10
+		global_naval_barrage_cost = -1
+		allowed_marine_fraction = 0.1
 	}
 
 	button_gfx = 7

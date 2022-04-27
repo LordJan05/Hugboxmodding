@@ -37,6 +37,7 @@ categories =  {
 			1348 1347 1345
 			1402 4357 1397 4358
 			1358 1353 1352 1351 1350 1354
+			1293
 		}
 	}	
 
@@ -246,6 +247,7 @@ categories =  {
 			# Sealand
 			4949 # Guinea
 			5118 5110 # South Africa
+			5150 5151 # Madagascar
 		}
 	}
 

@@ -5,16 +5,18 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			OR = {
+				tag = PRA
 				tag = PRU
-				tag = BAV
 				tag = POM
-				tag = FKN
-				tag = SWA
-				tag = SAX
 				tag = HAN
 				tag = WES
+				tag = SAX
+				tag = SWA
+				tag = FKN
+				tag = BAV
 				tag = SWI
 				tag = HAB
+				tag = AUE
 			}
 			NOT = { has_country_flag = formed_germany_flag }
 			OR = {
@@ -25,14 +27,6 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-					adm_tech = 20
-				}
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -66,7 +60,7 @@ country_decisions = {
 									region = north_german_region
 									region = south_german_region
 								}
-								value = 50
+								value = 100
 							}
 						}
 					}
@@ -74,76 +68,18 @@ country_decisions = {
 				province_id = 50
 				province_id = 57
 				province_id = 65
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 75 }
-						NOT = { owns_core_province = 41 }
-					}
-					OR = {
-						province_id = 75
-						province_id = 41
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 1868 }
-						NOT = { owns_core_province = 70 }
-					}
-					OR = {
-						province_id = 1868
-						province_id = 70
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 1876 }
-						NOT = { owns_core_province = 67 }
-					}
-					OR = {
-						province_id = 1876
-						province_id = 67
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 1762 }
-						NOT = { owns_core_province = 85 }
-					}
-					OR = {
-						province_id = 1762
-						province_id = 85
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 41 }
-						NOT = { owns_core_province = 75 }
-					}
-					OR = {
-						province_id = 41
-						province_id = 75
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 44 }
-						NOT = { owns_core_province = 45 }
-					}
-					OR = {
-						province_id = 44
-						province_id = 45
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = { owns_core_province = 61 }
-						NOT = { owns_core_province = 63 }
-					}
-					OR = {
-						province_id = 61
-						province_id = 63
-					}
-				}
+				province_id = 75
+				province_id = 1868
+				province_id = 70
+				province_id = 1876
+				province_id = 67
+				province_id = 1762
+				province_id = 85
+				province_id = 75
+				province_id = 44
+				province_id = 45
+				province_id = 61
+				province_id = 63
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -159,37 +95,24 @@ country_decisions = {
 			owns_core_province = 50	# Berlin
 			owns_core_province = 57	# Brunswick
 			owns_core_province = 65	# München
-			OR = {
-				owns_core_province = 1868 # Augsburg
-				owns_core_province = 70 # Wurttemberg
-			}
-			OR = {
-				owns_core_province = 67	# Nürnberg
-				owns_core_province = 1876 # Frankfurt
-			}
-			OR = {
-				owns_core_province = 1762 # Niederhessen
-				owns_core_province = 85	# Köln
-			}
-			OR = {
-				owns_core_province = 41	# Königsberg
-				owns_core_province = 75	# Strassburg
-			}
-			OR = {
-				owns_core_province = 44	# Hamburg
-				owns_core_province = 45	# Lubeck
-			}
-			OR = {
-				owns_core_province = 61	# Dresden
-				owns_core_province = 63	# Thüringen
-			}
+			owns_core_province = 1868 # Augsburg
+			owns_core_province = 70 # Wurttemberg
+			owns_core_province = 67	# Nürnberg
+			owns_core_province = 1876 # Frankfurt
+			owns_core_province = 1762 # Niederhessen
+			owns_core_province = 85	# Köln
+			owns_core_province = 75	# Strassburg
+			owns_core_province = 44	# Hamburg
+			owns_core_province = 45	# Lubeck
+			owns_core_province = 61	# Dresden
+			owns_core_province = 63	# Thüringen
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				OR = {
 					region = north_german_region
 					region = south_german_region
 				}
-				value = 50
+				value = 100
 			}
 		}
 		effect = {
@@ -223,6 +146,25 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			if =  {
+				limit = {
+					NOT = { government = republic }
+				}
+				change_government_to_monarchy = yes
+				add_government_reform = germany_monarchy
+			}
+			if =  {
+				limit = {
+					government = republic
+				}
+				add_government_reform = germany_republic
+			}
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
+			}
 			set_country_flag = formed_germany_flag
 			if = {
 				limit = {
@@ -231,6 +173,17 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			swap_non_generic_missions = yes
+			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_north_german_flag
 		}
 		ai_will_do = {
 			factor = 1

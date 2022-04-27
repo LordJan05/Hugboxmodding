@@ -1,17 +1,16 @@
 #1182 - Delagoa Bay
 
-owner = TSO
-controller = TSO
-add_core = TSO
 culture = nguni
 religion = shamanism #Fetishism
 capital = "Xefina"
-is_city = yes
-trade_goods = ivory
+trade_goods = unknown
 hre = no
 base_tax = 4 
 base_production = 4
 base_manpower = 1
+native_size = 30
+native_ferocity = 4
+native_hostileness = 9
 discovered_by = central_african
 
 1498.1.6 = { discovered_by = POR } #Vasco Da Gama

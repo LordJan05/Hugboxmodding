@@ -10,6 +10,10 @@ theocracy_mechanic = {
 	can_customise_heir = no
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		#enables_aristocratic_idea_group = no
+	}
 
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
@@ -29,7 +33,7 @@ leading_clergy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.25
 	}
 	ai = {
 		factor = 0
@@ -90,7 +94,8 @@ internal_mission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		tolerance_own = 2
+		tolerance_own = 3
+		manpower_in_true_faith_provinces = 0.15
 	}
 	ai = {
 		factor = 0
@@ -119,8 +124,8 @@ mission_to_civilize_reform = {
 		}
 	}
 	modifiers = {
-		native_assimilation = 0.35
-		native_uprising_chance = -0.5
+		native_assimilation = 1
+		native_uprising_chance = -1
 	}
 	ai = {
 		factor = 0
@@ -156,6 +161,7 @@ safeguard_holy_sites_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
 	modifiers = {
+		devotion = 1
 		prestige = 1
 	}
 	ai = {
@@ -215,6 +221,7 @@ subservient_administrators_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	modifiers = {
+		governing_capacity_modifier = 0.25
 		yearly_corruption = -0.1
 	}
 	ai = {
@@ -226,7 +233,9 @@ religious_administrators_reform = {
 	icon = "paper_with_seal_3"
 	allow_normal_conversion = yes
 	modifiers = {
+		governing_cost = -0.5
 		stability_cost_modifier = -0.1
+		mercantilism_cost = -0.25
 	}
 	ai = {
 		factor = 0
@@ -237,7 +246,8 @@ pious_merchants_reform = {
 	icon = "merchant"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_trade_power = 0.05
+		merchants = 1
+		global_trade_power = 0.1
 		maratha_muslim_influence_modifier = 0.1
 		rajput_muslim_influence_modifier = 0.1
 		burghers_influence_modifier = 0.1
@@ -253,7 +263,7 @@ loyal_nobility_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
 	modifiers = {
-		army_tradition = 0.25
+		army_tradition = 0.5
 		nobles_influence_modifier = 0.1
 		maratha_exclusive_influence_modifier = 0.1
 		rajput_exclusive_influence_modifier = 0.1
@@ -362,6 +372,7 @@ warrior_monks_reform = {
 		discipline = 0.025
 		infantry_power = 0.05
 		amount_of_banners = 0.05
+		#amount_of_cawa = 0.05
 	}
 	ai = {
 		factor = 1000
@@ -393,6 +404,7 @@ maintain_religious_head_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		yearly_absolutism = 1
+		max_absolutism = 1
 	}
 	ai = {
 		factor = 0
@@ -403,8 +415,8 @@ partial_secularisation_reform = {
 	icon = "partial_secularisation_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		idea_cost = -0.1
-		global_institution_spread = 0.05
+		idea_cost = -0.075
+		global_institution_spread = 0.1
 	}
 	ai = {
 		factor = 10
@@ -497,8 +509,8 @@ clerical_commission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_unrest = -1
 		diplomatic_upkeep = 1	
+		warscore_cost_vs_other_religion = -0.15
 	}
 	
 	potential = {
@@ -523,7 +535,8 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = 20
+		max_absolutism = 30
+		global_unrest = -1
 	}
 	
 	potential = {
@@ -570,6 +583,7 @@ theocratic_democracy_reform = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
+			disables_nobility = yes
 		}
 	}
 	ai = {
@@ -589,6 +603,9 @@ regionally_elected_commanders = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = eschatological_theocracy_georgia_reform
+			has_reform = eschatological_theocracy_caliphate_reform
+			has_reform = kemet_government
 			tag = KOJ
 		}
 	}
@@ -597,6 +614,9 @@ regionally_elected_commanders = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = eschatological_theocracy_georgia_reform
+			has_reform = eschatological_theocracy_caliphate_reform
+			has_reform = kemet_government
 			tag = KOJ
 		}
 		if = {
@@ -614,6 +634,7 @@ regionally_elected_commanders = {
 	}
 	custom_attributes = {
 		blocked_call_diet = yes
+		disables_nobility = yes
 	}
 	ai = {
 		factor = 0
@@ -635,8 +656,6 @@ monastic_elections_reform = {
 			has_reform = crusade_against_the_world
 			tag = KOJ
 		}
-		NOT = { has_reform = eschatological_theocracy_georgia_reform }
-		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 	}
 	
 	trigger = {
@@ -779,8 +798,9 @@ god_and_man_reform = {
 	icon = "religious_leader"
 	allow_normal_conversion = yes
 	modifiers = {
-		missionaries = 1
-		global_missionary_strength = 0.01
+		missionaries = 2
+		global_missionary_strength = 0.03
+		global_rebel_suppression_efficiency = 0.5
 	}
 	ai = {
 		factor = 0
@@ -797,7 +817,10 @@ religious_harmony_reform = {
 		}
 	}
 	modifiers = {
-		num_accepted_cultures = 2
+		num_accepted_cultures = 3
+		monthly_splendor = 3
+		culture_conversion_cost = -0.1
+		promote_culture_cost = -0.1
 	}
 	ai = {
 		factor = 0
@@ -888,6 +911,7 @@ many_fingers_of_god_reform = {
 	modifiers = {
 		tolerance_heretic = 2	
 		tolerance_heathen = 2
+		technology_cost = -0.1
 	}
 	ai = {
 		factor = 0

@@ -103,6 +103,7 @@ country_decisions = {
 				accepted_culture = slovak
 				accepted_culture = czech
 				primary_culture = slovak
+				tag = POL
 			}
 		}
 		provinces_to_highlight = {
@@ -133,14 +134,23 @@ country_decisions = {
 				tag = HUN
 				tag = POL
 			}
-			OR = {
-				AND = {
-					primary_culture = czech
-					accepted_culture = slovak
+			if = {
+				limit = {
+					tag = POL
 				}
-				AND = {
-					accepted_culture = czech
-					primary_culture = slovak
+				accepted_culture = slovak
+				accepted_culture = czech
+			}
+			else = {
+				OR = {
+					AND = {
+						primary_culture = czech
+						accepted_culture = slovak
+					}
+					AND = {
+						accepted_culture = czech
+						primary_culture = slovak
+					}
 				}
 			}
 			silesia_area = {
@@ -467,6 +477,7 @@ country_decisions = { # Weaker Prussia
 		}
 		allow = {
 			NOT = { exists = PRA }
+			NOT = { exists = PRU }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
 				region = north_german_region
@@ -488,6 +499,15 @@ country_decisions = { # Weaker Prussia
 		effect = {
 			change_tag = PRA
 			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -1374,6 +1394,8 @@ country_decisions = {
 				}
 				add_government_reform = tsardom
 			}
+			change_technology_group = eastern
+			change_unit_type = eastern
 			add_prestige = 25
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -2149,6 +2171,376 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+}
+
+# Switz mercs:
+country_decisions = {
+	# Enable:
+	swi_recruit_merc_inf_enable = {
+		major = yes
+		potential = {
+			tag = SWI
+			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
+		}
+		allow = {
+			mil_power = 400
+		}
+		effect = {
+			set_country_flag = swi_recruit_merc_inf_enabled
+			add_mil_power = -400
+			add_country_modifier = {
+				name = "swi_recruit_merc_inf_enabled_modifier"
+				duration = -1
+			}
+			custom_tooltip = swi_recruit_merc_inf_enable_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Disable:
+	swi_recruit_merc_inf_disable = {
+		major = yes
+		potential = {
+			tag = SWI
+			has_country_flag = swi_recruit_merc_inf_enabled
+		}
+		allow = {
+			NOT = {
+				any_province = {
+					num_of_units_in_province = {
+						who = ROOT
+						type = sea_swiss_mercenaries_1
+						amount = 1
+					}
+				}
+			}
+			NOT = {
+				any_province = {
+					num_of_units_in_province = {
+						who = ROOT
+						type = sea_swiss_mercenaries_2
+						amount = 1
+					}
+				}
+			}
+			NOT = {
+				any_province = {
+					num_of_units_in_province = {
+						who = ROOT
+						type = sea_swiss_mercenaries_3
+						amount = 1
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = swi_recruit_merc_inf_enabled
+			custom_tooltip = swi_recruit_merc_inf_disable_tt
+			remove_country_modifier  = swi_recruit_merc_inf_enabled_modifier
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Units:
+	swi_recruit_merc_inf = {
+		major = yes
+		potential = {
+			has_country_flag = swi_recruit_merc_inf_enabled
+			tag = SWI
+		}
+		allow = {
+			treasury = 30
+			any_owned_province = {
+				has_siege = no
+				controlled_by = ROOT
+			}
+			manpower = 1
+			# Tech 1-11
+			if = {
+				limit = {
+					NOT = { mil_tech = 12 }
+				}
+				if = {
+					limit = {
+						land_forcelimit = 1
+						NOT = { land_forcelimit = 40 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_1
+								amount = 12
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 40
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_1
+								amount = 24
+							}
+						}
+					}
+				}
+			}
+			# Tech 12-25
+			if = {
+				limit = {
+					mil_tech = 12
+					NOT = { mil_tech = 26 }
+				}
+				if = {
+					limit = {
+						land_forcelimit = 1
+						NOT = { land_forcelimit = 24 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_2
+								amount = 12
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 24
+						NOT = { land_forcelimit = 48 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_2
+								amount = 24
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 48
+						NOT = { land_forcelimit = 96 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_2
+								amount = 48
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 96
+						NOT = { land_forcelimit = 192 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_2
+								amount = 96
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 192
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_2
+								amount = 120
+							}
+						}
+					}
+				}
+			}
+			# Tech 26-
+			if = {
+				limit = {
+					mil_tech = 26
+				}
+				if = {
+					limit = {
+						land_forcelimit = 1
+						NOT = { land_forcelimit = 24 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 12
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 24
+						NOT = { land_forcelimit = 48 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 24
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 48
+						NOT = { land_forcelimit = 96 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 48
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 96
+						NOT = { land_forcelimit = 192 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 96
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 192
+						NOT = { land_forcelimit = 384 }
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 160
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						land_forcelimit = 384
+					}
+					NOT = {
+						any_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = sea_swiss_mercenaries_3
+								amount = 240
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							has_siege = yes
+							NOT = { controlled_by = ROOT }
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_siege = no
+						controlled_by = ROOT
+					}
+					add_treasury = -30
+					add_manpower = -1
+					if = {
+						limit = {
+							NOT = { mil_tech = 12 }
+						}
+						sea_swiss_mercenaries_1 = ROOT
+					}
+					if = {
+						limit = {
+							mil_tech = 12
+							NOT = { mil_tech = 26 }
+						}
+						sea_swiss_mercenaries_2 = ROOT
+					}
+					if = {
+						limit = {
+							mil_tech = 26
+						}
+						sea_swiss_mercenaries_2 = ROOT
+					}
+				}
+			}
+			else = {
+				add_treasury = -30
+				add_manpower = -1
+					if = {
+						limit = {
+							NOT = { mil_tech = 12 }
+						}
+						capital_scope = {
+							sea_swiss_mercenaries_1 = ROOT
+						}
+					}
+					if = {
+						limit = {
+							mil_tech = 12
+							NOT = { mil_tech = 26 }
+						}
+						capital_scope = {
+							sea_swiss_mercenaries_2 = ROOT
+						}
+					}
+					if = {
+						limit = {
+							mil_tech = 26
+						}
+						capital_scope = {
+							sea_swiss_mercenaries_3 = ROOT
+						}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

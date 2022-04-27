@@ -11,11 +11,6 @@ historical_rival = SRH
 historical_rival = DLH
 historical_rival = MER
 
-add_country_modifier = {
-	name = "mjl_privateer_efficiency_debuff"
-	duration = -1
-}
-
 
 change_brahmins_or_church_land_share_effect = {
 	share = 22.72

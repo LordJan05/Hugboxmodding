@@ -9,6 +9,7 @@ add_country_modifier = {
 	duration = -1
 }
 
+
 change_estate_land_share = {
 	estate = estate_church
 	share = 8.25
@@ -25,7 +26,7 @@ change_estate_land_share = {
 		ADM = 4
 		DIP = 5
 		MIL = 6
-		leader = { name = "Bahlûl Lodi"		type = general	fire = 4	shock = 5	manuever = 4	siege = 2 }
+		#leader = { name = "Bahlûl Lodi"		type = general	fire = 4	shock = 5	manuever = 4	siege = 2 }
 	}
 	government = monarchy
 	add_government_reform = indian_sultanate_reform

@@ -14,6 +14,7 @@ monarchy = {
 				negusa_nagast
 				solomonic_empire
 				#Specific:
+				chinese_warlord
 				grand_duchy_reform
 				daimyo
 				indep_daimyo
@@ -289,7 +290,10 @@ republic = {
 				veche_tsardom
 				barbary_states_reform
 				leleges_military_government
+				vinland_government
+				atlantis_government
 				ambrosian_merchants_republic
+				germany_republic
 			}
 		}
 		republican_virtues = {
@@ -474,6 +478,8 @@ tribal = {
 			reforms = {
 				martial_society_reform
 				civil_society_reform
+				# Sealand
+				diverse_society_reform
 			}
 		}
 		tribal_religion = {
@@ -582,6 +588,7 @@ theocracy = {
 				crusade_against_the_world
 				eschatological_theocracy_georgia_reform
 				eschatological_theocracy_caliphate_reform
+				kemet_government
 			}
 		}
 		internal_vs_external_mission = {

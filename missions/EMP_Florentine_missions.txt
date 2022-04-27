@@ -15,6 +15,150 @@ emp_tusc_fighting_1 = {
 	}
 	has_country_shield = yes
 	
+	sea_lan_subjugate_lucca_and_siena = {
+		icon = dalmatian_conquest
+		position = 2
+		required_missions = { }
+
+		provinces_to_highlight = {
+			OR = {
+				owner = { tag = LUC }
+				owner = { tag = SIE }
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			OR = {
+				if = {
+					limit = {
+						exists = LUC
+						LUC = {
+							NOT = { is_subject = yes }
+						}
+					}
+					LUC = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 75
+						}
+						is_at_war = no
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = LUC }
+							LUC = { is_subject = yes }
+							NOT = { alliance_with = ROOT }
+						}
+					}
+					owns_or_non_sovereign_subject_of = 2980
+				}
+			}
+			OR = {
+				if = {
+					limit = {
+						exists = SIE
+						SIE = {
+							NOT = { is_subject = yes }
+						}
+					}
+					SIE = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 75
+						}
+						is_at_war = no
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = SIE }
+							SIE = { is_subject = yes }
+							NOT = { alliance_with = ROOT }
+						}
+					}
+					owns_or_non_sovereign_subject_of = 117
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					LUC = { NOT = { alliance_with = ROOT } }
+				}
+				custom_tooltip = sea_lan_subjugate_lucca_tt
+			}
+			if = {
+				limit = {
+					LUC = {
+						exists = yes
+						alliance_with = ROOT
+						NOT = { is_subject = yes }
+					}
+				}
+				vassalize = LUC
+				2980 = { add_core = ROOT }
+			}
+			else = { add_adm_power = 100 }
+			if = {
+				limit = {
+					SIE = { NOT = { alliance_with = ROOT } }
+				}
+				custom_tooltip = sea_lan_subjugate_siena_tt
+			}
+			if = {
+				limit = {
+					SIE = {
+						exists = yes
+						alliance_with = ROOT
+						NOT = { is_subject = yes }
+					}
+				}
+				vassalize = SIE
+				117 = { add_core = ROOT }
+			}
+			else = { add_adm_power = 100 }
+		}
+	}
+	sea_lan_unite_tuscany = {
+		icon = conquer_tuscany
+		required_missions = { sea_lan_subjugate_lucca_and_siena }
+		
+		provinces_to_highlight = {
+			area = tuscany_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			tuscany_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125
+			}
+		}
+	}
+
 	emp_lan_confront_the_lombards = {
 		icon = confront_the_lombards
 		required_missions = { emp_lan_tuscan_birthright }

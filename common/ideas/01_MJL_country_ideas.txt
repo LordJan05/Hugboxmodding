@@ -96,6 +96,7 @@ AFR_ideas = {
 	
 	bonus = {
 		manpower_recovery_speed = 0.25
+		land_forcelimit_modifier = 0.25
 	}	
 
 	trigger = {
@@ -109,14 +110,15 @@ AFR_ideas = {
 	}
 	AFR_boss_hog_cavalry = {
 		leader_land_shock = 2
-		fire_damage = 0.1
+		movement_speed = 0.25
 	}
 	AFR_banana_industry = {
 		production_efficiency = 0.1
 		build_cost = -0.05
 	}
 	AFR_apes_together = {
-		discipline = 0.075
+		discipline = 0.05
+		global_manpower_modifier = 0.25
 	}
 	AFR_poop_infused_cannon = {
 		backrow_artillery_damage = 0.2
@@ -125,8 +127,8 @@ AFR_ideas = {
 		global_trade_goods_size_modifier = 0.2
 	}
 	AFR_life_in_treetops = {
-		movement_speed = 0.15
-		development_cost = -0.05
+		reinforce_speed = 0.25
+		global_supply_limit_modifier = 0.25
 	}
 }
 ##############################
@@ -183,7 +185,7 @@ LOU_ideas = {
 	}
 	
 	bonus = {
-		cavalry_power = 0.3
+		cavalry_power = 0.25
 	}
 	
 	trigger = {
@@ -214,7 +216,7 @@ LOU_ideas = {
 		free_leader_pool = 1
 	}
 	LOU_cavalry = {
-		cavalry_cost = -0.2
+		cavalry_cost = -0.1
 		cavalry_flanking = 0.5
 	}
 }
@@ -509,7 +511,7 @@ CAL_ideas = {
 		cavalry_power = 0.3
 	}
 	bonus = {
-		cavalry_cost = -0.3
+		cavalry_cost = -0.2
 	}
 	trigger = {
 		tag = CAL

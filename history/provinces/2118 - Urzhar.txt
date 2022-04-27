@@ -3,7 +3,7 @@
 owner = TRG
 controller = TRG
 add_core = TRG
-add_core = ZUN
+#add_core = ZUN
 #owner = OIR
 #controller = OIR
 #add_core = OIR

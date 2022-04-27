@@ -248,6 +248,18 @@ groups = {
 			value = 75
 		}
 	}
+	
+	sea_special_units = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_unit_type = sea_special_units
+		nation_designer_trigger = {
+			always = no
+		}
+		nation_designer_cost = {
+			value = 99999
+		}
+	}
 }
 
 tables = {

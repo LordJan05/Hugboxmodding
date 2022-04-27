@@ -743,7 +743,7 @@ east_anglia_area = { #3
 ########################################
 
 jutland_area = { #4
-	15 1984 4142 4149
+	15 1984 4142 4149 5153
 }
 
 denmark_area = { #4 +Bornholm
@@ -1201,7 +1201,7 @@ weser_area = { #4
 }
 
 holstein_area = { #3
-	13 1775 4141 
+	13 1775 4141 5154
 }
 
 lower_saxony_area = { #4
@@ -1311,7 +1311,7 @@ samtskhe_area = { #3
 }
 
 kartli_kakheti_area = { #3
-	423 2203 4301
+	423 2203 4301 4156
 }
 
 armenia_area = { #5
@@ -1614,30 +1614,30 @@ northern_morocco_area = { #5
 ########################################
 
 madagascar_highlands_area = { #3
-	1792 4023 4027
+	1792 4027 5150 5151 4030
 }
 
 betsimasaraka_area = { #3
 	color = { 29 162 26 }
-	4021 4024 4025
+	4021 4024 4025 4023 
 }
 
 sakalava_area = { #5
-	1193 1194 4022 4031 4032
+	1193 1194 4022 4031 
 }
 
 southern_madagascar = { #4
 	color = { 232 29 34 }
-	4026 4028 4029 4030
+	4026 4028 4029 4032 5152
 }
 
 lower_zambezi_area = { #3
 	color = { 213 127 69 }
-	1187 1190 1191
+	1187 1191 2951
 }
 
 upper_zambezi_area = { #3
-	4046 4047 4050
+	4046 4047 1190
 }
 
 shire_area = { #3
@@ -1649,15 +1649,15 @@ butua_area = { #3
 }
 
 zimbabwe_area = { #4
-	1184 2950 2951 2952
+	1184 2950 2952
 }
 
 ruvuma_area = { #4
-	4036 4037 4043 4042
+	4036 4037 4043 4042 4041 
 }
 
 ngonde_area = { #3
-	4041 4044 4045
+	4044 4045 4050
 }
 
 mozambique_area = { #4

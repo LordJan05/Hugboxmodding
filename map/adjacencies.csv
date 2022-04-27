@@ -11,6 +11,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 5774;4736;sea;1302;-1;-1;-1;-1;Pantelleria-Trapani MEDITERRANEAN
 321;2302;sea;1317;-1;-1;-1;-1;Cyprus-Icel MEDITERRANEAN
 320;319;sea;1319;-1;-1;-1;-1;Rhodes-Mentesha MEDITERRANEAN
+2536;4622;sea;1505;-1;-1;-1;-1;Mayaimi-Canimar CARIBBEANS
 4624;2652;sea;1512;-1;-1;-1;-1;Guane-Ecab CARIBBEANS
 493;1881;sea;1523;-1;-1;-1;-1;St. Martin-St. Thomas CARIBBEANS
 496;497;sea;1523;-1;-1;-1;-1;Guadelupe-Dominica CARIBBEANS
@@ -23,6 +24,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 483;2654;sea;1524;-1;-1;-1;-1;Baracoa-Turks Islands CARIBBEANS
 483;482;sea;1503;-1;-1;-1;-1;Turks Islands-Bahamas CARIBBEANS
 2654;489;sea;1516;-1;-1;-1;-1;Baracoa-Tortuga CARIBBEANS
+491;2808;sea;1519;-1;-1;-1;-1;Arumba-Coro CARIBBEANS
+830;2807;sea;1519;-1;-1;-1;-1;Maracaibo-Altagracia CARIBBEANS
 965;2010;sea;1500;-1;-1;-1;-1;Manahahttan-Pequot AMERICA
 839;837;sea;1559;-1;-1;-1;-1;Pipil-Nicaragua AMERICA
 778;2851;sea;1536;-1;-1;-1;-1;Rio de la Plata-Colonia AMERICA

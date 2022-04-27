@@ -574,6 +574,55 @@ country_event = {
 		set_country_flag = fired_sealand_events_6_flag
 	}
 }
+# Discover America for players
+country_event = {
+	id = sealand_events.7
+	title = sealand_events.7.t
+	desc = sealand_events.7.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+   	mean_time_to_happen = {
+        	days = 1
+    	}
+	trigger = {
+		NOT = { is_year = 1450 } # So colonial nations don't get it
+		NOT = { has_country_flag = discovered_america_flag }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		ai = no
+	}
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+			discover_country = ROOT
+		}
+		every_province = {
+			limit = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+			sea_zone = {
+				discover_country = ROOT
+			}
+		}
+		set_country_flag = discovered_america_flag
+	}
+	option = {
+		name = sealand_events.5.a
+	}
+}
 
 # Theocracy government:
 namespace = theocracy_election_government
@@ -589,6 +638,8 @@ country_event = { # For Georgia to become the government changed with Mirecek mi
 
 	option = {
 		name = theocracy_election_government.11.a
+		change_tag = GOE
+		set_country_flag = formed_georgia_flag
 		set_country_flag = eschatological_theocracy_georgia
 		set_country_flag = eschatological_theocracy_georgia_reform_flag
 		change_government = theocracy
@@ -1263,22 +1314,22 @@ country_event = { # Naples vassal or claims
 			factor = 1
 		}
 		add_casus_belli = {
-			type = cb_vassalize_mission
+			type = cb_pap_vassalize_naples
 			months = 600
 			target = NAP
 		}
 	}
-	option = {
-		name = sea_papal_events.1.b
-		ai_chance = {
-			factor = 0
-		}
-		NAP = {
-			every_owned_province = {
-				add_permanent_claim = PAP
-			}
-		}
-	}
+	#option = {
+	#	name = sea_papal_events.1.b
+	#	ai_chance = {
+	#		factor = 0
+	#	}
+	#	NAP = {
+	#		every_owned_province = {
+	#			add_permanent_claim = PAP
+	#		}
+	#	}
+	#}
 	option = {
 		name = sea_papal_events.1.c
 		ai_chance = {

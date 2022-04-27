@@ -112,4 +112,49 @@ mesoamerican_reforms = {
 	}
 }
 
+sea_animism_reforms = {
+	trigger = {
+		religion = animism
+	}	
+
+	can_buy_idea = {
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		adm_power = 400
+		dip_power = 400
+		mil_power = 400
+	}
+	
+	sea_animism_reform_1 = {
+		may_recruit_female_generals = yes
+		war_taxes_cost_modifier = -1
+		manpower_in_true_faith_provinces= 0.15
+	}
+	sea_animism_reform_2 = {
+		free_policy = 1
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+	sea_animism_reform_3 = {
+		no_religion_penalty = yes
+		possible_adm_policy = 1
+		monthly_reform_progress_modifier = 0.33
+	}
+	sea_animism_reform_4 = {
+		range = 0.33
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	sea_animism_reform_5 = {
+		cb_on_overseas = yes
+		possible_dip_policy = 1
+		stability_cost_to_declare_war = -1
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 

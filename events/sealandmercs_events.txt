@@ -1,0 +1,155 @@
+namespace = sealand_mercs_fl_base_event
+#### CAWA ####
+# Gives the modifier on capital:
+country_event = {
+	id = sealand_mercs_fl_base_event.1
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		always = no # Turned off
+		NOT = { has_country_flag = sealandmercs_switch_merc_flag }
+		ai = no
+		NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
+	}
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
+			add_country_modifier = {
+				name = sealand_cawa_base_maintenance
+				duration = -1
+				hidden = yes
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = sealand_cawa_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	option = { }
+}
+# More than 2 provinces with modifiers failsafe:
+country_event = {
+	id = sealand_mercs_fl_base_event.2
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		always = no # Turned off
+		NOT = { has_country_flag = sealandmercs_switch_merc_flag }
+		ai = no
+		num_of_owned_provinces_with = {
+			value = 2
+			has_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = { is_capital = no }
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	option = { }
+}
+# Removed for AI:
+country_event = {
+	id = sealand_mercs_fl_base_event.3
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		always = no # Turned off
+		#NOT = { has_country_flag = sealandmercs_switch_merc_flag }
+		ai = yes
+		any_owned_province = { has_province_modifier = sealand_cawa_fl_base }
+	}
+	immediate = {
+		every_owned_province = { remove_province_modifier = sealand_cawa_fl_base }
+	}
+	option = { }
+}
+#### BANNER #### SINCE CAWA BARELY BEING MUCH MODDALE AND FOUND OUT FEW ISSUES BIT TOO LATE ON THE MAKING, THEN BANNER STILL IS PRETTY MUCH MJL THAN IT WAS BEFORE, JUST SLIGHTLY CHANGED BUT I KEPT IT LIKE THIS, IN CASE PDX DECIDES TO MAKE CAWA MORE MODDABLE OR SOMETHING...
+# Gives the modifier on any province:
+country_event = {
+	id = sealand_mercs_fl_base_event.4
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		#has_country_flag = sealandmercs_switch_merc_flag
+		ai = no
+		NOT = { any_owned_province = { has_province_modifier = sealand_banners_fl_base } }
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				culture = ROOT
+				is_core = ROOT
+				is_state_core = ROOT
+			}
+			set_province_flag = sealand_banners_fl_base_flag 
+			add_province_modifier = {
+				name = sealand_banners_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	option = { }
+}
+# More than 2 provinces with modifiers failsafe:
+country_event = {
+	id = sealand_mercs_fl_base_event.5
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		#has_country_flag = sealandmercs_switch_merc_flag
+		ai = no
+		num_of_owned_provinces_with = {
+			value = 2
+			has_province_modifier = sealand_banners_fl_base
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = { NOT = { has_province_flag = sealand_banners_fl_base_flag } }
+			remove_province_modifier = sealand_banners_fl_base
+		}
+	}
+	option = { }
+}
+# Removed for AI:
+country_event = {
+	id = sealand_mercs_fl_base_event.6
+	title = none
+	desc = none
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		#has_country_flag = sealandmercs_switch_merc_flag
+		ai = yes
+		any_owned_province = { has_province_modifier = sealand_banners_fl_base }
+	}
+	immediate = {
+		every_owned_province = {
+			remove_province_modifier = sealand_banners_fl_base
+			clr_province_flag = sealand_banners_fl_base_flag
+		}
+	}
+	option = { }
+}

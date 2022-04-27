@@ -75,12 +75,6 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = RUM
-			if = {
-				limit = {
-					has_mission = prepare_for_war
-				}
-				swap_non_generic_missions = yes
-			}
 			RUM = {
 				if = {
 					limit = {
@@ -122,6 +116,7 @@ country_decisions = {
 				duration = -1
 			}
 			set_country_flag = formed_rum_flag
+			swap_non_generic_missions = yes
 		}
 		ai_will_do = {
 			factor = 1

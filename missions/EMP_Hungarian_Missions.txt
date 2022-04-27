@@ -313,14 +313,39 @@ emp_hun_economy_branch = {
 	emp_hun_corviana_library = {
 		icon = bibliotheca_corviana
 		required_missions = { emp_hun_improve_economy emp_hun_fund_monasteries }
+		provinces_to_highlight = {
+			province_id = 153
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		trigger = {
 			has_institution = renaissance
 			prestige = 50
+			owns_core_province = 153
 		}
 		effect = {
 			add_country_modifier = {
 				name = hun_corviana_library
 				duration = 7300
+			}
+			153 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+						has_great_project = {
+							type = buda_castle
+							tier = 0
+						}
+					}
+					set_great_project_tier_1 = {
+						type = buda_castle
+					}
+				}
+				else = {
+					add_base_tax = 3
+				}
 			}
 		}
 	}
@@ -462,22 +487,62 @@ emp_hun_bohemia_austria_branch = {
 		required_missions = {  }
 		position = 4
 		trigger = {
-			custom_trigger_tooltip = {
-				OR = {
-					has_country_flag = hun_has_had_matthias_corvinus_event
-					is_year = 1457
-				}
-				tooltip = emp_hun_hungarian_succession_tooltip
+			#custom_trigger_tooltip = {
+			#	OR = {
+			#		has_country_flag = hun_has_had_matthias_corvinus_event
+			#		is_year = 1457
+			#	}
+			#	tooltip = emp_hun_hungarian_succession_tooltip
+			#}
+			has_spy_network_in = {
+				who = MVA
+				value = 40
 			}
-			is_subject = no
-			has_regency = no
 			if = {
 				limit = {
-					government = monarchy
-					has_government_attribute = heir
+					exists = HAB
 				}
-				has_heir = yes
+				OR = {
+					HAB = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = root
+							value = 175
+						}
+					}
+					HAB = {
+						custom_trigger_tooltip = {
+							tooltip = rivalled_or_rival_of
+							OR = {
+								is_rival = root
+								root = { is_rival = prev }
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = has_been_insulted_by_root
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+				}
 			}
+			#is_subject = no
+			#has_regency = no
+			#if = {
+			#	limit = {
+			#		government = monarchy
+			#		has_government_attribute = heir
+			#	}
+			#	has_heir = yes
+			#}
 		}
 		effect = {
 			add_prestige = 20
@@ -489,13 +554,6 @@ emp_hun_bohemia_austria_branch = {
 				add_permanent_claim = ROOT
 			}
 			silesia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lusatia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -516,33 +574,13 @@ emp_hun_bohemia_austria_branch = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = moravia_area
-				area = silesia_area
-				area = lusatia_area
-			}
+			area = moravia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 5
-						OR = {
-							area = moravia_area
-							area = silesia_area
-							area = lusatia_area
-						}
-					}
-				}
-			}
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				OR = {
-					area = moravia_area
-					area = silesia_area
-					area = lusatia_area
-				}
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -580,6 +618,13 @@ emp_hun_bohemia_austria_branch = {
 					add_permanent_claim = ROOT
 				}
 			}
+			lusatia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -596,7 +641,8 @@ emp_hun_bohemia_austria_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = bohemia_area
-				area = erzgebirge_area
+				province_id = 1771
+				province_id = 267
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -605,10 +651,8 @@ emp_hun_bohemia_austria_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			erzgebirge_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			owns_or_non_sovereign_subject_of = 1771
+			owns_or_non_sovereign_subject_of = 267
 			is_subject = no
 			NOT = { active_imperial_incident = any }
 		}

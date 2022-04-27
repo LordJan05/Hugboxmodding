@@ -35,6 +35,7 @@ the_mercenary_registration_act = {
 	}
 
 	amount_of_banners = 0.2
+	#amount_of_cawa = 0.2
 	land_maintenance_modifier = -0.05
 	
 	ai_will_do = {
@@ -366,6 +367,7 @@ underhanded_diplomacy_act = {
 	}
 	
 	amount_of_banners = 0.3
+	#amount_of_cawa = 0.3
 	diplomatic_reputation = 1
 
 	ai_will_do = {

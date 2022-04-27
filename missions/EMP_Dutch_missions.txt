@@ -293,7 +293,7 @@ emp_ned_slot2_branch = {
 					if = {
 						limit = {
 							ROOT = {
-								NOT = { mil_tech = 14 }
+								NOT = { mil_tech = 6 }
 							}
 						}
 						has_building = fort_15th
@@ -302,8 +302,19 @@ emp_ned_slot2_branch = {
 						limit = {
 							ROOT = {
 								AND = {
-									mil_tech = 14
-									NOT = { mil_tech = 19 }
+									mil_tech = 6
+									NOT = { mil_tech = 10 }
+								}
+							}
+						}
+						has_building = fort3
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								AND = {
+									mil_tech = 10
+									NOT = { mil_tech = 14 }
 								}
 							}
 						}
@@ -313,8 +324,19 @@ emp_ned_slot2_branch = {
 						limit = {
 							ROOT = {
 								AND = {
-									mil_tech = 19
-									NOT = { mil_tech = 24 }
+									mil_tech = 14
+									NOT = { mil_tech = 18 }
+								}
+							}
+						}
+						has_building = fort5
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								AND = {
+									mil_tech = 18
+									NOT = { mil_tech = 22 }
 								}
 							}
 						}
@@ -323,7 +345,18 @@ emp_ned_slot2_branch = {
 					else_if = {
 						limit = {
 							ROOT = {
-								mil_tech = 24
+								AND = {
+									mil_tech = 22
+									NOT = { mil_tech = 26 }
+								}
+							}
+						}
+						has_building = fort7
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								mil_tech = 26
 							}
 						}
 						has_building = fort_18th

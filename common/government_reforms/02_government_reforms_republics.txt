@@ -5,14 +5,15 @@ republic_mechanic = {
 	republic = yes
 	duration = 4
 	has_term_election = yes
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 
 	modifiers = {
 		burghers_influence_modifier = 0.15
 		vaisyas_influence_modifier = 0.15
+		max_absolutism = -30
 	}
 
 	valid_for_nation_designer = no
@@ -38,12 +39,11 @@ oligarchy_reform = {
 	}
 	modifiers = {
 		global_tax_modifier = 0.05
-		max_absolutism = -40
 	}
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	ai = {
 		factor = 0.5 #generic
 	}
@@ -65,11 +65,11 @@ signoria_reform = {
 	}
 	modifiers = {
 		global_tax_modifier = 0.05
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		enables_nepotism = yes
 	}
 	ai = {
@@ -91,7 +91,7 @@ protectorate_parliament_reform = {
 	modifiers = {
 		global_autonomy = -0.05
 		land_morale = 0.05
-		max_absolutism = -20
+		max_absolutism = 20
 		republican_tradition = -0.5
 	}
 
@@ -100,13 +100,14 @@ protectorate_parliament_reform = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
+			disables_nobility = yes
 		}
 	}
 	has_term_election = no
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 }
 
@@ -153,7 +154,7 @@ prussian_republic_reform = {
 		monthly_militarized_society = 0.05
 		global_autonomy = -0.075
 		republican_tradition = -0.5
-		max_absolutism = -10
+		max_absolutism = 30
 		governing_capacity_modifier = -0.25
 	}
 	
@@ -163,8 +164,8 @@ prussian_republic_reform = {
 	}
 	
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		generals_become_rulers = yes
 	}
 	
@@ -175,7 +176,7 @@ merchants_reform = {
 	icon = "politician"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = -30
+		max_absolutism = 10
 		merchants = 1
 	}
 	valid_for_nation_designer = yes
@@ -231,8 +232,8 @@ merchants_reform = {
 		trade_city_reform = trading_city
 	}
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
 	}
 	ai = {
@@ -266,7 +267,7 @@ venice_merchants_reform = {
 	icon = "trading_city"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = -30
+		max_absolutism = 10
 		merchants = 1
 		yearly_corruption = -0.1
 	}
@@ -314,8 +315,8 @@ venice_merchants_reform = {
 		trade_city_reform = trading_city
 	}
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		lottery_election = yes
 		election_on_death = yes
 		is_merchant_republic = yes
@@ -330,7 +331,7 @@ pirate_republic_reform = {
 	lock_level_when_selected = yes
 	modifiers = {
 		republican_tradition = -1
-		max_absolutism = -50
+		max_absolutism = -10
 		naval_forcelimit_modifier = 0.5
 		capture_ship_chance = 0.33
 		state_governing_cost = 0.75
@@ -358,6 +359,7 @@ pirate_republic_reform = {
 		NOT = { technology_group = andean }
 		NOT = { technology_group = north_american }
 		NOT = { technology_group = south_american }
+		NOT = { technology_group = aboriginal_tech }
 		NOT = { technology_group = mesoamerican }
 	}
 
@@ -399,17 +401,17 @@ noble_elite_reform = {
 	}
 	modifiers = {
 		army_tradition = 0.10
-		max_absolutism = -20
+		max_absolutism = 20
 		nobles_influence_modifier = 0.05
 		maratha_exclusive_influence_modifier = 0.05
 		rajput_exclusive_influence_modifier = 0.05
 	}
 	duration = 8
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = no
-		enables_aristocratic_idea_group = yes
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = no
+	#	enables_aristocratic_idea_group = yes
+	#}
 	ai = {
 		factor = 0.5 #generic
 	}
@@ -429,12 +431,13 @@ presidential_despot_reform = {
 	modifiers = {
 		global_autonomy = -0.075
 		land_morale = 0.1
+		max_absolutism = 40
 	}
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	has_term_election = no
 }
@@ -452,13 +455,13 @@ military_dictatorship_reform = {
 	modifiers = {
 		global_autonomy = -0.075
 		land_morale = 0.1
-		max_absolutism = -10
+		max_absolutism = 30
 	}
 	custom_attributes = {
 		generals_become_rulers = yes
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 }
 
@@ -483,12 +486,13 @@ revolutionary_republic_reform = {
 		land_morale = 0.1
 		global_autonomy = -0.2
 		max_revolutionary_zeal = 50
+		max_absolutism = 40
 	}
 	fixed_rank = 3
 
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		locked_government_type = yes
 	}
 
@@ -560,12 +564,13 @@ junior_revolutionary_republic_reform = {
 		land_morale = 0.1
 		global_autonomy = -0.2
 		max_revolutionary_zeal = 25
+		max_absolutism = 40
 	}
 	fixed_rank = 2
 
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		locked_government_type = yes
 	}
 
@@ -633,7 +638,7 @@ peasants_republic = {
 	modifiers = {
 		production_efficiency = 0.1
 		land_morale = 0.05
-		max_absolutism = -50
+		max_absolutism = -10
 	}
 	effect = {
 		hidden_effect = {
@@ -651,10 +656,10 @@ peasants_republic = {
 			}
 		}
 	}
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	duration = 4
 }
 
@@ -676,11 +681,11 @@ kongsi_federation = {
 	modifiers = {
 		production_efficiency = 0.1
 		republican_tradition = 0.5
-		max_absolutism = -50
+		max_absolutism = -10
 	}
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		allow_draft_transport_ships = yes
 	}
 	duration = 4
@@ -701,19 +706,19 @@ free_city = {
 		NOT = { num_custom_nation_provinces = 2 }
 	}
 
-	free_city = yes
+	#free_city = yes
 	modifiers = {
 		trade_efficiency = 0.1
 		development_cost = -0.1
-		max_absolutism = -20
+		max_absolutism = 20
 		burghers_influence_modifier = 0.15
 	}
 	fixed_rank = 1
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	duration = 4
 }
@@ -737,13 +742,13 @@ trading_city = {
 	modifiers = {
 		max_absolutism = -20
 		global_trade_power = 0.1
-		max_absolutism = -20
+		max_absolutism = 20
 	}
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 
 	conditional = {
@@ -790,12 +795,12 @@ ambrosian_republic = {
 		global_tax_modifier = 0.1
 		land_morale = 0.05
 		governing_capacity = 50
-		max_absolutism = -30
+		max_absolutism = 10
 	}
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	duration = 4
 }
 
@@ -821,7 +826,7 @@ veche_republic = {
 	modifiers = {
 		merchants = 1
 		governing_capacity = 50
-		max_absolutism = -50
+		max_absolutism = 10
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -834,10 +839,10 @@ veche_republic = {
 	boost_income = yes
 	fixed_rank = 1
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -942,13 +947,13 @@ american_republic = {
 	modifiers = {
 		war_exhaustion = -0.04
 		stability_cost_modifier = -0.1
-		max_absolutism = -20
+		max_absolutism = 20
 	}
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
@@ -986,12 +991,13 @@ federal_republic = {
 	modifiers = {
 		diplomatic_reputation = 1
 		global_spy_defence = 0.1
-		max_absolutism = -30
+		max_absolutism = 10
+		discipline = 0.025
 	}
 
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 		blocked_call_diet = yes
 	}
 	conditional = {
@@ -1021,13 +1027,16 @@ colonial_government = {
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
 		governing_capacity = 100
+		max_absolutism = -10
 
 		#Loyalty buff
 		liberty_desire = -30
 
 		#COLONY DEBUFF
-		development_cost = 0.05
+		development_cost = 0.2
+		global_manpower_modifier = -0.1
 		amount_of_banners = -0.3
+		#amount_of_cawa = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
 
@@ -1040,8 +1049,8 @@ colonial_government = {
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	duration = 4
 }
@@ -1066,17 +1075,18 @@ crown_colony_government = {
 		recover_army_morale_speed = 0.05
 		embracement_cost = -0.1
 		governing_capacity = 100
+		max_absolutism = -10
 
 		#Loyalty buff
 		liberty_desire = -30
 
 		#COLONY DEBUFF
-		development_cost = 0.05
+		development_cost = 0.2
+		global_manpower_modifier = -0.1
 		amount_of_banners = -0.3
+		#amount_of_cawa = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
-		max_absolutism = -30
-
 		#Loyalty buff
 		liberty_desire = -30
 
@@ -1086,10 +1096,18 @@ crown_colony_government = {
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	duration = 4
+	factions = {
+		sea_colonial_adm_1
+		sea_colonial_adm_2
+		sea_colonial_dip_1
+		sea_colonial_dip_2
+		sea_colonial_mil_1
+		sea_colonial_mil_2
+	}
 }
 
 private_enterprise_colony_government = {
@@ -1112,16 +1130,18 @@ private_enterprise_colony_government = {
 		embracement_cost = -0.1
 		merchants = 1
 		production_efficiency = 0.05
+		max_absolutism = -10
 
 		#Loyalty buff
 		liberty_desire = -30
 
 		#COLONY DEBUFF
-		development_cost = 0.05
+		development_cost = 0.2
+		global_manpower_modifier = -0.1
 		amount_of_banners = -0.3
+		#amount_of_cawa = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
-		max_absolutism = -30
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1132,10 +1152,18 @@ private_enterprise_colony_government = {
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	duration = 4
+	factions = {
+		sea_colonial_adm_1
+		sea_colonial_adm_2
+		sea_colonial_dip_1
+		sea_colonial_dip_2
+		sea_colonial_mil_1
+		sea_colonial_mil_2
+	}
 }
 
 self_governing_colony_government = {
@@ -1157,6 +1185,7 @@ self_governing_colony_government = {
 		build_cost = -0.1
 		embracement_cost = -0.1
 		state_maintenance_modifier = -0.25
+		max_absolutism = -10
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1164,9 +1193,9 @@ self_governing_colony_government = {
 		#COLONY DEBUFF
 		development_cost = 0.05
 		amount_of_banners = -0.3
+		#amount_of_cawa = -0.3
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
-		max_absolutism = -30
 
 		#Loyalty buff
 		liberty_desire = -30
@@ -1177,10 +1206,18 @@ self_governing_colony_government = {
 
 	custom_attributes = {
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_aristocratic_idea_group = no
 	}
 	duration = 4
+	factions = {
+		sea_colonial_adm_1
+		sea_colonial_adm_2
+		sea_colonial_dip_1
+		sea_colonial_dip_2
+		sea_colonial_mil_1
+		sea_colonial_mil_2
+	}
 }
 dutch_republic = {
 	icon = "dutch_republic"
@@ -1209,7 +1246,7 @@ dutch_republic = {
 		heavy_ship_power = 0.1
 		trade_efficiency = 0.1
 		governing_capacity = 50
-		#max_absolutism = -30
+		max_absolutism = 40
 	}
 
 	removed_effect = {
@@ -1220,10 +1257,10 @@ dutch_republic = {
 		}
 	}
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -1284,10 +1321,10 @@ cossacks_reform = {
 		}
 	}
 
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 
@@ -1295,9 +1332,9 @@ cossacks_reform = {
 		candidate_random_bonus = 2
 		#cavalry_power = 0.2
 		cavalry_cost = -0.2
-		cav_to_inf_ratio = 0.2
+		cav_to_inf_ratio = 0.25
 		governing_capacity = 150
-		max_absolutism = -40
+		max_absolutism = 20
 		republican_tradition = 0.2
 	}
 	duration = 4
@@ -1318,6 +1355,7 @@ republican_authoritarianism_reform = {
 	}
 	modifiers = {
 		global_unrest = -1
+		reelection_cost = -0.1
 	}
 	ai = {
 		factor = 0
@@ -1331,6 +1369,7 @@ nepotism_reform = {
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = barbary_states_reform }
 		NOT = { has_reform = signoria_reform }
+		NOT = { has_reform = atlantis_government }
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
@@ -1515,7 +1554,7 @@ consolidation_of_power_reform = {
 		}
 	}
 	modifiers = {
-		max_absolutism = 10
+		max_absolutism = 20
 		election_cycle = 1
 	}
 	ai = {
@@ -1547,6 +1586,7 @@ lottery_reform = {
 		}
 	}
 	modifiers = {
+		max_absolutism = 30
 		yearly_corruption = -0.1
 	}
 	custom_attributes = {
@@ -1655,6 +1695,8 @@ provincial_governments_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		state_maintenance_modifier = -0.25
+		production_efficiency = 0.1
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 0
@@ -1677,6 +1719,9 @@ union_of_states_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		global_trade_power = 0.1
+		trade_range_modifier = 0.15
+		merchants = 1
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 0
@@ -1691,7 +1736,8 @@ presidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
-		embracement_cost = -0.1
+		embracement_cost = -0.2
+		mercantilism_cost = -0.5
 	}
 	ai = {
 		factor = 0
@@ -2017,7 +2063,7 @@ landholders_reform = {
 		}
 	}
 	modifiers = {
-		manpower_recovery_speed = 0.1
+		manpower_recovery_speed = 0.2
 	}
 	ai = {
 		factor = 0
@@ -2047,15 +2093,16 @@ admiralty_reform = {
 	# no legacy equivalent. own Dharama or Emperor
 	potential = {
 		is_revolutionary = no
+		NOT = { has_reform = barbary_states_reform }
+		NOT = { has_reform = atlantis_government }
 	}
 	trigger = {
 		full_idea_group = maritime_ideas
 		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = barbary_states_reform }
 	}
 	modifiers = {
 		leader_naval_fire = 1
-		republican_tradition = -0.5
+		republican_tradition = -0.3
 	}
 	custom_attributes = {
 		admirals_become_rulers = yes
@@ -2132,7 +2179,7 @@ appointment_by_committee_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		advisor_pool = 1
-		advisor_cost = -0.05
+		advisor_cost = -0.075
 	}
 	ai = {
 		factor = 10
@@ -2143,7 +2190,9 @@ bureaucratic_aparatus_reform = {
 	icon = "map_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		min_autonomy_in_territories = -0.10
+		min_autonomy_in_territories = -0.2
+		state_maintenance_modifier = -0.25
+		global_rebel_suppression_efficiency = 0.5
 	}
 	ai = {
 		factor = 0
@@ -2155,7 +2204,10 @@ universal_suffrage_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	modifiers = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 3
+		max_absolutism = 15
+		culture_conversion_cost = -0.1
+		promote_culture_cost = -0.1
 	}
 	ai = {
 		factor = 0
@@ -2237,7 +2289,7 @@ strengthen_executive_powers_reform = {
 		is_revolutionary = no 
 	}
 	modifiers = {
-		max_absolutism = 25
+		max_absolutism = 30
 	}
 	ai = {
 		factor = 0
@@ -2249,7 +2301,8 @@ reinforce_republican_values_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		free_adm_policy = 1
-		reelection_cost = -0.1
+		free_dip_policy = 1
+		reelection_cost = -0.15
 	}
 	ai = {
 		factor = 10
@@ -2359,6 +2412,7 @@ millenarian_theocracy_reform = {
 		devotion = 1
 		tolerance_own = 2
 		global_missionary_strength = 0.02
+		max_absolutism = 40
 	}
 	custom_attributes = {
 		election_on_death = yes

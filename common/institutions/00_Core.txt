@@ -69,6 +69,7 @@ feudalism = {
 					culture = astrakhani
 					culture = oirats
 					culture = madagasque
+					culture = nogaybak
 					area = ningguta_area
 					area = jilin_area
 					culture_group = byzantine
@@ -116,6 +117,13 @@ feudalism = {
 					province_id = 4076
 					province_id = 4071
 					province_id = 4069
+					# Mangbetu:
+					province_id = 5011
+					province_id = 5065
+					province_id = 5035
+					province_id = 5010
+					province_id = 5008
+					province_id = 5009
 					# North American tribe
 					province_id = 1011
 				}
@@ -287,8 +295,8 @@ feudalism = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = sea_tooltip_development_5_post_1460
-				is_year = 1460
+				tooltip = sea_tooltip_development_5_post_1445
+				is_year = 1445
 				development = 5
 			}
 		}
@@ -611,7 +619,7 @@ new_world_i = {
 				is_year = 1500
 				continent = europe
 				OR = {
-					owner = { has_idea = quest_for_the_new_world }
+					owner = { has_any_exploration_idea = yes }
 					owner = { colony = 1 }
 				}
 			}
@@ -697,7 +705,7 @@ new_world_i = {
 		}
 		is_in_capital_area = yes
 		owner = { 
-			has_idea = quest_for_the_new_world 
+			has_any_exploration_idea = yes
 			#at least one province colonised or colonising, or have a subject colony
 			OR = {
 				any_owned_province = {

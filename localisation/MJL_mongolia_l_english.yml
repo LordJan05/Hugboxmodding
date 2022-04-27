@@ -15,7 +15,7 @@
  h_populate_altai_mountains_desc:0 "As a reward for exemplary services we are going to let our fiercest warriors populate Golden Mountains slopes. The highest honor a warrior can achieve."
  h_populate_altai_mountains_mod:0 "Populate the Altai"
  desc_h_populate_altai_mountains_mod:0 "It's finally time to populate the Golden Mountains."
- h_populate_altai_mountains_effect_tooltip:1 "§G-20%§! local development cost in all §YMountain§! provinces in the §YMongolia§! region."
+ h_populate_altai_mountains_effect_tooltip:1 "§G-10%§! local development cost in all §YMountain§! provinces in the §YMongolia§! region."
  h_populate_altai_mountains_mod_revoke_tooltip:0 "Removes §YPopulate the Altai§! modifier from all owned provinces."
  mjl_tooltip_oiratwar:0 "Oirat may not declare war."
  mjl_tooltip_allyoirat:0 "Oirat are not interested in having allies."

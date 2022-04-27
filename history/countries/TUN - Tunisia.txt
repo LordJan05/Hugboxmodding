@@ -11,7 +11,8 @@ add_country_modifier = {
 	duration = -1
 }
 
-add_sailors = 1000
+
+add_treasury = 200
 
 change_estate_land_share = {
 	estate = estate_nobles
@@ -30,10 +31,13 @@ change_estate_land_share = {
 	monarch = {
 		name = "'Uthman"
 		dynasty = "Hafsid"
+		birth_date = 1418.1.1
 		adm = 4
 		dip = 3
 		mil = 3
+		leader = { name = "'Uthman"		type = general	fire = 3	shock = 3	manuever = 4	siege = 2}
 	}
+	leader = { name = "'Uthman"		type = admiral	fire = 3	shock = 3	manuever = 4	siege = 2}
 }
 
 1488.1.1 = {

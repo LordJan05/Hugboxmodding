@@ -1329,26 +1329,36 @@ pedja_sasanid_missions5 = {
       	icon = mission_ottoman_harem
       	required_missions = { the_ancient_enemy }
    		trigger = {
-   			OR = {
-    			TUR = {
-					total_own_and_non_tributary_subject_development  = 400
+			if = {
+				limit = {
+					OR = {
+						TUR = { exists = yes }
+						OSM = { exists = yes }
+						MAM = { exists = yes }
+						RUM = { exists = yes }
+					}
 				}
-    			OSM = {
-					total_own_and_non_tributary_subject_development  = 400
+				OR = {
+					TUR = {
+						total_own_and_non_tributary_subject_development  = 400
+					}
+					OSM = {
+						total_own_and_non_tributary_subject_development  = 400
+					}
+					MAM = {
+						total_own_and_non_tributary_subject_development = 400
+					}
+					RUM = {
+						total_own_and_non_tributary_subject_development = 400
+					}
 				}
-				MAM = {
-					total_own_and_non_tributary_subject_development = 400
-				}
-				RUM = {
-					total_own_and_non_tributary_subject_development = 400
-				}
-   			}
-   			OR = {
-   				is_rival = TUR
-   				is_rival = OSM
-   				is_rival = MAM
-   				is_rival = RUM
-   			}
+   				OR = {
+   					is_rival = TUR
+   					is_rival = OSM
+   					is_rival = MAM
+   					is_rival = RUM
+   				}
+			}
    		}
    		effect = {
    			define_advisor = {
@@ -1379,7 +1389,7 @@ pedja_sasanid_missions5 = {
 		}
    		trigger = {
  	 		OR = { 
-       			AND = {
+				AND = {
 					406 = {
 						country_or_non_sovereign_subject_holds = SAS
 						has_building = fort_15th
@@ -1395,12 +1405,24 @@ pedja_sasanid_missions5 = {
 						base_manpower = 3
 					}
 				}
-				defensive_war_with = TUR
-				offensive_war_with  = TUR
-				defensive_war_with = MAM
-				offensive_war_with  = MAM
-				defensive_war_with = RUM
-				offensive_war_with  = RUM
+				if = {
+					limit = {
+						OR = {
+							TUR = { exists = yes }
+							OSM = { exists = yes }
+							MAM = { exists = yes }
+							RUM = { exists = yes }
+						}
+					}
+					defensive_war_with = TUR
+					offensive_war_with  = TUR
+					defensive_war_with = OSM
+					offensive_war_with  = OSM
+					defensive_war_with = MAM
+					offensive_war_with  = MAM
+					defensive_war_with = RUM
+					offensive_war_with  = RUM
+				}
    			}
    		}
    		effect = {
@@ -1430,15 +1452,25 @@ pedja_sasanid_missions5 = {
    		icon = mission_noble_council
    		required_missions = { prepare_for_a_confrontation }
    		trigger = {
-   			OR = {
-    			defensive_war_with = TUR
-    			offensive_war_with  = TUR
-    			defensive_war_with = OSM
-    			offensive_war_with  = OSM
-				defensive_war_with = MAM
-				offensive_war_with  = MAM
-    			defensive_war_with = RUM
-    			offensive_war_with  = RUM
+			if = {
+				limit = {
+					OR = {
+						TUR = { exists = yes }
+						OSM = { exists = yes }
+						MAM = { exists = yes }
+						RUM = { exists = yes }
+					}
+				}
+   				OR = {
+    					defensive_war_with = TUR
+    					offensive_war_with  = TUR
+    					defensive_war_with = OSM
+    					offensive_war_with  = OSM
+					defensive_war_with = MAM
+					offensive_war_with  = MAM
+    					defensive_war_with = RUM
+    					offensive_war_with  = RUM
+				}
    			}
    			NOT = { is_year = 1575 }
    		}

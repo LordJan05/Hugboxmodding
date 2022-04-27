@@ -313,8 +313,8 @@ country_event = {
 	desc = "flavor_teu.EVTDESC4"
 	picture = SEJM_eventPicture
 	
-	fire_only_once = yes
-	
+	fire_only_once = yes	
+
 	trigger = {
 		tag = TEU
 		NOT = {
@@ -322,14 +322,14 @@ country_event = {
 		}
 		NOT = { has_country_flag = pru_confederation_flag }
 	}
-	
-	mean_time_to_happen = {
-		days = 1
+
+	immediate = {
+		set_country_flag = pru_confederation_flag
 	}
 	
 	option = {
 		name = "flavor_teu.4.a"
-		set_country_flag = pru_confederation_flag
+		set_country_flag = pru_confederation_flag_mission
 		custom_tooltip = dnz_estate_available_tooltip # Changed to mission. # Sealand (using it to find my added stuff faster)
 		add_estate_loyalty = {
 			estate = estate_burghers
@@ -353,10 +353,9 @@ country_event = {
 	picture = SEJM_eventPicture
 	
 	trigger = {
-		is_year = 1460
+		#is_year = 1460
 		NOT = { is_year = 1500 }
 		tag = TEU
-		NOT = { has_country_flag = pru_confederation_curtailed }
 		has_country_flag = pru_confederation_flag
 		has_estate_privilege = estate_burghers_prussian_confederation
 		is_subject = no
@@ -367,20 +366,26 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 6
 	}
 	
 	option = {
 		name = flavor_teu.5.a
 		clr_country_flag = pru_confederation_flag
-		clr_country_flag = chose_join_the_empire_flag # Sealand. Added to remove BRAPRU mission
 		change_tag = DNZ
 		change_government = republic
 		add_government_reform = oligarchy_reform
-		swap_non_generic_missions = yes # To clear missions. # Sealand (using it to find my added stuff faster)
+		#swap_non_generic_missions = yes
 		remove_estate_privilege = estate_burghers_prussian_confederation
-		add_stability = -1
-		add_prestige = -25
+		set_country_flag = estate_burghers_prussian_confederation_conceded_flag
+		set_estate_privilege = estate_burghers_prussian_confederation_conceded
+		if = {
+			limit = {
+				NOT = { has_country_flag = pru_confederation_curtailed }
+			}
+			add_stability = -1
+			add_prestige = -25
+		}
 		if = {
 			limit = { has_custom_ideas = no }
 			country_event = { id = ideagroups.1 } #Swap Ideas

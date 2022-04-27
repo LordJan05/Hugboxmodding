@@ -1,7 +1,7 @@
 #5745 - Tan-Tan
 
-owner = SOS
-controller = SOS
+owner = MOR
+controller = MOR
 culture = berber
 religion = sunni
 capital = "Tan-Tan"

@@ -5,10 +5,6 @@ primary_culture = breton
 religion = catholic
 technology_group = western
 capital = 172
-add_country_modifier = {
-	name = "mjl_privateer_efficiency_debuff"
-	duration = -1
-}
 
 change_estate_land_share = {
 	estate = estate_nobles

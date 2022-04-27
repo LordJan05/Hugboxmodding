@@ -2588,6 +2588,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = no_more_comet_sighted_event }
+		NOT = { full_idea_group = humanist_ideas }
 	}
 
 	mean_time_to_happen = {

@@ -86,15 +86,15 @@ mutapa_vassal_missions_slot = {
 		position = 4
 		provinces_to_highlight = {
 			region = south_africa_region
-			OR = {
-				NOT = { is_core = ROOT }
-				NOT = { owned_by = ROOT }
-			}
+			NOT = { owned_by = ROOT }
+			is_empty = no
 		}
 		trigger = {
 			south_africa_region = {
-				owned_by = ROOT
-				is_core = ROOT
+				OR = {
+					owned_by = ROOT
+					is_empty = yes
+				}
 				type = all
 			}
 		}
@@ -258,17 +258,50 @@ mutapa_conquer_africa_missions_slot = {
 			}
 			if = {
 				limit = {
-					1177 = {
-						is_empty = yes
+					HER = {
+						exists = yes
+						is_subject = no
+						ai = yes
 					}
+					
 				}
-				create_colony_mission_reward = {
-					province = 1177
+				inherit = HER
+			}
+			if = {
+				limit = {
+					NAM = {
+						exists = yes
+						is_subject = no
+						ai = yes
+					}
+					
 				}
+				inherit = NAM
 			}
-			add_temporary_colonist = {
-				duration = 36500
+			if = {
+				limit = {
+					KHE = {
+						exists = yes
+						is_subject = no
+						ai = yes
+					}
+					
+				}
+				inherit = KHE
 			}
+			#if = {
+			#	limit = {
+			#		1177 = {
+			#			is_empty = yes
+			#		}
+			#	}
+			#	create_colony_mission_reward = {
+			#		province = 1177
+			#	}
+			#}
+			#add_temporary_colonist = {
+			#	duration = 36500
+			#}
 		}
 	}
 
@@ -281,9 +314,7 @@ mutapa_conquer_africa_missions_slot = {
 		}
 		position = 5
 		trigger = {
-			has_reached_government_reform_tier = {
-				tier_4 = yes
-			}
+			reform_level = 4
 			has_better_tech_than_westerns = yes
 			has_more_institutions_than_westerns = yes
 		}
@@ -464,6 +495,7 @@ mutapa_restore_zimbabwe_missions_slot = {
 				area = quelimane_area
 			}
 			NOT = { owned_by = ROOT }
+			is_empty = no
 		}
 		trigger = {
 			total_development = 400
@@ -480,7 +512,10 @@ mutapa_restore_zimbabwe_missions_slot = {
 				type = all
 			}
 			quelimane_area = {
-				owned_by = ROOT
+				OR = {
+					owned_by = ROOT
+					is_empty = yes
+				}
 				type = all
 			}
 		}

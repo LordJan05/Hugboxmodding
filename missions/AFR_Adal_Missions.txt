@@ -675,25 +675,20 @@ adal_unification_missions_slot = {
 			OR = {
 				area = ajuuran_area
 				area = mogadishu_area
-				area = ogaden_area
 				area = marehan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			ogaden_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				type = all
-			}
-			marehan_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				type = all
-			}
 			ajuuran_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
 			mogadishu_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			marehan_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}

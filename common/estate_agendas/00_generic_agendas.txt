@@ -1653,8 +1653,11 @@ estate_nobles_build_fort_building_in_y = {
 			OR = {
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -1679,8 +1682,11 @@ estate_nobles_build_fort_building_in_y = {
 							owned_by = root
 							OR = {
 								has_building = fort_15th
+								has_building = fort3
 								has_building = fort_16th
+								has_building = fort5
 								has_building = fort_17th
+								has_building = fort7
 								has_building = fort_18th
 							}
 						}
@@ -1688,8 +1694,11 @@ estate_nobles_build_fort_building_in_y = {
 				}
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -1715,8 +1724,11 @@ estate_nobles_build_fort_building_in_y = {
 									owned_by = root
 									OR = {
 										has_building = fort_15th
+										has_building = fort3
 										has_building = fort_16th
+										has_building = fort5
 										has_building = fort_17th
+										has_building = fort7
 										has_building = fort_18th
 									}
 								}
@@ -1726,15 +1738,27 @@ estate_nobles_build_fort_building_in_y = {
 				}
 				AND = {
 					has_building = fort_15th
-					ROOT = { mil_tech = 14 }
+					ROOT = { mil_tech = 6 }
+				}
+				AND = {
+					has_building = fort3
+					ROOT = { mil_tech = 10 }
 				}
 				AND = {
 					has_building = fort_16th
-					ROOT = { mil_tech = 19 }
+					ROOT = { mil_tech = 14 }
+				}
+				AND = {
+					has_building = fort5
+					ROOT = { mil_tech = 18 }
 				}
 				AND = {
 					has_building = fort_17th
-					ROOT = { mil_tech = 24 }
+					ROOT = { mil_tech = 22 }
+				}
+				AND = {
+					has_building = fort7
+					ROOT = { mil_tech = 26 }
 				}
 			}
 			NOT = { has_building = fort_18th }
@@ -1763,8 +1787,11 @@ estate_nobles_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -1789,8 +1816,11 @@ estate_nobles_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -1798,8 +1828,11 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -1825,8 +1858,11 @@ estate_nobles_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -1836,15 +1872,27 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -1856,8 +1904,11 @@ estate_nobles_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -1882,8 +1933,11 @@ estate_nobles_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -1892,8 +1946,11 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -1919,8 +1976,11 @@ estate_nobles_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -1931,15 +1991,27 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -1951,8 +2023,11 @@ estate_nobles_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -1977,8 +2052,11 @@ estate_nobles_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -1987,8 +2065,11 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2014,8 +2095,11 @@ estate_nobles_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2026,15 +2110,27 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2046,8 +2142,11 @@ estate_nobles_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2072,8 +2171,11 @@ estate_nobles_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -2082,8 +2184,11 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2109,8 +2214,11 @@ estate_nobles_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2121,15 +2229,27 @@ estate_nobles_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2139,7 +2259,40 @@ estate_nobles_build_fort_building_in_y = {
 		event_target:agenda_province = {
 			if = {
 				limit = {
+					has_building = fort7
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 7
+					}
+				}
+			}
+			else_if = {
+				limit = {
 					has_building = fort_17th
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 6
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort5
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort_16th
 				}
 				ROOT = {
 					set_variable = {
@@ -2150,7 +2303,7 @@ estate_nobles_build_fort_building_in_y = {
 			}
 			else_if = {
 				limit = {
-					has_building = fort_16th
+					has_building = fort3
 				}
 				ROOT = {
 					set_variable = {
@@ -2193,11 +2346,56 @@ estate_nobles_build_fort_building_in_y = {
 			limit = {
 				check_variable = {
 					which = estate_nobles_build_fort_building_in_y_var
-					value = 4
+					value = 7
 				}
 			}
 			event_target:agenda_province = {
 				has_building = fort_18th
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 6
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 5
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 4
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort5
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
 			}
 		}
 		else_if = {
@@ -2209,7 +2407,10 @@ estate_nobles_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2223,8 +2424,11 @@ estate_nobles_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2233,8 +2437,11 @@ estate_nobles_build_fort_building_in_y = {
 			event_target:agenda_province = {
 				OR = {
 					has_building = fort_15th
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2274,8 +2481,11 @@ estate_rajput_build_fort_building_in_y = {
 			OR = {
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -2300,8 +2510,11 @@ estate_rajput_build_fort_building_in_y = {
 							owned_by = root
 							OR = {
 								has_building = fort_15th
+								has_building = fort3
 								has_building = fort_16th
+								has_building = fort5
 								has_building = fort_17th
+								has_building = fort7
 								has_building = fort_18th
 							}
 						}
@@ -2309,8 +2522,11 @@ estate_rajput_build_fort_building_in_y = {
 				}
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -2336,8 +2552,11 @@ estate_rajput_build_fort_building_in_y = {
 									owned_by = root
 									OR = {
 										has_building = fort_15th
+										has_building = fort3
 										has_building = fort_16th
+										has_building = fort5
 										has_building = fort_17th
+										has_building = fort7
 										has_building = fort_18th
 									}
 								}
@@ -2347,15 +2566,27 @@ estate_rajput_build_fort_building_in_y = {
 				}
 				AND = {
 					has_building = fort_15th
-					ROOT = { mil_tech = 14 }
+					ROOT = { mil_tech = 6 }
+				}
+				AND = {
+					has_building = fort3
+					ROOT = { mil_tech = 10 }
 				}
 				AND = {
 					has_building = fort_16th
-					ROOT = { mil_tech = 19 }
+					ROOT = { mil_tech = 14 }
+				}
+				AND = {
+					has_building = fort5
+					ROOT = { mil_tech = 18 }
 				}
 				AND = {
 					has_building = fort_17th
-					ROOT = { mil_tech = 24 }
+					ROOT = { mil_tech = 22 }
+				}
+				AND = {
+					has_building = fort7
+					ROOT = { mil_tech = 26 }
 				}
 			}
 			NOT = { has_building = fort_18th }
@@ -2384,8 +2615,11 @@ estate_rajput_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2410,8 +2644,11 @@ estate_rajput_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -2419,8 +2656,11 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2446,8 +2686,11 @@ estate_rajput_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2457,15 +2700,27 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2477,8 +2732,11 @@ estate_rajput_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2503,8 +2761,11 @@ estate_rajput_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -2513,8 +2774,11 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2540,8 +2804,11 @@ estate_rajput_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2552,15 +2819,27 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2572,8 +2851,11 @@ estate_rajput_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2598,8 +2880,11 @@ estate_rajput_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -2608,8 +2893,11 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2635,8 +2923,11 @@ estate_rajput_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2647,15 +2938,27 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2667,8 +2970,11 @@ estate_rajput_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2693,8 +2999,11 @@ estate_rajput_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -2703,8 +3012,11 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -2730,8 +3042,11 @@ estate_rajput_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -2742,15 +3057,27 @@ estate_rajput_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -2760,7 +3087,40 @@ estate_rajput_build_fort_building_in_y = {
 		event_target:agenda_province = {
 			if = {
 				limit = {
+					has_building = fort7
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 7
+					}
+				}
+			}
+			else_if = {
+				limit = {
 					has_building = fort_17th
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 6
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort5
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort_16th
 				}
 				ROOT = {
 					set_variable = {
@@ -2771,7 +3131,7 @@ estate_rajput_build_fort_building_in_y = {
 			}
 			else_if = {
 				limit = {
-					has_building = fort_16th
+					has_building = fort3
 				}
 				ROOT = {
 					set_variable = {
@@ -2814,11 +3174,56 @@ estate_rajput_build_fort_building_in_y = {
 			limit = {
 				check_variable = {
 					which = estate_nobles_build_fort_building_in_y_var
-					value = 4
+					value = 7
 				}
 			}
 			event_target:agenda_province = {
 				has_building = fort_18th
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 6
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 5
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 4
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort5
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
 			}
 		}
 		else_if = {
@@ -2830,7 +3235,10 @@ estate_rajput_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2844,8 +3252,11 @@ estate_rajput_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2854,8 +3265,11 @@ estate_rajput_build_fort_building_in_y = {
 			event_target:agenda_province = {
 				OR = {
 					has_building = fort_15th
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -2895,8 +3309,11 @@ estate_maratha_build_fort_building_in_y = {
 			OR = {
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -2921,8 +3338,11 @@ estate_maratha_build_fort_building_in_y = {
 							owned_by = root
 							OR = {
 								has_building = fort_15th
+								has_building = fort3
 								has_building = fort_16th
+								has_building = fort5
 								has_building = fort_17th
+								has_building = fort7
 								has_building = fort_18th
 							}
 						}
@@ -2930,8 +3350,11 @@ estate_maratha_build_fort_building_in_y = {
 				}
 				AND = {
 					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort3 }
 					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort5 }
 					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort7 }
 					NOT = { has_building = fort_18th }
 					num_free_building_slots = 1
 					any_neighbor_province = {
@@ -2957,8 +3380,11 @@ estate_maratha_build_fort_building_in_y = {
 									owned_by = root
 									OR = {
 										has_building = fort_15th
+										has_building = fort3
 										has_building = fort_16th
+										has_building = fort5
 										has_building = fort_17th
+										has_building = fort7
 										has_building = fort_18th
 									}
 								}
@@ -2968,15 +3394,27 @@ estate_maratha_build_fort_building_in_y = {
 				}
 				AND = {
 					has_building = fort_15th
-					ROOT = { mil_tech = 14 }
+					ROOT = { mil_tech = 6 }
+				}
+				AND = {
+					has_building = fort3
+					ROOT = { mil_tech = 10 }
 				}
 				AND = {
 					has_building = fort_16th
-					ROOT = { mil_tech = 19 }
+					ROOT = { mil_tech = 14 }
+				}
+				AND = {
+					has_building = fort5
+					ROOT = { mil_tech = 18 }
 				}
 				AND = {
 					has_building = fort_17th
-					ROOT = { mil_tech = 24 }
+					ROOT = { mil_tech = 22 }
+				}
+				AND = {
+					has_building = fort7
+					ROOT = { mil_tech = 26 }
 				}
 			}
 			NOT = { has_building = fort_18th }
@@ -3005,8 +3443,11 @@ estate_maratha_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3031,8 +3472,11 @@ estate_maratha_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -3040,8 +3484,11 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3067,8 +3514,11 @@ estate_maratha_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -3078,15 +3528,27 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -3098,8 +3560,11 @@ estate_maratha_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3124,8 +3589,11 @@ estate_maratha_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -3134,8 +3602,11 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3161,8 +3632,11 @@ estate_maratha_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -3173,15 +3647,27 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -3193,8 +3679,11 @@ estate_maratha_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3219,8 +3708,11 @@ estate_maratha_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -3229,8 +3721,11 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3256,8 +3751,11 @@ estate_maratha_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -3268,15 +3766,27 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -3288,8 +3798,11 @@ estate_maratha_build_fort_building_in_y = {
 				OR = {
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3314,8 +3827,11 @@ estate_maratha_build_fort_building_in_y = {
 								owned_by = root
 								OR = {
 									has_building = fort_15th
+									has_building = fort3
 									has_building = fort_16th
+									has_building = fort5
 									has_building = fort_17th
+									has_building = fort7
 									has_building = fort_18th
 								}
 							}
@@ -3324,8 +3840,11 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						NOT = { has_building = fort_15th }
+						NOT = { has_building = fort3 }
 						NOT = { has_building = fort_16th }
+						NOT = { has_building = fort5 }
 						NOT = { has_building = fort_17th }
+						NOT = { has_building = fort7 }
 						NOT = { has_building = fort_18th }
 						num_free_building_slots = 1
 						any_neighbor_province = {
@@ -3351,8 +3870,11 @@ estate_maratha_build_fort_building_in_y = {
 										owned_by = root
 										OR = {
 											has_building = fort_15th
+											has_building = fort3
 											has_building = fort_16th
+											has_building = fort5
 											has_building = fort_17th
+											has_building = fort7
 											has_building = fort_18th
 										}
 									}
@@ -3363,15 +3885,27 @@ estate_maratha_build_fort_building_in_y = {
 					}
 					AND = {
 						has_building = fort_15th
-						ROOT = { mil_tech = 14 }
+						ROOT = { mil_tech = 6 }
+					}
+					AND = {
+						has_building = fort3
+						ROOT = { mil_tech = 10 }
 					}
 					AND = {
 						has_building = fort_16th
-						ROOT = { mil_tech = 19 }
+						ROOT = { mil_tech = 14 }
+					}
+					AND = {
+						has_building = fort5
+						ROOT = { mil_tech = 18 }
 					}
 					AND = {
 						has_building = fort_17th
-						ROOT = { mil_tech = 24 }
+						ROOT = { mil_tech = 22 }
+					}
+					AND = {
+						has_building = fort7
+						ROOT = { mil_tech = 26 }
 					}
 				}
 				NOT = { has_building = fort_18th }
@@ -3381,7 +3915,40 @@ estate_maratha_build_fort_building_in_y = {
 		event_target:agenda_province = {
 			if = {
 				limit = {
+					has_building = fort7
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 7
+					}
+				}
+			}
+			else_if = {
+				limit = {
 					has_building = fort_17th
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 6
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort5
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_nobles_build_fort_building_in_y_var
+						value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = fort_16th
 				}
 				ROOT = {
 					set_variable = {
@@ -3392,7 +3959,7 @@ estate_maratha_build_fort_building_in_y = {
 			}
 			else_if = {
 				limit = {
-					has_building = fort_16th
+					has_building = fort3
 				}
 				ROOT = {
 					set_variable = {
@@ -3435,11 +4002,56 @@ estate_maratha_build_fort_building_in_y = {
 			limit = {
 				check_variable = {
 					which = estate_nobles_build_fort_building_in_y_var
-					value = 4
+					value = 7
 				}
 			}
 			event_target:agenda_province = {
 				has_building = fort_18th
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 6
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 5
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_build_fort_building_in_y_var
+					value = 4
+				}
+			}
+			event_target:agenda_province = {
+				OR = {
+					has_building = fort5
+					has_building = fort_17th
+					has_building = fort7
+					has_building = fort_18th
+				}
 			}
 		}
 		else_if = {
@@ -3451,7 +4063,10 @@ estate_maratha_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -3465,8 +4080,11 @@ estate_maratha_build_fort_building_in_y = {
 			}
 			event_target:agenda_province = {
 				OR = {
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}
@@ -3475,8 +4093,11 @@ estate_maratha_build_fort_building_in_y = {
 			event_target:agenda_province = {
 				OR = {
 					has_building = fort_15th
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 			}

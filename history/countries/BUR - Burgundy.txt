@@ -12,6 +12,7 @@ add_country_modifier = {
 	duration = -1
 }
 
+
 change_estate_land_share = {
 	estate = estate_nobles
 	share = -0.502
@@ -115,6 +116,7 @@ change_estate_land_share = {
 		adm = 2
 		dip = 0
 		mil = 4
+		block_disinherit = yes
 	}
 	set_heir_flag = is_charles_of_burg_flag
 }

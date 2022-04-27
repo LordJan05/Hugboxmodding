@@ -153,6 +153,7 @@ sealand_hormuz_missions_1_1 = { # Forming Yemen removes this missions
 			hidden_effect = {
 				swap_non_generic_missions = yes
 			}
+			clr_country_flag = keep_hormuz_missions
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -321,6 +322,7 @@ sealand_hormuz_missions_2 = {
 			}
 		}
 		effect = {
+			create_explorer = { tradition = 10 }
 			yemen_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -631,6 +633,42 @@ sealand_hormuz_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+	}
+	orm_colonial_interests = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { extend_coastline }
+		position = 3
+		provinces_to_highlight = {
+			colonial_region = colonial_australia
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = yes
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			colonial_australia = {
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = discover_new_land_modifier
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = colonial_ambitions_modifier
+				duration = -1
+			}
+			set_country_flag = por_bandeirantes_flag
+			custom_tooltip = por_bandeirantes_tooltip
 		}
 	}
 	the_way_to_god = {

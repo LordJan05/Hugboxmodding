@@ -5,10 +5,6 @@ primary_culture = hessian
 religion = catholic
 technology_group = western
 capital = 84 # Berg
-add_country_modifier = {
-	name = "mjl_privateer_efficiency_debuff"
-	duration = -1
-}
 
 
 

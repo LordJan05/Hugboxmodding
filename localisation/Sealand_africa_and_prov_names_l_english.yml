@@ -98,6 +98,14 @@
      PROV4957:0 "Marsabit"
      PROV_ADJ4957:0 "Marsabit"
      
+     # Madagascar:
+     PROV5150:0 "Bongolava"
+     PROV_ADJ5150:0 "Bongolava"
+     PROV5151:0 "Sihanaka"
+     PROV_ADJ5151:0 "Sihanaka"
+     PROV5152:0 "Antandroy"
+     PROV_ADJ5152:0 "Antandroy"
+     
      # Middle Africa:
      
      # Guera area:
@@ -698,6 +706,11 @@
      PROV_ADJ5143:0 "Ölander"
      PROV5144:0 "Kymmenedalen"
      PROV_ADJ5144:0 "Kymmenedalian"
+      # Denmark, Hogotan help:
+     PROV5153:0 "Viborg"
+     PROV_ADJ5153:0 "Viborgenser"
+     PROV5154:0 "Ribe"
+     PROV_ADJ5154:0 "Ripenser"
       
      
  # ASIA
@@ -838,8 +851,8 @@
     sea_SWZ_ideas_bonus:0 "Swazi Ambition"
     swz_origin_of_first_human:0 "Originis of the First Humans"
     swz_origin_of_first_human_desc:0 "Originis of the First Humans"
-    swz_cultivate_the_barren_land:0 "Cultivate Barren Land"
-    swz_cultivate_the_barren_land_desc:0 "Cultivate Barren Land"
+    swz_tax_the_people:0 "Tax the People"
+    swz_tax_the_people_desc:0 "Tax the People"
     swz_worshipping_the_ancestors:0 "Worshipping the Ancestors"
     swz_worshipping_the_ancestors_desc:0 "Worshipping the Ancestors"
     swz_war_is_tax:0 "War is Tax"
@@ -869,7 +882,12 @@
      swz_exploit_zimbabwe_downfall_modifier:0 "Manage Zimbabwe Goldmines"
      swz_tame_the_steppes_title:0 "Tame the Steppes"
      swz_tame_the_steppes_desc:0 "Tame the Steppes"
-     swz_tame_the_steppes_tooltip:0 "Unlocks '§YCossacks§!' Estate."
+     swz_tame_the_steppes_tooltip:0 "Unlocks '§YTamed the Steppes§!' Estate Privilege, that gives to all owned provinces with §YSteppe§! terrain '§YTame the Steppes§!' modifier, giving the following effects:\nSupply Limit: §G+1.00§!\nFriendly Movement Speed: §G+20.0%§!"
+     swz_tame_the_steppes_modifier:0 "Tamed the Steppes"
+     estate_nobles_swz_tame_the_steppes:0 "Tamed the Steppes"
+     estate_nobles_swz_tame_the_steppes_desc:0 ""
+     estate_nobles_swz_tame_the_steppes_granted_tooltip:0 "Every owned §YSteppe§! terrain province gains:\nSupply Limit: §G+1.00§!\nFriendly Movement Speed: §G+20.0%§!"
+     estate_nobles_swz_tame_the_steppes_revoked_tooltip:0 "Removes '§YTame the Steppes§!' modifier from every owned province."
      swz_invest_in_gold_title:0 "Invest in Gold"
      swz_invest_in_gold_desc:0 "Invest in Gold"
      swz_invest_in_gold_modifier:0 "Too Much Gold!"

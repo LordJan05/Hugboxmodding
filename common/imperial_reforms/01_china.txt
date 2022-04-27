@@ -21,7 +21,7 @@ reform_land_tax_decision = {
 	empire = celestial_empire
 	emperor = {
 		governing_capacity_modifier = 0.1
-		advisor_pool = 1
+		advisor_pool = 2
 		monthly_splendor = 2
 	}
 	required_reform = seaban_decision
@@ -31,6 +31,7 @@ military_governors_decision = {
 	empire = celestial_empire
 	emperor = {
 		core_creation = -0.15
+		province_warscore_cost = -0.15
 		yearly_absolutism = 1
 		max_absolutism = 20
 	}
@@ -43,7 +44,25 @@ centralizing_top_government_decision = {
 		free_policy = 1
 		possible_adm_policy = 1
 		possible_dip_policy = 1
+		possible_mil_policy = 1
 		monarch_lifespan = 1
 	}
 	required_reform = military_governors_decision
 }
+
+#vassalize_tributaries_decision = { # Too OP for multiplayer
+#	empire = celestial_empire
+#	emperor = {
+#		imperial_mandate = 0.05
+#		liberty_desire_from_subject_development = -0.33
+#	}
+#	on_effect = {
+#		custom_tooltip = vassalize_tributaries_decision_tt
+#		set_global_flag = eoc_vassalize_tributaries
+#	}
+#	off_effect = {
+#		custom_tooltip = vassalize_tributaries_decision_ct
+#		clr_global_flag = eoc_vassalize_tributaries
+#	}
+#	required_reform = centralizing_top_government_decision
+#}

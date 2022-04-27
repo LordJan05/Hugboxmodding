@@ -1,0 +1,24 @@
+# No previous file for Attiwandaron
+government = native
+add_government_reform = native_clan_council_reform
+government_rank = 1
+primary_culture = anishinabe
+religion = totemism
+technology_group = north_american
+capital = 2521
+
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+
+
+1444.11.11 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -3,13 +3,14 @@ add_government_reform = feudalism_reform
 government_rank = 1
 primary_culture = saxon
 religion = catholic
-elector = yes
+#elector = yes
 technology_group = western
 capital = 62 # Leipzig
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+
 
 change_estate_land_share = {
 	estate = estate_nobles

@@ -39,6 +39,9 @@
         mjl_estate_church_orm_tamed_deserts_desc:0 ""
         mjl_estate_church_orm_tamed_deserts_effect_tooltip:1 "§G-15%§! local development cost in all §YDesert§! provinces in the §YArabia§! region."
         mjl_estate_church_orm_tamed_deserts_mod_revoke_tooltip:0 "Removes §YTamed the Desert§! modifier from all owned provinces."
+        orm_colonial_interests_title:0 "Colonial Interests"
+        orm_colonial_interests_desc:0 "Colonial Interests"
+        discover_new_land_modifier:0 "Discover New Land"
         
     # Teutonic Order:
       # Missions
@@ -59,10 +62,12 @@
         curtail_confederation_title:0 "Curtail the Confederation"
         curtail_confederation_desc:0 "We must put an end to the Prussian Confederation lest the situation spiral out of control. We must decide whether appeasement or repression is the right path."
         curtail_confederation_tooltip:0 "§RHaving higher §Ystability§!, reduces rebels strength.§!"
+        prussian_confederation_privilege_ttt:0 "Will change to §YDanzig§! in a few months."
         pru_confederation_flag_event_tooltip:0 "The event §Y"The Prussian Confederation"§! has happened."
         neumark_fate_flag_event_tooltip:0 "The event §Y"The Fate of Neumark"§! has not happened."
         subjugate_livonian_order_title:0 "Subjugate Livonian Order"
         subjugate_livonian_order_desc:0 "Subjugate Livonian Order"
+        subjugate_livonian_order_tt:0 "If Allied, then makes §YLivonian Order§! a Vassal."
         the_spirits_of_tannenberg_title:0 "The Spirits of Tannenberg"
         the_spirits_of_tannenberg_desc:0 "The Spirits of Tannenberg"
         the_spirits_of_tannenberg_tooltip:0 "Switches §YAdjust our Infantry Tactics§! country idea to improved §YRitterbrudern§! idea."
@@ -85,6 +90,16 @@
         crusader_kings_title:0 "Crusader Kings"
         crusader_kings_desc:0 "Crusader Kings"
         crusader_kings_tooltip:0 "\n§RGovernment Reform will be removed if religion is other than §YCatholic§! and country is not §YTeutonic Order§!.§!"
+        provoke_poland_title:0 "Provoke Poland"
+        provoke_poland_desc:0 "Provoke Poland"
+        sway_mazovia_title:0 "Sway Mazovia"
+        sway_mazovia_desc:0 "Sway Mazovia"
+        teu_recover_manpower_title:0 "Recruit More Knights"
+        teu_recover_manpower_desc:0 "Recruit More Knights"
+        teu_recover_manpower_modifier:0 "Knights Recruitment"
+        teu_knights_of_war_title:0 "Arm the Knights"
+        teu_knights_of_war_desc:0 "Arm the Knights"
+        teu_knights_of_war_modifier:0 "Knights of War"
 
       # Events that come with "Centralize The Order" mission:
         # The Prussian Confederation start event:
@@ -110,6 +125,9 @@
         teutonic_events.6.d:0 "In 1211, King Andrew II of Hungary, granted Teutonic Order, Burzenland area, in return for them to defend Hungary from the Cumans. At which they did a very good job at, that they were granted many privileges, something that the Hungarian nobles didn't like. Especially the part that Teutonic Order treated their land as their own autonomous territory, free of the taxes and slowly wanting to turn it into independent state, independent from Hungarian king. Teutons seeing that Hungarian heir was in favor of removing Teutons from their lands, decided to act by petitioning Pope Honorius III to be placed directly under the authority of the Papal See, instead of the Hungarian king, which angered King Andrew II and resulted him to forcefully drive out the Teutons from their lands.\nAnd now they have come back to relcaim what they think to be theirs by right."
         teutonic_events.6.a:0 "We do not want any trouble with the Teutons."
         teutonic_events.6.b:0 "If they want it, they have to come and get it."
+      # Privilege:
+        estate_burghers_prussian_confederation_conceded:0 "Danzig Confederation"
+        estate_burghers_prussian_confederation_conceded_desc:0 "The cities of Danzig are a powerful and often rebellious force in the Teutonic state. Only by granting them significant concessions will we be able to keep them appeased and restrain their seditious streak."
      
     # Poland:
       # Missions
@@ -117,6 +135,8 @@
         pol_expand_poland_region_desc:0 "Expand Poland Region"
         pol_subjugate_silesians_title:0 "Subjugate Silesians"
         pol_subjugate_silesians_desc:0 "Subjugate Silesians"
+        pol_subjugate_glogow_tt:0 "If Allied, then makes §YGlogow§! a Vassal."
+        pol_subjugate_opole_tt:0 "If Allied, then makes §YOpole§! a Vassal."
         
     # Brandenburg/Prussia:
       # Missions
@@ -187,7 +207,7 @@
         rebuild_the_royal_road_title:0 "Rebuild the Royal Road"
         rebuild_the_royal_road_desc:0 "Rebuild the Royal Road"
         royal_road_modifier:0 "Royal Road"
-        rebuild_the_royal_road_tooltip:0 "Every required province gets '§YRoyal Road§!' until the end of the game, giving the following effects:\nFriendly Movement Speed: §G+15.0%§!\nHostile Movement Speed: §R+15.0%§!\nSupply Limit Modifier: §G+15.0%§!"
+        rebuild_the_royal_road_tooltip:0 "Every required province gets '§YRoyal Road§!' until the end of the game, giving the following effects:\nFriendly Movement Speed: §G+15.0%§!\nHostile Movement Speed: §R+15.0%§!\nSupply Limit Modifier: §G+25.0%§!"
         
       # Others:
         # Special government reform:
@@ -358,6 +378,33 @@
       # New country name:
         VIN:0 "Vinland"
         VIN_ADJ:0 "Vinlandic"
+        sea_VIN_ideas:0 "Vinlandic Ideas"
+        sea_VIN_ideas_start:0 "Vinlandic Traditions"
+        sea_VIN_ideas_bonus:0 "Vinlandic Ambition"
+        vin_nor_fishing:0 "Encouraged Fishing"
+        vin_nor_fishing_desc:0 "With our long coastline and poor soils we should encourage our people to make their fortune harvesting the bounty of the oceans."
+        vin_natural_seamanship:0 "Natural Seamanship"
+        vin_natural_seamanship_desc:0 "With the growth of fishing we have also seen a growth in the number of sailors in our realm. We should take advantage of this for our navy as seamanship is just as important as the ship itself."
+        vin_nor_shipbuilding:0 "Military Shipbuilding"
+        vin_nor_shipbuilding_desc:0 "The expansion of the fishing industry has also led to an expansion in shipbuilding. We have a ready pool of trained shipwrights at hand to expand our own shipbuilding."
+        vin_call_of_our_forefathers:0 "The Call of our Forefathers"
+        vin_call_of_our_forefathers_desc:0 "Long ago our illustrious forefathers sailed forth and establish colonies in the North. Our sagas even tell us that they reached a new world and established Vinland. We must follow in their footsteps."
+        vin_pioneer_spirit:0 "Pioneer Spirit"
+        vin_pioneer_spirit_desc:0 "In days gone by our people would brave the high seas to establish colonies on distant shores. Let us rekindle this spirit in our people so they do so again."
+        vin_seize_the_opportunity:0 "Seize the Opportunity"
+        vin_seize_the_opportunity_desc:0 "The world is full of riches for those with the will to take them. Let us take what we can from the world through trade instead of raid."
+        vin_write_new_sagas:0 "Write New Sagas"
+        vin_write_new_sagas_desc:0 "Keen minds preserve knowledge\n...Known from ages past\nSung in the sundown \n..Sagas are our inheritance\nEncouraged by the establishment\nEach country will have its own."
+      # Government:
+        vinland_government:0 "Þingvellir"
+        vinland_government_desc:0 "This is a parliamentary government, where general assembly takes place on a field, as where the name is given."
+      # Missions:
+        vin_discover_inukshuk_title:0 "Discover Inukshuk"
+        vin_discover_inukshuk_desc:0 "We have found some ruins, that seem to have been deserted for a long time with some few settlers still living there, ready to take power over our nation."
+        vin_leif_legacy_title:0 "Leif's Legacy"
+        vin_leif_legacy_desc:0 "Leif's Legacy"
+        vin_pray_for_old_gods_title:0 "Pray for New Gods"
+        vin_pray_for_old_gods_desc:0 "Pray for New Gods"
         
     # Denmark:
       # Missions
@@ -619,8 +666,11 @@
         sea_papal_events.1.t:0 "Sudden death of our Pope"
         sea_papal_events.1.d:0 "We have reasons to believe that the king of Naples, [NAP.Monarch.GetName], has organized the assassination of our Pope after hearing the rumours of Pope's interested in Naples crowns legitimacy. Of course him denying it, we have no other option than to demand his submission forcefully and face before us or send him to face the God at let him decide his fate."
         sea_papal_events.1.a:0 "Force Naples to submit to us by military means."
-        sea_papal_events.1.b:0 "The Holy Father knows the best."
+        #sea_papal_events.1.b:0 "The Holy Father knows the best."
         sea_papal_events.1.c:0 "There is no need to force the issue."
+          # CB:
+          cb_pap_vassalize_naples:0 "Force Naples Submission"
+          cb_pap_vassalize_naples_desc:0 "Naples must be submissioned to face the God for their actions."
         sea_papal_events.2.t:0 "A Papal Conclave for the new Pope"
         sea_papal_events.2.d:0 "With the passing of our previous pope, a meeting of the College of Cardinals has been arranged at Vatican for the new Papal election, where the new Pope ended up being [Root.Monarch.GetName].\nOf course we still have the ability to influence the votes for someone more favourable to us and from the following best three canditates, that have been presented before us, we should..."
         sea_papal_events.2.a:0 "Have administratively focused Pope."
@@ -643,6 +693,28 @@
        # I don't even know:
         SEX:0 "PayPal States"
         SEX_ADJ:0 "PayPal"
+       # Switzerland mercenaries:
+        swi_recruit_merc_inf_enable_title:0 "Assemble Our Own Special Mercenaries"
+        swi_recruit_merc_inf_enable_desc:0 "They may not be much but they sure as hell last longer than ordinary soldiers."
+        swi_recruit_merc_inf_enable_tt:0 "Enables '§MRecruit Swiss Mercenaries§!' Decision, which allows us to spawn §YSwiss Mercenaries§!."
+        swi_recruit_merc_inf_disable_title:0 "Dissolve Our Own Special Mercenaries"
+        swi_recruit_merc_inf_disable_desc:0 "We have no need for them any longer."
+        swi_recruit_merc_inf_disable_tt:0 "Disables '§MRecruit Swiss Mercenaries§!' Decision, that allows us to spawn §YSwiss Mercenaries§!."
+        swi_recruit_merc_inf_enabled_modifier:0 "Swiss Mercenaries"
+        swi_recruit_merc_inf_title:0 "§MRecruit Swiss Mercenaries§!"
+        swi_recruit_merc_inf_desc:0 "§RWhen switching unit types, then it will also switch for those units!§!"
+        sea_swiss_mercenaries_1:0 "§OSwiss Mercenaries§!"
+        sea_swiss_mercenaries_2:0 "§YReformed Swiss Mercenaries§!"
+        sea_swiss_mercenaries_3:0 "§lSwiss Line Mercenaries§!"
+       
+    # Florence:
+       # Mission:
+       sea_lan_subjugate_lucca_and_siena_title:0 "Lucca and Siena"
+       sea_lan_subjugate_lucca_and_siena_desc:0 " Subjugate Lucca and Siena"
+       sea_lan_subjugate_lucca_tt:0 "If Allied, then makes §YLucca§! a Vassal and gains core on §YLucca§! province."
+       sea_lan_subjugate_siena_tt:0 "If Allied, then makes §YSiena§! a Vassal and gains core on §YSiena§! province."
+       sea_lan_unite_tuscany_title:0 "Unite Tuscany"
+       sea_lan_unite_tuscany_desc:0 "Unite Tuscany"
        
     # Milan:
        # Mission:
@@ -677,6 +749,9 @@
         # Veche Tsardom:
         veche_tsardom:0 "Veche Great Republic"
         veche_tsardom_desc:0 "This state is governed by a Veche, a council with the highest legislative and judicial authority consisting of Boyars, Merchants and even commoners."
+        # Tribal Divese Society:
+        diverse_society_reform:0 "Diverse Society"
+        diverse_society_reform_desc:0 "We are ruling over many different tribes and if we want to maintain our unity, we must widen it by accepting more into this circle of unity."
         # Burgundian Union:
         burgundy_juniors_title:0 "Burgundian Junior Partner"
         burgundy_juniors_title_plural:0 "Burgundian Junior Partners"
@@ -717,11 +792,26 @@
         sea_enable_state_edicts_title:0 "Ability to Enable State Edicts: §RDisabled§!"
         sea_enable_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
         sea_enable_state_edicts_tt:0 "Clicking this, will §GEnable§! the ability to enact State Edicts."
+        military_reform_cooldown:0 "Now's not the time."
+        military_reform_cooldown_modifier:0 "Military Reform Cooldown"
         # For Israel formable:
         hebrew_culture_provinces_tooltip:0 "All Primary Culture provinces will now have §YHebrew§! Culture."
         # Buildings:
-        building_courthouse_desc:0 "Can build on §Y10§! Development provinces.\n"
-        building_town_hall_desc:0 "Can build on §Y20§! Development provinces.\n"
+        building_courthouse_desc:0 "Can build on §Y10§! Development provinces."
+        building_town_hall_desc:0 "Can build on §Y20§! Development provinces."
+        building_ramparts_desc:0 "§RCannot be build on forts and forts cannot be build on Ramparts.§!"
+        UNIQUEBUILDINGS:0 "Unique Buildings"
+        building_tax_assessor_desc:0 "Can build on capital or on §Y10§! Tax province."
+        building_royal_palace_desc:0 "Can build on capital province."
+        building_grain_depot_desc:0 "Can build on §YGrain§! trade good province."
+        ROADLAND:0 "Terrain"
+        building_road_network_desc:0 "If §YRoad Network§! and §YProduction§! building are on same province, then province gains '§YImproved Production Network§!', giving the following effects::\nLocal Production Efficiency: §G+5.0%§!\n\nIf §YRoad Network§! and §YTaxation§! building are on same province, then province gains '§YImproved Taxation Network§!', giving the following effects::\nLocal Tax Modifier: §G+10.0%§!\n\nIf §YRoad Network§! and §YTrade§! building are on same province, then province gains '§YImproved Trading Network§!', giving the following effects::\nLocal Trade Power: §G+15.0%§!\n\n"
+        road_workshop_modifier:0 "Improved Production Network"
+        road_temple_modifier:0 "Improved Taxation Network"
+        road_marketplace_modifier:0 "Improved Trading Network"
+        building_fort3:0 "Castle 2"
+        building_fort5:0 "Bastion 2"
+        building_fort7:0 "Star Fort 2"
         # Ages:
         age_i_autonomy:0 "Centralization"
         age_i_pp_insults:0 "Advanced Diplomacy"
@@ -734,6 +824,29 @@
         age_iv_african_reinforce:0 "African Reinforcements"
         # HRE:
         sea_elector_splendor_modifier:0 "Elector Splendor"
+        emperor_reichsstabilitaet_emperor:0 "Absolute Reichsstabilität"
+        emperor_gemeinerpfennig_province:0 "Enact Gemeiner Pfennig"
+        emperor_perpetual_diet:0 "Perpetual Diet"
+        emperor_hofgericht:0 "Reform the Hofgericht"
+        emperor_imperial_estates:0 "Imperial Estates Curtailed"
+        emperor_privilegia_de_non_appelando_province:0 "Revoke The Privilegia"
+        emperor_reichstag_collegia_elector:0 "Reichstag Collegia"
+        emperor_reichsregiment:0 "Reichsregiment"
+        emperor_expand_gemeiner_pfennig_elector:0 "Gemeiner Pfennig"
+        emperor_rechenschaft_elector:0 "Rechenschaft Measures"
+        emperor_geteilte_macht_elector:0 "Geteilte Macht"
+        emperor_reichskrieg_elector:0 "Reichskrieg"
+        emperor_erbkaisertum:0 "Proclaim Erbkaisertum"
+        # Advisor:
+        centralize_autonomy:0 "Bureaucrat" # Couldn't think of better name, pls no judge.
+        centralize_autonomy_desc:0 ""
+
+    #Germany:
+        # Government:
+        germany_monarchy:0 "Imperial German Monarcy"
+        germany_monarchy_desc:0 "An imperial government, that is both the state and the army, not just either one under the other."
+        germany_republic:0 "Imperial German Republic"
+        germany_republic_desc:0 "An imperial government, that is both the state and the army, not just either one under the other."
 
     #Weaker Prussia:
         # Decision:
@@ -761,7 +874,7 @@
         pra_regimental_cantons_desc:0 "Peasants are naturally not keen on a lifetime of service in the Army, so they tend to run away when recruiters come along. Now we give each regiment a recruiting district to draw manpower from. Each youth is expected to train for 3 months of the year so he is ready for service. This should ensure a steadier supply of manpower for armies."
         pra_religious_toleration:0 "Religious Toleration"
         pra_religious_toleration_desc:1 "Stability at home is the key to our success. If we wish to expand by encouraging tolerance of different religions, not only do we improve stability at home, but our realm will become a haven for those who flee persecution elsewhere."
- 
+
     # Austrian Empire:
         # Ideas:
         AUE:0 "Austrian Empire"
@@ -885,6 +998,60 @@
         kor_california_gold_rush_desc:0 ""Gold! Gold! Gold from the American River!""
         kor_california_dreamin_title:0 "California Dreamin'"
         kor_california_dreamin_desc:0 "I could leave today for L.S."
+        discover_new_land_short_modifier:0 "Discover New Land"
+        
+    # Nogai:
+        # Missions:
+        nog_weaken_great_horde_title:0 "Weaken Great Horde"
+        nog_weaken_great_horde_desc:0 "Weaken Great Horde"
+        nog_military_bonus_buff_title:0 "Preparations for Raids"
+        nog_military_bonus_buff_desc:0 "Preparations for Raids"
+        nog_subjugate_ryazan_horde_title:0 "Subjugate Ryazan"
+        nog_subjugate_ryazan_horde_desc:0 "Subjugate Ryazan"
+        nog_tatar_yoke_mission_title:0 "The Tatar Yoke"
+        nog_tatar_yoke_mission_desc:0 "The Tatar Yoke"
+        nog_contact_genoese_traders_title:0 "Genoese Traders"
+        nog_contact_genoese_traders_desc:0 "Contact Genoese Traders"
+        nog_crimean_expansion_horde_title:0 "Crimean Expansion"
+        nog_crimean_expansion_horde_desc:0 "Crimean Expansion"
+        nog_crimean_development_modifier:0 "Crimean Development"
+        nog_ruin_ruthenia_title:0 "Ruin Ruthenia"
+        nog_ruin_ruthenia_desc:0 "Ruin Ruthenia"
+        nog_golden_horde_extended_title:0 "Expanded Golden Horde"
+        nog_golden_horde_extended_desc:0 "Expanded Golden Horde"
+        nog_golden_horde_restored_modifier:0 "Golden Horde Supremacy"
+        nog_establish_regional_trading_title:0 "Regional Trading"
+        nog_establish_regional_trading_desc:0 "Establish Regional Trading"
+        nog_mission_conquer_central_asia_title:0 "Dominate Central Asia"
+        nog_mission_conquer_central_asia_desc:0 "Dominate Central Asia"
+        nog_samarkand_silkroad_title:0 "Samarkand Silkroad"
+        nog_samarkand_silkroad_desc:0 "Samarkand Silkroad"
+        nog_silk_road_modifier:0 "Northern Silk Road"
+        nog_silkroad_tooltip:0 "Every required province gets '§YNorthern Silk Road§!' until the end of the game, giving the following effects:\nLocal Trade Power: §G+5.0%§!\nFriendly Movement Speed: §G+10.0%§!\nHostile Movement Speed: §R+10.0%§!\nSupply Limit Modifier: §G+20.0%§!"
+        nog_mission_secure_the_silk_road_title:0 "Secure the Silk Road"
+        nog_mission_secure_the_silk_road_desc:0 "Secure the Silk Road"
+        nog_mission_conquer_kazakhstan_title:0 "Subjugate the Kazakhs"
+        nog_mission_conquer_kazakhstan_desc:0 "Subjugate the Kazakhs"
+        nog_mission_conquer_samarkand_title:0 "Claim Samarkand"
+        nog_mission_conquer_samarkand_desc:0 "Claim Samarkand"
+        nog_mission_conquer_mongolia_title:0 "Khan of Khans"
+        nog_mission_conquer_mongolia_desc:0 "Khan of Khans"
+        nog_mongolia_silkroad_title:0 "Mongolia Silkroad"
+        nog_mongolia_silkroad_desc:0 "Mongolia Silkroad"
+        nog_unite_the_tatars_title:0 "Unite the Tatars"
+        nog_unite_the_tatars_desc:0 "Unite the Tatars"
+        nog_income_bonuse_buff_title:0 "Territorial Gains"
+        nog_income_bonuse_buff_desc:0 "Expand Territorial Gains"
+        nog_industrialize_the_steppes_title:0 "Industrialize the Steppes"
+        nog_industrialize_the_steppes_desc:0 "Industrialize the Steppes"
+        nog_industrialize_the_steppes_tt:0 "Unlocks '§YDevelop the Steppes§!' Estate Privilege, that gives to all owned provinces with §YSteppe§! terrain '§YDevelop the Steppes§!' modifier, giving the following effects:\nLocal Development Cost: §G-5.0%§!\nFriendly Movement Speed: §G+5.0%§!"
+        nog_industrialize_the_steppes_modifier:0 "Develop the Steppes"
+        estate_nomadic_tribes_develop_steppe_land:0 "Develop the Steppes"
+        estate_nomadic_tribes_develop_steppe_land_desc:0 ""
+        estate_nomadic_tribes_develop_steppe_land_granted_tooltip:0 "Every owned §YSteppe§! terrain province gains:\nLocal Development Cost: §G-5.0%§!\nFriendly Movement Speed: §G+5.0%§!"
+        estate_nomadic_tribes_develop_steppe_land_revoked_tooltip:0 "Removes '§YDevelop the Steppes§!' modifier from every owned province."
+        nog_horse_population_boom_title:0 "Breeding More Horses"
+        nog_horse_population_boom_desc:0 "Breeding More Horses"
         
     #Great Zimbabwe:
         # Ideas:
@@ -1025,6 +1192,27 @@
         CAM_tax_modifier_desc:0 "Taxing The Natives"
         CAM_religion_unity:0 "All Must Server Similar God"
         CAM_religion_unity_desc:0 "All Must Server Similar God"
+
+    #Colonial Factions:
+        sea_colonial_adm_1:0 "The Colonial Charter"
+        sea_colonial_adm_1_influence:0 "The Colonial Charter Influence"
+        sea_colonial_adm_1_FACTION_DESC:0 "\nAdvisor Costs: §G-10.0%§!\nNational Tax Modifier: §G+20.0%§!\nYearly Inflation Reduction: §R-0.20§!"
+        sea_colonial_adm_2:0 "The Progressionists"
+        sea_colonial_adm_2_influence:0 "The Progressionists Influence"
+        sea_colonial_adm_2_FACTION_DESC:0 "\nMonthly Splendor: §G+3.00§!\nMonthly Reform Progress Modifier: §G+25.0%§!\nYearly Republican Tradition: §R-0.50§!"
+        sea_colonial_dip_1:0 "The Sealandians"
+        sea_colonial_dip_1_influence:0 "The Sealandians Influence"
+        sea_colonial_dip_1_FACTION_DESC:0 "\nMorale of Navies: §G+5.0%§!\nNaval Maintenance Modifier: §G-10.0%§!\nMorale Hit When Losing a Ship: §R+200.0%§!"
+        sea_colonial_dip_2:0 "The Banking Committee"
+        sea_colonial_dip_2_influence:0 "The Banking Committee Influence"
+        sea_colonial_dip_2_FACTION_DESC:0 "\nYearly Inflation Reduction: §G0.08§!\nGoods Produced Modifier: §G+15.0%§!\nMonthly Autonomy Change: §R+0.50§!"
+        sea_colonial_mil_1:0 "The Davlanéers"
+        sea_colonial_mil_1_influence:0 "The Davlanéers Influence"
+        sea_colonial_mil_1_FACTION_DESC:0 "\nGeneral Cost: §G-10.0%§!\nMorale of Armies: §G+5.0%§!\nReduced Morale Damage Taken By Reserves: §R-100.0%§!"
+        sea_colonial_mil_2:0 "The Logistics Bureau"
+        sea_colonial_mil_2_influence:0 "The Logistics Bureau Influence"
+        sea_colonial_mil_2_FACTION_DESC:0 "\nReinforce Speed: §G+20.0%§!\nManpower Recovery Speed: §G+10.0%§!\nLand Maintenance Modifier: §R+25.0%§!"
+
     
     # Leleges:
        # Ideas:
@@ -1034,7 +1222,7 @@
        sea_LEL_ideas_start:0 "Lulahi Traditions"
        sea_LEL_ideas_bonus:0 "Lulahi Ambition"
        lel_republican_values:0 "Republican Values"
-       lel_republican_values_desc:0 "The republic that you know of, is not the same republic, that we know of."
+       lel_republican_values_desc:0 "The republic that you know of, is not the same republic that we know of."
        lel_the_leleges_mirage:0 "The Leleges Mirage"
        lel_the_leleges_mirage_desc:0 "The image of our past may be distorted but it's more real than dreams."
        lel_far_from_home:0 "Far From Home"
@@ -1047,16 +1235,105 @@
        lel_pray_for_old_gods_desc:0 "They may be in the old world but never forgotten in our hearts."
        lel_agoge:0 "The Agoge"
        lel_agoge_desc:0 "All citizens must start their military trainings, and how to survive as a soldier, from young age."
-       # Modifiers:
-       lel_colonial_enthusiasm:0 "Colonial Enthusiasm"
        # Government:
        leleges_military_government:0 "Leleges Military Government"
        leleges_military_government_desc:0 "It's not the same government, that the Spartans used to have, so don't expect to have two rulers ruling at the same time."
        # Missions:
-       lel_discover_inukshuk_title:0 "Discover Inukshuk"
-       lel_discover_inukshuk_desc:0 "We have heard of some travelers being located there from lands far away, across the endless sea. Should we make contact with them, they will integrate into one of them."
-       lel_colonial_enthusiasm_title:0 "Colonial Enthusiasm"
-       lel_colonial_enthusiasm_desc:0 "This whole world is for us to explore and so we must do."
+       lel_discover_cahokia_title:0 "Discover Cahokia"
+       lel_discover_cahokia_desc:0 "We have heard of some travelers being located there, who came from across the endless sea from lands far away and have gotten lost deep in land. Should we make contact with them, they will integrate into one of them."
+       establish_leleges_tooltip:0 "§YIncreased chance of discovering Cloth.§!"
+       
+    # Atlantis:
+       # Ideas:
+       ATL:0 "Atlantis"
+       ATL_ADJ:0 "Atlantean"
+       sea_ATL_ideas:0 "Atlantean Ideas"
+       sea_ATL_ideas_start:0 "Atlantean Traditions"
+       sea_ATL_ideas_bonus:0 "Atlantean Ambition"
+       atl_emerging_from_the_depths:0 "Emerging From the Depths"
+       atl_emerging_from_the_depths_desc:0 "We have been long gone under, into hiding, restoring our once lost might."
+       atl_beyond_pillars_of_herculers:0 "Beyond Pillars of Herculers"
+       atl_beyond_pillars_of_herculers_desc:0 "Many don't know our location, only speculate. Many think we locate somewhere beyond the Pillars of Herculers, never knowing how right or wrong they are."
+       atl_protected_by_poseiodon:0 "Protected by Poseidon"
+       atl_protected_by_poseiodon_desc:0 "Not much is known about Poseidon interests towards Atlantis, except that he is keeping protectful eye on us and that he fell in love with mortal woman Cleito, who lived here."
+       atl_ideal_state_of_republic:0 "Ideal State of Republic"
+       atl_ideal_state_of_republic_desc:0 "We used to be the ideal state, when it comes to being republic. Of course much has changed ever since and even we aren't certain how ideal we are even now after our downfall."
+       atl_learned_from_mistakes:0 "Learned From Mistakes"
+       atl_learned_from_mistakes_desc:0 "After we were defeated by the Athenians, we have had a lot of time to think about our mistakes and learn from them as to not to repeat those actions again."
+       atl_chastise_the_corrupt:0 "Chastise the Corrupt"
+       atl_chastise_the_corrupt_desc:0 "One of the reasons for our downfall, and the submergion, was the corruption of our people, which started to happened after our divine portion started to fade. If we want to make history again, then we must get rid of that poison first."
+       atl_restore_long_lost_empire:0 "The New Atlantis"
+       atl_restore_long_lost_empire_desc:0 "To some we are a myth, to others we are a history but to ourselves, we are a reality, that is ready to restore our oceanic empire or become the very thing that swallowed us in the first place."
+       # Government:
+       atlantis_government:0 "Atlantean Thalassocracy"
+       atlantis_government_desc:0 "Used to govern vast amount of territory, of course majority of it being sea and which is why we were maritime empire or in other words thalassocracy but we can still live up to its name."
+       # Election event:
+       atlantis_admiral_leader_election_d:0 "The term is up for $MONARCHTITLE$ $MONARCH$. With enough support [Root.Monarch.GetSheHe] can stay in office or we choose ourselves a new Admiral to become our new $MONARCHTITLE$."
+       atlantis_admiral_leader_election_dd:0 "The term is up for $MONARCHTITLE$ $MONARCH$. Since our Republican Tradition is dangerously low and we can't afford to go lower than that, then we must choose ourselves a new Admiral to become our new $MONARCHTITLE$."
+       atlantis_admiral_leader_election_a:0 "Choose a new Admiral to become our $MONARCHTITLE$"
+        # For Lel, Vin:
+        lel_vin_elections_d:0 "The term is up for $MONARCH$. Since our Republican Tradition is dangerously low and we can't afford to go lower than that, then we must choose new $MONARCHTITLE$ from the three primary choices..."
+       # Missions:
+       atl_fortify_capital_title:0 "Fortify Capital"
+       atl_fortify_capital_desc:0 "Fortify Capital"
+       atl_colonize_islands_title:0 "Colonize Islands"
+       atl_colonize_islands_desc:0 "Colonize Islands"
+       atl_focus_on_trading_modifier:0 "Focus on Trading"
+       atl_own_key_provinces_title:0 "Control Key Coasts"
+       atl_own_key_provinces_desc:0 "Cartagena and Panama"
+       atl_build_a_massive_fleet_title:0 "Construct a Massive Fleet"
+       atl_build_a_massive_fleet_desc:0 "Construct a Massive Fleet"
+       atl_massive_fleet_modifier:0 "A Massive Fleet"
+       atl_center_of_trade_1_title:0 "Establish Trading Port"
+       atl_center_of_trade_1_desc:0 "Establish Trading Port"
+       atl_along_the_coast_title:0 "Along the Coast"
+       atl_along_the_coast_desc:0 "Along the Coast"
+       atl_ship_building_modifier:0 "Shipbuilding Spree"
+       atl_become_atlantis_title:0 "Embrace Atlantean Way"
+       atl_become_atlantis_desc:0 "We are ready to come out of the waters and face the world for what we truly are."
+       
+    # Kemet:
+       # Ideas:
+       KEM:0 "Kemet"
+       KEM_ADJ:0 "Kemetic"
+       sea_KEM_ideas:0 "Kemetic Ideas"
+       sea_KEM_ideas_start:0 "Kemetic Traditions"
+       sea_KEM_ideas_bonus:0 "Kemetic Ambition"
+       kem_successors_of_ra:0 "Successors of Ra"
+       kem_successors_of_ra_desc:0 "If it wasn't for Ra, to show us the way and guide us, we would not be here to tell the tales, unless this is the afterlife...?"
+       kem_thriving_agriculture:0 "Thriving Agriculture"
+       kem_thriving_agriculture_desc:0 "These lands may be different to the parts, where we came from, but we know our way to adapt to those situation."
+       kem_spirit_of_ptah:0 "Spirit of Ptah"
+       kem_spirit_of_ptah_desc:0 "Ptah, the creator god, who crafted the world in the design of his heart and gave life to all the gods, though this heart and this tongue."
+       kem_advanced_science_and_technology:0 "Advanced Science and Technology"
+       kem_advanced_science_and_technology_desc:0 "If it wasn't for those visitors from the sky, we wouldn't be able to make some of those greatest advancements in our history."
+       kem_adaptive_military:0 "Adaptive Military"
+       kem_adaptive_military_desc:0 "We learn from our mistakes and from the tactics of our enemies and then adapt it and make it more better."
+       kem_chariots_of_war:0 "Chariots of War"
+       kem_chariots_of_war_desc:0 "Those fast and light vechicles drawn by horses will make any foe tremble in fear when coming to face with it."
+       kem_children_of_the_gods:0 "Children of the Gods"
+       kem_children_of_the_gods_desc:0 "Our religion might have changed over time but we still believe in the same gods and treat them because they have created us."
+       # Government:
+       kemet_government:0 "Kemet Theocratic Government"
+       kemet_government_desc:0 "Kemet Theocratic Government"
+       # Missions:
+       kem_gold_focus_title:0 "Excavate More Gold"
+       kem_gold_focus_desc:0 "Excavate More Gold"
+       kem_center_of_trade_1_title:0 "River Trading Port"
+       kem_center_of_trade_1_desc:0 "River Trading Port"
+       kem_center_of_trade_2_title:0 "Establish Trading Camp"
+       kem_center_of_trade_2_desc:0 "Establish Trading Camp"
+       kem_discover_kemet_title:0 "Remnants of Kemet"
+       kem_discover_kemet_desc:0 "We have found some weird looking ships and some group memeber acting as if he's the god."
+       kem_build_up_army_title:0 "Expand Military Power"
+       kem_build_up_army_desc:0 "Expand Military Power"
+       kem_expand_outwards_title:0 "Expand the Border"
+       kem_expand_outwards_desc:0 "Expand the Border"
+       kem_construction_modifier:0 "Construction Focus"
+       kem_cultivate_land_title:0 "Irrigate the Land"
+       kem_cultivate_land_desc:0 "Irrigate the Land"
+       kem_found_new_memphis_title:0 "Found New Memphis"
+       kem_found_new_memphis_desc:0 "Found New Memphis"
        
     # Ottoman:
        # Missions:
@@ -1115,6 +1392,9 @@
       theocracy_election_government.11.d:0 "The final Third age is upon us, with Heatens to our south and Heretics in Rome, the Christian world is not ready for the return of Jesus Christ. The clergy of Georgia have realized this and at any time can take control of the government, and putting in charge talented and ambitious Bishops, to lead our nation and eventually all Christian people. Georgia must be the ones who lead Christian world and prepare them for the return of Jesus himself!"
       theocracy_election_government.11.a:0 "So it Begins. Prepare for Third Age"
       theocracy_election_government.11.b:0 "I am sure we're best off staying a monarchy."       
+      # Decision for Hormuz:
+      eschatological_theocracy_caliphate_decision_title:0 "Adobt Rightly Guided Theocracy"
+      eschatological_theocracy_caliphate_decision_desc:0 "The Clergy of this nation will take control of the government with the sole goal of preparing their people for the coming of a savior or god himself, should we allow them. The Clergy are dedicated towards this goal and rule absolutely."
       # Government:
       eschatological_theocracy_georgia_reform:0 "Eschatological Theocracy"
       eschatological_theocracy_georgia_reform_desc:0 "The Clergy of this nation have taken control of the government with the sole goal of preparing their people for the coming of a savior or god himself. The Clergy are dedicated towards this goal and rule absolutely."
@@ -1130,6 +1410,14 @@
       theocracy_election_government.2.a:0 "[caliphate_candidate_a_@ROOT.GetName] as our next $MONARCHTITLE$."
       theocracy_election_government.2.b:0 "[caliphate_candidate_b_@ROOT.GetName] as our next $MONARCHTITLE$."
       theocracy_election_government.2.c:0 "[caliphate_candidate_c_@ROOT.GetName] as our next $MONARCHTITLE$."
+    
+    # Georgian Empire:
+        # Ideas:
+        GOE:0 "Georgian Empire"
+        GOE_ADJ:0 "Georgian"
+        # Mission for Georgia:
+        sea_geo_restore_byzantium_empire_title:0 "Restore Byzantium"
+        sea_geo_restore_byzantium_empire_desc:0 "Restore Byzantium"
     
     # Sasanian Empire:
         # Government:
@@ -1157,6 +1445,9 @@
         
     # Tunis:
       # Missions:
+        sea_westward_expansion_title:0 "Expansion Into Morocco"
+        sea_westward_expansion_desc:0 "Expansion Into Morocco"
+        tunis_siege_modifier:0 "Improved Siege Tactics"
         # Emirate of Two Sicilies:
         sea_western_mediterranean_islands_title:0 "Extend the Isles Influence"
         sea_western_mediterranean_islands_desc:0 "Extend the Isles Influence"
@@ -1194,6 +1485,14 @@
         sea_recover_andalusia_title:0 "Recover Andalusia"
         sea_recover_andalusia_desc:0 "Recover Andalusia"
         fatimid_government_janissaries_boost_3:0 "Janissary Upgrades from Andalusia"
+        
+    # Morocco:
+      # Missions:
+        sea_religious_reasons_title:0 "Religious Reasons"
+        sea_religious_reasons_desc:0 "Religious Reasons"
+        mor_religious_reasons_modifier:0 "Religious Reasons"
+        sea_mor_ready_for_war_title:0 "Ready for War"
+        sea_mor_ready_for_war_desc:0 "Ready for War"
         
         #Others:
          #Emirate of Two Sicilies:
@@ -1241,8 +1540,76 @@
          fat_grand_navy:0 "Grand Navy of the Caliph"
          fat_grand_navy_desc:0 "Grand Navy of the Caliph"
         
+    # Castille/Spain:
+      # Missions:
+        sea_unite_spain_title:0 "Unite Spain"
+        sea_unite_spain_desc:0 "Unite Spain"
+        sea_cas_united_spain_modifier_tt:0 "§Y[Root.GetName]§! gets '§YSpain United§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\n§RModifier is locked for Castille and Spain tag.§!"
+        sea_cas_united_spain_modifier:0 "Spain United"
+      # Vassal Type:
+        castille_vassal_title:0 "Autonomous Vassal"
+        castille_vassal_title_plural:0 "Autonomous Vassals"
+        castille_vassal_long_desc:0 "A Vassal must follow their overlord to war, cannot make certain diplomatic actions and will pay a fraction of his income to his overlord."
+        castille_vassal_is_our:0 "$NAME|Y$ is our Autonomous Vassal."
+        subject_vastille_vassal:0 "Autonomous Vassal"
+      # Privilege:
+        estate_nobles_castille_autonomous_duchies:0 "Castille Autonomous Duchies"
+        estate_nobles_castille_autonomous_duchies_desc:0 "All nations under Castille want to gain freedom but so far they have been given some autonomy but they're hungry for more."
+        
     # France:
       # Modifiers:
         # Elan:
         sea_fra_elan_modifier_tt:0 "§Y[Root.GetName]§! gets '§YElan!§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Prestige: §G+1.00§!\n§RModifier is locked for France tag.§!\n"
         sea_fra_elan_modifier:0 "Elan!"
+        
+        
+    # Animism religion:
+      # Reforms:
+      sea_animism_reforms:0 "Animism Reforms"
+      sea_animism_reform_1:0 "All Must Serve"
+      sea_animism_reform_1_desc:0 "Everyone needs to do their part in the games of war equally, whatever blood they are."
+      sea_animism_reform_2:0 "Innovative Advancements"
+      sea_animism_reform_2_desc:0 "The world is changing, and it's changing fast. We must make certain we change with them and not fall behind."
+      sea_animism_reform_3:0 "Tolerant Towards All"
+      sea_animism_reform_3_desc:0 "In the eyes of our hungry gods, everyone is equal, when it comes to feeding time."
+      sea_animism_reform_4:0 "Explorative Expandment"
+      sea_animism_reform_4_desc:0 "We must expand our influence everywhere, even in the lands across the great sea, if there even are any."
+      sea_animism_reform_5:0 "Backward Diplomacy"
+      sea_animism_reform_5_desc:0 "We don't abide by the rules of war and see fit to see as our enemy anyone, even if they're our own ally."
+      SEA_ANIMISM_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will make you lose §R400§! Power Points from each category and lower your stability by §R1§!."
+      religious_reforms.4.d:0 "Reforming our society has its price, which is the price of all the powers in adminstrative, diplomatic and military categories and thus has taken a small toll on the stability of our nation."
+      religious_reforms.4.a:0 "Nothing major, carry on."
+      
+    # New World Natives:
+      # Attiwandaron:
+        # Missions:
+        atw_center_of_trade_1_title:0 "Establish Trading Port"
+        atw_center_of_trade_1_desc:0 "Establish Trading Port"
+        atw_center_of_trade_2_title:0 "Develop Shatteras"
+        atw_center_of_trade_2_desc:0 "Develop Shatteras"
+        atw_form_shawnee_title:0 "Shawnee Nation"
+        atw_form_shawnee_desc:0 "Shawnee Nation"
+        atw_war_with_foreigners_title:0 "War With Foreigners"
+        atw_war_with_foreigners_desc:0 "War With Foreigners"
+        atw_extra_merchant_modifier:0 "Improved Trading"
+        atw_form_iroquois_title:0 "Unite Iroquois"
+        atw_form_iroquois_desc:0 "Unite Iroquois"
+        
+      # Cherokee:
+        # Missions:
+        che_center_of_trade_1_title:0 "Develop Niuachi"
+        che_center_of_trade_1_desc:0 "Develop Niuachi"
+        che_center_of_trade_2_title:0 "Panka Trading Camp"
+        che_center_of_trade_2_desc:0 "Panka Trading Camp"
+        che_form_cree_title:0 "Establish Creek"
+        che_form_cree_desc:0 "Establish Creek"
+        
+      # Zia/Pueblo:
+        # Missions:
+        pue_center_of_trade_1_title:0 "Develop Yavapé"
+        pue_center_of_trade_1_desc:0 "Develop Yavapé"
+        pue_center_of_trade_2_title:0 "Western Trading Port"
+        pue_center_of_trade_2_desc:0 "Western Trading Port"
+        pue_center_of_trade_3_title:0 "Eastern Trading Port"
+        pue_center_of_trade_3_desc:0 "Eastern Trading Port"
+        pue_restore_ancestral_pueblo_tt:0 "§MFollowing event gives option to form §YPueblo§! nation.§!"

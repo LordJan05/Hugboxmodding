@@ -14,7 +14,10 @@ BYS = "countries/SeaBarbaryStates.txt"
 ACE = "countries/SeaAchaemenidEmpire.txt"
 ETS = "countries/SeaEmirateofTwoSicilies.txt"
 FAT = "countries/SeaFatimidCaliphates.txt"
-LEL = "countries/Leleges.txt"
+LEL = "countries/SeaLeleges.txt"
+KEM = "countries/SeaKemet.txt" # Taken from PDX RNW Kemet
+ATL = "countries/SeaAtlantis.txt"
+GOE = "countries/SeaGeorgia.txt"
 
 SEX = "countries/SeaPayPalStates.txt"
 

@@ -17,7 +17,10 @@ new_world_natives_missions_modernization_tag = {
 		position = 5
 		required_missions = { }
 		trigger = {
-			is_tribal = no
+			OR = {
+				is_tribal = no
+				has_reform = steppe_horde
+			}
 			NOT = {
 				government = native
 			}
@@ -39,7 +42,7 @@ new_world_natives_missions_modernization_tag = {
 }
 
 new_world_natives_missions_modernization = {
-	slot = 2
+	slot = 1
 	generic = no
 	ai = no
 	potential = {
@@ -67,10 +70,13 @@ new_world_natives_missions_modernization = {
 	}
 	new_world_modernization = {
 		icon = mission_have_manufactories
-		position = 1
 		required_missions = { }
+		position = 5
 		trigger = {
-			is_tribal = no
+			OR = {
+				is_tribal = no
+				has_reform = steppe_horde
+			}
 			NOT = {
 				government = native
 			}
@@ -337,7 +343,7 @@ new_world_natives_missions_slot4 = {
 		position = 1
 		required_missions = { }
 		trigger = {
-			prestige = 60
+				num_of_cities = 10
 		}
 		effect = {
 			change_government_reform_progress = 50
@@ -350,15 +356,15 @@ new_world_natives_missions_slot4 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = building_alliances.tooltip
-				num_of_allies = 2
+				num_of_allies = 1
 				calc_true_if = {
 					all_ally = {
 						has_opinion = {
 							who = ROOT
-							value = 150
+							value = 75
 						}
 					}
-					amount = 2
+					amount = 1
 				}
 			}
 		}
@@ -454,7 +460,10 @@ new_world_natives_missions_slot4 = {
 		position = 9
 		required_missions = { native_unite_home_region native_treasury }
 		trigger = {
-			is_tribal = no
+			OR = {
+				is_tribal = no
+				has_reform = steppe_horde
+			}
 			NOT = {
 				government = native
 			}
@@ -520,7 +529,10 @@ new_world_natives_missions_slot5 = {
 		position = 3
 		required_missions = { native_assemble_an_army }
 		trigger = {
-			is_tribal = no
+			OR = {
+				is_tribal = no
+				has_reform = steppe_horde
+			}
 			NOT = {
 				government = native
 			}
@@ -587,12 +599,11 @@ new_world_natives_missions_slot5 = {
 		position = 6
 		required_missions = { control_unrest }
 		trigger = {
-			OR = {
-				temple = 5
-				AND = {
-					native_ceremonial_fire_pit = 1
-					native_sweat_lodge = 1
+			calc_true_if = {
+				all_owned_province = {
+					has_tax_building_trigger = yes
 				}
+				amount = 5
 			}
 		}
 		effect = {

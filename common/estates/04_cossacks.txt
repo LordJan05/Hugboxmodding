@@ -54,7 +54,7 @@ estate_cossacks = {
 				unit_type = eastern
 				religion_group = christian
 			}
-			has_country_flag = swz_tame_the_steppes_flag # Swazi
+			#has_country_flag = swz_tame_the_steppes_flag # Swazi
 		}
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {

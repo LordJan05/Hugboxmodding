@@ -15,12 +15,12 @@ union = {
 }
 
 # Ferdinand and Isabel
-union = {
-	first = CAS
-	second = ARA
-	start_date = 1479.9.4
-	end_date = 1516.1.23
-}
+#union = {
+#	first = CAS
+#	second = ARA
+#	start_date = 1479.9.4
+#	end_date = 1516.1.23
+#}
 
 # Castille-Burgundy Union - Felipe I/Philippe IV
 union = {

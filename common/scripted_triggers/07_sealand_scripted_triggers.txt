@@ -20,3 +20,13 @@ swz_has_consort_with_cult = {
 		has_country_modifier = mini_zoroastrian_cult_modifier
 	}
 }
+
+# For ME Colonial mission tree:
+num_of_owned_manufactory_combined_trigger = {
+	calc_true_if = {
+		all_owned_province = {
+			has_manufactory_trigger = yes
+		}
+		amount = $amount$
+	}
+}

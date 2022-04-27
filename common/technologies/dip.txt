@@ -110,6 +110,9 @@ technology = { #Shipyards
 	
 	dock = yes	
 	may_steal_maps = yes
+	
+	embassy = yes
+	range					= 100
 
 }
 
@@ -122,7 +125,7 @@ technology = { #Naval Ambitions
 	}
 	
 	naval_morale			= 0.3
-	range					= 115
+	#range					= 115
 	impressment_offices 	= yes
 	naval_engagement_width = 10
 }
@@ -141,6 +144,7 @@ technology  = { #Docks
 
 	trade_range				=	10
 	naval_morale			=	0.2
+	range					=	100
 
 }
 
@@ -154,7 +158,7 @@ technology = { #Carracks & Caravel
 	}
 	
 	naval_maintenance		= 	0.1
-	range					=	50
+	#range					=	50
 	
 	enable = carrack
 	enable = caravel
@@ -239,6 +243,8 @@ technology = { #The Galleass
 
 	
 	enable = galleass
+
+	royal_palace = yes
 }
  
 technology = { #The Galleon
@@ -273,6 +279,8 @@ technology = { #Development of Maritime Law
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
+	
+	admiralty = yes
 
 }
 

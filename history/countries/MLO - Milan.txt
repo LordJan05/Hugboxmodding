@@ -6,11 +6,13 @@ religion = catholic
 technology_group = western
 capital = 104 # Milano
 fixed_capital = 104 # Cannot move capital away from this province & no power cost to move to it
+elector = yes
 add_army_professionalism = 0.05
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+
 
 change_estate_land_share = {
 	estate = estate_nobles

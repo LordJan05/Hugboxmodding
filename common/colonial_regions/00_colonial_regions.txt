@@ -398,6 +398,7 @@ colonial_eastern_america = {
 			OR = {
 				tag = KOR
 				primary_culture = korean
+				primary_culture = korean_new
 			}
 		}
 		name = "COLONIAL_EASTERN_AMERICA_Miju"
@@ -1236,6 +1237,7 @@ colonial_australia = {
 			OR = {
 				tag = KOR
 				primary_culture = korean
+				primary_culture = korean_new
 			}
 		}
 		name = "COLONIAL_AUSTRALIA_Hoju"

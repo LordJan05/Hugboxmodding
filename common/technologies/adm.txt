@@ -35,6 +35,8 @@ technology = { #Advanced Tribes
 	
 	tribal_democracy_legacy = yes
 	tribal_kingdom_legacy = yes
+
+	road_network = yes
 }
 
 technology = { #Feudal Monarchy
@@ -153,6 +155,9 @@ technology = { #Modern Theocracy
 	
 	allowed_idea_groups = 3
 	theocratic_government = yes
+
+	#Fine Arts Academy
+	fine_arts_academy = yes 
 }
 
 technology = { #Textile Manufactory
@@ -211,6 +216,9 @@ technology = { #Scientific Experimentation
 	
 	plantations = yes
 	allowed_idea_groups	= 4
+	
+	#Tax Assesor
+	tax_assessor = yes
 }
 
 technology = { #Military Administration
@@ -241,6 +249,9 @@ technology = { #Metallurgy
 	
 	mills = yes
 	production_efficiency 	=	0.02
+	
+	#Grain Depot
+	grain_depot	= yes
 
 
 }
@@ -260,6 +271,9 @@ technology = { #University
 	governing_capacity = 250
 	
 	development_efficiency = 0.1
+
+	# University
+	#university_2 = yes  
 }
 
 technology = { #National Sovereignty

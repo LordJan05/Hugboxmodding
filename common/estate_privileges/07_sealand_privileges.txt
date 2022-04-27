@@ -201,3 +201,189 @@ estate_church_service_to_god = {
 		}
 	}
 }
+
+# Teutonic Order or well, Danzig:
+estate_burghers_prussian_confederation_conceded = {
+	icon = privilege_royal_authority
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.1
+	is_valid = {
+		tag = DNZ
+		has_country_flag = estate_burghers_prussian_confederation_conceded_flag
+	}
+	can_select = {
+		tag = DNZ
+		has_country_flag = estate_burghers_prussian_confederation_conceded_flag
+	}
+	modifier_by_land_ownership = {
+		development_cost = -0.2
+		embargo_efficiency = 1
+		global_prov_trade_power_modifier = 0.5
+		global_trade_goods_size_modifier = 0.5
+		global_ship_trade_power = 0.5
+		caravan_power = 0.5
+		trade_steering = 0.5
+	}
+	benefits = {
+		merchants = 2
+		placed_merchant_power = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+# Swazi:
+estate_nobles_swz_tame_the_steppes = { # Swazi mission:
+	icon = privilege_supply_arms
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	
+	is_valid = {
+		has_country_flag = swz_tame_the_steppes_flag
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_swz_tame_the_steppes_granted_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					has_terrain = steppe
+				}
+				add_province_modifier = {
+					name = swz_tame_the_steppes_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_swz_tame_the_steppes_revoked_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = swz_tame_the_steppes_modifier }
+				remove_province_modifier = swz_tame_the_steppes_modifier
+			}
+		}
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_nobles
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_nobles_swz_tame_the_steppes }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+# Castille:
+estate_nobles_castille_autonomous_duchies = {
+	icon = privilege_sea_castille_autonomous_duchies
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		OR = {
+			has_estate_privilege = estate_nobles_castille_autonomous_duchies
+			AND = {
+				tag = CAS
+				NOT = { has_estate_privilege = estate_nobles_castille_autonomous_duchies }
+			}
+		}
+		any_subject_country = {
+			is_subject_of_type = castille_vassal
+		}
+	}
+	can_select = {
+		always = no
+	}
+	can_revoke = {
+		NOT = {
+			calc_true_if = {
+				all_subject_country = {
+					is_subject_of_type = castille_vassal
+				}
+				amount = 1
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		diplomatic_upkeep = 3
+		reduced_liberty_desire_on_same_continent = -10
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+# Nogai:
+estate_nomadic_tribes_develop_steppe_land = {
+	icon = privilege_grant_new_world_charter
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		has_country_flag = nog_industrialize_the_steppes_flag
+	}
+	on_granted = {
+		custom_tooltip = estate_nomadic_tribes_develop_steppe_land_granted_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					has_terrain = steppe
+				}
+				add_province_modifier = {
+					name = nog_industrialize_the_steppes_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nomadic_tribes_develop_steppe_land_revoked_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = nog_industrialize_the_steppes_modifier }
+				remove_province_modifier = nog_industrialize_the_steppes_modifier
+			}
+		}
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_nomadic_tribes
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_nomadic_tribes_develop_steppe_land }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+		factor = 0
+	}
+}

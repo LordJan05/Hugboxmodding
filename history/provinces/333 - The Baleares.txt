@@ -3,7 +3,7 @@
 owner = MJO 
 controller = MJO
 add_core = MJO
-add_claim = ARA
+add_claim = VAL
 culture = catalan
 religion = catholic
 hre = no

@@ -20,47 +20,71 @@ gc_tunis_1 = {
 		icon = mission_patronize_art_and_religion
 		required_missions = { }
 		
-		provinces_to_highlight = {
-			province_id = 4566
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = {
-					OR = {
-						has_building = temple
-						has_building = cathedral
-					}
-				}
-				NOT = { has_building = university }
-			}
-		}
-		
 		trigger = {
-			4566 = {
-				owned_by = ROOT
-				OR = {
-					has_building = temple
-					has_building = cathedral
-				}
-				has_building = university
-			}
-			religious_unity = 1
-			num_accepted_cultures = 3
+			at_war_with_religious_enemy = yes
 		}
 		effect = {
+			add_country_modifier = {
+				name = "spa_rb_morale"
+				duration = 7300
+			}
 			add_prestige = 20
 			if = {
 				limit = {
 					religion_group = muslim
 					piety = 1
 				}
-				add_piety = 0.75
+				add_piety = 1
 			}
 			else_if = {
 				limit = {
 					religion_group = muslim
 					NOT = { piety = 1 }
 				}
-				add_piety = -0.75
+				add_piety = -1
+			}
+		}
+	}
+	sea_westward_expansion = {
+		icon = mission_new_world_power
+		required_missions = { gc_tun_fleet }
+		
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = tunis_siege_modifier
+				duration = 7300
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			marrekesh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tafilalt_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1486,6 +1510,10 @@ gc_tunis_5 = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = thriving_arms_industry
+				duration = 10950
+			}
 			358 = {
 				if = {
 					limit = {

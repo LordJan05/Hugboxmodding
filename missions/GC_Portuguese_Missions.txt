@@ -526,7 +526,7 @@ gc_por_2_c = {
 					region = south_africa_region
 					region = east_africa_region
 				}
-				value = 10
+				value = 20
 			}
 		}
 		effect = {
