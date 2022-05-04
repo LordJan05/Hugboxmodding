@@ -1496,6 +1496,7 @@ karma_just_right =
 karma_too_high =
 {
 	production_efficiency = 0.15
+	development_cost = -0.05
 }
 
 karma_too_low =
@@ -1546,6 +1547,7 @@ native_policy_hostile = {
 
 high_harmony = {
 	tolerance_own = 3
+	development_cost = -0.05
 	meritocracy = 0.5
 	legitimacy = 0.5
 	devotion = 1
@@ -1681,7 +1683,8 @@ maliki_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	build_cost = -0.1
+	#build_cost = -0.1
+	development_cost = -0.05
 }
 
 shafii_scholar_modifier = {

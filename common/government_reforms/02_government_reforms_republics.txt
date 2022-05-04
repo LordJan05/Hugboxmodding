@@ -630,6 +630,7 @@ peasants_republic = {
 			has_country_flag = great_peasants_war_peasant_republic
 			have_had_reform = peasants_republic
 			have_had_reform = stateless_society
+			tag = EST
 		}
 	}
 	valid_for_nation_designer = yes
@@ -638,7 +639,7 @@ peasants_republic = {
 	modifiers = {
 		production_efficiency = 0.1
 		land_morale = 0.05
-		max_absolutism = -10
+		#max_absolutism = -10
 	}
 	effect = {
 		hidden_effect = {
@@ -1438,7 +1439,7 @@ articles_of_agreement_reform = {
 	}
 	modifiers = {
 		pr_buccaneers_influence = 0.1
-		allowed_marine_fraction = 0.3
+		allowed_marine_fraction = 0.5
 		global_naval_barrage_cost = -0.5
 		loot_amount = 0.15
 	}

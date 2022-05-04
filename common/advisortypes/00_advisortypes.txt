@@ -146,7 +146,7 @@ inquisitor = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.1
+			factor = 1
 			has_owner_religion = no
 		}
 	}
@@ -492,7 +492,7 @@ centralize_autonomy = {
 		factor = 1
 		modifier = {
 			factor = 1.5
-			is_at_war = no
+			is_at_war = yes
 		}
 	}
 }

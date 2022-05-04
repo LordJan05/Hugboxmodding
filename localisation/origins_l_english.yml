@@ -1746,7 +1746,7 @@
  tooltip_zanahary_cult:0 "This cult has the following benefits when selected:\nMonthly War Exhaustion: §G-0.06§!"
  tooltip_christianity_cult:0 "This cult has the following benefits when selected:\nDomestic Trade Power: §G+25.0%§!"
  tooltip_islam_cult:1 "This cult has the following benefits when selected:\nInstitution Spread: §G+10.0%§!"
- tooltip_buddhism_cult:0 "This cult has the following benefits when selected:\nConstruction Cost: §G-10.0%§!"
+ tooltip_buddhism_cult:0 "This cult has the following benefits when selected:\nDevelopment Cost: §G-5.0%§!"
  tooltip_dharmic_cult:0 "This cult has the following benefits when selected:\nGoods Produced Modifier: §G+10.0%§!"
  tooltip_south_central_american_cult:0 "This cult has the following benefits when selected:\nMorale of Armies: §G+5.0%§!"
  tooltip_norse_cult:0 "This cult has the following benefits when selected:\nTolerance of Heathens: §G+2.00§!"

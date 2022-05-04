@@ -221,9 +221,9 @@ sealand_atl_missions_2 = {
 				}
 				ai = no
 			}
-			tag = CUB
+			tag = CAB
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 27
 				OR = {
 					region = carribeans_region
 					region = colombia_region
@@ -252,12 +252,15 @@ sealand_atl_missions_2 = {
 			}
 			add_government_reform = atlantis_government
 			change_technology_group = western
-			change_primary_culture = atlantean
 			hidden_effect = {
 				every_owned_province = {
+					limit = {
+						primary_culture = ROOT
+					}
 					change_culture = atlantean
 				}
 			}
+			change_primary_culture = atlantean
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas

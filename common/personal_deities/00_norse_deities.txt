@@ -163,7 +163,8 @@ njord =
 snotra =
 {
 	technology_cost = -0.05
-	build_cost = -0.1
+	idea_cost = -0.05
+	#build_cost = -0.1
 	development_cost = -0.05
 	
 	allow = {

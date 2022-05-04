@@ -10,7 +10,7 @@ country_event = {
 	trigger = {
 		ai = no
 		NOT = {
-			capital_scope = {
+			any_owned_province = {
 				culture = ROOT
 				is_core = ROOT
 				is_state_core = root
@@ -23,6 +23,57 @@ country_event = {
 	immediate = {
 		capital_scope = {
 			change_culture = ROOT
+		}
+	}
+	option = {}
+}
+
+country_event = {
+	id = mjl_merc_events.4
+	title = "mjl_merc_events.EVTNAME4"
+	desc = "mjl_merc_events.EVTDESC4"
+	picture = COURT_eventPicture
+	hidden = yes
+	trigger = {
+		ai = no
+		any_owned_province = {
+			OR = {
+				has_province_flag = sealand_banners_fl_base_flag 
+				has_province_modifier = sealand_banners_fl_base
+			}
+			OR = {
+				NOT = { culture = ROOT }
+				NOT = { is_state = yes }
+				NOT = {	is_state_core = root }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_flag = sealand_banners_fl_base_flag 
+					has_province_modifier = sealand_banners_fl_base
+				}
+			}
+			clr_province_flag = sealand_banners_fl_base_flag 
+			remove_province_modifier = sealand_banners_fl_base
+		}
+		random_owned_province = {
+			limit = {
+				culture = ROOT
+				is_core = ROOT
+				is_state_core = ROOT
+			}
+			set_province_flag = sealand_banners_fl_base_flag 
+			add_province_modifier = {
+				name = sealand_banners_fl_base
+				duration = -1
+				hidden = yes
+			}
 		}
 	}
 	option = {}

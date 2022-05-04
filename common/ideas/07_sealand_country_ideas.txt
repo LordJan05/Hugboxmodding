@@ -858,6 +858,7 @@ sea_VIN_ideas = {
 	start = {
 		ship_durability = 0.2
 		discipline = 0.05
+		sea_repair = yes
 	}
 	
 	bonus = {
@@ -952,6 +953,7 @@ sea_ATL_ideas = {
 	start = {
 		allowed_marine_fraction = 0.9
 		discipline = 0.05
+		sea_repair = yes
 	}
 	
 	bonus = {

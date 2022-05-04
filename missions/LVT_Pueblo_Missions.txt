@@ -356,7 +356,7 @@ pue_missions_2 = {
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 33
 				OR = {
 					region = california_region
 					region = rio_grande_region
@@ -373,6 +373,7 @@ pue_missions_2 = {
 				center_of_trade = 1
 				change_trade_goods = gold
 			}
+			custom_tooltip = pue_restore_ancestral_pueblo_tt
 			country_event = { # name change event
 				id = flavor_pue.1
 			}

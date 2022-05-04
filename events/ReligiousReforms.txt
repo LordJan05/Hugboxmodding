@@ -187,9 +187,9 @@ country_event = {
 	immediate = {
 		hidden_effect = { 
 			add_stability = -1
-			add_adm_power = -400
-			add_dip_power = -400
-			add_mil_power = -400
+			add_adm_power = -300
+			add_dip_power = -300
+			add_mil_power = -300
 		}
 	}
 	
@@ -197,9 +197,9 @@ country_event = {
 		name = religious_reforms.4.a
 		tooltip = {
 			add_stability = -1
-			add_adm_power = -400
-			add_dip_power = -400
-			add_mil_power = -400
+			add_adm_power = -300
+			add_dip_power = -300
+			add_mil_power = -300
 		}
 	}
 }

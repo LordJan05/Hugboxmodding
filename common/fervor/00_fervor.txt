@@ -53,7 +53,7 @@ fervor_stability = {
 	cost = 3
 	effect = {
 		war_exhaustion = -0.02
-		advisor_cost = -0.1
+		development_cost = -0.05
 	}
 	ai_will_do = {
 		factor = 1.5

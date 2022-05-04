@@ -120,6 +120,11 @@ spriteTypes = {
 		name = "government_reform_sea_germany_monachy"
 		texturefile = "gfx//interface//government_reform_icons//sea_germany_monachy.dds"
 	}
+	
+	spriteType = {
+		name = "government_reform_sea_teutonic_reform"
+		texturefile = "gfx//interface//government_reform_icons//sea_teutonic_reform.dds"
+	}
 
 ##############
 #### FACTIONS

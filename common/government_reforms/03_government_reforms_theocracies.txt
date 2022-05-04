@@ -404,7 +404,7 @@ maintain_religious_head_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		yearly_absolutism = 1
-		max_absolutism = 1
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 0
@@ -603,6 +603,7 @@ regionally_elected_commanders = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			has_reform = eschatological_theocracy_georgia_reform
 			has_reform = eschatological_theocracy_caliphate_reform
 			has_reform = kemet_government
@@ -614,6 +615,7 @@ regionally_elected_commanders = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			has_reform = eschatological_theocracy_georgia_reform
 			has_reform = eschatological_theocracy_caliphate_reform
 			has_reform = kemet_government
@@ -654,6 +656,7 @@ monastic_elections_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 	}
@@ -662,6 +665,7 @@ monastic_elections_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 	}
@@ -700,6 +704,7 @@ commander_king_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 	}
@@ -707,6 +712,7 @@ commander_king_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 		full_idea_group = theocracy_gov_ideas
@@ -736,6 +742,7 @@ admiral_king_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 		capital_scope = {
@@ -746,6 +753,7 @@ admiral_king_reform = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = crusade_against_the_world
+			has_reform = teutonic_order_government
 			tag = KOJ
 		}
 		has_reform = mission_to_kill_pirates_reform

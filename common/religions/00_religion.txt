@@ -1375,7 +1375,8 @@ christian = {
 		}
 		country = {
 			tolerance_heretic = 2
-			advisor_pool = 1
+			#advisor_pool = 1
+			advisor_cost = -0.1
 		}
 		
 		country_as_secondary = {
@@ -1563,7 +1564,8 @@ christian = {
 			}
 
 			icon_pancreator = {
-				build_cost = -0.1
+				#build_cost = -0.1
+				development_cost = -0.05
 				
 				allow = {
 					always = yes
@@ -1887,7 +1889,8 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_maliki"
 
-			build_cost = -0.1
+			#build_cost = -0.1
+			development_cost = -0.05
 		}
 		shafii_school = {
 			potential_invite_scholar = {
@@ -2728,7 +2731,7 @@ dharmic = {
 						type = DIP
 						cost = 50
 
-						religious_unity = 0.1
+						development_cost = -0.05
 					}
 					martyrdom = {
 						type = MIL

@@ -283,3 +283,56 @@ sea_cas_united_spain_modifier = {
 	}
 	land_morale = 0.05
 }
+
+##########################################
+# Muslim Jihad:
+sea_jihad_crusade_modifier = {
+	potential = {
+		religion = sunni
+		any_country = {
+			has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier
+		}
+	}
+
+	trigger = {
+		any_country = {
+			has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier
+			war_with = ROOT
+			any_province = {
+				controlled_by = root
+			}
+		}  
+		land_maintenance = 1.0
+	}
+
+	global_manpower_modifier = 0.3
+	global_tax_modifier = 0.1
+	land_morale = 0.05
+	prestige = 1
+	monthly_piety = -0.002
+}
+# Incase abusing it, by going to war against Catholic and then against fellow Sunni, mainly because of Otto-Mam war:
+sea_anti_jihad_crusade_modifier = {
+	potential = {
+		religion = sunni
+		any_country = {
+			has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier
+		}
+	}
+
+	trigger = {
+		any_country = {
+			has_country_modifier = sea_jihad_crusade_modifier
+			war_with = ROOT
+			any_province = {
+				controlled_by = root
+			}
+		}
+	}
+
+	global_manpower_modifier = 0.3
+	global_tax_modifier = 0.1
+	land_morale = 0.05
+	prestige = 1
+	monthly_piety = -0.002
+}

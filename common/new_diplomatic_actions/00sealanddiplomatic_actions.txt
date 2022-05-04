@@ -1,0 +1,74 @@
+############################################
+########### Sealand new actions ############
+# Muslim, Jihad:
+sea_sunni_crusade_jihad_diplo_action = {
+	category = influence
+
+	#alert_index = 
+	#alert_tooltip = 
+
+	require_acceptance = no # Whether the recipient gets an option to decline
+
+	is_visible = {
+		religion = sunni
+	}
+	is_allowed = {
+		hidden_trigger = {
+			religion = sunni
+		}
+		if = {
+			limit = {
+				is_defender_of_faith = no
+			}
+			custom_trigger_tooltip = {
+				is_defender_of_faith = yes
+				tooltip = sea_sunni_crusade_jihad_diplo_action_defender_of_faith
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier
+				}
+			}
+			custom_trigger_tooltip = {
+				NOT = { 
+					any_country = {
+						has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier
+					}
+				}
+				tooltip = sea_sunni_crusade_jihad_diplo_action_already_started
+			}
+		}
+		if = {
+			limit = {
+				FROM = { religion_group = muslim }
+			}
+			custom_trigger_tooltip = {
+				FROM = { NOT = { religion_group = muslim } }
+				tooltip = sea_sunni_crusade_jihad_diplo_action_same_religion
+			}
+		}
+	}
+
+	on_accept = {
+		clear_global_event_target = jihad_crusade_target
+		FROM = {
+			add_country_modifier = {
+				name = sea_sunni_crusade_jihad_diplo_action_modifier
+				duration = 10950
+				hidden = yes
+			}
+			save_global_event_target_as = jihad_crusade_target
+		}
+	}
+	on_decline = {
+	}
+	ai_acceptance = {
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+############################################
+############################################

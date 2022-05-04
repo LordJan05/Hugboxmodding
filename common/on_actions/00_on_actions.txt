@@ -4707,6 +4707,23 @@ on_primary_culture_changed = {
 			remove_province_modifier = kon_south_african_hegemony_province
 		}
 	}
+	every_owned_province = {
+		remove_province_modifier = sealand_banners_fl_base
+		clr_province_flag = sealand_banners_fl_base_flag
+	}
+	random_owned_province = {
+		limit = {
+			culture = ROOT
+			is_core = ROOT
+			is_state_core = ROOT
+		}
+		set_province_flag = sealand_banners_fl_base_flag 
+		add_province_modifier = {
+			name = sealand_banners_fl_base
+			duration = -1
+			hidden = yes
+		}
+	}
 }
 
 # FROM = Previous Country, ROOT = Province

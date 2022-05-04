@@ -179,7 +179,7 @@ che_missions_2 = {
 			owns_core_province = 917
 			917 = { is_state = yes }
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 33
 				region = mississippi_region
 			}
 			has_institution = new_world_i
@@ -204,12 +204,15 @@ che_missions_2 = {
 			add_army_professionalism = 0.1
 			change_technology_group = western
 			change_unit_type = eastern
-			change_primary_culture = spartan
 			hidden_effect = {
 				every_owned_province = {
+					limit = {
+						primary_culture = ROOT
+					}
 					change_culture = spartan
 				}
 			}
+			change_primary_culture = spartan
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas

@@ -755,6 +755,10 @@ cb_crusade = {
 				}
 			}
 			cb_on_religious_enemies = yes
+			AND = { # Muslim Jihad:
+				FROM = { has_country_modifier = sea_sunni_crusade_jihad_diplo_action_modifier }
+				religion = sunni
+			}
 		}
 		is_revolutionary = no
 	}

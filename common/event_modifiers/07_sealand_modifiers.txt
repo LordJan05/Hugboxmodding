@@ -3,6 +3,10 @@
 change_school_modifier = {
 	# Nothing is needed here
 }
+# Muslim Jihad:
+sea_sunni_crusade_jihad_diplo_action_modifier = {
+	# Nothing is needed here
+}
 
 # New World and Colonial Australia nerf:
 new_wrold_nerfs_modifier = {

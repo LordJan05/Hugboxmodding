@@ -589,6 +589,7 @@ theocracy = {
 				eschatological_theocracy_georgia_reform
 				eschatological_theocracy_caliphate_reform
 				kemet_government
+				teutonic_order_government
 			}
 		}
 		internal_vs_external_mission = {

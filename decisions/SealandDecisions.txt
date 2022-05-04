@@ -1285,11 +1285,13 @@ country_decisions = {
 			owns_core_province = 1842
 			owns_core_province = 37
 			owns_core_province = 1834
-			NOT = { num_of_cities = 6 }
+			#NOT = { num_of_cities = 6 }
+			36 = { is_state = yes }
 		}
 		effect = {
 			set_country_flag = united_estonia_flag
 			change_tag = EST
+			set_capital = 36
 			if = {
 				limit = {
 					NOT = { government_rank = 3 }
@@ -2185,13 +2187,13 @@ country_decisions = {
 			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
 		}
 		allow = {
-			mil_power = 400
+			mil_power = 500
 		}
 		effect = {
 			set_country_flag = swi_recruit_merc_inf_enabled
-			add_mil_power = -400
+			add_mil_power = -500
 			add_country_modifier = {
-				name = "swi_recruit_merc_inf_enabled_modifier"
+				name = swi_recruit_merc_inf_enabled_modifier
 				duration = -1
 			}
 			custom_tooltip = swi_recruit_merc_inf_enable_tt
@@ -2208,33 +2210,9 @@ country_decisions = {
 			has_country_flag = swi_recruit_merc_inf_enabled
 		}
 		allow = {
-			NOT = {
-				any_province = {
-					num_of_units_in_province = {
-						who = ROOT
-						type = sea_swiss_mercenaries_1
-						amount = 1
-					}
-				}
-			}
-			NOT = {
-				any_province = {
-					num_of_units_in_province = {
-						who = ROOT
-						type = sea_swiss_mercenaries_2
-						amount = 1
-					}
-				}
-			}
-			NOT = {
-				any_province = {
-					num_of_units_in_province = {
-						who = ROOT
-						type = sea_swiss_mercenaries_3
-						amount = 1
-					}
-				}
-			}
+			NOT = { sea_swiss_mercenaries_1 = 1 }
+			NOT = { sea_swiss_mercenaries_2 = 1 }
+			NOT = { sea_swiss_mercenaries_3 = 1 }
 		}
 		effect = {
 			clr_country_flag = swi_recruit_merc_inf_enabled
@@ -2269,29 +2247,13 @@ country_decisions = {
 						land_forcelimit = 1
 						NOT = { land_forcelimit = 40 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_1
-								amount = 12
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_1 = 10 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 40
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_1
-								amount = 24
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_1 = 20 }
 				}
 			}
 			# Tech 12-25
@@ -2305,74 +2267,34 @@ country_decisions = {
 						land_forcelimit = 1
 						NOT = { land_forcelimit = 24 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_2
-								amount = 12
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_2 = 10 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 24
 						NOT = { land_forcelimit = 48 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_2
-								amount = 24
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_2 = 20 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 48
 						NOT = { land_forcelimit = 96 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_2
-								amount = 48
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_2 = 30 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 96
 						NOT = { land_forcelimit = 192 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_2
-								amount = 96
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_2 = 40 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 192
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_2
-								amount = 120
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_2 = 60 }
 				}
 			}
 			# Tech 26-
@@ -2385,89 +2307,41 @@ country_decisions = {
 						land_forcelimit = 1
 						NOT = { land_forcelimit = 24 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 12
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 10 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 24
 						NOT = { land_forcelimit = 48 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 24
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 20 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 48
 						NOT = { land_forcelimit = 96 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 48
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 30 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 96
 						NOT = { land_forcelimit = 192 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 96
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 40 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 192
 						NOT = { land_forcelimit = 384 }
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 160
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 80 }
 				}
 				if = {
 					limit = {
 						land_forcelimit = 384
 					}
-					NOT = {
-						any_province = {
-							num_of_units_in_province = {
-								who = ROOT
-								type = sea_swiss_mercenaries_3
-								amount = 240
-							}
-						}
-					}
+					NOT = { sea_swiss_mercenaries_3 = 120 }
 				}
 			}
 		}

@@ -23,13 +23,15 @@ nahuatl_reforms = {
 		war_exhaustion = -0.05
 	}
 	nahuatl_reform_2 = {
-		diplomatic_upkeep = 1
+		#diplomatic_upkeep = 1
+		development_cost = -0.05
 	}
 	nahuatl_reform_3 = {
 		discipline = 0.05
 	}
 	nahuatl_reform_4 = {
-		colonists = 1
+		colonists = 2
+		global_colonial_growth = 33
 		auto_explore_adjacent_to_colony = yes
 	}
 	nahuatl_reform_5 = {
@@ -58,7 +60,8 @@ inti_reforms = {
 		manpower_recovery_speed = 0.1
 	}
 	inti_reform_2 = {
-		colonists = 1
+		colonists = 2
+		global_colonial_growth = 33
 		auto_explore_adjacent_to_colony = yes
 	}
 	inti_reform_3 = {
@@ -69,7 +72,8 @@ inti_reforms = {
 		land_morale = 0.1
 	}
 	inti_reform_5 = {
-		core_creation = -0.1
+		#core_creation = -0.1
+		development_cost = -0.05
 	}	
 	
 	ai_will_do = {
@@ -94,13 +98,15 @@ mesoamerican_reforms = {
 		land_maintenance_modifier = -0.1
 	}
 	mesoamerican_reform_2 = {
-		global_unrest = -2
+		#global_unrest = -2
+		development_cost = -0.05
 	}
 	mesoamerican_reform_3 = {
 		infantry_power = 0.1
 	}
 	mesoamerican_reform_4 = {
-		colonists = 1
+		colonists = 2
+		global_colonial_growth = 33
 		auto_explore_adjacent_to_colony = yes
 	}
 	mesoamerican_reform_5 = {
@@ -121,9 +127,9 @@ sea_animism_reforms = {
 		is_at_war = no
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		stability = 1
-		adm_power = 400
-		dip_power = 400
-		mil_power = 400
+		adm_power = 300
+		dip_power = 300
+		mil_power = 300
 	}
 	
 	sea_animism_reform_1 = {
@@ -132,7 +138,8 @@ sea_animism_reforms = {
 		manpower_in_true_faith_provinces= 0.15
 	}
 	sea_animism_reform_2 = {
-		free_policy = 1
+		#free_policy = 1
+		development_cost = -0.05
 		technology_cost = -0.05
 		idea_cost = -0.05
 	}

@@ -1,4 +1,36 @@
 # Teutonic Order. From crusader_kings mission.
+teutonic_order_government = {
+	icon = "sea_teutonic_reform"
+	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = yes
+	potential = {
+		tag = TEU
+		religion = catholic
+	}
+
+	modifiers = {
+		cb_on_religious_enemies = yes
+		devotion = 0.5
+		papal_influence = 0.5
+		culture_conversion_cost = -0.1
+		promote_culture_cost = -0.1
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = no
+	nation_designer_cost = 50
+	allow_normal_conversion = yes
+	monastic = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 1000
+	}
+}
 crusade_against_the_world = {
 	allow_normal_conversion = yes
 	force_conversion_gives_global_holy_war_released_modifier = yes

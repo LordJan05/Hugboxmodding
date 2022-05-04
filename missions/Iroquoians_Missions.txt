@@ -341,7 +341,7 @@ atw_missions_3 = {
 			is_at_war = no
 			owns_core_province = 1003
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 33
 				OR = {
 					region = hudson_bay_region
 					region = canada_region
@@ -367,12 +367,15 @@ atw_missions_3 = {
 			add_government_reform = vinland_government
 			change_technology_group = western
 			change_unit_type = western
-			change_primary_culture = scanian
 			hidden_effect = {
 				every_owned_province = {
+					limit = {
+						primary_culture = ROOT
+					}
 					change_culture = scanian
 				}
 			}
+			change_primary_culture = scanian
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas

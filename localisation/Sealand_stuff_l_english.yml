@@ -100,10 +100,12 @@
         teu_knights_of_war_title:0 "Arm the Knights"
         teu_knights_of_war_desc:0 "Arm the Knights"
         teu_knights_of_war_modifier:0 "Knights of War"
+        teu_colonial_interests_title:0 "Colonial Interests"
+        teu_colonial_interests_desc:0 "Colonial Interests"
 
       # Events that come with "Centralize The Order" mission:
         # The Prussian Confederation start event:
-        dnz_estate_available_tooltip:1 "The estate privilege §Y'Concede to the Prussian Confederation'§! is now available."
+        dnz_estate_available_tooltip:1 "The estate privilege §Y'Concede to the Prussian Confederation'§! is now available.\n§MWhen selecting that privilege, you gain event to become §YDanzing§! in a few months.§!"
         # Sell Neumark event:
         teutonic_events.1.d:0 "With the internal conflicts and the instability of our nation, because of the rise of Prussian Confederation, we must do some concessions. Main thing being our holdings in Neumark.\nShould we sell those, we have easier time to root out the leaders of this organization and put an end to this rebellion once and for all."
         teutonic_events.1.a:0 "I'm gonna make them an offer they can't refuse."
@@ -149,6 +151,8 @@
         crusade_against_the_world_desc:0 "Deus Vult! Deus Vult!"
         crusade_against_the_world_legacy:0 "Civitas Ordinis Theutonici"
         crusade_against_the_world_legacy_desc:0 "Deus Vult! Deus Vult!"
+        teutonic_order_government:0 "Domus Theutonicorum"
+        teutonic_order_government_desc:0 "We must cleanse the world from heretics not just only through religion but through culture as well as all must be Germans."
         # New country idea:
         sea_TEU_ideas:0 "Teutonic Ideas"
         sea_TEU_ideas_start:0 "Teutonic Traditions"
@@ -837,9 +841,24 @@
         emperor_geteilte_macht_elector:0 "Geteilte Macht"
         emperor_reichskrieg_elector:0 "Reichskrieg"
         emperor_erbkaisertum:0 "Proclaim Erbkaisertum"
+        emperor_gemeinerpfenning_emperor:0 "Gemeiner Pfennig"
         # Advisor:
         centralize_autonomy:0 "Bureaucrat" # Couldn't think of better name, pls no judge.
         centralize_autonomy_desc:0 ""
+        # Diplomatic Actions:
+        sea_sunni_crusade_jihad_diplo_action_title:0 "Call for Jihad"
+        sea_sunni_crusade_jihad_diplo_action_tooltip:0 "Jihads give Sunni countries a significant manpower and income bonus while at war with them."
+        sea_sunni_crusade_jihad_diplo_action_desc:0 "Do you wish to call for a Jihad against this nation? This will give Sunni countries a significant manpower and income bonus while at war with the Infidel."
+        sea_sunni_crusade_jihad_diplo_action_defender_of_faith:0 "§ROnly as Defender of the Faith, are we allowed to call for Jihad.§!"
+        sea_sunni_crusade_jihad_diplo_action_already_started:0 "§RJihad has already been launched. We must wait for it to end before calling another.§!"
+        sea_sunni_crusade_jihad_diplo_action_same_religion:0 "§RWhile tempting, we cannot launch a Jihad against fellow Muslims.§!"
+        sea_sunni_crusade_jihad_diplo_action_modifier:0 "Jihad"
+        sea_sunni_crusade_jihad_diplo_action_modifier_desc:0 "Sunnies all over the world are encouraged to attack you in the name of their Aallah! The Jihad will last until we have been destroyed or until this expiration date:"
+        sea_jihad_crusade_modifier:0 "Jihad"
+        sea_jihad_crusade_modifier_desc:0 "Sunnies all over the world are encouraged to attack §Y[jihad_crusade_target.GetName]§! in the name of Our Aallah! The Jihad will last for 30 years or until the Infidel has been destroyed."
+        sea_anti_jihad_crusade_modifier:0 "Defence From Jihad"
+        sea_anti_jihad_crusade_modifier_desc:0 "One of the Sunnies that are on Jihad, are using their advantanges against their fellow Sunni nation, instead of against their true enemies."
+        
 
     #Germany:
         # Government:
@@ -1576,7 +1595,7 @@
       sea_animism_reform_4_desc:0 "We must expand our influence everywhere, even in the lands across the great sea, if there even are any."
       sea_animism_reform_5:0 "Backward Diplomacy"
       sea_animism_reform_5_desc:0 "We don't abide by the rules of war and see fit to see as our enemy anyone, even if they're our own ally."
-      SEA_ANIMISM_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will make you lose §R400§! Power Points from each category and lower your stability by §R1§!."
+      SEA_ANIMISM_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will make you lose §R300§! Power Points from each category and lower your stability by §R1§!."
       religious_reforms.4.d:0 "Reforming our society has its price, which is the price of all the powers in adminstrative, diplomatic and military categories and thus has taken a small toll on the stability of our nation."
       religious_reforms.4.a:0 "Nothing major, carry on."
       
@@ -1612,4 +1631,4 @@
         pue_center_of_trade_2_desc:0 "Western Trading Port"
         pue_center_of_trade_3_title:0 "Eastern Trading Port"
         pue_center_of_trade_3_desc:0 "Eastern Trading Port"
-        pue_restore_ancestral_pueblo_tt:0 "§MFollowing event gives option to form §YPueblo§! nation.§!"
+        pue_restore_ancestral_pueblo_tt:0 "§MFollowing event gives option to form §YPueblo§! nation.§!:"

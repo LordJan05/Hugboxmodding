@@ -1,7 +1,8 @@
 organised_through_bishops_aspect = {
 	cost = 100
 	modifier = {
-		build_cost = -0.1
+		#build_cost = -0.1
+		development_cost = -0.05
 	}
 	ai_will_do = {
 		factor = 15
