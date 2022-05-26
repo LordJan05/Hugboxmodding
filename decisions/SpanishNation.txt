@@ -82,9 +82,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			NAV = { is_subject_of = ROOT }
-			ARA = { is_subject_of = ROOT }
-			CAT = { is_subject_of = ROOT }
+			NOT = { NAV = { is_subject_of = ROOT } }
+			NOT = { ARA = { is_subject_of = ROOT } }
+			NOT = { CAT = { is_subject_of = ROOT } }
 			#VAL = { is_subject_of = ROOT } # For some reason VAL makes it broken, probably because of VAL = value.
 			owns_core_province = 213	# Barcelona
 			owns_core_province = 214	# Aragón

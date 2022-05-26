@@ -2672,7 +2672,7 @@ malabari_ideas = {
 
 maori_ideas = { #Credit to James Beaumont
 	start = {
-		land_forcelimit_modifier = -0.25
+		land_forcelimit_modifier = 0.25
 		allowed_marine_fraction = 1
 	}
 	
