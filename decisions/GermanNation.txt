@@ -150,7 +150,7 @@ country_decisions = {
 				limit = {
 					NOT = { government = republic }
 				}
-				change_government_to_monarchy = yes
+				change_government_to_republic = yes
 				add_government_reform = germany_monarchy
 			}
 			if =  {

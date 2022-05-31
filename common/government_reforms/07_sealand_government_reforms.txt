@@ -942,7 +942,7 @@ germany_republic = {
 		war_exhaustion = -0.05
 		max_absolutism = 50
 		nobles_loyalty_modifier = 0.2
-		yearly_army_professionalism = 0.06
+		yearly_army_professionalism = 0.006
 		army_tradition = 1
 		drill_gain_modifier = 1
 	}
