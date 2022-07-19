@@ -124,7 +124,7 @@ barbary_states_reform = {
 		may_perform_slave_raid = yes
 		admiral_cost = -0.15
 		republican_tradition = -0.5
-		max_absolutism = 30
+		max_absolutism = 20
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -238,7 +238,7 @@ swazi_government_reform = {
 	lock_level_when_selected = yes
 	modifiers = {
 		block_introduce_heir = yes
-		max_absolutism = 20
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 1000
@@ -627,9 +627,9 @@ fatimid_government = {
 		num_accepted_cultures = 3
 		global_autonomy = -0.05
 		governing_capacity = 150
-		country_admin_power = 1
-		country_diplomatic_power = 1
-		country_military_power = 1
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
 	}
 
 	conditional = {
@@ -695,7 +695,7 @@ leleges_military_government = {
 		war_exhaustion = -0.04
 		yearly_army_professionalism = 0.0033
 		monthly_militarized_society = 0.05
-		max_absolutism = 40
+		max_absolutism = 30
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -728,9 +728,9 @@ vinland_government = {
 		tag = VIN
 	}
 	modifiers = {
-		naval_morale = 0.05
-		max_absolutism = 40
-		republican_tradition = 0.25
+		naval_morale = 0.1
+		max_absolutism = 30
+		republican_tradition = 0.2
 		may_perform_slave_raid_on_same_religion = yes
 	}
 
@@ -762,12 +762,12 @@ kemet_government = {
 		tag = KEM
 	}
 	modifiers = {
-		yearly_absolutism = 1
-		max_absolutism = 40
+		yearly_absolutism = 0.5
+		max_absolutism = 30
 		global_autonomy = -0.05
 		governing_capacity = 100
 		yearly_tribal_allegiance = 2
-		global_tax_modifier = 0.25
+		global_tax_modifier = 0.2
 	}
 
 	conditional = {
@@ -789,7 +789,7 @@ atlantis_government = {
 	icon = "sea_atlantis_reform"
 	allow_normal_conversion = yes
 	valid_for_nation_designer = no
-	duration = 6
+	duration = 3
 	potential = {
 		tag = ATL
 	}
@@ -798,7 +798,7 @@ atlantis_government = {
 	}
 	modifiers = {
 		admiral_cost = -0.2
-		max_absolutism = 50
+		max_absolutism = 30
 		global_ship_trade_power = 0.15
 		ship_power_propagation = 0.15
 		trade_efficiency = 0.15
@@ -873,7 +873,38 @@ ambrosian_merchants_republic = {
 	}
 }
 
-# Portugal:
+# Castille/Spain
+spain_monarchy_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		tag = SPA
+	}
+	trigger = {
+		tag = SPA
+	}
+	modifiers = {
+		max_absolutism = 10
+		establish_order_cost = -0.33
+		governing_capacity = 150
+		warscore_cost_vs_other_religion = -0.1
+	}
+	custom_attributes = {
+		spain_monarchy_reform_spain_tercios = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+# Portugal: Wasn't really needed, could just trigger the factions.
 portugal_feudalism_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
@@ -914,16 +945,16 @@ germany_monarchy = {
 
 	modifiers = {
 		war_exhaustion = -0.05
-		max_absolutism = 50
-		nobles_loyalty_modifier = 0.2
-		yearly_army_professionalism = 0.06
-		army_tradition = 1
-		drill_gain_modifier = 1
+		max_absolutism = 15
+		nobles_loyalty_modifier = 0.1
+		army_tradition = 0.75
+		drill_gain_modifier = 0.5
 	}
 
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
+		has_parliament = yes
 	}
 }
 germany_republic = {
@@ -940,16 +971,16 @@ germany_republic = {
 	modifiers = {
 		monthly_militarized_society = 0.05
 		war_exhaustion = -0.05
-		max_absolutism = 50
-		nobles_loyalty_modifier = 0.2
-		yearly_army_professionalism = 0.006
-		army_tradition = 1
-		drill_gain_modifier = 1
+		max_absolutism = 35
+		nobles_loyalty_modifier = 0.1
+		army_tradition = 0.75
+		drill_gain_modifier = 0.5
 	}
 
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
+		has_parliament = yes
 	}
 }
 
@@ -960,10 +991,90 @@ diverse_society_reform = {
 	icon = "tribal_council"
 	modifiers = {
 		num_accepted_cultures = 3
-		culture_conversion_cost = -0.1
-		promote_culture_cost = -0.1
+		culture_conversion_cost = -0.15
+		promote_culture_cost = -0.15
 	}
 	ai = {
 		factor = 10
+	}
+}
+
+# Japan:
+imperial_japan_monarchy = {
+	icon = "sea_imperial_japan_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = IJP
+		religion = shinto
+	}
+	trigger = {
+		tag = IJP
+		religion = shinto
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		max_absolutism = 33
+		culture_conversion_cost = -0.33
+		warscore_cost_vs_other_religion = -0.33
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+}
+
+# Byzantium:
+byzantium_government = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "sea_byzantine_government"
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					tag = BYZ
+					tag = LAT
+					AND = {
+						was_tag = BYZ
+						tag = ROM
+					}
+				}
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = byzantium_government
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	maintain_dynasty = yes
+	modifiers = {
+		unjustified_demands = -0.1
+		legitimacy = 0.5
+		max_absolutism = 10
+		governing_capacity = 200
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		byzantium_government_varangian_guards = yes
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 }

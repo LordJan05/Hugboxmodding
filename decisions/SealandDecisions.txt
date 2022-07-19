@@ -103,6 +103,8 @@ country_decisions = {
 				accepted_culture = slovak
 				accepted_culture = czech
 				primary_culture = slovak
+				tag = BOH
+				tag = HUN
 				tag = POL
 			}
 		}
@@ -129,12 +131,21 @@ country_decisions = {
 			is_nomad = no
 			adm_tech = 10
 			NOT = { exists = GMV }
-			OR = {
-				tag = BOH
-				tag = HUN
-				tag = POL
-			}
 			if = {
+				limit = {
+					tag = BOH
+				}
+				accepted_culture = slovak
+				accepted_culture = czech
+			}
+			else_if = {
+				limit = {
+					tag = HUN
+				}
+				accepted_culture = slovak
+				accepted_culture = czech
+			}
+			else_if = {
 				limit = {
 					tag = POL
 				}
@@ -451,6 +462,7 @@ country_decisions = { # Weaker Prussia
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
 			NOT = { has_country_flag = formed_north_german_flag }
+			NOT = { has_country_flag = formed_rhineland_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -509,6 +521,7 @@ country_decisions = { # Weaker Prussia
 			set_country_flag = formed_switzerland_flag
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
+			set_country_flag = formed_rhineland_flag
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -546,6 +559,159 @@ country_decisions = { # Weaker Prussia
 				limit = {
 					has_custom_ideas = no
 					NOT = { has_idea_group = PRU_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_rhineland = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_rhineland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			capital_scope = {
+				region = north_german_region
+			}
+			culture_group = germanic
+			NOT = { tag = RHI }
+			NOT = { exists = RHI }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { has_reform = celestial_empire } 
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alsace_area
+				area = upper_rhineland_area
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = palatinate_area
+				area = franconia_area
+				area = upper_franconia_area
+				area = hesse_area
+				area = thuringia_area
+				area = westphalia_area
+				area = braunschweig_area
+				area = north_westphalia_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			NOT = { exists = RHI }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					area = alsace_area
+					area = upper_rhineland_area
+					area = lower_swabia_area
+					area = upper_swabia_area
+					area = palatinate_area
+					area = franconia_area
+					area = upper_franconia_area
+					area = hesse_area
+					area = thuringia_area
+					area = westphalia_area
+					area = braunschweig_area
+					area = north_westphalia_area
+					area = north_rhine_area
+					area = lower_rhineland_area
+				}
+			}
+			owns_core_province = 1876
+			owns_core_province = 67
+			owns_core_province = 1758
+			owns_core_province = 1868
+			owns_core_province = 75
+			owns_core_province = 85
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+		}
+		effect = {
+			change_tag = RHI
+			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_north_german_flag
+			set_country_flag = formed_rhineland_flag
+			restore_country_name_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			custom_tooltip = form_rhineland_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						culture_group = germanic
+						capital_scope = {
+							OR = {
+								area = alsace_area
+								area = upper_rhineland_area
+								area = lower_swabia_area
+								area = upper_swabia_area
+								area = palatinate_area
+								area = franconia_area
+								area = upper_franconia_area
+								area = hesse_area
+								area = thuringia_area
+								area = westphalia_area
+								area = braunschweig_area
+							}
+						}
+					}
+					ROOT = { inherit = PREV }
+				}
+			}
+			north_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -704,6 +870,18 @@ country_decisions = { # Weaker Prussia
 					tag = HUN
 				}
 				change_tag = HAE
+			}
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = {
+					NOT = { has_reform = austrian_dual_monarchy }
+				}
+				add_government_reform = austrian_dual_monarchy
 			}
 			restore_country_name_effect = yes
 			set_country_flag = formed_austria_hungary_empire_flag 
@@ -1442,6 +1620,111 @@ country_decisions = {
 		effect = {
 			clr_country_flag = sea_state_edicts_flag
 			custom_tooltip = sea_enable_state_edicts_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_new_world_kill_ruler_options = {
+		major = yes
+		potential = {
+			has_reform = native_clan_council_reform
+			ai = no
+		}
+		allow = {
+			NOT = { has_country_modifier = sea_new_world_kill_ruler_options_cooldown }
+			prestige = 0
+			has_reform = native_clan_council_reform
+		}
+		effect = {
+			add_country_modifier = {
+				name = sea_new_world_kill_ruler_options_cooldown
+				duration = 5475
+			}
+			add_prestige = -33
+			country_event = { id = sealand_events.11 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_new_world_more_trade_power = {
+		major = yes
+		potential = {
+			OR = {
+				tag = ATW
+				was_tag = ATW
+				tag = PCH
+				was_tag = PCH
+				tag = KER
+				was_tag = KER
+				tag = AZT
+				was_tag = AZT
+				tag = CSU
+				was_tag = CSU
+				tag = CAB
+				was_tag = CAB
+				tag = TUA
+				was_tag = TUA
+			}
+			NOT = { has_country_flag = sea_new_world_more_trade_power_flag }
+			ai = no
+		}
+		allow = {
+			mercantilism = 50
+		}
+		effect = {
+			add_mercantilism = -50
+			set_country_flag = sea_new_world_more_trade_power_flag
+			add_country_modifier = {
+				name = sea_new_world_more_trade_power_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_new_world_religious_reform_gov_options = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = sea_new_world_religious_reform_gov_options_flag }
+			OR = {
+				tag = TUA
+				tag = CAB
+				tag = AZT
+				tag = CSU
+				tag = INC
+			}
+			ai = no
+		}
+		allow = {
+			if = { limit = { tag = TUA } tag = TUA }
+			if = { limit = { tag = CAB } tag = CAB }
+			if = { limit = { tag = AZT } tag = AZT }
+			if = { limit = { tag = CSU } tag = CSU }
+			if = { limit = { tag = INC } tag = INC }
+			is_religion_reformed = yes
+		}
+		effect = {
+			country_event = { id = sealand_events.10 }
+			set_country_flag = sea_new_world_religious_reform_gov_options_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_get_specific_advisor = {
+		major = yes
+		potential = { 
+			NOT = { has_country_flag = sea_get_specific_advisor_flag }
+		}
+		allow = {
+			treasury = 33
+		}
+		effect = {
+			set_country_flag = sea_get_specific_advisor_flag
+			country_event = { id = sea_advisor_event.0 }
 		}
 		ai_will_do = {
 			factor = 0
@@ -2187,15 +2470,12 @@ country_decisions = {
 			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
 		}
 		allow = {
-			mil_power = 500
+			mil_power = 300
 		}
 		effect = {
 			set_country_flag = swi_recruit_merc_inf_enabled
-			add_mil_power = -500
-			add_country_modifier = {
-				name = swi_recruit_merc_inf_enabled_modifier
-				duration = -1
-			}
+			add_mil_power = -300
+			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_tt
 			custom_tooltip = swi_recruit_merc_inf_enable_tt
 		}
 		ai_will_do = {
@@ -2216,8 +2496,8 @@ country_decisions = {
 		}
 		effect = {
 			clr_country_flag = swi_recruit_merc_inf_enabled
+			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_ttt
 			custom_tooltip = swi_recruit_merc_inf_disable_tt
-			remove_country_modifier  = swi_recruit_merc_inf_enabled_modifier
 		}
 		ai_will_do = {
 			factor = 0
@@ -2416,5 +2696,187 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+	}
+}
+
+# Imperial Japan
+country_decisions = {
+	embrace_the_rising_sun = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = embrace_the_rising_sun_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = IJP }
+			OR = {
+				tag = ASK
+				tag = JAP
+				tag = UES
+				tag = SMZ
+				tag = TKD
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				# Sea
+				area = luzon_area
+				area = southern_luzon_area
+				area = mindanao_area
+				area = west_mindanao_area
+				area = visayas_area
+				area = palawan_area
+				region = malaya_region
+				region = indonesia_region
+				# Land
+				area = guangdong_area
+				area = fujian_area
+				area = zhejiang_area
+				area = ganzhou_area
+				area = hainan_area
+				region = north_china_region
+				region = south_china_region
+				# Sea & Land
+				region = japan_region
+				region = korea_region
+				area = taiwan_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = IJP }
+			OR = {
+				tag = ASK
+				tag = JAP
+				tag = UES
+				tag = SMZ
+				tag = TKD
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_tribal = no
+			japan_region = {
+				type = all
+				owned_by = ROOT
+			}
+			korea_region = {
+				type = all
+				owned_by = ROOT
+			}
+			taiwan_area= {
+				type = all
+				owned_by = ROOT
+			}
+			OR = {
+				AND = {
+					luzon_area = {
+						type = all
+						owned_by = ROOT
+					}
+					southern_luzon_area = {
+						type = all
+						owned_by = ROOT
+					}
+					mindanao_area = {
+						type = all
+						owned_by = ROOT
+					}
+					west_mindanao_area = {
+						type = all
+						owned_by = ROOT
+					}
+					visayas_area = {
+						type = all
+						owned_by = ROOT
+					}
+					palawan_area = {
+						type = all
+						owned_by = ROOT
+					}
+					num_of_owned_provinces_with = {
+						value = 40
+						OR = {
+							region = malaya_region
+							region = indonesia_region
+						}
+					}
+				}
+				AND = {
+					guangdong_area = {
+						type = all
+						owned_by = ROOT
+					}
+					fujian_area = {
+						type = all
+						owned_by = ROOT
+					}
+					zhejiang_area = {
+						type = all
+						owned_by = ROOT
+					}
+					ganzhou_area = {
+						type = all
+						owned_by = ROOT
+					}
+					hainan_area = {
+						type = all
+						owned_by = ROOT
+					}
+					num_of_owned_provinces_with = {
+						value = 60
+						OR = {
+							region = north_china_region
+							region = south_china_region
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = IJP
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { religion = shinto }
+				}
+				change_religion = shinto
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government = monarchy
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			add_government_reform = imperial_japan_monarchy
+			set_country_flag = embrace_the_rising_sun_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
 	}
 }

@@ -346,8 +346,8 @@ swiss_missions_3 = {
 				}
 				OR = {
 					AND = {
-						num_of_banners = 40
-						is_in_deficit = no
+						num_of_banners = 33
+						#is_in_deficit = no
 						is_bankrupt = no
 					}
 					custom_trigger_tooltip = {
@@ -357,8 +357,8 @@ swiss_missions_3 = {
 				}
 			}
 			else = {
-				num_of_banners = 40
-				is_in_deficit = no
+				num_of_banners = 33
+				#is_in_deficit = no
 				is_bankrupt = no
 			}
 		}

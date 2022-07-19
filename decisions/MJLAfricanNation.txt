@@ -81,7 +81,7 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				continent = africa
-				value = 100
+				value = 169
 			}
 			calc_true_if = {
 				amount = 9

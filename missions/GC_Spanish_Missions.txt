@@ -979,6 +979,12 @@ gc_spain_3 = {
 			126 = {
 				add_permanent_claim = ROOT
 			}
+			173 = {
+				add_permanent_claim = ROOT
+			}
+			174 = {
+				add_permanent_claim = ROOT
+			}
 			northern_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -995,14 +1001,24 @@ gc_spain_3 = {
 		# free mission
 
 		provinces_to_highlight = {
-			area = northern_morocco_area
+			OR = {
+				province_id = 173
+				province_id = 174
+				area = northern_morocco_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			northern_morocco_area = {
-				type = all
-				owned_by = ROOT
+			OR = {
+				AND = {
+					173 = { owned_by = ROOT }
+					174 = { owned_by = ROOT }
+				}
+				northern_morocco_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 
@@ -1019,6 +1035,27 @@ gc_spain_3 = {
 				add_claim = ROOT
 			}
 			algiers_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			languedoc_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }

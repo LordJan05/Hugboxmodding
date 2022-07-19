@@ -458,6 +458,14 @@ support_independence_action = {
 			always = no
 		}
 	}
+	condition = {
+		tooltip = support_independence_action_tt
+		potential = {
+		}
+		allow = {
+			FROM = { overlord = { ai = yes } }
+		}
+	}
 }
 
 guaranteeaction = {
@@ -772,6 +780,21 @@ ask_for_tributary_state_action = {
 					NOT = { ROOT = { capital_scope = { region = japan_region } } }
 				}
 			}
+		}
+	}
+}
+callaction= {
+	condition = {
+		tooltip = cannot_call_defender_of_faith
+		potential = {
+			FROM = {
+				is_defender_of_faith = yes
+				NOT = { has_guaranteed = ROOT }
+				NOT = { alliance_with = ROOT }
+			}
+		}
+		allow = {
+			always = no
 		}
 	}
 }

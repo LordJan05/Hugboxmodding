@@ -1,7 +1,7 @@
 # Morungole
-owner = TRK
-controller = TRK
-add_core = TRK
+owner = SHI
+controller = SHI
+add_core = SHI
 culture = acholi
 religion = shamanism #Fetishism
 trade_goods = tropical_wood

@@ -117,13 +117,13 @@
         teutonic_events.4.d:0 "We have received a word from Brandenburg that they have declined our offer."
         teutonic_events.4.a:0 "It was worth a try."
         #Partition of Commonwealth event:
-        teutonic_events.5.t:0 "The question of Királyföld"
+        teutonic_events.5.t:0 "The Question of Királyföld"
         teutonic_events.5.d:0 "In 1211, King Andrew II of Hungary, granted Teutonic Order, Burzenland area, in return for them to defend Hungary from the Cumans. At which they did a very good job at, that they were granted many privileges, something that the Hungarian nobles didn't like. Especially the part that Teutonic Order treated their land as their own autonomous territory, free of the taxes and slowly wanting to turn it into independent state, independent from Hungarian king. Teutons seeing that Hungarian heir was in favor of removing Teutons from their lands, decided to act by petitioning Pope Honorius III to be placed directly under the authority of the Papal See, instead of the Hungarian king, which angered King Andrew II and resulted him to forcefully drive out the Teutons from their lands."
         teutonic_events.5.a:0 "The time has come to take back what was ours by right."
         teutonic_events.5.aa.tt:0 "\nShould they §Gaccept§!, the following will happen:"
         teutonic_events.5.ab.tt:0 "\nShould they §Rdecline§!, the following will happen:"
         teutonic_events.5.b:0 "Our matters are needed elsewhere."
-        teutonic_events.6.t:0 "The question of Királyföld"
+        teutonic_events.6.t:0 "The Question of Királyföld"
         teutonic_events.6.d:0 "In 1211, King Andrew II of Hungary, granted Teutonic Order, Burzenland area, in return for them to defend Hungary from the Cumans. At which they did a very good job at, that they were granted many privileges, something that the Hungarian nobles didn't like. Especially the part that Teutonic Order treated their land as their own autonomous territory, free of the taxes and slowly wanting to turn it into independent state, independent from Hungarian king. Teutons seeing that Hungarian heir was in favor of removing Teutons from their lands, decided to act by petitioning Pope Honorius III to be placed directly under the authority of the Papal See, instead of the Hungarian king, which angered King Andrew II and resulted him to forcefully drive out the Teutons from their lands.\nAnd now they have come back to relcaim what they think to be theirs by right."
         teutonic_events.6.a:0 "We do not want any trouble with the Teutons."
         teutonic_events.6.b:0 "If they want it, they have to come and get it."
@@ -279,7 +279,7 @@
         mesopotamian_mamluks_title:0 "Mesopotamian Mamluks"
         mesopotamian_mamluks_desc:0 "Mesopotamian Mamluks"
         mesopotamian_mamluks_modifier:0 "Mesopotamian Mamluks"
-        mesopotamian_mamluks_tooltip:0 "Get §Y10§! Cavalry units in §Y[From.Capital.GetCapitalName]§!."
+        mesopotamian_mamluks_tooltip:0 "The §YMesopotamian Mamluks§! mercenary company becomes available for hire."
         subjugation_of_beyliks_modifier:0 "Subjugation of Beyliks"
         drive_out_ottomans_title:0 "Drive Out Ottomans"
         drive_out_ottomans_desc:0 "Drive Out Ottomans"
@@ -604,6 +604,12 @@
         sea_por_second_chance_desc:0 "Main use of this mission, is in case your early explorer decided to die too early. Then this provides you with second chance."
         sea_portuguese_empire_title:0 "Portuguese Overseas"
         sea_portuguese_empire_desc:0 "We have many colonies and territories scattered all across the sea, some even far away lands, newly discovered. Thus there's a proposition to reform our nation to something more suiting for this lifestyle."
+       # Modifiers:
+        gc_por_establishes_foothold_brazil_modifier:0 "Brazilian Manpower"
+        gc_por_caribbean_modifier:0 "Improved Cannons"
+        gc_por_colonise_central_africa_modifier:0 "Cheaper Labour"
+        gc_por_discovers_cape_good_hope_modifier:0 "Protected Trading"
+        gc_por_conquers_zanzibar_modifier:0 "Disciplined Merchants"
        # Country:
         LUS:0 "Portuguese Empire"
         LUS_ADJ:0 "Portuguese"
@@ -667,7 +673,7 @@
         sea_pap_naples_submission_desc:0 "Naples Submission"
         sea_pap_naples_submission_modifier:0 "Quest From God"
        # Events:
-        sea_papal_events.1.t:0 "Sudden death of our Pope"
+        sea_papal_events.1.t:0 "Sudden Death of Our Pope"
         sea_papal_events.1.d:0 "We have reasons to believe that the king of Naples, [NAP.Monarch.GetName], has organized the assassination of our Pope after hearing the rumours of Pope's interested in Naples crowns legitimacy. Of course him denying it, we have no other option than to demand his submission forcefully and face before us or send him to face the God at let him decide his fate."
         sea_papal_events.1.a:0 "Force Naples to submit to us by military means."
         #sea_papal_events.1.b:0 "The Holy Father knows the best."
@@ -675,7 +681,9 @@
           # CB:
           cb_pap_vassalize_naples:0 "Force Naples Submission"
           cb_pap_vassalize_naples_desc:0 "Naples must be submissioned to face the God for their actions."
-        sea_papal_events.2.t:0 "A Papal Conclave for the new Pope"
+          pap_vassalize_naples:0 "Take the capital and vassalize them"
+          pap_vassalize_naples_desc:0 "War goal is to take the capital."
+        sea_papal_events.2.t:0 "A Papal Conclave for the New Pope"
         sea_papal_events.2.d:0 "With the passing of our previous pope, a meeting of the College of Cardinals has been arranged at Vatican for the new Papal election, where the new Pope ended up being [Root.Monarch.GetName].\nOf course we still have the ability to influence the votes for someone more favourable to us and from the following best three canditates, that have been presented before us, we should..."
         sea_papal_events.2.a:0 "Have administratively focused Pope."
         sea_papal_events.2.b:0 "Have diplomatically focused Pope."
@@ -683,7 +691,7 @@
         sea_papal_events.2.e:0 "Have none chosen and keep the current Pope."
         papacy_events.11.e:0 "Prioritize on the teachings of construction and development."
         build_dev_vatican_library:0 "The Vatican Library - Development Edition"
-        build_dev_vatican_library_tt:0 "§YThe Vatican Library - Development Edition§! will be established in §Y[118.GetName]§!, giving the following effects:\nConstruction Cost: §G-10.0%§!\nDevelopment Cost: §G-10.0%§!\nState Maintenance: §G-20.0%§!"
+        build_dev_vatican_library_tt:0 "§YThe Vatican Library - Development Edition§! will be established in §Y[118.GetName]§!, giving the following effects:\nConstruction Cost: §G-5.0%§!\nDevelopment Cost: §G-5.0%§!\nState Maintenance: §G-20.0%§!"
         sea_emp_pap_swiss_guard_mercs_enabled:0 "Enables '§YMay God Bless Us§!' Papacy action, which allows us to spawn §YSwiss Guards§!."
        # Papacy Modifiers:
         pap_bless_monarch_tt:0 "Spawns 7 §YSwiss Guard§!"
@@ -704,6 +712,8 @@
         swi_recruit_merc_inf_disable_title:0 "Dissolve Our Own Special Mercenaries"
         swi_recruit_merc_inf_disable_desc:0 "We have no need for them any longer."
         swi_recruit_merc_inf_disable_tt:0 "Disables '§MRecruit Swiss Mercenaries§!' Decision, that allows us to spawn §YSwiss Mercenaries§!."
+        swi_recruit_merc_inf_enabled_modifier_tt:0 "[Root.GetName] gets '§YSwiss Mercenaries§!' until the end of the game, giving the following effects:\nPossible Mercenaries: §R-33.0%§!\n"
+        swi_recruit_merc_inf_enabled_modifier_ttt:0 "§YSwiss Mercenaries§! will be removed from [Root.GetName].\n"
         swi_recruit_merc_inf_enabled_modifier:0 "Swiss Mercenaries"
         swi_recruit_merc_inf_title:0 "§MRecruit Swiss Mercenaries§!"
         swi_recruit_merc_inf_desc:0 "§RWhen switching unit types, then it will also switch for those units!§!"
@@ -732,14 +742,36 @@
         ambrosian_merchants_republic_desc:0 "It was a short-lived city-state government that formed in the Duchy of Milan when the Duke died without an heir in 1447 but now it has been reformed into Merchants Republic."
      
  # Other stuff:
+        # Naval Doctrines:
+        sea_ship_durability:0 "Iron Fleet"
+        sea_ship_durability_desc:0 "Our ships are not safe on every corner of the sea, so we must always take care of our ship and be ready for unwanted disruptions."
+        sea_blockading_wall:0 "Blockade Wall"
+        sea_blockading_wall_desc:0 "We must put our focus into strenghtening our abilities to blockade and also cover more sea than our enemies can."
+        sea_coastal_marines:0 "Coastal Marines"
+        sea_coastal_marines_desc:0 "Our Fleet policy is to harass enemy coastline not just with navy but with our soldiers, Marines, as well."
         # Change Muslim School:
         mjl_change_muslim_school_trigger_tooltip:0 "Can change Muslim School on §Y[GetMonthName_change_school_modifier] [Root.change_school_modifier_length.GetValue]§!."
         # Privileges timer:
         mercantilism_for_10_years_tooltip:0 "Get ability to gain Mercantilism again on §Y[GetMonthName_mercantilism_use] [Root.mercantilism_use_length.GetValue]§!."
         burghers_loans_use_for_10_years_tooltip:0 "Can grant this privilege again on §Y[GetMonthName_burghers_loans_use] [Root.burghers_loans_use_length.GetValue]§!."
+        # Religions:
+         # Reformed:
+         sea_fervor_peace:0 "Fervent focus on peace"
+         sea_fervor_peace_short:0 "Peace"
+         # Anglican:
+         get_new_general_aspect:0 "§YRecruit a War General§!" # Hogomod
+         desc_get_new_general_aspect:0 "The times are dire and we must get ourselves the best our military school has to offer."
+        # Privileges:
+        estate_church_no_church_unrest:0 "$ESTATE_NAME$ Unrest Suppression"
+        estate_church_no_church_unrest_desc:0 "In the lands of God, there shall be no turmoil happening and those who are not willing to accept it, will accept it in the face of justice or in the face of God."
+        estate_church_no_church_unrest_granted_tt:0 "Every owned province with §YTaxation§! building gains:\nLocal Unrest: §G-4.00§!"
+        estate_church_no_church_unrest_revoked_tt:0 "Every owned province with §YTaxation§! building loses:\nLocal Unrest: §G-4.00§!"
+        estate_church_no_church_unrest_modifier:0 "Unrest Suppression"
+        desc_estate_church_no_church_unrest_modifier:0 "In the lands of God, there shall be no turmoil happening and those who are not willing to accept it, will accept it in the face of justice or in the face of God."
         # New World and Colonial Australia nerf modifier:
         new_wrold_nerfs_modifier:0 "Nerfed Land"
         desc_new_wrold_nerfs_modifier:0 "Could use more nerf."
+        new_world_splendor:0 "Splendor Blendor"
         # St. Lawrence river passable:
         north_american_lake_area:0 "Great Lakes"
         PROV7055:0 "St. Lawrence"
@@ -750,12 +782,11 @@
         # Serbia Tsardom:
         serbia_unite_jugosland_title:0 "Unite Balkan Slavs"
         serbia_unite_jugosland_desc:0 "Neither Death nor Dishonor."
-        # Veche Tsardom:
-        veche_tsardom:0 "Veche Great Republic"
-        veche_tsardom_desc:0 "This state is governed by a Veche, a council with the highest legislative and judicial authority consisting of Boyars, Merchants and even commoners."
         # Tribal Divese Society:
         diverse_society_reform:0 "Diverse Society"
         diverse_society_reform_desc:0 "We are ruling over many different tribes and if we want to maintain our unity, we must widen it by accepting more into this circle of unity."
+        # English Monarchy:
+        enable_disabled_nobility_tt:0 "Enables Nobility estate for §YEnglish Monarchy§!."
         # Burgundian Union:
         burgundy_juniors_title:0 "Burgundian Junior Partner"
         burgundy_juniors_title_plural:0 "Burgundian Junior Partners"
@@ -779,7 +810,7 @@
         sealand_events.3.a:0 "Gotta collect them all."
         sealand_home_modifier:0 "Sealand"
         desc_sealand_home_modifier:0 "Tallinn, home. At least it was before I fucked everything up."
-        sealand_events.6.t:0 "Davlan's advice"
+        sealand_events.6.t:0 "Davlan's Advice"
         sealand_events.6.d:0 "Hello, fellow colony enjoyer. Davlan has noticed that you have paid off your loan, instead of letting your overlord do it for you. For that he advices you to never pay off your own loans and instead, you should take more loans and then ask your overlord to pay off those loans."
         sealand_events.6.a:0 "Thank you for this advice, sir!"
         unite_estonia_title:0 "Moodusta Eesti"
@@ -788,7 +819,7 @@
         unite_finland_desc:0 "If you have a problem, if no one else can help, and if you can find them... maybe you can hire The Finland."
         free_hong_kong_modifier:0 "Free Hong Kong"
         macaroni:0 "One Macaroni"
-        macaroniDESC:0 "This is just a one single macaroni.\nFun fact: Macaroni is dry pasta shaped like narrow tubes."
+        macaroniDESC:0 "This is just a one single macaroni.\nFun fact: Macaroni is dry pasta shaped like narrow tubes.\nAnother fun fact: It originated from this island. Source: Trust me, dude."
         sea_remove_state_edicts_title:0 "Ability to Enable State Edicts: §GEnabled§!"
         sea_remove_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
         sea_remove_state_edicts_tt:0 "Clicking this, will §RDisable§! the ability to enact State Edicts and current Edicts that are enabled, will be disabled on new month."
@@ -796,7 +827,7 @@
         sea_enable_state_edicts_title:0 "Ability to Enable State Edicts: §RDisabled§!"
         sea_enable_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
         sea_enable_state_edicts_tt:0 "Clicking this, will §GEnable§! the ability to enact State Edicts."
-        military_reform_cooldown:0 "Now's not the time."
+        military_reform_cooldown:0 "Now's not the time"
         military_reform_cooldown_modifier:0 "Military Reform Cooldown"
         # For Israel formable:
         hebrew_culture_provinces_tooltip:0 "All Primary Culture provinces will now have §YHebrew§! Culture."
@@ -813,17 +844,19 @@
         road_workshop_modifier:0 "Improved Production Network"
         road_temple_modifier:0 "Improved Taxation Network"
         road_marketplace_modifier:0 "Improved Trading Network"
-        building_fort3:0 "Castle 2"
-        building_fort5:0 "Bastion 2"
-        building_fort7:0 "Star Fort 2"
+        building_fort3:0 "Keep"
+        building_fort5:0 "Redoubt"
+        building_fort7:0 "Ravelin"
         # Ages:
         age_i_autonomy:0 "Centralization"
         age_i_pp_insults:0 "Advanced Diplomacy"
         age_i_cheap_ships:0 "Cheaper Shipbuilding"
         age_ii_provincial_trade_power:0 "Provincial Trading"
         age_ii_tax_everything_but_the_church_and_the_nobles:0 "Tax the Peasants"
+        age_ii_increased_banner_mercs:0 "Focus on Mercenaries"
         age_ii_cheaper_units:0 "Standard Army"
         age_iii_siege_ability:0 "Tear Down This Wall!"
+        age_iii_warscore_cost:0 "Aggressive Expansion"
         age_iv_extra_merchant:0 "Extra Merchant"
         age_iv_african_reinforce:0 "African Reinforcements"
         # HRE:
@@ -842,9 +875,6 @@
         emperor_reichskrieg_elector:0 "Reichskrieg"
         emperor_erbkaisertum:0 "Proclaim Erbkaisertum"
         emperor_gemeinerpfenning_emperor:0 "Gemeiner Pfennig"
-        # Advisor:
-        centralize_autonomy:0 "Bureaucrat" # Couldn't think of better name, pls no judge.
-        centralize_autonomy_desc:0 ""
         # Diplomatic Actions:
         sea_sunni_crusade_jihad_diplo_action_title:0 "Call for Jihad"
         sea_sunni_crusade_jihad_diplo_action_tooltip:0 "Jihads give Sunni countries a significant manpower and income bonus while at war with them."
@@ -852,13 +882,251 @@
         sea_sunni_crusade_jihad_diplo_action_defender_of_faith:0 "§ROnly as Defender of the Faith, are we allowed to call for Jihad.§!"
         sea_sunni_crusade_jihad_diplo_action_already_started:0 "§RJihad has already been launched. We must wait for it to end before calling another.§!"
         sea_sunni_crusade_jihad_diplo_action_same_religion:0 "§RWhile tempting, we cannot launch a Jihad against fellow Muslims.§!"
+        sea_sunni_crusade_jihad_diplo_action_is_jihad_target:00 "§RTarget is already under Jihad.§!"
         sea_sunni_crusade_jihad_diplo_action_modifier:0 "Jihad"
         sea_sunni_crusade_jihad_diplo_action_modifier_desc:0 "Sunnies all over the world are encouraged to attack you in the name of their Aallah! The Jihad will last until we have been destroyed or until this expiration date:"
         sea_jihad_crusade_modifier:0 "Jihad"
         sea_jihad_crusade_modifier_desc:0 "Sunnies all over the world are encouraged to attack §Y[jihad_crusade_target.GetName]§! in the name of Our Aallah! The Jihad will last for 30 years or until the Infidel has been destroyed."
         sea_anti_jihad_crusade_modifier:0 "Defence From Jihad"
         sea_anti_jihad_crusade_modifier_desc:0 "One of the Sunnies that are on Jihad, are using their advantanges against their fellow Sunni nation, instead of against their true enemies."
+        sea_spy_kill_heir_diplo_action_title:0 "Assassinate Heir"
+        sea_spy_kill_heir_diplo_action_tooltip:0 "Assassinate target's heir.\nWith unlocked '§YAudit Checks§!' in §YEspionage Ideas§!, there will be §G100%§! chance of success to assassinate target's heir, at the cost of §Y100.00§! Spy Network."
+        sea_spy_kill_heir_diplo_action_desc:0 "Assassinate heir will reduce the size of our §Y[From.GetAdjective]§! Spy Network by §R100.00§! and we will have §Y30%§! chance of success to assassinate §Y[From.GetAdjective]§! heir §Y[From.Monarch.GetName] [From.Monarch.Dynasty.GetName]§!.\n\nWith unlocked '§YAudit Checks§!' in §YEspionage Ideas§!, there will be §G100%§! chance of success to assassinate target's heir, and it will reduce the size of our §Y[From.GetAdjective]§! Spy Network by §R100.00§!."
+        sea_spy_kill_heir_covert_action_not_rival:0 "§RTarget must be a Rival, to use this action.§!"
+        sea_spy_kill_heir_covert_action_not_enough_spy_network:0 "§RYour §Y[From.GetAdjective]§! Spy Network needs to be of at least size §Y100.00§! to use this action.§!"
+        sea_spy_kill_heir_covert_action_target_no_heir:0 "§RTarget must have an heir.§!"
+        sea_spy_kill_heir_covert_action_cooldown:0 "§R§Y[From.GetAdjective]§! heir has already been assassinated recently. You need to wait until §Y30§! years cooldown is over, to use this action.§!"
+        sea_spy_kill_heir_diplo_action_modifier:0 "Heir Assassination in progress..."
+        EVTOPTC9459:0 "Very Sus..." # Hunting Accident aka assassination
         
+        sea_spy_kill_random_general_diplo_action_title:0 "Assassinate General"
+        sea_spy_kill_random_general_diplo_action_tooltip:0 "Assassinate target's random general."
+        sea_spy_kill_random_general_diplo_action_desc:0 "Assassinate General will reduce the size of our §Y[From.GetAdjective]§! Spy Network by §R60.00§! and will have §Y[From.GetAdjective]§! random general assassinated."
+        sea_spy_kill_random_general_covert_action_low_tech:0 "§RRequires Diplomatic Technology 8§!"
+        sea_spy_kill_random_general_covert_action_not_enough_spy_network:0 "§RYour §Y[From.GetAdjective]§! Spy Network needs to be of at least size §Y60.00§! to use this action.§!"
+        sea_spy_kill_random_general_covert_action_not_war_enemy:0 "§RYou have to be at war with the target, to use this action.§!"
+        sea_spy_kill_random_general_covert_action_target_no_general:0 "§RTarget must have valid general, that is neither ruler nor heir.§!"
+
+        sea_spy_sabotage_defences_diplo_action_title:0 "Sabotage Defences"
+        sea_spy_sabotage_defences_diplo_action_tooltip:0 "Sabotage the target's defensive capabilities"
+        sea_spy_sabotage_defences_diplo_action_desc:0 "Sabotage Defences will reduce the size of our §Y[From.GetAdjective]§! Spy Network by §R80.00§! and have the following effects on them:\nFort Defense: §R-10.0%§!\n\nIt will last for §Y1§! year."
+        sea_spy_sabotage_defences_covert_action_low_tech:0 "§RRequires Diplomatic Technology 6§!"
+        sea_spy_sabotage_defences_covert_action_not_enough_spy_network:0 "§RYour §Y[From.GetAdjective]§! Spy Network needs to be of at least size §Y80.00§! to use this action.§!"
+        sea_spy_sabotage_defences_covert_action_not_war_enemy:0 "§RYou have to be at war with the target, to use this action.§!"
+        sea_spy_sabotage_defences_covert_action_modifier:0 "Defences Sabotaged"
+        sea_spy_sabotage_defences_covert_action_modifier_desc:0 "The enemy spies have sabotaged our defences, leaving us vulnerable for a short time being."
+        sea_spy_sabotage_defences_covert_action_already_has_modifier:0 "§RTheir defences are already being sabotaged.§!"
+        # Advisor: # Couldn't think of better names for advisors, pls no judge.
+           #Decision/events:
+            sea_get_specific_advisor_title:0 "Recruit Specific Advisor"
+            sea_get_specific_advisor_desc:0 "No one reads this anyway."
+            sea_advisor_event.0.t:0 "Recruit Specific Advisor"
+            sea_advisor_event.0.d:0 "Don't want to risk losing too much cash to RNG? Then you came to the right place. We got wide range of advisors to hire, all in their own categories. Go ahead, see what you like. And if you can't find anything good, you can always return for next time. The doors are open as long as you have the ducats."
+            sea_advisor_event.0.0:0 "Perhaps another time."
+            sea_advisor_event.0.a:0 "Check Administrative Advisors."
+            sea_advisor_event.0.b:0 "Check Diplomatic Advisors."
+            sea_advisor_event.0.c:0 "Check Military Advisors."
+            sea_advisor_event.1.t:0 "Administrative Advisors"
+            sea_advisor_event.2.t:0 "Diplomatic Advisors"
+            sea_advisor_event.3.t:0 "Military Advisors"
+            sea_advisor_event.1.d:0 "Keep in mind that the advisors will be low skilled, since they're somewhat new for the job, so if you want to up their skill, you have to pay from your own pockets."
+         # Adm:
+           centralize_autonomy:0 "Bureaucrat" # Couldn't think of better name, pls no judge.
+           centralize_autonomy_desc:0 ""
+           advisor_adm_tech_cost:0 "Admin Tech"
+           advisor_adm_tech_cost_desc:0 ""
+           advisor_centralize_autonomy:0 "Bureaucrat"
+           advisor_centralize_autonomy_desc:0 ""
+           advisor_war_exhaust:0 "Exhauster"
+           advisor_war_exhaust_desc:0 ""
+           advisor_splendor_blendor:0 "Splendid"
+           advisor_splendor_blendor_desc:0 ""
+           advisor_legitimate_government:0 "Legitimator"
+           advisor_legitimate_government_desc:0 ""
+           advisor_horde_government:0 "Horde Uniter"
+           advisor_horde_government_desc:0 ""
+           advisor_republic_government:0 "Republican"
+           advisor_republic_government_desc:0 ""
+           advisor_devoted_government:0 "Devoted"
+           advisor_devoted_government_desc:0 ""
+           advisor_increase_absolutism:0 "Absolutor"
+           advisor_increase_absolutism_desc:0 ""
+           advisor_reform_growth:0 "Reformator"
+           advisor_reform_growth_desc:0 ""
+           advisor_idealistic_views:0 "Idealist"
+           advisor_idealistic_views_desc:0 ""
+          # Events: 
+            sea_advisor_event.1.t:0 "Administrative Advisors"
+            sea_advisor_event.1.1:0 "£sea_adm_tech_cost_modifier£ Administrative Technology Cost: §G-5.0%§!"
+            sea_advisor_event.1.2:0 "£sea_idea_cost£ Idea Cost: §G-5.0%§!"
+            sea_advisor_event.1.3:0 "£sea_prestige£Yearly Prestige: §G+1.00§!"
+            sea_advisor_event.1.4:0 "£sea_legitimacy£ Yearly Legitimacy: §G+0.25§!"
+            sea_advisor_event.1.5:0 "£sea_republican_tradition£ Yearly Republican Tradition: §G+0.10§!"
+            sea_advisor_event.1.6:0 "£sea_devotion£ Yearly Devotion: §G+0.25§!"
+            sea_advisor_event.1.7:0 "£sea_horde_unity£ Yearly Horde Unity: §G+0.25§!"
+            sea_advisor_event.1.8:0 "£sea_reform_progress_growth£ Reform Progress Growth: §G+10.0%§!"
+            sea_advisor_event.1.9:0 "£sea_monthly_splendor£ Monthly Splendor: §G+1.00§!"
+            sea_advisor_event.1.10:0 "£sea_yearly_absolutism£ Yearly Absolutism: §G+0.25§!"
+            sea_advisor_event.1.11:0 "£sea_global_autonomy£ Monthly Autonomy Change: §G-0.03§!"
+            sea_advisor_event.1.12:0 "£sea_stability_cost_modifier£ Stability Cost Modifier: §G-10.0%§!"
+            sea_advisor_event.1.13:0 "£sea_war_exhaustion£ Monthly War Exhaustion: §G-0.04§!"
+            sea_advisor_event.1.14:0 "£sea_inflation_reduction£ Yearly Inflation Reduction: §G+0.10§!"
+            sea_advisor_event.1.15:0 "£sea_global_tax_modifier£ National Tax Modifier: §G+10.0%§!"
+            sea_advisor_event.1.16:0 "£sea_production_efficiency£ Production Efficiency: §G+10.0%§!"
+            sea_advisor_event.1.17:0 "£sea_global_unrest£ National Unrest: §G-2.00§!"
+            sea_advisor_event.1.18:0 "£sea_global_missionary_strength£ Missionary Strength: §G+2.0§!"
+         # Dip:
+           advisor_dip_tech_cost:0 "Diplo Tech"
+           advisor_dip_tech_cost_desc:0 ""
+           advisor_defence_spymaster:0 "Counter Spymaster"
+           advisor_defence_spymaster_desc:0 ""
+           advisor_corrupt_decay:0 "Judge"
+           advisor_corrupt_decay_desc:0 ""
+           advisor_imperial_authority:0 "Imperial Advisor"
+           advisor_imperial_authority_desc:0 ""
+           advisor_mandate_growth:0 "Fraternity Advisor"
+           advisor_mandate_growth_desc:0 ""
+           advisor_culture_convert:0 "Culturevator"
+           advisor_culture_convert_desc:0 ""
+           advisor_colonial_increase:0 "Colonizer"
+           advisor_colonial_increase_desc:0 ""
+           advisor_reduced_agg_exp:0 "Promoter"
+           advisor_reduced_agg_exp_desc:0 ""
+           advisor_naval_engagement:0 "Navy Width"
+           advisor_naval_engagement_desc:0 ""
+           advisor_naval_attrition:0 "Navy Attrition"
+           advisor_naval_attrition_desc:0 ""
+           advisor_naval_durability:0 "Ship Durability"
+           advisor_naval_durability_desc:0 ""
+           advisor_naval_morale_recovery:0 "Navy Morale Recoveror"
+           advisor_naval_morale_recovery_desc:0 ""
+           advisor_naval_sailors:0 "Sailors Recruiter"
+           advisor_naval_sailors_desc:0 ""
+           advisor_naval_maintenance:0 "Navy Maintenance"
+           advisor_naval_maintenance_desc:0 ""
+           advisor_naval_forcelimit:0 "Navy Organizer"
+           advisor_naval_forcelimit_desc:0 ""
+           advisor_naval_repair:0 "Ship Repairer"
+           advisor_naval_repair_desc:0 ""
+           advisor_naval_heavy_combat:0 "Heavy Focuser"
+           advisor_naval_heavy_combat_desc:0 ""
+           advisor_naval_light_combat:0 "Light Focuser"
+           advisor_naval_light_combat_desc:0 ""
+           advisor_naval_galley_combat:0 "Galley Focuser"
+           advisor_naval_galley_combat_desc:0 ""
+          # Events: 
+            sea_advisor_event.2.t:0 "Diplomatic Advisors"
+            sea_advisor_event.2.1:0 "£sea_dip_tech_cost_modifier£ Diplomatic Technology Cost: §G-5.0%§!"
+            sea_advisor_event.2.2:0 "£sea_imperial_authority£ Imperial Authority Growth Modifier: §G+6.0%§!"
+            sea_advisor_event.2.3:0 "£sea_imperial_mandate£ Mandate Growth Modifier: §G+0.03§!"
+            sea_advisor_event.2.4:0 "£sea_yearly_corruption£ Yearly Corruption: §G-0.04§!"
+            sea_advisor_event.2.5:0 "£sea_diplomatic_reputation£ Diplomatic Reputation: §G+1.00§!"
+            sea_advisor_event.2.6:0 "£sea_improve_relation_modifier£ Improve Relations: §G+20.0%§!"
+            sea_advisor_event.2.7:0 "£sea_ae_impact£ Aggressive Expansion Impact: §G-6.0%§!"
+            sea_advisor_event.2.8:0 "£sea_spy_offence£ Spy Network Construction: §G+25.%§!"
+            sea_advisor_event.2.9:0 "£sea_global_spy_defence£ Foreign Spy Detection: §G+33.0%§!"
+            sea_advisor_event.2.10:0 "£sea_culture_conversion_cost£ Culture Conversion Cost: §G-10.0%§!"
+            sea_advisor_event.2.11:0 "£sea_trade_efficiency£ Trade Efficiency: §G+10.0%§!"
+            sea_advisor_event.2.12:0 "£sea_global_tariffs£ Global Tariffs: §G+10.0%§!"
+            sea_advisor_event.2.13:0 "£sea_range£ Colonial Range: §G+20.0%§!"
+            sea_advisor_event.2.14:0 "£sea_colonist_placement_chance£ Settler Chance: §G+5.0%§!"
+            sea_advisor_event.2.15:0 "£sea_naval_morale£ Morale of Navies: §G+10.0%§!"
+            sea_advisor_event.2.16:0 "£sea_heavy_ship_power£ Heavy Ship Combat Ability: §G+10.0%§!"
+            sea_advisor_event.2.17:0 "£sea_light_ship_power£ Light Ship Combat Ability: §G+10.0%§!"
+            sea_advisor_event.2.18:0 "£sea_galley_power£ Galley Combat Ability: §G+10.0%§!"
+            sea_advisor_event.2.19:0 "£sea_ship_durability£ Ship Durability: §G+10.0%§!"
+            sea_advisor_event.2.20:0 "£sea_global_naval_engagement_modifier£ Global Naval Engagement: §G+10.0%§!"
+            sea_advisor_event.2.23:0 "£sea_global_sailors_modifier£ National Sailors Modifier: §G+10.0%§!"
+            sea_advisor_event.2.21:0 "£sea_naval_forcelimit_modifier£ Naval Force Limit Modifier: §G+10.0%§!"
+            sea_advisor_event.2.22:0 "£sea_naval_maintenance_modifier£ Naval Maintenance Modifier: §G-10.0%§!"
+            sea_advisor_event.2.24:0 "£sea_naval_attrition£ Naval Attrition: §G-15.0%§!"
+            sea_advisor_event.2.25:0 "£sea_recover_navy_morale_speed£ Recover Navy Morale Speed: §G+15.0%§!"
+            sea_advisor_event.2.26:0 "£sea_global_ship_repair£ Global Ship Repair: §G+20.0%§!"
+         # Mil:
+           advisor_mil_tech_cost:0 "Military Tech"
+           advisor_mil_tech_cost_desc:0 ""
+           advisor_inf_combat:0 "Infantry Focuser"
+           advisor_inf_combat_desc:0 ""
+           advisor_cav_combat:0 "Cavalry Focuser"
+           advisor_cav_combat_desc:0 ""
+           advisor_art_combat:0 "Artillery Focusere"
+           advisor_art_combat_desc:0 ""
+           advisor_cav_to_inf_ratio:0 "Cavalry Master"
+           advisor_cav_to_inf_ratio_desc:0 ""
+           advisor_speedy_boys:0 "Speedster"
+           advisor_speedy_boys_desc:0 ""
+           advisor_fire_damage:0 "Fire Damager"
+           advisor_fire_damage_desc:0 ""
+           advisor_fire_damage_received:0 "Fire Receiver"
+           advisor_fire_damage_received_desc:0 ""
+           advisor_shock_damage:0 "Shock Damager"
+           advisor_shock_damage_desc:0 ""
+           advisor_shock_damage_received:0 "Shock Receiver"
+           advisor_shock_damage_received_desc:0 ""
+           advisor_morale_recovery:0 "Army Morale Recoveror"
+           advisor_morale_recovery_desc:0 ""
+           advisor_land_attrition:0 "Land Attrition"
+           advisor_land_attrition_desc:0 ""
+          # Events: 
+            sea_advisor_event.3.t:0 "Military Advisors"
+            sea_advisor_event.3.1:0 "£sea_mil_tech_cost_modifier£ Military Technology Cost: §G-5.0%§!"
+            sea_advisor_event.3.2:0 "£sea_land_morale£ Morale of Armies: §G+10.0%§!"
+            sea_advisor_event.3.3:0 "£sea_discipline£ Discipline: §G+5.0%§!"
+            sea_advisor_event.3.4:0 "£sea_infantry_power£ Infantry Combat Ability: §G+10.0%§!"
+            sea_advisor_event.3.5:0 "£sea_cavalry_power£ Cavalry Combat Ability: §G+10.0%§!"
+            sea_advisor_event.3.6:0 "£sea_artillery_power£ Artillery Combat Ability: §G+10.0%§!"
+            sea_advisor_event.3.7:0 "£sea_fire_damage£ Land Fire Damage: §G+10.0%§!"
+            sea_advisor_event.3.8:0 "£sea_fire_damage_received£ Fire Damage Received: §G-10.0%§!"
+            sea_advisor_event.3.9:0 "£sea_shock_damage£ Shock Damage: §G+10.0%§!"
+            sea_advisor_event.3.10:0 "£sea_shock_damage_received£ Shock Damage Received: §G-10.0%§!"
+            sea_advisor_event.3.11:0 "£sea_cavalry_flanking£ Cavalry Flanking Ability: §G+25.0%§!  £sea_cav_to_inf_ratio£ Cavalry to Infantry Ration: §G+50.0%§!"
+            sea_advisor_event.3.12:0 "£sea_movement_speed£ Movement Speed: §G+15.0%§!"
+            sea_advisor_event.3.13:0 "£sea_reinforce_speed£ Reinforce Speed: §G+33.0%§!"
+            sea_advisor_event.3.14:0 "£sea_global_manpower_modifier£ National Manpower Modifier: §G+10.0%§!"
+            sea_advisor_event.3.15:0 "£sea_land_forcelimit_modifier£ Land Force Limit Modifier: §G+10.0%§!"
+            sea_advisor_event.3.16:0 "£sea_land_maintenance_modifier£ Land Maintenance Modifier: §G-10.0%§!"
+            sea_advisor_event.3.17:0 "£sea_land_attrition£ Land Attrition: §G-15.0%§!"
+            sea_advisor_event.3.18:0 "£sea_recover_army_morale_speed£ Recover Army Morale Speed: §G+15.0%§!"
+            sea_advisor_event.3.19:0 "£sea_defensiveness£ Fort Defence: §G+20.0%§!"
+        # Diplomatic Actions:
+        support_independence_action_tt:0 "Cannot support player subject independence."
+        cannot_call_defender_of_faith:0 "Defender of the Faith cannot be called into war."
+        # Achievements:
+        achiev_war_is_a_defeat_for_humanity:0 "§YAchievement:§! War is a Defeat for Humanity"
+        achiev_war_is_a_defeat_for_humanity_tt:0 "Clicked funny dev button §Y2137§! times."
+        achiev_meta_slave:0 "§YAchievement:§! Meta Slave"
+        achiev_meta_slave_tt:0 " owned provinces are §Y1§!/§Y9§!/§Y11§! Development."
+        achiev_world_police:0 "§YAchievement:§! World Police"
+        achiev_world_police_t:0 "Any province in §YWestern Europe§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_tt:0 "Any province in §YEastern Europe§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_ttt:0 "Any province in §YLevant§! or §YPersia§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_tttt:0 "Any province in §YNorthern Africa§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_ttttt:0 "Any province in §YSouthern Africa§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_tttttt:0 "Any province in §YTartary§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_ttttttt:0 "Any province in §YIndia§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_tttttttt:0 "Any province in §YEast Indies§! superregion owned by you or your non-Tributary Subjects."
+        achiev_world_police_ttttttttt:0 "Any province in §YChina§! or §YFar East§! superregion owned by you or your non-Tributary Subjects."
+        achiev_take_that_royal_navy:0 "§YAchievement:§! Take That Royal Navy!"
+        achiev_good_samaritan:0 "§YAchievement:§! Good Samaritan"
+        achiev_good_samaritan_tt:0 "Have at least §Y50.0%§! War Score as an War Leader ally in a war, that has lasted for §Y5§! years."
+        achiev_nobody_expects_the:0 "§YAchievement:§! Spanish Inquisition"
+        achiev_nobody_expects_the_tt:0 "Has converted §Y100§! provinces religion."
+        achiev_moses_is_that_you:0 "§YAchievement:§! Moses, is that you?"
+        achiev_gold_digger:0 "§YAchievement:§! Gold Digger"
+        achiev_gold_digger_tt:0 " owned provinces are producing §YGold§!."
+        achiev_gold_digger_ttt:0 "Any owned province producing §YGold§! has Base Production at least §Y16§!."
+        achiev_tax_meta_enjoyer:0 "§YAchievement:§! Tax Meta Enjoyer"
+        achiev_bob_the_builder:0 "§YAchievement:§! Bob the Builder"
+        achiev_bob_the_builder_tt:0 "Have constructed at least §Y404§! buildings."
+        achiev_are_you_still_there:0 "§YAchievement:§! Are You Still There?"
+        achiev_are_you_still_there_tt:0 "Own all provinces in own Colonial Region and every province in that Colonial Region have at least §Y15§! Development."
+        achiev_truly_great_qing:0 "§YAchievement:§! A Truly Great Qing"
+        achiev_granary_of_the_world:0 "§YAchievement:§! Granary of The World"
+        achiev_granary_of_the_world_tt:0 "Have at least §Y2§! of the following as leading producer: §YGrain§!, §YWine§!, §YFish§!, §YLivestock§!."
+        achiev_popeye_cosplay:0 "§YAchievement:§! Popeye Cosplay"
+        achiev_popeye_cosplay_tt:0 "Are the leading producer of either §YTea§! or §YTobacco§!."
+        achiev_columbus_was_a_microsoft_tech_assistant_with_an_indian_accent:0 "§YAchievement:§! Columbus Was a Microsoft Tech Assistant With an Indian Accent"
+        achiev_columbus_was_a_microsoft_tech_assistant_with_an_indian_accent_tt:0 "Are the leading producer of either §YTea§! or §YTobacco§!."
 
     #Germany:
         # Government:
@@ -894,7 +1162,39 @@
         pra_religious_toleration:0 "Religious Toleration"
         pra_religious_toleration_desc:1 "Stability at home is the key to our success. If we wish to expand by encouraging tolerance of different religions, not only do we improve stability at home, but our realm will become a haven for those who flee persecution elsewhere."
 
-    # Austrian Empire:
+    #Rhineland:
+        # Decision:
+        form_rhineland_title:0 "Form Confederation of the Rhine"
+        form_rhineland_desc:0 "We have united the region around the Rhine and much further than that and now we must show this power with something new."
+        form_rhineland_tooltip:0 "Inherit all subjects that have capital in required provinces and have §YGermanic§! Culture Group."
+        # Ideas:
+        RHI:0 "Confederation of the Rhine"
+        RHI_ADJ:0 "Rhenish"
+        sea_RHI_ideas:0 "Rhenish Ideas"
+        sea_RHI_ideas_start:0 "Rhenish Traditions"
+        sea_RHI_ideas_bonus:0 "Rhenish Ambition"
+        rhi_swa_stinginess:0 "A Miserly People"
+        rhi_swa_stinginess_desc:0 ""Schaffe, schaffe Häusle baue / Und net nach de Mädle schaue"\n\nThe stinginess of our people is infamous among Germans - we will never throw away our funds carelessly on frivolous expenses."
+        rhi_wes_westphalian_decentralisation:0 "Westphalian Decentralization"
+        rhi_wes_westphalian_decentralisation_desc:0 "The Westphalians are not used to the concept of belonging to a larger state - at most, the precedent for the Westphalian state is the Lower Rhenish-Westphalian Imperial Circle. Although this makes it harder to inspire our people's loyalty, a decentralized administration in which our local communities govern themselves does carry some benefits."
+        rhi_wes_increased_conscription:0 "Universal Conscription"
+        rhi_wes_increased_conscription_desc:0 "Westphalia's armies have never been of great significance to the course of international affairs. By introducing universal conscription, we can build a standing army large enough to change this and make Westphalia a force to reckon with in Germany."
+        rhi_wes_administrative_assimilation_of_rheinlanders:0 "Assimilation of the Rhenish People"
+        rhi_wes_administrative_assimilation_of_rheinlanders_desc:0 "While their dialects and way of life may divide them from us, the cities of the Rhine have long had a connection to us through the Lower Rhenish-Westphalian Imperial Circle. We must make our state into a home for both our people and assimilate the Rhenish into our administration."
+        rhi_fkn_free_knights_of_franconia:0 "Free Imperial Knights of Franconia"
+        rhi_fkn_free_knights_of_franconia_desc:0 "There are a large number of Free Imperial Knights who call Franconia their home. We can draw upon them to lead our cavalry into battle!"
+        rhi_fkn_main_trading:0 "Trading on the Main"
+        rhi_fkn_main_trading_desc:0 "The trade route from Vienna to Nuremberg and onwards down the Main to Wurzburg and Frankfurt is among the busiest in Germany. The merchants that travel it provide the life blood of our cities, where our people drive a hard bargain to make a living from commerce."
+        rhi_wes_cities_of_the_rhineland:0 "Cities of the Rhineland"
+        rhi_wes_cities_of_the_rhineland_desc:0 "By integrating the Rhineland into our nation, we are able to benefit from the trade that flows through the Rhenish cities - and the commercial acumen of their traders."
+
+    # Austria:
+        # CB:
+        cb_hab_boh_union:0 "Force Bohemia Into Union"
+        cb_hab_boh_union_desc:0 "We need to secure them into our fold."
+        hab_take_capital_personal_union:0 "Take the capital"
+        hab_take_capital_personal_union_desc:0 "War goal is to take the capital."
+       # Austrian Empire:
         # Ideas:
         AUE:0 "Austrian Empire"
         AUE_ADJ:0 "Austrian"
@@ -918,7 +1218,7 @@
         # Decision:
         form_austria_hungary_empire_title:0 "Unite Austria and Hungary"
         form_austria_hungary_empire_desc:0 "It may be bit early for something like this to propose for the public but it is for the health of this nation, that we must make compromises with the crowns and form Austro-Hungarian Empire for the benefit to all."
-        # Austro-Hungarian Empire:
+       # Austro-Hungarian Empire:
         # Ideas:
         AHE:0 "Austro-Hungarian Empire"
         AHE_ADJ:0 "Austro-Hungarian"
@@ -940,7 +1240,12 @@
         ahe_hofkriegsrat:0 "Hofkriegsrat"
         ahe_hofkriegsrat_desc:0 "Essentially the ministry for war. It is the full-time bureaucracy administering our army. One of its most important jobs is to know where our armies are. That way armies can receive the things they need, in particular men."
                 
-        # Hungro-Austrian Empire:
+    # Hungary:
+        # Missions:
+        hun_revive_latin_empire_title:0 "Revive Latin Empire"
+        hun_revive_latin_empire_desc:0 "Revive Latin Empire"
+                
+       # Hungro-Austrian Empire:
         # Ideas:
         HAE:0 "Hungro-Austrian Empire"
         HAE_ADJ:0 "Hungro-Austrian"
@@ -961,6 +1266,55 @@
         hae_austrian_court_desc:0 "There is nothing in theory stopping us from having more diplomatic relations, however, maintaining them requires time and effort. By streamlining our court, we can ensure that we get the information we need to smooth ruffled feathers when they occur."
         hae_hungarian_estates_general:0 "Create the Estates General"
         hae_hungarian_estates_general_desc:0 "We have seen Estates General being used in other European countries and have seen the benefits of this. It allows all parts of our realm to feel important. Let Hungary-Austria have one too."
+    
+    #Angevin Empire:
+        # Ideas:
+        ANG:0 "Angevin Empire"
+        ANG_ADJ:0 "Angevin"
+        sea_ANG_ideas:0 "Angevin Ideas"
+        sea_ANG_ideas_start:0 "Angevin Traditions"
+        sea_ANG_ideas_bonus:0 "Angevin Ambition"
+        ang_gbr_acts_of_union:0 "The Acts of Union"
+        ang_gbr_acts_of_union_desc:0 "The Acts of Union constitutionally combine the nations of England and France into one. From a single national Parliament, the entire nation shall be ruled under the same set of laws and ordinances, with a common military and economy."
+        ang_elan:0 "Elan!"
+        ang_elan_desc:0 "Cultivating the doctrine of attack is the centerpiece of army. Our men show such élan than we have clear edge on the battlefield."
+        ang_estates_general:0 "Estates General"
+        ang_estates_general_desc:0 "The estates general can claim to have existed since 1303, but gradually over time they have switched from being a council summoned by the King to being elected. This has given the estates general, and taxes levied by them, greater legitimacy."
+        ang_british_industrialization:0 "Early Industrialization"
+        ang_british_industrialization_desc:0 "Rapid advances in technology are creating possibilities never before dreamt of. People flock to the cities to work in new, highly efficient factories outfitted with astonishing modern machinery. Angevin must be at the heart of this industrial revolution, as any nation that fails to modernize will be swept away by those that do."
+        ang_royal_navy:0 "A Royal Navy"
+        ang_royal_navy_desc:0 "Beginning around 1495, the Tudor monarchy invested heavily in not just ships but the infrastructure to support them. This for many was the official founding of the royal navy."
+        ang_gbr_the_royal_society:0 "The Royal Society"
+        ang_gbr_the_royal_society_desc:0 "The Royal Society brings together the greatest scientific minds in the nation and drives them to even greater heights of understanding in the many fields of natural philosophy. As a world-class institution, it will lead Angevin Empire into a new era of thought and experimentation."
+        ang_british_merchant_navy:1 "Establish Angevin Merchant Navy"
+        ang_british_merchant_navy_desc:0 "Being a nation with lots of coast to cover, we are always going to be dependent on the sea for trade. So we must promote the merchant marine to ensure our trade prospers."
+        # Events:
+        sea_angevin_events.1.t:0 "Crossroad of Interests"
+        sea_angevin_events.1.d:0 "We have formed Angevin Empire, union of two different nations, France and England. Because of that, both have different interests, regarding the direction, on which this nation future is heading. Because of that, we have to make a decision. We either side with England interests or with France interests."
+        sea_angevin_events.1.a:0 "Side with England interests."
+        sea_angevin_events.1.a.tt:0 "Obtains §YEngland§! and §YGreat Britain§! missions."
+        sea_angevin_events.1.b:0 "Side with France interests."
+        sea_angevin_events.1.b.tt:0 "Obtains §YFrance§! missions."
+        # France cultures into British culture group:
+        change_france_cultures_to_british_culture_tt:0 "Every owned province with §YEnglish§!, §YWelsh§!, §YCornish§!, §YFrancien§!, §YNorman§!, §YGascon§!, §YAquitanian§! and §YBreton§! culture, merges into §YAngevin§! culture group.\n"
+        franco_british:0 "Angevin"
+        angevin_english:0 "English"
+        angevin_welsh:0 "Welsh"
+        angevin_cornish:0 "Cornish"
+        angevin_cosmopolitan_french:0 "Francien"
+        angevin_gascon:0 "Gascon"
+        angevin_normand:0 "Norman"
+        angevin_aquitaine:0 "Aquitanian"
+        angevin_breton:0 "Breton"
+        # Mission on France part:
+        sea_angevin_events_mission_tt:0 "Event gives option to choose either §YGreat Britain§! or §YFrance§! Missions tree."
+        angevin_mission_requirements_eng_tt:0 "All provinces in the Gascony area, Poitou area, Loire Valley area, Auvergne, Perigord, Limousin, La Marche:\nOwned by §Y[Root.GetName]§!"
+        angevin_mission_requirements_eng_ttt:0 "All provinces in the Gascony area, Poitou area, Loire Valley area, Auvergne, Perigord, Limousin, La Marche:\nOne of the following must be true:\nOwned by §Y[Root.GetName]§!\nOwned by §YFrance§!"
+        angevin_mission_requirements_eng_tttt:0 "All provinces in the London area, East Anglia area, Wessex area, East Midlands area, West Midlands area, Wales area, Yorkshire area:\nOwned by §Y[Root.GetName]§!"
+        fra_rb_angevin_title:0 "Angevin Kingdom"
+        fra_rb_angevin_desc:0 "The Angevin Kings ruled over a full half of the French lands, ensuring prosperity and justice were freely available. Reuniting these lands under one Crown will ensure our continued success."
+        angevin_mission_requirements_fra_tttt:0 "All provinces in the London area, East Anglia area, Wessex area, East Midlands area, West Midlands area, Wales area, Yorkshire area:\nOwned by §Y[Root.GetName]§!"
+        angevin_mission_requirements_fra_tt:0 "All provinces in the Gascony area, Poitou area, Loire Valley area, Auvergne, Perigord, Limousin, La Marche:\nOwned by §Y[Root.GetName]§!"
                 
     # Barbary States:
         # Decisions:
@@ -995,6 +1349,16 @@
         bys_brothers_barbarossa:0 "The Brothers Barbarossa"
         bys_brothers_barbarossa_desc:0 "Privateers in service of the Ottoman Sultan, Hayreddin and Aruj Barbarossa terrorized the Christian Mediterranean in the early 16th century, defeating Spain in numerous naval engagements thanks to their effective use of galley warfare."
 
+    # Japan:
+        IJP:0 "Imperial Japan"
+        IJP_ADJ:0 "Imperial Japanese"
+        # Decisions:
+        embrace_the_rising_sun_title:0 "Empire of The Rising Sun"
+        embrace_the_rising_sun_desc:0 "Let the world know that Japan is not just a shadow of the sun but is the sun itself."
+        # Government:
+        imperial_japan_monarchy:0 "Japanese imperial government"
+        imperial_japan_monarchy_desc:0 "We must spread our sun rays of influence across the Ocean and far away, past the horizon. And all must become accustomed with our ways of life or shall be forced to one way or another."
+        
     # Korea:
         # Missions:
         kor_beyond_japan_title:0 "Beyond Japan"
@@ -1018,6 +1382,8 @@
         kor_california_dreamin_title:0 "California Dreamin'"
         kor_california_dreamin_desc:0 "I could leave today for L.S."
         discover_new_land_short_modifier:0 "Discover New Land"
+        # Modifier:
+        kor_defence_war_modifier:0 "Meatshield"
         
     # Nogai:
         # Missions:
@@ -1354,6 +1720,39 @@
        kem_found_new_memphis_title:0 "Found New Memphis"
        kem_found_new_memphis_desc:0 "Found New Memphis"
        
+    # Byzantium:
+       # Country:
+       LAT:0 "Latin Empire"
+       LAT_ADJ:0 "Latin"
+       # Government:
+       byzantium_government:0 "Byzantine Government"
+       byzantium_government_desc:0 "Byzantine Government"
+       mechanic_byzantium_government_varangian_guards_yes:0 "Unlocks '§YVarangian Guards§!' Nobility Privilege. Which when enacted:"
+       # Parliament Debate:
+       sea_byz_question_of_power:0 "§OIgnite Purple Phoenix§!"
+       # Privilege:
+       sea_byz_question_of_power_tt:0 "Completed Mission §YVarangian Guards§!"
+       estate_nobles_varangian_guards_special_units:0 "Varangian Guards"
+       estate_nobles_varangian_guards_special_units_desc:0 "They are elite troops who are serving Byzantine Emperor as personal bodyguard and also fight in shieldwall formation and berserk manner-like way in battlefield, causing fear and terror in the enemies before them."
+       estate_nobles_varangian_guards_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+       estate_nobles_varangian_guards_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+       # Modifiers:
+       varangian_guards_special_units:0 "Varangian Guards"
+       desc_varangian_guards_special_units:0 "They are elite troops who are serving Byzantine Emperor as personal bodyguard and also fight in shieldwall formation and berserk manner-like way in battlefield, causing fear and terror in the enemies before them."
+       varangian_guards_special_units_upgraded:0 "Elite Varangian Guards"
+       desc_varangian_guards_special_units_upgraded:0 "They are elite troops who are serving Byzantine Emperor as personal bodyguard and also fight in shieldwall formation and berserk manner-like way in battlefield, causing fear and terror in the enemies before them."
+       return_to_italy:0 "Return to Italy"
+       # Missions:
+       sea_revive_varangian_guards_title:0 "Varangian Guards"
+       sea_revive_varangian_guards_desc:0 "With the recent expansion, there must be made some changes, not just only in our government but also with our military, one of which is the revival of the elite units, called Varangian Guards, who served as a personal bodyguard to our emperors."
+       sea_revive_varangian_guards_tt:0 "Has enacted §PIgnite Purple Phoenix§! as an Parliament issue.\n§RNeeds to have §Y6§! seats in Senate to show up in Parliament Issues.§!"
+       reestablish_varangian_guard_tooltip:0 "Upgrades '§YVarangian Guards§!' Special Units with following bonuses:\nDiscipline: §G+2.5%§!\nInfantry Shock: §G+0.50§!"
+       sea_form_roman_empire_title:0 "Restore the Roman Empire"
+       sea_form_roman_empire_desc:0 "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
+       sea_form_roman_empire_anatolia_tt:0 "All provinces in the Balkan region:\n§YProvince(s)§! is not in the area §YKurdistan§!\nOwned by §Y[Root.GetName]§! or its non-Tributary Subjects."
+       sea_form_roman_empire_italy_tt:0 "All provinces in the Italy region:\n§YProvince(s)§! is not in the area §YLombardy§!\n§YProvince(s)§! is not in the area §YTorino§!\n§YProvince(s)§! is not in the area §YPiedmont§!\n§YProvince(s)§! is not in the area §YLiguria§!\n§YProvince(s)§! is not in the area §YCorsica§!\n§YProvince(s)§! is not in the area §YWestern Mediterranean Islands§!\n§YProvince(s)§! is not in the area §YWestern Sicily§!\n§YProvince(s)§! is not in the area §YEastern Sicily§!\nOwned by §Y[Root.GetName]§! or its non-Tributary Subjects."
+       sea_form_roman_empire_tt:0 "§Y[Root.GetName]§! gains a permanent claim on former §YRoman Empire§! owned areas."
+       
     # Ottoman:
        # Missions:
        sea_ottoman_golden_age_title:0 "Golden Age of Janissaries"
@@ -1407,7 +1806,7 @@
       
     # Eschatological Theocracy:
       # Event to become:
-      theocracy_election_government.11.t:0 "The question of Theocracy"
+      theocracy_election_government.11.t:0 "The Question of Theocracy"
       theocracy_election_government.11.d:0 "The final Third age is upon us, with Heatens to our south and Heretics in Rome, the Christian world is not ready for the return of Jesus Christ. The clergy of Georgia have realized this and at any time can take control of the government, and putting in charge talented and ambitious Bishops, to lead our nation and eventually all Christian people. Georgia must be the ones who lead Christian world and prepare them for the return of Jesus himself!"
       theocracy_election_government.11.a:0 "So it Begins. Prepare for Third Age"
       theocracy_election_government.11.b:0 "I am sure we're best off staying a monarchy."       
@@ -1571,16 +1970,79 @@
         castille_vassal_long_desc:0 "A Vassal must follow their overlord to war, cannot make certain diplomatic actions and will pay a fraction of his income to his overlord."
         castille_vassal_is_our:0 "$NAME|Y$ is our Autonomous Vassal."
         subject_vastille_vassal:0 "Autonomous Vassal"
+      # Government:
+        spain_monarchy_reform:0 "Spanish Monarchy"
+        spain_monarchy_reform_desc:0 "With the Crowns of Castille and Aragon united, we can now properly govern our nation and establish as many Holy Orders as we want, while also using our destiny to please God by destroying those who are not with us."
+        mechanic_spain_monarchy_reform_spain_tercios_yes:0 "Unlocks '§YSpanish Tercois§!' Nobility Privilege. Which when enacted:"
       # Privilege:
         estate_nobles_castille_autonomous_duchies:0 "Castille Autonomous Duchies"
         estate_nobles_castille_autonomous_duchies_desc:0 "All nations under Castille want to gain freedom but so far they have been given some autonomy but they're hungry for more."
+        estate_nobles_spain_tercios_special_units_pike:0 "Early Spanish Tercios"
+        estate_nobles_spain_tercios_special_units_pike_desc:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on pikemen, compared to later version."
+        estate_nobles_spain_tercios_special_units_pike_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_spain_tercios_special_units_pike_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+        estate_nobles_spain_tercios_special_units_fire:0 "Late Spanish Tercios"
+        estate_nobles_spain_tercios_special_units_fire_desc:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on firemans, compared to eariler version."
+        estate_nobles_spain_tercios_special_units_fire_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_spain_tercios_special_units_fire_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+      # Modifiers:
+        tercios_special_pike_units:0 "Early Spanish Tercios"
+        desc_tercios_special_pike_units:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on pikemen, compared to later version."
+        tercios_special_fire_units:0 "Late Spanish Tercios"
+        desc_tercios_special_fire_units:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on firemans, compared to eariler version."
         
     # France:
       # Modifiers:
         # Elan:
         sea_fra_elan_modifier_tt:0 "§Y[Root.GetName]§! gets '§YElan!§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Prestige: §G+1.00§!\n§RModifier is locked for France tag.§!\n"
         sea_fra_elan_modifier:0 "Elan!"
+      # Countries:
+        AGL:0 "Angoulême"
+        AGL_ADJ:0 "Angoumoisine"
         
+    # Venice:
+      # Missions:
+        ven_ability_to_raid_title:0 "Unorthodox Trading"
+        ven_ability_to_raid_desc:0 "It's not easy to get rich legitimate ways, so we must find alternative ways to get rich, whatever the cost may be."
+      # Modifiers:
+        ven_ability_to_raid_modifier:0 "Venecian Merchant Raiders"
+        emp_ven_reclaim_the_aegean_modifier:0 "Disciplined Marines"
+        emp_ven_control_the_means_of_transaction_modifier:0 "Marines Improved Defences"
+        emp_ven_expand_the_terraferma_modifier:0 "Mass Recruitment of Marines"
+      # Government:
+        enable_disabled_burghers_tt:0 "Enables Burghers estate but removes §YFactions§!."
+      # Vassal Type:
+        venetian_league_subjects_title:0 "Venetian League Subject"
+        venetian_league_subjects_title_plural:0 "Venetian League Subjects"
+        venetian_league_subjects_long_desc:0 "Venetian League subjects are like normal members, who are part of the leagues but are less autonomous but they're still free to do whatever they wish."
+        venetian_league_subjects_is_our:0 "$NAME|Y$ is our Venetian League Subject."
+        subject_venetian_league_subjects:0 "Venetian League Subject"
+        
+    # Novgorod:
+      # Government:
+        veche_tsardom:0 "Veche Great Republic"
+        veche_tsardom_desc:0 "This state is governed by a Veche, a council with the highest legislative and judicial authority consisting of Boyars, Merchants and even commoners."
+      # Missions:
+        nov_sway_muscovite_subjects_title:0 "Sway the Princes"
+        nov_sway_muscovite_subjects_desc:0 "We have to convince the little Rurikovich's that it is indeed better to be free from Muscovy and perhaps unintentionally end up giving away their power to us."
+        nov_sway_muscovite_subjects_tt:0 " Muscovite vassals:\n         Opinion of §Y[Root.GetName]§! is at least §Y100§!."
+        nov_sway_muscovite_subjects_ttt:0 " allies of §Y[Root.GetName]§! are rivals of §YMuscovy§!"
+        nov_sway_muscovite_subjects_tttt:0 "Every §YMuscovite§! vassal, that has Opinion of §Y[Root.GetName]§! at least §Y100§!, becomes our vassal."
+        
+    # Natives religion:
+      # Decision:
+      sea_new_world_more_trade_power_title:0 "Exchange Mercantilism for Trade Efficiency"
+      sea_new_world_more_trade_power_desc:0 ""
+      sea_new_world_more_trade_power_modifier:0 "Prioritized Trading Efficiency"
+      sea_new_world_kill_ruler_options_title:0 "Find a More Suitable Ruler"
+      sea_new_world_kill_ruler_options_desc:0 "Not happy with your ruler? Send him to retirement."
+      sea_new_world_kill_ruler_options_cooldown:0 "Recently Retired Ruler"
+      # Events:
+      sealand_events.11.t:0 "Find a More Suitable Ruler"
+      sealand_events.11.d:0 "We're not happy with our current ruler and his ways. It's time to retire him and find someone more suitable."
+      sealand_events.11.a:0 "Only."
+      sealand_events.11.b:0 "Three."
+      sealand_events.11.c:0 "Options?"
         
     # Animism religion:
       # Reforms:
@@ -1595,9 +2057,21 @@
       sea_animism_reform_4_desc:0 "We must expand our influence everywhere, even in the lands across the great sea, if there even are any."
       sea_animism_reform_5:0 "Backward Diplomacy"
       sea_animism_reform_5_desc:0 "We don't abide by the rules of war and see fit to see as our enemy anyone, even if they're our own ally."
-      SEA_ANIMISM_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will make you lose §R300§! Power Points from each category and lower your stability by §R1§!."
+      SEA_ANIMISM_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will give you cooldown for §Y5§! years, until you can take another Reform and lower your stability by §R1§!."
+      sea_animism_reform_flag_tt:0 "§RRecenlty took Religious Reform. Wait §Y5§! years, until you can take another Reform.§!"
       religious_reforms.4.d:0 "Reforming our society has its price, which is the price of all the powers in adminstrative, diplomatic and military categories and thus has taken a small toll on the stability of our nation."
       religious_reforms.4.a:0 "Nothing major, carry on."
+      # Decisions:
+      sea_new_world_religious_reform_gov_options_title:0 "Choose Our Government"
+      sea_new_world_religious_reform_gov_options_desc:0 "So player can choose what government they want to be, instead of being forced to reformed into a single one."
+      # Events:
+      sealand_events.10.t:0 "Choose Our Government"
+      sealand_events.10.d:0 "We have one time ability to change our government to whichever we want, without needing to be influenced by some foreigns."
+      sealand_events.10.a:0 "Choose to become Monarchy."
+      sealand_events.10.b:0 "Choose to become Republic."
+      sealand_events.10.c:0 "Choose to become Theocracy."
+      sealand_events.10.e:0 "Choose to go back to being Native again."
+      sealand_events.10.f:0 "We're happy with what we've got."
       
     # New World Natives:
       # Attiwandaron:

@@ -180,13 +180,6 @@ adal_conquest_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			darfur_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			add_temporary_colonist = {
 				duration = 18250
 			}
@@ -202,6 +195,8 @@ adal_conquest_missions_slot = {
 			OR = {
 				area = kurdufan_area
 				area = darfur_central_sahara_area
+				area = bahiouda_desert_area
+				area = kobbe_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -211,6 +206,14 @@ adal_conquest_missions_slot = {
 				type = all
 			}
 			darfur_central_sahara_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			bahiouda_desert_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			kobbe_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
@@ -232,11 +235,6 @@ adal_conquest_missions_slot = {
 				add_base_manpower = 1
 			}
 			darfur_central_sahara_area = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			darfur_area = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1

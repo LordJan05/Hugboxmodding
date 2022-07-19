@@ -7181,6 +7181,7 @@ khami_ruins = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			fabricate_claims_cost = -0.1
+			army_tradition_from_battle = 0.5
 		}
 
 		#what effects happen when this tier is achieved
@@ -7212,6 +7213,7 @@ khami_ruins = {
 		country_modifiers = {
 			technology_cost = -0.05
 			fabricate_claims_cost = -0.2
+			army_tradition_from_battle = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -7243,6 +7245,7 @@ khami_ruins = {
 		country_modifiers = {
 			technology_cost = -0.05
 			fabricate_claims_cost = -0.3
+			army_tradition_from_battle = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -7723,7 +7726,6 @@ fire_temple_of_ateshgah = {
 		country_modifiers = {
 			discipline = 0.025
 			fire_damage_received = -0.05
-			fire_damage = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -7754,8 +7756,6 @@ fire_temple_of_ateshgah = {
 		country_modifiers = {
 			discipline = 0.025
 			fire_damage_received = -0.1
-			fire_damage = 0.1
-			culture_conversion_cost = -0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -7785,9 +7785,7 @@ fire_temple_of_ateshgah = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			discipline = 0.05
-			fire_damage_received = -0.15
-			fire_damage = 0.15		
-			culture_conversion_cost = -0.1
+			fire_damage_received = -0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -10013,6 +10011,7 @@ great_mosque_djenne = {
 			monthly_piety_accelerator = 0.002
 			global_heathen_missionary_strength = 0.02
 			missionaries = 1
+			manpower_in_true_faith_provinces= 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -10044,6 +10043,7 @@ great_mosque_djenne = {
 			monthly_piety_accelerator = 0.003
 			global_heathen_missionary_strength = 0.03
 			missionaries = 1
+			manpower_in_true_faith_provinces= 0.2
 		}
 
 		#what effects happen when this tier is achieved
@@ -13140,8 +13140,13 @@ kilwa_city = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion_group = {
+				religion_group = muslim
+			}
 		}
 	}
 
@@ -13152,14 +13157,24 @@ kilwa_city = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion_group = {
+				religion_group = muslim
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion_group = {
+				religion_group = muslim
+			}
 		}
 	}
 
@@ -14271,8 +14286,13 @@ churches_lalibela = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion = {
+				religion = coptic
+			}
 		}
 	}
 
@@ -14283,14 +14303,24 @@ churches_lalibela = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion = {
+				religion = coptic
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = pagan
+			}
+			province_is_or_accepts_religion = {
+				religion = coptic
+			}
 		}
 	}
 

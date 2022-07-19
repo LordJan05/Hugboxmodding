@@ -8,6 +8,10 @@ eng_british_conquest = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -108,6 +112,10 @@ eng_british_conquest_ire = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -189,6 +197,10 @@ eng_british_conquest_scotland = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -275,6 +287,10 @@ eng_french_conquest = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -360,6 +376,7 @@ eng_french_conquest = {
 			if = {
 				limit = {
 					exists = FRA
+					FRA = { NOT = { is_subject_of = ROOT } }
 				}
 				FRA = {
 					capital_scope = {
@@ -394,10 +411,21 @@ eng_french_conquest = {
 						}
 					}
 				}
-				else = {
-					183 = {
-						owned_by = ROOT
+			}
+			else_if = {
+				limit = {
+					exists = FRA
+					FRA = { is_subject_of = ROOT }
+				}
+				FRA = {
+					capital_scope = {
+						controlled_by = FRA
 					}
+				}
+			}
+			else = {
+				183 = {
+					owned_by = ROOT
 				}
 			}
 		}
@@ -592,7 +620,7 @@ eng_french_conquest = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			NOT = { tag = GBR }
-			NOT = { tag = IRE }
+			NOT = { tag = ANG }
 			denmark_area = {
 				type = all
 				owned_by = ROOT
@@ -721,6 +749,10 @@ eng_exploration_americas = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -823,6 +855,10 @@ eng_chesapeake_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		is_random_new_world = no
 		NOT = {
@@ -876,6 +912,10 @@ eng_indian_ocean_exploration = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -963,6 +1003,10 @@ eng_indian_cot_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = {
 			has_dlc = "Rule Britannia"
@@ -1022,6 +1066,10 @@ eng_british_cot_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		NOT = {
 			has_dlc = "Rule Britannia"

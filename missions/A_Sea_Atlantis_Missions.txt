@@ -166,11 +166,11 @@ sealand_atl_missions_2 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 2803
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 2803
-			2803 = { development = 20 }
+			2803 = { development = 10 }
 		}
 		effect = {
 			2803 = { center_of_trade = 1 }

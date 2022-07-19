@@ -4,10 +4,13 @@ estate_nobles =
 
 	# If true, country will get estate
 	trigger = {
-		NOT = { has_government_attribute = is_merchant_republic }
+		if = {
+			limit = {
+				NOT = { tag = VEN }
+			}
+			NOT = { has_government_attribute = is_merchant_republic }
+		}
 		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = veche_republic }
-		NOT = { has_reform = veche_tsardom }
 		#NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = trading_city }
@@ -35,7 +38,16 @@ estate_nobles =
 		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_government_attribute = disables_nobility }
+		if = {
+			limit = {
+				has_reform = english_monarchy
+				has_country_flag = enable_disabled_nobility_flag
+			}
+			has_government_attribute = disables_nobility
+		}
+		else = {
+			NOT = { has_government_attribute = disables_nobility }
+		}
 		NOT = { has_reform = revolutionary_empire_reform }
 		AND = {
 			NOT = { has_country_flag = ikko_ikki_peasants_flag }
@@ -402,6 +414,12 @@ estate_nobles =
 	color = { 200 0 50 }
 	
 	privileges = {
+		estate_nobles_swe_utskrivning # Sealand. Part of Sweden mission
+		estate_nobles_swz_tame_the_steppes # Sealand. Part of Swazi mission
+		estate_nobles_castille_autonomous_duchies # Sealand. Castille
+		estate_nobles_spain_tercios_special_units_pike # Sealand. Spain
+		estate_nobles_spain_tercios_special_units_fire # Sealand. Spain
+		estate_nobles_varangian_guards_special_units # Sealand. Byzantium
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
 		estate_nobles_officer_corp
@@ -421,7 +439,6 @@ estate_nobles =
 		estate_nobles_monopoly_of_gems
 		estate_nobles_statutory_rights
 		estate_nobles_command_of_the_military
-		estate_nobles_swe_utskrivning # Sealand. Part of Sweden mission
 		estate_nobles_better_integration
 		estate_nobles_cawa_peace_keepers
 		estate_nobles_cawa_offensive_fighters
@@ -430,8 +447,6 @@ estate_nobles =
 		estate_nobles_tribe_unification
 		estate_nobles_tribe_centralization
 		estate_nobles_grant_power_to_the_bashorun
-		estate_nobles_swz_tame_the_steppes # Sealand. Part of Swazi mission
-		estate_nobles_castille_autonomous_duchies # Sealand. Castille
 	}
 
 	agendas = {

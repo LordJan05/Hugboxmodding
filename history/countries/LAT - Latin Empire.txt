@@ -1,0 +1,12 @@
+# Sealand
+government = monarchy
+add_government_reform = byzantium_government
+government_rank = 3
+primary_culture = greek
+religion = orthodox
+technology_group = eastern
+historical_rival = TUR
+historical_rival = EPI
+historical_rival = BUL
+capital = 151 # Constantinople
+set_estate_privilege = estate_nobles_varangian_guards_special_units

@@ -18,8 +18,14 @@ LEL = "countries/SeaLeleges.txt"
 KEM = "countries/SeaKemet.txt" # Taken from PDX RNW Kemet
 ATL = "countries/SeaAtlantis.txt"
 GOE = "countries/SeaGeorgia.txt"
+IJP = "countries/SeaImperialJapan.txt"
+ANG = "countries/SeaAngevinEmpire.txt"
+RHI = "countries/SeaRhineConfederation.txt"
+LAT = "countries/SeaLatinEmpire.txt"
 
 SEX = "countries/SeaPayPalStates.txt"
+AGL = "countries/Angoulême.txt"
+
 
 # Middle Africa:
 #WAD = "countries/Wadai.txt" # PDX decided to make same nation, just with different flag and colour

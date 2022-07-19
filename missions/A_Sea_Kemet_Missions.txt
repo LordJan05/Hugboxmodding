@@ -46,11 +46,11 @@ sealand_kem_missions_1 = {
 		required_missions = { kem_gold_focus kem_expand_outwards }
 		provinces_to_highlight = {
 			province_id = 2910
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 2910
-			2910 = { development = 20 }
+			2910 = { development = 10 }
 		}
 		effect = {
 			2910 = { center_of_trade = 1 }
@@ -230,11 +230,11 @@ sealand_kem_missions_2 = {
 		required_missions = { kem_center_of_trade_1 kem_cultivate_land }
 		provinces_to_highlight = {
 			province_id = 2907
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 2907
-			2907 = { development = 20 }
+			2907 = { development = 10 }
 		}
 		effect = {
 			2907 = { center_of_trade = 1 }

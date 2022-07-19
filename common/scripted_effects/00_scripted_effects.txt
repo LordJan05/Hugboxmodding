@@ -2550,7 +2550,15 @@ enable_development_on_buildings_built = {
 add_development_from_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+				NOT = {
+					had_country_flag = {
+						flag = improve_development_on_buildings_built
+						days = 3650
+					}
+				}
+			}
 			NOT = { gained_development_from_building = { building = $building$ } }
 		}
 		add_base_$type$ = $value$
@@ -2564,7 +2572,15 @@ add_development_from_building = {
 add_development_from_upgrading_or_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+				NOT = {
+					had_country_flag = {
+						flag = improve_development_on_buildings_built
+						days = 3650
+					}
+				}
+			}
 			NOT = { gained_development_from_building = { building = $building$ } }
 		}
 		if = {
@@ -2584,7 +2600,15 @@ add_development_from_upgrading_or_building = {
 remove_development_from_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+				NOT = {
+					had_country_flag = {
+						flag = improve_development_on_buildings_built
+						days = 3650
+					}
+				}
+			}
 			gained_development_from_building = { building = $building$ }
 		}
 		add_base_$type$ = -$value$

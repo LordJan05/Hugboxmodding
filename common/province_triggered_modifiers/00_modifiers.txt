@@ -672,8 +672,8 @@ adm_vatican_library = {
 		}
 	}
 	administrative_efficiency = 0.05
-	interest = -1
-	monthly_splendor = 5
+	interest = -0.5
+	monthly_splendor = 3
 }
 
 dip_vatican_library = {
@@ -685,8 +685,8 @@ dip_vatican_library = {
 			tag = PAP
 		}
 	}
-	technology_cost = -0.125
-	idea_cost = -0.125
+	technology_cost = -0.05
+	idea_cost = -0.05
 	possible_policy = 1
 }
 
@@ -699,9 +699,9 @@ mil_vatican_library = {
 			tag = PAP
 		}
 	}
-	yearly_army_professionalism = 0.004 # 0.04% monthly
-	army_tradition_from_battle = 1
-	reinforce_speed = 0.5
+	movement_speed = 0.15
+	army_tradition_from_battle = 0.75
+	reinforce_speed = 0.33
 }
 
 pap_sistine_chapel = {

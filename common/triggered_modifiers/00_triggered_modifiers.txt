@@ -511,8 +511,8 @@ crusader = {
 		land_maintenance = 1.0
 	}
 
-	global_manpower_modifier = 0.3
-	global_tax_modifier = 0.1
+	global_manpower_modifier = 0.2
+	global_tax_modifier = 0.3
 	land_morale = 0.05
 	prestige = 1
 	papal_influence = 1

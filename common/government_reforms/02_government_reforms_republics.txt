@@ -1526,6 +1526,7 @@ frequent_elections_reform = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
+		NOT = { has_reform = atlantis_government }
 	}
 	trigger = {
 		OR = {
@@ -1651,6 +1652,22 @@ consolidate_power_in_cities_reform = {
 		diplomatic_upkeep = 1
 		global_foreign_trade_power = 0.1
 	}
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					has_reform = venice_merchants_reform
+					has_reform = veche_republic
+					has_reform = veche_tsardom
+				}
+			}
+			custom_tooltip = enable_disabled_burghers_tt
+			hidden_effect = {
+				set_country_flag = enable_disabled_burghers_flag
+			}
+		}
+	}
+	factions = {}
 	has_term_election = yes
 	duration = 4
 	ai = {
@@ -2207,8 +2224,8 @@ universal_suffrage_reform = {
 	modifiers = {
 		num_accepted_cultures = 3
 		max_absolutism = 15
-		culture_conversion_cost = -0.1
-		promote_culture_cost = -0.1
+		culture_conversion_cost = -0.15
+		promote_culture_cost = -0.15
 	}
 	ai = {
 		factor = 0

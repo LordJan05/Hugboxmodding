@@ -7,7 +7,13 @@ emp_france_missions_1 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -210,52 +216,291 @@ emp_france_missions_1 = {
 			}
 		}
 	}
-	emp_fra_conquer_flanders_wallonia = {
-		icon = mission_cannons_firing
-		required_missions = { emp_fra_recover_calais }
+	
+	fra_rb_angevin = {
+		icon = mission_rb_angevin_kingdom
+		required_missions = { emp_fra_england }
 		position = 5
+		
 		provinces_to_highlight = {
 			OR = {
-				area = wallonia_area
-				area = brabant_area
-				area = flanders_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = wessex_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = wales_area
+				area = yorkshire_area
+				area = pyrenees_area
+				area = poitou_area
+				area = loire_area
+				province_id = 199
+				province_id = 194
+				province_id = 195
+				province_id = 4697
 			}
-			NOT = {
-				owned_by = ROOT
-			}
+			NOT = { owned_by = ROOT }
 		}
+		
 		trigger = {
-			wallonia_area = {
-				type = all
-				owned_by = ROOT
+			tag = FRA
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 178
+			178 = { is_state = yes }
+			custom_trigger_tooltip = {
+				tooltip = angevin_mission_requirements_fra_tttt
+				home_counties_area = {
+					type = all
+					owned_by = ROOT
+				}
+				east_anglia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				wessex_area = {
+					type = all
+					owned_by = ROOT
+				}
+				east_midlands_area = {
+					type = all
+					owned_by = ROOT
+				}
+				west_midlands_area = {
+					type = all
+					owned_by = ROOT
+				}
+				wales_area = {
+					type = all
+					owned_by = ROOT
+				}
+				yorkshire_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
-			brabant_area = {
-				type = all
-				owned_by = ROOT
-			}
-			flanders_area = {
-				type = all
-				owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = angevin_mission_requirements_fra_tt
+				pyrenees_area = {
+					type = all
+					owned_by = ROOT
+				}
+				poitou_area = {
+					type = all
+					owned_by = ROOT
+				}
+				loire_area = {
+					type = all
+					owned_by = ROOT
+				}
+				199 = { owned_by = ROOT }
+				194 = { owned_by = ROOT }
+				195 = { owned_by = ROOT }
+				4697 = { owned_by = ROOT }
 			}
 		}
+		
 		effect = {
-			wallonia_area = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
+			change_tag = ANG
+			country_event = { id = sea_angevin_events.1 }
+			custom_tooltip = sea_angevin_events_mission_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = english
+					}
+					change_culture = angevin_english
+				}
+				every_owned_province = {
+					limit = {
+						culture = welsh
+					}
+					change_culture = angevin_welsh
+				}
+				every_owned_province = {
+					limit = {
+						culture = cornish
+					}
+					change_culture = angevin_cornish
+				}
+				every_owned_province = {
+					limit = {
+						culture = cosmopolitan_french
+					}
+					change_culture = angevin_cosmopolitan_french
+				}
+				every_owned_province = {
+					limit = {
+						culture = gascon
+					}
+					change_culture = angevin_gascon
+				}
+				every_owned_province = {
+					limit = {
+						culture = normand
+					}
+					change_culture = angevin_normand
+				}
+				every_owned_province = {
+					limit = {
+						culture = aquitaine
+					}
+					change_culture = angevin_aquitaine
+				}
+				every_owned_province = {
+					limit = {
+						culture = breton
+					}
+					change_culture = angevin_breton
+				}
+				###
+				if = {
+					limit = {
+						primary_culture = english
+					}
+					change_primary_culture = angevin_english
+				}
+				if = {
+					limit = {
+						primary_culture = welsh
+					}
+					change_primary_culture = angevin_welsh
+				}
+				if = {
+					limit = {
+						primary_culture = cornish
+					}
+					change_primary_culture = angevin_cornish
+				}
+				if = {
+					limit = {
+						primary_culture = cosmopolitan_french
+					}
+					change_primary_culture = angevin_cosmopolitan_french
+				}
+				if = {
+					limit = {
+						primary_culture = gascon
+					}
+					change_primary_culture = angevin_gascon
+				}
+				if = {
+					limit = {
+						primary_culture = normand
+					}
+					change_primary_culture = angevin_normand
+				}
+				if = {
+					limit = {
+						primary_culture = aquitaine
+					}
+					change_primary_culture = angevin_aquitaine
+				}
+				if = {
+					limit = {
+						primary_culture = breton
+					}
+					change_primary_culture = angevin_breton
+				}
+				###
+				if = {
+					limit = {
+						accepted_culture = english
+					}
+					remove_accepted_culture = english
+				}
+				if = {
+					limit = {
+						accepted_culture = welsh
+					}
+					remove_accepted_culture = welsh
+				}
+				if = {
+					limit = {
+						accepted_culture = cornish
+					}
+					remove_accepted_culture = cornish
+				}
+				if = {
+					limit = {
+						accepted_culture = cosmopolitan_french
+					}
+					remove_accepted_culture = cosmopolitan_french
+				}
+				if = {
+					limit = {
+						accepted_culture = gascon
+					}
+					remove_accepted_culture = gascon
+				}
+				if = {
+					limit = {
+						accepted_culture = normand
+					}
+					remove_accepted_culture = normand
+				}
+				if = {
+					limit = {
+						accepted_culture = aquitaine
+					}
+					remove_accepted_culture = aquitaine
+				}
+				if = {
+					limit = {
+						accepted_culture = breton
+					}
+					remove_accepted_culture = breton
 				}
 			}
-			brabant_area = {
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			178 = {
+				move_capital_effect = yes
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
 				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
+					name = "eng_rb_angers_summer_court"
+					duration = -1
 				}
 			}
-			flanders_area = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
+			custom_tooltip = change_france_cultures_to_british_culture_tt
+			add_prestige = 25
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			picardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			west_burgundy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bourgogne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_england_flag
+			set_country_flag = formed_france_flag
+			set_country_flag = formed_great_britain_flag
+			hidden_effect = {
+				complete_mission = eng_rb_angevin
+				complete_mission = eng_rb_war_of_roses
 			}
 		}
 	}
@@ -269,7 +514,13 @@ emp_france_missions_1_b = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no 
 	}
@@ -432,7 +683,13 @@ emp_france_missions_2 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -618,7 +875,13 @@ emp_france_missions_2 = {
 			}
 		}
 		effect = {
-			custom_tooltip = sea_fra_elan_modifier_tt
+			if = {
+				limit = {
+					tag = FRA
+				}
+				set_country_flag = emp_fra_conquer_picardy_fra_flag
+				custom_tooltip = sea_fra_elan_modifier_tt
+			}
 			87 = {
 				if = {
 					limit = {
@@ -934,7 +1197,13 @@ emp_france_missions_2_b = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no 
 	}
@@ -1027,7 +1296,13 @@ emp_france_missions_2_c = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1086,7 +1361,13 @@ emp_france_missions_3 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1443,7 +1724,13 @@ emp_france_missions_4 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1783,7 +2070,13 @@ emp_france_missions_5 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		tag = FRA
+		OR = {
+			tag = FRA
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_fra_missions
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

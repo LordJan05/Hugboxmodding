@@ -55,7 +55,7 @@ colonial_ideas = {
 	free = yes
 	
 	founding_fathers = {
-		republican_tradition = 0.5
+		republican_tradition = 0.4
 	}
 	continental_trade = {
 		global_prov_trade_power_modifier = 0.25
@@ -84,7 +84,7 @@ barbary_pirate_ideas = {
 		privateer_efficiency = 0.2
 	}
 	bonus = {
-		republican_tradition = 0.5
+		republican_tradition = 0.4
 		legitimacy = 1
 	}
 	trigger = {
@@ -186,7 +186,7 @@ cossack_ideas = {
 		manpower_recovery_speed = 0.2
 	}
 	cossacks_hetmanate = {
-		republican_tradition = 0.5
+		republican_tradition = 0.4
 	}
 	zaz_steppe_riders = {
 		# as the ZAZ idea, land attrition
@@ -922,7 +922,7 @@ latin_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		republican_tradition = 0.3
+		republican_tradition = 0.2
 	}
 	
 	trigger = {
@@ -1641,7 +1641,7 @@ ruthenian_ideas = {
  
 	mother_of_russian_cities = { #Mother of Russian States
 		legitimacy = 0.5
-		republican_tradition = 0.3
+		republican_tradition = 0.2
 		prestige = 0.5
 	}
 	international_influences = {
@@ -2858,7 +2858,7 @@ california_native_ideas = {
 ne_native_ideas = {
 	start = {
 		ship_durability = 0.05
-		naval_forcelimit_modifier = 0.50
+		colonists = 1
 	}
 	bonus = {
 		diplomatic_upkeep = 1
@@ -2889,6 +2889,7 @@ ne_native_ideas = {
 	free = yes
 	ne_turtle_clan = {
 		defensiveness = 0.15
+		naval_forcelimit_modifier = 0.50
 	}
 	ne_deer_clan = {
 		num_accepted_cultures = 1
@@ -2957,7 +2958,7 @@ se_native_ideas = {
 
 sw_native_ideas = {
 	start = {
-		may_recruit_female_generals = yes
+		colonists = 1
 		prestige_from_land = 1.0
 	}
 	bonus = {

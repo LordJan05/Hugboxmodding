@@ -51,6 +51,10 @@ monarchy = {
 				swazi_government_reform
 				sasanian_government
 				fatimid_government
+				germany_monarchy
+				spain_monarchy_reform
+				imperial_japan_monarchy
+				byzantium_government
 			}
 		}
 		hereditary_vs_nobility = {
@@ -585,11 +589,11 @@ theocracy = {
 				holy_state_reform
 				united_cantons_reform
 				# Sealand
+				teutonic_order_government
 				crusade_against_the_world
 				eschatological_theocracy_georgia_reform
 				eschatological_theocracy_caliphate_reform
 				kemet_government
-				teutonic_order_government
 			}
 		}
 		internal_vs_external_mission = {
@@ -598,6 +602,7 @@ theocracy = {
 				external_mission_reform
 				mission_to_civilize_reform
 				mission_to_kill_pirates_reform
+				kingdom_of_god_reform # Moved here
 			}
 		}
 		separation_of_power_theocracy = {
@@ -609,7 +614,6 @@ theocracy = {
 				monastic_elections_reform
 				commander_king_reform
 				admiral_king_reform
-				kingdom_of_god_reform # Moved here
 			}
 		}
 		divine_cause = {

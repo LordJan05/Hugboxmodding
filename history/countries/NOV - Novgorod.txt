@@ -12,7 +12,12 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
-
+if = {
+	limit = {
+		ai = no
+	}
+	add_truce_with = SWE
+}
 
 
 1429.1.1 = {

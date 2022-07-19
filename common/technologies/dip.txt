@@ -179,6 +179,8 @@ technology = { #The Flute
 	global_colonial_growth  = 	10
 	enable = flute
 	enable = war_galley
+
+	royal_palace = yes
 }
 
 technology = { #Wharf
@@ -243,8 +245,6 @@ technology = { #The Galleass
 
 	
 	enable = galleass
-
-	royal_palace = yes
 }
  
 technology = { #The Galleon

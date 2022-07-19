@@ -542,6 +542,14 @@ age_of_reformation = {
 				factor = 30
 			}
 		}
+		age_ii_increased_banner_mercs = {
+			modifier = {
+				amount_of_banners = 0.33
+			}
+			ai_will_do = {
+				factor = 30
+			}
+		}
 
 		age_ii_cheaper_units = {
 			allow = {
@@ -560,26 +568,26 @@ age_of_reformation = {
 			}
 		}
 	
-		ab_spain_tercio = {
-			allow = {
-				OR = {
-					AND = {
-						tag = SPA
-						NOT = { exists = ADU }
-					}
-					AND = {
-						tag = ADU
-						NOT = { exists = SPA }
-					}
-				}
-			}
-			modifier = {
-				shock_damage_received = -0.2
-			}
-			ai_will_do = {
-				factor = 1000
-			}
-		}
+		#ab_spain_tercio = {
+		#	allow = {
+		#		OR = {
+		#			AND = {
+		#				tag = SPA
+		#				NOT = { exists = ADU }
+		#			}
+		#			AND = {
+		#				tag = ADU
+		#				NOT = { exists = SPA }
+		#			}
+		#		}
+		#	}
+		#	modifier = {
+		#		shock_damage_received = -0.2
+		#	}
+		#	ai_will_do = {
+		#		factor = 1000
+		#	}
+		#}
 		#ab_mughal_artillery = {
 		#	allow = {
 		#		tag = MUG
@@ -796,6 +804,14 @@ age_of_absolutism = {
 				factor = 100
 			}
 		}
+		age_iii_warscore_cost = {
+			modifier = {
+				province_warscore_cost = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 
 		ab_france_fire_damage = {
 			allow = {
@@ -832,20 +848,20 @@ age_of_absolutism = {
 			}
 		}
 
-		ab_manchu_banner = {
-			allow = {
-				OR = {
-					tag = MCH
-					tag = QNG
-				}
-			}
-			modifier = {
-				global_regiment_cost = -0.25
-			}
-			ai_will_do = {
-				factor = 1000
-			}
-		}
+		#ab_manchu_banner = {
+		#	allow = {
+		#		OR = {
+		#			tag = MCH
+		#			tag = QNG
+		#		}
+		#	}
+		#	modifier = {
+		#		global_regiment_cost = -0.25
+		#	}
+		#	ai_will_do = {
+		#		factor = 1000
+		#	}
+		#}
 	}
 }
 
@@ -949,7 +965,10 @@ age_of_revolutions = {
 		}
 		ab_no_distance_for_core = {
 			rule = {
-				ignore_coring_distance = yes
+				can_chain_claim = yes
+			}
+			modifier = {
+				unjustified_demands = -1
 			}
 			ai_will_do = {
 				factor = 10

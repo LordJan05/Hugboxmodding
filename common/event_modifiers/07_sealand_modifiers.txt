@@ -3,17 +3,39 @@
 change_school_modifier = {
 	# Nothing is needed here
 }
+################
+# Diplo actions:
 # Muslim Jihad:
 sea_sunni_crusade_jihad_diplo_action_modifier = {
 	# Nothing is needed here
 }
-
+# Sabotage Enemy defences diplo action:
+sea_spy_sabotage_defences_covert_action_modifier = {
+	defensiveness = -0.1
+}
+##########################################
+# Privileges:
+estate_church_no_church_unrest_modifier = {
+	local_unrest = -4
+}
+################
 # New World and Colonial Australia nerf:
 new_wrold_nerfs_modifier = {
 	local_development_cost = 0.15
 	local_manpower_modifier = -0.1
 }
-
+# New World Splendor:
+new_world_splendor = {
+	monthly_splendor = 1
+}
+sea_new_world_more_trade_power_modifier = {
+	trade_efficiency = 0.2
+	placed_merchant_power = 2
+	trade_steering = 0.2
+}
+sea_new_world_kill_ruler_options_cooldown = {
+	yearly_corruption = 0.01
+}
 
 colonial_ambitions_modifier = {
 	colonists = 1
@@ -25,9 +47,13 @@ discover_new_land_modifier = {
 discover_new_land_short_modifier = {
 	range = 1
 }
-
+################
+# Cooldowns:
 military_reform_cooldown_modifier = {
 	global_manpower = 0.001
+}
+birthplace_of_the_embracemonke = {
+	local_manpower = 0.001
 }
 ##########################################
 # Buildings:
@@ -173,6 +199,9 @@ four_asian_dragons_modifier = {
 	global_tax_modifier = 0.1
 	inflation_reduction = 0.05
 }
+kor_defence_war_modifier = {
+	shock_damage_received = -0.2
+}
 ##########################################
 # Norway:
 the_known_frontier_modifier = {
@@ -280,15 +309,9 @@ italian_trade_cities = {
 	mercantilism_cost = -0.25
 }
 build_dev_vatican_library = {
-	development_cost = -0.1
-	build_cost = -0.1
+	development_cost = -0.05
+	build_cost = -0.05
 	state_maintenance_modifier = -0.2
-}
-##########################################
-##########################################
-# Switzerland
-swi_recruit_merc_inf_enabled_modifier = {
-	amount_of_banners = -0.5
 }
 ##########################################
 # Morocco:
@@ -321,22 +344,22 @@ ets_trade_control_2_modifier = {
 }
 fatimid_government_janissaries_boost_0 = {
 	is_janissary_modifier = yes
-	drill_decay_modifier = -1
+	drill_decay_modifier = -0.5
 }
 fatimid_government_janissaries_boost_1 = {
 	is_janissary_modifier = yes
 	reinforce_speed = 0.33
-	reinforce_cost_modifier = -1
+	reinforce_cost_modifier = -0.5
 }
 fatimid_government_janissaries_boost_2 = {
 	is_janissary_modifier = yes
-	fire_damage = 0.33
-	shock_damage = 0.33
+	fire_damage = 0.2
+	shock_damage = 0.2
 }
 fatimid_government_janissaries_boost_3 = {
 	is_janissary_modifier = yes
-	fire_damage_received = -0.66
-	shock_damage_received = -0.66
+	fire_damage_received = -0.15
+	shock_damage_received = -0.15
 }
 ##########################################
 # Ottoman:
@@ -408,7 +431,22 @@ converted_to_zoroastrian_modifier = {
 	missionaries = 1
 	global_missionary_strength = 0.03
 }
-
+##########################################
+# Byzantium:
+varangian_guards_special_units = {
+	infantry_shock = 0.5
+	discipline = 0.025
+	is_cawa_modifier = yes
+}
+varangian_guards_special_units_upgraded = {
+	infantry_shock = 1
+	discipline = 0.05
+	is_cawa_modifier = yes
+}
+return_to_italy = {
+	monthly_splendor = 1
+	infantry_power = 0.1
+}
 ##########################################
 # Sealand:
 sealand_modifier = {
@@ -518,6 +556,18 @@ mini_zoroastrian_cult_modifier = {
 	merchants = 1
 }
 ##########################################
+# Castille/Spain:
+tercios_special_pike_units = {
+	fire_damage = 0.1
+	shock_damage_received = -0.3
+	is_cawa_modifier = yes
+}
+tercios_special_fire_units = {
+	fire_damage = 0.3
+	shock_damage_received = -0.1
+	is_cawa_modifier = yes
+}
+##########################################
 # Portugal:
 henry_the_navigator = {
 	range = 0.1
@@ -526,7 +576,26 @@ henry_the_navigator = {
 	naval_attrition = -0.1
 	sea_por_explo_influence = 0.1 # Portugal faction
 }
-
+gc_por_establishes_foothold_brazil_modifier = {
+	manpower_recovery_speed = 0.1
+	land_forcelimit_modifier = 0.1
+}
+gc_por_caribbean_modifier = {
+	land_morale = 0.05
+	artillery_fire = 0.5
+}
+gc_por_colonise_central_africa_modifier = {
+	land_maintenance_modifier = -0.1
+	production_efficiency = 0.1
+}
+gc_por_discovers_cape_good_hope_modifier = {
+	trade_steering = 0.1
+	infantry_power = 0.05
+}
+gc_por_conquers_zanzibar_modifier = {
+	discipline = 0.025
+	global_foreign_trade_power = 0.1
+}
 ##########################################
 # Nogai:
 nog_crimean_development_modifier = {
@@ -550,6 +619,25 @@ nog_silk_road_modifier = {
 	local_hostile_movement_speed = 0.1
 }
 ##########################################
+# Venice:
+ven_ability_to_raid_modifier = {
+	may_perform_slave_raid = yes
+}
+emp_ven_reclaim_the_aegean_modifier = {
+	is_marine_modifier = yes
+	discipline = 0.05
+	shock_damage = 0.15
+}
+emp_ven_control_the_means_of_transaction_modifier = {
+	is_marine_modifier = yes
+	land_morale = 0.1
+	shock_damage_received = -0.3
+}
+emp_ven_expand_the_terraferma_modifier = {
+	sailors_recovery_speed = 0.25
+	allowed_marine_fraction = 0.25
+}
+##########################################
 # 1.4.1 Decision stuff:
 # Military:
 the_recruiting_act = {
@@ -566,13 +654,6 @@ the_navigation_act = {
 	naval_forcelimit_modifier = 0.05
 	navy_tradition = 0.5
 	global_manpower_modifier = -0.05
-}
-hire_privateers = {
-	prestige = -0.5
-	navy_tradition = 0.2
-	trade_efficiency = 0.05
-	global_trade_power = 0.03
-	global_tariffs = 0.05
 }
 convoy_system = {
 	global_tariffs = 0.10

@@ -9,8 +9,6 @@ estate_vaisyas = {
 		religion = hinduism
 		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = veche_republic }
-		NOT = { has_reform = veche_tsardom }
 		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
 		#NOT = { has_reform = cossacks_reform }

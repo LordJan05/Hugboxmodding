@@ -2613,6 +2613,7 @@ byzantine_monarchy = {
 			tag = TRE
 			tag = EPI
 			tag = MOE
+			tag = LAT
 		}
 	}
 }

@@ -316,6 +316,39 @@ country_event = {
 	}
 }
 ########################################################################
+# England/Angevin
+namespace = sea_angevin_events
+
+country_event = {
+	id = sea_angevin_events.1
+	title = sea_angevin_events.1.t
+	desc = sea_angevin_events.1.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = sea_angevin_events.1.a
+		ai_chance = { factor = 1 }
+		set_country_flag = ang_chose_eng_missions
+		custom_tooltip = sea_angevin_events.1.a.tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+		clr_country_flag = ang_chose_eng_missions
+	}
+	option = {
+		name = sea_angevin_events.1.b
+		ai_chance = { factor = 0 }
+		set_country_flag = ang_chose_fra_missions
+		custom_tooltip = sea_angevin_events.1.b.tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+		clr_country_flag = ang_chose_fra_missions
+	}
+}
+########################################################################
 namespace = sealand_events
 # New World and Colonial Australia nerf:
 
@@ -586,7 +619,7 @@ country_event = {
         	days = 1
     	}
 	trigger = {
-		NOT = { is_year = 1450 } # So colonial nations don't get it
+		NOT = { is_year = 1450 }
 		NOT = { has_country_flag = discovered_america_flag }
 		capital_scope = {
 			OR = {
@@ -602,6 +635,9 @@ country_event = {
 				OR = {
 					continent = north_america
 					continent = south_america
+					superregion = near_east_superregion
+					superregion = persia_superregion
+					superregion = india_superregion
 				}
 			}
 			discover_country = ROOT
@@ -611,6 +647,9 @@ country_event = {
 				OR = {
 					continent = north_america
 					continent = south_america
+					superregion = near_east_superregion
+					superregion = persia_superregion
+					superregion = india_superregion
 				}
 			}
 			sea_zone = {
@@ -621,6 +660,174 @@ country_event = {
 	}
 	option = {
 		name = sealand_events.5.a
+	}
+}
+# Discover more:
+country_event = {
+	id = sealand_events.8
+	title = sealand_events.7.t
+	desc = sealand_events.7.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+   	mean_time_to_happen = {
+        	days = 1
+    	}
+	trigger = {
+		is_year = 1475
+		NOT = { is_year = 1480 }
+		NOT = { has_country_flag = discovered_america_more_flag }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		ai = no
+	}
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					superregion = tartary_superregion
+					superregion = far_east_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+				}
+			}
+			discover_country = ROOT
+		}
+		every_province = {
+			limit = {
+				OR = {
+					superregion = tartary_superregion
+					superregion = far_east_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+				}
+			}
+			sea_zone = {
+				discover_country = ROOT
+			}
+		}
+		set_country_flag = discovered_america_more_flag
+	}
+	option = {
+		name = sealand_events.5.a
+	}
+}
+# Discover more more:
+country_event = {
+	id = sealand_events.9
+	title = sealand_events.7.t
+	desc = sealand_events.7.d
+	picture = BATTLE_eventPicture
+
+	hidden = yes
+   	mean_time_to_happen = {
+        	days = 1
+    	}
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1505 }
+		NOT = { has_country_flag = discovered_america_more_more_flag }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		ai = no
+	}
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = europe_superregion
+					superregion = africa_superregion
+					superregion = southern_africa_superregion
+				}
+			}
+			discover_country = ROOT
+		}
+		every_province = {
+			limit = {
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = europe_superregion
+					superregion = africa_superregion
+					superregion = southern_africa_superregion
+				}
+			}
+			sea_zone = {
+				discover_country = ROOT
+			}
+		}
+		set_country_flag = discovered_america_more_more_flag
+	}
+	option = {
+		name = sealand_events.5.a
+	}
+}
+country_event = {
+	id = sealand_events.10
+	title = sealand_events.10.t
+	desc = sealand_events.10.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.10.a
+		trigger = {
+			NOT = { government = monarchy }
+		}
+		change_government = monarchy
+	}
+	option = {
+		name = sealand_events.10.b
+		trigger = {
+			NOT = { government = republic }
+		}
+		change_government = republic
+	}
+	option = {
+		name = sealand_events.10.c
+		trigger = {
+			NOT = { government = theocracy }
+		}
+		change_government = theocracy
+	}
+	option = {
+		name = sealand_events.10.e
+		trigger = {
+			NOT = { has_reform = native_clan_council_reform }
+		}
+		change_government = native
+		add_government_reform = native_clan_council_reform
+	}
+	option = {
+		name = sealand_events.10.f
+	}
+}
+country_event = {
+	id = sealand_events.11
+	title = sealand_events.11.t
+	desc = sealand_events.11.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.11.a
+		define_ruler = { }
+	}
+	option = {
+		name = sealand_events.11.b
+		define_ruler = { }
+	}
+	option = {
+		name = sealand_events.11.c
+		define_ruler = { }
 	}
 }
 
@@ -1467,5 +1674,493 @@ country_event = { # new ruler choosing.
 		add_prestige = 5
 		add_devotion = 5
 		add_splendor = 2
+	}
+}
+########################################################################
+# Achievements:
+namespace = achiev_events
+country_event = {
+	id = achiev_events.1
+	title = none
+	desc = none
+	picture = KING_SICK_IN_BED_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = { has_country_modifier = achiev_good_samaritan }
+	immediate = { set_country_flag = achiev_good_samaritan_flag }
+	option = { }
+}
+########################################################################
+# Advisors:
+namespace = sea_advisor_event
+country_event = {
+	id = sea_advisor_event.0
+	title = sea_advisor_event.0.t
+	desc = sea_advisor_event.0.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.0.a
+		country_event = { id = sea_advisor_event.1 }
+	}
+	option = {
+		name = sea_advisor_event.0.b
+		country_event = { id = sea_advisor_event.2 }
+	}
+	option = {
+		name = sea_advisor_event.0.c
+		country_event = { id = sea_advisor_event.3 }
+	}
+}
+# Adm:
+country_event = {
+	id = sea_advisor_event.1
+	title = sea_advisor_event.1.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.1.1
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_adm_tech_cost
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.2
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_idealistic_views
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = philosopher
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = {
+			government = monarchy
+			NOT = { has_reform = celestial_empire }
+		}
+		create_advisor = advisor_legitimate_government
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { government = republic }
+		create_advisor = advisor_republic_government
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.6
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { government = theocracy }
+		create_advisor = advisor_devoted_government
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.7
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { is_nomad = yes }
+		create_advisor = advisor_horde_government
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_reform_growth
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.9
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_splendor_blendor
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.10
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		create_advisor = advisor_increase_absolutism
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.11
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_centralize_autonomy
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.12
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = artist
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_war_exhaust
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = master_of_mint
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = treasurer
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = natural_scientist
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.17
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = theologian
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.1.18
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = inquisitor
+		add_treasury = -33
+	}
+}
+# Dip:
+country_event = {
+	id = sea_advisor_event.2
+	title = sea_advisor_event.2.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.2.1
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_dip_tech_cost
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.2
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { is_emperor = yes }
+		create_advisor = advisor_imperial_authority
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { is_emperor_of_china = yes }
+		create_advisor = advisor_mandate_growth
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_corrupt_decay
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = statesman
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.6
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = diplomat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.7
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_reduced_agg_exp
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = spymaster
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.9
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_defence_spymaster
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.10
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_culture_convert
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.11
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = trader
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.12
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_colonists = 1 }
+		create_advisor = colonial_governor
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = {
+			num_of_colonists = 1
+			is_colonial_nation = no
+		}
+		create_advisor = navigator
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_colonists = 1 }
+		create_advisor = advisor_colonial_increase
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = naval_reformer
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_heavy_combat 
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.17
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_light_combat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.18
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_galley_combat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.19
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_durability
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.20
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_engagement
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.21
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_forcelimit
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.22
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_maintenance
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.23
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_sailors
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.24
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_attrition
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.25
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_morale_recovery
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.2.26
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		create_advisor = advisor_naval_repair
+		add_treasury = -33
+	}
+}
+# Mil:
+country_event = {
+	id = sea_advisor_event.3
+	title = sea_advisor_event.3.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.3.1
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_mil_tech_cost
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.2
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = army_reformer
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = commandant
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_inf_combat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_cav_combat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.6
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { mil_tech = 7 }
+		create_advisor = advisor_art_combat
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.7
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_fire_damage
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_fire_damage_received
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.9
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_shock_damage
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.10
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_shock_damage_received
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.11
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_cav_to_inf_ratio
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.12
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_speedy_boys
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = quartermaster
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = recruitmaster
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = army_organiser
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = grand_captain
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.17
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_land_attrition
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.18
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_morale_recovery
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.19
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = fortification_expert
+		add_treasury = -33
 	}
 }

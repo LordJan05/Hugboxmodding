@@ -360,8 +360,8 @@ estate_nobles_befriend_rival_of_rival = {
 estate_nobles_restore_legitimacy = {
 	can_select = {
 		NOT = { legitimacy_equivalent = 65 }
-		NOT = { has_reform = native_clan_council_reform }
 		government = monarchy
+		NOT = { government = native }
 		NOT = { has_ruler_modifier = legitimacy_defended }
 		NOT = { has_regency = yes }
 	}
@@ -379,7 +379,7 @@ estate_nobles_restore_legitimacy = {
 	fail_if = {
 		OR = {
 			NOT = { government = monarchy }
-			NOT = { has_reform = native_clan_council_reform }
+			government = native
 			has_regency = yes
 		}
 	}

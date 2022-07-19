@@ -535,7 +535,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1466
 		NOT = { is_year = 1470 }
 		has_regency = no
@@ -588,7 +591,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1465
 		has_regency = no
 		owns = 1772 #Pressburg
@@ -626,7 +632,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1473
 		NOT = { is_year = 1500 }
 	}
@@ -651,7 +660,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1490
 		NOT = { is_year = 1530 }
 		OR = {
@@ -700,7 +712,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1614
 		NOT = { is_year = 1620 }
 		government = monarchy
@@ -737,7 +752,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		if = {
 			limit = {
 				TUR = { exists = yes }
@@ -831,7 +849,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		NOT = { stability = 3 }
 		has_ruler_modifier = hun_power_to_magnates
 	}
@@ -897,7 +918,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1490
 		NOT = { is_year = 1520 }
 	}
@@ -1118,7 +1142,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_at_war = no
 		has_truce = no
 		slovakia_area = {
@@ -1182,7 +1209,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		has_regency = no
 		OR = {
 			has_country_flag = hun_had_mercenaries_in_slovakia
@@ -1240,7 +1270,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		has_regency = no
 		has_country_modifier = hun_black_army
 		NOT = { has_reform = black_army_reform }
@@ -1428,7 +1461,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		owns = 4239
 		is_year = 1450
 		NOT = { is_year = 1500 }
@@ -1574,7 +1610,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		owns = 4239
 		religion_group = christian
 		NOT = { exists = SER }
@@ -1646,6 +1685,7 @@ country_event = {
 	trigger = {
 		OR = {
 			tag = HUN
+			tag = HAE
 			tag = TRA
 		}
 		religion = catholic
@@ -1823,7 +1863,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1530
 		NOT = { is_year = 1555 }
 	}
@@ -1879,7 +1922,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		exists = HAB
 		is_subject = no
 		government = monarchy
@@ -2043,7 +2089,10 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				tag = HUN
+				OR = {
+					tag = HUN
+					tag = HAE
+				}
 				is_lesser_in_union = no
 			}
 			senior_union_with = HUN
@@ -2234,6 +2283,7 @@ country_event = {
 	trigger = {
 		OR = {
 			tag = HUN
+			tag = HAE
 			tag = TRA
 		}
 		NOT = { primary_culture = romanian }
@@ -2290,7 +2340,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1583
 		NOT = { is_year = 1610 }
 		owns = 131
@@ -2335,7 +2388,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1530
 		NOT = { is_year = 1540 }
 		owns = 131
@@ -2420,7 +2476,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_institution_enabled = renaissance
 		is_year = 1450
 		NOT = { is_year = 1470 }
@@ -2477,7 +2536,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1580
 		NOT = { is_year = 1640 }
 		owns = 154
@@ -2535,7 +2597,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		NOT = { exists = SLO }
 		is_year = 1750
 		slovakia_area = {
@@ -2609,7 +2674,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_year = 1600
 		NOT = { is_year = 1700 }
 		any_owned_province = {
@@ -2662,7 +2730,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_subject = no
 		has_regency = yes
 		government = monarchy
@@ -2725,7 +2796,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HUN
+		OR = {
+			tag = HUN
+			tag = HAE
+		}
 		is_subject_other_than_tributary_trigger = yes
 		government = monarchy
 		is_year = 1694
@@ -2828,7 +2902,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUE
+			tag = AHE
+		}
 		NOT = { exists = HUN }
 		any_owned_province = {
 			culture = hungarian
@@ -2926,6 +3004,8 @@ country_event = {
 					NOT = { prestige = 0 }
 					emperor = {
 						NOT = { tag = HAB }
+						NOT = { tag = AUE }
+						NOT = { tag = AHE }
 					}
 				}
 				emperor = {
@@ -3075,7 +3155,11 @@ country_event = {
 		}
 		if = {
 			limit = {
-				tag = HAB
+				OR = {
+					tag = HAB
+					tag = AUE
+					tag = AHE
+				}
 			}
 			austria_proper_area = {
 				limit = {

@@ -11,9 +11,12 @@ estate_church =
 			NOT = { has_estate = estate_brahmins }
 		}
 		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_government_attribute = is_merchant_republic }
-		NOT = { has_reform = veche_republic }
-		NOT = { has_reform = veche_republic }
+		if = {
+			limit = {
+				NOT = { tag = VEN }
+			}
+			NOT = { has_government_attribute = is_merchant_republic }
+		}
 		NOT = { has_reform = trading_city }
 		#NOT = { has_reform = cossacks_reform }
 		NOT = { has_reform = siberian_tribe }
@@ -330,6 +333,8 @@ estate_church =
 	color = { 200 150 0 }
 
 	privileges = {
+		estate_church_service_to_god # Sealand. Part of Kingdom of God
+		estate_church_no_church_unrest # Sealand
 		estate_church_land_rights
 		estate_church_papal_emissary
 		estate_church_religious_state
@@ -354,7 +359,6 @@ estate_church =
 		estate_church_monopoly_of_wine
 		estate_church_monopoly_of_slaves
 		estate_church_statutory_rights
-		estate_church_service_to_god # Sealand. Part of Kingdom of God
 		estate_church_yakobs_churches
 		estate_church_one_faith_one_culture
 		estate_church_religious_diplomats

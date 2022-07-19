@@ -1037,6 +1037,7 @@ emp_burgundy_4 = {
 						ALE = { is_subject_of = FRA }
 						NEV = { is_subject_of = FRA }
 						NRM = { is_subject_of = FRA }
+						AGL = { is_subject_of = FRA }
 					}
 				}
 				OR = {
@@ -1051,6 +1052,7 @@ emp_burgundy_4 = {
 					owned_by = ALE
 					owned_by = NEV
 					owned_by = NRM
+					owned_by = AGL
 				}
 				owner = {
 					is_subject_of = FRA
@@ -1088,6 +1090,7 @@ emp_burgundy_4 = {
 						ALE = { is_subject_of = FRA }
 						NEV = { is_subject_of = FRA }
 						NRM = { is_subject_of = FRA }
+						AGL = { is_subject_of = FRA }
 					}
 				}
 				OR = {
@@ -1108,6 +1111,7 @@ emp_burgundy_4 = {
 								tag = ALE
 								tag = NEV
 								tag = NRM
+								tag = AGL
 							}
 							is_subject_of = FRA
 							has_opinion = {
@@ -1156,6 +1160,7 @@ emp_burgundy_4 = {
 						ALE = { is_subject_of = FRA }
 						NEV = { is_subject_of = FRA }
 						NRM = { is_subject_of = FRA }
+						AGL = { is_subject_of = FRA }
 					}
 				}
 				ile_de_france_area = {

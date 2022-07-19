@@ -43,6 +43,7 @@ tributary_state = {}
 tumen_vassal = {}
 burgundy_juniors = {}
 castille_vassal = {}
+venetian_league_subjects = {}
 
 default = {
 	# Graphics:
@@ -903,4 +904,33 @@ castille_vassal = {
 	modifier_subject = {
 		modifier = subject_vastille_vassal
 	}
+}
+
+venetian_league_subjects = {
+	copy_from = default
+	count = vassal
+
+	# Properties:
+	can_fight_independence_war = no
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	uses_tariffs = yes
+	can_be_annexed = yes
+	takes_diplo_slot = no
+	has_power_projection = no
+	can_release_in_peace = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+
+	# Subject Interactions:
+	# (continuous)
+	divert_trade = yes
+	# (immediate)
+	siphon_income = yes
+	fortify_march = yes
+	seize_territory = yes
+	increase_tariffs = yes
+	decrease_tariffs = yes
 }

@@ -1771,8 +1771,8 @@ decentralize_reform = {
 	}
 	modifiers = {
 		num_accepted_cultures = 3
-		culture_conversion_cost = -0.1
-		promote_culture_cost = -0.1
+		culture_conversion_cost = -0.15
+		promote_culture_cost = -0.15
 	}
 	ai = {
 		factor = 0
@@ -2003,6 +2003,17 @@ royal_decree_reform = {
 		max_absolutism = 10
 		global_tax_modifier = 0.1
 	}
+	effect = {
+		if = {
+			limit = {
+				has_reform = english_monarchy
+			}
+			custom_tooltip = enable_disabled_nobility_tt
+			hidden_effect = {
+				set_country_flag = enable_disabled_nobility_flag
+			}
+		}
+	}
 	ai = {
 		factor = 0
 	}
@@ -2014,6 +2025,17 @@ aristocratic_court_reform = {
 	modifiers = {
 		army_tradition_decay = -0.005
 		mil_advisor_cost = -0.05
+	}
+	effect = {
+		if = {
+			limit = {
+				has_reform = english_monarchy
+			}
+			custom_tooltip = enable_disabled_nobility_tt
+			hidden_effect = {
+				set_country_flag = enable_disabled_nobility_flag
+			}
+		}
 	}
 	ai = {
 		factor = 10
@@ -2039,6 +2061,17 @@ states_general_reform = {
 		stability_cost_modifier = -0.1
 		no_stability_loss_on_monarch_death = yes
 		country_admin_power = 1
+	}
+	effect = {
+		if = {
+			limit = {
+				has_reform = english_monarchy
+			}
+			custom_tooltip = enable_disabled_nobility_tt
+			hidden_effect = {
+				set_country_flag = enable_disabled_nobility_flag
+			}
+		}
 	}
 
 	ai = {

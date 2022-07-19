@@ -95,6 +95,7 @@ country_event = {
 			NOT = { has_country_modifier = hun_black_army }
 			NOT = { has_reform = black_army_reform }
 		}
+		NOT = { has_country_flag = mesopotamian_mamluks_flag }
 		ai = no
 		any_hired_mercenary_company = {
 			hired_for_months = 1
@@ -192,6 +193,40 @@ country_event = { # HUNGARY
 	option = {
 		name = "mjl_merc_events.EVTOPTA10"
 		event_target:human_merc_hun = {
+			disband_mercenary_company = THIS
+		}
+	}
+}
+country_event = { # MAMLUKS
+	id = mjl_merc_events.13
+	title = "mjl_merc_events.EVTNAME10"
+	desc = "mjl_merc_events.EVTDESC10"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		has_country_flag = mesopotamian_mamluks_flag
+		ai = no
+		any_hired_mercenary_company = {
+			NOT = { template = merc_mesopotamian_mamluks }
+			hired_for_months = 1
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					NOT = { template = merc_mesopotamian_mamluks }
+				}
+				save_event_target_as = human_merc_mam
+			}
+		}
+	}
+	option = {
+		name = "mjl_merc_events.EVTOPTA10"
+		event_target:human_merc_mam = {
 			disband_mercenary_company = THIS
 		}
 	}

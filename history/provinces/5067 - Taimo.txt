@@ -1,6 +1,6 @@
-owner = DAJ
-controller = DAJ
-add_core = DAJ
+owner = TGL
+controller = TGL
+add_core = TGL
 culture = fur_culture
 religion = shamanism #Fetishism
 capital = "Taimo"

@@ -5,7 +5,7 @@ sea_por_trade = {
 
 	modifier = {
 		state_maintenance_modifier = 0.15
-		global_unrest = 1
+		may_perform_slave_raid = yes
 		advisor_cost = -0.1
 		global_trade_power = 0.1
 		production_efficiency = 0.1

@@ -6,6 +6,8 @@ PR_smz_missions1_slot = {
 		OR = {
 			tag = SMZ
 			tag = UES
+			tag = TKD
+			tag = IJP
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -238,6 +240,7 @@ japanse_missions_china = {
 		}
 		trigger = {
 			OR = {
+				tag = IJP
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = SMZ
@@ -245,6 +248,10 @@ japanse_missions_china = {
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = UES
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = TKD
 				}
 				has_reform = shogunate
 				tag = JAP
@@ -319,6 +326,7 @@ japanse_missions_china = {
 		}
 		trigger = {
 			OR = {
+				tag = IJP
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = SMZ
@@ -326,6 +334,10 @@ japanse_missions_china = {
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = UES
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = TKD
 				}
 				has_reform = shogunate
 				tag = JAP
@@ -382,6 +394,7 @@ japanse_missions_china = {
 		
 		trigger = {
 			OR = {
+				tag = IJP
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = SMZ
@@ -389,6 +402,10 @@ japanse_missions_china = {
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = UES
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = TKD
 				}
 				tag = JAP
 			}
@@ -570,6 +587,7 @@ japanse_missions_the_empire = {
 		
 		trigger = {
 			OR = {
+				tag = IJP
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = SMZ
@@ -577,6 +595,10 @@ japanse_missions_the_empire = {
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = UES
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = TKD
 				}
 				has_reform = shogunate
 				tag = JAP
@@ -822,6 +844,7 @@ japanse_missions_domestic = {
 		}
 		trigger = {
 			OR = {
+				tag = IJP
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = SMZ
@@ -829,6 +852,10 @@ japanse_missions_domestic = {
 				AND = {
 					NOT = { has_reform = daimyo }
 					tag = UES
+				}
+				AND = {
+					NOT = { has_reform = daimyo }
+					tag = TKD
 				}
 				tag = JAP
 			}

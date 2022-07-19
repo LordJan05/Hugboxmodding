@@ -90,6 +90,10 @@ gc_por_1 = {
 				name = "por_brazil_tariffs"
 				duration = 7300
 			}
+			add_country_modifier = {
+				name = gc_por_establishes_foothold_brazil_modifier
+				duration = -1
+			}
 		}
 	}
 	gc_por_bandeirantes = {
@@ -398,12 +402,10 @@ gc_por_2 = {
 					has_discovered = ROOT
 				}
 			}
-			custom_trigger_tooltip = {	
-				tooltip = miss_colonize_kongo
-				kongo_region = {
-					owned_by = ROOT
-					is_city = yes
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = kongo_region
+				is_city = yes
 			}
 		}
 	
@@ -420,6 +422,10 @@ gc_por_2 = {
 					power = 20
 					key = ivory_coast_ambition
 				}
+			}
+			add_country_modifier = {
+				name = gc_por_colonise_central_africa_modifier
+				duration = -1
 			}
 		}
 	}
@@ -794,7 +800,7 @@ gc_por_3_b = {
 		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 6
 				colonial_region = colonial_the_carribean
 				is_city = yes
 			}
@@ -821,6 +827,10 @@ gc_por_3_b = {
 					}
 				}
 			}
+			add_country_modifier = {
+				name = gc_por_caribbean_modifier
+				duration = -1
+			}
 		}
 	}
 }
@@ -845,7 +855,11 @@ gc_por_3_c = {
 		required_missions = { gc_por_colonise_west_africa }
 		completed_by = 1499.1.1
 		position = 3
-		
+		provinces_to_highlight = {
+			region = south_africa_region
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_south_africa
@@ -855,6 +869,11 @@ gc_por_3_c = {
 			}
 			light_ship_fraction = 0.25
 			navy_size_percentage = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = south_africa_region
+				is_city = yes
+			}
 		}
 	
 		effect = {
@@ -879,6 +898,10 @@ gc_por_3_c = {
 			}
 			1192 = {
 				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = gc_por_discovers_cape_good_hope_modifier
+				duration = -1
 			}
 		}
 	}
@@ -950,7 +973,7 @@ gc_por_3_c = {
 		position = 5
 		
 		provinces_to_highlight = {
-			province_id = 1201
+			region = east_africa_region
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
@@ -958,6 +981,11 @@ gc_por_3_c = {
 		trigger = { 
 			1201 = {
 				owned_by = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = east_africa_region
+				is_city = yes
 			}
 		}
 	
@@ -969,6 +997,10 @@ gc_por_3_c = {
 					name = "por_makeshift_defenses"
 					duration = -1
 				}
+			}
+			add_country_modifier = {
+				name = gc_por_conquers_zanzibar_modifier
+				duration = -1
 			}
 		}
 	}

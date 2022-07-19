@@ -5,7 +5,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -13,7 +12,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -21,7 +19,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -29,7 +26,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -37,7 +33,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -45,7 +40,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -53,15 +47,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
-#dependency = {
-#	subject_type = "tumen_vassal"
-#	first = OIR
-#	second = KHA
-#	start_date = 1444.1.1
-#	end_date = 1455.1.1
-#}
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -69,7 +54,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -77,7 +61,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -85,15 +68,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
-#dependency = {
-#	subject_type = "tumen_vassal"
-#	first = OIR
-#	second = BRT
-#	start_date = 1444.1.1
-#	end_date = 1455.1.1
-#}
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -101,7 +75,6 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
 dependency = {
 	subject_type = "tumen_vassal"
 	first = OIR
@@ -109,5 +82,3 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1455.1.1
 }
-
-

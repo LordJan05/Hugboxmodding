@@ -28,7 +28,7 @@ blessing_navjote = {
 
 	modifier = {
 		global_missionary_strength = 0.02
-		discipline = 0.025
+		fire_damage = 0.1
 	}
 	ai_will_do = {
 		factor = 10
@@ -79,7 +79,7 @@ blessing_dakhma = {
 	modifier = {
 		#build_cost = -0.1
 		development_cost = -0.05
-		num_accepted_cultures = 1
+		culture_conversion_cost = -0.1
 	}
 	ai_will_do = {
 		factor = 10

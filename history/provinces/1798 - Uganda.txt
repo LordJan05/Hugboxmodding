@@ -1,7 +1,7 @@
 #1798 - Gulu
-owner = BNY
-controller = BNY
-add_core = BNY
+owner = SHI
+controller = SHI
+add_core = SHI
 culture = acholi
 religion = shamanism #Fetishism
 trade_goods = tropical_wood

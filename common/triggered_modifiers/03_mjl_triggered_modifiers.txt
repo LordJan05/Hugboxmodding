@@ -45,18 +45,21 @@ exodus_player_yearly_income = {
 ###########################################
 new_world_player_nerf = {
 	potential = {
-		OR = {
-			capital_scope = {
-				continent = north_america
-			}
-			capital_scope = {
-				continent = south_america
-			}	
-			capital_scope = {
-				continent = oceania
-			}	
+		OR = {	
 			is_former_colonial_nation = yes
 			has_country_flag = changed_from_colonial_nation
+			AND = {
+				capital_scope = {
+					continent = north_america
+				}
+				capital_scope = {
+					continent = south_america
+				}	
+				capital_scope = {
+					continent = oceania
+				}
+				total_development = 1000
+			}
 		}
 		was_player = yes
 	}

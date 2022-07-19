@@ -753,7 +753,8 @@ kor_fortify_missions = {
 		}
 		
 		trigger = {
-			any_owned_province = {
+			num_of_owned_provinces_with = {
+				value = 2
 				OR = {
 					province_id = 2744
 					province_id = 4232
@@ -775,7 +776,8 @@ kor_fortify_missions = {
 			if = {
 				limit = {
 					NOT = {
-						any_owned_province = {
+						num_of_owned_provinces_with = {
+							value = 2
 							OR = {
 								province_id = 2744
 								province_id = 4232
@@ -974,14 +976,14 @@ kor_righteous_army_tree = {
 
 		trigger = {
 			any_country = {
-				war_with = root
-				army_strength = {
-					who = root
-					value = 1.5
-				}
+				offensive_war_with = ROOT
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = kor_defence_war_modifier
+				duration = 5475
+			}
 			add_yearly_manpower = 1.5
 		}
 	}
@@ -1619,7 +1621,7 @@ korea_economic_social_political_path_2 = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns_core_province = 5531
+			owns_core_province = 4970
 		}
 		
 		effect = {

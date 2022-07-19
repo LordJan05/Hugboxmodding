@@ -127,36 +127,111 @@ sea_animism_reforms = {
 		is_at_war = no
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		stability = 1
-		adm_power = 300
-		dip_power = 300
-		mil_power = 300
+		if = {
+			limit = {
+				NOT = { has_country_flag = sea_animism_reform_flag_1 }
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				is_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = sea_animism_reform_flag_1
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_animism_reform_flag_tt
+				had_country_flag = {
+					flag = sea_animism_reform_flag_1
+					days = 1825
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				is_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = sea_animism_reform_flag_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_animism_reform_flag_tt
+				had_country_flag = {
+					flag = sea_animism_reform_flag_2
+					days = 1825
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 18
+				is_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = sea_animism_reform_flag_3
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_animism_reform_flag_tt
+				had_country_flag = {
+					flag = sea_animism_reform_flag_3
+					days = 1825
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 24
+				is_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = sea_animism_reform_flag_4
+			}
+			custom_trigger_tooltip = {
+				tooltip = sea_animism_reform_flag_tt
+				had_country_flag = {
+					flag = sea_animism_reform_flag_4
+					days = 1825
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				is_core = ROOT
+			}
+		}
 	}
 	
 	sea_animism_reform_1 = {
 		may_recruit_female_generals = yes
 		war_taxes_cost_modifier = -1
 		manpower_in_true_faith_provinces= 0.15
+		global_colonial_growth = -5
 	}
 	sea_animism_reform_2 = {
 		#free_policy = 1
 		development_cost = -0.05
 		technology_cost = -0.05
 		idea_cost = -0.05
+		global_colonial_growth = -5
 	}
 	sea_animism_reform_3 = {
 		no_religion_penalty = yes
 		possible_adm_policy = 1
 		monthly_reform_progress_modifier = 0.33
+		global_colonial_growth = -5
 	}
 	sea_animism_reform_4 = {
-		range = 0.33
+		colonists = 1
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		global_colonial_growth = -5
 	}
 	sea_animism_reform_5 = {
 		cb_on_overseas = yes
 		possible_dip_policy = 1
 		stability_cost_to_declare_war = -1
+		global_colonial_growth = -5
 	}	
 	
 	ai_will_do = {

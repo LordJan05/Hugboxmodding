@@ -1,5 +1,5 @@
 sealand_cawa_fl_base = {
-	local_amount_of_cawa = 20
+	local_amount_of_cawa = 10
 }
 sealand_banners_fl_base = {
 	local_amount_of_banners = 20

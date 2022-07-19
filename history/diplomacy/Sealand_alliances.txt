@@ -26,6 +26,28 @@ vassal = {
 	start_date = 1444.10.10
 	end_date = 1454.10.10
 }
+# Dutch PUvassals:
+union = {
+	subject_type = "burgundy_juniors"
+	first = BUR
+	second = FLA
+	start_date = 1414.1.1
+	end_date = 1493.1.1
+}
+union = {
+	subject_type = "burgundy_juniors"
+	first = BUR
+	second = BRB
+	start_date = 1414.1.1
+	end_date = 1477.1.5
+}
+union = {
+	subject_type = "burgundy_juniors"
+	first = BUR
+	second = HOL
+	start_date = 1414.1.1
+	end_date = 1477.1.5
+}
 
 # Castille + Aragon = PU mission over Portugal.
 vassal = {

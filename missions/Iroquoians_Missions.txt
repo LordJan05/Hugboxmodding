@@ -19,11 +19,11 @@ atw_missions_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 911
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 911
-			911 = { development = 20 }
+			911 = { development = 10 }
 		}
 		effect = {
 			911 = { center_of_trade = 1 }
@@ -36,11 +36,11 @@ atw_missions_1 = {
 		required_missions = { atw_center_of_trade_1 }
 		provinces_to_highlight = {
 			province_id = 2526
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 2526
-			2526 = { development = 20 }
+			2526 = { development = 10 }
 		}
 		effect = {
 			2526 = { center_of_trade = 1 }

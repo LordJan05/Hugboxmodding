@@ -60,11 +60,11 @@ sea_SJK_ideas = { # Seljuk Empire
 		land_forcelimit_modifier = 0.33
 	}
 	sjk_masters_of_conquerors = {
-		province_warscore_cost = -0.05
+		province_warscore_cost = -0.1
 		core_creation = -0.1
 	}
 	sjk_the_grey_sheeps_of_qoyunlus = {
-		land_morale = 0.1
+		land_morale = 0.15
 		yearly_tribal_allegiance = 2
 	}
 	sjk_qar_dynamic_warfare = {
@@ -77,8 +77,8 @@ sea_SJK_ideas = { # Seljuk Empire
 		governing_capacity_modifier = 0.2
 	}
 	sjk_seljuk_workmachines = {
-		global_trade_goods_size_modifier = 0.05
-		production_efficiency = 0.05
+		global_trade_goods_size_modifier = 0.1
+		production_efficiency = 0.1
 	}
 }
 
@@ -205,7 +205,7 @@ sea_ABA_ideas = { # Abbasid Chaliphate
 		idea_cost = -0.05
 	}
 	aba_restore_legacy_of_past = {
-		build_cost = -0.1
+		build_cost = -0.05
 		development_cost = -0.05
 	}
 	aba_grand_navy = {
@@ -370,11 +370,11 @@ sea_AUE_ideas = { # Austrian Empire
 	}
 	fugger_banks_1 = {
 		inflation_reduction = 0.1
-		interest = -0.5
+		interest = -0.25
 	}
 	habsburg_dominance_1 = {
 		diplomatic_reputation = 2
-		free_policy = 1
+		free_mil_policy = 1
 	}
 	edict_of_restitution_1 = {
 		global_missionary_strength = 0.03
@@ -411,14 +411,14 @@ sea_AHE_ideas = { # Austro-Hungarian Empire
 	}
 	ahe_fugger_banks = {
 		inflation_reduction = 0.1
-		interest = -0.5
+		interest = -0.25
 	}
 	ahe_habsburg_dominance = {
 		diplomatic_reputation = 2
-		free_policy = 1
+		free_mil_policy = 1
 	}
 	ahe_curtailed_peasantry = {
-		production_efficiency = 0.1
+		production_efficiency = 0.2
 	}
 	ahe_austrian_court = {
 		administrative_efficiency = 0.05
@@ -430,7 +430,7 @@ sea_AHE_ideas = { # Austro-Hungarian Empire
 }
 sea_HAE_ideas = { # Hungro-Austrian Empire
 	start = {
-		cavalry_power = 0.25
+		cavalry_power = 0.2
 		recover_army_morale_speed = 0.05
 	}
 	
@@ -457,17 +457,17 @@ sea_HAE_ideas = { # Hungro-Austrian Empire
 	}
 	hae_reformed_coinage = {
 		inflation_reduction = 0.1
-		interest = -0.5
+		interest = -0.25
 	}
 	hae_curtailed_peasantry = {
-		production_efficiency = 0.1
+		production_efficiency = 0.2
 	}
 	hae_austrian_court = {
 		administrative_efficiency = 0.05
 	}
 	hae_hungarian_estates_general = {
 		no_religion_penalty = yes
-		free_policy = 1
+		free_mil_policy = 1
 	}
 }
 
@@ -521,8 +521,8 @@ sea_BYS_ideas = { # Barbary States
 	free = yes
 	
 	bys_ber_barbary_pirates = {
-		naval_forcelimit_modifier = 0.25
-		global_sailors_modifier = 0.25
+		naval_forcelimit_modifier = 0.2
+		global_sailors_modifier = 0.2
 	}
 	bys_desert_warfare = {
 		hostile_attrition = 1
@@ -537,7 +537,7 @@ sea_BYS_ideas = { # Barbary States
 		privateer_efficiency = 0.15
 	}
 	bys_tuareg_cavalry = {
-		cavalry_power = 0.25
+		cavalry_power = 0.15
 		cavalry_cost = -0.1
 	}
 	bys_dual_diplomacy = {
@@ -546,7 +546,7 @@ sea_BYS_ideas = { # Barbary States
 	}
 	bys_brothers_barbarossa = {
 		galley_power = 0.20
-		infantry_power = 0.25
+		infantry_power = 0.15
 	}
 }	
 sea_ETS_ideas = { # Emirate of Two Sicilies
@@ -597,7 +597,7 @@ sea_FAT_ideas = {
 		galley_power = 0.2		
 	}
 	bonus = {
-		global_trade_goods_size_modifier = 0.2
+		global_trade_goods_size_modifier = 0.15
 		development_cost = -0.05
 	}
 	trigger = {
@@ -669,7 +669,7 @@ sea_PAP_ideas = { # Kingdom of God
 		fabricate_claims_cost = -0.25
 	}
 	pap_centralize_the_states = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.05
 		mercantilism_cost = -0.25
 	}
 	pap_the_vatican_museums = {
@@ -699,7 +699,7 @@ sea_SWZ_ideas = { # Swazi ideas
 	free = yes
 	
 	swz_origin_of_first_human = {
-		monthly_splendor = 4
+		monthly_splendor = 3
 	}
 	swz_tax_the_people = {
 		global_tax_modifier = 0.2
@@ -718,7 +718,7 @@ sea_SWZ_ideas = { # Swazi ideas
 	}
 	swz_absolute_legitimacy = {
 		legitimacy = 1
-		republican_tradition = 0.3
+		republican_tradition = 0.2
 		devotion = 1
 		horde_unity = 1
 	}
@@ -787,7 +787,7 @@ sea_south_african_ideas = { # Mix of Kongo, Zambezi and Great Lakes ideas group
 		prestige = 1
 	}
 	sea_south_africa_securing_our_trade = {
-		global_own_trade_power = 0.25
+		global_own_trade_power = 0.2
 	}
 	sea_south_africa_everyone_must_be_happy = {
 		global_unrest = -1
@@ -823,7 +823,7 @@ sea_LEL_ideas = {
 	free = yes
 	
 	lel_republican_values = {
-		republican_tradition = 0.25
+		republican_tradition = 0.2
 		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
@@ -910,7 +910,7 @@ sea_KEM_ideas = {
 	bonus = {
 		legitimacy = 1
 		devotion = 1
-		republican_tradition = 0.25
+		republican_tradition = 0.2
 		yearly_absolutism = 1
 	}
 	
@@ -920,20 +920,20 @@ sea_KEM_ideas = {
 	free = yes
 	
 	kem_successors_of_ra = {
-		manpower_in_true_faith_provinces= 0.2
-		land_morale = 0.15
+		manpower_in_true_faith_provinces= 0.15
+		land_morale = 0.1
 	}
 	kem_chariots_of_war = {
 		cavalry_power = 0.2
-		cavalry_shock = 1
+		cavalry_shock = 0.5
 	}
 	kem_children_of_the_gods = {
 		colonists = 2
 		global_colonial_growth = 35
 	}
 	kem_thriving_agriculture = {
-		global_trade_goods_size_modifier = 0.15
-		production_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.1
+		production_efficiency = 0.1
 	}
 	kem_spirit_of_ptah = {
 		monarch_lifespan = 1
@@ -941,7 +941,7 @@ sea_KEM_ideas = {
 	}
 	kem_adaptive_military = {
 		discipline = 0.05
-		yearly_army_professionalism = 0.0033
+		yearly_army_professionalism = 0.0027
 	}
 	kem_advanced_science_and_technology = {
 		all_power_cost = -0.025
@@ -979,7 +979,7 @@ sea_ATL_ideas = {
 		defensiveness = 0.5
 	}
 	atl_ideal_state_of_republic = {
-		republican_tradition = 0.33
+		republican_tradition = 0.2
 		prestige = 1.5
 	}
 	atl_learned_from_mistakes = {
@@ -991,7 +991,101 @@ sea_ATL_ideas = {
 		global_unrest = -2
 	}
 	atl_restore_long_lost_empire = {
-		province_warscore_cost = -0.25
+		province_warscore_cost = -0.2
 		administrative_efficiency = 0.05
+	}
+}
+
+# Rhineland
+sea_RHI_ideas = {
+	start = {
+		interest = -0.5
+		global_unrest = -1
+	}
+	
+	bonus = {
+		discipline = 0.05
+		land_morale = 0.1
+	}
+	
+	trigger = {
+		tag = RHI
+	}
+	free = yes		#will be added at load.
+	
+	rhi_swa_stinginess = {
+		build_cost = -0.05
+		idea_cost = -0.1
+	}
+	rhi_wes_westphalian_decentralisation = {
+		state_maintenance_modifier = -0.15
+		development_cost = -0.05
+	}
+	rhi_wes_increased_conscription = {
+		global_manpower_modifier = 0.125
+		manpower_recovery_speed = 0.125
+	}
+	rhi_wes_administrative_assimilation_of_rheinlanders = {
+		num_accepted_cultures = 2
+		same_culture_advisor_cost = -0.2
+	}
+	rhi_fkn_free_knights_of_franconia = {
+		cavalry_power = 0.15
+		shock_damage_received = -0.1
+	}
+	rhi_fkn_main_trading = {
+		trade_efficiency = 0.2
+		merchants = 1
+	}
+	rhi_wes_cities_of_the_rhineland = {
+		global_prov_trade_power_modifier = 0.15
+	}
+}
+
+# Angevin Empire:
+sea_ANG_ideas = {
+	start = {
+		infantry_power = 0.1
+		global_manpower_modifier = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+		global_unrest = -2
+	}	
+
+	trigger = {
+		tag = ANG
+	}
+	free = yes		#will be added at load.
+	
+	ang_gbr_acts_of_union = {
+		diplomatic_annexation_cost = -0.15
+		governing_capacity_modifier = 0.15
+	}
+	ang_elan = {
+		land_morale = 0.2
+		fire_damage = 0.1
+	}
+	ang_estates_general = {
+		global_tax_modifier = 0.2
+		free_leader_pool = 1
+	}
+	ang_british_industrialization = {
+		global_trade_goods_size_modifier = 0.1
+		production_efficiency = 0.1
+	}
+	ang_royal_navy = {
+		navy_tradition = 0.33
+		heavy_ship_power = 0.15
+		allowed_marine_fraction = 0.33
+	}
+	ang_gbr_the_royal_society = {
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+	ang_british_merchant_navy = {
+		merchants = 2
+		trade_efficiency = 0.15
 	}
 }

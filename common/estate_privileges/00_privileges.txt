@@ -1956,9 +1956,11 @@ estate_nobles_nobility_primacy = {
 
 estate_nobles_officer_corp = {
 	icon = privilege_promote_purbias
+	land_share = 5
 	max_absolutism = -5
 	influence = 0.05
 	can_select = {
+		NOT = { has_estate_privilege = estate_nobles_command_of_the_military }
 		army_tradition = 30
 	}
 	on_granted = {
@@ -2403,15 +2405,13 @@ estate_church_inwards_perfection = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.33
-		global_tax_modifier = 0.33
-		production_efficiency = 0.33
-		manpower_in_true_faith_provinces = 0.33
-		core_creation = 1
-		province_warscore_cost = 2
+		development_cost = -0.25
 	}
 	penalties = {
 		stability_cost_to_declare_war = 1
+		global_tax_modifier = -0.33
+		production_efficiency = -0.33
+		manpower_in_true_faith_provinces = -0.33
 	}
 	benefits = {
 		tolerance_own = 2
@@ -8305,12 +8305,13 @@ estate_church_lao_animism = {
 
 estate_nobles_command_of_the_military = {
 	icon = privilege_promote_purbias
-	land_share = 10
+	land_share = 5
 	max_absolutism = -10
 	influence = 0.3
 	is_valid = {
 	}
 	can_select = {
+		NOT = { has_estate_privilege = estate_nobles_officer_corp }
 	}
 	on_granted = {
 		custom_tooltip = estate_nobles_command_of_the_military_tt

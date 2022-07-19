@@ -217,18 +217,22 @@ confucianism_rebels = {
 				hidden = yes
 			}
 		}
-		if = {
-			limit = {
-				NOT = { religion_group = eastern }
-			}
-			add_prestige = -50
-			every_owned_province = {
-				limit = {
-					has_rebel_faction = REB
-				}
-				add_local_autonomy = 20
-			}
+		create_independent_estate = {
+			estate = estate_church
+			play_as = no
 		}
+		#if = {
+		#	limit = {
+		#		NOT = { religion_group = eastern }
+		#	}
+		#	add_prestige = -50
+		#	every_owned_province = {
+		#		limit = {
+		#			has_rebel_faction = REB
+		#		}
+		#		add_local_autonomy = 20
+		#	}
+		#}
 		if = {
 			limit = {
 				tag = PAP

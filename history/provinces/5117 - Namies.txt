@@ -1,9 +1,11 @@
-# - Senqu
-
+add_core = NAM
+owner = NAM
+controller = NAM
 culture = khoisan
 religion = shamanism #Fetishism
 capital = "Namies"
-trade_goods = unknown
+is_city = yes
+trade_goods = livestock
 hre = no
 base_tax = 1 
 base_production = 1

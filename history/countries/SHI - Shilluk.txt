@@ -8,7 +8,7 @@ unit_type = sub_saharan
 unlock_cult = mwari_cult
 unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
-capital = 5063
+capital = 1798
 
 1444.1.1 = {
 	monarch = {

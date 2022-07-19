@@ -137,12 +137,18 @@ country_decisions = {
 					add_permanent_claim = SPA
 				}
 			}
+			add_prestige = 25
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			set_country_flag = formed_spain_flag
-			add_prestige = 25
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = spain_monarchy_reform
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -204,7 +210,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			legitimacy = 100
+			#legitimacy = 100
 			iberia_region = {
 				type = all
 				NOT = { owner = { religion_group = muslim } }
@@ -290,6 +296,12 @@ country_decisions = {
 				}
 			}
 			set_country_flag = formed_spain_flag
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = spain_monarchy_reform
+			}
 		}
 		ai_will_do = {
 			factor = 1

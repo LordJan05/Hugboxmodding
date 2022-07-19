@@ -527,11 +527,11 @@ che_missions_3 = {
 		required_missions = { se_along_the_river }
 		provinces_to_highlight = {
 			province_id = 902
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 902
-			902 = { development = 20 }
+			902 = { development = 10 }
 		}
 		effect = {
 			902 = { center_of_trade = 1 }
@@ -544,11 +544,11 @@ che_missions_3 = {
 		required_missions = { che_center_of_trade_1 }
 		provinces_to_highlight = {
 			province_id = 4916
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		}
 		trigger = {
 			owns_core_province = 4916
-			4916 = { development = 20 }
+			4916 = { development = 10 }
 		}
 		effect = {
 			4916 = { center_of_trade = 1 }

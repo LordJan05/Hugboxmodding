@@ -787,20 +787,46 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		has_estate_privilege = estate_burghers_tropical_nation
+		OR = {
+			has_estate_privilege = estate_burghers_tropical_nation
+			has_estate_privilege = estate_church_no_church_unrest
+		}
 	}
 
 	immediate = {
-		every_owned_province = {
+		if = {
 			limit = {
-				has_climate = tropical
-				NOT = {
-					has_province_modifier = estate_burghers_tropical_mod
+				has_estate_privilege = estate_burghers_tropical_nation
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = jungle
+					NOT = {
+						has_province_modifier = estate_burghers_tropical_mod
+					}
+				}
+				add_province_modifier = {
+					name = estate_burghers_tropical_mod
+					duration = -1
 				}
 			}
-			add_province_modifier = {
-				name = estate_burghers_tropical_mod
-				duration = -1
+		}
+		# Church unrest:
+		if = {
+			limit = {
+				has_estate_privilege = estate_church_no_church_unrest
+			}
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+					NOT = {
+						has_province_modifier = estate_church_no_church_unrest_modifier
+					}
+				}
+				add_province_modifier = {
+					name = estate_church_no_church_unrest_modifier
+					duration = -1
+				}
 			}
 		}
 	}

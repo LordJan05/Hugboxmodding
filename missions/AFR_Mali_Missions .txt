@@ -765,7 +765,6 @@ mali_conquest_slot = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1121
-				province_id = 2249
 				province_id = 1123
 				province_id = 1131
 				province_id = 2261
@@ -789,7 +788,6 @@ mali_conquest_slot = {
 			custom_trigger_tooltip = {
 				tooltip = mal_control_the_niger_river_ct
 				owns_core_province = 1121
-				owns_core_province = 2249
 				owns_core_province = 1123
 				owns_core_province = 1131
 				owns_core_province = 2261
@@ -812,7 +810,6 @@ mali_conquest_slot = {
 			custom_tooltip = mal_control_the_niger_river_tt
 			hidden_effect = {
 				1121 = { add_province_modifier = { name = mal_river_cultivation duration = 9125 } }
-				2249 = { add_province_modifier = { name = mal_river_cultivation duration = 9125 } }
 				1123 = { add_province_modifier = { name = mal_river_cultivation duration = 9125 } }
 				1131 = { add_province_modifier = { name = mal_river_cultivation duration = 9125 } }
 				2261 = { add_province_modifier = { name = mal_river_cultivation duration = 9125 } }

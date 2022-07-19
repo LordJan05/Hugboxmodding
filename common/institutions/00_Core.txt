@@ -103,24 +103,17 @@ feudalism = {
 					province_id = 5094
 					province_id = 5099
 					# Bagirmi:
-					province_id = 5024
 					province_id = 5027
-					province_id = 5026
-					province_id = 5066
 					province_id = 5050
 					province_id = 5049
 					province_id = 5051
-					province_id = 5087
 					# Buha:
 					province_id = 4077
-					province_id = 4072
 					province_id = 4076
 					province_id = 4071
 					province_id = 4069
 					# Mangbetu:
 					province_id = 5011
-					province_id = 5065
-					province_id = 5035
 					province_id = 5010
 					province_id = 5008
 					province_id = 5009

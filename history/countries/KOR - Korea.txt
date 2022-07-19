@@ -62,7 +62,7 @@ change_estate_land_share = {
 		birth_date = 1397.5.7
 		death_date = 1450.5.18
 		claim = 95
-		adm = 6
+		adm = 5
 		dip = 5
 		mil = 5
 	}

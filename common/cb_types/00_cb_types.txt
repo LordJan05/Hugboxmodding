@@ -1201,6 +1201,7 @@ cb_humiliate_rotw = {
 		NOT = {
 			truce_with = FROM
 		}
+		FROM = { ai = yes }
 		ai = no
 		is_rival = FROM
 		is_revolutionary = no

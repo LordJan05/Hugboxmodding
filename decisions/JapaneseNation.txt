@@ -5,6 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = JAP }
+			NOT = { tag = IJP }
 			NOT = { has_country_flag = formed_japan_flag }
 			was_never_end_game_tag_trigger = yes
 			has_reform = shogunate
@@ -74,6 +75,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_japan_flag }
 			was_never_end_game_tag_trigger = yes
 			NOT = { exists = JAP }
+			NOT = { tag = IJP }
 		}
 		allow = {
 			NOT = { exists = JAP }
@@ -116,6 +118,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = JAP }
+			NOT = { tag = IJP }
 			NOT = { has_country_flag = formed_japan_flag }
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_reform = shogunate }

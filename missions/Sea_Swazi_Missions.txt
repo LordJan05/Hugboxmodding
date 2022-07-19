@@ -4058,14 +4058,6 @@ sealand_swz_missions_left = {
 				}
 				add_permanent_claim = ROOT
 			}
-			tswana_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-					is_city = yes
-				}
-				add_permanent_claim = ROOT
-			}
 			dragenberg_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }

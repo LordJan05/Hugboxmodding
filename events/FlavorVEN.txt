@@ -133,6 +133,7 @@ country_event = {
 	trigger ={
 		tag = VEN
 		NOT = { exists = BYZ }
+		NOT = { exists = LAT }
 		NOT = { is_year = 1550 }
 		151 = {
 			OR = {
@@ -979,6 +980,7 @@ country_event = {
 		tag = VEN
 		151 = {
 			NOT = { owned_by = BYZ }
+			NOT = { owned_by = LAT }
 			NOT = { owned_by = VEN }
 		}
 		is_year = 1550
@@ -1228,6 +1230,7 @@ country_event = {
 		tag = VEN
 		151 = {
 			NOT = { owned_by = BYZ }
+			NOT = { owned_by = LAT }
 			NOT = { owned_by = VEN }
 		}
 		owns = 112

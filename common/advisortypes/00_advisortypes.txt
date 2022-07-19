@@ -475,12 +475,34 @@ grand_captain = {
 ######################################################
 ######################################################
 # Sealand:
-
-centralize_autonomy = {
+# ADM:
+advisor_adm_tech_cost = {
 	monarch_power = ADM
 	
 	# Bonus
-	global_autonomy = -0.05
+	adm_tech_cost_modifier = -0.05
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				tech_difference = 1
+			}
+		}
+	}
+}
+advisor_centralize_autonomy = {
+	monarch_power = ADM
+	
+	# Bonus
+	global_autonomy = -0.03
 
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -494,5 +516,949 @@ centralize_autonomy = {
 			factor = 1.5
 			is_at_war = yes
 		}
+	}
+}
+advisor_war_exhaust = {
+	monarch_power = ADM
+	
+	# Bonus
+	war_exhaustion = -0.04
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { war_exhaustion = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 3
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 4
+			war_exhaustion = 10
+		}
+	}
+}
+advisor_splendor_blendor = {
+	monarch_power = ADM
+	
+	# Bonus
+	monthly_splendor = 1
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_legitimate_government = {
+	monarch_power = ADM
+	
+	# Bonus
+	legitimacy = 0.25
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { 
+				OR = {
+					NOT = { government = monarchy }
+					has_reform = celestial_empire
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			legitimacy = 95
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy = 80 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { legitimacy = 70 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { legitimacy = 60 }
+		}
+	}
+}
+advisor_horde_government = {
+	monarch_power = ADM
+	
+	# Bonus
+	horde_unity = 0.25
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { is_nomad = no }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			horde_unity = 95
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { horde_unity = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { horde_unity = 80 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { horde_unity = 70 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { horde_unity = 60 }
+		}
+	}
+}
+advisor_republic_government = {
+	monarch_power = ADM
+	
+	# Bonus
+	republican_tradition = 0.1
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { government = republic } }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			republican_tradition = 90
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { republican_tradition = 80 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { republican_tradition = 60 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { republican_tradition = 50 }
+		}
+	}
+}
+advisor_devoted_government = {
+	monarch_power = ADM
+	
+	# Bonus
+	devotion = 0.25
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { government = theocracy } }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			devotion = 90
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { devotion = 80 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { devotion = 70 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { devotion = 60 }
+		}
+	}
+}
+advisor_increase_absolutism = {
+	monarch_power = ADM
+	
+	# Bonus
+	yearly_absolutism = 0.25
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			current_age = age_of_discovery
+		}
+		modifier = {
+			factor = 0
+			current_age = age_of_reformation
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_reform_growth = {
+	monarch_power = ADM
+	
+	# Bonus
+	reform_progress_growth = 0.1
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 2
+	}
+}
+advisor_idealistic_views = {
+	monarch_power = ADM
+	
+	# Bonus
+	idea_cost = -0.05
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+#####
+# DIP
+advisor_dip_tech_cost = {
+	monarch_power = DIP
+	
+	# Bonus
+	dip_tech_cost_modifier = -0.05
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				tech_difference = 1
+			}
+		}
+	}
+}
+advisor_defence_spymaster = {
+	monarch_power = DIP
+	
+	# Bonus
+	global_spy_defence = 0.33
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+advisor_corrupt_decay = {
+	monarch_power = DIP
+	
+	# Bonus
+	yearly_corruption = -0.04
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			NOT = { yearly_corruption_increase = 0.001 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { corruption = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			corruption = 1
+		}
+		modifier = {
+			factor = 1.5
+			corruption = 2
+		}
+		modifier = {
+			factor = 2
+			corruption = 3
+		}
+		modifier = {
+			factor = 2
+			corruption = 4
+		}
+		modifier = {
+			factor = 3
+			corruption = 5
+		}
+	}
+}
+advisor_imperial_authority = {
+	monarch_power = DIP
+	
+	# Bonus
+	imperial_authority = 0.06
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { is_emperor = no }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			owner = { is_emperor = yes }
+		}
+		modifier = {
+			factor = 0.5
+			imperial_influence = 90
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { imperial_influence = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { imperial_influence = 70 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { imperial_influence = 50 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { imperial_influence = 30 }
+		}
+	}
+}
+advisor_mandate_growth = {
+	monarch_power = DIP
+	
+	# Bonus
+	imperial_mandate = 0.03
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { is_emperor_of_china = no }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			owner = { is_emperor_of_china = yes }
+		}
+		modifier = {
+			factor = 0.5
+			imperial_mandate = 90
+		}
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { imperial_mandate = 80 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { imperial_mandate = 70 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { imperial_mandate = 60 }
+		}
+		modifier = {
+			factor = 10
+			NOT = { imperial_mandate = 50 }
+		}
+	}
+}
+advisor_culture_convert = {
+	monarch_power = DIP
+	
+	# Bonus
+	culture_conversion_cost = -0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				has_owner_culture = no
+			}
+		}
+	}
+}
+advisor_colonial_increase = {
+	monarch_power = DIP
+	
+	# Bonus
+	colonist_placement_chance = 0.05
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { num_of_colonists = 1 } }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_reduced_agg_exp = {
+	monarch_power = DIP
+	
+	# Bonus
+	ae_impact = -0.06
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_year = 1500 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_year = 1480 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_year = 1460 }
+		}
+	}
+}
+advisor_naval_engagement = {
+	monarch_power = DIP
+	
+	# Bonus
+	global_naval_engagement_modifier = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_attrition = {
+	monarch_power = DIP
+	
+	# Bonus
+	naval_attrition = -0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_durability = {
+	monarch_power = DIP
+	
+	# Bonus
+	ship_durability = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_morale_recovery = {
+	monarch_power = DIP
+	
+	# Bonus
+	recover_navy_morale_speed = 0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_sailors = {
+	monarch_power = DIP
+	
+	# Bonus
+	global_sailors_modifier = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_maintenance = {
+	monarch_power = DIP
+	
+	# Bonus
+	naval_maintenance_modifier = -0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_forcelimit = {
+	monarch_power = DIP
+	
+	# Bonus
+	naval_forcelimit_modifier = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_repair = {
+	monarch_power = DIP
+	
+	# Bonus
+	global_ship_repair = 0.2
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_heavy_combat = {
+	monarch_power = DIP
+	
+	# Bonus
+	heavy_ship_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_light_combat = {
+	monarch_power = DIP
+	
+	# Bonus
+	light_ship_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_naval_galley_combat = {
+	monarch_power = DIP
+	
+	# Bonus
+	galley_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+#####
+# MIL
+advisor_mil_tech_cost = {
+	monarch_power = MIL
+	
+	# Bonus
+	mil_tech_cost_modifier = -0.05
+
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				tech_difference = 1
+			}
+		}
+	}
+}
+advisor_inf_combat = {
+	monarch_power = MIL
+	
+	# Bonus
+	infantry_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_cav_combat = {
+	monarch_power = MIL
+	
+	# Bonus
+	cavalry_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_art_combat = {
+	monarch_power = MIL
+	
+	# Bonus
+	artillery_power = 0.1
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { mil_tech = 7 } }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_cav_to_inf_ratio = {
+	monarch_power = MIL
+	
+	# Bonus
+	cav_to_inf_ratio = 0.5
+	cavalry_flanking = 0.25
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_speedy_boys = {
+	monarch_power = MIL
+	
+	# Bonus
+	movement_speed = 0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_fire_damage = {
+	monarch_power = MIL
+	
+	# Bonus
+	fire_damage = 0.10
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_fire_damage_received = {
+	monarch_power = MIL
+	
+	# Bonus
+	fire_damage_received = -0.10
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_shock_damage = {
+	monarch_power = MIL
+	
+	# Bonus
+	shock_damage = 0.10
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_shock_damage_received = {
+	monarch_power = MIL
+	
+	# Bonus
+	shock_damage_received = -0.10
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_morale_recovery = {
+	monarch_power = MIL
+	
+	# Bonus
+	recover_army_morale_speed = 0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_land_attrition = {
+	monarch_power = MIL
+	
+	# Bonus
+	land_attrition = -0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
 	}
 }

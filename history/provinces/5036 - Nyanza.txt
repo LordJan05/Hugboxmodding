@@ -1,8 +1,6 @@
-#Pubungo
-
-owner = BNY
-controller = BNY
-add_core = BNY
+owner = ZNE
+controller = ZNE
+add_core = ZNE
 culture = acholi
 religion = shamanism #Fetishism
 capital = "Nyanza"

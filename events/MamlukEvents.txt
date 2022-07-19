@@ -138,50 +138,57 @@ country_event = {
 			age_1 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 30
+					claim = 65
 				}
 			}
 			age_2 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 32
+					claim = 70
 				}
 			}
 			age_3 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 35
+					claim = 75
 				}
 			}
 			age_4 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 40
+					claim = 80
 				}
 			}
 			age_5 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 42
+					claim = 85
 				}
 			}
 			age_6 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 45
+					claim = 90
 				}
 			}
 			age_7 = {
 				define_ruler = {
 					culture = event_target:first_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 50
+					claim = 95
 				}
 			}
 		}
@@ -203,50 +210,57 @@ country_event = {
 			age_7 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 30
+					claim = 65
 				}
 			}
 			age_6 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 32
+					claim = 70
 				}
 			}
 			age_5 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 35
+					claim = 75
 				}
 			}
 			age_3 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 40
+					claim = 80
 				}
 			}
 			age_4 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 42
+					claim = 85
 				}
 			}
 			age_2 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 45
+					claim = 90
 				}
 			}
 			age_1 = {
 				define_ruler = {
 					culture = event_target:second_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 50
+					claim = 95
 				}
 			}
 		}
@@ -269,50 +283,57 @@ country_event = {
 			age_6 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 30
+					claim = 65
 				}
 			}
 			age_3 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 32
+					claim = 70
 				}
 			}
 			age_2 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 35
+					claim = 75
 				}
 			}
 			age_5 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 40
+					claim = 80
 				}
 			}
 			age_1 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 42
+					claim = 85
 				}
 			}
 			age_7 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 45
+					claim = 90
 				}
 			}
 			age_4 = {
 				define_ruler = {
 					culture = event_target:third_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 50
+					claim = 95
 				}
 			}
 		}
@@ -335,50 +356,57 @@ country_event = {
 			age_7 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 30
+					claim = 65
 				}
 			}
 			age_5 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 32
+					claim = 70
 				}
 			}
 			age_4 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 35
+					claim = 75
 				}
 			}
 			age_2 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 40
+					claim = 80
 				}
 			}
 			age_3 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 42
+					claim = 85
 				}
 			}
 			age_1 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 45
+					claim = 90
 				}
 			}
 			age_6 = {
 				define_ruler = {
 					culture = event_target:fourth_ruler_alternative_province
-					hide_skills = yes
+					hide_skills = no
 					age = 50
+					claim = 95
 				}
 			}
 		}

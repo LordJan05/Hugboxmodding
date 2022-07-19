@@ -1169,11 +1169,16 @@ christian = {
 		uses_anglican_power = yes				# Uses church power/aspect mechanics
 		
 		aspects = {
+			get_new_general_aspect # Sealand
 			divorce_consort_aspect
 			gain_consort_aspect
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			# Temporary:
+			encourage_innovativeness_aspect
+			deport_heretics_aspect
+			militarize_religious_icons_aspect
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		
@@ -1258,6 +1263,10 @@ christian = {
 			individual_creeds_aspect
 			allow_usury_aspect
 			translated_bibles_aspect
+			# Temporary:
+			justified_conflict_aspect
+			war_preaches_aspect
+			head_of_faith_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		

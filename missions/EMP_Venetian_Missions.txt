@@ -14,9 +14,22 @@ emp_ven_slot_1 = {
 	
 	has_country_shield = yes
 	
+	ven_ability_to_raid = {
+		icon = mission_raid_on_venice
+		
+		trigger = {
+			is_year = 1469
+		}
+		effect = {
+			add_country_modifier = {
+				name = ven_ability_to_raid_modifier
+				duration = 7300
+			}
+		}
+	}
 	emp_ven_aldine_monopoly = {
 		icon = aldine_press
-		position = 1
+		position = 2
 		
 		trigger = {
 			has_institution = printing_press
@@ -300,7 +313,7 @@ emp_ven_slot_3 = {
 		effect = {
 			add_country_modifier = {
 				name = ven_mercenaries_paid_with_land
-				duration = 7300
+				duration = -1
 			}
 		}
 	}
@@ -314,6 +327,10 @@ emp_ven_slot_3 = {
 			grown_by_states = 2
 		}
 		effect = {
+			add_country_modifier = {
+				name = emp_ven_expand_the_terraferma_modifier
+				duration = -1
+			}
 			lombardy_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -652,62 +669,135 @@ emp_ven_slot_5 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 137
-				province_id = 1308
+				owner = { tag = CEP }
+				owner = { tag = CRT }
+				owner = { tag = NAX }
 			}
-			NOT = {
-				trade_share = {
-					country = ROOT
-					share = 25
-				}
-			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			137 = {
-				trade_share = {
-					country = ROOT
-					share = 10
+			if = {
+				limit = {
+					CEP = { is_subject_of = ROOT }
+				}
+				CEP = {
+					num_of_owned_provinces_with = {
+						value = 3
+						is_core = CEP
+					}
 				}
 			}
-			1308 = {
-				trade_share = {
-					country = ROOT
-					share = 50
+			if = {
+				limit = {
+					CRT = { is_subject_of = ROOT }
+				}
+				CRT = {
+					num_of_owned_provinces_with = {
+						value = 3
+						is_core = CRT
+					}
+				}
+			}
+			if = {
+				limit = {
+					NAX = { is_subject_of = ROOT }
+				}
+				NAX = {
+					num_of_owned_provinces_with = {
+						value = 3
+						is_core = NAX
+					}
+				}
+			}
+			if = {
+				limit = {
+					CEP = { NOT = { is_subject_of = ROOT } }
+					CRT = { NOT = { is_subject_of = ROOT } }
+					NAX = { NOT = { is_subject_of = ROOT } }
+				}
+				137 = {
+					trade_share = {
+						country = ROOT
+						share = 10
+					}
+				}
+				1308 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
 				}
 			}
 		}
 		effect = {
-			add_mercantilism = 2
-			add_dip_power = 100
 			if = {
 				limit = {
-					exists = CEP
+					CEP = { is_subject_of = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = CEP
+				create_subject = {
+					subject_type = venetian_league_subjects
+					subject = CEP
+				}
+				hidden_effect = {
+				CEP = {
+					if = {
+						limit = {
+							NOT = { government = republic }
+						}
+						change_government = republic
+					}
+					add_government_reform = trading_city
+				}
 				}
 			}
 			if = {
 				limit = {
-					exists = CRT
+					CRT = { is_subject_of = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = CRT
+				create_subject = {
+					subject_type = venetian_league_subjects
+					subject = CRT
+				}
+				hidden_effect = {
+				CRT = {
+					if = {
+						limit = {
+							NOT = { government = republic }
+						}
+						change_government = republic
+					}
+					add_government_reform = trading_city
+				}
 				}
 			}
 			if = {
 				limit = {
-					exists = NAX
+					NAX = { is_subject_of = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = NAX
+				create_subject = {
+					subject_type = venetian_league_subjects
+					subject = NAX
 				}
+				hidden_effect = {
+				NAX = {
+					if = {
+						limit = {
+							NOT = { government = republic }
+						}
+						change_government = republic
+					}
+					add_government_reform = trading_city
+				}
+				}
+			}
+			if = {
+				limit = {
+					CEP = { NOT = { is_subject_of = ROOT } }
+					CRT = { NOT = { is_subject_of = ROOT } }
+					NAX = { NOT = { is_subject_of = ROOT } }
+				}
+				add_mercantilism = 2
+				add_dip_power = 100
 			}
 		}
 	}
@@ -735,6 +825,10 @@ emp_ven_slot_5 = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = emp_ven_reclaim_the_aegean_modifier
+				duration = -1
+			}
 			151 = {
 				if = {
 					limit = {
@@ -836,6 +930,10 @@ emp_ven_slot_5 = {
 					power = 20
 					key = PROTECTED_VENETIAN_MERCHANTS
 				}
+			}
+			add_country_modifier = {
+				name = emp_ven_control_the_means_of_transaction_modifier
+				duration = -1
 			}
 		}
 	}

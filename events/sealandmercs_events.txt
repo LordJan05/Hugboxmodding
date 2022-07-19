@@ -9,8 +9,13 @@ country_event = {
 	hidden = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
-		always = no # Turned off
+		#always = no # Turned off
 		#NOT = { has_country_flag = sealandmercs_switch_merc_flag }
+		OR = { # For special units:
+			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
+			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
+			has_estate_privilege = estate_nobles_varangian_guards_special_units 
+		}
 		ai = no
 		NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
 	}
@@ -42,8 +47,13 @@ country_event = {
 	hidden = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
-		always = no # Turned off
+		#always = no # Turned off
 		#NOT = { has_country_flag = sealandmercs_switch_merc_flag }
+		OR = { # For special units:
+			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
+			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
+			has_estate_privilege = estate_nobles_varangian_guards_special_units 
+		}
 		ai = no
 		num_of_owned_provinces_with = {
 			value = 2

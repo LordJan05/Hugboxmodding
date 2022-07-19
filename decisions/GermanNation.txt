@@ -68,7 +68,6 @@ country_decisions = {
 				province_id = 50
 				province_id = 57
 				province_id = 65
-				province_id = 75
 				province_id = 1868
 				province_id = 70
 				province_id = 1876
@@ -148,9 +147,8 @@ country_decisions = {
 			add_prestige = 25
 			if =  {
 				limit = {
-					NOT = { government = republic }
+					government = monarchy
 				}
-				change_government_to_republic = yes
 				add_government_reform = germany_monarchy
 			}
 			if =  {
@@ -184,6 +182,7 @@ country_decisions = {
 			set_country_flag = formed_switzerland_flag
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
+			set_country_flag = formed_rhineland_flag
 		}
 		ai_will_do = {
 			factor = 1

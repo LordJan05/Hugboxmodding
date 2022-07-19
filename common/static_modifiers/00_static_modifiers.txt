@@ -541,7 +541,7 @@ base_values = {
 	tolerance_heretic = -2
 	global_missionary_strength = 0.02
 	global_manpower = 10.0
-	advisor_pool = 3
+	advisor_pool = 5
 	colonist_placement_chance = 0.1
 	free_leader_pool = 3
 	republican_tradition = 1
@@ -694,7 +694,7 @@ bankruptcy = {
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
 	amount_of_banners = -0.75
-	#amount_of_cawa = -0.75
+	amount_of_cawa = -0.75
 	sea_por_trade_influence = 0.25 # Portugal faction
 }
 
@@ -736,7 +736,7 @@ war_exhaustion = {
 	rr_royalists_influence = 0.05
 	manpower_recovery_speed = -0.01
 	sailors_recovery_speed = -0.01
-	siege_ability = -0.01
+	siege_ability = -0.02
 	global_trade_goods_size_modifier = -0.02
 	sea_por_conti_influence = -0.025 # Portugal faction
 }
@@ -840,7 +840,7 @@ defender_of_faith = {
 }
 
 defender_of_faith_refused_cta = {
-	diplomatic_reputation = -1
+	#diplomatic_reputation = -1
 }
 
 emperor = {
@@ -991,11 +991,9 @@ recovery_motivation = {
 }
 
 militarized_society = {
-
-	discipline = 0.025
-	manpower_recovery_speed = 0.20
-	land_maintenance_modifier = -0.20
-
+	movement_speed = 0.2
+	land_maintenance_modifier = 0.20
+	reinforce_speed = 0.33
 }
 
 
@@ -1223,7 +1221,6 @@ high_army_professionalism = {
 
 streltsy_modifier = {
 	stability_cost_modifier = 1.0
-	land_maintenance_modifier = 2
 }
 
 power_projection = {
@@ -1245,7 +1242,7 @@ power_projection_25 = {
 #100 Land Forcelimit = 1
 land_forcelimit = {
     free_land_leader_pool = 1.25 #80 Army forcelimit -> +1 free leader
-	#amount_of_cawa = 1.5
+	amount_of_cawa = 1.0
 	amount_of_banners = 1.5
 }
 
@@ -1597,11 +1594,12 @@ overlord_daimyo_isolationism_min = {
 }
 
 overlord_sankin_kotai = {
-	diplomatic_reputation = 3
+	global_tax_income = 48
 }
 
 subject_sankin_kotai = {
-	diplomatic_upkeep = -1
+	global_tax_income = -48
+	liberty_desire = 5
 }
 
 overlord_expel_ronin = {
@@ -1828,10 +1826,10 @@ expanded_infrastructure = {
 	province_trade_power_modifier = 0.05
 	trade_goods_size_modifier = 0.05
 	local_governing_cost_increase = 15
-	local_governing_cost = 0.1
+	#local_governing_cost = 0.1
 	local_great_project_upgrade_cost = -0.05
-							 
-					 
+	land_forcelimit = 2
+	naval_forcelimit = 2
 					   
 }
 

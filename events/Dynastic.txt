@@ -535,23 +535,47 @@ country_event = {
 	picture = DEATH_OF_HEIR_eventPicture
 	
 	trigger = {
-		has_heir = yes
-		heir_age = 15
-		is_lesser_in_union = no
-		NOT = { has_reform = elective_monarchy }
+		OR = {
+			AND = {
+				has_heir = yes
+				heir_age = 15
+				is_lesser_in_union = no
+				NOT = { has_reform = elective_monarchy }
+			}
+			has_country_flag = hunting_accident_heir_assassination_flag
+		}
 	}
 	mean_time_to_happen = {
 		months = 2700
 	}
 	option = {
+		trigger = {
+			NOT = { has_country_flag = hunting_accident_heir_assassination_flag }
+		}
 		name = "EVTOPTA9459"
 		kill_heir = {}
 		add_stability = -1
 	}
 	option = {
+		trigger = {
+			NOT = { has_country_flag = hunting_accident_heir_assassination_flag }
+		}
 		name = "EVTOPTB9459"
 		kill_heir = {}
 		add_prestige = -10
+	}
+	option = {
+		trigger = {
+			has_country_flag = hunting_accident_heir_assassination_flag
+		}
+		name = "EVTOPTC9459"
+		if = {
+			limit = {
+				has_country_flag = hunting_accident_heir_assassination_flag
+			}
+			kill_heir = {}
+		}
+		clr_country_flag = hunting_accident_heir_assassination_flag
 	}
 }
 

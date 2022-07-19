@@ -22,7 +22,7 @@ georgia_1_missions = {
 		}
 		trigger = {
 			OR = {
-				owns_core_province = 330
+				owns = 330
 				TRE = {
 					has_opinion = {
 						who = ROOT
@@ -35,7 +35,7 @@ georgia_1_missions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					TUR = {
 						owns_core_province = 330
@@ -46,7 +46,7 @@ georgia_1_missions = {
 					duration = 1825
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					TRE = {
 						owns_core_province = 330
@@ -60,10 +60,10 @@ georgia_1_missions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					GEO = {
-						owns_core_province = 330
+						owns = 330
 					}
 				}
 				330 = {
@@ -73,6 +73,7 @@ georgia_1_missions = {
 					}
 				}
 			}
+			330 = { add_core = ROOT }
 			kastamonu_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -216,6 +217,7 @@ georgia_1_missions = {
 			normal_or_historical_nations = yes
 			religion = orthodox
 			NOT = { exists = BYZ }
+			NOT = { exists = LAT }
 			owns_core_province = 151
 			151 = {		# Constantinople
 				is_state = yes
@@ -296,6 +298,13 @@ georgia_1_missions = {
 				show_ambient_object = hagia_sophia
 				hide_ambient_object = hagia_sophia_minarets
 			}
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government_to_monarchy = yes
+			}
+			add_government_reform = byzantium_government
 			set_government_rank = 3
 			if = {
 				limit = { has_custom_ideas = no }

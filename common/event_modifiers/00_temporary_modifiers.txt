@@ -1,0 +1,14 @@
+# Temporary:
+# Anglican:
+encourage_innovativeness_aspect_modifier = {
+	reform_progress_growth = 0.15
+	innovativeness_gain = 0.5
+}
+deport_heretics_aspect_modifier = {
+	colonist_placement_chance = 0.1
+	religious_unity = 0.1
+}
+militarize_religious_icons_aspect_modifier = {
+	land_morale = 0.1
+	shock_damage = -0.1
+}

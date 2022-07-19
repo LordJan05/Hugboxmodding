@@ -208,3 +208,76 @@ translated_bibles_aspect = {
 		}	
 	}
 }
+
+##### # Temporary:
+justified_conflict_aspect = {
+	cost = 100
+	modifier = {
+		ae_impact = -0.05
+	}
+	ai_will_do = {
+		factor = 8
+	}
+}
+war_preaches_aspect = {
+	cost = 100
+	modifier = {
+		war_exhaustion = -0.03
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { war_exhaustion = 1 }
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 12
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 16
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 20
+		}
+	}
+}
+head_of_faith_aspect = {
+	cost = 100
+	modifier = {
+		global_autonomy = -0.025
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			average_autonomy = 2
+		}
+		modifier = {
+			factor = 4
+			average_autonomy = 4
+		}
+		modifier = {
+			factor = 8
+			average_autonomy = 8
+		}
+		modifier = {
+			factor = 12
+			average_autonomy = 12
+		}
+		modifier = {
+			factor = 20
+			average_autonomy = 20
+		}
+	}
+}

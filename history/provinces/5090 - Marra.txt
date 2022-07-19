@@ -1,6 +1,6 @@
-owner = DAJ
-controller = DAJ
-add_core = DAJ
+owner = DAR
+controller = DAR
+add_core = DAR
 culture = fur_culture
 religion = shamanism #Fetishism
 capital = "Marra"

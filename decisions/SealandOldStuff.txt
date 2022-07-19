@@ -66,32 +66,6 @@ country_decisions = {
 		}
 	}
 	
-	enlist_privateers = {
-		potential = {
-			NOT = { has_country_modifier = hire_privateers }
-			num_of_ports = 1
-		}
-		allow = {
-			navy_size_percentage = 0.5
-			full_idea_group = maritime_ideas
-			OR = {
-				advisor = navigator
-				advisor = naval_reformer
-			}
-			dip_tech = 8
-		}
-		effect = {
-			add_country_modifier = {
-				name = "hire_privateers"
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			# England, France, Barbary Coast
-		}
-	}
-	
 	naval_convoy_system = {
 		potential = {
 			NOT = { has_country_modifier = convoy_system }
@@ -290,7 +264,7 @@ country_decisions = {
 			full_idea_group = innovativeness_ideas
 		}
 		effect = {
-			add_mercantilism = 10
+			#add_mercantilism = 10
 			add_country_modifier = {
 				name = "the_combination_act"
 				duration = -1
@@ -367,7 +341,7 @@ country_decisions = {
 			trade_efficiency = 0.5
 		}
 		effect = {
-			add_mercantilism = 15
+			#add_mercantilism = 15
 			add_country_modifier = {
 				name = "the_house_of_trade"
 				duration = -1
@@ -437,7 +411,7 @@ country_decisions = {
 			adm_power = 50
 		}
 		effect = {
-			add_mercantilism = 10
+			#add_mercantilism = 10
 			add_country_modifier = {
 				name = "the_joint_stock_companies_act"
 				duration = -1
@@ -459,7 +433,7 @@ country_decisions = {
 			adm_power = 50
 		}
 		effect = {
-			add_mercantilism = 5
+			#add_mercantilism = 5
 			add_country_modifier = {
 				name = "the_merchant_shipping_act"
 				duration = -1
@@ -522,7 +496,7 @@ country_decisions = {
 			trade_efficiency = 0.5
 		}
 		effect = {
-			add_mercantilism = -5
+			#add_mercantilism = -5
 			add_country_modifier = {
 				name = "the_importation_act"
 				duration = -1
@@ -536,7 +510,7 @@ country_decisions = {
 	
 	mining_act = {
 		potential = {
-			NOT = { mercantilism = 1.0 }
+			#NOT = { mercantilism = 1.0 }
 			OR = {
 				copper = 1
 				gold = 1
@@ -549,7 +523,7 @@ country_decisions = {
 			adm_power = 50
 		}
 		effect = {
-			add_mercantilism = 5
+			#add_mercantilism = 5
 			add_country_modifier = {
 				name = "the_mining_act"
 				duration = -1

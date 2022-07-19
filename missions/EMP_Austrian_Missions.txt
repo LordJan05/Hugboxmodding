@@ -131,55 +131,120 @@ emp_hab_empire_branch = {
 	
 	has_country_shield = yes
 	
+	emp_hab_all_minorities_are_welcome = {
+		icon = multicultural_empire
+		required_missions = { }
+		provinces_to_highlight = {
+			owned_by = root
+			NOT = { culture_group = root }
+			OR = {
+				unrest = 1
+				nationalism = 1
+				local_autonomy = 1
+			}
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 30
+						NOT = { culture_group = root }
+						NOT = { unrest = 1 }
+						NOT = { nationalism = 1 }
+						NOT = { local_autonomy = 1 }
+					}
+				}
+			}
+		}
+		trigger = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				NOT = { culture_group = root }
+				NOT = { unrest = 1 }
+				#NOT = { nationalism = 1 }
+				#NOT = { local_autonomy = 1 }
+			}
+		}
+		effect = {
+			hidden_effect = {
+				complete_mission = emp_hab_all_minorities_are_welcome
+			}
+			change_tag = AUE
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = { 
+					government = monarchy
+					is_revolutionary = no 
+				}
+				country_event = { id = flavor_hab.20 }
+			}
+			else = {
+				add_country_modifier = {
+					name = hab_tolerant_society
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
 	emp_hab_no_one_to_threaten_us = {
 		icon = imperial_ascendancy
 		position = 2
 		required_missions = { secure_the_imperial_crown }
 		provinces_to_highlight = {
-			owner = {
-				NOT = { tag = root }
-				NOT = { is_subject_of = ROOT }
-				NOT = { tag = DAN }
-				OR = {
-					AND = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 10
-							continent = europe
+			OR = {
+				AND = {
+					owner = { is_emperor = yes }
+					root = { is_emperor = no }
+				}
+				AND = {
+					owner = {
+						is_elector = yes
+						OR = {
+							NOT = { preferred_emperor = ROOT }
+							NOT = { has_opinion = { who = ROOT value = 100 } }
 						}
-						is_part_of_hre = yes
 					}
-					is_emperor = yes
+					NOT = {
+						ROOT = {
+							calc_true_if = {
+								all_elector = {
+									preferred_emperor = ROOT
+									has_opinion = { who = ROOT value = 100 }
+								}
+								amount = 5
+							}
+						}
+					}
 				}
 			}
 		}
 		trigger = {
 			is_emperor = yes
-			OR = {
-				hre_reform_passed = emperor_privilegia_de_non_appelando
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = emp_hab_no_one_to_threaten_us_trigger_tooltip
-						NOT = {
-							any_country = {
-								NOT = { tag = root }
-								NOT = { is_subject_of = ROOT }
-								NOT = { tag = DAN }
-								is_part_of_hre = yes
-								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-									value = 10
-									continent = europe
-								}
-							}
-						}
-					}
-					calc_true_if = {
-						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
-						amount = 10
-						all_country = {
-							has_reform = free_city
-						}
-					}
+			calc_true_if = {
+				desc = secure_the_imperial_crown.tooltip
+				all_elector = {
+					preferred_emperor = ROOT
+					has_opinion = { who = ROOT value = 100 }
 				}
+				amount = 5
 			}
 		}
 		effect = {
@@ -880,80 +945,6 @@ emp_hab_minorities_branch = {
 					add_base_production = 1
 					add_base_tax = 1
 				}
-			}
-		}
-	}
-	
-	emp_hab_all_minorities_are_welcome = {
-		icon = multicultural_empire
-		required_missions = { emp_hab_the_hungarian_question }
-		provinces_to_highlight = {
-			owned_by = root
-			NOT = { culture_group = root }
-			OR = {
-				unrest = 1
-				nationalism = 1
-				local_autonomy = 1
-			}
-			ROOT = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 30
-						NOT = { culture_group = root }
-						NOT = { unrest = 1 }
-						NOT = { nationalism = 1 }
-						NOT = { local_autonomy = 1 }
-					}
-				}
-			}
-		}
-		trigger = {
-			adm_tech = 10
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			num_of_owned_provinces_with = {
-				value = 30
-				NOT = { culture_group = root }
-				NOT = { unrest = 1 }
-				#NOT = { nationalism = 1 }
-				#NOT = { local_autonomy = 1 }
-			}
-		}
-		effect = {
-			hidden_effect = {
-				complete_mission = emp_hab_all_minorities_are_welcome
-			}
-			change_tag = AUE
-			if = {
-				limit = {
-					NOT = { government_rank = 3 }
-				}
-				set_government_rank = 3
-			}
-			if = {
-				limit = { 
-					government = monarchy
-					is_revolutionary = no 
-				}
-				country_event = { id = flavor_hab.20 }
-			}
-			else = {
-				add_country_modifier = {
-					name = hab_tolerant_society
-					duration = -1
-				}
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 3650
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
 	}

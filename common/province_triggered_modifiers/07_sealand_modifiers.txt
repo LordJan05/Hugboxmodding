@@ -8,7 +8,34 @@ build_dev_vatican_library = {
 			tag = PAP
 		}
 	}
-	development_cost = -0.1
-	build_cost = -0.1
+	development_cost = -0.05
+	build_cost = -0.05
 	state_maintenance_modifier = -0.2
+}
+########################################
+# Assassinate Heir triggered:
+sea_spy_kill_heir_diplo_action_modifier = {
+	potential = {
+		has_province_flag = sea_spy_kill_heir_diplo_action_modifier_flag
+	}
+	trigger = {
+	}
+	on_activation = {
+		random_list = {
+			30 = {
+				owner = {
+					set_country_flag = hunting_accident_heir_assassination_flag
+					country_event = { id = 9459 }
+					set_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag
+				}
+			}
+			70 = { }
+		}
+		clr_province_flag = sea_spy_kill_heir_diplo_action_modifier_flag
+	}
+	
+	on_deactivation = {
+		remove_province_triggered_modifier = sea_spy_kill_heir_diplo_action_modifier
+	}
+	
 }

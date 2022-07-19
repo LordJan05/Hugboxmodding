@@ -820,6 +820,10 @@ hire_privateers = {
 	embargo_efficiency = 0.1
 	privateer_efficiency = 0.25
 	improve_relation_modifier = -0.10
+	prestige = -0.5
+	trade_efficiency = 0.05
+	global_trade_power = 0.03
+	global_tariffs = 0.05
 }
 
 counter_reformation = {
@@ -1006,7 +1010,7 @@ the_staple_port = {
 }
 
 the_theme_system = {
-	global_manpower_modifier = 0.25
+	manpower_in_true_faith_provinces = 0.2
 }
 
 severe_trade_crisis = {
@@ -6787,19 +6791,19 @@ pap_swiss_guard = {
 	global_manpower_modifier = 0.1
 }
 mil_vatican_library = {
-	yearly_army_professionalism = 0.004 # 0.04% monthly
-	army_tradition_from_battle = 1
-	reinforce_speed = 0.5
+	movement_speed = 0.15 # Before: yearly_army_professionalism = 0.003
+	army_tradition_from_battle = 0.75 # Before: army_tradition_from_battle = 1
+	reinforce_speed = 0.33 # Before: reinforce_speed = 0.50
 }
 dip_vatican_library = {
-	technology_cost = -0.125
-	idea_cost = -0.125
+	technology_cost = -0.05 # Before: technology_cost = -0.125
+	idea_cost = -0.05 # Before: idea_cost = -0.125
 	possible_policy = 1
 }
 adm_vatican_library = {
 	administrative_efficiency = 0.05
-	interest = -1
-	monthly_splendor = 5
+	interest = -0.5 # Before: interest = -1
+	monthly_splendor = 3 # Before: monthly_splendor = 4
 }
 pap_sistine_chapel = {
 	devotion = 0.1

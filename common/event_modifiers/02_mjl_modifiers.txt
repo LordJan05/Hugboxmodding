@@ -6,7 +6,7 @@ mjl_china_wars = {
 	manpower_recovery_speed = 0.1
 }
 
-mjl_fortified_xuanhua {
+mjl_fortified_xuanhua = {
 	fort_maintenance_modifier = -0.25
 }
 

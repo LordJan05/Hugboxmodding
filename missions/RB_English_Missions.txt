@@ -11,6 +11,10 @@ eng_british_naval_conq = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -65,6 +69,10 @@ eng_rb_gibraltar = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -154,6 +162,10 @@ eng_rb_islands_med = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -252,6 +264,10 @@ eng_rb_egypt = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -346,6 +362,10 @@ eng_rb_stability = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -413,6 +433,10 @@ eng_rb_burgundy = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -490,7 +514,13 @@ gbr_rb_canada_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -548,7 +578,13 @@ eng_rb_trade_value_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -591,6 +627,10 @@ eng_rb_buildings_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -789,6 +829,10 @@ eng_rb_conquest_europe = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -894,39 +938,310 @@ eng_rb_conquest_europe = {
 				province_id = 194
 				province_id = 195
 				province_id = 4697
+				area = home_counties_area
+				area = east_anglia_area
+				area = wessex_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = wales_area
+				area = yorkshire_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			pyrenees_area = {
-				type = all
-				owned_by = ROOT
+			OR = {
+				tag = ENG
+				tag = GBR
 			}
-			poitou_area = {
-				type = all
-				owned_by = ROOT
+			NOT = { tag = NSE }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 178
+			178 = { is_state = yes }
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = angevin_mission_requirements_eng_tt
+						pyrenees_area = {
+							type = all
+							owned_by = ROOT
+						}
+						poitou_area = {
+							type = all
+							owned_by = ROOT
+						}
+						loire_area = {
+							type = all
+							owned_by = ROOT
+						}
+						199 = { owned_by = ROOT }
+						194 = { owned_by = ROOT }
+						195 = { owned_by = ROOT }
+						4697 = { owned_by = ROOT }
+					}
+				}
+				AND = {
+					FRA = {
+						is_subject_of = ROOT
+						is_subject_of_type = personal_union
+						NOT = { liberty_desire = 1 }
+					}
+					custom_trigger_tooltip = {
+						tooltip = angevin_mission_requirements_eng_ttt
+						pyrenees_area = {
+							type = all
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						poitou_area = {
+							type = all
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						loire_area = {
+							type = all
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						199 = {
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						194 = {
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						195 = {
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+						4697 = {
+							OR = {
+								owned_by = ROOT
+								owned_by = FRA
+							}
+						}
+					}
+				}
 			}
-			loire_area = {
-				type = all
-				owned_by = ROOT
-			}
-			199 = {
-				owned_by = ROOT
-			}
-			194 = {
-				owned_by = ROOT
-			}
-			195 = {
-				owned_by = ROOT
-			}
-			4697 = {
-				owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = angevin_mission_requirements_eng_tttt
+				home_counties_area = {
+					type = all
+					owned_by = ROOT
+				}
+				east_anglia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				wessex_area = {
+					type = all
+					owned_by = ROOT
+				}
+				east_midlands_area = {
+					type = all
+					owned_by = ROOT
+				}
+				west_midlands_area = {
+					type = all
+					owned_by = ROOT
+				}
+				wales_area = {
+					type = all
+					owned_by = ROOT
+				}
+				yorkshire_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					FRA = {
+						is_subject_of = ROOT
+						is_subject_of_type = personal_union
+					}
+				}
+				inherit = FRA
+			}
+			change_tag = ANG
+			country_event = { id = sea_angevin_events.1 }
+			custom_tooltip = sea_angevin_events_mission_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = english
+					}
+					change_culture = angevin_english
+				}
+				every_owned_province = {
+					limit = {
+						culture = welsh
+					}
+					change_culture = angevin_welsh
+				}
+				every_owned_province = {
+					limit = {
+						culture = cornish
+					}
+					change_culture = angevin_cornish
+				}
+				every_owned_province = {
+					limit = {
+						culture = cosmopolitan_french
+					}
+					change_culture = angevin_cosmopolitan_french
+				}
+				every_owned_province = {
+					limit = {
+						culture = gascon
+					}
+					change_culture = angevin_gascon
+				}
+				every_owned_province = {
+					limit = {
+						culture = normand
+					}
+					change_culture = angevin_normand
+				}
+				every_owned_province = {
+					limit = {
+						culture = aquitaine
+					}
+					change_culture = angevin_aquitaine
+				}
+				every_owned_province = {
+					limit = {
+						culture = breton
+					}
+					change_culture = angevin_breton
+				}
+				###
+				if = {
+					limit = {
+						primary_culture = english
+					}
+					change_primary_culture = angevin_english
+				}
+				if = {
+					limit = {
+						primary_culture = welsh
+					}
+					change_primary_culture = angevin_welsh
+				}
+				if = {
+					limit = {
+						primary_culture = cornish
+					}
+					change_primary_culture = angevin_cornish
+				}
+				if = {
+					limit = {
+						primary_culture = cosmopolitan_french
+					}
+					change_primary_culture = angevin_cosmopolitan_french
+				}
+				if = {
+					limit = {
+						primary_culture = gascon
+					}
+					change_primary_culture = angevin_gascon
+				}
+				if = {
+					limit = {
+						primary_culture = normand
+					}
+					change_primary_culture = angevin_normand
+				}
+				if = {
+					limit = {
+						primary_culture = aquitaine
+					}
+					change_primary_culture = angevin_aquitaine
+				}
+				if = {
+					limit = {
+						primary_culture = breton
+					}
+					change_primary_culture = angevin_breton
+				}
+				###
+				if = {
+					limit = {
+						accepted_culture = english
+					}
+					remove_accepted_culture = english
+				}
+				if = {
+					limit = {
+						accepted_culture = welsh
+					}
+					remove_accepted_culture = welsh
+				}
+				if = {
+					limit = {
+						accepted_culture = cornish
+					}
+					remove_accepted_culture = cornish
+				}
+				if = {
+					limit = {
+						accepted_culture = cosmopolitan_french
+					}
+					remove_accepted_culture = cosmopolitan_french
+				}
+				if = {
+					limit = {
+						accepted_culture = gascon
+					}
+					remove_accepted_culture = gascon
+				}
+				if = {
+					limit = {
+						accepted_culture = normand
+					}
+					remove_accepted_culture = normand
+				}
+				if = {
+					limit = {
+						accepted_culture = aquitaine
+					}
+					remove_accepted_culture = aquitaine
+				}
+				if = {
+					limit = {
+						accepted_culture = breton
+					}
+					remove_accepted_culture = breton
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
 			178 = {
+				move_capital_effect = yes
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 3
@@ -935,6 +1250,9 @@ eng_rb_conquest_europe = {
 					duration = -1
 				}
 			}
+			custom_tooltip = change_france_cultures_to_british_culture_tt
+			add_prestige = 25
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			picardy_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -956,6 +1274,13 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
+			set_country_flag = formed_england_flag
+			set_country_flag = formed_france_flag
+			set_country_flag = formed_great_britain_flag
+			hidden_effect = {
+				complete_mission = eng_rb_angevin
+				complete_mission = eng_rb_war_of_roses
+			}
 		}
 	}
 }
@@ -968,7 +1293,13 @@ gbr_rb_empire_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1059,6 +1390,10 @@ gbr_rb_spice_islands_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -1136,7 +1471,13 @@ gbr_rb_indian_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1327,7 +1668,13 @@ gbr_rb_india_princes = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1423,7 +1770,13 @@ gbr_rb_northern_colonial = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
+		}
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -1589,6 +1942,10 @@ eng_rb_thirteen_colonies_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		is_random_new_world = no
 		has_dlc = "Rule Britannia"
@@ -1636,6 +1993,10 @@ eng_rb_trade_in_home_cot_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			AND = {
+				tag = ANG
+				has_country_flag = ang_chose_eng_missions
+			}
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }

@@ -3438,6 +3438,7 @@ ven_political_monopolist = {
 ven_la_francocrazia = {
 	prestige_from_naval = 1
 	galley_cost = -0.1
+	allowed_marine_fraction = 0.5
 }
 
 ven_genoese_humiliation = {
@@ -3876,7 +3877,7 @@ bohemian_commonwealth = {
 	diplomatic_annexation_cost = -0.15
 }
 pap_papal_swiss_guard = {
-	mercenary_discipline = 0.1
+	mercenary_discipline = 0.05
 	merc_maintenance_modifier = 0.25
 }
 
@@ -4699,7 +4700,7 @@ pue_the_white_rock = {
 }
 
 pue_city_in_the_sky = {
-	local_defensiveness = 0.2
+	local_defensiveness = 0.5
 }
 
 pue_the_great_north_road = {

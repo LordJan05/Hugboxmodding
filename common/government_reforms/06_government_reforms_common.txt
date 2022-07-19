@@ -42,6 +42,7 @@ parliamentary_reform = {
 	}
 	potential = {
 		NOT = { has_reform = vinland_government }
+		NOT = { has_reform = byzantium_government }
 	}
 	
 	trigger = {

@@ -804,6 +804,21 @@ on_province_culture_converted_estate_privilges_effect = {
 			}
 		}
 	}
+	################################# Sealand:
+	# Sweden:
+	if = {
+		limit = {
+			culture = swedish
+			owner = {
+				has_estate_privilege = estate_nobles_swe_utskrivning
+			}
+		}
+		add_province_modifier = {
+			name = "utskrivning_modifier"
+			duration = -1
+		}
+	}
+	##################################
 }
 
 on_province_owner_change_estate_privileges_effect = {
@@ -1463,7 +1478,8 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		remove_province_modifier = h_populate_altai_mountains_mod
 	}
-############################################ Sealand. Part of Norway mission
+############################################ Sealand:
+	# Norway:
 	if = {
 		limit = {
 			has_terrain = forest
@@ -1486,6 +1502,58 @@ on_province_owner_change_estate_privileges_effect = {
 			}
 		}
 		remove_province_modifier = "production_on_wood_modifier"
+	}
+	# Sweden:
+	if = {
+		limit = {
+			culture = swedish
+			owner = {
+				has_estate_privilege = estate_nobles_swe_utskrivning
+			}
+		}
+		add_province_modifier = {
+			name = "utskrivning_modifier"
+			duration = -1
+		}
+	}
+	# Swazi:
+	if = {
+		limit = {
+			has_terrain = steppe
+			owner = {
+				has_estate_privilege = estate_nobles_swz_tame_the_steppes
+			}
+		}
+		add_province_modifier = {
+			name = swz_tame_the_steppes_modifier
+			duration = -1
+		}
+	}
+	# Nogai:
+	if = {
+		limit = {
+			has_terrain = steppe
+			owner = {
+				has_estate_privilege = estate_nomadic_tribes_develop_steppe_land
+			}
+		}
+		add_province_modifier = {
+			name = nog_industrialize_the_steppes_modifier
+			duration = -1
+		}
+	}
+	# Church unrest:
+	if = {
+		limit = {
+			has_tax_building_trigger = yes
+			owner = {
+				has_estate_privilege = estate_church_no_church_unrest
+			}
+		}
+		add_province_modifier = {
+			name = estate_church_no_church_unrest_modifier
+			duration = -1
+		}
 	}
 ############################################
 }

@@ -449,6 +449,8 @@ niger_region = {
 		manding_area
 		tekrur_area
 		jenne_area
+		tandjile_area # Sealand
+		mbam_area # Sealand
 	}
 	monsoon = {
 		00.06.01
@@ -489,7 +491,7 @@ sahel_region = {
 		east_azbin_area
 		# Sealand
 		wadai_area
-		darfur_area
+		#darfur_area # Removed
 		kobbe_area
 		bahiouda_desert_area
 		guera_area
@@ -555,26 +557,21 @@ east_africa_region = {
 	}
 }
 
-middle_africa_region = { # Sealand Central Africa
-	areas = {
-		sanga_area 
-		karre_area 
-		sangha_area 
-		tandjile_area 
-		manjia_area 
-		mongala_area 
-		ubangi_area 
-		vakaga_area 
-		mbomou_area 
-		sudd_area
-		mbam_area
-		bunyoro_area # replaces imatong_area # MJL Africa
-	}
-	monsoon = {
-		00.02.01
-		00.04.30
-	}
-}
+#middle_africa_region = { # Sealand Central Africa
+#	areas = {
+#		#sanga_area # Removed
+#		#karre_area # Removed
+#		#mongala_area # Removed
+#		#ubangi_area # Removed
+#		#vakaga_area # Removed
+#		#mbomou_area # Removed
+#		#sudd_area # Removed
+#	}
+#	monsoon = {
+#		00.02.01
+#		00.04.30
+#	}
+#}
 central_africa_region = { # African Great Lakes
 	areas = {
 		buha_area
@@ -590,6 +587,9 @@ central_africa_region = { # African Great Lakes
 		sankuru_area
 		ituri_area # Sealand
 		turkana_area # Sealand
+		sangha_area # Sealand
+		manjia_area # Sealand
+		bunyoro_area # replaces imatong_area # MJL Africa
 	}
 	monsoon = {
 		00.02.01
@@ -612,8 +612,9 @@ kongo_region = {
 		gabon_area 
 		bateke_area 
 		mongo_area 
-		tshopo_area 
-		congo_basin_area 
+		#tshopo_area # Removed
+		congo_basin_area # Removed
+		etosha_area # Removed
 	}
 	monsoon = {
 		00.02.01
@@ -659,21 +660,20 @@ south_africa_region = {
 		kunene_area #MJL Africa
 		karas_area #MJL Africa
 		# Sealand
-		kalahari_desert_area
+		#kalahari_desert_area # Removed
 		west_limpopo_area
 		makgadikgadi_area
 		katanga_plateau_area
 		okavango_area
-		omuramba_area
-		etosha_area
+		#omuramba_area # Removed
 		east_limpopo_area
 		swazi_area
 		dragenberg_area
 		xhosa_area
 		highveld_area
-		tswana_area
+		#tswana_area # Removed
 		roggeveld_area
-		namaqua_area
+		#namaqua_area # Removed
 	}
 	monsoon = {
 		00.11.01
@@ -1361,7 +1361,6 @@ california_region = {
 		baja_california_area
 		arizona_area
 		colorado_plateau_area
-		new_mexico_area
 		central_valley_area
 		apacheria_area
 		northern_california_area
@@ -1431,6 +1430,7 @@ rio_grande_region = {
 		llano_estacado_area
 		chihuahua_area
 		texas_plains_area
+		new_mexico_area
 	}
 	monsoon = {
 		00.06.01

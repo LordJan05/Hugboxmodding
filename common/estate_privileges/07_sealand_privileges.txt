@@ -52,6 +52,8 @@ estate_burghers_nor_production_on_wood = { # Sealand. Part of Norway mission
 		}
 	}
 }
+################################
+# Sweden:
 estate_nobles_swe_utskrivning = { # Sealand. Part of Sweden mission
 	icon = privilege_demand_more_troops
 	land_share = 5
@@ -106,7 +108,8 @@ estate_nobles_swe_utskrivning = { # Sealand. Part of Sweden mission
 		}
 	}
 }
-
+################################
+# Papal State:
 estate_church_service_to_god = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
@@ -201,7 +204,7 @@ estate_church_service_to_god = {
 		}
 	}
 }
-
+################################
 # Teutonic Order or well, Danzig:
 estate_burghers_prussian_confederation_conceded = {
 	icon = privilege_royal_authority
@@ -233,7 +236,7 @@ estate_burghers_prussian_confederation_conceded = {
 		factor = 0
 	}
 }
-
+################################
 # Swazi:
 estate_nobles_swz_tame_the_steppes = { # Swazi mission:
 	icon = privilege_supply_arms
@@ -289,8 +292,8 @@ estate_nobles_swz_tame_the_steppes = { # Swazi mission:
 		}
 	}
 }
-
-# Castille:
+################################
+# Castille/Spain:
 estate_nobles_castille_autonomous_duchies = {
 	icon = privilege_sea_castille_autonomous_duchies
 	max_absolutism = -10
@@ -332,6 +335,131 @@ estate_nobles_castille_autonomous_duchies = {
 	}
 }
 
+estate_nobles_spain_tercios_special_units_pike = {
+	icon = privilege_cawa_peacekeeper
+	land_share = 10
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		has_reform = spain_monarchy_reform
+		OR = {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+		}
+	}
+	on_granted = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
+				add_country_modifier = {
+					name = sealand_cawa_base_maintenance
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		custom_tooltip = estate_nobles_spain_tercios_special_units_pike_granted_tt
+		add_country_modifier = {
+			name = tercios_special_pike_units
+			duration = -1
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = sealand_cawa_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	penalties = {
+		amount_of_banners = -0.33
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_spain_tercios_special_units_pike_revoked_tt
+		remove_country_modifier = tercios_special_pike_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	on_invalid = {
+		remove_country_modifier = tercios_special_pike_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+estate_nobles_spain_tercios_special_units_fire = {
+	icon = privilege_cawa_offensive_fighters
+	land_share = 10
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		has_reform = spain_monarchy_reform
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+	}
+	on_granted = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
+				add_country_modifier = {
+					name = sealand_cawa_base_maintenance
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		custom_tooltip = estate_nobles_spain_tercios_special_units_fire_granted_tt
+		add_country_modifier = {
+			name = tercios_special_fire_units
+			duration = -1
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = sealand_cawa_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	penalties = {
+		amount_of_banners = -0.33
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_spain_tercios_special_units_fire_revoked_tt
+		remove_country_modifier = tercios_special_fire_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	on_invalid = {
+		remove_country_modifier = tercios_special_fire_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+################################
 # Nogai:
 estate_nomadic_tribes_develop_steppe_land = {
 	icon = privilege_grant_new_world_charter
@@ -384,6 +512,138 @@ estate_nomadic_tribes_develop_steppe_land = {
 			factor = 0
 			is_absolutism_active = yes
 		}
+		factor = 0
+	}
+}
+################################
+# Clergy tolerance:
+estate_church_no_church_unrest = {
+	icon = privilege_seek_support_of_clergy
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+		any_owned_province = {
+			has_tax_building_trigger = yes
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_church_no_church_unrest_granted_tt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_tax_building_trigger = yes
+			}
+			add_province_modifier = {
+				name = estate_church_no_church_unrest_modifier
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_no_church_unrest_modifier
+			}
+			remove_province_modifier = estate_church_no_church_unrest_modifier
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_no_church_unrest_revoked_tt
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_no_church_unrest_modifier
+			}
+			remove_province_modifier = estate_church_no_church_unrest_modifier
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_no_church_unrest_revoked_tt
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_no_church_unrest_modifier
+			}
+			remove_province_modifier = estate_church_no_church_unrest_modifier
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+################################
+# Byzantium:
+estate_nobles_varangian_guards_special_units = {
+	icon = privilege_cawa_peacekeeper
+	land_share = 0
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		has_reform = byzantium_government
+	}
+	on_granted = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
+				add_country_modifier = {
+					name = sealand_cawa_base_maintenance
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		custom_tooltip = estate_nobles_varangian_guards_special_units_granted_tt
+		if = {
+			limit = {
+				has_country_flag = reestablish_varangian_guard_flag
+			}
+			add_country_modifier = {
+				name = varangian_guards_special_units_upgraded
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = varangian_guards_special_units
+				duration = -1
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = sealand_cawa_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	penalties = {
+		amount_of_banners = -0.33
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_varangian_guards_special_units_revoked_tt
+		remove_country_modifier = varangian_guards_special_units_upgraded
+		remove_country_modifier = varangian_guards_special_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	on_invalid = {
+		remove_country_modifier = varangian_guards_special_units_upgraded
+		remove_country_modifier = varangian_guards_special_units
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	ai_will_do = {
 		factor = 0
 	}
 }

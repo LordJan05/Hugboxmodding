@@ -105,7 +105,7 @@ change_estate_land_share = {
 		regent = yes
 		adm = 4
 		dip = 2
-		mil = 1
+		mil = 2
 	}
 }
 
@@ -118,8 +118,8 @@ change_estate_land_share = {
 		death_date = 1481.8.28
 		claim = 95
 		adm = 3
-		dip = 2
-		mil = 2
+		dip = 3
+		mil = 3
 		leader = {	name = "Afonso V"	type = general	fire = 3	shock = 2	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
