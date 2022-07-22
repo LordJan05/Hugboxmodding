@@ -566,12 +566,12 @@
             
     # Great Moravia:
       # Formation Decision:
-        sea_great_moravian_nation_title:0 "Form Great Moravian Nation"
+        sea_great_moravian_nation_title:0 "@GMV Form Great Moravian Nation"
         sea_great_moravian_nation_desc:0 "Let us form the Great Moravia that used to reign in these regions in the late 9th century."
-        sea_greater_moravian_nation_title:0 "Become Greater Moravian"
+        sea_greater_moravian_nation_title:0 "@GMV Become Greater Moravian"
         sea_greater_moravian_nation_desc:0 "Not everyone can be great but we are definitely the greatest."
         greater_moravia_name:0 "Greater Moravia"
-        sea_greatest_moravian_nation_title:0 "Become the Greatest Moravian nation"
+        sea_greatest_moravian_nation_title:0 "@GMV Become the Greatest Moravian nation"
         sea_greatest_moravian_nation_desc:0 "Fear us, for we are the greatest!"
         greatest_moravia_name:0 "Greatest Moravia"
         # Special government reform:
@@ -706,16 +706,16 @@
         SEX:0 "PayPal States"
         SEX_ADJ:0 "PayPal"
        # Switzerland mercenaries:
-        swi_recruit_merc_inf_enable_title:0 "Assemble Our Own Special Mercenaries"
+        swi_recruit_merc_inf_enable_title:0 "£sea_merc_logo£ Assemble Our Own Special Mercenaries"
         swi_recruit_merc_inf_enable_desc:0 "They may not be much but they sure as hell last longer than ordinary soldiers."
         swi_recruit_merc_inf_enable_tt:0 "Enables '§MRecruit Swiss Mercenaries§!' Decision, which allows us to spawn §YSwiss Mercenaries§!."
-        swi_recruit_merc_inf_disable_title:0 "Dissolve Our Own Special Mercenaries"
+        swi_recruit_merc_inf_disable_title:0 "£sea_merc_logo£ Dissolve Our Own Special Mercenaries"
         swi_recruit_merc_inf_disable_desc:0 "We have no need for them any longer."
         swi_recruit_merc_inf_disable_tt:0 "Disables '§MRecruit Swiss Mercenaries§!' Decision, that allows us to spawn §YSwiss Mercenaries§!."
         swi_recruit_merc_inf_enabled_modifier_tt:0 "[Root.GetName] gets '§YSwiss Mercenaries§!' until the end of the game, giving the following effects:\nPossible Mercenaries: §R-33.0%§!\n"
         swi_recruit_merc_inf_enabled_modifier_ttt:0 "§YSwiss Mercenaries§! will be removed from [Root.GetName].\n"
         swi_recruit_merc_inf_enabled_modifier:0 "Swiss Mercenaries"
-        swi_recruit_merc_inf_title:0 "§MRecruit Swiss Mercenaries§!"
+        swi_recruit_merc_inf_title:0 "£sea_merc_logo£ §MRecruit Swiss Mercenaries§!"
         swi_recruit_merc_inf_desc:0 "§RWhen switching unit types, then it will also switch for those units!§!"
         sea_swiss_mercenaries_1:0 "§OSwiss Mercenaries§!"
         sea_swiss_mercenaries_2:0 "§YReformed Swiss Mercenaries§!"
@@ -780,7 +780,7 @@
         oirat_steppe_horde:0 "Oirat Steppe Nomads"
         oirat_steppe_horde_desc:0 "A governmental form where a sovereign or military ruler rule a tribal chiefdom, with constant Casus Bellis on all their neighbors and troops who fight better on the plains."
         # Serbia Tsardom:
-        serbia_unite_jugosland_title:0 "Unite Balkan Slavs"
+        serbia_unite_jugosland_title:0 "@SER Unite Balkan Slavs"
         serbia_unite_jugosland_desc:0 "Neither Death nor Dishonor."
         # Tribal Divese Society:
         diverse_society_reform:0 "Diverse Society"
@@ -794,8 +794,6 @@
         burgundy_juniors_long_desc:0 "In a personal union two countries are ruled by the same monarch. The lesser partner must follow his overlord to war and cannot make certain diplomatic actions. When the monarch dies the union might either continue, break or the lesser partner can get inherited and annexed."
         burgundy_juniors_is_our:0 "$NAME|Y$ is ruled by us in a Burgundian Personal Union."
         burgundy_juniors_no_overlord_dow:0 "You cannot declare war on a country with which you have a Union."
-        north_american_siberian_frontier_title:0 "Siberian Frontier Border Limit"
-        north_american_siberian_frontier_desc:0 "This shows, on what provinces, you can use Siberian Frontier."
         can_colonze_this_nw_region:0 "§RCan't establish Siberian Frontier here. Find another way to colonize this provinces.§!"
         # Hannover cav idea:
         sea_hanoverian_cavalry:0 "Hanoverian Cavalry"
@@ -813,18 +811,18 @@
         sealand_events.6.t:0 "Davlan's Advice"
         sealand_events.6.d:0 "Hello, fellow colony enjoyer. Davlan has noticed that you have paid off your loan, instead of letting your overlord do it for you. For that he advices you to never pay off your own loans and instead, you should take more loans and then ask your overlord to pay off those loans."
         sealand_events.6.a:0 "Thank you for this advice, sir!"
-        unite_estonia_title:0 "Moodusta Eesti"
+        unite_estonia_title:0 "@EST Moodusta Eesti"
         unite_estonia_desc:0 "Occupiers come and go but Estonians still remains. For far too long has this wheel been going round and round. It's time to put a stop to it and show the world what we're made of.\nÜkskord me võidame niikuinii!"
-        unite_finland_title:0 "Form Finland"
+        unite_finland_title:0 "@FIN Form Finland"
         unite_finland_desc:0 "If you have a problem, if no one else can help, and if you can find them... maybe you can hire The Finland."
         free_hong_kong_modifier:0 "Free Hong Kong"
         macaroni:0 "One Macaroni"
         macaroniDESC:0 "This is just a one single macaroni.\nFun fact: Macaroni is dry pasta shaped like narrow tubes.\nAnother fun fact: It originated from this island. Source: Trust me, dude."
-        sea_remove_state_edicts_title:0 "Ability to Enable State Edicts: §GEnabled§!"
+        sea_remove_state_edicts_title:0 "£sea_edict_logo£Ability to Enable State Edicts: §GEnabled§!"
         sea_remove_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
         sea_remove_state_edicts_tt:0 "Clicking this, will §RDisable§! the ability to enact State Edicts and current Edicts that are enabled, will be disabled on new month."
         sea_remove_state_edicts_flag_tt:0 "Enable the ability to enact State Edict in the §YDecisions§! tab."
-        sea_enable_state_edicts_title:0 "Ability to Enable State Edicts: §RDisabled§!"
+        sea_enable_state_edicts_title:0 "£sea_edict_logo£Ability to Enable State Edicts: §RDisabled§!"
         sea_enable_state_edicts_desc:0 "This is here, so you don't have to manually disable each State Edict."
         sea_enable_state_edicts_tt:0 "Clicking this, will §GEnable§! the ability to enact State Edicts."
         military_reform_cooldown:0 "Now's not the time"
@@ -918,7 +916,7 @@
         sea_spy_sabotage_defences_covert_action_already_has_modifier:0 "§RTheir defences are already being sabotaged.§!"
         # Advisor: # Couldn't think of better names for advisors, pls no judge.
            #Decision/events:
-            sea_get_specific_advisor_title:0 "Recruit Specific Advisor"
+            sea_get_specific_advisor_title:0 "£sea_advisor_logo£Recruit Specific Advisor"
             sea_get_specific_advisor_desc:0 "No one reads this anyway."
             sea_advisor_event.0.t:0 "Recruit Specific Advisor"
             sea_advisor_event.0.d:0 "Don't want to risk losing too much cash to RNG? Then you came to the right place. We got wide range of advisors to hire, all in their own categories. Go ahead, see what you like. And if you can't find anything good, you can always return for next time. The doors are open as long as you have the ducats."
@@ -1137,7 +1135,7 @@
 
     #Weaker Prussia:
         # Decision:
-        form_weaker_prussia_title:0 "Form North German Confederation"
+        form_weaker_prussia_title:0 "@PRA Form North German Confederation"
         form_weaker_prussia_desc:0 "This lets you form pretty much weaker Prussia, in case you don't want Prussian land but it will be much weaker, as in the only thing you get from it are Prussian ideas and even those are bit nerfed."
         form_weaker_prussia_tooltip:0 "Inherit all subjects that have capital in §YNorth Germany§! Region and have §YGermanic§! Culture Group."
         # Ideas:
@@ -1164,7 +1162,7 @@
 
     #Rhineland:
         # Decision:
-        form_rhineland_title:0 "Form Confederation of the Rhine"
+        form_rhineland_title:0 "@RHI Form Confederation of the Rhine"
         form_rhineland_desc:0 "We have united the region around the Rhine and much further than that and now we must show this power with something new."
         form_rhineland_tooltip:0 "Inherit all subjects that have capital in required provinces and have §YGermanic§! Culture Group."
         # Ideas:
@@ -1216,7 +1214,7 @@
         hofkriegsrat_1:0 "Hofkriegsrat"
         hofkriegsrat_1_desc:0 "Essentially the ministry for war. It is the full-time bureaucracy administering our army. One of its most important jobs is to know where our armies are. That way armies can receive the things they need, in particular men."
         # Decision:
-        form_austria_hungary_empire_title:0 "Unite Austria and Hungary"
+        form_austria_hungary_empire_title:0 "@AHE Unite Austria and Hungary"
         form_austria_hungary_empire_desc:0 "It may be bit early for something like this to propose for the public but it is for the health of this nation, that we must make compromises with the crowns and form Austro-Hungarian Empire for the benefit to all."
        # Austro-Hungarian Empire:
         # Ideas:
@@ -1318,7 +1316,7 @@
                 
     # Barbary States:
         # Decisions:
-        unite_barbary_states_title:0 "Unite Barbary States"
+        unite_barbary_states_title:0 "@BYS Unite Barbary States"
         unite_barbary_states_desc:0 "The whole Magherb coastline is filled with fellow Berber Corsairs, who are in dire need to be untied under a single flag, in order to terrorize the seas in full power."
         # Government Reform:
         CORSAIRS_REPUBLIC:0 "Corsairs Republic"
@@ -1353,7 +1351,7 @@
         IJP:0 "Imperial Japan"
         IJP_ADJ:0 "Imperial Japanese"
         # Decisions:
-        embrace_the_rising_sun_title:0 "Empire of The Rising Sun"
+        embrace_the_rising_sun_title:0 "@IJP Empire of The Rising Sun"
         embrace_the_rising_sun_desc:0 "Let the world know that Japan is not just a shadow of the sun but is the sun itself."
         # Government:
         imperial_japan_monarchy:0 "Japanese imperial government"
@@ -1760,26 +1758,26 @@
        sea_ottoman_golden_age_tt:0 "If '§YJanissary Coup§!' disaster has not happened, then will be removed.\nUpgrade all the '§YReformed Janissaries§!' modifiers into following:"
        reformed_janissary_golden_age_modifier:0 "Golden Age of Janissaries"
        # Decision:
-       reform_ottoman_empire_title:0 "Reform Ottoman Empire"
+       reform_ottoman_empire_title:0 "@OSM Reform Ottoman Empire"
        reform_ottoman_empire_desc:0 "Mamluks dared to contest us and paid dearly for it and now we must show the true power of the Ottman might to the rest of the world."
        reform_ottoman_empire_tt:0 "Gains improved National Ideas."
        reformed_janissary_alexandria_modifier:0 "Reformed Janissaries"
-       reformed_janissary_wallachia_title:0 "Janissaries experience from Wallachia"
+       reformed_janissary_wallachia_title:0 "£sea_janissary£ Janissaries experience from Wallachia"
        reformed_janissary_wallachia_desc:0 "Improved Janissaries"
        reformed_janissary_wallachia_modifier:0 "Wallachia Improved Janissaries"
-       reformed_janissary_levant_title:0 "Janissaries experience from Levant and Iraq"
+       reformed_janissary_levant_title:0 "£sea_janissary£ Janissaries experience from Levant and Iraq"
        reformed_janissary_levant_desc:0 "Improved Janissaries"
        reformed_janissary_levant_modifier:0 "Levant Improved Janissaries"
-       reformed_janissary_georgia_title:0 "Janissaries experience from Georgia"
+       reformed_janissary_georgia_title:0 "£sea_janissary£ Janissaries experience from Georgia"
        reformed_janissary_georgia_desc:0 "Improved Janissaries"
        reformed_janissary_georgia_modifier:0 "Georgian Improved Janissaries"
-       reformed_janissary_persia_title:0 "Janissaries experience from Persia"
+       reformed_janissary_persia_title:0 "£sea_janissary£ Janissaries experience from Persia"
        reformed_janissary_persia_desc:0 "Improved Janissaries"
        reformed_janissary_persia_modifier:0 "Persian Improved Janissaries"
-       reformed_janissary_arabia_title:0 "Janissaries experience from Arabia"
+       reformed_janissary_arabia_title:0 "£sea_janissary£ Janissaries experience from Arabia"
        reformed_janissary_arabia_desc:0 "Improved Janissaries"
        reformed_janissary_arabia_modifier:0 "Arabian Improved Janissaries"
-       reformed_janissary_balkan_title:0 "Janissaries experience from the Balkans"
+       reformed_janissary_balkan_title:0 "£sea_janissary£ Janissaries experience from the Balkans"
        reformed_janissary_balkan_desc:0 "Improved Janissaries"
        reformed_janissary_balkan_modifier:0 "Balkan Improved Janissaries"
        # Rum:
@@ -1788,7 +1786,7 @@
        sea_rum_golden_age_desc:0 "Rum Golden Age"
        sea_rum_golden_age_tt:0 "If '§YJanissary Coup§!' disaster has not happened, then will be removed.\nUpgrade all the '§YImproved Ottoman Janissaries§!' modifiers into following:"
        # Seljuks:
-       sjk_reformed_janissary_alexandria_title:0 "Janissaries experience from Alexandria"
+       sjk_reformed_janissary_alexandria_title:0 "£sea_janissary£ Janissaries experience from Alexandria"
        sjk_reformed_janissary_alexandria_desc:0 "Improved Janissaries"
        sjk_reformed_janissary_alexandria_modifier:0 "Alexandrian Improved Janissaries"
        sea_sjk_golden_age_title:0 "Golden Age of Janissaries"
@@ -1847,16 +1845,16 @@
         theocracy_election_government.3.b:0 "[sasanian_candidate_b_@ROOT.GetName] as our next $MONARCHTITLE$."
         theocracy_election_government.3.c:0 "[sasanian_candidate_c_@ROOT.GetName] as our next $MONARCHTITLE$."
         # Converting to Zoroastrian:
-        converted_to_zoroastrian_title:0 "Road to Sasanian Legacy aka Zoroastrianism"
+        converted_to_zoroastrian_title:0 "@SAS Road to Sasanian Legacy aka Zoroastrianism"
         converted_to_zoroastrian_desc:0 "This the only way to revive Sasanian Empire."
         converted_to_zoroastrian_modifier:0 "All Must Follow Zoroastrianism"
         # Form Sasanian Empire:
-        revive_sasanian_empire_title:0 "Revive Sasanian Empire"
+        revive_sasanian_empire_title:0 "@SAS Revive Sasanian Empire"
         revive_sasanian_empire_desc:0 "You have found ancient scrolls of Zoroastrian religion, that show you the way to bring back from the ruins the mighty nation of Sasaniad Empire."
         # Merc Company:
          merc_sasanian_zhayedan:0 "Zhayedan"
     # Achaemenid Empire:
-        form_achaemenid_empire_title:0 "Become Achaemenid Empire"
+        form_achaemenid_empire_title:0 "@ACE Become Achaemenid Empire"
         form_achaemenid_empire_desc:0 "After all those centuries, we are finally able to fulfill our dream, which is to revive the borders of Achaemenid Empire and become one ourself."
         ACE:0 "Achaemenid Empire" # Name slightly changed
         ACE_ADJ:0 "Achaemenian"
@@ -2034,7 +2032,7 @@
       sea_new_world_more_trade_power_title:0 "Exchange Mercantilism for Trade Efficiency"
       sea_new_world_more_trade_power_desc:0 ""
       sea_new_world_more_trade_power_modifier:0 "Prioritized Trading Efficiency"
-      sea_new_world_kill_ruler_options_title:0 "Find a More Suitable Ruler"
+      sea_new_world_kill_ruler_options_title:0 "£sea_sacrifice_ruler_logo£Find a More Suitable Ruler"
       sea_new_world_kill_ruler_options_desc:0 "Not happy with your ruler? Send him to retirement."
       sea_new_world_kill_ruler_options_cooldown:0 "Recently Retired Ruler"
       # Events:

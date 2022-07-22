@@ -864,11 +864,11 @@
     swz_absolute_legitimacy:0 "Absolute Legitimacy"
     swz_absolute_legitimacy_desc:0 "Absolute Legitimacy"
     # Decisions:
-    swz_norse_cult_decision_title:0 "Unlock Freyja Cult"
+    swz_norse_cult_decision_title:0 "£sea_pagan_logo£Unlock Freyja Cult"
     swz_norse_cult_decision_desc:0 "We have come to witness one of the very rare opportunities, which is the rebirth of Norse religion."
     swz_norse_cult_decision_tt:0 "Any country with §YNorse§! religion is allied with §Y[Root.GetName]§!"
     swz_norse_cult_tt:0 "Tolerance of Heathens: §G+2.00§!"
-    swz_zoroastrian_cult_decision_title:0 "Unlock Mazdayasna Cult"
+    swz_zoroastrian_cult_decision_title:0 "£sea_zoroastrian_logo£Unlock Mazdayasna Cult"
     swz_zoroastrian_cult_decision_desc:0 "Zoroastrian is becoming ever more relevant with recent times, which means  that one should get used to the fact of witnessing it ever more."
     swz_zoroastrian_cult_decision_tt:0 "Any country with §YZoroastrian§! religion is allied with §Y[Root.GetName]§!"
     swz_zoroastrian_cult_tt:0 "Merchants: §G+2§!"

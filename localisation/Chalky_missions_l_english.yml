@@ -4,7 +4,7 @@
  DRV:0 "Dravidessa"
  DRV_ADJ:0 "Dravidian"
  DRV_ADJ2:0 "Dravidian"
- dravidessa_nation_title:0 "Unite Dravidessa"
+ dravidessa_nation_title:0 "@DRV Unite Dravidessa"
  dravidessa_nation_desc:0 "Unite the dravidian people under one state."
  DRV_ideas:0 "Dravidian Ideas"
  DRV_ideas_start:0 "Dravidian Traditions"
