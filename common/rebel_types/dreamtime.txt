@@ -1,17 +1,18 @@
+
 ######################################################################
-# Norse Pagan Reformed rebels. Disgruntled fanatics.
+# Dreamtime rebels. Disgruntled fanatics.
 ######################################################################
-norse_pagan_reformed_rebels = {
+dreamtime_rebels = {
 
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = norse_pagan_reformed
-	defection = religion			# Defects to countries of their religion
+	religion = dreamtime
+	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
-	unit_transfer = yes
+	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
 	
@@ -45,7 +46,7 @@ norse_pagan_reformed_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = dreamtime }
 		}
 		modifier = {
 			factor = 0.001
@@ -57,7 +58,7 @@ norse_pagan_reformed_rebels = {
 		}
 		modifier = {
 			factor = 5.0
-			owner = { has_country_flag = religious_turmoil }
+			owner = { has_disaster = religious_turmoil }
 		}		
 		modifier = {
 			factor = 2000
@@ -90,21 +91,21 @@ norse_pagan_reformed_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = norse_pagan_reformed
-			owner = { religion = norse_pagan_reformed }
+			religion = dreamtime
+			owner = { religion = dreamtime }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = dreamtime }
 			any_neighbor_province = {
-	 			religion = norse_pagan_reformed
+	 			religion = dreamtime
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = norse_pagan_reformed
+			religion = dreamtime
 		}
 		modifier = {
 			factor = 1.5
@@ -135,9 +136,9 @@ norse_pagan_reformed_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = norse_pagan_reformed
+						religion = dreamtime
 						is_reformation_center = yes
-						owner = { religion = norse_pagan_reformed }
+						owner = { religion = dreamtime }
 					}
 				}
 				add_province_modifier = {
@@ -147,11 +148,11 @@ norse_pagan_reformed_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = norse_pagan_reformed }
+					NOT = { religion = dreamtime }
 					is_reformation_center = no
-					NOT = { owner = { religion = norse_pagan_reformed } }
+					NOT = { owner = { religion = dreamtime } }
 				}
-				change_religion = norse_pagan_reformed
+				change_religion = dreamtime
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -180,7 +181,6 @@ norse_pagan_reformed_rebels = {
 				remove_province_modifier = "confucian_theravada_harmonization"
 				remove_province_modifier = "confucian_totemism_harmonization"
 				remove_province_modifier = "confucian_vajrayana_harmonization"
-				remove_province_modifier = "confucian_dreamtime_harmonization"
 			}
 		}
 		owner = {
@@ -203,7 +203,7 @@ norse_pagan_reformed_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "norse_pagan_reformed_rebels_demand"
+	demands_description = "dreamtime_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -238,7 +238,7 @@ norse_pagan_reformed_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = norse_pagan_reformed
+				religion = dreamtime
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -247,19 +247,16 @@ norse_pagan_reformed_rebels = {
 		}
 		#else_if = {
 		#	limit = {
-		#		OR = {
-		#			religion_group = pagan
-		#			dominant_religion = norse_pagan_reformed
-		#		}
-		#		NOT = { religion = norse_pagan_reformed }
+		#		religion_group = pagan
+		#		NOT = { religion = dreamtime }
 		#	}
-		#	change_religion = norse_pagan_reformed
+		#	change_religion = dreamtime
 		#	force_converted = yes
 		#}
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = norse_pagan_reformed
+				religion = dreamtime
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {
@@ -277,7 +274,7 @@ norse_pagan_reformed_rebels = {
 		}
 		change_estate_land_share = {
 			estate = estate_church
-			share = 5.0
+			share = 10.0
 		}
 	}
 }

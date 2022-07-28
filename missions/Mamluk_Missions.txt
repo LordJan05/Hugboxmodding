@@ -1124,8 +1124,11 @@ sea_mam_missions_5 = {
 				}
 				ai = no
 			}
-			any_country = {
-				offensive_war_with = ROOT
+			OR = {
+				any_country = {
+					offensive_war_with = ROOT
+				}
+				is_year = 1453
 			}
 		}
 		effect = {

@@ -278,23 +278,6 @@ spriteTypes = {
 
 	# ADM:
 	spriteType = {
-		name = "GFX_advisor_advisor_adm_tech_cost"
-		texturefile = "gfx//interface//advisors//advisor_adm_tech_cost.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_adm_tech_cost_female"
-		texturefile = "gfx//interface//advisors//advisor_adm_tech_cost_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	
-	spriteType = {
 		name = "GFX_advisor_advisor_centralize_autonomy"
 		texturefile = "gfx//interface//advisors//advisor_centralize_autonomy.tga"
 		noOfFrames = 1
@@ -443,41 +426,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
-	
-	spriteType = {
-		name = "GFX_advisor_advisor_idealistic_views"
-		texturefile = "gfx//interface//advisors//advisor_idealistic_views.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_idealistic_views_female"
-		texturefile = "gfx//interface//advisors//advisor_idealistic_views_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
 	# DIP:
-	spriteType = {
-		name = "GFX_advisor_advisor_dip_tech_cost"
-		texturefile = "gfx//interface//advisors//advisor_dip_tech_cost.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_dip_tech_cost_female"
-		texturefile = "gfx//interface//advisors//advisor_dip_tech_cost_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	
 	spriteType = {
 		name = "GFX_advisor_advisor_defence_spymaster"
 		texturefile = "gfx//interface//advisors//advisor_defence_spymaster.tga"
@@ -547,23 +496,6 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_advisor_advisor_culture_convert"
-		texturefile = "gfx//interface//advisors//advisor_culture_convert.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_culture_convert_female"
-		texturefile = "gfx//interface//advisors//advisor_culture_convert_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	
-	spriteType = {
 		name = "GFX_advisor_advisor_colonial_increase"
 		texturefile = "gfx//interface//advisors//advisor_colonial_increase.tga"
 		noOfFrames = 1
@@ -574,23 +506,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_advisor_advisor_colonial_increase_female"
 		texturefile = "gfx//interface//advisors//advisor_colonial_increase_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	
-	spriteType = {
-		name = "GFX_advisor_advisor_reduced_agg_exp"
-		texturefile = "gfx//interface//advisors//advisor_reduced_agg_exp.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_reduced_agg_exp_female"
-		texturefile = "gfx//interface//advisors//advisor_reduced_agg_exp_female.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -785,23 +700,6 @@ spriteTypes = {
 	}
 	# MIL:
 	spriteType = {
-		name = "GFX_advisor_advisor_mil_tech_cost"
-		texturefile = "gfx//interface//advisors//advisor_mil_tech_cost.tga"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_advisor_advisor_mil_tech_cost_female"
-		texturefile = "gfx//interface//advisors//advisor_mil_tech_cost_female.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-		loadType = "INGAME"
-	}
-	
-	spriteType = {
 		name = "GFX_advisor_advisor_inf_combat"
 		texturefile = "gfx//interface//advisors//advisor_inf_combat.tga"
 		noOfFrames = 1
@@ -987,6 +885,23 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
+	
+	spriteType = {
+		name = "GFX_advisor_advisor_siege_ability"
+		texturefile = "gfx//interface//advisors//advisor_siege_ability.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_advisor_siege_ability_female"
+		texturefile = "gfx//interface//advisors//advisor_siege_ability_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 
 ##############
 #### BUILDINGS
@@ -1098,548 +1013,483 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_janissary"
 		texturefile = "gfx/interface/sea_decision_logos/sea_janissary.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_muslim_school"
 		texturefile = "gfx/interface/sea_decision_logos/sea_muslim_school.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_edict_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_edict_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_ruler_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_ruler_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_sacrifice_ruler_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_sacrifice_ruler_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_advisor_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_advisor_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_event_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_event_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_development_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_development_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_religions_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_religions_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_no_muslim_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_no_muslim_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_islam_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_islam_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_sunni_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_sunni_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_shia_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_shia_logo.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_ibadi_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_ibadi_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_hanbali_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_hanbali_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_hindu_muslim_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_hindu_muslim_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_dharmic_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_dharmic_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_hindu_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_hindu_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_sikh_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_sikh_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_christianity_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_christianity_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_no_christianity_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_no_christianity_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_catholic_protestant_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_catholic_protestant_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_catholic_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_catholic_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_protestant_reformed_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_protestant_reformed_logo.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_protestant_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_protestant_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_reformed_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_reformed_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_orthodox_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_orthodox_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_anglican_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_anglican_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_hussite_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_hussite_logo.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_coptic_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_coptic_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_eastern_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_eastern_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_confucian_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_confucian_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_sea_vajrayana_logo"
-		texturefile = "gfx/interface/sea_decision_logos/sea_vajrayana_logo.dds"
-		loadTpye = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_sea_mahayana_logo"
-		texturefile = "gfx/interface/sea_decision_logos/sea_mahayana_logo.dds"
-		loadTpye = "INGAME"
+		name = "GFX_sea_shinto_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_shinto_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_vaj_mah_the_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_vaj_mah_the_logo.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_theravada_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_theravada_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_vajrayana_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_vajrayana_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_mahayana_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_mahayana_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_tengri_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_tengri_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_zoroastrian_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_zoroastrian_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_jewish_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_jewish_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_pagan_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_pagan_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_norse_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_norse_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_fetishist_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_fetishist_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_totemism_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_totemism_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_nahuatl_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_nahuatl_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_mayan_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_mayan_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_inti_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_inti_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_animist_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_animist_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_hre_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_hre_logo.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_hre_mflag_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_hre_mflag_logo.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_estate_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_estate_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_cossacks_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_cossacks_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_merc_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_merc_logo.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_minor_modif_decisions"
 		texturefile = "gfx/interface/sea_decision_logos/sea_minor_modif_decisions.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_development_cost_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_development_cost_logo.dds"
 	}
 	
 	# Small Icons fit for event options:
 	spriteType = {
 		name = "GFX_sea_adm_tech_cost_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_adm_tech_cost_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_ae_impact"
 		texturefile = "gfx/interface/sea_event_logos/sea_ae_impact.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_artillery_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_artillery_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_cav_to_inf_ratio"
 		texturefile = "gfx/interface/sea_event_logos/sea_cav_to_inf_ratio.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_cavalry_flanking"
 		texturefile = "gfx/interface/sea_event_logos/sea_cavalry_flanking.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_cavalry_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_cavalry_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_colonist_placement_chance"
 		texturefile = "gfx/interface/sea_event_logos/sea_colonist_placement_chance.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_culture_conversion_cost"
 		texturefile = "gfx/interface/sea_event_logos/sea_culture_conversion_cost.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_defensiveness"
 		texturefile = "gfx/interface/sea_event_logos/sea_defensiveness.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_devotion"
 		texturefile = "gfx/interface/sea_event_logos/sea_devotion.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_dip_tech_cost_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_dip_tech_cost_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_diplomatic_reputation"
 		texturefile = "gfx/interface/sea_event_logos/sea_diplomatic_reputation.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_discipline"
 		texturefile = "gfx/interface/sea_event_logos/sea_discipline.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_fire_damage"
 		texturefile = "gfx/interface/sea_event_logos/sea_fire_damage.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_fire_damage_received"
 		texturefile = "gfx/interface/sea_event_logos/sea_fire_damage_received.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_galley_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_galley_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_autonomy"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_autonomy.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_manpower_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_manpower_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_missionary_strength"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_missionary_strength.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_naval_engagement_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_naval_engagement_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_sailors_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_sailors_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_ship_repair"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_ship_repair.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_spy_defence"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_spy_defence.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_tariffs"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_tariffs.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_tax_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_tax_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_global_unrest"
 		texturefile = "gfx/interface/sea_event_logos/sea_global_unrest.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_heavy_ship_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_heavy_ship_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_horde_unity"
 		texturefile = "gfx/interface/sea_event_logos/sea_horde_unity.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_idea_cost"
 		texturefile = "gfx/interface/sea_event_logos/sea_idea_cost.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_imperial_authority"
 		texturefile = "gfx/interface/sea_event_logos/sea_imperial_authority.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_imperial_mandate"
 		texturefile = "gfx/interface/sea_event_logos/sea_imperial_mandate.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_improve_relation_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_improve_relation_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_infantry_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_infantry_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_inflation_reduction"
 		texturefile = "gfx/interface/sea_event_logos/sea_inflation_reduction.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_land_attrition"
 		texturefile = "gfx/interface/sea_event_logos/sea_land_attrition.dds"
-		loadTpye = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_sea_siege_ability"
+		texturefile = "gfx/interface/sea_event_logos/sea_siege_ability.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_land_forcelimit_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_land_forcelimit_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_land_maintenance_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_land_maintenance_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_land_morale"
 		texturefile = "gfx/interface/sea_event_logos/sea_land_morale.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_legitimacy"
 		texturefile = "gfx/interface/sea_event_logos/sea_legitimacy.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_light_ship_power"
 		texturefile = "gfx/interface/sea_event_logos/sea_light_ship_power.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_mil_tech_cost_modifier"
 		texturefile = "gfx/interface/sea_event_logos/sea_mil_tech_cost_modifier.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_monthly_splendor"
 		texturefile = "gfx/interface/sea_event_logos/sea_monthly_splendor.dds"
-		loadTpye = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sea_movement_speed"
-		texturefile = "gfx/interface/sea_logos/sea_movement_speed.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_movement_speed.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_naval_attrition"
-		texturefile = "gfx/interface/sea_logos/sea_naval_attrition.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_naval_attrition.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_naval_forcelimit_modifier"
-		texturefile = "gfx/interface/sea_logos/sea_naval_forcelimit_modifier.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_naval_forcelimit_modifier.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_naval_maintenance_modifier"
-		texturefile = "gfx/interface/sea_logos/sea_naval_maintenance_modifier.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_naval_maintenance_modifier.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_naval_morale"
-		texturefile = "gfx/interface/sea_logos/sea_naval_morale.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_naval_morale.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_prestige"
-		texturefile = "gfx/interface/sea_logos/sea_prestige.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_prestige.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_production_efficiency"
-		texturefile = "gfx/interface/sea_logos/sea_production_efficiency.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_production_efficiency.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_range"
-		texturefile = "gfx/interface/sea_logos/sea_range.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_range.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_recover_army_morale_speed"
-		texturefile = "gfx/interface/sea_logos/sea_recover_army_morale_speed.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_recover_army_morale_speed.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_recover_navy_morale_speed"
-		texturefile = "gfx/interface/sea_logos/sea_recover_navy_morale_speed.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_recover_navy_morale_speed.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_reform_progress_growth"
-		texturefile = "gfx/interface/sea_logos/sea_reform_progress_growth.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_reform_progress_growth.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_reinforce_speed"
-		texturefile = "gfx/interface/sea_logos/sea_reinforce_speed.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_reinforce_speed.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_republican_tradition"
-		texturefile = "gfx/interface/sea_logos/sea_republican_tradition.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_republican_tradition.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_ship_durability"
-		texturefile = "gfx/interface/sea_logos/sea_ship_durability.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_ship_durability.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_shock_damage"
-		texturefile = "gfx/interface/sea_logos/sea_shock_damage.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_shock_damage.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_shock_damage_received"
-		texturefile = "gfx/interface/sea_logos/sea_shock_damage_received.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_shock_damage_received.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_spy_offence"
-		texturefile = "gfx/interface/sea_logos/sea_spy_offence.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_spy_offence.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_stability_cost_modifier"
-		texturefile = "gfx/interface/sea_logos/sea_stability_cost_modifier.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_stability_cost_modifier.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_trade_efficiency"
-		texturefile = "gfx/interface/sea_logos/sea_trade_efficiency.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_trade_efficiency.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_war_exhaustion"
-		texturefile = "gfx/interface/sea_logos/sea_war_exhaustion.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_war_exhaustion.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_yearly_absolutism"
-		texturefile = "gfx/interface/sea_logos/sea_yearly_absolutism.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_yearly_absolutism.dds"
 	}
 	spriteType = {
 		name = "GFX_sea_yearly_corruption"
-		texturefile = "gfx/interface/sea_logos/sea_yearly_corruption.dds"
-		loadTpye = "INGAME"
+		texturefile = "gfx/interface/sea_event_logos/sea_yearly_corruption.dds"
 	}
 }

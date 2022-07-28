@@ -30,6 +30,18 @@ has_mil_advisor = {
 			advisor = recruitmaster
 			advisor = fortification_expert
 			advisor = quartermaster
+			advisor = advisor_inf_combat
+			advisor = advisor_cav_combat
+			advisor = advisor_art_combat
+			advisor = advisor_cav_to_inf_ratio
+			advisor = advisor_speedy_boys
+			advisor = advisor_fire_damage
+			advisor = advisor_fire_damage_received
+			advisor = advisor_shock_damage
+			advisor = advisor_shock_damage_received
+			advisor = advisor_morale_recovery
+			advisor = advisor_land_attrition
+			advisor = advisor_siege_ability
 		}
 	}
 }
@@ -45,6 +57,18 @@ has_mil_advisor_2 = {
 			recruitmaster = 2
 			fortification_expert = 2
 			quartermaster = 2
+			advisor_inf_combat = 2
+			advisor_cav_combat = 2
+			advisor_art_combat = 2
+			advisor_cav_to_inf_ratio = 2
+			advisor_speedy_boys = 2
+			advisor_fire_damage = 2
+			advisor_fire_damage_received = 2
+			advisor_shock_damage = 2
+			advisor_shock_damage_received = 2
+			advisor_morale_recovery = 2
+			advisor_land_attrition = 2
+			advisor_siege_ability = 2
 		}
 	}
 }
@@ -60,6 +84,18 @@ has_mil_advisor_3 = {
 			recruitmaster = 3
 			fortification_expert = 3
 			quartermaster = 3
+			advisor_inf_combat = 3
+			advisor_cav_combat = 3
+			advisor_art_combat = 3
+			advisor_cav_to_inf_ratio = 3
+			advisor_speedy_boys = 3
+			advisor_fire_damage = 3
+			advisor_fire_damage_received = 3
+			advisor_shock_damage = 3
+			advisor_shock_damage_received = 3
+			advisor_morale_recovery = 3
+			advisor_land_attrition = 3
+			advisor_siege_ability = 3
 		}
 	}
 }
@@ -75,6 +111,15 @@ has_adm_advisor = {
 			advisor = master_of_mint
 			advisor = inquisitor
 			advisor = natural_scientist
+			advisor = advisor_centralize_autonomy
+			advisor = advisor_war_exhaust
+			advisor = advisor_splendor_blendor
+			advisor = advisor_legitimate_government
+			advisor = advisor_horde_government
+			advisor = advisor_republic_government
+			advisor = advisor_devoted_government
+			advisor = advisor_increase_absolutism
+			advisor = advisor_reform_growth
 		}
 	}
 }
@@ -90,6 +135,15 @@ has_adm_advisor_2 = {
 			master_of_mint = 2
 			inquisitor = 2
 			natural_scientist = 2
+			advisor_centralize_autonomy = 2
+			advisor_war_exhaust = 2
+			advisor_splendor_blendor = 2
+			advisor_legitimate_government = 2
+			advisor_horde_government = 2
+			advisor_republic_government = 2
+			advisor_devoted_government = 2
+			advisor_increase_absolutism = 2
+			advisor_reform_growth = 2
 		}
 	}
 }
@@ -105,6 +159,15 @@ has_adm_advisor_3 = {
 			master_of_mint = 3
 			inquisitor = 3
 			natural_scientist = 3
+			advisor_centralize_autonomy = 3
+			advisor_war_exhaust = 3
+			advisor_splendor_blendor = 3
+			advisor_legitimate_government = 3
+			advisor_horde_government = 3
+			advisor_republic_government = 3
+			advisor_devoted_government = 3
+			advisor_increase_absolutism = 3
+			advisor_reform_growth = 3
 		}
 	}
 }
@@ -121,6 +184,22 @@ has_dip_advisor = {
 			advisor = colonial_governor
 			advisor = navigator
 			advisor = spymaster
+			advisor = advisor_defence_spymaster
+			advisor = advisor_corrupt_decay
+			advisor = advisor_imperial_authority
+			advisor = advisor_mandate_growth
+			advisor = advisor_colonial_increase
+			advisor = advisor_naval_engagement
+			advisor = advisor_naval_attrition
+			advisor = advisor_naval_durability
+			advisor = advisor_naval_morale_recovery
+			advisor = advisor_naval_sailors
+			advisor = advisor_naval_maintenance
+			advisor = advisor_naval_forcelimit
+			advisor = advisor_naval_repair
+			advisor = advisor_naval_heavy_combat
+			advisor = advisor_naval_light_combat
+			advisor = advisor_naval_galley_combat
 		}
 	}
 }
@@ -136,6 +215,22 @@ has_dip_advisor_2 = {
 			colonial_governor = 2
 			navigator = 2
 			spymaster = 2
+			advisor_defence_spymaster = 2
+			advisor_corrupt_decay = 2
+			advisor_imperial_authority = 2
+			advisor_mandate_growth = 2
+			advisor_colonial_increase = 2
+			advisor_naval_engagement = 2
+			advisor_naval_attrition = 2
+			advisor_naval_durability = 2
+			advisor_naval_morale_recovery = 2
+			advisor_naval_sailors = 2
+			advisor_naval_maintenance = 2
+			advisor_naval_forcelimit = 2
+			advisor_naval_repair = 2
+			advisor_naval_heavy_combat = 2
+			advisor_naval_light_combat = 2
+			advisor_naval_galley_combat = 2
 		}
 	}
 }
@@ -151,6 +246,22 @@ has_dip_advisor_3 = {
 			colonial_governor = 3
 			navigator = 3
 			spymaster = 3
+			advisor_defence_spymaster = 3
+			advisor_corrupt_decay = 3
+			advisor_imperial_authority = 3
+			advisor_mandate_growth = 3
+			advisor_colonial_increase = 3
+			advisor_naval_engagement = 3
+			advisor_naval_attrition = 3
+			advisor_naval_durability = 3
+			advisor_naval_morale_recovery = 3
+			advisor_naval_sailors = 3
+			advisor_naval_maintenance = 3
+			advisor_naval_forcelimit = 3
+			advisor_naval_repair = 3
+			advisor_naval_heavy_combat = 3
+			advisor_naval_light_combat = 3
+			advisor_naval_galley_combat = 3
 		}
 	}
 }
@@ -527,6 +638,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = AHE }
 			NOT = { was_tag = HAE }
 			NOT = { was_tag = ABA }
+			NOT = { was_tag = ANG }
 			NOT = { tag = TUR }
 			NOT = { tag = ROM }
 			NOT = { tag = HLR }
@@ -549,6 +661,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = AHE }
 			NOT = { tag = HAE }
 			NOT = { tag = ABA }
+			NOT = { tag = ANG }
 		}
 	}
 }

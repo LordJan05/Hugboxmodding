@@ -3569,7 +3569,7 @@ lan_secure_public_funds = {
 
 lan_medici_banking = {
 	state_maintenance_modifier = -0.2
-	interest = -0.5
+	interest = -0.25
 }
 
 lan_arno_flood_controls = {
@@ -5361,7 +5361,7 @@ zan_persian_embassy = {
 
 #Permanent province modifier
 zan_great_kilwa = {
-	local_gold_depletion_chance_modifier = -0.25
+	#local_gold_depletion_chance_modifier = -0.25
 	allowed_num_of_buildings = 1
 }
 

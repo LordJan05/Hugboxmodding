@@ -124,6 +124,7 @@ new_world_natives_missions_no_reg = {
 				religion = inti
 				religion = mesoamerican_religion
 				religion = nahuatl
+				religion = animism
 			}
 			is_religion_reformed = yes
 		}

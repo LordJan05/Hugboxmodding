@@ -476,28 +476,6 @@ grand_captain = {
 ######################################################
 # Sealand:
 # ADM:
-advisor_adm_tech_cost = {
-	monarch_power = ADM
-	
-	# Bonus
-	adm_tech_cost_modifier = -0.05
-
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.5
-		modifier = {
-			factor = 1.5
-			any_neighbor_country = {
-				tech_difference = 1
-			}
-		}
-	}
-}
 advisor_centralize_autonomy = {
 	monarch_power = ADM
 	
@@ -771,46 +749,8 @@ advisor_reform_growth = {
 		factor = 2
 	}
 }
-advisor_idealistic_views = {
-	monarch_power = ADM
-	
-	# Bonus
-	idea_cost = -0.05
-
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.5
-	}
-}
 #####
 # DIP
-advisor_dip_tech_cost = {
-	monarch_power = DIP
-	
-	# Bonus
-	dip_tech_cost_modifier = -0.05
-
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.5
-		modifier = {
-			factor = 1.5
-			any_neighbor_country = {
-				tech_difference = 1
-			}
-		}
-	}
-}
 advisor_defence_spymaster = {
 	monarch_power = DIP
 	
@@ -963,28 +903,6 @@ advisor_mandate_growth = {
 		}
 	}
 }
-advisor_culture_convert = {
-	monarch_power = DIP
-	
-	# Bonus
-	culture_conversion_cost = -0.1
-	
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			any_owned_province = {
-				has_owner_culture = no
-			}
-		}
-	}
-}
 advisor_colonial_increase = {
 	monarch_power = DIP
 	
@@ -1003,38 +921,6 @@ advisor_colonial_increase = {
 	
 	ai_will_do = {
 		factor = 1.5
-	}
-}
-advisor_reduced_agg_exp = {
-	monarch_power = DIP
-	
-	# Bonus
-	ae_impact = -0.06
-	
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 2
-		modifier = {
-			factor = 0
-			is_year = 1500
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { is_year = 1500 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { is_year = 1480 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { is_year = 1460 }
-		}
 	}
 }
 advisor_naval_engagement = {
@@ -1259,28 +1145,6 @@ advisor_naval_galley_combat = {
 }
 #####
 # MIL
-advisor_mil_tech_cost = {
-	monarch_power = MIL
-	
-	# Bonus
-	mil_tech_cost_modifier = -0.05
-
-	skill_scaled_modifier = { meritocracy = 0.25 }
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.5
-		modifier = {
-			factor = 1.5
-			any_neighbor_country = {
-				tech_difference = 1
-			}
-		}
-	}
-}
 advisor_inf_combat = {
 	monarch_power = MIL
 	
@@ -1451,6 +1315,22 @@ advisor_land_attrition = {
 	
 	# Bonus
 	land_attrition = -0.15
+	
+	skill_scaled_modifier = { meritocracy = 0.25 }
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+advisor_siege_ability = {
+	monarch_power = MIL
+	
+	# Bonus
+	siege_ability = 0.15
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 

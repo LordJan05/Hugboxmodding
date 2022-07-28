@@ -37,10 +37,7 @@ country_event = {
 	trigger = {
 		ai = no
 		any_owned_province = {
-			OR = {
-				has_province_flag = sealand_banners_fl_base_flag 
-				has_province_modifier = sealand_banners_fl_base
-			}
+			has_province_flag = sealand_banners_fl_base_flag
 			OR = {
 				NOT = { culture = ROOT }
 				NOT = { is_state = yes }
@@ -52,29 +49,9 @@ country_event = {
 		days = 1
 	}
 	immediate = {
-		every_owned_province = {
-			limit = {
-				OR = {
-					has_province_flag = sealand_banners_fl_base_flag 
-					has_province_modifier = sealand_banners_fl_base
-				}
-			}
-			clr_province_flag = sealand_banners_fl_base_flag 
-			remove_province_modifier = sealand_banners_fl_base
-		}
-		random_owned_province = {
-			limit = {
-				culture = ROOT
-				is_core = ROOT
-				is_state_core = ROOT
-			}
-			set_province_flag = sealand_banners_fl_base_flag 
-			add_province_modifier = {
-				name = sealand_banners_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
+		check_num_of_banners = yes
+		remove_banner_fl_modifiers = yes
+		set_banner_fl_modifiers = yes
 	}
 	option = {}
 }

@@ -99,22 +99,36 @@ country_event = {
 	trigger = {
 		#has_country_flag = sealandmercs_switch_merc_flag
 		ai = no
-		NOT = { any_owned_province = { has_province_modifier = sealand_banners_fl_base } }
-	}
-	immediate = {
-		random_owned_province = {
-			limit = {
-				culture = ROOT
-				is_core = ROOT
-				is_state_core = ROOT
+		variable_arithmetic_trigger = {
+			custom_tooltip = vat_banner_new_value
+			export_to_variable = {
+				which = banner_forcelimit
+				value = trigger_value:land_forcelimit
 			}
-			set_province_flag = sealand_banners_fl_base_flag 
-			add_province_modifier = {
-				name = sealand_banners_fl_base
-				duration = -1
-				hidden = yes
+			multiply_variable = {
+				which = banner_forcelimit
+				value = 30
+			}
+			divide_variable = {
+				which = banner_forcelimit
+				value = 100
+			}
+			change_variable = {
+				which = banner_forcelimit
+				value = 20
+			}
+			NOT = {
+				is_variable_equal = {
+					which = banner_forcelimit
+					which = current_banner_forcelimit
+				}
 			}
 		}
+	}
+	immediate = {
+		check_num_of_banners = yes
+		remove_banner_fl_modifiers = yes
+		set_banner_fl_modifiers = yes
 	}
 	option = { }
 }
@@ -131,14 +145,13 @@ country_event = {
 		ai = no
 		num_of_owned_provinces_with = {
 			value = 2
-			has_province_modifier = sealand_banners_fl_base
+			has_province_flag = sealand_banners_fl_base_flag
 		}
 	}
 	immediate = {
-		every_owned_province = {
-			limit = { NOT = { has_province_flag = sealand_banners_fl_base_flag } }
-			remove_province_modifier = sealand_banners_fl_base
-		}
+		check_num_of_banners = yes
+		remove_banner_fl_modifiers = yes
+		set_banner_fl_modifiers = yes
 	}
 	option = { }
 }
@@ -153,13 +166,24 @@ country_event = {
 	trigger = {
 		#has_country_flag = sealandmercs_switch_merc_flag
 		ai = yes
-		any_owned_province = { has_province_modifier = sealand_banners_fl_base }
+		any_owned_province = {
+			OR = {
+				has_province_flag = sealand_banners_fl_base_flag
+				has_province_modifier = sealand_banners_fl_base_512
+				has_province_modifier = sealand_banners_fl_base_256
+				has_province_modifier = sealand_banners_fl_base_128
+				has_province_modifier = sealand_banners_fl_base_64
+				has_province_modifier = sealand_banners_fl_base_32
+				has_province_modifier = sealand_banners_fl_base_16
+				has_province_modifier = sealand_banners_fl_base_8
+				has_province_modifier = sealand_banners_fl_base_4
+				has_province_modifier = sealand_banners_fl_base_2
+				has_province_modifier = sealand_banners_fl_base_1
+			}
+		}
 	}
 	immediate = {
-		every_owned_province = {
-			remove_province_modifier = sealand_banners_fl_base
-			clr_province_flag = sealand_banners_fl_base_flag
-		}
+		remove_banner_fl_modifiers = yes
 	}
 	option = { }
 }

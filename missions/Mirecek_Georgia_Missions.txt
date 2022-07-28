@@ -102,8 +102,6 @@ georgia_1_missions = {
 		icon = mission_impaled_soldies
 		position = 3
 		required_missions = { georgia_trebizond }
-		#provinces_to_highlight = {
-		#}
 		trigger = {
 			OR = {
 				has_won_war_against = {
@@ -328,8 +326,6 @@ georgia_2_missions = {
 		icon = mission_conquer_5_states
 		position = 2
 		required_missions = { georgia_strenght_is_in_unity }
-		#provinces_to_highlight = {
-		#}
 		trigger = {
 			OR = {
 				war_with = QAR
@@ -361,20 +357,23 @@ georgia_2_missions = {
 		}
 		trigger = {
 			owns_core_province = 330
-			330 = {
-				NOT = {
-					has_province_modifier = georgia_defence
+			is_year = 1449
+			if = {
+				limit = {
+					IME = { is_subject_of = ROOT }
 				}
+				dip_power = 100
 			}
 		}
 		effect = {
-			330 = {
-				add_province_modifier = {
-					name = georgia_defence
-					duration = -1
+			if = {
+				limit = {
+					IME = { is_subject_of = ROOT }
 				}
+				add_dip_power = -100
+				inherit = IME
 			}
-			add_prestige = 20
+			else = { add_prestige = 33 }
 		}
 	}
 	georgia_georgian_gold_mine = {
@@ -595,10 +594,9 @@ georgia_4_missions = {
 		}
 		effect = {
 			capital_scope = {
-				add_building_construction = {
-   					building = fort_15th
-    				speed = 0.5
-    				cost = 0
+				add_province_modifier = {
+					name = georgia_defence
+					duration = 3650
 				}
 			}
 			add_treasury = -100

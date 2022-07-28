@@ -320,6 +320,9 @@ kilwa_internal_missions_slot = {
 		}
 		trigger = {
 			owns_core_province = 1196
+			any_owned_province = {
+				trade_goods = gold
+			}
 			1196 = {
 				development = 20
 				if = {
@@ -347,6 +350,15 @@ kilwa_internal_missions_slot = {
 			1196 = {
 				add_province_modifier = {
 					name = zan_great_kilwa
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					trade_goods = gold
+				}
+				add_province_modifier = {
+					name = zan_great_kilwa_gold_modifier
 					duration = -1
 				}
 			}

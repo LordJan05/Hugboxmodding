@@ -187,7 +187,7 @@ emperor_landfriede = {
 	required_reform = emperor_landsknechtswesen
 	gui_container = mainline
 }
-
+#
 emperor_reichstag_collegia = {
 	empire = hre
 	required_reform = emperor_perpetual_diet
@@ -199,10 +199,18 @@ emperor_reichstag_collegia = {
 	}
 	emperor = {
 		imperial_authority = 0.1
+		idea_cost = -0.033
+		technology_cost = -0.033
 	}
 	elector = {
 		idea_cost = -0.033
 		technology_cost = -0.033
+	}
+	on_effect = {
+		hidden_effect = {
+		country_event = { id = sealand_events.12 }
+		country_event = { id = sealand_events.13 }
+		}
 	}
 	province = {
 		local_friendly_movement_speed = 0.1
@@ -217,6 +225,10 @@ emperor_expand_gemeiner_pfennig = {
 	potential = {
 		has_dlc = "Emperor"
 	}
+	emperor = {
+		core_creation = -0.125
+		province_warscore_cost = -0.125
+	}
 	elector = {
 		core_creation = -0.125
 		province_warscore_cost = -0.125
@@ -230,6 +242,10 @@ emperor_rechenschaft = {
 
 	potential = {
 		has_dlc = "Emperor"
+	}
+	emperor = {
+		global_manpower_modifier = 0.1
+		land_morale = 0.05
 	}
 	elector = {
 		global_manpower_modifier = 0.1
@@ -249,12 +265,13 @@ emperor_geteilte_macht = {
 	on_effect = {
 		custom_tooltip = GETEILTE_MACHT_EFFECT
 	}
-	elector = {
+	emperor = {
 		global_tax_income = 0.2
 		production_efficiency = 0.05
 	}
-	province = {
-		local_development_cost = -0.05
+	elector = {
+		global_tax_income = 0.2
+		production_efficiency = 0.05
 	}
 }
 
@@ -276,29 +293,24 @@ emperor_reichskrieg = {
 	}
 	emperor = {
 		max_electors = 1
+		free_policy = 1
+		possible_policy = 1
 	}
 
 	off_effect = {
 		enable_imperial_realm_war = no
 	}
 }
-
+#
 emperor_hofgericht = { 
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
 	}
-	all = {
-		land_morale = -0.1
-		discipline = -0.05
-	}
 	emperor = {
 		imperial_authority = 0.1
-		land_morale = 0.15
-		discipline = 0.075
-	}
-	province = {
-		local_years_of_nationalism = -10
+		land_morale = 0.05
+		discipline = 0.025
 	}
 	required_reform = emperor_perpetual_diet
 	disabled_by = emperor_reichstag_collegia
@@ -312,15 +324,10 @@ emperor_imperial_estates = {
 	potential = {
 		has_dlc = "Emperor"
 	}
-	all = {
-		province_warscore_cost = 0.3
-		idea_cost = 0.1
-		technology_cost = 0.1
-	}
 	emperor = {
-		province_warscore_cost = -0.45
-		idea_cost = -0.166
-		technology_cost = -0.166
+		province_warscore_cost = -0.15
+		idea_cost = -0.05
+		technology_cost = -0.05
 	}
 	on_effect = {
 		hre_inheritable = yes
@@ -335,14 +342,10 @@ emperor_erbkaisertum = {
 	potential = {
 		has_dlc = "Emperor"
 	}
-	all = {
-		global_manpower_modifier = -0.1
-		manpower_recovery_speed = -0.05
-	}
 	emperor = {
-		global_manpower_modifier = 0.2
-		manpower_recovery_speed = 0.1
-		imperial_authority = 0.2
+		global_manpower_modifier = 0.1
+		manpower_recovery_speed = 0.05
+		imperial_authority = 0.1
 	}
 	required_reform = emperor_imperial_estates
 	gui_container = right_branch
@@ -360,10 +363,6 @@ emperor_privilegia_de_non_appelando = {
 		num_accepted_cultures = 3
 		promote_culture_cost = -0.5
 	}
-	province = {
-		local_culture_conversion_cost = -0.5
-		local_development_cost = -0.05
-	}
 	on_effect = {
 	
 		emperor = {
@@ -375,7 +374,7 @@ emperor_privilegia_de_non_appelando = {
 					is_part_of_hre = yes
 					is_emperor = no
 					num_of_cities = 1
-					NOT = { vassal_of = ROOT }
+					is_subject = no
 					ai = yes
 				}
 				country_event = { id = 9074 }

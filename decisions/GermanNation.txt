@@ -17,6 +17,7 @@ country_decisions = {
 				tag = SWI
 				tag = HAB
 				tag = AUE
+				tag = RHI
 			}
 			NOT = { has_country_flag = formed_germany_flag }
 			OR = {
@@ -147,15 +148,23 @@ country_decisions = {
 			add_prestige = 25
 			if =  {
 				limit = {
+					government = republic
+				}
+				add_government_reform = germany_republic
+			}
+			if =  {
+				limit = {
 					government = monarchy
 				}
 				add_government_reform = germany_monarchy
 			}
 			if =  {
 				limit = {
-					government = republic
+					NOT = { government = republic }
+					NOT = { government = monarchy }
 				}
-				add_government_reform = germany_republic
+				change_government_to_monarchy = yes
+				add_government_reform = germany_monarchy
 			}
 			if = {
 				limit = {

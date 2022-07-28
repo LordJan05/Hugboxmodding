@@ -296,7 +296,60 @@ swi_recruit_merc_inf_enabled_modifier = {
 	amount_of_banners = -0.33
 }
 
-
+##########################################
+# Holy Roman Empire Emperor reforms:
+emperor_hofgericht_modifier = {
+	potential = {
+		is_emperor = yes
+		NOT = { hre_reform_passed = emperor_hofgericht }
+		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+	}
+	trigger = {
+		has_global_flag = emperor_hofgericht_decision_flag
+	}
+	imperial_authority = 0.1
+	land_morale = 0.05
+	discipline = 0.025
+}
+emperor_imperial_estates_modifier = {
+	potential = {
+		is_emperor = yes
+		NOT = { hre_reform_passed = emperor_imperial_estates }
+		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+	}
+	trigger = {
+		has_global_flag = emperor_imperial_estates_decision_flag
+	}
+	province_warscore_cost = -0.15
+	idea_cost = -0.05
+	technology_cost = -0.05
+}
+emperor_erbkaisertum_modifier = {
+	potential = {
+		is_emperor = yes
+		NOT = { hre_reform_passed = emperor_erbkaisertum }
+		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+	}
+	trigger = {
+		has_global_flag = emperor_erbkaisertum_decision_flag
+	}
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.05
+	imperial_authority = 0.1
+}
+emperor_privilegia_de_non_appelando_modifier = {
+	potential = {
+		is_emperor = yes
+		NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
+		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+	}
+	trigger = {
+		has_global_flag = emperor_privilegia_de_non_appelando_decision_flag
+	}
+	possible_policy = 1
+	num_accepted_cultures = 3
+	promote_culture_cost = -0.5
+}
 ##########################################
 # Muslim Jihad:
 sea_jihad_crusade_modifier = {

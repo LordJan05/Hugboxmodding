@@ -4447,11 +4447,19 @@ on_province_owner_change = {
 		limit = {
 			OR = {
 				has_province_flag = sealand_banners_fl_base_flag
-				has_province_modifier = sealand_banners_fl_base
+				has_province_modifier = sealand_banners_fl_base_512
+				has_province_modifier = sealand_banners_fl_base_256
+				has_province_modifier = sealand_banners_fl_base_128
+				has_province_modifier = sealand_banners_fl_base_64
+				has_province_modifier = sealand_banners_fl_base_32
+				has_province_modifier = sealand_banners_fl_base_16
+				has_province_modifier = sealand_banners_fl_base_8
+				has_province_modifier = sealand_banners_fl_base_4
+				has_province_modifier = sealand_banners_fl_base_2
+				has_province_modifier = sealand_banners_fl_base_1
 			}
 		}
-		clr_province_flag = sealand_banners_fl_base_flag
-		remove_province_modifier = sealand_banners_fl_base
+		remove_banner_fl_modifiers = yes
 	}
 	##### ##### ##### 
 	##### SPECIAL INFANTRY
@@ -4726,26 +4734,14 @@ on_primary_culture_changed = {
 	}
 	##### BANNER MERCS
 	every_owned_province = {
-		remove_province_modifier = sealand_banners_fl_base
-		clr_province_flag = sealand_banners_fl_base_flag
+		remove_banner_fl_modifiers = yes
 	}
 	if = {
 		limit = {
 			ai = no
 		}
-		random_owned_province = {
-			limit = {
-				culture = ROOT
-				is_core = ROOT
-				is_state_core = ROOT
-			}
-			set_province_flag = sealand_banners_fl_base_flag 
-			add_province_modifier = {
-				name = sealand_banners_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
+		check_num_of_banners = yes
+		set_banner_fl_modifiers = yes
 	}
 	##### ##### #####
 }
@@ -5329,11 +5325,19 @@ on_conquest = {
 		limit = {
 			OR = {
 				has_province_flag = sealand_banners_fl_base_flag
-				has_province_modifier = sealand_banners_fl_base
+				has_province_modifier = sealand_banners_fl_base_512
+				has_province_modifier = sealand_banners_fl_base_256
+				has_province_modifier = sealand_banners_fl_base_128
+				has_province_modifier = sealand_banners_fl_base_64
+				has_province_modifier = sealand_banners_fl_base_32
+				has_province_modifier = sealand_banners_fl_base_16
+				has_province_modifier = sealand_banners_fl_base_8
+				has_province_modifier = sealand_banners_fl_base_4
+				has_province_modifier = sealand_banners_fl_base_2
+				has_province_modifier = sealand_banners_fl_base_1
 			}
 		}
-		clr_province_flag = sealand_banners_fl_base_flag
-		remove_province_modifier = sealand_banners_fl_base
+		remove_banner_fl_modifiers = yes
 	}
 	##### ##### #####
 	##### SPECIAL INFANTRY

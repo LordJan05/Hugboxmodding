@@ -16,7 +16,7 @@ country_decisions = {
 			custom_tooltip = sealandmercs_switch_to_cawa_tt
 			hidden_effect = {
 				every_owned_province = {
-					remove_province_modifier = sealand_banners_fl_base
+					#remove_province_modifier = sealand_banners_fl_base
 					remove_province_modifier = sealand_cawa_fl_base
 					clr_province_flag = sealand_banners_fl_base_flag
 				}
@@ -29,7 +29,7 @@ country_decisions = {
 					}
 				}
 				capital_scope = {
-					remove_province_modifier = sealand_banners_fl_base
+					#remove_province_modifier = sealand_banners_fl_base
 					add_province_modifier = {
 						name = sealand_cawa_fl_base
 						duration = -1
@@ -63,7 +63,7 @@ country_decisions = {
 			custom_tooltip = sealandmercs_switch_to_banner_tt
 			hidden_effect = {
 				every_owned_province = {
-					remove_province_modifier = sealand_banners_fl_base
+					#remove_province_modifier = sealand_banners_fl_base
 					remove_province_modifier = sealand_cawa_fl_base
 				}
 				#capital_scope = {
@@ -76,11 +76,11 @@ country_decisions = {
 						is_state_core = root
 					}
 					set_province_flag = sealand_banners_fl_base_flag
-					add_province_modifier = {
-						name = sealand_banners_fl_base
-						duration = -1
-						hidden = yes
-					}
+					#add_province_modifier = {
+					#	name = sealand_banners_fl_base
+					#	duration = -1
+					#	hidden = yes
+					#}
 				}
 				#if = {
 				#	limit = { is_capital = no }

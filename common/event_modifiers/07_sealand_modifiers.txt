@@ -314,6 +314,11 @@ build_dev_vatican_library = {
 	state_maintenance_modifier = -0.2
 }
 ##########################################
+# Austria:
+hab_convert_venetian_to_german_modifier = {
+	culture_conversion_cost = -0.2
+}
+##########################################
 # Morocco:
 mor_religious_reasons_modifier = {
 	discipline = 0.025
@@ -554,6 +559,11 @@ mini_jewish_cult_modifier = {
 }
 mini_zoroastrian_cult_modifier = {
 	merchants = 1
+}
+##########################################
+# Kilwa:
+zan_great_kilwa_gold_modifier = {
+	local_gold_depletion_chance_modifier = -0.25
 }
 ##########################################
 # Castille/Spain:

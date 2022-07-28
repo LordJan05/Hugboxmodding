@@ -1327,7 +1327,7 @@ emp_hun_bohemia_austria_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = { #8 provinces so fine for demanding all
+		trigger = {
 			bohemia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1335,7 +1335,7 @@ emp_hun_bohemia_austria_branch = {
 			owns_or_non_sovereign_subject_of = 1771
 			owns_or_non_sovereign_subject_of = 267
 			is_subject = no
-			NOT = { active_imperial_incident = any }
+			#NOT = { active_imperial_incident = any }
 		}
 		effect = {
 			add_prestige = 25
@@ -1352,6 +1352,7 @@ emp_hun_bohemia_austria_branch = {
 				if = {
 					limit = {
 						NOT = { senior_union_with = BOH }
+						NOT = { BOH = { is_subject_of = ROOT } }
 					}
 					custom_tooltip = emp_hun_bohemian_crown_effect_tooltip
 				}
@@ -1361,7 +1362,10 @@ emp_hun_bohemia_austria_branch = {
 				hidden_effect = {
 					if = {
 						limit = {
-							senior_union_with = BOH
+							OR = {
+								senior_union_with = BOH
+								BOH = { is_subject_of = ROOT }
+							}
 						}
 						country_event = { id = new_flavour_hun.1 }
 					}

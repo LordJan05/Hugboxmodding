@@ -46,7 +46,7 @@ exodus_player_yearly_income = {
 new_world_player_nerf = {
 	potential = {
 		OR = {	
-			is_former_colonial_nation = yes
+			is_colonial_nation = yes
 			has_country_flag = changed_from_colonial_nation
 			AND = {
 				capital_scope = {
@@ -86,7 +86,7 @@ new_world_player_nerf_600 = {
 			capital_scope = {
 				continent = oceania
 			}
-			is_former_colonial_nation = yes
+			is_colonial_nation = yes
 			has_country_flag = changed_from_colonial_nation
 		}
 		was_player = yes
@@ -104,7 +104,7 @@ new_world_player_nerf_600 = {
 }
 new_world_player_nerf_1200 = {
 	potential = {
-		is_former_colonial_nation = yes
+		is_colonial_nation = yes
 		was_player = yes
 	}
 
@@ -120,7 +120,7 @@ new_world_player_nerf_1200 = {
 }
 new_world_player_nerf_2400 = {
 	potential = {
-		is_former_colonial_nation = yes
+		is_colonial_nation = yes
 		was_player = yes
 	}
 

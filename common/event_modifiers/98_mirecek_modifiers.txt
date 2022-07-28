@@ -61,7 +61,7 @@ georgia_crusade_against_ottomans = {
 	shock_damage_received = -0.10
 }
 georgia_defence = {
-	local_defensiveness = 0.3
+	fort_level = 1
 }
 georgia_victory_monument = {
 	prestige = 0.5

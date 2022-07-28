@@ -843,6 +843,7 @@
     # Tswana:
     TSW:0 "Tswana"
     TSW_ADJ:0 "Tswana"
+    
     # Swazi:
     SWZ:0 "Swazi"
     SWZ_ADJ:0 "Swazi"
@@ -1238,3 +1239,9 @@
     mini_zoroastrian_cult_modifier_desc:0 "We follow the teachings of the prophet Zoroaster and honor Ahura Mazda the wise. As please the gods we will forever keep the holy fires burning."
     mini_jewish_cult_modifier:0 "Haymanot"
     mini_jewish_cult_modifier_desc:0 "We believe in the One God and that we are the children of Abraham. Over the centuries we lost our ties to our Jewish roots, but we are now embracing their traditions once again."
+
+ # Rest:
+ 
+   # Kilwa:
+    # Modifier:
+    zan_great_kilwa_gold_modifier:0 "Kilwan Gold Conduct"

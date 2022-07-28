@@ -53,30 +53,6 @@ change_estate_land_share = {
 	}
 }
 
-1429.1.1 = {
-	heir = {
-		name = "Kertawijaya"
-		monarch_name = "Kertawijaya"
-		dynasty = "Rajasanagara"
-		birth_date = 1429.1.1
-		death_date = 1451.1.1
-		claim = 95
-		adm = 0
-		dip = 1
-		mil = 1
-	}
-}
-
-1447.1.1 = {
-	monarch = {
-		name = "Kertawijaya"
-		dynasty = "Rajasanagara"
-		adm = 0
-		dip = 1
-		mil = 1
-	}
-}
-
 1447.1.1 = {
 	heir = {
 		name = "Rajasawardhana"

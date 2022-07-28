@@ -830,6 +830,47 @@ country_event = {
 		define_ruler = { }
 	}
 }
+# Holy Roman Empire Emperor reforms:
+country_event = {
+	id = sealand_events.12
+	title = sealand_events.12.t
+	desc = sealand_events.12.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = emperor_imperial_estates_decision_flag
+	}
+	immediate = {
+		hidden_effect = { hre_inheritable = no }
+	}
+	option = {
+		tooltip = { hre_inheritable = no }
+	}
+}
+country_event = {
+	id = sealand_events.13
+	title = sealand_events.13.t
+	desc = sealand_events.13.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = emperor_privilegia_de_non_appelando_decision_flag
+	}
+	immediate = {
+		every_subject_country = {
+			limit = {
+				has_country_flag = fire_hre_vassals_3_flag
+			}
+			grant_independence = yes
+		}
+	}
+	option = {
+		name = sealand_events.13.a
+		custom_tooltip = sealand_events.13.a.tt
+	}
+}
 
 # Theocracy government:
 namespace = theocracy_election_government
@@ -1728,16 +1769,8 @@ country_event = {
 		clr_country_flag = sea_get_specific_advisor_flag
 	}
 	option = {
-		name = sea_advisor_event.1.1
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_adm_tech_cost
-		add_treasury = -33
-	}
-	option = {
-		name = sea_advisor_event.1.2
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_idealistic_views
-		add_treasury = -33
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
 	}
 	option = {
 		name = sea_advisor_event.1.3
@@ -1861,10 +1894,8 @@ country_event = {
 		clr_country_flag = sea_get_specific_advisor_flag
 	}
 	option = {
-		name = sea_advisor_event.2.1
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_dip_tech_cost
-		add_treasury = -33
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
 	}
 	option = {
 		name = sea_advisor_event.2.2
@@ -1899,12 +1930,6 @@ country_event = {
 		add_treasury = -33
 	}
 	option = {
-		name = sea_advisor_event.2.7
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_reduced_agg_exp
-		add_treasury = -33
-	}
-	option = {
 		name = sea_advisor_event.2.8
 		clr_country_flag = sea_get_specific_advisor_flag
 		create_advisor = spymaster
@@ -1914,12 +1939,6 @@ country_event = {
 		name = sea_advisor_event.2.9
 		clr_country_flag = sea_get_specific_advisor_flag
 		create_advisor = advisor_defence_spymaster
-		add_treasury = -33
-	}
-	option = {
-		name = sea_advisor_event.2.10
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_culture_convert
 		add_treasury = -33
 	}
 	option = {
@@ -2049,10 +2068,8 @@ country_event = {
 		clr_country_flag = sea_get_specific_advisor_flag
 	}
 	option = {
-		name = sea_advisor_event.3.1
-		clr_country_flag = sea_get_specific_advisor_flag
-		create_advisor = advisor_mil_tech_cost
-		add_treasury = -33
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
 	}
 	option = {
 		name = sea_advisor_event.3.2
@@ -2159,6 +2176,12 @@ country_event = {
 	}
 	option = {
 		name = sea_advisor_event.3.19
+		clr_country_flag = sea_get_specific_advisor_flag
+		create_advisor = advisor_siege_ability
+		add_treasury = -33
+	}
+	option = {
+		name = sea_advisor_event.3.20
 		clr_country_flag = sea_get_specific_advisor_flag
 		create_advisor = fortification_expert
 		add_treasury = -33

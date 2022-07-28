@@ -51,6 +51,7 @@ NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 40
 NDefines.NMilitary.MERCENARY_COMPANY_BUILDING_TIME = 0.4
 
 NDefines.NMilitary.MAX_DRAFT_SIZE_TO_YEARLY_INCOME_COST_RATIO = 1.33 -- How much of your yearly income it costs to draft the above ratio's worth of units
+NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05
 
 NDefines.NReligion.MAX_CHURCH_POWER = 300
 NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 20

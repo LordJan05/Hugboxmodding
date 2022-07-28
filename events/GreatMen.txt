@@ -6,7 +6,13 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		philosopher = 3
+		OR = {
+			philosopher = 3
+			advisor_legitimate_government = 3
+			advisor_horde_government = 3
+			advisor_republic_government = 3
+			advisor_devoted_government = 3
+		}
 		NOT = { has_country_flag = philosopher }
 	}
 	
@@ -139,7 +145,13 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		army_reformer = 3
+		OR = {
+			army_reformer = 3
+			advisor_fire_damage = 3
+			advisor_fire_damage_received = 3
+			advisor_shock_damage = 3
+			advisor_shock_damage_received = 3
+		}
 		NOT = { has_country_flag = army_reformer }
 	}
 	
@@ -209,7 +221,20 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		naval_reformer = 3
+		OR = {
+			naval_reformer = 3
+			advisor_naval_engagement = 3
+			advisor_naval_attrition = 3
+			advisor_naval_durability = 3
+			advisor_naval_morale_recovery = 3
+			advisor_naval_sailors = 3
+			advisor_naval_maintenance = 3
+			advisor_naval_forcelimit = 3
+			advisor_naval_repair = 3
+			advisor_naval_heavy_combat = 3
+			advisor_naval_light_combat = 3
+			advisor_naval_galley_combat = 3
+		}
 		NOT = { has_country_flag = naval_reformer }
 	}
 	
@@ -280,7 +305,11 @@ country_event = {
 	picture = PAINTER_ARTIST_eventPicture
 	
 	trigger = {
-		artist = 3
+		OR = {
+			artist = 3
+			advisor_reform_growth = 3
+			advisor_splendor_blendor = 3
+		}
 		NOT = { has_country_flag = artist }
 	}
 	
@@ -424,7 +453,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		theologian = 3
+		OR = {
+			theologian = 3
+			advisor_centralize_autonomy = 3
+			advisor_war_exhaust = 3
+		}
 		NOT = { has_country_flag = theologian }
 	}
 	
@@ -496,7 +529,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		statesman = 3
+		OR = {
+			statesman = 3
+			advisor_imperial_authority = 3
+			advisor_mandate_growth = 3
+		}
 		NOT = { has_country_flag = statesman }
 	}
 	
@@ -640,7 +677,10 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		spymaster = 3
+		OR = {
+			spymaster = 3
+			advisor_defence_spymaster = 3
+		}
 		NOT = { has_country_flag = spymaster }
 	}
 	
@@ -711,7 +751,10 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		diplomat = 3
+		OR = {
+			diplomat = 3
+			advisor_corrupt_decay = 3
+		}
 		NOT = { has_country_flag = diplomat }
 	}
 	
@@ -912,7 +955,10 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		navigator = 3
+		OR = {
+			navigator = 3
+			advisor_colonial_increase = 3
+		}
 		NOT = { has_country_flag = navigator }
 	}
 	
@@ -983,7 +1029,10 @@ country_event = {
 	picture = ADVISOR_eventPicture	
 	
 	trigger = {
-		grand_captain = 3
+		OR = {
+			grand_captain = 3
+			advisor_land_attrition = 3
+		}
 		NOT = { has_country_modifier = PR_grand_captain_cooldown }
 		NOT = { has_country_flag = grand_captain }
 	}
@@ -1065,7 +1114,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		army_organiser = 3
+		OR = {
+			army_organiser = 3
+			advisor_cav_to_inf_ratio = 3
+			advisor_speedy_boys = 3
+		}
 		NOT = { has_country_flag = army_organiser }
 	}
 	
@@ -1136,7 +1189,12 @@ country_event = {
 	picture = Harambe_eventPicture
 	
 	trigger = {
-		commandant = 3
+		OR = {
+			commandant = 3
+			advisor_inf_combat = 3
+			advisor_cav_combat = 3
+			advisor_art_combat = 3
+		}
 		NOT = { has_country_modifier = PR_commandant_cooldown }
 		NOT = { has_country_flag = commandant }
 	}
@@ -1219,7 +1277,10 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		quartermaster = 3
+		OR = {
+			quartermaster = 3
+			advisor_morale_recovery = 3
+		}
 		NOT = { has_country_flag = quartermaster }
 	}
 	
@@ -1361,7 +1422,10 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		fortification_expert = 3
+		OR = {
+			fortification_expert = 3
+			advisor_siege_ability = 3
+		}
 		NOT = { has_country_flag = fortification_expert }
 	}
 	

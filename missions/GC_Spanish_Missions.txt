@@ -976,13 +976,14 @@ gc_spain_3 = {
 				name = "spa_rb_christian_iberia"
 				duration = 5475
 			}
-			126 = {
-				add_permanent_claim = ROOT
-			}
-			173 = {
-				add_permanent_claim = ROOT
-			}
 			174 = {
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			northern_morocco_area = {
@@ -1002,8 +1003,8 @@ gc_spain_3 = {
 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 173
 				province_id = 174
+				area = pyrenees_area
 				area = northern_morocco_area
 			}
 			NOT = { owned_by = ROOT }
@@ -1012,8 +1013,11 @@ gc_spain_3 = {
 		trigger = {
 			OR = {
 				AND = {
-					173 = { owned_by = ROOT }
 					174 = { owned_by = ROOT }
+					pyrenees_area = {
+						type = all
+						owned_by = ROOT
+					}
 				}
 				northern_morocco_area = {
 					type = all

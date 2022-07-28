@@ -2,7 +2,7 @@
 fleet_in_being =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 	}
 	
 	country_modifier = {
@@ -15,7 +15,7 @@ fleet_in_being =
 free_oarsmen =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 	}
 
 	country_modifier = {
@@ -28,7 +28,7 @@ free_oarsmen =
 merchant_navy =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		NOT = { tag = NED }
 		NOT = { tag = BUR }
 		NOT = { tag = LOT }
@@ -44,7 +44,7 @@ merchant_navy =
 ship_boarding =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 	}
 
 	country_modifier = {
@@ -57,7 +57,7 @@ ship_boarding =
 sea_ship_durability =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		NOT = { tag = CAS }
 		NOT = { tag = SPA }
 		NOT = { tag = KOR }
@@ -73,7 +73,7 @@ sea_ship_durability =
 sea_blockading_wall =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		NOT = { tag = ENG }
 		NOT = { tag = GBR }
 		NOT = { tag = JAP }
@@ -90,7 +90,7 @@ sea_blockading_wall =
 sea_coastal_marines =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		NOT = { tag = POR }
 		NOT = { was_tag = POR }
 		NOT = { tag = NOR }
@@ -108,7 +108,7 @@ sea_coastal_marines =
 wooden_wall =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		OR = {
 			tag = ENG
 			tag = GBR
@@ -126,7 +126,7 @@ wooden_wall =
 grand_armada =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		OR = {
 			tag = CAS
 			tag = SPA
@@ -144,7 +144,7 @@ grand_armada =
 portuguese_marines =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		OR = {
 			tag = POR
 			was_tag = POR
@@ -166,7 +166,7 @@ portuguese_marines =
 danish_admirality =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		tag = DAN
 	}
 
@@ -179,7 +179,7 @@ danish_admirality =
 norwegian_sailors =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		tag = NOR
 	}
 
@@ -194,7 +194,7 @@ norwegian_sailors =
 dutch_trade_fleet =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		OR = {
 			tag = NED
 			tag = BUR
@@ -212,7 +212,7 @@ dutch_trade_fleet =
 venetian_arsenal =
 {
 	can_select = {
-		is_primitive = no
+		#is_primitive = no
 		tag = VEN
 	}
 
