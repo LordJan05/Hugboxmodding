@@ -2568,11 +2568,24 @@ country_decisions = {
 			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
 		}
 		allow = {
-			mil_power = 300
+			if = {
+				limit = {
+					NOT = { has_country_flag = swi_recruit_merc_inf_recruited }
+				}
+				mil_power = 300
+			}
+			else = { mil_power = 100}
 		}
 		effect = {
 			set_country_flag = swi_recruit_merc_inf_enabled
-			add_mil_power = -300
+			if = {
+				limit = {
+					NOT = { has_country_flag = swi_recruit_merc_inf_recruited }
+				}
+				add_mil_power = -300
+			}
+			else = { add_mil_power = -100 }
+			set_country_flag = swi_recruit_merc_inf_recruited
 			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_tt
 			custom_tooltip = swi_recruit_merc_inf_enable_tt
 		}

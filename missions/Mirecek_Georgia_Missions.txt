@@ -55,7 +55,7 @@ georgia_1_missions = {
 				vassalize = TRE
 				330 = {
 					add_province_modifier = {
-						name = georgia_defence
+						name = georgia_trebizond_defence
 						duration = -1
 					}
 				}
@@ -68,7 +68,7 @@ georgia_1_missions = {
 				}
 				330 = {
 					add_province_modifier = {
-						name = georgia_defence
+						name = georgia_trebizond_defence
 						duration = -1
 					}
 				}
@@ -374,6 +374,18 @@ georgia_2_missions = {
 				inherit = IME
 			}
 			else = { add_prestige = 33 }
+			if = {
+				limit = {
+					GEO = { owns = 330 }
+					330 = { NOT = { has_province_modifier = georgia_trebizond_defence } }
+				}
+				330 = {
+					add_province_modifier = {
+						name = georgia_trebizond_defence
+						duration = -1
+					}
+				}
+			}
 		}
 	}
 	georgia_georgian_gold_mine = {

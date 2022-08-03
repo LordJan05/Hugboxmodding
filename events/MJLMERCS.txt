@@ -18,7 +18,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 5
 	}
 	immediate = {
 		capital_scope = {
@@ -46,7 +46,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 5
 	}
 	immediate = {
 		check_num_of_banners = yes

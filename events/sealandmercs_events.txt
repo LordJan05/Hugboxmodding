@@ -95,7 +95,7 @@ country_event = {
 	desc = none
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	hidden = yes
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 5 }
 	trigger = {
 		#has_country_flag = sealandmercs_switch_merc_flag
 		ai = no
@@ -139,7 +139,7 @@ country_event = {
 	desc = none
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	hidden = yes
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 5 }
 	trigger = {
 		#has_country_flag = sealandmercs_switch_merc_flag
 		ai = no

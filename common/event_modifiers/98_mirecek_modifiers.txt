@@ -63,6 +63,10 @@ georgia_crusade_against_ottomans = {
 georgia_defence = {
 	fort_level = 1
 }
+georgia_trebizond_defence = {
+	local_defensiveness = 0.2
+	local_hostile_attrition = 1
+}
 georgia_victory_monument = {
 	prestige = 0.5
 }

@@ -185,7 +185,7 @@ che_missions_2 = {
 			has_institution = new_world_i
 		}
 		effect = {
-			set_capital = 981
+			set_capital = 917
 			917 = {
 				center_of_trade = 2
 				change_trade_goods = cloth
