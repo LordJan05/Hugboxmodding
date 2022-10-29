@@ -12,6 +12,17 @@ northern_new_guinea_area = { # New Guinea
 	4967 4968 4969
 }
 #################
+# Sealand Australia:
+darling_area = {
+	4991 4995 4997
+}
+goldfields_area = {
+	4974 4976 4975 4996 4977
+}
+tanami_area = {
+	4978 4990 4998
+}
+#################
 # Sealand Africa:
 # Great Lakes aka East of it actually:
 

@@ -41,11 +41,14 @@ mutapa_vassal_missions_slot = {
 			owns_core_province = 1185
 		}
 		effect = {
-			#custom_tooltip = zim_annex_vassals_ct
-			#hidden_effect = {
-			#	set_country_flag = zim_enabled_butua_warriors
-			#}
-			add_dip_power = 100
+			custom_tooltip = zim_annex_vassals_ct
+			hidden_effect = {
+				set_country_flag = zim_enabled_butua_warriors
+			}
+			add_dip_power = 50
+		}
+		ai_weight = {
+			factor = 500	#Integrate Vassal
 		}
 	}
 
@@ -59,7 +62,7 @@ mutapa_vassal_missions_slot = {
 		position = 2
 		trigger = {
 			OR = {
-				NOT = { has_reform = sacred_kingdom }
+				has_reform = sacred_kingdom
 				AND = {
 					legitimacy = 100
 					has_adm_advisor_2 = yes
@@ -74,6 +77,9 @@ mutapa_vassal_missions_slot = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Dominate South Africa
@@ -86,15 +92,15 @@ mutapa_vassal_missions_slot = {
 		position = 4
 		provinces_to_highlight = {
 			region = south_africa_region
-			NOT = { owned_by = ROOT }
-			is_empty = no
+			OR = {
+				NOT = { is_core = ROOT }
+				NOT = { owned_by = ROOT }
+			}
 		}
 		trigger = {
 			south_africa_region = {
-				OR = {
-					owned_by = ROOT
-					is_empty = yes
-				}
+				owned_by = ROOT
+				is_core = ROOT
 				type = all
 			}
 		}
@@ -105,6 +111,9 @@ mutapa_vassal_missions_slot = {
 					duration = 9125
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -138,6 +147,9 @@ mutapa_vassal_missions_slot = {
 			}
 			custom_tooltip = zim_amongst_the_great_powers_tt
 			add_prestige = 100
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }
@@ -196,6 +208,9 @@ mutapa_conquer_africa_missions_slot = {
 				loyalty = 15
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Conquer Kalonga
@@ -231,6 +246,9 @@ mutapa_conquer_africa_missions_slot = {
 				tradition = 25
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Discover the South
@@ -258,50 +276,20 @@ mutapa_conquer_africa_missions_slot = {
 			}
 			if = {
 				limit = {
-					HER = {
-						exists = yes
-						is_subject = no
-						ai = yes
+					1177 = {
+						is_empty = yes
 					}
-					
 				}
-				inherit = HER
-			}
-			if = {
-				limit = {
-					NAM = {
-						exists = yes
-						is_subject = no
-						ai = yes
-					}
-					
+				create_colony_mission_reward = {
+					province = 1177
 				}
-				inherit = NAM
 			}
-			if = {
-				limit = {
-					KHE = {
-						exists = yes
-						is_subject = no
-						ai = yes
-					}
-					
-				}
-				inherit = KHE
+			add_temporary_colonist = {
+				duration = 36500
 			}
-			#if = {
-			#	limit = {
-			#		1177 = {
-			#			is_empty = yes
-			#		}
-			#	}
-			#	create_colony_mission_reward = {
-			#		province = 1177
-			#	}
-			#}
-			#add_temporary_colonist = {
-			#	duration = 36500
-			#}
+		}
+		ai_weight = {
+			factor = 0	#Should not take the Cape away from European colonists
 		}
 	}
 
@@ -341,6 +329,9 @@ mutapa_conquer_africa_missions_slot = {
 				add_dip_power = 100
 				add_mil_power = 100
 			}
+		}
+		ai_weight = {
+			factor = 0	#Tech difference should persist
 		}
 	}
 }
@@ -434,6 +425,9 @@ mutapa_restore_zimbabwe_missions_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Develop capital back to former glory
@@ -480,6 +474,9 @@ mutapa_restore_zimbabwe_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Restore Great Zimbabwe
@@ -495,7 +492,6 @@ mutapa_restore_zimbabwe_missions_slot = {
 				area = quelimane_area
 			}
 			NOT = { owned_by = ROOT }
-			is_empty = no
 		}
 		trigger = {
 			total_development = 400
@@ -512,10 +508,7 @@ mutapa_restore_zimbabwe_missions_slot = {
 				type = all
 			}
 			quelimane_area = {
-				OR = {
-					owned_by = ROOT
-					is_empty = yes
-				}
+				owned_by = ROOT
 				type = all
 			}
 		}
@@ -529,6 +522,9 @@ mutapa_restore_zimbabwe_missions_slot = {
 			country_event = {
 				id = flavor_zim.2
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -562,6 +558,9 @@ mutapa_restore_zimbabwe_missions_slot = {
 			country_event = {
 				id = flavor_zim.5
 			}
+		}
+		ai_weight = {
+			factor = 0	#Too complicated for the AI
 		}
 	}
 }
@@ -599,7 +598,7 @@ mutapa_trade_missions_slot = {
 			num_of_owned_provinces_with = {
 				trade_goods = gold
 				development = 10
-				value = 2
+				value = 3
 			}
 		}
 		effect = {
@@ -614,6 +613,9 @@ mutapa_trade_missions_slot = {
 			unlock_estate_privilege = {
 				estate_privilege = estate_burghers_control_over_the_mint
 			}
+		}
+		ai_weight = {
+			factor = 500	#Gold = Good
 		}
 	}
 
@@ -648,6 +650,9 @@ mutapa_trade_missions_slot = {
 					builder = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -689,6 +694,9 @@ mutapa_trade_missions_slot = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -748,6 +756,9 @@ mutapa_trade_missions_slot = {
 					key = zim_dominate_upstream_trade_tt
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -891,6 +902,9 @@ mutapa_trade_missions_slot = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 }
 
@@ -932,6 +946,9 @@ mutapa_modernize_missions_slot = {
 			add_dip_power = 50
 			add_mil_power = 50
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Reform army
@@ -944,7 +961,7 @@ mutapa_modernize_missions_slot = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
-				army_professionalism = 0.10
+				army_professionalism = 0.25
 			}
 			else = {
 				army_tradition = 25
@@ -956,6 +973,9 @@ mutapa_modernize_missions_slot = {
 				name = zim_advanced_military
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -996,6 +1016,9 @@ mutapa_modernize_missions_slot = {
 				id = flavor_zim.3
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#The Nguni
@@ -1034,6 +1057,9 @@ mutapa_modernize_missions_slot = {
 			add_yearly_manpower = 2
 			add_army_tradition = 15
 			add_army_professionalism = 0.03
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }

@@ -941,6 +941,7 @@ country_event = {
 			tag = DAN
 			tag = NOR
 			tag = SCA
+			tag = KLU
 			#revolution.33
 			AND = {
 				owns_core_province = 236 #London
@@ -1368,7 +1369,7 @@ country_event = {
 			OR = {
 				tag = DAN
 				AND = {
-					tag = SCA
+					tag = KLU
 					was_tag = DAN
 				}
 			}
@@ -1396,6 +1397,7 @@ country_event = {
 			tag = DAN
 			tag = NOR
 			tag = SCA
+			tag = KLU
 		}
 		revolution_event_can_happen_trigger = yes
 	}
@@ -1453,7 +1455,7 @@ country_event = {
 			OR = {
 				tag = DAN
 				AND = {
-					tag = SCA
+					tag = KLU
 					was_tag = DAN
 				}
 			}
@@ -1618,7 +1620,8 @@ country_event = {
 		add_stability = -1
 
 		define_ruler = {
-			name = "Napoleone I di Buonaparte"
+			name = "Napoleone I"
+			dynasty = "di Buonaparte"
 			adm = 6
 			dip = 5
 			mil = 6
@@ -1914,6 +1917,7 @@ country_event = {
 			tag = DAN
 			tag = NOR
 			tag = SCA
+			tag = KLU
 			#revolution.33
 			AND = {
 				owns_core_province = 236 #London

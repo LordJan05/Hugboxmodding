@@ -79,6 +79,22 @@ spriteTypes = {
 	}
 
 ##############
+#### MONUMENTS
+	
+	spriteType = {
+		name = "GFX_great_project_nuestra_senora_de_la_asuncion"	
+		texturefile = "gfx//interface//great_projects//great_project_nuestra_senora_de_la_asuncion.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_uluru"	
+		texturefile = "gfx//interface//great_projects//great_project_uluru.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_korea_japan_bridge"	
+		texturefile = "gfx//interface//great_projects//great_project_korea_japan_bridge.dds"
+	}
+
+##############
 #### GOVERNMENT REFORMS
 
 	spriteType = {
@@ -902,6 +918,74 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
+	
+	spriteType = {
+		name = "GFX_advisor_advisor_drill_gain"
+		texturefile = "gfx//interface//advisors//advisor_drill_gain.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_advisor_drill_gain_female"
+		texturefile = "gfx//interface//advisors//advisor_drill_gain_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_advisor_drill_decay"
+		texturefile = "gfx//interface//advisors//advisor_drill_decay.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_advisor_drill_decay_female"
+		texturefile = "gfx//interface//advisors//advisor_drill_decay_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_advisor_morale_damage"
+		texturefile = "gfx//interface//advisors//advisor_morale_damage.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_advisor_morale_damage_female"
+		texturefile = "gfx//interface//advisors//advisor_morale_damage_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_advisor_advisor_morale_damage_received"
+		texturefile = "gfx//interface//advisors//advisor_morale_damage_received.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_advisor_morale_damage_received_female"
+		texturefile = "gfx//interface//advisors//advisor_morale_damage_received_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 
 ##############
 #### BUILDINGS
@@ -1230,6 +1314,22 @@ spriteTypes = {
 		name = "GFX_sea_development_cost_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_development_cost_logo.dds"
 	}
+	spriteType = {
+		name = "GFX_sea_general_cost_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_general_cost_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_ship_heavy_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_ship_heavy_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_ship_light_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_ship_light_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_ship_galley_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_ship_galley_logo.dds"
+	}
 	
 	# Small Icons fit for event options:
 	spriteType = {
@@ -1491,5 +1591,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_yearly_corruption"
 		texturefile = "gfx/interface/sea_event_logos/sea_yearly_corruption.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_drill_gain"
+		texturefile = "gfx/interface/sea_event_logos/sea_drill_gain.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_drill_decay"
+		texturefile = "gfx/interface/sea_event_logos/sea_drill_decay.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_morale_damage"
+		texturefile = "gfx/interface/sea_event_logos/sea_morale_damage.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_morale_damage_received"
+		texturefile = "gfx/interface/sea_event_logos/sea_morale_damage_received.dds"
 	}
 }

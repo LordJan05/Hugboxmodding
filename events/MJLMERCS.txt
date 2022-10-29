@@ -73,6 +73,26 @@ country_event = {
 			NOT = { has_reform = black_army_reform }
 		}
 		NOT = { has_country_flag = mesopotamian_mamluks_flag }
+		NOT = {
+			has_unlocked_merc_company = {
+				merc_company = merc_hakkapeliita_cavalry
+			}
+		}
+		NOT = {
+			has_unlocked_merc_company = {
+				merc_company = merc_large_hakkapeliita_cavalry
+			}
+		}
+		NOT = {
+			has_unlocked_merc_company = {
+				merc_company = merc_guerilla_hakkapeliita_cavalry
+			}
+		}
+		NOT = {
+			has_unlocked_merc_company = {
+				merc_company = merc_elite_hakkapeliita_cavalry
+			}
+		}
 		ai = no
 		any_hired_mercenary_company = {
 			hired_for_months = 1
@@ -204,6 +224,59 @@ country_event = { # MAMLUKS
 	option = {
 		name = "mjl_merc_events.EVTOPTA10"
 		event_target:human_merc_mam = {
+			disband_mercenary_company = THIS
+		}
+	}
+}
+country_event = { # HAKKAPELIITA MERCS
+	id = mjl_merc_events.14
+	title = "mjl_merc_events.EVTNAME10"
+	desc = "mjl_merc_events.EVTDESC10"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		OR = {
+			has_unlocked_merc_company = {
+				merc_company = merc_hakkapeliita_cavalry
+			}
+			has_unlocked_merc_company = {
+				merc_company = merc_large_hakkapeliita_cavalry
+			}
+			has_unlocked_merc_company = {
+				merc_company = merc_guerilla_hakkapeliita_cavalry
+			}
+			has_unlocked_merc_company = {
+				merc_company = merc_elite_hakkapeliita_cavalry
+			}
+		}
+		ai = no
+		any_hired_mercenary_company = {
+			NOT = { template = merc_hakkapeliita_cavalry }
+			NOT = { template = merc_large_hakkapeliita_cavalry }
+			NOT = { template = merc_guerilla_hakkapeliita_cavalry }
+			NOT = { template = merc_elite_hakkapeliita_cavalry }
+			hired_for_months = 1
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					NOT = { template = merc_hakkapeliita_cavalry }
+					NOT = { template = merc_large_hakkapeliita_cavalry }
+					NOT = { template = merc_guerilla_hakkapeliita_cavalry }
+					NOT = { template = merc_elite_hakkapeliita_cavalry }
+				}
+				save_event_target_as = human_merc_hakka
+			}
+		}
+	}
+	option = {
+		name = "mjl_merc_events.EVTOPTA10"
+		event_target:human_merc_hakka = {
 			disband_mercenary_company = THIS
 		}
 	}

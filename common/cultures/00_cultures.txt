@@ -9,8 +9,8 @@
 
 germanic = {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	male_names = { Gunther Rolf }
 	
@@ -78,6 +78,20 @@ germanic = {
 		}
 		female_names = {
 			Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas
+		}
+	}
+	baltic_german = {
+		primary = RIG
+		male_names = {
+			Albrecht Friedrich August Emil Ferdinand Karl Ludwig Karl Wilhelm Adolf Alfred Anton Benedikt 
+			Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried Hartmann Heinrich Helmut 
+			Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael Nikolaus Oskar Otto Philipp Reiner Rudolf 
+			Rupprecht Siegfried Siegmund Thomas Urs Viktor Werner Alvydas Arelis Auctune Bajoras Beidras Budo Dagonis 
+			Ekkelis Galindas Galindo Gauronas Gerdautas Glande Golding Jauguttis Karatas Klukis Kugis Milzas Nomedas 
+			Prusas Sergonis Ulinniks Ulitis Jens Johann Engelbert Fromhold Johannes Henning Silvester Dietrich
+		}
+		female_names = {
+			Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
 		}
 	}
 	lower_saxon = {
@@ -444,8 +458,8 @@ germanic = {
 
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
@@ -454,8 +468,8 @@ scandinavian = { #Nordic
 	swedish = {
 		primary = SWE
 		
-		#country = { state_maintenance_modifier = -0.25	}
-		#province = {local_production_efficiency = 0.50	}
+		country = {  }
+		province = { local_has_carolean = yes }
 		
 		
 		male_names = {
@@ -578,6 +592,8 @@ scandinavian = { #Nordic
 	}
 	finnish = {
 		primary = FIN
+		country = {  }
+		province = { local_has_carolean = yes }
 		dynasty_names = {
 			Bielke Horn Tott Fleming Paijkull Bonde Wrede Soop
 			Mannerheim Furuhjelm Aminoff Armfelt Carpelan Rehbinder Schulman
@@ -632,6 +648,24 @@ scandinavian = { #Nordic
 			Kaise Saiva
 		}
 	}
+	karelian = {
+		primary = KRL
+		male_names = {
+			Mohkku Mokci Náhkol Náinnas Njulgu Oaván Orddot Rástos Riibma Ruigi Sárra Speaidna Viggu Kaarel Kaaren Kahus Kaido 
+			Kalev Kalju Kaljuvald Kalle Kaomeel Karuvald Kaugemeel Kaupo Pihl Piho Pikne Päevalemb Pärt Raak Raho Rahuleid Sulev 
+			Sutepelg Tambet Tarva Tarvet Dobrinya Dokya Dondy Gazheg Hulyen Inzhay Irter Lyneg Lysko Kezhapa Kezhay Kezhedey 
+			Setyamka Shindyay Shypicha Shyrpuzh Spira Syrka Tikshayka Tuhan Tyueykezhut Tyutyuk Tugan Kezhevat Kichay Koksha 
+			Kuaz Kudym-Osh Kya Kyldysin Malyaka Malyy Meltsayka Mosheg Nalka Turush Uchva Varaka Vechkas Velmayka Virdyan Viryas 
+			Viryay Vokan Yirkap Ylvan Zarny Tugan Parush Pivtsay Pokshayka Putyayka Setyamka Shindyay Shoksha Syrka Tikshayka 
+			Tyueykezhut Tylmache Tylze Tyushten Tyushtya Uzhara Varmanpaz
+		}
+		female_names = {
+			Nyayka Olota Ordava Oshama Parava Pekshayka Pemka Pokshava Poshayka Potekay Potyava Putyayka Ravzhava Ruzava 
+			Sanal'ka Sangasa Sernyava Serzhay Setyamka Seyamka Shonzhava Shukshtoroyka Sinyava Siyamka Slyugan'ka Sochava Styaka 
+			Syryava Tatka Tekay Tetyava Tikshayka Toyaksha Tundava Tundya Unzhutka Upurga Utyayka Valdava Vergava Vezhav Vidyava 
+			Virtyava Yalgava Litova Mastorava Noroava
+		}
+	}
 	icelandic = {
 		primary = ICE
 		male_names = {
@@ -652,12 +686,44 @@ scandinavian = { #Nordic
 			Michelsen Morthens Moeller Nielsen Nordahl Olsen Petersen Riis Scheving Schioeth Schram Sigurdsson Stephensen Thorarensen Thorlacius Thoroddsen Vidalin Waage Wathne Wiium Zoega
 		}
 	}
+	norse = {
+		male_names = {
+			Adhalsteinn Aghi Agmundr Agnarr Áki Áleifr Alfarr Alfvin Algautr Ari Arnfinnr Árni Arnórr Arnthórr Arnvidhr Ásbjorn Ásgeirr Ásketill Ásmundr Ásvaldr Audhr Baggi Bárdhr Birgir Bjarni Bjartr Bjorn Brandr Bródhir 
+			Brynjarr Búi Dagfinnr Dagr Danr Egill Eileifr Einarr Eindridhi Eiríkr Erlendr Erlingr Eysteinn Eyvindr Félagi Finnr Flæmingr Fólki Fridhthjófr Fródhi Gauti Gautstafr Geirr Gormr Gudhbrandr Gudhfridhr Gudhini 
+			Gudhleifr Gudhmundr Gulbrandr Gunnarr Gunni Gunnvaldr Hákon Hálfdan Hallbjorn Halli Hallr Hallsteinn Hallthórr Hallvardhr Haraldr Hávardhr Helgi Hemingr Herleifr Hildingr Hjálmarr Hólmgeirr Hrafn Hreidharr Hróaldr 
+			Hróarr Hródhgeirr Hródhólfr Hródhvaldr Hrólfr Hrœrekr Hugleikr Ingi Ingimárr Ingólfr Ívarr Jarl Jósteinn Kálfr Kári Ketill Knútr Kóri Leifr Magni Mundi Njáll Oddbjorn Oddr Oddvarr Olvir Rádhúlfr Ragnarr Ragnvaldr 
+			Randúlfr Rúni Sigfrødhr Sigmundr Sigsteinn Sigurdhr Sindri Snorri Stáli Steinarr Steingrímr Steinn Stígandr Stigr Sumarlidhi Sundri Suni Svantepolk Sveinn Sverrir Thórarinn Thórbjorn Thórfastr Thórfredhr Thórgeirr 
+			Thórgísl Thórgnýr Thórir Thórketill Thórleifr Thórleikr Thórmódhr Thórsteinn Thórvaldr Thróndr Tófi Tóki Tryggvi Úlfr Uni Valdimárr Végardhr Vetrlidhi Vígi Víkingr Vragi Yngvarr
+		}
+		female_names = {
+			Alfhildr Álof Arnbjorg Ása Ásdís Áshildr Áslaug Ásta Ástrídhr Audhr Audhrhildr Bergljót Bjorg Borghildr Bóthildr Brynhildr Brynja Dagmær Dagný Dagrún Edda Eydís Frídha Grímhildr Gudhlaug Gudhleif Gudhrídhr Gudhrún Gulla 
+			Gunna Gunnbjorg Gunnhildr Gunnvor Gydha Hallthóra Helga Hildr Hjordís Hlíf Hrafnhildr Hreidhunn Idhunn Inga Ingibjorg Ingigerdhr Ingrídhr Ingunn Ingvildr Jórunnr Katla Ketilridhr Magnhildr Myrgjol Ólaug Ragna Ragnbjorg 
+			Ragnfrídhr Ragnheidhr Ragnhildr Rúna Saldís Signý Sigrídhr Sigrún Sólveig Steinunn Svanhildr Thone Thóra Thórbjorg Thórdís Thórfrídhr Thórhildr Thórný Thórunn Thórveig Thórví Thrud Thrúdhr Thýri Tófa Unnr Valdís Vígdís 
+			Yngvildr
+		}
+		dynasty_names = {
+			Áslaugsson Ástridharson Ásvaldsson Eindridhesson Eiríksson Gormsson Hákonarson Haraldsson Lothbrok Munsö Ragnarsson Sigurdharson Skjöldung Snorrason Thórgilsson Thórsteinsson Thórvaldsson Tryggvason Völsung 
+			Waegmunding Ylfing Yngling
+		}
+	}
+	livonian = {
+		male_names = {
+			Alo Asso Caupo Dabrel Gerweder Ilmedous Ilo Imme Kike Kovals Layanus Lembewalde Musts Paimis Peite Piške Sula Uldenago Usis Valke Vesiki Vietso Waldeko Ylo Ymaut
+		}
+		female_names = {
+			Elmede Use Valata Vasara
+		}
+		dynasty_names = {
+			"Karasi" "Ingrija" "Saaremaa" "Revala" "Virumaa" "Läänemaa" "Vaiga" "Ingeri" "Ingeri" "Livo" "Harjumaa" "Virumaa" 
+			"Ridala" "Saaremaa" "Vaiga" "Turaida"
+		}
+	}
 }
 
 british	= {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	english = {
 		primary = ENG
@@ -898,8 +964,8 @@ british	= {
 
 gaelic	= {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	irish = {
 		primary = IRE
@@ -1053,8 +1119,8 @@ gaelic	= {
 	
 latin = {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	lombard = {
 		primary = MLO
@@ -1216,8 +1282,8 @@ latin = {
 
 iberian	= {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	castillian = {
 		primary = CAS
@@ -1522,8 +1588,8 @@ iberian	= {
 	
 french	= {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	cosmopolitan_french = {
 		primary = FRA
@@ -1684,8 +1750,8 @@ french	= {
 
 finno_ugric = { #Ugric
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	uralic = {
 		primary = PRM
@@ -1764,8 +1830,8 @@ finno_ugric = { #Ugric
 	
 south_slavic = {
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	croatian = {
 		primary = CRO
@@ -1910,8 +1976,8 @@ south_slavic = {
 	
 west_slavic = {
 	graphical_culture = westerngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	czech = {
 		primary = BOH
@@ -2046,8 +2112,8 @@ west_slavic = {
 
 carpathian = {	
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	slovak = {
 		primary = SLO
 		male_names = {
@@ -2209,8 +2275,8 @@ carpathian = {
 	
 east_slavic = {
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	russian = { #Muscovite - Vladimir-Suzdal dialects
 		primary = MOS
 		male_names = {
@@ -2356,24 +2422,6 @@ east_slavic = {
 			Gavriila Larisa Aleksandra Alla Bronislava Svetlana Yuliya Yaroslava Vladislava Lyudmila Nadejda Rostislava
 		}
 	}
-	karelian = {
-		primary = KRL
-		male_names = {
-			Mohkku Mokci Náhkol Náinnas Njulgu Oaván Orddot Rástos Riibma Ruigi Sárra Speaidna Viggu Kaarel Kaaren Kahus Kaido 
-			Kalev Kalju Kaljuvald Kalle Kaomeel Karuvald Kaugemeel Kaupo Pihl Piho Pikne Päevalemb Pärt Raak Raho Rahuleid Sulev 
-			Sutepelg Tambet Tarva Tarvet Dobrinya Dokya Dondy Gazheg Hulyen Inzhay Irter Lyneg Lysko Kezhapa Kezhay Kezhedey 
-			Setyamka Shindyay Shypicha Shyrpuzh Spira Syrka Tikshayka Tuhan Tyueykezhut Tyutyuk Tugan Kezhevat Kichay Koksha 
-			Kuaz Kudym-Osh Kya Kyldysin Malyaka Malyy Meltsayka Mosheg Nalka Turush Uchva Varaka Vechkas Velmayka Virdyan Viryas 
-			Viryay Vokan Yirkap Ylvan Zarny Tugan Parush Pivtsay Pokshayka Putyayka Setyamka Shindyay Shoksha Syrka Tikshayka 
-			Tyueykezhut Tylmache Tylze Tyushten Tyushtya Uzhara Varmanpaz
-		}
-		female_names = {
-			Nyayka Olota Ordava Oshama Parava Pekshayka Pemka Pokshava Poshayka Potekay Potyava Putyayka Ravzhava Ruzava 
-			Sanal'ka Sangasa Sernyava Serzhay Setyamka Seyamka Shonzhava Shukshtoroyka Sinyava Siyamka Slyugan'ka Sochava Styaka 
-			Syryava Tatka Tekay Tetyava Tikshayka Toyaksha Tundava Tundya Unzhutka Upurga Utyayka Valdava Vergava Vezhav Vidyava 
-			Virtyava Yalgava Litova Mastorava Noroava
-		}
-	}
 	
 	dynasty_names = {
 		Rurikovich Godunov Shuisky Romanov Sheremetev Golitsyn Naryshkin Khilkov Gorchakov
@@ -2404,8 +2452,8 @@ east_slavic = {
 
 baltic	= {
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	estonian = {
 		primary = EST
@@ -2477,7 +2525,7 @@ baltic	= {
 		}
 	}
 	latvian = {
-		primary = LVA
+		primary = LTG
 		male_names = {
 			Aishno Ako Ankad Baise Balodis Bikshe Borut Bulei Butovit Cirulis Dangeruthe Darbeslave 
 			Davins Demas Dobre Dovyat Dzintis Dausprungas Imanta
@@ -2526,8 +2574,8 @@ baltic	= {
 
 byzantine = {
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	greek = {
 		primary = GRE
 		male_names = {
@@ -2806,8 +2854,8 @@ byzantine = {
 
 caucasian = {
 	graphical_culture = easterngfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	georgian = {
 		primary = GEO
 		dynasty_names = { 
@@ -2920,8 +2968,8 @@ caucasian = {
 
 turko_semitic = { #Levantine
 	graphical_culture = muslimgfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	turkish = {
 		primary = TUR
@@ -3186,8 +3234,8 @@ turko_semitic = { #Levantine
 
 maghrebi = {
 	graphical_culture = muslimgfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	moroccan = {
 		primary = MOR
 		dynasty_names = {
@@ -3283,8 +3331,8 @@ maghrebi = {
 	
 iranian	= {
 	graphical_culture = muslimgfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	persian = {
 		primary = PER
 		male_names = { 
@@ -3592,8 +3640,8 @@ iranian	= {
 
 altaic = {
 	graphical_culture = muslimgfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	mongol = {
 		primary = KHA
@@ -3824,8 +3872,8 @@ altaic = {
 	
 central_american = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	aztek = {
 		primary = AZT
@@ -3889,8 +3937,8 @@ central_american = {
 
 aridoamerican = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	tecos = {
 		primary = CLM
 		male_names = {
@@ -4003,8 +4051,8 @@ aridoamerican = {
 
 maya = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	yucatec = {
 		primary = XIU
@@ -4110,8 +4158,8 @@ maya = {
 
 otomanguean = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	zapotek = {
 		primary = ZAP
 		male_names = {
@@ -4156,8 +4204,8 @@ otomanguean = {
 
 andean_group = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	inca = { # Quechua
 		primary = CSU
@@ -4233,8 +4281,8 @@ andean_group = {
 
 je_tupi = { # Tupi
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	tupinamba = {
 		primary = TPQ
@@ -4266,8 +4314,8 @@ je_tupi = { # Tupi
 
 je = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	charruan = {
 		primary = CUA
 		dynasty_names = {
@@ -4296,8 +4344,8 @@ je = {
 
 maranon = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	jivaro = {
 		male_names = {
 			Anquimarca Atoc Sopa Cayo Topa Coyllas Cusichaca Guaritopa Huachuri Huaypalcon Luyes Marcavilca 
@@ -4326,8 +4374,8 @@ maranon = {
 
 chibchan = {
 	graphical_culture = southamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	muisca = {
 		primary = MCA
@@ -4378,8 +4426,8 @@ chibchan = {
 
 mataco = {	#Matacoan
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	chacoan = {
 		male_names = {
@@ -4396,8 +4444,8 @@ mataco = {	#Matacoan
 
 araucanian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	mapuche = {
 		primary = MPC
@@ -4451,8 +4499,8 @@ araucanian = {
 
 carribean = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	arawak = { #Taino
 		male_names = {
@@ -4498,8 +4546,8 @@ carribean = {
 eskaleut = {
 	graphical_culture = inuitgfx
 	second_graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	aleutian = {
 		male_names = {
@@ -4531,8 +4579,8 @@ eskaleut = {
 
 central_algonquian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	shawnee = {
 		primary = SHA
@@ -4703,8 +4751,8 @@ central_algonquian = {
 
 plains_algonquian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	cheyenne = {
 		primary = CHY
@@ -4812,8 +4860,8 @@ plains_algonquian = {
 
 eastern_algonquian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	delaware = {
 		primary = LEN
@@ -4955,8 +5003,8 @@ eastern_algonquian = {
 
 iroquoian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	iroquois = {
 		primary = IRO
@@ -5100,8 +5148,8 @@ iroquoian = {
 
 siouan = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	dakota = {
 		primary = SIO
@@ -5195,8 +5243,8 @@ siouan = {
 
 caddoan = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	wichita = {
 		primary = WIC
@@ -5256,8 +5304,8 @@ caddoan = {
 
 muskogean = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	creek = {
 		primary = CRE
@@ -5438,8 +5486,8 @@ muskogean = {
 
 sonoran = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	pueblo = {
 		primary = PUE
@@ -5502,8 +5550,8 @@ sonoran = {
 
 apachean = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	apache = {
 		primary = APA
 		dynasty_names = {
@@ -5583,8 +5631,8 @@ apachean = {
 }
 na_dene = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	chipewyan = {
 		dynasty_names = {
@@ -5633,8 +5681,8 @@ na_dene = {
 
 penutian = {
 	graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	salish = {
 		primary = SAL
 		dynasty_names = {
@@ -5692,8 +5740,8 @@ penutian = {
 
 east_asian = {	# Chinese Group
 	graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	vietnamese_new = {
 		#primary = DAI
@@ -5760,8 +5808,8 @@ east_asian = {	# Chinese Group
 		}
 	}
 	altaic_new	= {
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 		primary = YUA
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
@@ -5784,8 +5832,8 @@ east_asian = {	# Chinese Group
 	}
 
 	manchu_new = {
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 		primary = MCH
 		dynasty_names = {
 			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
@@ -6228,8 +6276,8 @@ east_asian = {	# Chinese Group
 
 korean_g = {
 	graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	korean = {
 		primary = KOR
@@ -6265,8 +6313,8 @@ korean_g = {
 
 japanese_g = {
 	graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	togoku = { #Togoku / Eastern Japanese
 		primary = JAP
@@ -6351,8 +6399,8 @@ japanese_g = {
 
 tibetan_group = {
 	graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	tibetan = {
 		primary = UTS
 		dynasty_names = {
@@ -6392,8 +6440,8 @@ tibetan_group = {
 malay = { 
 	graphical_culture = southeastasiangfx
 	second_graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	malayan = {
 		primary = MLC
 		dynasty_names = { 
@@ -6600,8 +6648,8 @@ thai_group = {
 	graphical_culture = southeastasiangfx
 	second_graphical_culture = asiangfx
 
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	central_thai = {
 		primary = AYU
@@ -6675,8 +6723,8 @@ thai_group = {
 southeastasian_group = { 
 	graphical_culture = southeastasiangfx
 	second_graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	khmer = {
 		primary = KHM
 		dynasty_names = {
@@ -6739,8 +6787,8 @@ southeastasian_group = {
 
 burman = {
 	graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	burmese = {
 		primary = TAU
@@ -6820,8 +6868,8 @@ burman = {
 pacific = {
 	graphical_culture = polynesiangfx
 	second_graphical_culture = northamericagfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 
 	papuan = {
@@ -6897,8 +6945,8 @@ pacific = {
 aboriginal_australian = {
 	graphical_culture = aboriginalgfx
 	second_graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	aboriginal = { #(Kuric) Eora/East Coast
 		primary = EOR
@@ -7142,8 +7190,8 @@ aboriginal_australian = {
 
 eastern_aryan = {
 	graphical_culture = indiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	assamese = {
 		primary = ASS
@@ -7393,8 +7441,8 @@ eastern_aryan = {
 
 hindusthani = {
 	graphical_culture = indiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	avadhi = {
 		primary = ODH
@@ -7532,8 +7580,8 @@ hindusthani = {
 
 western_aryan = {
 	graphical_culture = indiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	gujarati = {
 		primary = GUJ
@@ -7823,8 +7871,8 @@ western_aryan = {
 
 dravidian = {
 	graphical_culture = indiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	kannada = {
 		primary = MYS
@@ -7978,8 +8026,8 @@ dravidian = {
 
 central_indic = {
 	graphical_culture = indiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 
 	gondi = {
 		primary = GDW
@@ -8080,8 +8128,8 @@ central_indic = {
 
 mande = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	mali = {
 		primary = MAL
 		dynasty_names = {
@@ -8196,8 +8244,8 @@ mande = {
 
 sahelian = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	hausa = {
 		primary = HAU
@@ -8415,8 +8463,8 @@ sahelian = {
 
 west_african = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	yorumba = {
 		primary = OYO
@@ -8544,8 +8592,8 @@ west_african = {
 
 southern_african = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	makua = {
 		primary = MKU
 		dynasty_names = { Angoni Karonga Ayao Banda Chewa Undi Luhanga Kachali Mwafulirwa Mtika Nyanjagha Chiluba }
@@ -8632,8 +8680,8 @@ southern_african = {
 
 kongo_group = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	lunda = {
 		primary = LND
 	}
@@ -8682,8 +8730,8 @@ kongo_group = {
 
 great_lakes_group = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	rwandan = {
 		primary = RWA
 		dynasty_names = { 
@@ -8733,8 +8781,8 @@ great_lakes_group = {
 
 african = {	#Eastern Bantu Groups
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	madagasque = {
 		primary = SKA
@@ -8839,8 +8887,8 @@ african = {	#Eastern Bantu Groups
 
 cushitic = {
 	graphical_culture = africangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	somali = {
 		primary = ADA
@@ -9005,8 +9053,8 @@ cushitic = {
 }
 
 sudanese = {
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	graphical_culture = africangfx
 	
 	fur_culture = { # Sealand
@@ -9066,8 +9114,8 @@ sudanese = {
 evenks = {
 	graphical_culture = inuitgfx
 	second_graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	evenk = {
 		second_graphical_culture = asiangfx
 		primary = SOL
@@ -9141,8 +9189,8 @@ evenks = {
 	}
 	manchu = {
 		graphical_culture = asiangfx
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 		primary = MJZ
 		dynasty_names = {
 			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
@@ -9169,8 +9217,8 @@ evenks = {
 kamchatkan_g = {
 	graphical_culture = inuitgfx
 	second_graphical_culture = asiangfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	
 	ainu = {
 		primary = ANU
@@ -9219,8 +9267,8 @@ kamchatkan_g = {
 
 tartar	= {
 	graphical_culture = muslimgfx
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	astrakhani = {
 		primary = AST
 		dynasty_names = {
@@ -9360,8 +9408,8 @@ tartar	= {
 
 #Cultures for use with the nation designer:
 lost_cultures_group = {
-	country = { has_banners = 1}
-	province = { local_has_banners = 1}
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 	atlantean = { #EU Rome
 		dynasty_names = {
 			Alcetid Apollonid Aratid Helladid Omirid Peithid Peneid Philonid Proctid Pytheid Sosiclid Therid Theronid Timolid Xenonid

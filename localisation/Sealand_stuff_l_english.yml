@@ -106,6 +106,7 @@
       # Events that come with "Centralize The Order" mission:
         # The Prussian Confederation start event:
         dnz_estate_available_tooltip:1 "The estate privilege §Y'Concede to the Prussian Confederation'§! is now available.\n§MWhen selecting that privilege, you gain event to become §YDanzing§! in a few months.§!"
+        dnz_estate_available_tooltip2:1 "§MWhen selecting that privilege, you gain event to become §YDanzing§! in a few months.§!"
         # Sell Neumark event:
         teutonic_events.1.d:0 "With the internal conflicts and the instability of our nation, because of the rise of Prussian Confederation, we must do some concessions. Main thing being our holdings in Neumark.\nShould we sell those, we have easier time to root out the leaders of this organization and put an end to this rebellion once and for all."
         teutonic_events.1.a:0 "I'm gonna make them an offer they can't refuse."
@@ -429,6 +430,10 @@
         great_viking_army_modifier:0 "Great Viking Army"
         north_sea_empire_title:0 "North Sea Empire"
         north_sea_empire_desc:0 "North Sea Empire"
+        # Scandinavian DLC:
+        north_sea_empire_2_title:0 "North Sea Empire"
+        north_sea_empire_2_desc:0 "North Sea Empire"
+        ###
         end_gryf_rebellion_title:0 "End Gryf Rebellion"
         end_gryf_rebellion_desc:0 "End Gryf Rebellion"
         end_gryf_rebellion_tooltip:0 "§Y[Root.GetName]§! gets '§YGryf Prevailed§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Legitimacy: §G+1.00§!\n"
@@ -828,8 +833,6 @@
         # Tribal Divese Society:
         diverse_society_reform:0 "Diverse Society"
         diverse_society_reform_desc:0 "We are ruling over many different tribes and if we want to maintain our unity, we must widen it by accepting more into this circle of unity."
-        # English Monarchy:
-        enable_disabled_nobility_tt:0 "Enables Nobility estate for §YEnglish Monarchy§!."
         # Burgundian Union:
         burgundy_juniors_title:0 "Burgundian Junior Partner"
         burgundy_juniors_title_plural:0 "Burgundian Junior Partners"
@@ -872,10 +875,17 @@
         military_reform_cooldown_modifier:0 "Military Reform Cooldown"
         # For Israel formable:
         hebrew_culture_provinces_tooltip:0 "All Primary Culture provinces will now have §YHebrew§! Culture."
+        # Monuments:
+        nuestra_senora_de_la_asuncion:0 "Nuestra Señora de la Asunción"
+        uluru:0 "Uluru"
+        korea_japan_bridge:0 "Japan-Korean Crossing"
+        korea_japan_bridge_decision_title:0 "Japan-Korean Crossing"
+        korea_japan_bridge_decision_desc:0 "Should we ever hold both sides of the lands, we should make it possible for our troops to cross, without needing to rely on our transport ships."
+        korea_japan_bridge_decision_tt:0 "Enables to construct §YJapan-Korean Crossing§! on highlighted province.\n§RShips will not be able to stop enemies from crossing it.§!"
         # Buildings:
         building_courthouse_desc:0 "Can build on §Y10§! Development provinces."
         building_town_hall_desc:0 "Can build on §Y20§! Development provinces."
-        building_ramparts_desc:0 "§RCannot be build on forts and forts cannot be build on Ramparts.§!"
+        #building_ramparts_desc:0 "§RCannot be build on forts and forts cannot be build on Ramparts.§!"
         UNIQUEBUILDINGS:0 "Unique Buildings"
         building_tax_assessor_desc:0 "Can build on capital or on §Y10§! Tax province."
         building_royal_palace_desc:0 "Can build on capital province."
@@ -953,6 +963,7 @@
          emperor_renovatio_decision_tt:0 "§YRevoke The Privilegia§! is enacted"
          emperor_renovatio_decision_ttt:0 "§YUnite the Holy Roman Empire to one country!§!"
         # Diplomatic Actions:
+        diplo_no_war_on_subject_with_truce:0 "We are not allowed to declare war on a subject, while we have truce with their overlord."
         sea_sunni_crusade_jihad_diplo_action_title:0 "Call for Jihad"
         sea_sunni_crusade_jihad_diplo_action_tooltip:0 "Jihads give Sunni countries a significant manpower and income bonus while at war with them."
         sea_sunni_crusade_jihad_diplo_action_desc:0 "Do you wish to call for a Jihad against this nation? This will give Sunni countries a significant manpower and income bonus while at war with the Infidel."
@@ -1130,6 +1141,14 @@
            advisor_land_attrition_desc:0 ""
            advisor_siege_ability:0 "Siege Abilitator"
            advisor_siege_ability_desc:0 ""
+           advisor_drill_gain:0 "Drill Gainer"
+           advisor_drill_gain_desc:0 ""
+           advisor_drill_decay:0 "Drill Decayer"
+           advisor_drill_decay_desc:0 ""
+           advisor_morale_damage:0 "Morale Damager"
+           advisor_morale_damage_desc:0 ""
+           advisor_morale_damage_received:0 "Morale Receiver"
+           advisor_morale_damage_received_desc:0 ""
           # Events: 
             sea_advisor_event.3.t:0 "Military Advisors"
             sea_advisor_event.3.2:0 "£sea_land_morale£ Morale of Armies: §G+10.0%§!"
@@ -1137,6 +1156,8 @@
             sea_advisor_event.3.4:0 "£sea_infantry_power£ Infantry Combat Ability: §G+10.0%§!"
             sea_advisor_event.3.5:0 "£sea_cavalry_power£ Cavalry Combat Ability: §G+10.0%§!"
             sea_advisor_event.3.6:0 "£sea_artillery_power£ Artillery Combat Ability: §G+10.0%§!"
+            sea_advisor_event.3.77:0 "£sea_morale_damage£ Morale Damage: §G+10.0%§!"
+            sea_advisor_event.3.88:0 "£sea_morale_damage_received£ Morale Damage Received: §G-10.0%§!"
             sea_advisor_event.3.7:0 "£sea_fire_damage£ Land Fire Damage: §G+10.0%§!"
             sea_advisor_event.3.8:0 "£sea_fire_damage_received£ Fire Damage Received: §G-10.0%§!"
             sea_advisor_event.3.9:0 "£sea_shock_damage£ Shock Damage: §G+10.0%§!"
@@ -1151,6 +1172,8 @@
             sea_advisor_event.3.18:0 "£sea_recover_army_morale_speed£ Recover Army Morale Speed: §G+15.0%§!"
             sea_advisor_event.3.19:0 "£sea_siege_ability£ Siege Ability: §G+15.0%§!"
             sea_advisor_event.3.20:0 "£sea_defensiveness£ Fort Defence: §G+20.0%§!"
+            sea_advisor_event.3.21:0 "£sea_drill_gain£ Army Drill Gain Modifier: §G+25.0%§!"
+            sea_advisor_event.3.22:0 "£sea_drill_decay£ Regiment Drill Loss: §G+25.0%§!"
         # Diplomatic Actions:
         support_independence_action_tt:0 "Cannot support player subject independence."
         cannot_call_defender_of_faith:0 "Defender of the Faith cannot be called into war."
@@ -1190,7 +1213,11 @@
         achiev_popeye_cosplay_tt:0 "Are the leading producer of either §YTea§! or §YTobacco§!."
         achiev_columbus_was_a_microsoft_tech_assistant_with_an_indian_accent:0 "§YAchievement:§! Columbus Was a Microsoft Tech Assistant With an Indian Accent"
         achiev_columbus_was_a_microsoft_tech_assistant_with_an_indian_accent_tt:0 "Are the leading producer of either §YTea§! or §YTobacco§!."
-
+        # Other:
+        crown_land_level_11:0 "Crown Land Ownership"
+        recruit_40_trad_general_title:0 "£sea_general_cost_logo£Recruit a General with §G40§! tradition"
+        recruit_40_trad_general_desc:0 "This is a one time decision to recruit slightly better general, unless we get unlucky RNG."
+        
     #Germany:
         # Government:
         germany_monarchy:0 "Imperial German Monarcy"
@@ -1437,6 +1464,25 @@
         # Takeda Horde Decision:
         takeda_horde_decision_title:0 "Become Horde"
         takeda_horde_decision_desc:0 "Since our society is built upon cavalry, then we must also embrace the ultimate ways of cavalry warfare."
+        # Diplo actions for Ashikaga:
+        ashikaga_diplo_no_war:0 "We are not allowed to declare war on §YAshikaga§! until the year is past §Y1460§!."
+        ashikaga_diplo_no_war2:0 "We are not allowed to declare any wars until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_war3:0 "We are not allowed to declare war on Daimyos until the year is past §Y1460§!."
+        ashikaga_diplo_no_alliance:0 "We are not allowed to send alliance to §YAshikaga§! until the year is past §Y1500§!."
+        ashikaga_diplo_no_alliance2:0 "We are not allowed to send alliance until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_enforce_peace:0 "We are not allowed to enforce peace on §YAshikaga§! until the year is past §Y1460§!."
+        ashikaga_diplo_no_enforce_peace2:0 "We are not allowed to enforce peace until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_coalition:0 "We are not allowed to form any coalitions until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_guarantee:0 "We are not allowed to proclaim guarantee on §YAshikaga§! until the year is past §Y1460§!."
+        ashikaga_diplo_no_guarantee2:0 "We are not allowed to proclaim guarantee until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_warning:0 "We are not allowed to send warning to §YAshikaga§! until the year is past §Y1460§!."
+        ashikaga_diplo_no_warning2:0 "We are not allowed to send warning until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_threaten:0 "We are not allowed to threaten war §YAshikaga§! until the year is past §Y1460§!."
+        ashikaga_diplo_no_threaten2:0 "We are not allowed to threaten war until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_tributary:0 "We are not allowed to establish tributary on §YAshikaga§! until the year is past §Y1500§!."
+        ashikaga_diplo_no_tributary2:0 "We are not allowed to establish tributary until we have formed §YJapan§! or the year is past §Y1500§!."
+        ashikaga_diplo_no_ask_tributary:0 "We are not allowed to become §YAshikaga§! tributary until the year is past §Y1500§!."
+        ashikaga_diplo_no_ask_tributary2:0 "We are not allowed to become their tributary until we have formed §YJapan§! or the year is past §Y1500§!."
         
     # Korea:
         # Missions:
@@ -1476,6 +1522,8 @@
         nog_tatar_yoke_mission_desc:0 "The Tatar Yoke"
         nog_contact_genoese_traders_title:0 "Genoese Traders"
         nog_contact_genoese_traders_desc:0 "Contact Genoese Traders"
+        nog_black_sea_slave_trade_revived:0 "Black Sea Slave Trading"
+        nog_black_sea_slave_trade_revived_tt:0 "Black Sea Slave Trading Revived"
         nog_crimean_expansion_horde_title:0 "Crimean Expansion"
         nog_crimean_expansion_horde_desc:0 "Crimean Expansion"
         nog_crimean_development_modifier:0 "Crimean Development"
@@ -2088,8 +2136,6 @@
         emp_ven_reclaim_the_aegean_modifier:0 "Disciplined Marines"
         emp_ven_control_the_means_of_transaction_modifier:0 "Marines Improved Defences"
         emp_ven_expand_the_terraferma_modifier:0 "Mass Recruitment of Marines"
-      # Government:
-        enable_disabled_burghers_tt:0 "Enables Burghers estate but removes §YFactions§!."
       # Vassal Type:
         venetian_league_subjects_title:0 "Venetian League Subject"
         venetian_league_subjects_title_plural:0 "Venetian League Subjects"
@@ -2104,9 +2150,11 @@
       # Missions:
         nov_sway_muscovite_subjects_title:0 "Sway the Princes"
         nov_sway_muscovite_subjects_desc:0 "We have to convince the little Rurikovich's that it is indeed better to be free from Muscovy and perhaps unintentionally end up giving away their power to us."
-        nov_sway_muscovite_subjects_tt:0 " Muscovite vassals:\n         Opinion of §Y[Root.GetName]§! is at least §Y100§!."
+        nov_sway_muscovite_subjects_tt:0 " Muscovite vassals:\n         Opinion of §Y[Root.GetName]§! is at least §Y50§!."
         nov_sway_muscovite_subjects_ttt:0 " allies of §Y[Root.GetName]§! are rivals of §YMuscovy§!"
-        nov_sway_muscovite_subjects_tttt:0 "Every §YMuscovite§! vassal, that has Opinion of §Y[Root.GetName]§! at least §Y100§!, becomes our vassal."
+        nov_sway_muscovite_subjects_tttt:0 "Every §YMuscovite§! vassal, that has Opinion of §Y[Root.GetName]§! at least §Y50§!, becomes our vassal."
+        nov_become_finland_title:0 "Reform Into Finland"
+        nov_become_finland_desc:0 "We must become the very thing we conquered, which is Finland."
         
     # Natives religion:
       # Decision:
@@ -2116,6 +2164,12 @@
       sea_new_world_kill_ruler_options_title:0 "£sea_sacrifice_ruler_logo£Find a More Suitable Ruler"
       sea_new_world_kill_ruler_options_desc:0 "Not happy with your ruler? Send him to retirement."
       sea_new_world_kill_ruler_options_cooldown:0 "Recently Retired Ruler"
+      sea_new_world_primitives_heavy_ship_building_title:0 "£sea_ship_heavy_logo£Build Heavy Ship"
+      sea_new_world_primitives_heavy_ship_building_desc:0 "Only way to make it for primitive nations to have ability to build ships.\nConstructs on a random coastal province."
+      sea_new_world_primitives_light_ship_building_title:0 "£sea_ship_light_logo£Build Light Ship"
+      sea_new_world_primitives_light_ship_building_desc:0 "Only way to make it for primitive nations to have ability to build ships.\nConstructs on a random coastal province."
+      sea_new_world_primitives_galley_ship_building_title:0 "£sea_ship_galley_logo£Build Galley"
+      sea_new_world_primitives_galley_ship_building_desc:0 "Only way to make it for primitive nations to have ability to build ships.\nConstructs on a random coastal province."
       # Events:
       sealand_events.11.t:0 "Find a More Suitable Ruler"
       sealand_events.11.d:0 "We're not happy with our current ruler and his ways. It's time to retire him and find someone more suitable."

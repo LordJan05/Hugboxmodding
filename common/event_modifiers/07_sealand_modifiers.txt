@@ -580,11 +580,12 @@ tercios_special_fire_units = {
 ##########################################
 # Portugal:
 henry_the_navigator = {
-	range = 0.1
+	range = 0.15
 	naval_maintenance_modifier = -0.2
 	global_ship_recruit_speed = -0.2
 	naval_attrition = -0.1
 	sea_por_explo_influence = 0.1 # Portugal faction
+	may_explore = yes
 }
 gc_por_establishes_foothold_brazil_modifier = {
 	manpower_recovery_speed = 0.1
@@ -627,6 +628,9 @@ nog_silk_road_modifier = {
 	supply_limit_modifier = 0.2
 	local_friendly_movement_speed = 0.1
 	local_hostile_movement_speed = 0.1
+}
+nog_black_sea_slave_trade_revived = {
+	trade_goods_size = 2.0
 }
 ##########################################
 # Venice:

@@ -54,6 +54,9 @@ kilwa_cape_missions_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Integrate your vassal
+		}
 	}
 
 	#Conquer Mutapa
@@ -89,6 +92,9 @@ kilwa_cape_missions_slot = {
 				tradition = 50
 			}
 		}
+		ai_weight = {
+			factor = 500	#It's the Kilwa meta to conquer Mutapa
+		}
 	}
 
 	#Discover the Cape
@@ -114,6 +120,9 @@ kilwa_cape_missions_slot = {
 			create_colony_mission_reward = {
 				province = 1177
 			}
+		}
+		ai_weight = {
+			factor = 0	#AI shouldn't really focus on that so the Europeans get the Cape instead
 		}
 	}
 
@@ -160,6 +169,9 @@ kilwa_cape_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 0	#AI shouldn't really focus on that so the Europeans get the Cape instead
+		}
 	}
 
 	#Colonize certain provinces in Africa to secure trade
@@ -197,6 +209,9 @@ kilwa_cape_missions_slot = {
 				years = 4
 				custom_tooltip = zan_settle_trade_posts_ct
 			}
+		}
+		ai_weight = {
+			factor = 500	#Would be really cool for a Persia player to have contact with Kilwa
 		}
 	}
 }
@@ -275,6 +290,9 @@ kilwa_internal_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall mission
+		}
 	}
 
 	#Build workshops in Ivory provinces
@@ -302,6 +320,9 @@ kilwa_internal_missions_slot = {
 				}
 				custom_tooltip = MONOPOLY_INCOME_IVORY_DESC
 			}
+		}
+		ai_weight = {
+			factor = 500	#Tall mission
 		}
 	}
 
@@ -363,6 +384,9 @@ kilwa_internal_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall mission
+		}
 	}
 
 	#Build manufactories
@@ -409,6 +433,9 @@ kilwa_internal_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall mission
+		}
 	}
 }
 
@@ -452,6 +479,9 @@ kilwa_trade_conquest_missions_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Kilwa is "Africa's Venice" so it should focus on ships
+		}
 	}
 
 	#Conquer the coast
@@ -493,6 +523,9 @@ kilwa_trade_conquest_missions_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Same culture group conquest
+		}
 	}
 
 	#Annex Mogadishu
@@ -523,6 +556,9 @@ kilwa_trade_conquest_missions_slot = {
 			country_event = {
 				id = flavor_zan.20
 			}
+		}
+		ai_weight = {
+			factor = 500	#Kilwa and Ajuuraan should be natural enemies. Like Scots and other Scots.
 		}
 	}
 
@@ -574,6 +610,9 @@ kilwa_trade_conquest_missions_slot = {
 				add_claim = 4409
 				add_claim = 572
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -657,6 +696,9 @@ kilwa_trade_conquest_missions_slot = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 }
 
@@ -718,6 +760,9 @@ kilwa_asia_trade_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500	#Madagascar is in the same culture group astonishingly
 		}
 	}
 
@@ -787,6 +832,9 @@ kilwa_asia_trade_missions_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Madagascar is in the same culture group astonishingly
+		}
 	}
 
 	#Estrablish Trade Post in Malacca
@@ -818,6 +866,9 @@ kilwa_asia_trade_missions_slot = {
 			country_event = {
 				id = flavor_zan.21
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -859,6 +910,9 @@ kilwa_asia_trade_missions_slot = {
 				name = zan_riches_of_china
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }
@@ -904,6 +958,9 @@ kilwa_colonization_missions_slot = {
 			create_explorer = {
 				tradition = 40
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -1020,6 +1077,9 @@ kilwa_colonization_missions_slot = {
 			set_country_flag = por_bandeirantes_flag
 			custom_tooltip = por_bandeirantes_tooltip
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Have trade power in Moluccas
@@ -1047,6 +1107,9 @@ kilwa_colonization_missions_slot = {
 				name = zan_colonial_ambition
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -1098,6 +1161,9 @@ kilwa_colonization_missions_slot = {
 				name = zan_australian_colony
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 0	#We don't need another "Mamluks colonize Australia" meme
 		}
 	}
 }

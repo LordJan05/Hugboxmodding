@@ -4,6 +4,7 @@ sealand_swedish_missions_1 = {
 	ai = yes
 	potential = {
 		tag = SWE
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -166,6 +167,7 @@ sealand_swedish_missions_2 = {
 	ai = yes
 	potential = {
 		tag = SWE
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -387,6 +389,7 @@ sealand_swedish_missions_3 = {
 	ai = yes
 	potential = {
 		tag = SWE
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -687,6 +690,7 @@ sealand_swedish_missions_4 = {
 	ai = yes
 	potential = {
 		tag = SWE
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -882,6 +886,7 @@ sealand_swedish_missions_5 = {
 	ai = yes
 	potential = {
 		tag = SWE
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

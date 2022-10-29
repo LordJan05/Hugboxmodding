@@ -625,6 +625,15 @@ country_event = {
 				add_stability = 1
 				set_country_flag = mjl_colony_stability_fix_1
 			}
+			# Prestige:
+			while = {
+				limit = { NOT = { prestige = 0 } }
+				add_prestige = 10
+			}
+			while = {
+				limit = { prestige = 10 }
+				add_prestige = -10
+			}
 			# Stab for native policy
 			add_stability = 1
 			#### gov cleanup ####

@@ -27,6 +27,15 @@ can_reduce_inflation = {
 }
 
 can_declare_bankruptcy = {
+	condition = {
+		potential = {
+			ai = yes
+			is_subject = yes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_release_colonial_nation = {
@@ -73,6 +82,17 @@ can_remove_province_from_hre = {
 }
 
 can_increase_autonomy = {
+	condition = {
+		potential = {
+			owner = {
+				ai = yes
+				is_subject = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_decrease_autonomy = {

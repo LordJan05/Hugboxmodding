@@ -257,11 +257,7 @@ country_event = {
 			cavalry = ROOT
 			cavalry = ROOT
 		}
-		declare_war_with_cb = {
-			who = DLH
-			casus_belli = cb_core
-			war_goal_province = 522
-		}
+		declare_war = DLH
 	}
 	option = {
 		name = "flavor_dlh.6.b"

@@ -169,7 +169,7 @@ sea_spy_kill_heir_diplo_action = {
 	on_accept = {
 		if = {
 			limit = {
-				has_idea = audit_checks
+				has_idea = blackmailing
 			}
 			FROM = {
 				set_country_flag = hunting_accident_heir_assassination_flag

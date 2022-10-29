@@ -19,7 +19,7 @@ if = {
 	add_truce_with = SWE
 }
 
-
+add_accepted_culture = karelian
 1429.1.1 = {
 	monarch = {
 		name = "Evfimy II"

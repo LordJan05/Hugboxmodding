@@ -6,6 +6,11 @@ religion = catholic
 technology_group = western
 historical_friend = DAN
 capital = 17 #Akershus
+
+1397.1.1 = {
+	set_estate_privilege = estate_nobles_danish_nobility
+	set_estate_privilege = estate_nobles_nobles_instead_of_royal_court
+}
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1

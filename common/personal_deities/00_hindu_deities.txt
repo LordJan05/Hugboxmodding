@@ -6,7 +6,7 @@ buddha = {
 	allow = { 
 		religion = hinduism
 		OR = {
-			mission_completed = mnd_maj_candi_shrines
+			#mission_completed = mnd_maj_candi_shrines
 			mission_completed = sun_candi_temples
 			mission_completed = mnd_khm_religion
 		}

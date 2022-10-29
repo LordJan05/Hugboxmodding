@@ -9,6 +9,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = SOM }
 			OR = {
 				ai = no
@@ -80,8 +84,6 @@ country_decisions = {
 				type = all
 			}
 			owns_core_province = 2774	# Kismayo
-			monthly_adm = 10
-			monthly_mil = 10
 		}
 		effect = {
 			change_tag = SOM
@@ -120,6 +122,11 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { owns_core_province = 2774 }
+				NOT = { owns_core_province = 2777 }
+			}
 		}
 		ai_importance = 400 #
 	}

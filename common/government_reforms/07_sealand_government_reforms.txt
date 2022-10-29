@@ -141,6 +141,9 @@ barbary_states_reform = {
 	
 	custom_attributes = {
 		locked_government_type = yes
+		is_pirate_republic_reform = yes
+		elections_increase_factions_influence = yes
+		cannot_become_dictatorship = yes
 	}
 	conditional = {
 		allow = {
@@ -208,7 +211,7 @@ tribe_becomes_monarchy_reform_swazi = {
 			limit = {
 				has_estate_privilege = estate_church_heir_shrine
 			}
-			remove_estate_privilege= estate_church_heir_shrine
+			remove_estate_privilege = estate_church_heir_shrine
 		}
 		lose_reforms = 4
 		change_government = monarchy
@@ -336,6 +339,7 @@ veche_tsardom = {
 	icon = "merchant"
 	allow_normal_conversion = yes
 	potential = {
+		always = no # PDX decided to make one as well almost a year after I've made it. Shame.
 		OR = {
 			AND = {
 				religion = orthodox
@@ -358,7 +362,7 @@ veche_tsardom = {
 					}
 					AND = {
 						is_playing_custom_nation = yes
-						have_had_reform = veche_tsardom
+						have_had_reform = tsardom
 					}
 				}
 			}

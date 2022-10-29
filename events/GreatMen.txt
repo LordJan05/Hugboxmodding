@@ -151,6 +151,8 @@ country_event = {
 			advisor_fire_damage_received = 3
 			advisor_shock_damage = 3
 			advisor_shock_damage_received = 3
+			advisor_morale_damage = 3
+			advisor_morale_damage_received = 3
 		}
 		NOT = { has_country_flag = army_reformer }
 	}
@@ -1280,6 +1282,8 @@ country_event = {
 		OR = {
 			quartermaster = 3
 			advisor_morale_recovery = 3
+			advisor_drill_gain = 3
+			advisor_drill_decay = 3
 		}
 		NOT = { has_country_flag = quartermaster }
 	}

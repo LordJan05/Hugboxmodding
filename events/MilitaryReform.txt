@@ -12,6 +12,7 @@ country_event = {
 		is_year = 1500
 		NOT = { has_country_modifier = army_reform }
 		NOT = { has_country_modifier = naval_reform }
+		NOT = { has_country_modifier = military_reform_cooldown_modifier }
 	}
 	
 	mean_time_to_happen = {

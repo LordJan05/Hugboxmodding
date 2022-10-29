@@ -1,7 +1,7 @@
 ########################################
 # Flavor events for China (MNG)
 #
-# written by Sara Wendel-Ã–rtqvist
+# written by Sara Wendel-Örtqvist
 ########################################
 
 namespace = flavor_mng
@@ -61,6 +61,8 @@ country_event = {
 		controls = 726
 		owns = 697
 		controls = 697
+		owns = 698
+		controls = 698
 	}
 	
 	mean_time_to_happen = {
@@ -129,6 +131,8 @@ country_event = {
 		controls = 726
 		owns = 697
 		controls = 697
+		owns = 698
+		controls = 698
 	}
 	
 	mean_time_to_happen = {

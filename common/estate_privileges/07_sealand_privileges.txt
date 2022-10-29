@@ -220,13 +220,13 @@ estate_burghers_prussian_confederation_conceded = {
 		has_country_flag = estate_burghers_prussian_confederation_conceded_flag
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.2
+		development_cost = -0.15
 		embargo_efficiency = 1
-		global_prov_trade_power_modifier = 0.5
-		global_trade_goods_size_modifier = 0.5
-		global_ship_trade_power = 0.5
-		caravan_power = 0.5
-		trade_steering = 0.5
+		global_prov_trade_power_modifier = 0.33
+		global_trade_goods_size_modifier = 0.33
+		global_ship_trade_power = 0.33
+		caravan_power = 0.33
+		trade_steering = 0.33
 	}
 	benefits = {
 		merchants = 2

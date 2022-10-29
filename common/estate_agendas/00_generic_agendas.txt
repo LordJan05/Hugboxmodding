@@ -175,6 +175,7 @@ estate_church_build_temple_in_y = {
 		}
     }
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -6923,10 +6924,10 @@ estate_nobles_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7044,10 +7045,10 @@ estate_rajput_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7165,10 +7166,10 @@ estate_maratha_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7287,10 +7288,10 @@ estate_burghers_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7408,10 +7409,10 @@ estate_vaisyas_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7529,10 +7530,10 @@ estate_jains_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7654,15 +7655,16 @@ estate_church_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
     }
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -7779,10 +7781,10 @@ estate_brahmins_build_manufactory_in_y = {
 					has_building = textile
 					has_building = tradecompany
 					has_building = farm_estate
-					has_building = ramparts
 					has_building = soldier_households
 					has_building = impressment_offices
 					has_building = state_house
+					has_building = mint
 				}
 			}
 		}
@@ -7910,6 +7912,7 @@ estate_church_build_university_in_y = {
 		}
     }
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -8846,6 +8849,7 @@ estate_church_develop_x = {
 		}
     }
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10

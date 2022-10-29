@@ -105,7 +105,7 @@ sea_KLU_ideas = { # Kalmar Union
 		global_manpower_modifier = 0.20
 	}
 	klu_swedish_absolutism = {
-		stability_cost_modifier = -0.1
+		max_absolutism = 10
 		yearly_absolutism = 1
 	}
 	klu_nor_fishing = {
@@ -113,7 +113,7 @@ sea_KLU_ideas = { # Kalmar Union
 		global_trade_goods_size_modifier = 0.1
 	}
 	klu_nor_shipbuilding = {
-		global_ship_cost = -0.1
+		global_ship_cost = -0.15
 		naval_maintenance_modifier = -0.15
 	}
 	klu_indelningsverket = {
@@ -121,6 +121,7 @@ sea_KLU_ideas = { # Kalmar Union
 	}
 	klu_den_danske_lov = {
 		global_unrest = -1
+		global_allowed_num_of_buildings = 1
 	}
 }
 sea_NSE_ideas = { # North Sea Empire
@@ -164,7 +165,7 @@ sea_NSE_ideas = { # North Sea Empire
 		naval_forcelimit_modifier = 0.5
 	}
 	nse_united_under_single_banner = {
-		global_unrest = -1
+		max_absolutism = 10
 		years_of_nationalism = -5
 	}
 }

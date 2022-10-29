@@ -237,6 +237,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_estate_entry_new"
+		texturefile = "gfx/interface/estate_interface/estate_entry_new.dds"
+	}
+
+	spriteType = {
 		name = "GFX_build_interface_development_tab"
 		texturefile = "gfx//interface//build_interface_development_tab.dds"
 		noOfFrames = 2

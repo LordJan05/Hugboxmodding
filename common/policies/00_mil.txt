@@ -231,7 +231,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.2
+	infantry_power = 0.15
 
 	ai_will_do = {
 		factor = 1000
@@ -733,7 +733,8 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.20
+	nobles_loyalty_modifier = 0.1
+	cavalry_power = 0.15
 	cav_to_inf_ratio = 0.25
 	
 	ai_will_do = {
@@ -816,7 +817,8 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.33
+	global_manpower_modifier = 0.25
+	infantry_power = 0.1
 
 	ai_will_do = {
 		factor = 0

@@ -861,6 +861,83 @@ generate_scaled_advisor_of_type_and_religion_effect = {
 	}
 }
 
+#Use this one if you just want a scaling advisor with cost multiplier
+generate_scaled_advisor_of_type_and_cost_effect = {
+	if = {
+		limit = {
+			NOT = { monthly_income = 15 }
+		}
+		define_advisor = {
+			type = $type$
+			skill = 1
+			cost_multiplier = $cost_multiplier$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { monthly_income = 25 }
+		}
+		define_advisor = {
+			type = $type$
+			skill = 2
+			cost_multiplier = $cost_multiplier$
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $type$
+			skill = 3
+			cost_multiplier = $cost_multiplier$
+		}
+	}
+}
+
+#Use this one if you want to give as much details as possible for your advisor
+generate_very_specific_scaling_advisor_effect = {
+	if = {
+		limit = {
+			NOT = { monthly_income = 15 }
+		}
+		define_advisor = {
+			type = $type$
+			skill = 1
+			name = $name$
+			location = $location$
+			cost_multiplier = $cost_multiplier$
+			female = $female$
+			culture = $culture$
+			religion = $religion$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { monthly_income = 25 }
+		}
+		define_advisor = {
+			type = $type$
+			skill = 2
+			name = $name$
+			location = $location$
+			cost_multiplier = $cost_multiplier$
+			female = $female$
+			culture = $culture$
+			religion = $religion$
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $type$
+			skill = 3
+			name = $name$
+			location = $location$
+			cost_multiplier = $cost_multiplier$
+			female = $female$
+			culture = $culture$
+			religion = $religion$
+		}
+	}
+}
+
 pick_type_of_military_advisor = {
 	random_list = {
 		1 = { set_country_flag = generate_army_reformer }
@@ -882,6 +959,10 @@ pick_type_of_military_advisor = {
 		1 = { set_country_flag = advisor_morale_recovery }
 		1 = { set_country_flag = advisor_land_attrition }
 		1 = { set_country_flag = advisor_siege_ability }
+		1 = { set_country_flag = advisor_drill_gain }
+		1 = { set_country_flag = advisor_drill_decay }
+		1 = { set_country_flag = advisor_morale_damage }
+		1 = { set_country_flag = advisor_morale_damage_received }
 	}
 }
 
@@ -905,6 +986,10 @@ clear_random_military_advisor_generation_flags = {
 	clr_country_flag = advisor_morale_recovery
 	clr_country_flag = advisor_land_attrition
 	clr_country_flag = advisor_siege_ability
+	clr_country_flag = advisor_drill_gain
+	clr_country_flag = advisor_drill_decay
+	clr_country_flag = advisor_morale_damage
+	clr_country_flag = advisor_morale_damage_received
 }
 
 #Needs you to have executed pick_type_of_military_advisor
@@ -1040,6 +1125,34 @@ generate_scaled_military_advisor_of_religion_effect = {
 		generate_grand_captain = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
 				type = advisor_siege_ability
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_grand_captain = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = advisor_drill_gain
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_grand_captain = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = advisor_drill_decay
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_grand_captain = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = advisor_morale_damage
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_grand_captain = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = advisor_morale_damage_received
 				religion = $religion$
 				discount = $discount$
 			}
@@ -1771,6 +1884,38 @@ generate_traitor_advisor_effect = {
 					type = advisor_siege_ability
 				}
 			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = advisor_drill_gain
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = advisor_drill_decay
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = advisor_morale_damage
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = advisor_morale_damage_received
+				}
+			}
 		}
 	}
 }
@@ -1887,6 +2032,10 @@ kill_advisor_by_category_effect = {
 			advisor_morale_recovery = { kill_advisor = advisor_morale_recovery }
 			advisor_land_attrition = { kill_advisor = advisor_land_attrition }
 			advisor_siege_ability = { kill_advisor = advisor_siege_ability }
+			advisor_drill_gain = { kill_advisor = advisor_drill_gain }
+			advisor_drill_decay = { kill_advisor = advisor_drill_decay }
+			advisor_morale_damage = { kill_advisor = advisor_morale_damage }
+			advisor_morale_damage_received = { kill_advisor = advisor_morale_damage_received }
 		}
 	]
 }

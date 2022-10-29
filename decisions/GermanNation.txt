@@ -24,17 +24,14 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { exists = GER }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					NOT = { government = theocracy }
-				}
-			}
 			culture_group = germanic
 			NOT = { primary_culture = dutch }
 			is_colonial_nation = no
@@ -44,6 +41,10 @@ country_decisions = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
+			}
+			OR = {
+				has_country_flag = teu_can_form_germany
+				NOT = { has_mission = teu_pru_an_empire_of_blood_and_iron }	#Mission already makes you to Germany
 			}
 		}
 		provinces_to_highlight = {
@@ -91,7 +92,6 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			is_emperor = no
 			owns_core_province = 50	# Berlin
 			owns_core_province = 57	# Brunswick
 			owns_core_province = 65	# München
@@ -118,15 +118,23 @@ country_decisions = {
 		effect = {
 			change_tag = GER
 			restore_country_name_effect = yes
-			emperor = {
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
+			if = {
+				limit = {
+					is_emperor = yes
 				}
+				dismantle_hre = yes
 			}
-			set_in_empire = no
-			emperor = {
-				country_event = { id = hre_event.5 }
+			else = {
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = {
+					country_event = { id = hre_event.5 }
+				}
 			}
 			GER = { set_government_rank = 3 }
 			north_german_region = {
@@ -194,10 +202,14 @@ country_decisions = {
 			set_country_flag = formed_rhineland_flag
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 			modifier = {
 				factor = 0
-				tag = HAB
+				NOT = { adm_tech = 18 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_owned_provinces_with = { OR = { region = north_german_region region = south_german_region } value = 25 } }
 			}
 		}
 	}

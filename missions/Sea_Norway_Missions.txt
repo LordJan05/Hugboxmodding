@@ -9,6 +9,7 @@ sealand_norway_missions_5 = {
 		}
 		NOT = { has_country_flag = no_nor_missions_for_you }
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 	}
 	has_country_shield = yes
 
@@ -213,6 +214,7 @@ sealand_norway_missions_4 = {
 		}
 		NOT = { has_country_flag = no_nor_missions_for_you }
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 	}
 	has_country_shield = yes
 
@@ -504,6 +506,7 @@ sealand_norway_missions_3 = {
 		}
 		NOT = { has_country_flag = no_nor_missions_for_you }
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 	}
 	has_country_shield = yes
 	
@@ -997,6 +1000,7 @@ sealand_norway_missions_2 = {
 		}
 		NOT = { has_country_flag = no_nor_missions_for_you }
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 	}
 	has_country_shield = yes
 
@@ -1250,6 +1254,7 @@ sealand_norway_missions_1 = {
 		}
 		NOT = { has_country_flag = no_nor_missions_for_you }
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 	}
 	has_country_shield = yes
 

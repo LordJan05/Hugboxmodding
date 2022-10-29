@@ -437,7 +437,7 @@ country_decisions = { # Serbia Tsardom
 					government = republic
 					is_revolutionary = no
 				}
-				add_government_reform = veche_tsardom
+				add_government_reform = great_veche_republic
 			}
 			if = {
 				limit = {
@@ -1716,13 +1716,14 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = united_finland_flag
-			change_tag = FIN 
+			change_tag = FIN
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					government = republic
 					is_revolutionary = no
 				}
-				add_government_reform = veche_tsardom
+				add_government_reform = great_veche_republic
 			}
 			if = {
 				limit = {
@@ -1871,6 +1872,132 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	sea_new_world_primitives_heavy_ship_building = {
+		major = yes
+		potential = {
+			primitives = yes
+			ai = no
+		}
+		allow = {
+			primitives = yes
+			any_owned_province = {
+				has_port = yes
+				NOT = { has_construction = navy }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						has_construction = navy
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+						NOT = { has_construction = navy }
+					}
+					add_unit_construction = {
+						type = heavy_ship
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					add_unit_construction = {
+						type = heavy_ship
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_new_world_primitives_light_ship_building = {
+		major = yes
+		potential = {
+			primitives = yes
+			ai = no
+		}
+		allow = {
+			primitives = yes
+			any_owned_province = {
+				has_port = yes
+				NOT = { has_construction = navy }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						has_construction = navy
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+						NOT = { has_construction = navy }
+					}
+					add_unit_construction = {
+						type = light_ship
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					add_unit_construction = {
+						type = light_ship
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_new_world_primitives_galley_ship_building = {
+		major = yes
+		potential = {
+			primitives = yes
+			ai = no
+		}
+		allow = {
+			primitives = yes
+			any_owned_province = {
+				has_port = yes
+				NOT = { has_construction = navy }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						has_construction = navy
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+						NOT = { has_construction = navy }
+					}
+					add_unit_construction = {
+						type = galley
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					add_unit_construction = {
+						type = galley
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	sea_get_specific_advisor = {
 		major = yes
 		potential = { 
@@ -1882,6 +2009,24 @@ country_decisions = {
 		effect = {
 			set_country_flag = sea_get_specific_advisor_flag
 			country_event = { id = sea_advisor_event.0 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	recruit_40_trad_general = {
+		major = yes
+		potential = { 
+			NOT = { has_country_flag = recruit_40_trad_general_flag }
+		}
+		allow = {
+			mil_power = 50
+		}
+		effect = {
+			set_country_flag = recruit_40_trad_general_flag
+			add_mil_power = -50
+			create_general = { tradition = 40 }
+			add_army_professionalism = 0.01
 		}
 		ai_will_do = {
 			factor = 0
@@ -2810,8 +2955,34 @@ country_decisions = {
 	}
 }
 
-# Imperial Japan, Takeda
+# Imperial Japan, Takeda, Canal
 country_decisions = {
+	korea_japan_bridge_decision = {
+		major = yes
+		potential = {
+			is_year = 1500
+			NOT = { has_country_flag = korea_japan_bridge_flag }
+			OR = {
+				owns_or_vassal_of = 4651
+				owns_or_vassal_of = 2745
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 4651
+		}
+		allow = {
+			owns_or_vassal_of = 4651
+			owns_or_vassal_of = 2745
+		}
+		effect = {
+			custom_tooltip = korea_japan_bridge_decision_tt
+			set_country_flag = korea_japan_bridge_flag
+			4651 = { set_province_flag = korea_japan_bridge_province_flag }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	takeda_horde_decision = {
 		major = yes
 		potential = {

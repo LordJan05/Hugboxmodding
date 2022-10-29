@@ -798,7 +798,14 @@ gold = {
 		}
 		modifier = {
 			factor = 100
-			province_id = 856
+			OR = {
+				province_id = 856
+				province_id = 4976
+				province_id = 4974
+				province_id = 4997
+				province_id = 1089
+				province_id = 1091
+			}
 		}
 	}
 }

@@ -938,6 +938,10 @@ australia_region = {
 		pilbara_area
 		tasmania_area
 		coastal_outback_area # Hunter
+		# Sealand:
+		darling_area
+		goldfields_area
+		tanami_area
 	}
 	monsoon = {
 		00.10.01

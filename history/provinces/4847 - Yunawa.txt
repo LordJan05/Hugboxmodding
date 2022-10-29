@@ -1,6 +1,6 @@
 #4847 - Yunawa
 
-culture = paman
+culture = gunwinyguan
 religion = dreamtime
 capital = "Yunawa"
 hre = no

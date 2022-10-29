@@ -123,9 +123,9 @@ change_estate_land_share = {
 	monarch = {
 		name = "Ibrahim"
 		dynasty = "Srivijaya"
-		adm = 1
-		dip = 2
-		mil = 1
+		adm = 3
+		dip = 4
+		mil = 3
 		religion = hinduism
 	}
 }

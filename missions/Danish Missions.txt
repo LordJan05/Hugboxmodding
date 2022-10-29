@@ -4,6 +4,7 @@ sealand_denmark_missions_1 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -278,6 +279,7 @@ sealand_denmark_missions_2 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -653,6 +655,7 @@ sealand_denmark_missions_3 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -873,6 +876,7 @@ sealand_denmark_missions_4 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1243,6 +1247,7 @@ danish_missions_baltic = {
 	ai = yes
 	potential = {
 		tag = DAN
+		NOT = { has_dlc = "Lions of the North" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

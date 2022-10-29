@@ -14,7 +14,7 @@ check_num_of_banners = {
 		}
 		change_variable = {
 			which = banner_forcelimit
-			value = 20
+			value = 10
 		}
 		set_variable = {
 			which = banner_checks

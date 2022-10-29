@@ -3794,6 +3794,7 @@ country_event = {
 			OR = {
 				consort_has_personality_ancestor = { key = just }
 				consort_has_personality_ancestor = { key = lawgiver }
+				consort_has_personality_ancestor = { key = reformist }
 				consort_has_personality_ancestor = { key = righteous }
 				consort_has_personality_ancestor = { key = tolerant }
 				consort_has_personality_ancestor = { key = incorruptible }
@@ -3829,6 +3830,7 @@ country_event = {
 			OR = {
 				consort_has_personality_ancestor = { key = just }
 				consort_has_personality_ancestor = { key = lawgiver }
+				consort_has_personality_ancestor = { key = reformist }
 				consort_has_personality_ancestor = { key = righteous }
 				consort_has_personality_ancestor = { key = tolerant }
 				consort_has_personality_ancestor = { key = incorruptible }

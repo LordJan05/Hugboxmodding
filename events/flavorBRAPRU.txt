@@ -1,7 +1,7 @@
 ########################################
 # Flavor Events for Brandenburg - Prussia
 #
-# written by Sara Wendel-Ã–rtqvist
+# written by Sara Wendel-Örtqvist
 ########################################
 
 namespace = flavor_brapru
@@ -219,7 +219,8 @@ country_event = {
 		OR = {
 			has_country_flag = brapru_army_reforms_2
 			AND = {
-				NOT = { has_dlc = "Emperor" }
+				NOT = { has_mission = teu_pru_army_reforms }
+				NOT = { has_mission = emp_brapru_army_reforms_2 }
 				tag = PRU
 				is_year = 1700
 			}
@@ -388,13 +389,13 @@ country_event = {
 	}
 }
 
-# University of KÃ¶nigsberg
+# University of Königsberg
 country_event = {
 	id = flavor_brapru.11
 	title = "flavor_brapru.EVTNAME3"
 	desc = "flavor_brapru.EVTDESC3"
 	picture = UNIVERSITY_eventPicture
-	
+	goto = 41
 	fire_only_once = yes
 	
 	trigger = {
@@ -405,6 +406,8 @@ country_event = {
 				OR = {
 					tag = BRA
 					tag = PRU
+					tag = GER
+					tag = HLR
 				}
 				owns = 41
 				is_year = 1540
@@ -425,12 +428,28 @@ country_event = {
 	option = {
 		name = "flavor_brapru.EVTOPTA3" #Sponsor the University
 		add_years_of_income = -0.25
-		add_prestige = 5
+		change_innovativeness = 2
 		add_adm_power = 100
+		41 = {
+			if = {
+				limit = { NOT = { has_building = university } }
+				add_building = university
+			}
+			add_province_modifier = {
+				name = teu_pru_university_of_konigsberg
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = "flavor_brapru.EVTOPTB3" #Do nothing
 		add_prestige = -1
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -546,10 +565,6 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	immediate = {
-		TEU = { set_country_flag = neumark_fate_flag }
-	}
-
 	trigger = {
 		NOT = { has_country_flag = fired_teutonic_event_for_neumark } # Because same-ish, event fired from Teuton mission # Sealand (using it to find my added stuff faster)
 		TEU = {
@@ -585,7 +600,7 @@ country_event = {
 	}
 	
 	immediate = { set_country_flag = fired_brandeburg_event_for_neumark } # To stop the other event from firing
-
+	
 	option = {
 		name = "flavor_brapru.15.a" #Offer the Teutons to pawn back Neumark for 40 000 Guilders
 		ai_chance = {
@@ -663,7 +678,7 @@ country_event = {
 	}
 }
 
-#Treaty of CÃ¶lln
+#Treaty of Cölln
 country_event = {
 	id = flavor_brapru.17
 	title = "flavor_brapru.17.t"
@@ -1060,7 +1075,7 @@ country_event = {
 			}
 		}
 	}
-	option = {  #This is only a problem in families that donâ€™t stick together.
+	option = {  #This is only a problem in families that don’t stick together.
 		name = flavor_brapru.25.b
 		ai_chance = { factor = 50 }
 		#Keep union over Ansbach and suffer internal instability OR you dont have Ansbach and your choice is the modifier above or a stab/prestige bonus instead. Emperor will dislike you regardless.
@@ -1177,6 +1192,8 @@ country_event = {
 				OR = {
 					tag = PRU
 					tag = BRA
+					tag = GER
+					tag = HLR
 				}
 				is_year = 1730
 				NOT = { is_year = 1790 }
@@ -1191,8 +1208,12 @@ country_event = {
 			has_country_flag = hired_cocceji
 		}
 	}
+
+	immediate = {
+		hidden_effect = { set_country_flag = pru_legal_reforms_flag }
+	}
 	
-	option = { #Yes! Start in Godâ€™s name!
+	option = { #Yes! Start in God’s name!
 		name = flavor_brapru.27.a
 		ai_chance = {
 			factor = 75
@@ -1209,7 +1230,7 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = { #We have no time for legal Procedure and other formalitiesâ€¦
+	option = { #We have no time for legal Procedure and other formalities…
 		name = flavor_brapru.27.b
 		ai_chance = {
 			factor = 25
@@ -1391,7 +1412,7 @@ country_event = {
 	}
 }
 
-# The Burghers of KÃ¶nigsberg (Hieronymus Roth)
+# The Burghers of Königsberg (Hieronymus Roth)
 country_event = {
 	id = flavor_brapru.30
 	title = flavor_brapru.30.t
@@ -1682,7 +1703,7 @@ country_event = {
 	}
 }
 
-# Construction of Canals to Berlin-CÃ¶lln has run out of funding
+# Construction of Canals to Berlin-Cölln has run out of funding
 country_event = {
 	id = flavor_brapru.34
 	title = "flavor_brapru.34.t"
@@ -1797,7 +1818,7 @@ country_event = {
 		add_prestige = 10
 		define_advisor = {
 			type = artist
-			name = "Johann CrÃ¼ger"
+			name = "Johann Crüger"
 			skill = 3
 			discount = yes
 		}

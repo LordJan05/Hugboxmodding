@@ -10,6 +10,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { exists = LAT }
 			NOT = { exists = BYZ }
 			NOT = { exists = GRE }
@@ -73,6 +77,7 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = LAT
+			restore_country_name = yes
 			if = {
 				limit = {
 					NOT = { culture_group = byzantine }

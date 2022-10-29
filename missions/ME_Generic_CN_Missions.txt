@@ -12,6 +12,15 @@ CN_Generic_missions_1 = {
 		position = 1
 		required_missions = { }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				marketplace = 3
 				trade_depot = 3
@@ -34,6 +43,15 @@ CN_Generic_missions_1 = {
 		position = 2
 		required_missions = { CN_forming_a_merchant_case }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			home_trade_node = {
 				has_most_province_trade_power = ROOT
 			}
@@ -76,6 +94,15 @@ CN_Generic_missions_1 = {
 		trigger = {
 			if = {
 				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			if = {
+				limit = {
 					ai = yes
 				}
 				any_owned_province = {
@@ -110,6 +137,15 @@ CN_Generic_missions_2 = {
 		position = 1
 		required_missions = { }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			if = {
 				limit = {
 					ai = yes
@@ -158,6 +194,15 @@ CN_Generic_missions_2 = {
 		position = 3
 		required_missions = { CN_encourage_immigration }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			num_of_owned_provinces_with = {
 				value = 10
 				OR = {
@@ -179,6 +224,15 @@ CN_Generic_missions_2 = {
 		position = 4
 		required_missions = { CN_colonial_laws }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				num_of_allies = 2
 				any_country = {
@@ -210,6 +264,15 @@ CN_Generic_missions_2 = {
 		position = 7
 		required_missions = { CN_workshops }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				# gold = 3
 				production_leader = {
@@ -351,6 +414,15 @@ CN_Generic_missions_3 = {
 		position = 2
 		required_missions = { CN_encourage_immigration CN_beyond_our_borders }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			#custom_trigger_tooltip = {
 			#	tooltip = HAS_COLONIAL_ASSEMBLY
 			#	has_country_flag = colonial_assembly
@@ -370,6 +442,15 @@ CN_Generic_missions_3 = {
 		position = 3
 		required_missions = { CN_colonial_assembly }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				NOT = { average_autonomy_above_min = 10 }
 				absolutism = 30
@@ -384,6 +465,15 @@ CN_Generic_missions_3 = {
 		position = 5
 		required_missions = { CN_support CN_colonial_laws CN_army }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			custom_trigger_tooltip = {
 				tooltip = sealand_CN_colonial_independence_tt
 				is_former_colonial_nation = yes
@@ -401,6 +491,15 @@ CN_Generic_missions_3 = {
 		position = 6
 		required_missions = { }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				workshop = 5
 				counting_house = 5
@@ -419,6 +518,15 @@ CN_Generic_missions_3 = {
 		position = 7
 		required_missions = { CN_workshops }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			num_of_owned_manufactory_combined_trigger = { amount = 10 }
 		}
 		effect = {
@@ -491,6 +599,15 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				num_of_owned_provinces_with = {
 					value = 3
@@ -547,6 +664,15 @@ CN_Generic_missions_4 = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				grown_by_development = 75
 				grown_by_states = 3
@@ -604,6 +730,15 @@ CN_Generic_missions_4 = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			capital_scope = {
 				region_for_scope_province = {
 					type = all
@@ -633,6 +768,15 @@ CN_Generic_missions_4 = {
 		position = 4
 		required_missions = { CN_colonial_laws }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			calc_true_if = {
 				army_size_percentage = 1
 				manpower_percentage = 1
@@ -653,6 +797,15 @@ CN_Generic_missions_4 = {
 		position = 7
 		required_missions = { CN_workshops }
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				mercantilism = 20
 				has_idea = shrewd_commerce_practise
@@ -699,6 +852,15 @@ CN_Generic_missions_5 = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			num_of_owned_provinces_with = {
 				value = 10
 				any_province = {
@@ -729,6 +891,15 @@ CN_Generic_missions_5 = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			OR = {
 				num_of_colonies = 2
 				capital_scope = {
@@ -758,6 +929,15 @@ CN_Generic_missions_5 = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
 			capital_scope = {
 				region_for_scope_province = {
 					type = all

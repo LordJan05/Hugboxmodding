@@ -16,20 +16,6 @@ gc_por_1 = {
 	}
 	has_country_shield = yes
 
-	sea_por_second_chance = {
-		icon = mission_establish_high_seas_navy
-		required_missions = { }
-		position = 1
-
-		trigger = {
-			NOT = { num_of_explorers = 1 }
-		}
-	
-		effect = {
-			create_explorer = { tradition = 10 }
-		}
-	}
-
 	gc_por_portugal_discovers_south_america = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { gc_por_discover_african_coast }

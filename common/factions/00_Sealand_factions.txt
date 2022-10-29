@@ -20,7 +20,7 @@ sea_por_explo = {
 		sailor_maintenance_modifer = 0.2
 		global_ship_repair = -0.2
 		ship_durability = 0.15
-		range = 0.15
+		range = 0.2
 		colonists = 1
 		colonist_placement_chance = 0.1
 	}

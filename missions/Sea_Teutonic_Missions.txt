@@ -1,8 +1,10 @@
+# Removed, because PDX made their own but still keeping for memories. Prussian Confederation might need some fixing to work properly.
 sealand_teutonic_missions_0_1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_centralize_the_order_flag }
@@ -42,7 +44,7 @@ sealand_teutonic_missions_0_1 = {
 			}
 			clr_country_flag = chose_join_the_empire_flag
 			set_in_empire = yes
-			set_country_flag = enable_prussian_confederation_decision
+			set_country_flag = enable_prussian_confederation_decision # Was for Prussian confederation decision.
 			vorpommern_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -80,6 +82,7 @@ sealand_teutonic_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -336,6 +339,7 @@ sealand_teutonic_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -466,6 +470,7 @@ sealand_teutonic_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -1154,6 +1159,7 @@ sealand_teutonic_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -1333,6 +1339,7 @@ sealand_teutonic_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
+		always = no
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }

@@ -1,5 +1,7 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 #############################################
+4651;2745;canal;4657;-1;-1;-1;-1;Tsushima-Gyeongju JAPAN
+1818;4651;sea;1376;-1;-1;-1;-1;Chikuzen-Tsushima JAPAN
 5528;666;sea;1370;-1;-1;-1;-1;Zhanhjing-Kiungchow China
 1033;1031;sea;1386;-1;-1;-1;-1;Sakhalin-Peni'un'kur JAPAN
 2154;1829;sea;1372;-1;-1;-1;-1;Xiamen-Kelang TAIWAN

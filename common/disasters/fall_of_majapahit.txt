@@ -7,6 +7,7 @@ fall_of_majapahit = {
 		is_free_or_tributary_trigger = yes
 		normal_or_historical_nations = yes
 		tag = MAJ
+		always = no
 	}
 	
 	can_start = {
@@ -26,7 +27,7 @@ fall_of_majapahit = {
 	}
 	
 	can_end = {
-		mission_completed = mnd_maj_end_disaster
+		#mission_completed = mnd_maj_end_disaster
 	}
 	
 

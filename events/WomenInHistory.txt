@@ -1512,7 +1512,7 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				has_reform = pirate_republic_reform
+				has_government_attribute = is_pirate_republic_reform
 				has_global_flag = grace_omalley_flag
 			}
 			AND = {
@@ -2710,7 +2710,7 @@ country_event = {
 		add_meritocracy_effect = yes
 		if = {
 			limit = {
-				primary_culture = vietnamese_new
+				has_global_flag = sinicized_vietnamese_flag
 			}
 			define_advisor = {
 				female = yes
@@ -5993,6 +5993,7 @@ country_event = {
 		OR = {
 			tag = SWE
 			tag = SCA
+			tag = KLU
 		}
 		is_year = 1608
 		NOT = {
@@ -6741,7 +6742,7 @@ country_event = {
 		add_meritocracy_effect = yes
 		if = {
 			limit = {
-				primary_culture = korean_new
+				has_global_flag = sinicized_korean_flag
 			}
 			define_advisor = {
 				name = "Heo Nanseolheon"
