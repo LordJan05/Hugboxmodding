@@ -409,6 +409,15 @@ hun_ottoman_group = {
 			LAT = {
 				add_core = 151 # Constantinople
 			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = BYZ
+					}
+					add_core = LAT
+					remove_core = BYZ
+				}
+			}
 			if = {
 				limit = { has_global_flag = hagia_sophia_now_mosque }
 				clr_global_flag = hagia_sophia_now_mosque

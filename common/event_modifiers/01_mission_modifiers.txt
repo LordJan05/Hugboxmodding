@@ -1146,8 +1146,8 @@ nor_control_over_west_africa = {
 }
 
 nor_defender_of_the_catholic_faith = {
-	papal_influence = 1
-	curia_powers_cost = -0.2
+	papal_influence = 2
+	#curia_powers_cost = -0.2
 	religion = yes
 }
 
@@ -7248,8 +7248,8 @@ lit_wave_piety_modifier = {
 	tolerance_own = 2 
 }
 canonization_of_casimir_modifier = {
-	papal_influence = 2 
-	curia_powers_cost = -0.33
+	papal_influence = 3
+	#curia_powers_cost = -0.33
 }
 lit_privilege_vilnius_modifier = {
 	tolerance_of_heretics_capacity = 1 

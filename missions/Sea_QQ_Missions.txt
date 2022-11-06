@@ -854,6 +854,9 @@ sealand_qq_missions_3_5 = {
 			2302 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			428 = {
+				is_state = yes
+			}
 		}
 		effect = {
 			hidden_effect = {

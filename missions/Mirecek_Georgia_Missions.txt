@@ -602,16 +602,15 @@ georgia_4_missions = {
 		#provinces_to_highlight = {
 		#}
 		trigger = {
-			treasury = 100
+			is_in_war = { defender_leader = ROOT }
+			treasury = 200
 		}
 		effect = {
-			capital_scope = {
-				add_province_modifier = {
-					name = georgia_defence
-					duration = 3650
-				}
+			add_country_modifier = {
+				name = georgia_defence
+				duration = 5475
 			}
-			add_treasury = -100
+			add_treasury = -200
 		}
 	}
 
@@ -619,7 +618,6 @@ georgia_4_missions = {
 		icon = mission_empire
 		position = 3
 		required_missions = { georgia_conquer_shirvan }
-		required_missions = { georgia_revenge_on_hordes }
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -661,29 +659,16 @@ georgia_4_missions = {
 			}
 		}
 		trigger = {
-			armenia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			samtskhe_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			imereti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			circassia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			dagestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_owned_provinces_with = {
+				OR = {
+					area = armenia_area
+					area = shirvan_area
+					area = samtskhe_area
+					area = imereti_area
+					area = circassia_area
+					area = dagestan_area
+				}
+				value = 16
 			}
 		}
 		effect = {

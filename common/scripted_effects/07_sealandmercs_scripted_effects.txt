@@ -47,6 +47,7 @@ set_banner_fl_modifiers = {
 			limit = {
 				culture = ROOT
 				is_core = ROOT
+				is_state = yes
 				is_state_core = ROOT
 			}
 			set_province_flag = sealand_banners_fl_base_flag

@@ -152,7 +152,7 @@ arctic = {
 	local_hostile_attrition = 1
 
 	allowed_num_of_buildings = -1
-	local_development_cost = 0.5
+	local_development_cost = 0.25
 
 	picture = "climate_arctic"
 }
@@ -1046,6 +1046,7 @@ militarized_society = {
 	movement_speed = 0.2
 	land_maintenance_modifier = 0.20
 	reinforce_speed = 0.33
+	discipline = 0.025
 }
 
 
@@ -1817,6 +1818,7 @@ cawa_regiment = {
 	#land_attrition = -0.25
 	#reinforce_cost_modifier = 0.25
 	#reinforce_speed = -0.25
+	regiment_manpower_usage = -0.5
 }
 
 hussars_regiment = {
@@ -1832,7 +1834,7 @@ marine_regiment = {
 
 banner_regiment = {
 	discipline = -0.05
-	land_maintenance_modifier = 4
+	land_maintenance_modifier = 1
 	#reinforce_speed = -0.5
 	regiment_manpower_usage = -1
 }

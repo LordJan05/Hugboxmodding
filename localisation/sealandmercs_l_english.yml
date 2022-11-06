@@ -11,3 +11,13 @@
   sealand_cawa_fl_base:0 "" # Base Forcelimit for Infantry Only Mercenaries
   sealand_banners_fl_base:0 "" # Base Forcelimit for Banners Mercenaries
   sealand_cawa_base_maintenance:0 "" # Base Maintenance Cost for Infantry Only Mercenaries
+  sealand_banners_fl_base_512:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_256:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_128:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_64:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_32:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_16:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_8:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_4:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_2:0 "Mercenaries Base Forcelimit"
+  sealand_banners_fl_base_1:0 "Mercenaries Base Forcelimit"

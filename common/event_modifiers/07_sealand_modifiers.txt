@@ -567,6 +567,10 @@ zan_great_kilwa_gold_modifier = {
 }
 ##########################################
 # Castille/Spain:
+focus_on_france_modifier = {
+	discipline = 0.05
+	reinforce_speed = 0.2
+}
 tercios_special_pike_units = {
 	fire_damage = 0.1
 	shock_damage_received = -0.3

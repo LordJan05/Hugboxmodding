@@ -1663,6 +1663,7 @@ mug_rajput_branch = {
 				}
 			}
 			524 = {
+				is_state = yes
 				owned_by = ROOT
 				has_building = cathedral
 				OR = {

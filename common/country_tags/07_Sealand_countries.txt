@@ -5,7 +5,7 @@ KLU = "countries/SeaKalmarUnion.txt"
 ABA = "countries/SeaAbbasidCaliphate.txt"
 GMV = "countries/SeaGreatMoravia.txt"
 LUS = "countries/SeaLusitania.txt"
-PRA = "countries/SeaPrussia2.txt"
+PRA = "countries/SeaPrussia2.txt" # North German Confederation
 OSM = "countries/SeaOttomanEmpire.txt"
 AUE = "countries/SeaAustrianEmpire.txt"
 AHE = "countries/SeaAustroHungarianEmpire.txt"
@@ -22,6 +22,8 @@ IJP = "countries/SeaImperialJapan.txt"
 ANG = "countries/SeaAngevinEmpire.txt"
 RHI = "countries/SeaRhineConfederation.txt"
 LAT = "countries/SeaLatinEmpire.txt"
+RSH = "countries/SeaRashidunCaliphate.txt"
+RPR = "countries/SeaPrussia3.txt" # Ducal Prussia
 
 SEX = "countries/SeaPayPalStates.txt"
 AGL = "countries/Angoulême.txt"

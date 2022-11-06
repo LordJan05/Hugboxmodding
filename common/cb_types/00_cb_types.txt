@@ -1253,7 +1253,6 @@ cb_chinese_unification = {
 	valid_for_subject = no
 
 	prerequisites = {
-		always = yes
 		is_free_or_tributary_trigger = yes
 		OR = {
 			AND = {

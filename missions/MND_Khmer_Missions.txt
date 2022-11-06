@@ -23,6 +23,7 @@ mnd_khmer_1 = {
 		}
 		trigger = {
 			609 = {
+				is_state = yes
 				development = 15
 				OR = { 
 					has_great_project = {

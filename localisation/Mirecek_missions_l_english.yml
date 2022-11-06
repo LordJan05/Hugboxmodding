@@ -100,8 +100,8 @@
   georgia_crush_the_heatens_desc:0 "The people of Shirvan and beyond have been brainwashed by the Muslim invaders, it is time for us to enlighten our people and show them the one and only faith, no matter if with the power of words or the power of sword."
   georgia_control_persia_title:0 "Control over Persia"
   georgia_control_persia_desc:0 "At last, Persia is ours and with it all it's riches as well! Glory to Georgia!"
-  georgia_defense_of_capital_desc:0 "Our capital, although it's people are willing to fight to the last man, they are not able to do that without proper defences and equipment. We must secure its protection from the invaders all around us."
-  georgia_defense_of_capital_title:0 "Defence of the Capital"
+  georgia_defense_of_capital_desc:0 "Although our people are willing to fight to the last man, they are not able to do that without proper defences and equipment. We must secure our lands protection from the invaders all around us."
+  georgia_defense_of_capital_title:0 "Defend Our Georgia"
   georgia_oh_mighty_georgia_title:0 "Oh Mighty Georgia!"
   georgia_oh_mighty_georgia_desc:0 "At last, Georgia is united and so is its glory!"
   georgia_revenge_on_hordes_desc:0 "The mongolians might have taken our lands years ago, but today marks the day that we take it back, and with it the heads of anyone that might attempt to oppose us as well."
@@ -130,3 +130,5 @@
   georgia_dev:0 "Gold of Imereti"
   georgia_wine:0 "Georgian Wine"
   georgia_manganese:0 "Manganese Deposits"
+  
+  georgia_local_fort_buff:0 "Home Frontier"

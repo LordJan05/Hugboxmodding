@@ -54,6 +54,7 @@ npl_palpa_maintenance_mission_reward = {
 georgia_strenght_is_in_unity_mod = {
 	global_regiment_cost = -0.10
 	land_morale = 0.05
+	can_bypass_forts = yes
 }
 georgia_crusade_against_ottomans = {
 	siege_ability = 0.10
@@ -61,7 +62,9 @@ georgia_crusade_against_ottomans = {
 	shock_damage_received = -0.10
 }
 georgia_defence = {
-	fort_level = 1
+	own_territory_dice_roll_bonus = 1
+	hostile_attrition = 1
+	max_hostile_attrition = 1
 }
 georgia_trebizond_defence = {
 	local_defensiveness = 0.2
@@ -108,4 +111,9 @@ georgia_wine = {
 }
 georgia_manganese = {
 	global_trade_goods_size_modifier = 0.1
+}
+
+georgia_local_fort_buff = {
+	local_fort_maintenance_modifier = -0.5
+	local_defensiveness = 0.33
 }

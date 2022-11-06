@@ -898,6 +898,7 @@ veche_republic = {
 		merchants = 1
 		governing_capacity = 100
 		max_absolutism = 10
+		land_morale = 0.05
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -2543,7 +2544,7 @@ presidential_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		embracement_cost = -0.1
-		max_absolutism = 5
+		max_absolutism = 10
 		mercantilism_cost = -0.5
 	}
 	ai = {

@@ -195,14 +195,24 @@ country_decisions = {
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
 			}
 			east_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = RPR
+					}
+					add_core = PRU
+				}
 			}
 			capital_scope = {
 				change_culture = prussian
@@ -286,14 +296,24 @@ country_decisions = {
 			east_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
 			}
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = RPR
+					}
+					add_core = PRU
+				}
 			}
 			add_prestige = 25
 			hidden_effect = {
@@ -479,14 +499,24 @@ country_decisions = {
 			east_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
 			}
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { is_core = RPR }
 				}
 				add_permanent_claim = PRU
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = RPR
+					}
+					add_core = PRU
+				}
 			}
 			if =  {
 				limit = {

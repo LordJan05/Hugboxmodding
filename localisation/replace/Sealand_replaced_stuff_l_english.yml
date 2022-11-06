@@ -255,6 +255,7 @@
   spare_jolly_roger:0 "Hunt Pirates"
   spare_jolly_roger_desc:0 "Don't you hate when someone naval trolls you, by privateering your trade node?"
  # government:
+  mechanic_maratha_general_interaction_yes:2 "Enables the Marathas Estate Privilege '§YMaratha Military Leadership§!', which grants a maximum of §G+5%§! discipline and §R-15%§! tax income, scaled by Maratha land ownership."
   mechanic_allow_banners_yes:0 "Allows recruiting Mercenaries"
   mechanic_foreign_slave_rulers_yes:0 "Enables to Choose New Rulers on Death." # Changed because of only place to have ruler die with event, without getting new ruler beforehand, without using states-general mechanic.
   mechanic_foreign_slave_rulers_no:0 "Disables to Choose New Rulers on Death."
@@ -445,7 +446,7 @@
  # mare_nostrum:
   restore_roman_empire_title:0 "@ROM Restore the Roman Empire"
  # modifiers:
-  MODIFIER_AMOUNT_OF_BANNERS:0 "Possible Mercenaries"
+  MODIFIER_AMOUNT_OF_BANNERS:0 "Possible Mercenaries (in %)"
   MODIFIER_LOCAL_AMOUNT_OF_BANNERS:0 "Possible Local Mercenaries"
   MODIFIER_HAS_BANNERS:1 "Allows Mercenaries"
   habsburg_nation_title:1 "@HAB Reclaim the Archduchy of Austria"
@@ -608,7 +609,7 @@
   desc_gain_consort_aspect:0 "There are many eligible heirs in the nation to choose from. Given our current heir, we should consider getting someone more suitable."
   desc_expel_heretics_aspect:0 "The heretics are a danger to our religion and our culture. We should expel them from our land and send them to the New World.\n\nIf we own a colonial province then it gains §G100§! Population. Also increases Settler Chance by §G5.0%§!, Global Settler Increase by §G+15.00§! and Religious Unity by §G10.0%§! for §Y15 years§!.\nThere is a §Y33%§! chance that the colony adapts one of the §YHeretic§! religions."
  # scandinavia:
-  allow_earlier_scandinavia_formation_tt:0 "The country of §YScandinavia§! no longer needs an §YAdministrative Technology§! of §Y10§! to be formed."
+  allow_earlier_scandinavia_formation_tt:0 "The country of §YScandinavia§! no longer needs an §YAdministrative Technology§! of §Y15§! to be formed."
   swe_repay_estate_church_title:0 "@SWE Repay Debt to the [Root.GetChurchOrFallbackName]" # Estate logo?
   swe_repay_estate_burghers_title:0 "@SWE Repay Debt to the [Root.GetBurghersOrFallbackName]" # Estate logo?
   swe_repay_estate_nobles_title:0 "@SWE Repay Debt to the [Root.GetNobilityOrFallbackName]" # Estate logo?

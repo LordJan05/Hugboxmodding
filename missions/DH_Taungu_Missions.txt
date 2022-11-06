@@ -647,11 +647,11 @@ tau_slot_3 = {
 		}
 		trigger = {
 			586 = {
+				is_state = yes
 				#is_capital = yes
 				development = 20
 				owned_by = ROOT
 				is_core = ROOT
-				is_state_core = ROOT
 			}
 		}
 		effect = {

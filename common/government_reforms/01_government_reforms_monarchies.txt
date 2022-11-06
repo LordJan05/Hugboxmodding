@@ -1974,10 +1974,10 @@ livonian_trade_monarchy = {
 		burghers_influence_modifier = 0.1
 		governing_capacity_modifier = -0.5		
 	}
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	boost_income = yes
 	conditional = {
 		allow = {
@@ -2053,7 +2053,7 @@ livonian_theocratic_monarchy = {
 		no_stability_loss_on_monarch_death = yes
 	}
 	custom_attributes = {
-		enables_aristocratic_idea_group = no
+		#enables_aristocratic_idea_group = no
 		enables_divine_idea_group = yes
 	}
 }
@@ -2643,8 +2643,11 @@ grant_noble_castle_rights_reform = {
 			num_of_owned_provinces_with = {
 				OR = {
 					has_building = fort_15th
+					has_building = fort3
 					has_building = fort_16th
+					has_building = fort5
 					has_building = fort_17th
+					has_building = fort7
 					has_building = fort_18th
 				}
 				value = 5
@@ -2698,7 +2701,7 @@ grant_nobles_electorate_reform = {
 		is_revolutionary = no
 	}
 	trigger = {
-		has_idea_group = aristocracy_ideas
+		#has_idea_group = aristocracy_ideas
 		NOT = { has_reform = celestial_empire }
 	}
 	modifiers = {
@@ -2753,9 +2756,9 @@ blackmail_nobility_reform = {
 		is_revolutionary = no
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 	}
-	trigger = {
-		full_idea_group = spy_ideas
-	}
+	#trigger = {
+	#	full_idea_group = spy_ideas
+	#}
 	modifiers = {
 		nobles_influence_modifier = -0.15
 		maratha_exclusive_influence_modifier = -0.15
@@ -3618,7 +3621,7 @@ dyanstic_administration_reform = {
 		}
 	}
 	modifiers = {
-		yearly_corruption = 0.15
+		yearly_corruption = 0.1
 		all_estate_influence_modifier = -0.1
 		monarch_admin_power = 1
 		advisor_pool = 1
@@ -3927,8 +3930,8 @@ regional_representation_reform = {
 	icon = "assembly_hall"
 	allow_normal_conversion = yes
 	modifiers = {
-		min_autonomy_in_territories = -0.1
-		core_creation = -0.05
+		min_autonomy_in_territories = -0.2
+		core_creation = -0.1
 	}
 }
 
@@ -3947,7 +3950,7 @@ deified_monarchy_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.05
+		warscore_cost_vs_other_religion = -0.1
 		tolerance_own = 1
 	}
 	ai = {

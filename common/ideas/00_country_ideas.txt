@@ -4470,7 +4470,7 @@ GEO_ideas = {
 	free = yes
 	
 	bagrationi_dynasty = {
-		heir_chance = 0.5
+		own_territory_dice_roll_bonus = 1
 		legitimacy = 1
 	}
 	georgian_isolation = {

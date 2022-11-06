@@ -1393,19 +1393,34 @@ poland_sca_slot_2_e = {
 		effect = { 
 			4531 = { 
 				if = {
+					limit = { has_building = fort7 }
+					remove_building = fort7
+					add_building = fort_18th
+				}
+				else_if = {
 					limit = { has_building = fort_17th }
 					remove_building = fort_17th
-					add_building = fort_18th
+					add_building = fort7
+				}
+				else_if = {
+					limit = { has_building = fort5 }
+					remove_building = fort5
+					add_building = fort_17th
 				}
 				else_if = {
 					limit = { has_building = fort_16th }
 					remove_building = fort_16th
-					add_building = fort_17th
+					add_building = fort5
+				}
+				else_if = {
+					limit = { has_building = fort3 }
+					remove_building = fort3
+					add_building = fort_16th
 				}
 				else_if = {
 					limit = { has_building = fort_15th }
 					remove_building = fort_15th
-					add_building = fort_16th
+					add_building = fort3
 				}
 				add_province_modifier = { 
 					name = pol_fortified_border_modifier

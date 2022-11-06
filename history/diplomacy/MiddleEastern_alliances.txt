@@ -1,9 +1,3 @@
-guarantee = {
-	first = GEO
-	second = SME
-	start_date = 1444.1.1
-	end_date = 1446.12.1
-}
 vassal = {
 	first = QAR
 	second = BTL

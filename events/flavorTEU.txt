@@ -398,8 +398,8 @@ country_event = {
 		custom_tooltip = pol_delegate_the_formation_of_royal_prussia_tt
 		hidden_effect = {
 			DNZ = { 
-				change_tag = PRU
-				override_country_name = RPR
+				change_tag = RPR
+				#override_country_name = RPR
 				set_country_flag = is_RPR_flag
 			}
 		}

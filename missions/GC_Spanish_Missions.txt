@@ -19,6 +19,149 @@ gc_spain_1 = {
 	}
 	has_country_shield = yes
 
+	sea_unite_spain = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		completed_by = 1493.1.1
+
+		provinces_to_highlight = {
+			OR = {
+				area = basque_country
+				area = aragon_area
+				area = valencia_area
+				area = catalonia_area
+				area = galicia_area
+				area = asturias_area
+				area = leon_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			basque_country = {
+				type = all
+				owned_by = ROOT
+			}
+			aragon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			valencia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			catalonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			galicia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			leon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			asturias_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = sea_cas_united_spain_modifier_tt
+		}
+	}
+
+	gc_cas_spa_navarra = {
+		icon = mission_subjugate_navarra
+		required_missions = { gc_cas_spa_army_ready }
+		completed_by = 1493.1.1
+		position = 2
+
+		provinces_to_highlight = {
+			province_id = 210
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			210 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					210 = {
+						NOT = {
+							OR = {
+								has_building = fort_15th
+								has_building = fort3
+								has_building = fort_16th
+								has_building = fort5
+								has_building = fort_17th
+								has_building = fort7
+								has_building = fort_18th
+							}
+						}
+					}
+				}
+				210 = {
+					add_building = fort_15th
+				}
+			}
+			210 = {
+				add_province_modifier = {
+					name = "fortified_navarra"
+					duration = 7300
+				}
+			}
+			if = {
+				limit = {
+					exists = POR
+					valid_for_personal_unions_trigger = yes
+					POR = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				if = {
+					limit = {
+						mission_completed = gc_cas_spa_reconquista_one
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						months = 300
+						target = POR
+					}
+				}
+				else = {
+					custom_tooltip = gc_cas_spa_navarra_ct
+				}
+			}
+			else_if = {
+				limit = {
+					mission_completed = gc_cas_spa_reconquista_one
+				}
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				custom_tooltip = gc_cas_spa_navarra_bt
+			}
+		}
+	}
+
 	gc_cas_spa_plus_ultra = {
 		icon = mission_plus_ultra
 		required_missions = { }
@@ -323,145 +466,59 @@ gc_spain_2 = {
 	}
 	has_country_shield = yes
 
-	sea_unite_spain = {
-		icon = mission_unite_home_region
-		required_missions = { }
-		completed_by = 1493.1.1
-
-		provinces_to_highlight = {
-			OR = {
-				area = basque_country
-				area = aragon_area
-				area = valencia_area
-				area = catalonia_area
-				area = galicia_area
-				area = asturias_area
-				area = leon_area
-			}
-			NOT = { owned_by = ROOT }
-		}
-
-		trigger = {
-			basque_country = {
-				type = all
-				owned_by = ROOT
-			}
-			aragon_area = {
-				type = all
-				owned_by = ROOT
-			}
-			valencia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			catalonia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			galicia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			leon_area = {
-				type = all
-				owned_by = ROOT
-			}
-			asturias_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			custom_tooltip = sea_cas_united_spain_modifier_tt
-		}
-	}
-
-	gc_cas_spa_navarra = {
-		icon = mission_subjugate_navarra
+	gc_cas_spa_focus_on_france = {
+		icon = mission_the_french_menace
 		required_missions = { gc_cas_spa_army_ready }
-		completed_by = 1493.1.1
 		position = 2
 
 		provinces_to_highlight = {
-			province_id = 210
+			OR = {
+				province_id = 174
+				area = pyrenees_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			210 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			174 = { owned_by = ROOT }
+			pyrenees_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
+
 		effect = {
 			if = {
 				limit = {
-					210 = {
-						NOT = {
-							OR = {
-								has_building = fort_15th
-								has_building = fort3
-								has_building = fort_16th
-								has_building = fort5
-								has_building = fort_17th
-								has_building = fort7
-								has_building = fort_18th
-							}
-						}
-					}
+					NOT = { has_country_flag = completing_the_reconquista_flag }
 				}
-				210 = {
-					add_building = fort_15th
+				custom_tooltip = focus_on_france_modifier_tt
+				add_country_modifier = {
+					name = focus_on_france_modifier
+					duration = 3650
 				}
+				set_country_flag = focus_on_france_modifier_flag
 			}
-			210 = {
-				add_province_modifier = {
-					name = "fortified_navarra"
-					duration = 7300
-				}
-			}
-			if = {
+			pyrenees_area = {
 				limit = {
-					exists = POR
-					valid_for_personal_unions_trigger = yes
-					POR = {
-						valid_for_personal_unions_trigger = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				if = {
-					limit = {
-						mission_completed = gc_cas_spa_reconquista_one
-					}
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						months = 300
-						target = POR
-					}
-				}
-				else = {
-					custom_tooltip = gc_cas_spa_navarra_ct
-				}
+				add_claim = ROOT
 			}
-			else_if = {
+			guyenne_area = {
 				limit = {
-					mission_completed = gc_cas_spa_reconquista_one
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				alentejo_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				beieras_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_claim = ROOT
 			}
-			else = {
-				custom_tooltip = gc_cas_spa_navarra_bt
+			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -882,6 +939,16 @@ gc_spain_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			174 = {
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_cas_spa_reconquista_one = {
@@ -976,16 +1043,6 @@ gc_spain_3 = {
 				name = "spa_rb_christian_iberia"
 				duration = 5475
 			}
-			174 = {
-				add_permanent_claim = ROOT
-			}
-			pyrenees_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			northern_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1002,34 +1059,28 @@ gc_spain_3 = {
 		# free mission
 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 174
-				area = pyrenees_area
-				area = northern_morocco_area
-			}
+			area = northern_morocco_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			OR = {
-				AND = {
-					174 = { owned_by = ROOT }
-					pyrenees_area = {
-						type = all
-						owned_by = ROOT
-					}
-				}
-				northern_morocco_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			northern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		effect = {
-			add_country_modifier = {
-			name = "completing_the_reconquista"
-			duration = 5475
+			if = {
+				limit = {
+					NOT = { has_country_flag = focus_on_france_modifier_flag }
+				}
+				custom_tooltip = completing_the_reconquista_tt
+				add_country_modifier = {
+					name = "completing_the_reconquista"
+					duration = 3650
+				}
+				set_country_flag = completing_the_reconquista_flag
 			}
 			western_morocco_area = {
 				limit = {
@@ -1039,27 +1090,6 @@ gc_spain_3 = {
 				add_claim = ROOT
 			}
 			algiers_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			pyrenees_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			guyenne_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			languedoc_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
@@ -1581,6 +1611,8 @@ gc_spain_4 = {
 		}
 
 		effect = {
+			set_country_flag = ara_consulate_flag
+			country_event = { id = flavor_ara.1 }
 			if = {
 				limit = {
 					exists = NAP

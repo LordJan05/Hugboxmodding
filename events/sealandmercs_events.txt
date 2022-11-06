@@ -115,7 +115,7 @@ country_event = {
 			}
 			change_variable = {
 				which = banner_forcelimit
-				value = 20
+				value = 10
 			}
 			NOT = {
 				is_variable_equal = {
