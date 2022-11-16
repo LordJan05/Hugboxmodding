@@ -39,15 +39,15 @@ country_event = {
 
 		ai_chance = { factor = 1 }
 
-		add_years_of_income = -3
+		add_years_of_income = -1
 		custom_tooltip = MSA_expedition
 		country_event = { id = ME_Malaya_Events.2 }
 	}
 
-	option = {
-		name = ME_Malaya_Events.1.b
-		ai_chance = { factor = 0 }
-	}
+	#option = {
+	#	name = ME_Malaya_Events.1.b
+	#	ai_chance = { factor = 0 }
+	#}
 }
 
 country_event = {

@@ -91,7 +91,21 @@ kem_construction_modifier = {
 	build_cost = -0.15
 	build_time = -0.15
 }
-
+#######
+# Meso/South America:
+# Aztecs
+aztecs_eagle_special_units = {
+	morale_damage = 0.2
+	land_morale = 0.15
+	infantry_power = 0.05
+	is_cawa_modifier = yes
+}
+aztecs_jaguar_special_units = {
+	morale_damage = 0.15
+	land_morale = 0.1
+	infantry_power = 0.1
+	is_cawa_modifier = yes
+}
 ##########################################
 # Hormuz:
 tamed_the_desert_modifier = {
@@ -298,6 +312,28 @@ new_living_space_modifier = {
 	land_forcelimit_modifier = 0.05
 }
 ##########################################
+# England/Great Britain:
+gb_royal_marines_units = {
+	regiment_disembark_speed = 2
+	discipline = 0.05
+	reinforce_speed = 1
+	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition
+	is_cawa_modifier = yes
+}
+##########################################
+# France:
+france_king_musketeers_units = {
+	fire_damage = 0.2
+	morale_damage_received = -0.2
+	is_cawa_modifier = yes
+}
+##########################################
+# Dutch/Burgundy:
+dutch_maurician_special_units = {
+	infantry_fire = 1
+	is_cawa_modifier = yes
+}
+##########################################
 # Papal State:
 sea_recruited_swiss_guard_mercs_modifier = { # Swiss Guard Mercs coodown.
 	# Nothing is needed here
@@ -373,48 +409,56 @@ reformed_janissary_alexandria_modifier = {
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_wallachia_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_levant_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_georgia_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_persia_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.2
 	infantry_shock = 0.2
 	reinforce_cost_modifier = 0.4
+	reinforce_speed = -0.1
 }
 reformed_janissary_arabia_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_balkan_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 0.1
 	infantry_shock = 0.1
 	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.05
 }
 reformed_janissary_golden_age_modifier = {
 	is_janissary_modifier = yes
 	infantry_fire = 1
 	infantry_shock = 1
 	reinforce_cost_modifier = 2
+	reinforce_speed = -0.5
 }
 # Rum:
 improve_ottoman_janissary_modifier = {
@@ -597,7 +641,7 @@ gc_por_establishes_foothold_brazil_modifier = {
 }
 gc_por_caribbean_modifier = {
 	land_morale = 0.05
-	artillery_fire = 0.5
+	artillery_fire = 0.25
 }
 gc_por_colonise_central_africa_modifier = {
 	land_maintenance_modifier = -0.1
@@ -637,6 +681,19 @@ nog_black_sea_slave_trade_revived = {
 	trade_goods_size = 2.0
 }
 ##########################################
+# Japan:
+japan_samurai_special_units_early = {
+	infantry_power = 0.1
+	discipline = 0.025
+	is_cawa_modifier = yes
+}
+japan_samurai_special_units_late = {
+	infantry_power = 0.1
+	discipline = 0.05
+	fire_damage = 0.1
+	is_cawa_modifier = yes
+}
+##########################################
 # Venice:
 ven_ability_to_raid_modifier = {
 	may_perform_slave_raid = yes
@@ -663,10 +720,10 @@ the_recruiting_act = {
 	global_ship_cost = -0.05
 	stability_cost_modifier = 0.1
 }
-the_military_act = {
-	discipline = 0.06
-	stability_cost_modifier = 0.05
-}
+#the_military_act = { # Is triggered modifier now
+#	discipline = 0.06
+#	stability_cost_modifier = 0.05
+#}
 the_navigation_act = {
 	trade_efficiency = 0.025
 	naval_forcelimit_modifier = 0.05

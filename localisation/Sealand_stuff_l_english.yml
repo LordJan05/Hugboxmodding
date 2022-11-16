@@ -813,6 +813,9 @@
          shamanism_convert_decision_title:0 "£sea_fetishist_logo£Force Convert Into Fetishist Religion"
          shamanism_convert_decision_desc:0 "So you wouldn't have to accept rebel demands, in order to change religion and lost some of your land in the process."
         # Privileges:
+        estate_rajput_levies_desc:0 "Levies from the [Root.GetRajputsName] provide the majority of our nation's armies. An arrangement can be made for them to provide us with more men in return for other compensation."
+        estate_marathas_rajput_regiments:0 "Hire the Rajput Regiments"
+        estate_marathas_rajput_regiments_desc:0 "In return for land, the fearsome Rajput warriors will agree to serve as soldiers for our nation, even for Marathas for whatever reason."
         estate_church_no_church_unrest:0 "$ESTATE_NAME$ Unrest Suppression"
         estate_church_no_church_unrest_desc:0 "In the lands of God, there shall be no turmoil happening and those who are not willing to accept it, will accept it in the face of justice or in the face of God."
         estate_church_no_church_unrest_granted_tt:0 "Every owned province with §YTaxation§! building gains:\nLocal Unrest: §G-4.00§!"
@@ -836,14 +839,6 @@
         # Tribal Divese Society:
         diverse_society_reform:0 "Diverse Society"
         diverse_society_reform_desc:0 "We are ruling over many different tribes and if we want to maintain our unity, we must widen it by accepting more into this circle of unity."
-        # Burgundian Union:
-        burgundy_juniors_title:0 "Burgundian Junior Partner"
-        burgundy_juniors_title_plural:0 "Burgundian Junior Partners"
-        burgundy_juniors_overlord_title:0 "Burgundian Senior Partner"
-        burgundy_juniors_long_desc:0 "In a personal union two countries are ruled by the same monarch. The lesser partner must follow his overlord to war and cannot make certain diplomatic actions. When the monarch dies the union might either continue, break or the lesser partner can get inherited and annexed."
-        burgundy_juniors_is_our:0 "$NAME|Y$ is ruled by us in a Burgundian Personal Union."
-        burgundy_juniors_no_overlord_dow:0 "You cannot declare war on a country with which you have a Union."
-        can_colonze_this_nw_region:0 "§RCan't establish Siberian Frontier here. Find another way to colonize this provinces.§!"
         # Hannover cav idea:
         sea_hanoverian_cavalry:0 "Hanoverian Cavalry"
         sea_hanoverian_cavalry_desc:0 "With the importance of cavalry in the battlefield, the rulers of Hanover have made a good use of their own Hanoverian horse breed."
@@ -905,12 +900,15 @@
         age_i_autonomy:0 "Centralization"
         age_i_pp_insults:0 "Advanced Diplomacy"
         age_i_cheap_ships:0 "Cheaper Shipbuilding"
+        age_i_cheap_cannons:0 "Economical Cannons"
+        age_ii_cheap_cannons:0 "Cheap Cannons"
         age_ii_provincial_trade_power:0 "Provincial Trading"
         age_ii_tax_everything_but_the_church_and_the_nobles:0 "Tax the Peasants"
         age_ii_increased_banner_mercs:0 "Focus on Mercenaries"
         age_ii_cheaper_units:0 "Standard Army"
         age_iii_siege_ability:0 "Tear Down This Wall!"
         age_iii_warscore_cost:0 "Aggressive Expansion"
+        age_iii_recruitment_speed:0 "Rapid Mobilization"
         age_iv_extra_merchant:0 "Extra Merchant"
         age_iv_african_reinforce:0 "African Reinforcements"
         # HRE:
@@ -1220,6 +1218,8 @@
         crown_land_level_11:0 "Crown Land Ownership"
         recruit_40_trad_general_title:0 "£sea_general_cost_logo£Recruit a General with §G40§! tradition"
         recruit_40_trad_general_desc:0 "This is a one time decision to recruit slightly better general, unless we get unlucky RNG."
+        # Decisions:
+        militia_act_tt:0 "[Root.GetName] gets '§YThe Militia Act§!' until the end of the game, giving the following effects:\nStability Cost Modifier: §R+5.0%§!\nDiscipline: §G+6.0%§!\n§YThis modifier is disabled if 'Humanist Ideas' or 'Influence Ideas' is removed.§!"
         
     #Germany:
         # Government:
@@ -1373,7 +1373,26 @@
         hae_hungarian_estates_general:0 "Create the Estates General"
         hae_hungarian_estates_general_desc:0 "We have seen Estates General being used in other European countries and have seen the benefits of this. It allows all parts of our realm to feel important. Let Hungary-Austria have one too."
     
-    #Angevin Empire:
+    # Italy:
+        # Tuscany:
+        flavor_tus.16.aa:0 "Savonarola guidance lives on!"
+        flavor_tus.16.aa_tt:0 "Can keep §YMillenarian Theocracy§! Government Reform permanently."
+        
+    # England:
+      # Government:
+        gb_english_monarchy:0 "Great Britain Monarchy"
+        gb_english_monarchy_desc:0 "A ratification of the Acts of Union by both the Parliament of England and the Parliament of Scotland, creating the parliament of Great Britain.\nUnited into One Kingdom by the Name of Great Britain."
+        mechanic_gb_english_monarchy_gb_royal_marines_yes:0 "Unlocks '§YBritish Royal Marines§!' Nobility Privilege. Which when enacted:"
+      # Privilege:
+        estate_nobles_gb_royal_marines_special_units:0 "British Royal Marines"
+        estate_nobles_gb_royal_marines_special_units_desc:0 "They are just like normal Marines, except they do not rely on sailors only but also use manpower, since ever Brit is trained to be sailor anyway."
+        estate_nobles_gb_royal_marines_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_gb_royal_marines_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+      # Modifiers:
+        gb_royal_marines_units:0 "British Royal Marines"
+        desc_gb_royal_marines_units:0 "They are just like normal Marines, except they do not rely on sailors only but also use manpower, since ever Brit is trained to be sailor anyway."
+            
+    # Angevin Empire:
         # Ideas:
         ANG:0 "Angevin Empire"
         ANG_ADJ:0 "Angevin"
@@ -1464,6 +1483,21 @@
         # Government:
         imperial_japan_monarchy:0 "Japanese imperial government"
         imperial_japan_monarchy_desc:0 "We must spread our sun rays of influence across the Ocean and far away, past the horizon. And all must become accustomed with our ways of life or shall be forced to one way or another."
+        mechanic_japan_reform_japan_samurai_yes:0 "Unlocks '§YSamurai§!' Nobility Privilege. Which when enacted:"
+      # Privilege:
+        estate_nobles_japan_samurai_special_units_early:0 "Early Samurai"
+        estate_nobles_japan_samurai_special_units_early_desc:0 "They were warriors who followed their code of conduct, bushido, especially more so in later periods. Their main use of weapon was a sword. Not only would they dominate in battlefield, they would also dominate in government and society and later on made up the ruling military class."
+        estate_nobles_japan_samurai_special_units_early_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_japan_samurai_special_units_early_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+        estate_nobles_japan_samurai_special_units_late:0 "Late Samurai"
+        estate_nobles_japan_samurai_special_units_late_desc:0 "They were warriors who followed their code of conduct, bushido, especially more so in later periods. Their main use of weapon was a sword but later on started using firearms as well. Not only would they dominate in battlefield, they would also dominate in government and society and later on made up the ruling military class."
+        estate_nobles_japan_samurai_special_units_late_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_japan_samurai_special_units_late_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+      # Modifiers:
+        japan_samurai_special_units_early:0 "Early Samurai"
+        desc_japan_samurai_special_units_early:0 "They were warriors who followed their code of conduct, bushido, especially more so in later periods. Their main use of weapon was a sword. Not only would they dominate in battlefield, they would also dominate in government and society and later on made up the ruling military class."
+        japan_samurai_special_units_late:0 "Late Samurai"
+        desc_japan_samurai_special_units_late:0 "They were warriors who followed their code of conduct, bushido, especially more so in later periods. Their main use of weapon was a sword but later on started using firearms as well. Not only would they dominate in battlefield, they would also dominate in government and society and later on made up the ruling military class."
         # Takeda Horde Decision:
         takeda_horde_decision_title:0 "Become Horde"
         takeda_horde_decision_desc:0 "Since our society is built upon cavalry, then we must also embrace the ultimate ways of cavalry warfare."
@@ -1969,8 +2003,8 @@
     
     # Sasanian Empire:
         # Government:
-        sasanian_government:0 "Sasanian Government"
-        sasanian_government_desc:0 "It is like any other normal government of its time but since its time is long gone, this government has been revived to fulfill its purpose, which is to treat your subjects well and always follow the roots of Sasan dynasty."
+        sasanian_government:0 "Satrapy"
+        sasanian_government_desc:0 "This government has been revived to fulfill its purpose, which is to treat your subjects well, as long as they pay taxes and provide with levies. And they always follow the roots of Sasan dynasty."
         # Sasanian "elections":
         theocracy_election_government.3.d: "Our beloved $MONARCHTITLE$ [Root.Monarch.GetName] has died, leaving for us to choose the new $MONARCHTITLE$, from the same royal family, to lead our nation into prosperity. Luckily for us, three canditates have been presented before us, leaving for us to choose..."
         theocracy_election_government.3.a:0 "[sasanian_candidate_a_@ROOT.GetName] as our next $MONARCHTITLE$."
@@ -2130,13 +2164,46 @@
         desc_tercios_special_fire_units:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on firemans, compared to eariler version."
         
     # France:
+      # Government:
+        france_monarchy_reform:0 "French Monarchy"
+        france_monarchy_reform_desc:0 "It is a government form, where absolute power lies in the hands of the monarch.\nL'état, c'est moi."
+        mechanic_france_monarchy_reform_france_king_musketeers_yes:0 "Unlocks '§YFrench Musketeers§!' Nobility Privilege. Which when enacted:"
+      # Privilege:
+        estate_nobles_france_king_musketeers_special_units:0 "French Musketeers"
+        estate_nobles_france_king_musketeers_special_units_desc:0 "The King's Musketeers are open to the lower nobility and provide them with an opportunity to prove their military skill and loyalty to the crown."
+        estate_nobles_france_king_musketeers_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_france_king_musketeers_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
       # Modifiers:
+        france_king_musketeers_units:0 "Mousquetaires du Roi"
+        desc_france_king_musketeers_units:0 "The King's Musketeers are open to the lower nobility and provide them with an opportunity to prove their military skill and loyalty to the crown."
         # Elan:
         sea_fra_elan_modifier_tt:0 "§Y[Root.GetName]§! gets '§YElan!§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Prestige: §G+1.00§!\n§RModifier is locked for France tag.§!\n"
         sea_fra_elan_modifier:0 "Elan!"
       # Countries:
         AGL:0 "Angoulême"
         AGL_ADJ:0 "Angoumoisine"
+        
+    # Dutch/Burgundy:
+      # Burgundian Union:
+        burgundy_juniors_title:0 "Burgundian Junior Partner"
+        burgundy_juniors_title_plural:0 "Burgundian Junior Partners"
+        burgundy_juniors_overlord_title:0 "Burgundian Senior Partner"
+        burgundy_juniors_long_desc:0 "In a personal union two countries are ruled by the same monarch. The lesser partner must follow his overlord to war and cannot make certain diplomatic actions. When the monarch dies the union might either continue, break or the lesser partner can get inherited and annexed."
+        burgundy_juniors_is_our:0 "$NAME|Y$ is ruled by us in a Burgundian Personal Union."
+        burgundy_juniors_no_overlord_dow:0 "You cannot declare war on a country with which you have a Union."
+        can_colonze_this_nw_region:0 "§RCan't establish Siberian Frontier here. Find another way to colonize this provinces.§!"
+      # Government:
+        lotharingia_monarchy_reform:0 "Lotharingian Monarchy"
+        lotharingia_monarchy_reform_desc:0 "It is like any other monarchy, except each of the new rulers must know the way of warfare, in order not to meet the same fate like last time."
+        mechanic_dutch_reform_dutch_maurician_yes:0 "Unlocks '§YDutch Mauricians§!' Nobility Privilege. Which when enacted:"
+      # Privilege:
+        estate_nobles_dutch_maurician_special_units:0 "Dutch Mauricians"
+        estate_nobles_dutch_maurician_special_units_desc:0 "In the 16th century, the musket (a handheld firearm) became commonplace, but they were very slow to reload. Army tacticians typically deployed musket-men in formations to maximize firepower. The muskets would thus be arranged in lines (twelve, eight or six deep). When the front rank fired, they would move away to the rear to reload, after which the next rank would fire. This maximized the firepower of the 16th century muskets and overcame their disadvantage of slow reloading. It was Maurice of Nassau who pioneered the use of these musket formations and taught it to Dutch troops in the Eighty Years' War. His development of military strategy and tactics made the Dutch army the most modern in Europe."
+        estate_nobles_dutch_maurician_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_dutch_maurician_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+      # Modifiers:
+        dutch_maurician_special_units:0 "Dutch Mauricians"
+        desc_dutch_maurician_special_units:0 "In the 16th century, the musket (a handheld firearm) became commonplace, but they were very slow to reload. Army tacticians typically deployed musket-men in formations to maximize firepower. The muskets would thus be arranged in lines (twelve, eight or six deep). When the front rank fired, they would move away to the rear to reload, after which the next rank would fire. This maximized the firepower of the 16th century muskets and overcame their disadvantage of slow reloading. It was Maurice of Nassau who pioneered the use of these musket formations and taught it to Dutch troops in the Eighty Years' War. His development of military strategy and tactics made the Dutch army the most modern in Europe."
         
     # Venice:
       # Missions:
@@ -2250,3 +2317,24 @@
         pue_center_of_trade_3_title:0 "Eastern Trading Port"
         pue_center_of_trade_3_desc:0 "Eastern Trading Port"
         pue_restore_ancestral_pueblo_tt:0 "§MFollowing event gives option to form §YPueblo§! nation.§!:"
+
+      # Aztecs:
+        # Government:
+        aztecs_monarchy_reform:0 "Aztecs Government"
+        aztecs_monarchy_reform_desc:0 "Its government is similar to a monarchy, where Emperor was primary ruler, called Huey Tlatoani. They had absolute power, because they were chosen by gods, and thus had the divine right to rule."
+        mechanic_aztecs_reform_aztec_warriors_yes:0 "Unlocks '§YEagle Warriors§!' and '§YJaguar Warriors§!' Nobility Privileges. Which when enacted:"
+        aztecs_monarchy_reform_tt:0 "Losing §YAztecs Government§! Reform will also result us losing '§YEagle Warriors§!' and '§YJaguar Warriors§!' Nobility Privileges."
+        # Privilege:
+        estate_nobles_aztecs_eagle_special_units:0 "Eagle Warriors"
+        estate_nobles_aztecs_eagle_special_units_desc:0 "It is one of the most elite types of warriors in the Aztec military. Eagle Warriors wear helemts and suits decorated with eagle feathers, sometimes even eagle heads as heads. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."
+        estate_nobles_aztecs_eagle_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_aztecs_eagle_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+        estate_nobles_aztecs_jaguar_special_units:0 "Jaguar Warriors"
+        estate_nobles_aztecs_jaguar_special_units_desc:0 "It is one of the most elite types of warriors in the Aztec military. Jaguar Warriors wear hide or skin of a jaguar and faces were shown out of the open jaguar mouth. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."
+        estate_nobles_aztecs_jaguar_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_aztecs_jaguar_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+        # Modifiers:
+        aztecs_eagle_special_units:0 "Eagle Warriors"
+        desc_aztecs_eagle_special_units:0 ""
+        aztecs_jaguar_special_units:0 "Jaguar Warriors"
+        desc_aztecs_jaguar_special_units:0 ""

@@ -207,6 +207,7 @@ council_of_the_indies_reform = {
 	icon = "paper_money_map"
 	allow_normal_conversion = yes
 	potential = {
+		is_colonial_nation = no
 		has_dlc = "Golden Century"
 		#culture_group = iberian
 		#capital_scope = {
@@ -1243,7 +1244,7 @@ lockean_proviso_reform = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 	}
 	trigger = {
-		full_idea_group = economic_ideas
+		#full_idea_group = economic_ideas
 		if = {
 			limit = {
 				is_revolutionary = yes

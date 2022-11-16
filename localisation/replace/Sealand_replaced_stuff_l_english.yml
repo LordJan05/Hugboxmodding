@@ -609,6 +609,8 @@
   desc_gain_consort_aspect:0 "There are many eligible heirs in the nation to choose from. Given our current heir, we should consider getting someone more suitable."
   desc_expel_heretics_aspect:0 "The heretics are a danger to our religion and our culture. We should expel them from our land and send them to the New World.\n\nIf we own a colonial province then it gains §G100§! Population. Also increases Settler Chance by §G5.0%§!, Global Settler Increase by §G+15.00§! and Religious Unity by §G10.0%§! for §Y15 years§!.\nThere is a §Y33%§! chance that the colony adapts one of the §YHeretic§! religions."
  # scandinavia:
+  flavor_swe.121.desc:0 "The war with our former masters was not so bloody one. One would even say that there was no war to begin with. But somehow we prevailed and achieved our independence!\nAs the Kalmar Union now falls apart, the rise of a new kingdom in Scandinavia - of [Root.GetName] - has begun."
+ flavor_swe.121.a:0 "This is the start of a new era."
   allow_earlier_scandinavia_formation_tt:0 "The country of §YScandinavia§! no longer needs an §YAdministrative Technology§! of §Y15§! to be formed."
   swe_repay_estate_church_title:0 "@SWE Repay Debt to the [Root.GetChurchOrFallbackName]" # Estate logo?
   swe_repay_estate_burghers_title:0 "@SWE Repay Debt to the [Root.GetBurghersOrFallbackName]" # Estate logo?

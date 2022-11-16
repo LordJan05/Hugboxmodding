@@ -14,7 +14,14 @@ country_event = {
 		OR = { # For special units:
 			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
 			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
-			has_estate_privilege = estate_nobles_varangian_guards_special_units 
+			has_estate_privilege = estate_nobles_varangian_guards_special_units
+			has_estate_privilege = estate_nobles_gb_royal_marines_special_units
+			has_estate_privilege = estate_nobles_france_king_musketeers_special_units
+			has_estate_privilege = estate_nobles_dutch_maurician_special_units
+			has_estate_privilege = estate_nobles_japan_samurai_special_units_early
+			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
+			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
+			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
 		}
 		ai = no
 		NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
@@ -52,7 +59,14 @@ country_event = {
 		OR = { # For special units:
 			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
 			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
-			has_estate_privilege = estate_nobles_varangian_guards_special_units 
+			has_estate_privilege = estate_nobles_varangian_guards_special_units
+			has_estate_privilege = estate_nobles_gb_royal_marines_special_units
+			has_estate_privilege = estate_nobles_france_king_musketeers_special_units
+			has_estate_privilege = estate_nobles_dutch_maurician_special_units
+			has_estate_privilege = estate_nobles_japan_samurai_special_units_early
+			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
+			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
+			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
 		}
 		ai = no
 		num_of_owned_provinces_with = {

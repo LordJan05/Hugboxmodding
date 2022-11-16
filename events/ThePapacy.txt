@@ -132,9 +132,9 @@ country_event = {
 			total_number_of_cardinals = 49
 		}
 		any_known_country = {
-			capital_scope = {
-				region = italy_region
-			}
+			#capital_scope = {
+			#	region = italy_region
+			#}
 			has_opinion = { who = ROOT value = 25 }
 			reverse_has_opinion = { who = ROOT value = 25 }
 			religion = catholic
@@ -152,9 +152,9 @@ country_event = {
 		hidden_effect = {
 			random_known_country = {
 				limit = {
-					capital_scope = {
-						region = italy_region
-					}
+					#capital_scope = {
+					#	region = italy_region
+					#}
 					has_opinion = { who = ROOT value = 25 }
 					reverse_has_opinion = { who = ROOT value = 25 }
 					religion = catholic

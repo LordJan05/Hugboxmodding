@@ -1889,7 +1889,10 @@ country_decisions = {
 			if = {
 				limit = {
 					capital_scope = {
-						has_construction = navy
+						OR = {
+							has_port = no
+							has_construction = navy
+						}
 					}
 				}
 				random_owned_province = {
@@ -1902,7 +1905,12 @@ country_decisions = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					capital_scope = {
+						has_port = yes
+					}
+				}
 				capital_scope = {
 					add_unit_construction = {
 						type = heavy_ship
@@ -1931,7 +1939,10 @@ country_decisions = {
 			if = {
 				limit = {
 					capital_scope = {
-						has_construction = navy
+						OR = {
+							has_port = no
+							has_construction = navy
+						}
 					}
 				}
 				random_owned_province = {
@@ -1944,7 +1955,12 @@ country_decisions = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					capital_scope = {
+						has_port = yes
+					}
+				}
 				capital_scope = {
 					add_unit_construction = {
 						type = light_ship
@@ -1973,7 +1989,10 @@ country_decisions = {
 			if = {
 				limit = {
 					capital_scope = {
-						has_construction = navy
+						OR = {
+							has_port = no
+							has_construction = navy
+						}
 					}
 				}
 				random_owned_province = {
@@ -1986,7 +2005,12 @@ country_decisions = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					capital_scope = {
+						has_port = yes
+					}
+				}
 				capital_scope = {
 					add_unit_construction = {
 						type = galley

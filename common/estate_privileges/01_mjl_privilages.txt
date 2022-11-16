@@ -272,7 +272,7 @@ estate_tribes_raise_host = {
 }
 
 mjl_estate_church_orm_tamed_deserts = {
-	icon = privilege_grant_new_world_charter
+	icon = privilege_dev_cost_desert
 	land_share = 5
 	max_absolutism = -5
 	loyalty = 0.05

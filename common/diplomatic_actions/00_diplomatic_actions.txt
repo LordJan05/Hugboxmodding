@@ -1209,6 +1209,7 @@ callaction= {
 				is_defender_of_faith = yes
 				NOT = { has_guaranteed = ROOT }
 				NOT = { alliance_with = ROOT }
+				NOT = { is_subject = yes }
 			}
 		}
 		allow = {

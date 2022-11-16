@@ -539,8 +539,8 @@ commercial_embassies = {
 		full_idea_group = expansion_ideas
 	}
 	
-	global_trade_power = 0.1
-	diplomatic_reputation = 1
+	native_assimilation = 0.5
+	native_uprising_chance = -0.5
 
 	ai_will_do = {
 		factor = 0.8		
@@ -601,7 +601,7 @@ professional_diplomatic_corps = {
 		full_idea_group = quality_ideas
 	}
 	
-	diplomatic_reputation = 1
+	morale_damage = 0.05
 	war_exhaustion = -0.05
 
 	ai_will_do = {
@@ -702,8 +702,8 @@ multilingual_diplomats = {
 		full_idea_group = diplomatic_ideas
 	}	
 	
-	num_accepted_cultures = 1
-	improve_relation_modifier = 0.2
+	num_accepted_cultures = 2
+	improve_relation_modifier = 0.33
 	
 	ai_will_do = {
 		factor = 1
@@ -952,7 +952,7 @@ record_keeping_act = {
 		full_idea_group = diplomatic_ideas
 	}
 
-	diplomats = 1
+	amount_of_banners = 0.3
 	land_maintenance_modifier = -0.1
 
 	ai_will_do = {
@@ -1108,7 +1108,7 @@ diplomatic_defence_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	diplomats = 1
+	recover_army_morale_speed = 0.05
 	diplomatic_upkeep = 1
 	
 	ai_will_do = {

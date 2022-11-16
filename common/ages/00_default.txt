@@ -112,13 +112,21 @@ age_of_discovery = {
 	
 	
 	abilities = {
-		ab_allow_feudal_de_jure_law = {
-			effect = {
-				custom_tooltip = feudal_de_jure_law
-				set_country_flag = feudal_de_jure_law
+		#ab_allow_feudal_de_jure_law = {
+		#	effect = {
+		#		custom_tooltip = feudal_de_jure_law
+		#		set_country_flag = feudal_de_jure_law
+		#	}
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+		age_i_cheap_cannons = {
+			modifier = {
+				artillery_cost = -0.66
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 		}
 		
@@ -153,14 +161,14 @@ age_of_discovery = {
 		}
 		
 
-		ab_cavalry_armies = {
-			modifier = {
-				cav_to_inf_ratio = 0.2
-			}
-			ai_will_do = {
-				factor = 10
-			}
-		}
+		#ab_cavalry_armies = {
+		#	modifier = {
+		#		cav_to_inf_ratio = 0.2
+		#	}
+		#	ai_will_do = {
+		#		factor = 10
+		#	}
+		#}
 		ab_colony_boost_development = {
 			modifier = {
 				can_colony_boost_development = yes
@@ -194,6 +202,14 @@ age_of_discovery = {
 		#		factor = 1000
 		#	}
 		#}
+		age_ii_increased_banner_mercs = {
+			modifier = {
+				amount_of_banners = 0.33
+			}
+			ai_will_do = {
+				factor = 30
+			}
+		}
 		age_i_autonomy = {
 			modifier = {
 				global_autonomy = -0.1
@@ -542,12 +558,20 @@ age_of_reformation = {
 				factor = 30
 			}
 		}
-		age_ii_increased_banner_mercs = {
+		#age_ii_increased_banner_mercs = { # Moved to 1st age
+		#	modifier = {
+		#		amount_of_banners = 0.33
+		#	}
+		#	ai_will_do = {
+		#		factor = 30
+		#	}
+		#}
+		age_ii_cheap_cannons = {
 			modifier = {
-				amount_of_banners = 0.33
+				artillery_cost = -0.33
 			}
 			ai_will_do = {
-				factor = 30
+				factor = 10
 			}
 		}
 
@@ -813,20 +837,28 @@ age_of_absolutism = {
 			}
 		}
 
-		ab_france_fire_damage = {
-			allow = {
-				OR = {
-					tag = FRA
-					tag = BUR
-					tag = LOT
-					tag = NED
-				}
-			}
+		#ab_france_fire_damage = {
+		#	allow = {
+		#		OR = {
+		#			tag = FRA
+		#			tag = BUR
+		#			tag = LOT
+		#			tag = NED
+		#		}
+		#	}
+		#	modifier = {
+		#		fire_damage = 0.15
+		#	}
+		#	ai_will_do = {
+		#		factor = 1000
+		#	}
+		#}
+		age_iii_recruitment_speed = {
 			modifier = {
-				fire_damage = 0.15
+				global_regiment_recruit_speed = -0.5
 			}
 			ai_will_do = {
-				factor = 1000
+				factor = 10
 			}
 		}
 

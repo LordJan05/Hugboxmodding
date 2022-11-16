@@ -450,6 +450,7 @@ country_event = {
 		NOT = { has_reform = eschatological_theocracy_caliphate_reform }
 		NOT = { has_reform = atlantis_government }
 		NOT = { has_reform = kemet_government }
+		NOT = { has_country_flag = savonarola_block_election_flag }
 	}
 	
 	option = {
@@ -1622,6 +1623,7 @@ country_event = {
 	trigger = {
 		has_government_attribute = lottery_election
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
+		NOT = { has_country_flag = savonarola_block_election_flag }
 	}
 	
 	immediate = {

@@ -69,7 +69,7 @@ dan_secure_baltic_mission_slot = {
 		icon = mission_humiliate_lubeck
 		position = 2
 		required_missions = {
-			dan_retake_gotland
+			#dan_retake_gotland
 			dan_the_baltic_force
 		}
 		provinces_to_highlight = {
@@ -999,16 +999,37 @@ dan_norway_holstein_mission_slot = {
 					NOT = { current_age = age_of_reformation }
 					NOR = { is_subject_of = ROOT }
 				}
+				NOR = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = { exists = NOR }
+					NOT = { NOR = { is_subject_of = ROOT } }
+				}
+				tooltip = { add_dip_power = 50 }
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { exists = NOR }
+						alliance_with = NOR
+					}
 				}
 				add_adm_power = 100
 			}
 			else = {
+				limit = {
+					NOR = {
+						is_subject_of = ROOT
+					}
+				}
 				country_event = {
 					id = flavor_dan.112
 				}
@@ -1562,19 +1583,61 @@ dan_sweden_and_great_power_mission_slot = {
 					NOT = { current_age = age_of_reformation }
 					SWE = { is_subject_of = ROOT }
 				}
+				SWE= {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				AND = {
+					is_rival = SWE
+					SWE = {
+						custom_trigger_tooltip = {
+							tooltip = has_been_insulted_by_root
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					exists = SWE
+					NOT = { SWE = { is_subject_of = ROOT } }
+					NOT = { is_rival = SWE }
+				}
+				tooltip = { add_dip_power = 50 add_manpower = 10 }
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { exists = SWE }
+						alliance_with = SWE
+						is_rival = SWE
+					}
+				}
+				add_dip_power = 50
+				add_manpower = 10
+			}
+			else = {
+				limit = {
+					SWE = {
+						is_subject_of = ROOT
+					}
 				}
 				country_event = {
 					id = flavor_dan.114
 				}
-			}
-			else = {
-				add_adm_power = 100
 			}
 		}
 	}

@@ -614,7 +614,7 @@ policy_of_calculate_delay = {
 		full_idea_group = diplomatic_ideas
 	}
 	
-	religious_unity = 0.2
+	religious_unity = 0.33
 	global_missionary_strength = 0.01
  
 

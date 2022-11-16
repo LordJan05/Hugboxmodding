@@ -151,6 +151,11 @@ spriteTypes = {
 		name = "government_reform_sea_byzantine_government"
 		texturefile = "gfx//interface//government_reform_icons//sea_byzantine_government.dds"
  	}
+	
+	spriteType = {
+		name = "government_reform_sea_aztecs_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//sea_aztecs_monarchy.dds"
+ 	}
 
 ##############
 #### FACTIONS
@@ -257,6 +262,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/age_i_cheap_ships.dds"
 	}
 	spriteType = {
+		name = "GFX_age_i_cheap_cannons"
+		texturefile = "gfx/interface/ages/age_i_cheap_cannons.dds"
+	}
+	spriteType = {
+		name = "GFX_age_ii_cheap_cannons"
+		texturefile = "gfx/interface/ages/age_ii_cheap_cannons.dds"
+	}
+	spriteType = {
 		name = "GFX_age_ii_provincial_trade_power"
 		texturefile = "gfx/interface/ages/age_ii_provincial_trade_power.dds"
 	}
@@ -271,6 +284,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_age_iii_siege_ability"
 		texturefile = "gfx/interface/ages/age_iii_siege_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_age_iii_recruitment_speed"
+		texturefile = "gfx/interface/ages/age_iii_recruitment_speed.dds"
 	}
 	spriteType = {
 		name = "GFX_age_iv_extra_merchant"

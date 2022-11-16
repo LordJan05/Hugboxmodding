@@ -603,15 +603,22 @@ sasanian_government = {
 		vassal_income = 0.5
 		liberty_desire_from_subject_development = -0.5
 		diplomatic_upkeep = 2
-		governing_capacity = 250
+		governing_capacity = 200
 	}
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
 		heir = no
 		foreign_slave_rulers = yes
 	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
 	custom_attributes = {
 		locked_government_type = yes
+		enables_divine_idea_group = yes
 	}
 	ai = {
 		factor = 1000
@@ -818,6 +825,35 @@ atlantis_government = {
 	}
 }
 
+# Aztecs
+aztecs_monarchy_reform = {
+	icon = "sea_aztecs_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = AZT
+	}
+	trigger = {
+		tag = AZT
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		max_absolutism = 10
+		vassal_income = 0.5
+		vassal_forcelimit_bonus = 0.5
+		can_fabricate_for_vassals = yes
+		can_transfer_vassal_wargoal = yes
+	}
+	custom_attributes = {
+		aztecs_reform_aztec_warriors = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+}
+
 # Milan Ambrocian trade rebublic:
 ambrosian_merchants_republic = {
 	icon = "ambrosian_republic"
@@ -878,7 +914,100 @@ ambrosian_merchants_republic = {
 	}
 }
 
-# Castille/Spain
+# England/Great Britain:
+gb_english_monarchy = {
+	icon = "english_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		tag = GBR
+	}
+	trigger = {
+		tag = GBR
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 150
+		legitimacy = 1
+		global_unrest = -2
+		max_absolutism = 10
+	}
+	custom_attributes = {
+		gb_english_monarchy_gb_royal_marines = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+}
+
+# France
+france_monarchy_reform = {
+	icon = "letat_cest_moi"
+	allow_normal_conversion = no
+	potential = {
+		tag = FRA
+		has_country_flag = france_king_musketeers_units_flag
+	}
+	trigger = {
+		tag = FRA
+		has_country_flag = france_king_musketeers_units_flag
+	}
+	valid_for_nation_designer = no
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 100
+		allow_free_estate_privilege_revocation = yes
+		max_absolutism = 20
+	}
+	custom_attributes = {
+		france_monarchy_reform_france_king_musketeers = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+}
+
+# Burgundy/Lotharingia:
+lotharingia_monarchy_reform = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		tag = LOT
+	}
+	trigger = {
+		tag = LOT
+	}
+	valid_for_nation_designer = no
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 150
+		monarch_lifespan = 0.5
+		monarch_military_power = 1
+		max_absolutism = 10
+	}
+	custom_attributes = {
+		dutch_reform_dutch_maurician = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+}
+
+# Castille/Spain:
 spain_monarchy_reform = {
 	icon = "king"
 	allow_normal_conversion = yes
@@ -1023,7 +1152,15 @@ imperial_japan_monarchy = {
 		culture_conversion_cost = -0.33
 		warscore_cost_vs_other_religion = -0.33
 	}
-
+	custom_attributes = {
+		japan_reform_japan_samurai = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
@@ -1068,12 +1205,13 @@ byzantium_government = {
 		locked_government_type = yes
 		byzantium_government_varangian_guards = yes
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Origins"
 		}
 		allow_cawa = yes
+	}
+	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
 		}

@@ -810,6 +810,13 @@ country_event = {
 	}
 	option = {
 		name = sealand_events.10.f
+		if = {
+			limit = {
+				tag = AZT
+				has_reform = aztecs_monarchy_reform
+			}
+			custom_tooltip = aztecs_monarchy_reform_tt
+		}
 	}
 }
 country_event = {
@@ -872,6 +879,29 @@ country_event = {
 		name = sealand_events.13.a
 		custom_tooltip = sealand_events.13.a.tt
 	}
+}
+# Japan Samurais on_startup:
+country_event = {
+	id = sealand_events.14
+	title = sealand_events.14.t
+	desc = sealand_events.14.d
+	picture = ADVISOR_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = estate_nobles_japan_samurai_special_units_early_startup_flag }
+		NOT = { has_estate_privilege = estate_nobles_japan_samurai_special_units_early }
+		OR = {
+			has_reform = shogunate
+			has_reform = daimyo
+			has_reform = indep_daimyo
+		}
+	}
+	immediate = {
+		set_estate_privilege = estate_nobles_japan_samurai_special_units_early
+		set_country_flag = estate_nobles_japan_samurai_special_units_early_startup_flag
+	}
+	option = { }
 }
 
 # Theocracy government:
@@ -1669,8 +1699,9 @@ country_event = { # new ruler choosing.
 			add_papal_influence = 100
 		}
 		set_ruler = pope_candidate_a_@ROOT
-		add_corruption = 0.10
-		add_curia_treasury = -100
+		add_corruption = 0.30
+		add_curia_treasury = -300
+		add_papal_influence = -50
 	}
 	option = {
 		name = sea_papal_events.2.b
@@ -1686,9 +1717,10 @@ country_event = { # new ruler choosing.
 			add_papal_influence = 100
 		}
 		set_ruler = pope_candidate_b_@ROOT
-		add_corruption = 0.10
-		add_prestige = -10
-		add_devotion = -5
+		add_corruption = 0.20
+		add_prestige = -30
+		add_devotion = -10
+		add_papal_influence = -50
 	}
 	option = {
 		name = sea_papal_events.2.c
@@ -1704,9 +1736,10 @@ country_event = { # new ruler choosing.
 			add_papal_influence = 100
 		}
 		set_ruler = pope_candidate_c_@ROOT
-		add_corruption = 0.10
-		add_prestige = -5
-		add_devotion = -10
+		add_corruption = 0.20
+		add_prestige = -10
+		add_devotion = -30
+		add_papal_influence = -50
 	}
 	option = {
 		name = sea_papal_events.2.e
@@ -1714,9 +1747,10 @@ country_event = { # new ruler choosing.
 		ai_chance = {
 			factor = 1
 		}
-		add_prestige = 5
-		add_devotion = 5
-		add_splendor = 2
+		add_prestige = 10
+		add_devotion = 10
+		add_splendor = 3
+		add_papal_influence = 25
 	}
 }
 ########################################################################

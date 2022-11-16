@@ -1809,6 +1809,13 @@ emp_france_missions_4 = {
 		effect = {
 			set_country_flag = fra_musketeers_mission
 			country_event = { id = flavor_fra.5 }
+			set_country_flag = france_king_musketeers_units_flag
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = france_monarchy_reform
+			}
 		}
 	}
 	emp_fra_les_invalides = {

@@ -4798,11 +4798,16 @@ nahuatl_monarchy = {
 
 	trigger = {
 		OR = {
-			government = monarchy
-			government = tribal
-			has_reform = tribal_democracy_legacy
+			has_reform = aztecs_monarchy_reform
+			AND = {
+				OR = {
+					government = monarchy
+					government = tribal
+					has_reform = tribal_democracy_legacy
+				}
+				religion = nahuatl
+			}
 		}
-		religion = nahuatl
 	}
 }
 

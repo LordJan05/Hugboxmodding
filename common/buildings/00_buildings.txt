@@ -544,10 +544,9 @@ courthouse = {
 		development = 10
 	}
 	modifier = {
-		local_state_maintenance_modifier = -0.15
+		local_state_maintenance_modifier = -0.25
 		local_autonomy = -0.1
-		local_governing_cost = -0.15
-		allowed_num_of_buildings = 1
+		local_governing_cost = -0.25
 	}
 	on_built = {
 		add_development_from_building = {
@@ -1753,10 +1752,9 @@ town_hall = {
 		development = 20
 	}
 	modifier = {
-		local_state_maintenance_modifier = -0.3
+		local_state_maintenance_modifier = -0.5
 		local_autonomy = -0.2
-		local_governing_cost = -0.3
-		allowed_num_of_buildings = 1
+		local_governing_cost = -0.5
 	}
 
 	on_built = {
@@ -2753,7 +2751,7 @@ furnace = {
 }
 
 ramparts = {
-	cost = 300	# manufactory = {
+	cost = 500	# manufactory = {
 	time = 30	#	all
 			#}
 
@@ -3001,7 +2999,6 @@ state_house = {
 		min_local_autonomy = -5
 		local_governing_cost = -0.15
 		local_governing_cost_increase = -10
-		allowed_num_of_buildings = 1
 	}
 	bonus_modifier = {
 		statewide_governing_cost = -0.2

@@ -659,6 +659,27 @@ country_event = {
 				remove_government_reform = republicanism_reform
 				change_government_reform_progress = 100
 			}
+			if = {
+				limit = {
+					has_reform = democratic_values_reform
+				}
+				remove_government_reform = democratic_values_reform
+				change_government_reform_progress = 100
+			}
+			if = {
+				limit = {
+					has_reform = aristocratic_values_reform
+				}
+				remove_government_reform = aristocratic_values_reform
+				change_government_reform_progress = 100
+			}
+			if = {
+				limit = {
+					has_reform = religious_values_reform
+				}
+				remove_government_reform = religious_values_reform
+				change_government_reform_progress = 100
+			}
 			#t3
 			if = {
 				limit = {
@@ -674,7 +695,162 @@ country_event = {
 				remove_government_reform = consolidation_of_power_reform
 				change_government_reform_progress = 50
 			}
+			if = {
+				limit = {
+					has_reform = force_reelection_reform 
+				}
+				remove_government_reform = force_reelection_reform 
+				change_government_reform_progress = 50
+			}
 			#t4
+			if = {
+				limit = {
+					has_reform = papal_embassy_reform
+				}
+				remove_government_reform = papal_embassy_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = focus_of_the_patriarchy_reform
+				}
+				remove_government_reform = focus_of_the_patriarchy_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = lands_for_the_monasteries_reform
+				}
+				remove_government_reform = lands_for_the_monasteries_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = zoroastrian_focus_reform
+				}
+				remove_government_reform = zoroastrian_focus_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = power_to_the_synagogoues_reform
+				}
+				remove_government_reform = power_to_the_synagogoues_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = head_of_the_reformed_church_reform
+				}
+				remove_government_reform = head_of_the_reformed_church_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = confucian_governing_reform
+				}
+				remove_government_reform = confucian_governing_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = empower_buddhist_temples_reform
+				}
+				remove_government_reform = empower_buddhist_temples_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = public_hindu_practices_reform
+				}
+				remove_government_reform = public_hindu_practices_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = strengthen_shaman_privileges_reform
+				}
+				remove_government_reform = strengthen_shaman_privileges_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = abolished_caste_system_reform
+				}
+				remove_government_reform = abolished_caste_system_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = strengthen_the_ulema_reform
+				}
+				remove_government_reform = strengthen_the_ulema_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = strengthen_the_dhimmi_reform
+				}
+				remove_government_reform = strengthen_the_dhimmi_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = legacy_of_the_steppes_reform
+				}
+				remove_government_reform = legacy_of_the_steppes_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = state_and_shrines_intertwined_reform
+				}
+				remove_government_reform = state_and_shrines_intertwined_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = embedded_norse_government_reform
+				}
+				remove_government_reform = embedded_norse_government_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = strengthen_clergy_reform
+				}
+				remove_government_reform = strengthen_clergy_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = curtail_clergy_power_reform
+				}
+				remove_government_reform = curtail_clergy_power_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = secure_clergy_power_reform
+				}
+				remove_government_reform = secure_clergy_power_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = maintain_clergy_balance_of_power_reform
+				}
+				remove_government_reform = maintain_clergy_balance_of_power_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = separate_clergy_from_state_affairs_reform
+				}
+				remove_government_reform = separate_clergy_from_state_affairs_reform
+				change_government_reform_progress = 50
+			}
+			#t5
 			if = {
 				limit = {
 					has_reform = provincial_governments_reform
@@ -696,7 +872,14 @@ country_event = {
 				remove_government_reform = union_of_states_reform
 				change_government_reform_progress = 50
 			}
-			#t5
+			if = {
+				limit = {
+					has_reform = cultural_administration_reform
+				}
+				remove_government_reform = cultural_administration_reform
+				change_government_reform_progress = 50
+			}
+			#t6
 			if = {
 				limit = {
 					has_reform = parliamentary_reform
@@ -711,7 +894,64 @@ country_event = {
 				remove_government_reform = presidential_reform
 				change_government_reform_progress = 50
 			}
-			#t6
+			if = {
+				limit = {
+					has_reform = estate_council_reform
+				}
+				remove_government_reform = estate_council_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = attorney_general_reform
+				}
+				remove_government_reform = attorney_general_reform
+				change_government_reform_progress = 50
+			}
+			#t7
+			if = {
+				limit = {
+					has_reform = empower_the_burghers_reform
+				}
+				remove_government_reform = empower_the_burghers_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = curtail_the_burghers_reform
+				}
+				remove_government_reform = curtail_the_burghers_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = mercantilistic_approach_reform
+				}
+				remove_government_reform = mercantilistic_approach_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = free_trade_reform
+				}
+				remove_government_reform = free_trade_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = embrace_the_economic_theory_reform
+				}
+				remove_government_reform = embrace_the_economic_theory_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = lockean_proviso_reform
+				}
+				remove_government_reform = lockean_proviso_reform
+				change_government_reform_progress = 50
+			}
+			#t8
 			if = {
 				limit = {
 					has_reform = broaden_executive_powers_reform
@@ -726,7 +966,21 @@ country_event = {
 				remove_government_reform = devolution_of_powers_reform
 				change_government_reform_progress = 50
 			}
-			#t7
+			if = {
+				limit = {
+					has_reform = consolidate_power_to_the_ruler_reform
+				}
+				remove_government_reform = consolidate_power_to_the_ruler_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = consolidate_power_into_different_candidates_reform
+				}
+				remove_government_reform = consolidate_power_into_different_candidates_reform
+				change_government_reform_progress = 50
+			}
+			#t9
 			if = {
 				limit = {
 					has_reform = political_principle_reform
@@ -741,7 +995,28 @@ country_event = {
 				remove_government_reform = moral_principle_reform
 				change_government_reform_progress = 50
 			}
-			#t8
+			if = {
+				limit = {
+					has_reform = stability_principle_reform
+				}
+				remove_government_reform = stability_principle_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = enlightened_principle_reform
+				}
+				remove_government_reform = enlightened_principle_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = military_principle_reform
+				}
+				remove_government_reform = military_principle_reform
+				change_government_reform_progress = 50
+			}
+			#t10
 			if = {
 				limit = {
 					has_reform = landholders_reform
@@ -763,7 +1038,21 @@ country_event = {
 				remove_government_reform = admiralty_reform
 				change_government_reform_progress = 50
 			}
-			#t9
+			if = {
+				limit = {
+					has_reform = military_rulership_reform
+				}
+				remove_government_reform = military_rulership_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = dynastic_rulership_reform
+				}
+				remove_government_reform = dynastic_rulership_reform
+				change_government_reform_progress = 50
+			}
+			#t11
 			if = {
 				limit = {
 					has_reform = appointment_by_committee_reform
@@ -785,7 +1074,7 @@ country_event = {
 				remove_government_reform = universal_suffrage_reform
 				change_government_reform_progress = 50
 			}
-			#t10
+			#t12
 			if = {
 				limit = {
 					has_reform = strengthen_executive_powers_reform 
@@ -798,6 +1087,13 @@ country_event = {
 					has_reform = reinforce_republican_values_reform
 				}
 				remove_government_reform = reinforce_republican_values_reform
+				change_government_reform_progress = 50
+			}
+			if = {
+				limit = {
+					has_reform = federal_senate_reform
+				}
+				remove_government_reform = federal_senate_reform
 				change_government_reform_progress = 50
 			}
 		}

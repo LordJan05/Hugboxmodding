@@ -139,6 +139,7 @@ sea_animism_reforms = {
 		if = {
 			limit = {
 				has_country_flag = sea_animism_reform_flag_1
+				NOT = { has_country_flag = sea_animism_reform_flag_2 }
 			}
 			custom_trigger_tooltip = {
 				tooltip = sea_animism_reform_flag_tt
@@ -155,6 +156,7 @@ sea_animism_reforms = {
 		if = {
 			limit = {
 				has_country_flag = sea_animism_reform_flag_2
+				NOT = { has_country_flag = sea_animism_reform_flag_3 }
 			}
 			custom_trigger_tooltip = {
 				tooltip = sea_animism_reform_flag_tt
@@ -171,6 +173,7 @@ sea_animism_reforms = {
 		if = {
 			limit = {
 				has_country_flag = sea_animism_reform_flag_3
+				NOT = { has_country_flag = sea_animism_reform_flag_4 }
 			}
 			custom_trigger_tooltip = {
 				tooltip = sea_animism_reform_flag_tt

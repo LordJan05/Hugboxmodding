@@ -173,6 +173,7 @@ estate_maratha = {
 		estate_maratha_subject_rights
 		estate_maratha_better_integration
 		estate_maratha_levies
+		estate_marathas_rajput_regiments
 	}
 	
 	agendas = {

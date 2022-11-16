@@ -453,6 +453,7 @@ country_event = {
 			}
 		}
 		else = {
+			set_country_flag = savonarola_block_election_flag
 			exile_ruler_as = { name = flo_exiled_ruler }
 			define_ruler = {
 				name = "Girolamo Savonarola"
@@ -857,6 +858,18 @@ country_event = {
 		}
 		set_ruler = flo_exiled_ruler
 		remove_government_reform = millenarian_theocracy_reform
+	}
+	option = {
+		name = flavor_tus.16.aa
+		trigger = {
+			government = republic
+		}
+		set_country_flag = keep_millenarian_theocracy_reform_flag
+		custom_tooltip = flavor_tus.16.aa_tt
+		clr_country_flag = savonarola_block_election_flag
+		hidden_effect = {
+			kill_ruler = yes
+		}
 	}
 
 	option = {

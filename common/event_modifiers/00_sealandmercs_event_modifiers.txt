@@ -6,7 +6,7 @@ sealand_cawa_fl_base = {
 #}
 #
 sealand_cawa_base_maintenance = {
-	land_maintenance_modifier = 1.5
+	land_maintenance_modifier = 0.5
 	is_cawa_modifier = yes
 }
 #

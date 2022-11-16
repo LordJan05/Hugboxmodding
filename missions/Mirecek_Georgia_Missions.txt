@@ -356,8 +356,10 @@ georgia_2_missions = {
 			}
 		}
 		trigger = {
-			owns_core_province = 330
-			is_year = 1449
+			OR = {
+				owns_core_province = 330
+				is_year = 1449
+			}
 			if = {
 				limit = {
 					IME = { is_subject_of = ROOT }

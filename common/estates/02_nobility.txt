@@ -422,6 +422,13 @@ estate_nobles = {
 		estate_nobles_spain_tercios_special_units_pike # Sealand. Spain
 		estate_nobles_spain_tercios_special_units_fire # Sealand. Spain
 		estate_nobles_varangian_guards_special_units # Sealand. Byzantium
+		estate_nobles_gb_royal_marines_special_units # Sealand. Great Britain
+		estate_nobles_france_king_musketeers_special_units # Sealand. France
+		estate_nobles_dutch_maurician_special_units # Sealand. Dutch/Burgundy
+		estate_nobles_japan_samurai_special_units_early # Sealand. Japan
+		estate_nobles_japan_samurai_special_units_late # Sealand. Japan
+		estate_nobles_aztecs_eagle_special_units # Sealand. Aztecs
+		estate_nobles_aztecs_jaguar_special_units # Sealand. Aztecs
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
 		estate_nobles_officer_corp

@@ -80,6 +80,10 @@ monarchy = {
 				spain_monarchy_reform
 				imperial_japan_monarchy
 				byzantium_government
+				gb_english_monarchy
+				lotharingia_monarchy_reform
+				france_monarchy_reform
+				aztecs_monarchy_reform
 			}
 		}
 		hereditary_vs_nobility = {

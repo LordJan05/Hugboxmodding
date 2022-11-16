@@ -786,6 +786,7 @@ FRA_ideas = {
 	native_trading_principles = {
 		native_uprising_chance = -0.5
 		native_assimilation = 0.5
+		colonists = 1
 	}
 	vauban_fortifications = {
 		fort_maintenance_modifier = -0.2
@@ -1977,7 +1978,7 @@ JAP_ideas = {
 		fire_damage = 0.1
 	}
 	jap_kaitakudan = {
-		global_colonial_growth = 20
+		global_colonial_growth = 25
 		colonists = 1
 	}
 	jap_great_power_diplomacy = {
@@ -2495,7 +2496,8 @@ KOR_ideas = {
 		technology_cost = -0.1
 	}
 	grand_code = {
-		global_colonial_growth = 10
+		global_colonial_growth = 20
+		colonists = 1
 	}
 	hyanyak_system = {
 		production_efficiency = 0.10
@@ -15889,14 +15891,15 @@ MAJ_ideas = {
 		heavy_ship_power = 0.1
 		navy_tradition = 1
 	}
+	maj_nusa_tenggara = {
+		colonists = 1
+		global_colonial_growth = 20
+	}
 	maj_maritime_silk_road = {
 		trade_efficiency = 0.1
 	}
 	maj_reformed_bhattara_saptaprabhu = {
 		advisor_cost = -0.15
-	}
-	maj_nusa_tenggara = {
-		colonists = 1
 	}
 }
 
@@ -15928,14 +15931,15 @@ ATJ_ideas = {
 	military_adventures = {
 		naval_morale = 0.1
 	}
+	settle_the_islands = { # same as malay ideas
+		colonists = 1
+		global_colonial_growth = 20
+	}
 	porch_of_mecca = {
 		technology_cost = -0.10
 	}
 	acehnese_moneylending = {
 		interest = -0.5
-	}
-	settle_the_islands = { # same as malay ideas
-		colonists = 1
 	}
 }
 
@@ -16035,6 +16039,7 @@ BEI_ideas = {
 		reduced_liberty_desire = 10
 	}
 	settle_the_islands = { # same as malay ideas
+		colonists = 1
 		global_colonial_growth = 20
 	}
 	bei_naval_prowess = {
@@ -16066,6 +16071,7 @@ MLC_ideas = {
 	}
 	mlc_new_hegemony = {
 		diplomatic_reputation = 1
+		colonists = 1
 	}
 	mlc_islamic_sultanate = {
 		tolerance_own = 1
@@ -16079,13 +16085,14 @@ MLC_ideas = {
 	}
 	mlc_jawi_script = {
 		idea_cost = -0.1
+		global_colonial_growth = 20
 	}
 }
 
 MSA_ideas = {
 	start = {
 		global_trade_power = 0.15
-		land_morale = 0.125
+		land_morale = 0.1
 	}
 	bonus = {
 		ship_durability = 0.1
@@ -16096,6 +16103,7 @@ MSA_ideas = {
 	}
 	free = yes
 	settle_the_islands = { # same as malay ideas
+		colonists = 1
 		global_colonial_growth = 20
 	}
 	msa_advanced_galley_warfare = {

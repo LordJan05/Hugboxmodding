@@ -325,8 +325,8 @@ pen_rely_on_sword_act = {
 		full_idea_group = quantity_ideas
 	}
 	
-	diplomatic_reputation = 1
-	land_forcelimit_modifier = 0.1
+	manpower_in_accepted_culture_provinces = 0.15
+	land_forcelimit_modifier = 0.15
 
 	
 	ai_will_do = {
@@ -366,9 +366,7 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	amount_of_banners = 0.3
-	#amount_of_cawa = 0.3
-	diplomatic_reputation = 1
+	backrow_artillery_damage = 0.1
 
 	ai_will_do = {
 		factor = 0
@@ -412,7 +410,7 @@ the_tenures_abolition_act = {
 	}
 
 	free_leader_pool = 1
-	diplomats = 1
+	all_estate_loyalty_equilibrium = 0.05
 		
 	ai_will_do = {
 		factor = 0

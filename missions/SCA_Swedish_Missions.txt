@@ -825,6 +825,7 @@ swe_diplomacy_mission_slot = {
 			}
 			else = {
 				is_subject = no
+				num_of_allies = 2
 			}
 		}
 		effect = {
@@ -1349,7 +1350,7 @@ swe_kalmar_union_mission_slot = {
 			is_subject = no
 		}
 		effect = {
-			add_stability_or_adm_power = yes
+			#add_stability_or_adm_power = yes
 			if = {
 				limit = {
 					is_subject = yes
@@ -2092,7 +2093,7 @@ swe_internal_slot = {
 					tooltip = swe_military_advisor_tt
 					has_country_modifier = swe_vasa_leads_the_rebellion
 				}
-				liberty_desire = 100
+				#liberty_desire = 100
 				estate_territory = {
 					estate = estate_nobles
 					territory = 30
@@ -2527,7 +2528,7 @@ swe_swedish_military_mission_slot = {
 		required_missions = {}
 		provinces_to_highlight = {}
 		trigger = {
-			OR = {
+			#OR = {
 				custom_trigger_tooltip = {
 					tooltip = swe_gain_support_from_estates_ct
 					OR = {
@@ -2545,25 +2546,25 @@ swe_swedish_military_mission_slot = {
 						}
 					}
 				}
-				calc_true_if = {
-					NOT = { has_estate = estate_nobles }
-					NOT = { has_estate = estate_burghers }
-					NOT = { has_estate = estate_church }
-					amount = 2
-				}
-				AND = {
-					is_subject = yes
-					liberty_desire = 100
-					custom_trigger_tooltip = {
-						tooltip = swe_gain_support_from_estates_tt
-						has_country_flag = dan_had_stockholm_bloodbath
-					}
-				}
-				AND = {
-					is_free_or_tributary_trigger = yes
-					is_at_war = no
-				}
-			}
+				#calc_true_if = {
+				#	NOT = { has_estate = estate_nobles }
+				#	NOT = { has_estate = estate_burghers }
+				#	NOT = { has_estate = estate_church }
+				#	amount = 2
+				#}
+				#AND = {
+				#	is_subject = yes
+				#	liberty_desire = 100
+				#	custom_trigger_tooltip = {
+				#		tooltip = swe_gain_support_from_estates_tt
+				#		has_country_flag = dan_had_stockholm_bloodbath
+				#	}
+				#}
+				#AND = {
+				#	is_free_or_tributary_trigger = yes
+				#	is_at_war = no
+				#}
+			#}
 		}
 		effect = {
 			if = {

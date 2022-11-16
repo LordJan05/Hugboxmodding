@@ -1608,6 +1608,15 @@ dutch_republic = {
 	#	enables_plutocratic_idea_group = yes
 	#	enables_aristocratic_idea_group = no
 	#}
+	custom_attributes = {
+		dutch_reform_dutch_maurician = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -3109,6 +3118,7 @@ political_principle_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_adm_policy = 1
+		max_absolutism = -10
 	}
 }
 
@@ -3117,6 +3127,7 @@ moral_principle_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_dip_policy = 1
+		max_absolutism = -10
 	}
 }
 
@@ -3125,6 +3136,7 @@ stability_principle_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_mil_policy = 1
+		max_absolutism = -10
 	}
 }
 
@@ -3698,19 +3710,29 @@ millenarian_theocracy_reform = {
 	allow_normal_conversion = yes
 	has_term_election = no
 	potential = {
-		religion = catholic
-		has_ruler = "Girolamo Savonarola"
 		OR = {
-			tag = LAN
-			tag = TUS
+			has_country_flag = keep_millenarian_theocracy_reform_flag
+			AND = {
+				religion = catholic
+				has_ruler = "Girolamo Savonarola"
+				OR = {
+					tag = LAN
+					tag = TUS
+				}
+			}
 		}
 	}
 	trigger = {
-		religion = catholic
-		has_ruler = "Girolamo Savonarola"
 		OR = {
-			tag = LAN
-			tag = TUS
+			has_country_flag = keep_millenarian_theocracy_reform_flag
+			AND = {
+				religion = catholic
+				has_ruler = "Girolamo Savonarola"
+				OR = {
+					tag = LAN
+					tag = TUS
+				}
+			}
 		}
 	}
 	modifiers = {
@@ -3718,9 +3740,12 @@ millenarian_theocracy_reform = {
 		tolerance_own = 2
 		global_missionary_strength = 0.02
 		max_absolutism = 40
+		morale_damage_received = -0.1
 	}
 	custom_attributes = {
+		lottery_election = yes
 		election_on_death = yes
+		bonus_stats_for_elected_ruler = yes
 	}
 	ai = {
 		factor = 10
