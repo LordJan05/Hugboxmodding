@@ -1207,13 +1207,14 @@ callaction= {
 		potential = {
 			FROM = {
 				is_defender_of_faith = yes
-				NOT = { has_guaranteed = ROOT }
-				NOT = { alliance_with = ROOT }
-				NOT = { is_subject = yes }
 			}
 		}
 		allow = {
-			always = no
+			OR = {
+				FROM = { has_guaranteed = ROOT }
+				alliance_with = FROM
+				is_subject_of = FROM
+			}
 		}
 	}
 }

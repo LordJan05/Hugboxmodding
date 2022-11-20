@@ -136,6 +136,15 @@ korea_nomad_group = {
 				}
 				add_permanent_claim = root
 			}
+			if = {
+				limit = {
+					ai = no
+					has_country_flag = starts_with_inwards_perfection
+					has_estate_privilege = estate_church_inwards_perfection
+				}
+				remove_estate_privilege = estate_church_inwards_perfection
+				clr_country_flag = starts_with_inwards_perfection
+			}
 		}
 	}
 	
@@ -360,15 +369,15 @@ kor_military_missions = {
 				name = "thriving_arms_industry"
 				duration = 9125 #25 years
 			}
-			if = {
-				limit = {
-					ai = no
-					has_country_flag = starts_with_inwards_perfection
-					has_estate_privilege = estate_church_inwards_perfection
-				}
-				remove_estate_privilege = estate_church_inwards_perfection
-				clr_country_flag = starts_with_inwards_perfection
-			}
+			#if = {
+			#	limit = {
+			#		ai = no
+			#		has_country_flag = starts_with_inwards_perfection
+			#		has_estate_privilege = estate_church_inwards_perfection
+			#	}
+			#	remove_estate_privilege = estate_church_inwards_perfection
+			#	clr_country_flag = starts_with_inwards_perfection
+			#}
 		}
 	}
 }

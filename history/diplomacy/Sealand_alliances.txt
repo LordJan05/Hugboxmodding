@@ -48,6 +48,13 @@ union = {
 	start_date = 1414.1.1
 	end_date = 1477.1.5
 }
+vassal = {
+	first = BUR
+	second = CHP
+	start_date = 1444.1.1
+	end_date = 1465.1.1
+}
+
 
 # Castille + Aragon = PU mission over Portugal.
 vassal = {

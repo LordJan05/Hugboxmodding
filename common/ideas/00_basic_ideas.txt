@@ -1045,7 +1045,7 @@ humanist_ideas = {
 	category = ADM
 
 	bonus = {
-		idea_cost = -0.1
+		global_unrest = -2
 		yearly_harmony = 0.25  # Used if religion uses harmony (confucianism)
 		brahmins_muslim_loyalty_modifier = 0.1
 		dhimmi_loyalty_modifier = 0.1
@@ -1055,8 +1055,8 @@ humanist_ideas = {
 		religious_unity = 0.25
 	}
 	local_traditions = {
-		global_unrest = -2
-		harmonization_speed = 0.25
+		idea_cost = -0.1
+		harmonization_speed = 0.33
 	}
 	ecumenism = {
 		tolerance_heretic = 2

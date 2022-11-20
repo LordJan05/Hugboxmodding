@@ -72,7 +72,7 @@ change_estate_land_share = {
 }
 
 
-1408.1.1 = { leader = {	name = "Jean de Pressy"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1437.1.1 } }
+1428.1.1 = { leader = {	name = "Jean de Pressy"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 3 personality = siege_specialist_personality 	death_date = 1457.1.1 } } # 20 years younger
 
 1419.9.11 = {
 	monarch = {
@@ -82,7 +82,7 @@ change_estate_land_share = {
 		adm = 5
 		dip = 5
 		mil = 5
-		leader = { name = "Philippe III"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 1 }
+		#leader = { name = "Philippe III"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = calm_personality
