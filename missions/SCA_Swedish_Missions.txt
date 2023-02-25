@@ -25,19 +25,6 @@ swe_scandinavian_colonialism_mission_slot = {
 		provinces_to_highlight = {}
 		trigger = {
 			army_size_percentage = 1
-			OR = {
-				is_subject = no
-				liberty_desire = 100
-				any_hired_mercenary_company = {
-					custom_trigger_tooltip = {
-						tooltip = is_free_merc_company_tt
-						OR = {
-							template = merc__local_free_city_company
-							template = merc__local_small_company
-						}
-					}
-				}
-			}
 		}
 		effect = {
 			if = {

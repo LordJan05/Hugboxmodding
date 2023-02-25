@@ -246,8 +246,7 @@ WUU_ideas = { #Wu
 		colonists = 1
 	}
 	WUU_4 = {
-		amount_of_banners = 0.4
-		#amount_of_cawa = 0.4
+		mercenary_manpower = 0.5
 	}
 	WUU_5 = {
 		ship_durability = 0.05

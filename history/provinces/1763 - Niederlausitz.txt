@@ -3,7 +3,7 @@
 owner = SOR
 controller = SOR
 add_core = SOR
-#add_core = BOH
+add_claim = BRA
 capital = "Cottbus"
 culture = sorbian
 religion = catholic

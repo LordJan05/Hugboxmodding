@@ -24,9 +24,11 @@ RHI = "countries/SeaRhineConfederation.txt"
 LAT = "countries/SeaLatinEmpire.txt"
 RSH = "countries/SeaRashidunCaliphate.txt"
 RPR = "countries/SeaPrussia3.txt" # Ducal Prussia
+BMA = "countries/SeaBurma.txt"
 
 SEX = "countries/SeaPayPalStates.txt"
 AGL = "countries/Angoulême.txt"
+BIE = "countries/SeaBarbieStates.txt"
 
 
 # Middle Africa:
@@ -73,5 +75,8 @@ MBU = "countries/Mbunda.txt"
 BEM = "countries/Bemba.txt"
 KLG = "countries/Kalanga.txt"
 
-# Added by Chalky
+# Chalky:
 DRV = "countries/Dravidessa.txt"
+
+# Hunterrio:
+MHL = "countries/Maharlika.txt"

@@ -3,7 +3,10 @@ mirecek_npl_big1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = NPL
+		OR = {
+			tag = GRK
+			tag = NPL
+		}
 	}
 	has_country_shield = yes
 	
@@ -196,7 +199,10 @@ mirecek_npl_big2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = NPL
+		OR = {
+			tag = GRK
+			tag = NPL
+		}
 	}
 	has_country_shield = yes
 	
@@ -356,7 +362,10 @@ mirecek_npl_big3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = NPL
+		OR = {
+			tag = GRK
+			tag = NPL
+		}
 	}
 	has_country_shield = yes
 
@@ -488,7 +497,10 @@ mirecek_npl_big4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = NPL
+		OR = {
+			tag = GRK
+			tag = NPL
+		}
 	}
 	has_country_shield = yes
 	
@@ -654,7 +666,10 @@ mirecek_npl_big5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = NPL
+		OR = {
+			tag = GRK
+			tag = NPL
+		}
 	}
 	has_country_shield = yes
 

@@ -93,8 +93,8 @@ georgia_convert_bombermen = {
 georgia_revive_the_aznauri = {
 	cavalry_fire = 0.5
 	cavalry_shock = 0.5
-	cav_to_inf_ratio = 0.50
 	cavalry_cost = -0.2
+	is_cossack_modifier = yes
 }
 georgia_conquer_heatens_mod = {
 	warscore_cost_vs_other_religion = -0.10
@@ -110,10 +110,13 @@ georgia_wine = {
 	trade_value_modifier = 0.25
 }
 georgia_manganese = {
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.05
 }
 
 georgia_local_fort_buff = {
 	local_fort_maintenance_modifier = -0.5
 	local_defensiveness = 0.33
+}
+geo_tame_the_mountains_modifier = {
+	local_development_cost = -0.15
 }

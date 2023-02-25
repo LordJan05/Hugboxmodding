@@ -1575,6 +1575,7 @@ country_event = {
 		}
 		NOT = { has_reform = english_monarchy }
 		NOT = { has_reform = gb_english_monarchy }
+		NOT = { has_reform = north_sea_monarchy_reform }
 		NOT = { has_reform = parliamentary_reform }
 		NOT = { has_reform = steppe_horde }
 		NOT = { has_reform = tribal_despotism }
@@ -1674,6 +1675,7 @@ country_event = {
 			factor = 0.6
 			NOT = { has_reform = english_monarchy }
 			NOT = { has_reform = gb_english_monarchy }
+			NOT = { has_reform = north_sea_monarchy_reform }
 			NOT = { has_reform = parliamentary_reform }
 		}
 	}
@@ -1684,6 +1686,7 @@ country_event = {
 			OR = {
 				has_reform = english_monarchy
 				has_reform = gb_english_monarchy
+				has_reform = north_sea_monarchy_reform
 				has_reform = parliamentary_reform
 			}
 		}
@@ -1708,6 +1711,7 @@ country_event = {
 			OR = {
 				has_reform = english_monarchy
 				has_reform = gb_english_monarchy
+				has_reform = north_sea_monarchy_reform
 				has_reform = parliamentary_reform
 			}
 		}
@@ -1733,6 +1737,7 @@ country_event = {
 				has_reform = english_monarchy
 			}
 			NOT = { has_reform = gb_english_monarchy }
+			NOT = { has_reform = north_sea_monarchy_reform }
 			NOT = {
 				has_reform = parliamentary_reform
 			}
@@ -1752,6 +1757,7 @@ country_event = {
 				has_reform = english_monarchy
 			}
 			NOT = { has_reform = gb_english_monarchy }
+			NOT = { has_reform = north_sea_monarchy_reform }
 			NOT = {
 				has_reform = parliamentary_reform
 			}
@@ -1782,6 +1788,7 @@ province_event = {
 			NOT = { stability = 2 }
 			NOT = { has_reform = english_monarchy }
 			NOT = { has_reform = gb_english_monarchy }
+			NOT = { has_reform = north_sea_monarchy_reform }
 			NOT = { has_reform = parliamentary_reform }
 			NOT = { government = tribal }
 			NOT = { government = native }

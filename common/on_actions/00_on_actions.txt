@@ -38,13 +38,13 @@ on_startup = {
 		mjl_events.14
 		mjl_events.7
 		mjl_events.9
-		mjl_merc_events.1
 		mjl_mongol_events.1
 		flavor_brapru.15
 		sealand_events.4
-		flavor_dlh.5
 		kalmar_union_events.10 # Because Kalmar Union no more... :(  Unless...
 		sealand_events.14
+		new_flavour_bav.14
+		sea_austria_events.1
 	}
 	if = {
 		limit = {
@@ -1360,6 +1360,10 @@ on_monarch_death = {
 			tag = OIR
 		}
 		ZUN = { country_event = { id = mjl_mongol_events.2 } } # Oirat Split Esen Death
+	}
+	if = {
+		limit = { tag = HAB }
+		country_event = { id = sea_austria_events.2 }
 	}
 }
 
@@ -3453,7 +3457,7 @@ on_five_year_pulse = {
 		100 = ideagroups.209
 		100 = ideagroups.210
 		100 = ideagroups.211
-		100 = ideagroups.212
+		#100 = ideagroups.212
 		100 = ideagroups.213
 		100 = ideagroups.214
 		100 = ideagroups.215
@@ -4692,25 +4696,6 @@ on_province_owner_change = {
 			}
 		}
 	}
-	##### BANNER MERCS
-	if = {
-		limit = {
-			OR = {
-				has_province_flag = sealand_banners_fl_base_flag
-				has_province_modifier = sealand_banners_fl_base_512
-				has_province_modifier = sealand_banners_fl_base_256
-				has_province_modifier = sealand_banners_fl_base_128
-				has_province_modifier = sealand_banners_fl_base_64
-				has_province_modifier = sealand_banners_fl_base_32
-				has_province_modifier = sealand_banners_fl_base_16
-				has_province_modifier = sealand_banners_fl_base_8
-				has_province_modifier = sealand_banners_fl_base_4
-				has_province_modifier = sealand_banners_fl_base_2
-				has_province_modifier = sealand_banners_fl_base_1
-			}
-		}
-		remove_banner_fl_modifiers = yes
-	}
 	##### ##### ##### 
 	##### SPECIAL INFANTRY
 	if = {
@@ -4718,6 +4703,12 @@ on_province_owner_change = {
 			has_province_modifier = sealand_cawa_fl_base
 		}
 		remove_province_modifier = sealand_cawa_fl_base
+	}
+	if = {
+		limit = {
+			has_province_modifier = sealand_cawa_fl_base_gb_increase
+		}
+		remove_province_modifier = sealand_cawa_fl_base_gb_increase
 	}
 	##### ##### ##### ##### 
 }
@@ -4954,12 +4945,12 @@ on_mercenary_recruited = {
 				}
 			}
 			FROM = {
-				add_army_professionalism = -0.025
+				add_army_professionalism = -0.01
 			}
 		}
 		else = {
 			FROM = {
-				add_army_professionalism = -0.05
+				add_army_professionalism = -0.02
 			}
 		}
 	}
@@ -5043,18 +5034,6 @@ on_primary_culture_changed = {
 	on_primary_culture_changed_privileges_effect = yes
 	judaism_on_culture_country_effect = yes
 	imperial_modifiers_on_primary_culture_change_effect = yes
-	##### BANNER MERCS
-	every_owned_province = {
-		remove_banner_fl_modifiers = yes
-	}
-	if = {
-		limit = {
-			ai = no
-		}
-		check_num_of_banners = yes
-		set_banner_fl_modifiers = yes
-	}
-	##### ##### #####
 }
 
 # FROM = Previous Country, ROOT = Province
@@ -5638,32 +5617,18 @@ on_conquest = {
 			}
 		}
 	}
-	##### BANNER MERCS
-	if = {
-		limit = {
-			OR = {
-				has_province_flag = sealand_banners_fl_base_flag
-				has_province_modifier = sealand_banners_fl_base_512
-				has_province_modifier = sealand_banners_fl_base_256
-				has_province_modifier = sealand_banners_fl_base_128
-				has_province_modifier = sealand_banners_fl_base_64
-				has_province_modifier = sealand_banners_fl_base_32
-				has_province_modifier = sealand_banners_fl_base_16
-				has_province_modifier = sealand_banners_fl_base_8
-				has_province_modifier = sealand_banners_fl_base_4
-				has_province_modifier = sealand_banners_fl_base_2
-				has_province_modifier = sealand_banners_fl_base_1
-			}
-		}
-		remove_banner_fl_modifiers = yes
-	}
-	##### ##### #####
 	##### SPECIAL INFANTRY
 	if = {
 		limit = {
 			has_province_modifier = sealand_cawa_fl_base
 		}
 		remove_province_modifier = sealand_cawa_fl_base
+	}
+	if = {
+		limit = {
+			has_province_modifier = sealand_cawa_fl_base_gb_increase
+		}
+		remove_province_modifier = sealand_cawa_fl_base_gb_increase
 	}
 	##### ##### ##### ##### 
 }
@@ -5983,63 +5948,80 @@ on_institution_embracement = {
 		add_dip_power = 100
 		add_mil_power = 100
 	}
+	if = {
+		limit = {
+			has_institution = printing_press
+		}
+		add_country_modifier = {
+			name = sealand_mercenary_manpower_modifier_printing_press
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			has_institution = manufactories
+		}
+		add_country_modifier = {
+			name = sealand_mercenary_manpower_modifier_manufactories
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			ai = no
+			any_hired_mercenary_company = {
+				OR = {
+					template = sea_small_merc_comp_0
+					template = sea_medium_merc_comp_0
+					template = sea_big_merc_comp_0
+					template = sea_cav_merc_comp_0
+					template = sea_cav2_merc_comp_0
+					template = sea_small_merc_comp_1
+					template = sea_medium_merc_comp_1
+					template = sea_big_merc_comp_1
+					template = sea_cav_merc_comp_1
+					template = sea_cav2_merc_comp_1
+					template = sea_small_merc_comp_2
+					template = sea_medium_merc_comp_2
+					template = sea_big_merc_comp_2
+					template = sea_cav_merc_comp_2
+					template = sea_cav2_merc_comp_2
+					template = sea_small_merc_comp_3
+					template = sea_medium_merc_comp_3
+					template = sea_big_merc_comp_3
+					template = sea_cav_merc_comp_3
+					template = sea_cav2_merc_comp_3
+					template = sea_inf_cav_merc_comp_3
+					template = sea_small_merc_comp_4
+					template = sea_medium_merc_comp_4
+					template = sea_big_merc_comp_4
+					template = sea_cav_merc_comp_4
+					template = sea_cav2_merc_comp_4
+					template = sea_inf_cav_merc_comp_4
+					template = sea_small_merc_comp_5
+					template = sea_medium_merc_comp_5
+					template = sea_big_merc_comp_5
+					template = sea_cav_merc_comp_5
+					template = sea_cav2_merc_comp_5
+					template = sea_inf_cav_merc_comp_5
+					template = sea_additional_inf_merc_comp_5
+					template = sea_small_merc_comp_6
+					template = sea_medium_merc_comp_6
+					template = sea_big_merc_comp_6
+					template = sea_cav_merc_comp_6
+					template = sea_cav2_merc_comp_6
+					template = sea_inf_cav_merc_comp_6
+					template = sea_additional_inf_merc_comp_6
+				}
+			}
+		}
+		country_event = { id = sealand_mercs_fl_base_event.4 }
+	}
 }
 on_national_focus_change = { }
 on_capital_moved = {
-	#####################
-	# Sealand mercs:
-	#if = {
-	#	limit = {
-	#		owner = {
-	#			has_province_modifier = sealand_banners_fl_base
-	#		}
-	#	}
-	#	owner = {
-	#		every_owned_province = {
-	#			limit = { is_capital = no }
-	#			remove_province_modifier = sealand_banners_fl_base
-	#		}
-	#	}
-	#	add_province_modifier = {
-	#		name = sealand_banners_fl_base
-	#		duration = -1
-	#		hidden = yes
-	#	}
-	#	if = {
-	#		limit = {
-	#			NOT = { culture = ROOT }
-	#		}
-	#		change_culture = ROOT
-	#	}
-	#}
-	#else_if = {
-	#	limit = {
-	#		owner = {
-	#			NOT = { has_country_flag = sealandmercs_switch_merc_flag }
-	#		}
-	#	}
-	#	owner = {
-	#		if = {
-	#			limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-	#			add_country_modifier = {
-	#				name = sealand_cawa_base_maintenance
-	#				duration = -1
-	#				hidden = yes
-	#			}
-	#		}
-	#	}
-	#	add_province_modifier = {
-	#		name = sealand_cawa_fl_base
-	#		duration = -1
-	#		hidden = yes
-	#	}
-	#	owner = {
-	#		every_owned_province = {
-	#			limit = { is_capital = no }
-	#			remove_province_modifier = sealand_cawa_fl_base
-	#		}
-	#	}
-	#}
 	if = { # For special units:
 		limit = {
 			owner = {
@@ -6054,6 +6036,10 @@ on_capital_moved = {
 					has_estate_privilege = estate_nobles_japan_samurai_special_units_late
 					has_estate_privilege = estate_nobles_aztecs_eagle_special_units
 					has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
+					has_estate_privilege = estate_nobles_jomsvikings_special_units
+					has_estate_privilege = estate_nobles_berserker_special_units
+					has_estate_privilege = estate_nobles_zulu_warriors_special_units
+					has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
 				}
 			}
 		}
@@ -6066,6 +6052,22 @@ on_capital_moved = {
 			every_owned_province = {
 				limit = { is_capital = no }
 				remove_province_modifier = sealand_cawa_fl_base
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag }
+			}
+			add_province_modifier = {
+				name = sealand_cawa_fl_base_gb_increase
+				duration = -1
+				hidden = yes
+			}
+			owner = {
+				every_owned_province = {
+					limit = { is_capital = no }
+					remove_province_modifier = sealand_cawa_fl_base_gb_increase
+				}
 			}
 		}
 	}
@@ -6094,6 +6096,14 @@ on_centralized_state = {
 		owner = {
 			add_adm_power = 25
 			change_government_reform_progress = 25
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_government_attribute = sea_centralize_state_reformprgoress_refund }
+		}
+		owner = {
+			change_government_reform_progress = 50
 		}
 	}
 	if = {

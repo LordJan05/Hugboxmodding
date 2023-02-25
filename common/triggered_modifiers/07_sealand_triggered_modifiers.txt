@@ -83,7 +83,10 @@ norwegian_army_modifier = {
 		}
 	}
 	trigger = {
-		mission_completed = disciplined_peasants
+		OR = {
+			mission_completed = disciplined_peasants
+			mission_completed = nor_disciplined_peasants
+		}
 	}
 	infantry_fire = 1
 	infantry_power = 0.2
@@ -102,16 +105,17 @@ swz_autotax_modifier = {
 	global_autonomy = -0.05
 	global_tax_modifier = 0.15
 }
-#swz_explocolo_modifier = { # Made into ideas
-#	potential = {
-#		tag = SWZ
-#	}
-#	trigger = {
-#		mission_completed = swz_middle_1
-#	}
-#	may_explore = yes
-#	colonists = 1
-#}
+swz_explocolo_modifier = {
+	potential = {
+		tag = SWZ
+	}
+	trigger = {
+		mission_completed = swz_middle_1
+	}
+	may_explore = yes
+	colonists = 1
+	global_colonial_growth = 15
+}
 swz_wtaxattr_modifier = {
 	potential = {
 		tag = SWZ
@@ -262,17 +266,6 @@ swz_disc_modifier = {
 	discipline = 0.05
 }
 ##########################################
-# Electors
-sea_elector_splendor_modifier = {
-	potential = {
-		is_elector = yes
-	}
-	trigger = {
-		is_elector = yes
-	}
-	monthly_splendor = 2
-}
-##########################################
 # France:
 sea_fra_elan_modifier = {
 	potential = {
@@ -298,7 +291,18 @@ sea_cas_united_spain_modifier = {
 	}
 	land_morale = 0.05
 }
-
+##########################################
+# Genoa:
+sea_gen_northern_genoa_trade_modifier = {
+	potential = {
+		tag = GEN
+	}
+	trigger = {
+		mission_completed = sea_gen_northern_genoa_trade
+	}
+	infantry_cost = -0.1
+	infantry_power = 0.1
+}
 ##########################################
 # Switzerland:
 swi_recruit_merc_inf_enabled_modifier = {
@@ -308,10 +312,59 @@ swi_recruit_merc_inf_enabled_modifier = {
 	trigger = {
 		has_country_flag = swi_recruit_merc_inf_enabled
 	}
-	amount_of_banners = -0.33
+	mercenary_manpower = -0.5
 }
 
 ##########################################
+# Electors
+sea_elector_splendor_modifier = {
+	potential = {
+		is_elector = yes
+		is_emperor = no
+	}
+	trigger = {
+		is_elector = yes
+	}
+	monthly_splendor = 2
+}
+# HRE Elector staying Catholic:
+sea_emperor_catholic_modifier_1 = {
+	potential = {
+		is_emperor = yes
+		religion = catholic
+	}
+	trigger = {
+		NOT = { is_year = 1500 }
+		NOT = { hre_heretic_religion = catholic }
+	}
+	manpower_against_imperial_enemies = 10000
+	monthly_splendor = 2
+}
+sea_emperor_catholic_modifier_2 = {
+	potential = {
+		is_emperor = yes
+		religion = catholic
+	}
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1550 }
+		NOT = { hre_heretic_religion = catholic }
+	}
+	manpower_against_imperial_enemies = 25000
+	monthly_splendor = 2
+}
+sea_emperor_catholic_modifier_3 = {
+	potential = {
+		is_emperor = yes
+		religion = catholic
+	}
+	trigger = {
+		is_year = 1550
+		NOT = { hre_heretic_religion = catholic }
+	}
+	manpower_against_imperial_enemies = 50000
+	monthly_splendor = 2
+}
 # Holy Roman Empire Emperor reforms:
 emperor_hofgericht_modifier = {
 	potential = {
@@ -847,4 +900,17 @@ achiev_columbus_was_a_microsoft_tech_assistant_with_an_indian_accent = {
 		}
 	}
 	global_tariffs = 0.1
+}
+achiev_country_roads = {
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = achiev_country_roads_tt
+			check_variable = {
+				which = num_of_roads_built
+				value = 100
+			}
+		}
+	}
+	movement_speed = 0.05
 }

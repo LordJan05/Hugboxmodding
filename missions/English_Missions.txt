@@ -338,6 +338,10 @@ eng_french_conquest = {
 		}
 		
 		effect = {
+			add_country_modifier = {
+				name = eng_war_france_modifier
+				duration = 3650
+			}
 			ile_de_france_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -351,6 +355,30 @@ eng_french_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NRM = {
+						is_subject_of = ROOT
+						is_subject_of_type = england_guaranteed_state
+					}
+				}
+				create_subject = {
+					subject_type = england_subject_state
+					subject = NRM
+				}
+			}
+			if = {
+				limit = {
+					GUY = {
+						is_subject_of = ROOT
+						is_subject_of_type = england_guaranteed_state
+					}
+				}
+				create_subject = {
+					subject_type = england_subject_state
+					subject = GUY
+				}
 			}
 		}
 	}
@@ -694,6 +722,21 @@ eng_french_conquest = {
 				}
 				set_government_rank = 3
 			}
+			custom_tooltip = form_north_sea_mission_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						primary_culture = english
+					}
+					change_primary_culture = anglosaxon2
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = english
+					}
+					change_culture = anglosaxon2
+				}
+			}
 			add_prestige = 25
 			country_event = { id = ideagroups.1 } #Swap Ideas
 			scandinavia_region = {
@@ -705,6 +748,12 @@ eng_french_conquest = {
 			}
 			hidden_effect = {
 				complete_mission = sea_eng_form_north_sea
+			}
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = north_sea_monarchy_reform
 			}
 		}
 	}

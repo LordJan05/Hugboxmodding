@@ -153,8 +153,7 @@ emperor_landsknechtswesen = {
 		has_dlc = "Emperor"
 	}
 	all = {
-		#imperial_mercenary_cost = -0.25
-		amount_of_banners = 0.15
+		imperial_mercenary_cost = -0.25
 		land_maintenance_modifier = -0.05
 	}
 	emperor = {

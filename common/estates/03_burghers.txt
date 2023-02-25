@@ -1,6 +1,9 @@
 estate_burghers = {
 	icon = 3
 
+	# Used for when declaring independence
+	independence_government = republic
+
 	# If true, country will get estate
 	trigger = {	
 		NOT = { has_government_attribute = disables_estate_burghers }
@@ -258,6 +261,8 @@ estate_burghers = {
 	color = { 35 35 150 }
 
 	privileges = {
+		estate_burghers_eth_tame_the_mountains # Sealand. Ethiopia
+		estate_burghers_geo_tame_the_mountains # Sealand. Georgia
 		estate_burghers_nor_production_on_wood # Sealand. Part of Norway mission
 		estate_burghers_prussian_confederation_conceded # Sealand. Danzig
 		estate_burghers_prussian_confederation

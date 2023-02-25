@@ -5,7 +5,7 @@ sea_byz_question_of_power = {
 	allow = {
 		tag = BYZ
 		NOT = { has_country_flag = sea_byz_question_of_power_flag }
-		current_size_of_parliament = 6
+		current_size_of_parliament = 4
 	}
 	
 	effect = {

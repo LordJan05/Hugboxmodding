@@ -1648,11 +1648,22 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_nobles_swz_tame_the_steppes
 			}
+			NOT = { has_province_modifier = swz_tame_the_steppes_modifier }
 		}
 		add_province_modifier = {
 			name = swz_tame_the_steppes_modifier
 			duration = -1
 		}
+	}
+	else_if = {
+		limit = {
+			has_terrain = steppe
+			has_province_modifier = swz_tame_the_steppes_modifier
+			owner = {
+				NOT = { has_estate_privilege = estate_nobles_swz_tame_the_steppes }
+			}
+		}
+		remove_province_modifier = swz_tame_the_steppes_modifier
 	}
 	# Nogai:
 	if = {
@@ -1661,11 +1672,86 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_nomadic_tribes_develop_steppe_land
 			}
+			NOT = { has_province_modifier = nog_industrialize_the_steppes_modifier }
 		}
 		add_province_modifier = {
 			name = nog_industrialize_the_steppes_modifier
 			duration = -1
 		}
+	}
+	else_if = {
+		limit = {
+			has_terrain = steppe
+			has_province_modifier = nog_industrialize_the_steppes_modifier
+			owner = {
+				NOT = { has_estate_privilege = estate_nomadic_tribes_develop_steppe_land }
+			}
+		}
+		remove_province_modifier = nog_industrialize_the_steppes_modifier
+	}
+	# Georgia:
+	if = {
+		limit = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			owner = {
+				has_estate_privilege = estate_burghers_geo_tame_the_mountains
+			}
+			NOT = { has_province_modifier = geo_tame_the_mountains_modifier }
+		}
+		add_province_modifier = {
+			name = geo_tame_the_mountains_modifier
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			has_province_modifier = geo_tame_the_mountains_modifier
+			owner = {
+				NOT = { has_estate_privilege = estate_burghers_geo_tame_the_mountains }
+			}
+		}
+		remove_province_modifier = geo_tame_the_mountains_modifier
+	}
+	# Ethiopia:
+	if = {
+		limit = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			owner = {
+				has_estate_privilege = estate_burghers_eth_tame_the_mountains
+			}
+			NOT = { has_province_modifier = eth_tame_the_mountains_modifier }
+		}
+		add_province_modifier = {
+			name = eth_tame_the_mountains_modifier
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			has_province_modifier = eth_tame_the_mountains_modifier
+			owner = {
+				NOT = { has_estate_privilege = estate_burghers_eth_tame_the_mountains }
+			}
+		}
+		remove_province_modifier = eth_tame_the_mountains_modifier
 	}
 	# Church unrest:
 	if = {
@@ -1674,11 +1760,22 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_church_no_church_unrest
 			}
+			NOT = { has_province_modifier = estate_church_no_church_unrest_modifier }
 		}
 		add_province_modifier = {
 			name = estate_church_no_church_unrest_modifier
 			duration = -1
 		}
+	}
+	else_if = {
+		limit = {
+			has_tax_building_trigger = yes
+			has_province_modifier = estate_church_no_church_unrest_modifier
+			owner = {
+				NOT = { has_estate_privilege = estate_church_no_church_unrest }
+			}
+		}
+		remove_province_modifier = estate_church_no_church_unrest_modifier
 	}
 ############################################
 	if = {

@@ -1737,6 +1737,40 @@ dan_sweden_and_great_power_mission_slot = {
 			}
 		}
 	}
+	dan_subjugate_normandy = {
+		icon = mission_have_two_subjects
+		required_missions = { dan_conquer_england }
+
+		provinces_to_highlight = {
+			OR = {
+				area = normandy_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			normandy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			change_religion = norse_pagan_reformed
+			country_event = {
+				id = sea_denmark_events.1
+			}
+		}
+	}
 
 	dan_handle_own_nobility = {
 		icon = mission_danish_kingdom
@@ -2197,7 +2231,7 @@ dan_england_mission_slot = {
 				OR = {
 					has_global_modifier_value = {
 						which = ship_durability
-						value = 0.15
+						value = 0.10
 					}
 					num_of_heavy_ship = GBR
 				}
@@ -2210,7 +2244,7 @@ dan_england_mission_slot = {
 				OR = {
 					has_global_modifier_value = {
 						which = ship_durability
-						value = 0.15
+						value = 0.10
 					}
 					num_of_heavy_ship = ENG
 				}
@@ -2218,18 +2252,22 @@ dan_england_mission_slot = {
 			else = {
 				NOT = { exists = ENG }
 				NOT = { exists = GBR }
-				navy_size = 30
+				navy_size = 25
 				OR = {
 					has_global_modifier_value = {
 						which = ship_durability
-						value = 0.15
+						value = 0.10
 					}
-					num_of_heavy_ship = 20
+					num_of_heavy_ship = 6
 				}
 			}
-			naval_forcelimit = 30
+			naval_forcelimit = 25
 		}
 		effect = {
+			add_country_modifier = {
+				name = "invasion_fleet_modifier"
+				duration = 2555
+			}
 			add_navy_tradition = 20
 			scottish_marches_area = {
 				limit = {
@@ -2374,6 +2412,13 @@ dan_england_mission_slot = {
 				name = dan_king_of_denmark_and_england
 				duration = -1
 			}
+			normandy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	north_sea_empire_2 = {
@@ -2482,6 +2527,21 @@ dan_england_mission_slot = {
 				}
 				set_government_rank = 3
 			}
+			custom_tooltip = form_north_sea_mission_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						primary_culture = english
+					}
+					change_primary_culture = anglosaxon2
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = english
+					}
+					change_culture = anglosaxon2
+				}
+			}
 			add_prestige = 25
 			country_event = { id = ideagroups.1 } #Swap Ideas
 			british_isles_region  = {
@@ -2493,6 +2553,12 @@ dan_england_mission_slot = {
 			}
 			hidden_effect = {
 				complete_mission = north_sea_empire_2
+			}
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = north_sea_monarchy_reform
 			}
 		}
 	}
@@ -3785,9 +3851,9 @@ dan_merc_mission_slot = {
 		}
 		effect = {
 			custom_tooltip = dan_establish_merc_contracts_ct #Unlocks merc companies depending on opinions
-			country_event = {
-				id = flavor_dan.113
-			}
+			#country_event = { # Removed
+			#	id = flavor_dan.113
+			#}
 		}
 	}
 

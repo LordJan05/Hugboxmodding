@@ -379,13 +379,12 @@ manchu_missions_1_b = {
 		trigger = {
 			army_size = 100
 			manpower_percentage = 0.8
-			#if = {
-			#	limit = {
-			#		has_dlc = "Mandate of Heaven"
-			#	}
-			#	num_of_banners = 20
-			#}
-			army_tradition = 50
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				num_of_banners = 20
+			}
 		}
 		effect = {
 			tibet_region = {
@@ -698,16 +697,16 @@ manchu_missions_2 = {
 		position = 5
 		completed_by = 1616.1.1
 		trigger = {
-			#if = {
-			#	limit = {
-			#		has_dlc = "Mandate of Heaven"
-			#	}
-			#	num_of_banners = 8
-			#}
-			#else = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				num_of_banners = 8
+			}
+			else = {
 				army_size_percentage = 0.9
-				cavalry_fraction = 0.1
-			#}
+				cavalry_fraction = 0.4
+			}
 		}
 		effect = {
 			korea_region = {
@@ -827,7 +826,7 @@ manchu_missions_2 = {
 			}
 		}
 		effect = {
-			#custom_tooltip = mch_khan_of_the_mongols_mercs_unlocked_tt
+			custom_tooltip = mch_khan_of_the_mongols_mercs_unlocked_tt
 			eastern_mongolia = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT

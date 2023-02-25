@@ -362,6 +362,7 @@ estate_nobles_restore_legitimacy = {
 		NOT = { legitimacy_equivalent = 65 }
 		government = monarchy
 		NOT = { government = native }
+		NOT = { has_reform = native_clan_council_reform }
 		NOT = { has_ruler_modifier = legitimacy_defended }
 		NOT = { has_regency = yes }
 	}

@@ -348,6 +348,9 @@ ethiopia_policy_with_the_cushitic_people = {
 		}
 		effect = {
 			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_eth_tame_the_mountains
+			}
+			unlock_estate_privilege = {
 				estate_privilege = estate_burghers_control_over_the_mint
 			}
 			2762 = {

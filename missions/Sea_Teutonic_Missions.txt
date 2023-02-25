@@ -4,7 +4,7 @@ sealand_teutonic_missions_0_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_centralize_the_order_flag }
@@ -82,7 +82,7 @@ sealand_teutonic_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -339,7 +339,7 @@ sealand_teutonic_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -470,7 +470,7 @@ sealand_teutonic_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -1159,7 +1159,7 @@ sealand_teutonic_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }
@@ -1339,7 +1339,7 @@ sealand_teutonic_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		always = no
+		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = chose_join_the_empire_flag }

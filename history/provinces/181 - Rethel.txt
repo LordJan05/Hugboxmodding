@@ -1,7 +1,8 @@
 # 181 Rethel
 
-owner = CHP
-controller = CHP
+owner = BUR
+controller = BUR
+add_core = BUR
 capital = "Rethel"
 is_city = yes
 culture = wallonian

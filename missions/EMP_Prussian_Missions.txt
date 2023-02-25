@@ -1,84 +1,3 @@
-sea_sil_sub = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Emperor"
-	}
-	potential = {
-		has_dlc = "Emperor"
-		NOT = { map_setup = map_setup_random }
-		OR = {
-			tag = BRA
-			AND = {
-				OR = {
-					NOT = { has_dlc = "Lions of the North" }
-					AND = {
-						NOT = { was_tag = TEU }
-						NOT = { was_tag = DNZ }
-					}
-				}
-				tag = PRU
-			}
-		}
-	}
-	has_country_shield = yes
-	
-	bra_pru_subjugate_silesians = {
-		icon = mission_have_two_subjects
-		required_missions = { }
-		provinces_to_highlight = {
-			OR = {
-				area = silesia_area
-				owner = { tag = GLG }
-				owner = { tag = OPL }
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			army_size_percentage = 1
-			num_of_generals = 1
-		}
-		effect = {
-			if = {
-				limit = {
-					exists = GLG
-				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = GLG
-				}
-			}
-			if = {
-				limit = {
-					exists = OPL
-				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = OPL
-				}
-			}
-			silesia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lusatia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-}
 emp_bra_pru_1 = {
 	slot = 1
 	generic = no
@@ -109,8 +28,19 @@ emp_bra_pru_1 = {
 			}
 		}
 		trigger = {
-			owns_core_province = 49
-			owns_core_province = 4747
+			OR = {
+				AND = {
+					owns_core_province = 49
+					owns_core_province = 4747
+				}
+				AND = {
+					if = {
+						limit = { exists = TEU }
+						TEU = { has_opinion = { who = ROOT value = 75 } }
+					}
+					else = { army_size_percentage = 1 }
+				}
+			}
 		}
 		effect = {
 			vorpommern_area = {

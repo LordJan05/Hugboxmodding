@@ -6,12 +6,13 @@ PHI_missions_1 = {
 		OR = {
 			tag = PGS
 			tag = MNA
-			tag = MAS
 			tag = CEB
 			tag = BTU
 			tag = MGD
 			tag = SUL
 			tag = LNO
+			MSA_is_tag = { tag = MAS }
+			MSA_is_tag = { tag = MHL }
 		}
 	}
 	has_country_shield = yes
@@ -202,12 +203,13 @@ PHI_missions_2 = {
 		OR = {
 			tag = PGS
 			tag = MNA
-			tag = MAS
 			tag = CEB
 			tag = BTU
 			tag = MGD
 			tag = SUL
 			tag = LNO
+			MSA_is_tag = { tag = MAS }
+			MSA_is_tag = { tag = MHL }
 		}
 	}
 	has_country_shield = yes
@@ -356,12 +358,13 @@ PHI_missions_3 = {
 		OR = {
 			tag = PGS
 			tag = MNA
-			tag = MAS
 			tag = CEB
 			tag = BTU
 			tag = MGD
 			tag = SUL
 			tag = LNO
+			MSA_is_tag = { tag = MAS }
+			MSA_is_tag = { tag = MHL }
 		}
 	}
 	has_country_shield = yes
@@ -472,12 +475,13 @@ PHI_missions_4 = {
 		OR = {
 			tag = PGS
 			tag = MNA
-			tag = MAS
 			tag = CEB
 			tag = BTU
 			tag = MGD
 			tag = SUL
 			tag = LNO
+			MSA_is_tag = { tag = MAS }
+			MSA_is_tag = { tag = MHL }
 		}
 	}
 	has_country_shield = yes
@@ -819,12 +823,13 @@ PHI_missions_5 = {
 		OR = {
 			tag = PGS
 			tag = MNA
-			tag = MAS
 			tag = CEB
 			tag = BTU
 			tag = MGD
 			tag = SUL
 			tag = LNO
+			MSA_is_tag = { tag = MAS }
+			MSA_is_tag = { tag = MHL }
 		}
 	}
 	has_country_shield = yes

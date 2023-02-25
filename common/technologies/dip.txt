@@ -19,7 +19,6 @@ technology = { #Early Ships
 
 	enable = war_canoe
 
-
 }
 
 technology = { #Merchants & Trade
@@ -80,6 +79,7 @@ technology = { #Marketplace
 		
 	trade_range	= 10
 	marketplace = yes 
+	gen_marketplace = yes 
 	may_study_technology = yes
 	
 	
@@ -300,6 +300,7 @@ technology = { #Merchantman
 	
 	
 	trade_depot = yes 
+	gen_trade_depot = yes 
 
 
 	enable = merchantman
@@ -397,6 +398,7 @@ technology = { #Limes
 	
 
 	stock_exchange = yes
+	gen_stock_exchange = yes
 
 	reduced_naval_attrition = yes
 	enable = twodecker

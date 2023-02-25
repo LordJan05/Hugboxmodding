@@ -11,7 +11,10 @@ estate_brahmins_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -186,7 +189,10 @@ estate_nobles_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -361,7 +367,10 @@ estate_church_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -536,7 +545,10 @@ estate_maratha_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -711,7 +723,10 @@ estate_burghers_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -886,7 +901,10 @@ estate_vaisyas_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -1061,7 +1079,10 @@ estate_cossacks_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -1236,7 +1257,10 @@ estate_nomadic_tribes_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -1411,7 +1435,10 @@ estate_dhimmi_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -1586,7 +1613,10 @@ estate_jains_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -1761,7 +1791,10 @@ estate_rajput_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 75
+	}
+	modifier_by_land_ownership = {
+		governing_capacity = 300
 	}
 	ai_will_do = {
 		factor = 5
@@ -2328,7 +2361,7 @@ estate_church_clerical_ministers = {
 			religion_group = muslim
 		}
 		modifier = {
-			monthly_piety = 0.001
+			monthly_piety = 0.002
 		}
 	}
 	conditional_modifier = {
@@ -4033,7 +4066,6 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 	}
 	penalties = {
 		amount_of_banners = -0.25
-		#amount_of_cawa = -0.25
 	}
 	benefits = {
 		land_morale = 0.1
@@ -6993,6 +7025,9 @@ estate_nobles_strong_duchies = {
 						OR = {
 							is_march = yes
 							is_vassal = yes
+							is_subject_of_type = castille_vassal
+							is_subject_of_type = england_subject_state
+							is_subject_of_type = novgorod_vassal
 						}
 					}
 				}
@@ -8671,6 +8706,11 @@ estate_nobles_better_integration = {
 				is_subject_of_type = client_vassal
 				is_subject_of_type = daimyo_vassal
 				is_subject_of_type = personal_union
+				is_subject_of_type = burgundy_juniors
+				is_subject_of_type = castille_vassal
+				is_subject_of_type = venetian_league_subjects
+				is_subject_of_type = england_subject_state
+				is_subject_of_type = novgorod_vassal
 			}
 		}
 	}
@@ -8709,6 +8749,11 @@ estate_maratha_better_integration = {
 				is_subject_of_type = client_vassal
 				is_subject_of_type = daimyo_vassal
 				is_subject_of_type = personal_union
+				is_subject_of_type = burgundy_juniors
+				is_subject_of_type = castille_vassal
+				is_subject_of_type = venetian_league_subjects
+				is_subject_of_type = england_subject_state
+				is_subject_of_type = novgorod_vassal
 			}
 		}
 		NOT = { has_estate = estate_nobles }
@@ -8749,6 +8794,11 @@ estate_rajput_better_integration = {
 				is_subject_of_type = client_vassal
 				is_subject_of_type = daimyo_vassal
 				is_subject_of_type = personal_union
+				is_subject_of_type = burgundy_juniors
+				is_subject_of_type = castille_vassal
+				is_subject_of_type = venetian_league_subjects
+				is_subject_of_type = england_subject_state
+				is_subject_of_type = novgorod_vassal
 			}
 		}
 		NOT = { has_estate = estate_nobles }
@@ -10682,24 +10732,19 @@ estate_nobles_danish_nobility = {
 		has_estate_privilege = estate_nobles_danish_nobility
 	}
 	can_revoke = {
-		stability = 1
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
-	}
-	on_revoked = {
-		add_stability = -1
-		random_owned_province = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-			}
+		OR = {
+			mil_tech = 5
+			offensive_war_with = DAN
+			corruption = 4
 		}
 	}
+	on_revoked = {
+	}
 	penalties = {
-		yearly_corruption = 0.03
+		yearly_corruption = 0.02
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.25
+		global_tax_modifier = -0.2
 	}
 	mechanics = {
 		exempt_from_seize_land
@@ -10722,18 +10767,9 @@ estate_nobles_nobles_instead_of_royal_court = {
 		has_estate_privilege = estate_nobles_nobles_instead_of_royal_court
 	}
 	can_revoke = {
-		stability = 1
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
+		mission_completed = nor_get_independent
 	}
 	on_revoked = {
-		add_stability = -1
-		random_owned_province = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-			}
-		}
 	}
 	penalties = {
 		legitimacy = -0.5

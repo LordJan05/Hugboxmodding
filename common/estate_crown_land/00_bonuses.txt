@@ -103,7 +103,7 @@ bonus = {
 bonus = {
     key = crown_land_level_9
     range_from = 80.0
-    range_to = 100.0
+    range_to = 90.0
     modifier = {
         max_absolutism = 15
         yearly_absolutism = 1
@@ -116,7 +116,7 @@ bonus = {
 
 bonus = {
     key = crown_land_level_10
-    range_from = 80.0
+    range_from = 90.0
     range_to = 100.0
     modifier = {
         max_absolutism = 20

@@ -1485,11 +1485,6 @@ sealand_swz_missions_3_1 = {
 			hidden_effect = {
 				swap_non_generic_missions = yes
 			}
-			set_country_flag = swz_explocolo_modifier_flag
-			hidden_effect = {
-				swap_free_idea_group = yes
-			}
-			clr_country_flag = swz_explocolo_modifier_flag
 			custom_tooltip = swz_explocolo_modifier_tt
 		}
 	}

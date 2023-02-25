@@ -48,7 +48,6 @@ country_event = {
 			disaster = ME_decline_of_majapahit
 			#desc = MAJ_until_end_of_disaster
 		}
-		add_stability = -1
 		add_legitimacy = -50
 		add_disaster_modifier = {
 			name = MAJ_dynastic #Economic Issues
@@ -566,6 +565,7 @@ country_event = {
 	mean_time_to_happen = { months = 12 }
 
 	trigger = {
+		NOT = { has_country_flag = MAJ_resolved_disaster }
 		tag = MAJ
 		NOT = { religion = hinduism }
 		NOT = { exists = MTR } #shouldn't happen, but need to account for anyway.
@@ -589,6 +589,7 @@ country_event = {
 		end_disaster = ME_decline_of_majapahit
 		change_tag = MTR
 		swap_non_generic_missions = yes
+		custom_tooltip = ME_Majapahit_Events_16_a_tt
 
 	}
 }

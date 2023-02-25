@@ -122,6 +122,7 @@ gc_spain_1 = {
 					POR = {
 						valid_for_personal_unions_trigger = yes
 					}
+					ai = yes
 				}
 				if = {
 					limit = {
@@ -158,6 +159,20 @@ gc_spain_1 = {
 			}
 			else = {
 				custom_tooltip = gc_cas_spa_navarra_bt
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -980,6 +995,7 @@ gc_spain_3 = {
 					POR = {
 						valid_for_personal_unions_trigger = yes
 					}
+					ai = yes
 				}
 				if = {
 					limit = {
@@ -1016,6 +1032,20 @@ gc_spain_3 = {
 			}
 			else = {
 				custom_tooltip = gc_cas_spa_reconquista_one_bt
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}

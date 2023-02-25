@@ -77,6 +77,7 @@ seljuk_empire_government = {
 			has_reform = seljuk_empire_government
 			have_had_reform = seljuk_empire_government
 		}
+		religion_group = muslim
 	}
 
 	valid_for_nation_designer = yes
@@ -114,7 +115,10 @@ barbary_states_reform = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		tag = BYS
+		OR = {
+			tag = BYS
+			tag = BIE
+		}
 		OR = {
 			has_reform = barbary_states_reform
 			have_had_reform = barbary_states_reform
@@ -195,8 +199,8 @@ bushmen_tribe = {
 	fixed_rank = 1
 	lock_level_when_selected = yes
 	modifiers = {
-		movement_speed = 0.1
-		global_institution_spread = -0.2
+		movement_speed = 0.33
+		global_institution_spread = -0.33
 	}
 }
 # Swazi government switch:
@@ -242,6 +246,15 @@ swazi_government_reform = {
 	modifiers = {
 		block_introduce_heir = yes
 		max_absolutism = 10
+	}
+	custom_attributes = {
+		swazi_government_reform_zulu_warriors = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
 	}
 	ai = {
 		factor = 1000
@@ -353,10 +366,12 @@ veche_tsardom = {
 						NOT = { map_setup = map_setup_random }
 					}
 					AND = {
+						has_country_flag = formed_romania_flag
 						tag = RMN
 						NOT = { map_setup = map_setup_random }
 					}
 					AND = {
+						has_country_flag = serbia_unite_jugosland_flag
 						tag = SER
 						NOT = { map_setup = map_setup_random }
 					}
@@ -684,6 +699,52 @@ fatimid_government = {
 				has_country_modifier = fatimid_government_janissaries_boost_3
 			}
 			remove_country_modifier = fatimid_government_janissaries_boost_3
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+# Andalusia:
+andalusia_government = {
+	icon = "mamluk_government"
+	allow_normal_conversion = yes
+	potential = {
+		tag = ADU
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		technology_cost = -0.05
+		establish_order_cost = -0.33
+		max_absolutism = 10
+		governing_capacity = 100
+		vassal_income = 0.5
+		vassal_forcelimit_bonus = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	effect = {
+		add_country_modifier = {
+			name = andalusia_government_janissaries
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = {
+				has_country_modifier = andalusia_government_janissaries
+			}
+			remove_country_modifier = andalusia_government_janissaries
 		}
 	}
 	ai = {
@@ -1219,5 +1280,103 @@ byzantium_government = {
 		custom_attributes = {
 			blocked_call_diet = yes
 		}
+	}
+}
+
+# North Sea Empire:
+north_sea_monarchy_reform = {
+	icon = "sea_north_sea_government"
+	allow_normal_conversion = no
+	potential = {
+		tag = NSE
+	}
+	trigger = {
+		tag = NSE
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	modifiers = {
+		governing_capacity = 150
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		church_influence_modifier = 0.1
+		max_absolutism = 10
+	}
+	custom_attributes = {
+		north_sea_monarchy_reform_jomsvikings_berserker = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+}
+# Genoa:
+genoa_merchants_reform = {
+	icon = "politician"
+	allow_normal_conversion = no
+	potential = {
+		tag = GEN
+	}
+	trigger = {
+		tag = GEN
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	modifiers = {
+		max_absolutism = 20
+		merchants = 1
+		siege_ability = 0.2
+		land_morale = 0.05
+	}
+	boost_income = yes
+	duration = 4
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		genoa_merchants_reform_genoese_crossbowmen = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		is_merchant_republic = yes
+		elections_increase_factions_influence = yes
 	}
 }

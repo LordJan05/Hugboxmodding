@@ -21,6 +21,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = BYS }
+			NOT = { tag = BIE }
 			NOT = { tag = ADU }
 			OR = {
 				primary_culture = moroccan
@@ -167,6 +168,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = BYS }
+			NOT = { tag = BIE }
 			NOT = { tag = ADU }
 			OR = {
 				primary_culture = algerian
@@ -328,6 +330,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = BYS }
+			NOT = { tag = BIE }
 			NOT = { tag = ADU }
 			OR = {
 				primary_culture = tunisian
@@ -448,6 +451,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = BYS }
+			NOT = { tag = BIE }
 			NOT = { tag = ADU }
 			OR = {
 				primary_culture = tunisian

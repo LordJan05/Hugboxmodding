@@ -791,7 +791,7 @@ warrior_monks_reform = {
 	modifiers = {
 		discipline = 0.025
 		infantry_power = 0.05
-		amount_of_banners = 0.05 # mercenary_manpower = 0.1
+		mercenary_manpower = 0.1
 	}
 }
 
@@ -1363,6 +1363,7 @@ religious_culture_reform = {
 
 	modifiers = {
 		governing_capacity = 200
+		max_absolutism = -10
 	}
 	ai = {
 		factor = 1

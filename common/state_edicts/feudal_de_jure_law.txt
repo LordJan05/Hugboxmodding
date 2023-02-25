@@ -10,10 +10,10 @@ edict_feudal_de_jure_law = {
 		#	has_country_flag = feudal_de_jure_law
 		#}
 		current_age = age_of_discovery
-		#custom_trigger_tooltip = {
-		#	tooltip = sea_remove_state_edicts_flag_tt
-		#	NOT = { has_country_flag = sea_state_edicts_flag }
-		#}
+		custom_trigger_tooltip = {
+			tooltip = sea_remove_state_edicts_flag_tt
+			NOT = { has_country_flag = sea_state_edicts_flag }
+		}
 	}
 	
 	modifier = { # OBS: Modify AI accordingly if this is changed

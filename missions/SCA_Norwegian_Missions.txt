@@ -358,10 +358,44 @@ nor_colonize_north_america_slot = {
 	}
 	has_country_shield = yes
 	
+	nor_establish_vinland = {
+		icon = mission_colonial
+		required_missions = { nor_discover_new_world }
+		position = 6
+
+		provinces_to_highlight = {
+			area = newfoundland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			newfoundland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			981 = {
+				change_trade_goods = wine
+			}
+			set_country_flag = establish_vinland_flag
+			custom_tooltip = establish_vinland_tooltip
+		}
+	}
 	nor_colonize_canada_and_na = {
 		icon = mission_rb_colonise_canada
-		position = 6
-		required_missions = { nor_discover_new_world }
+		position = 7
+		required_missions = { nor_establish_vinland }
 		provinces_to_highlight = {
 			OR = {
 				colonial_region = colonial_canada
@@ -488,7 +522,7 @@ nor_colonize_north_america_slot = {
 	
 	nor_colonize_the_north = {
 		icon = settle_north_america
-		position = 7
+		position = 8
 		required_missions = { nor_colonize_canada_and_na }
 		provinces_to_highlight = {
 			OR = {
@@ -761,7 +795,7 @@ nor_conquest_mission_slot = {
 				has_idea = call_of_our_forefathers
 			}
 			share_of_starting_income = 1.5
-			is_in_deficit = no
+			#is_in_deficit = no
 			NOT = { num_of_loans = 1 }
 		}
 		effect = {
@@ -1047,152 +1081,172 @@ nor_colonize_middle_america_slot = {
 			add_years_of_income = 3
 		}
 	}
-}
+	nor_leif_legacy = {
+		icon = mission_rb_conquer_the_highlands
+		required_missions = { nor_establish_vinland }
 
-nor_circumnavigate_the_world_slot = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Lions of the North"
-	}
-	potential = {
-		OR = {
-			tag = NOR
-			AND = {
-				was_tag = NOR
-				tag = SCA
-			}
-		}
-		has_dlc = "Lions of the North"
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	nor_circumnavigate_the_world = {
-		icon = mission_explore_the_world
-		position = 7
-		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					region = south_east_pacific_region
-					south_east_pacific_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = north_east_pacific_region
-					north_east_pacific_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = pacific_south_america_region
-					pacific_south_america_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = atlantic_south_america_region
-					atlantic_south_america_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = random_new_world_region
-					random_new_world_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = west_african_sea_region
-					west_african_sea_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = south_atlantic_region
-					south_atlantic_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = west_indian_ocean_region
-					west_indian_ocean_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = east_indian_ocean_region
-					east_indian_ocean_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = south_indian_ocean_region
-					south_indian_ocean_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = east_china_sea_region
-					east_china_sea_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = south_china_sea_region
-					south_china_sea_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = north_west_pacific_region
-					north_west_pacific_region = { NOT = { has_discovered = ROOT } }
-				}
-				AND = {
-					region = south_west_pacific_region
-					south_west_pacific_region = { NOT = { has_discovered = ROOT } }
-				}
-			}
+			province_id = 981
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
-				limit = { has_dlc = "El Dorado" }
-				custom_trigger_tooltip = {
-					tooltip = nor_circumnavigate_the_world_at
+				limit = {
 					OR = {
-						has_country_flag = circumnavigation_done
-						has_country_flag = circumnavigation_first
+						was_player = yes
+						is_colonial_nation = yes
 					}
 				}
+				ai = no
 			}
-			custom_trigger_tooltip = {
-				tooltip = nor_circumnavigate_the_world_bt
-				OR = {
-					AND = {
-						OR = {
-							south_east_pacific_region = { has_discovered = ROOT }
-							north_east_pacific_region = { has_discovered = ROOT }
-						}
-						pacific_south_america_region = { has_discovered = ROOT }
-						atlantic_south_america_region = { has_discovered = ROOT }
+			owns_or_non_sovereign_subject_of = 981
+			total_development = 100
+		}
+		effect = {
+			981 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				center_of_trade = 1
+			}
+		}
+	}
+	nor_unite_vinland = {
+		icon = secure_our_rule
+		required_missions = { nor_colonize_canada_and_na nor_leif_legacy }
+
+		provinces_to_highlight = {
+			OR = {
+				region = canada_region
+				region = northeast_america_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
 					}
-					random_new_world_region = { has_discovered = ROOT }
 				}
-				west_african_sea_region = { has_discovered = ROOT }
-				south_atlantic_region = { has_discovered = ROOT }
-				west_indian_ocean_region = { has_discovered = ROOT }
+				ai = no
+			}
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
 				OR = {
-					east_indian_ocean_region = { has_discovered = ROOT }
-					south_indian_ocean_region = { has_discovered = ROOT }
+					region = canada_region 
+					region = northeast_america_region 
 				}
-				OR = {
-					east_china_sea_region = { has_discovered = ROOT }
-					south_china_sea_region = { has_discovered = ROOT }
-					north_west_pacific_region = { has_discovered = ROOT }
-					south_west_pacific_region = { has_discovered = ROOT }
-				}
+				is_city = yes
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_dlc = "El Dorado"
-				}
+			hidden_effect = {
 				if = {
 					limit = {
-						has_country_flag = circumnavigation_first
+						NOT = { is_former_colonial_nation = yes }
 					}
-					add_adm_power = 100
-					add_dip_power = 100
-					add_mil_power = 100
-				}
-				else = {
-					custom_tooltip = nor_circumnavigate_the_world_ct
+					ROOT = { save_event_target_as = old_tag_target }
 				}
 			}
+			change_tag = VIN
+			NOR = { set_country_flag = no_nor_missions_for_you }
+			custom_tooltip = loses_old_world_provs_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					every_subject_country = {
+						limit = {
+							OR = {
+								is_subject_of_type = colony
+								is_subject_of_type = crown_colony
+								is_subject_of_type = private_enterprise
+								is_subject_of_type = self_governing_colony
+							}
+						}
+						ROOT = { inherit = PREV }
+					}
+					every_province = {
+						limit = {
+							is_core = ROOT
+							OR = {
+								continent = europe
+								continent = asia
+								continent = africa
+							}
+						}
+						add_core = event_target:old_tag_target
+						remove_core = ROOT
+					}
+					release = event_target:old_tag_target
+					event_target:old_tag_target = { swap_non_generic_missions = yes }
+					ROOT = { set_country_flag = old_world_to_new_world_flag }
+					ROOT = { set_country_flag = no_colonial_nations }
+					every_subject_country = {
+						limit = {
+							capital_scope = { 
+								OR = {
+									continent = europe
+									continent = asia
+									continent = africa
+								}
+							}
+						}
+						grant_independence = yes
+					}
+					if = {
+						limit = {
+							government = monarchy
+						}
+						event_target:old_tag_target = {
+							change_government = monarchy
+							add_government_reform = feudalism_reform
+							define_ruler = {
+								dynasty = ROOT
+								claim = 95
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							government = republic
+						}
+						event_target:old_tag_target = {
+							change_government = republic
+							add_government_reform = oligarchy_reform
+							define_ruler = {
+								claim = 95
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							government = theocracy
+						}
+						event_target:old_tag_target = {
+							change_government = theocracy
+							add_government_reform = leading_clergy_reform
+							define_ruler = {
+								claim = 95
+							}
+						}
+					}
+				}
+				remove_non_electors_emperors_from_empire_effect = yes
+				set_country_flag = changed_from_colonial_nation
+				complete_mission = nor_unite_vinland
+			}
+			set_capital = 981
 			add_country_modifier = {
-				name = nor_great_navigators
-				duration = 36500
+				name = "centralization_modifier"
+				duration = 7300
 			}
+			add_prestige = 25
 		}
 	}
 }
@@ -1229,7 +1283,7 @@ nor_kalmar_union_mission_slot = {
 			is_free_or_tributary_trigger = yes
 		}
 		effect = {
-			add_stability_or_adm_power = yes
+			#add_stability_or_adm_power = yes
 			add_legitimacy = 30
 			vastra_gotaland_area = {
 				limit = {
@@ -1261,12 +1315,27 @@ nor_kalmar_union_mission_slot = {
 		required_missions = {
 			nor_declare_independence
 		}
-		provinces_to_highlight = {}
+		provinces_to_highlight = {
+			OR = {
+				area = vastra_gotaland_area 
+				area = svealand_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			vastra_gotaland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			svealand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
+			remove_estate_privilege = estate_nobles_nobles_instead_of_royal_court
 			lowlands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1310,19 +1379,33 @@ nor_kalmar_union_mission_slot = {
 					amount = 25
 				}
 			}
-			if = {
+			scandinavia_region = {
 				limit = {
-					DAN = {
-						exists = yes
-						government = monarchy
-						religion_group = christian
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					target = DAN
-					months = 240
+				add_permanent_claim = ROOT
+			}
+			skaneland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			denmark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			jutland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1478,6 +1561,450 @@ nor_dominate_colonialism_slot = {
 			}
 		}
 	}
+	nor_disciplined_peasants = {
+		icon = mission_assemble_an_army
+		required_missions = { nor_arm_the_peasants }
+		position = 7
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			has_commanding_three_star = yes
+			army_professionalism = 0.2
+			army_tradition = 60
+		}
+		effect = {
+			custom_tooltip = disciplined_peasants_tooltip
+		}
+	}
+	nor_pray_for_old_gods = {
+		icon = mission_hands_praying
+		required_missions = { nor_unite_vinland nor_disciplined_peasants }
+		position = 9
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			tag = VIN
+		}
+		effect = {
+			custom_tooltip = pray_for_old_gods_1_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						religion = catholic
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = catholic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = catholic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = catholic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = catholic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = catholic_rebels
+							size = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						religion = protestant
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = protestant_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = protestant_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = protestant_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = protestant_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = protestant_rebels
+							size = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						religion = reformed
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = reformed_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = reformed_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = reformed_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = reformed_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = reformed_rebels
+							size = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						religion = anglican
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = anglican_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = anglican_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = anglican_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = anglican_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = anglican_rebels
+							size = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						religion = hussite
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = hussite_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = hussite_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = hussite_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = hussite_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = hussite_rebels
+							size = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						religion = orthodox
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = orthodox_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = orthodox_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = orthodox_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = orthodox_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = orthodox_rebels
+							size = 3
+						}
+					}
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = heretic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = heretic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = heretic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = heretic_rebels
+							size = 3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							continent = north_america
+							is_core = ROOT
+						}
+						spawn_rebels = {
+							type = heretic_rebels
+							size = 3
+						}
+					}
+				}
+			}
+			change_religion = norse_pagan_reformed
+			custom_tooltip = pray_for_old_gods_2_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = ROOT
+						continent = north_america
+					}
+					change_religion = norse_pagan_reformed
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = scandinavian
+					}
+					change_culture = norse
+				}
+			}
+			add_stability = -1
+		}
+	}
 }
 
 nor_development_mission_slot = {
@@ -1596,7 +2123,6 @@ nor_development_mission_slot = {
 		trigger = {
 			government = monarchy
 			NOT = { has_estate_privilege = estate_nobles_danish_nobility }
-			NOT = { has_estate_privilege = estate_nobles_nobles_instead_of_royal_court }
 			is_free_or_tributary_trigger = yes
 		}
 		effect = {
@@ -1615,7 +2141,7 @@ nor_development_mission_slot = {
 	
 	nor_an_absolute_kingdom = {
 		icon = mission_monarch_in_throne_room
-		position = 6
+		position = 5
 		required_missions = { nor_restore_norwegian_nobility }
 		provinces_to_highlight = {}
 		trigger = {
@@ -1688,6 +2214,30 @@ nor_development_mission_slot = {
 			}
 		}
 	}
+	nor_arm_the_peasants = {
+		icon = mission_rb_control_electors
+		required_missions = { }
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			army_size_percentage = 1
+			army_size = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = "peasant_levies_modifier"
+				duration = 5475
+			}
+		}
+	}
 }
 
 nor_west_africa_slot = {
@@ -1751,6 +2301,153 @@ nor_west_africa_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+		}
+	}
+}
+nor_circumnavigate_the_world_slot = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Lions of the North"
+	}
+	potential = {
+		OR = {
+			tag = NOR
+			AND = {
+				was_tag = NOR
+				tag = SCA
+			}
+		}
+		has_dlc = "Lions of the North"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	nor_circumnavigate_the_world = {
+		icon = mission_explore_the_world
+		position = 8
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = south_east_pacific_region
+					south_east_pacific_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = north_east_pacific_region
+					north_east_pacific_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = pacific_south_america_region
+					pacific_south_america_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = atlantic_south_america_region
+					atlantic_south_america_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = random_new_world_region
+					random_new_world_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = west_african_sea_region
+					west_african_sea_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = south_atlantic_region
+					south_atlantic_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = west_indian_ocean_region
+					west_indian_ocean_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = east_indian_ocean_region
+					east_indian_ocean_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = south_indian_ocean_region
+					south_indian_ocean_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = east_china_sea_region
+					east_china_sea_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = south_china_sea_region
+					south_china_sea_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = north_west_pacific_region
+					north_west_pacific_region = { NOT = { has_discovered = ROOT } }
+				}
+				AND = {
+					region = south_west_pacific_region
+					south_west_pacific_region = { NOT = { has_discovered = ROOT } }
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = { has_dlc = "El Dorado" }
+				custom_trigger_tooltip = {
+					tooltip = nor_circumnavigate_the_world_at
+					OR = {
+						has_country_flag = circumnavigation_done
+						has_country_flag = circumnavigation_first
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = nor_circumnavigate_the_world_bt
+				OR = {
+					AND = {
+						OR = {
+							south_east_pacific_region = { has_discovered = ROOT }
+							north_east_pacific_region = { has_discovered = ROOT }
+						}
+						pacific_south_america_region = { has_discovered = ROOT }
+						atlantic_south_america_region = { has_discovered = ROOT }
+					}
+					random_new_world_region = { has_discovered = ROOT }
+				}
+				west_african_sea_region = { has_discovered = ROOT }
+				south_atlantic_region = { has_discovered = ROOT }
+				west_indian_ocean_region = { has_discovered = ROOT }
+				OR = {
+					east_indian_ocean_region = { has_discovered = ROOT }
+					south_indian_ocean_region = { has_discovered = ROOT }
+				}
+				OR = {
+					east_china_sea_region = { has_discovered = ROOT }
+					south_china_sea_region = { has_discovered = ROOT }
+					north_west_pacific_region = { has_discovered = ROOT }
+					south_west_pacific_region = { has_discovered = ROOT }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "El Dorado"
+				}
+				if = {
+					limit = {
+						has_country_flag = circumnavigation_first
+					}
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+				}
+				else = {
+					custom_tooltip = nor_circumnavigate_the_world_ct
+				}
+			}
+			add_country_modifier = {
+				name = nor_great_navigators
+				duration = 36500
 			}
 		}
 	}

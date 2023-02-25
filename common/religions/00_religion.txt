@@ -1077,9 +1077,22 @@ christian = {
 						add_curia_treasury = -1000
 					}
 					else = { add_papal_influence = -50 }
-					add_country_modifier = {
-						name = "papal_legate"
-						duration = 7300
+					if = {
+						limit = {
+							NOT = { is_subject_of_type = crown_colony }
+							NOT = { is_subject_of_type = private_enterprise }
+							NOT = { is_subject_of_type = self_governing_colony }
+						}
+						add_country_modifier = {
+							name = "papal_legate"
+							duration = 7300
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = "papal_legate_2"
+							duration = 7300
+						}
 					}
 				}
 				ai_will_do = {
@@ -3184,7 +3197,7 @@ pagan = {
 		icon = 18
 		country = {
 			tolerance_own = 1
-			global_autonomy = -0.05
+			hostile_attrition = 1
 		}
 
 		country_as_secondary = {

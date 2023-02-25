@@ -334,6 +334,7 @@ renaissance = {
 	bonus = {
 		development_cost = -0.05
 		build_cost = -0.05
+		sea_merc_shock_damage = 0.05
 	}
 
 	trade_company_efficiency = 0.4
@@ -602,6 +603,7 @@ new_world_i = {
 
 	bonus = {
 		global_prov_trade_power_modifier = 0.10
+		sea_merc_fire_damage_and_cost = 0.05
 	}
 
 	trade_company_efficiency = 0.6
@@ -1009,6 +1011,7 @@ printing_press = {
 
 	bonus = {
 		stability_cost_modifier = -0.05
+		sea_merc_morale_and_manpower = 0.2
 	}
 
 	trade_company_efficiency = 0.8
@@ -1403,6 +1406,7 @@ global_trade = {
 
 	bonus = {
 		merchants = 1
+		sea_merc_cost_and_power = 0.05
 	}
 
 	trade_company_efficiency = 1.0
@@ -1706,6 +1710,7 @@ manufactories = {
 
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
+		sea_merc_manpower = 0.2
 	}
 
 	trade_company_efficiency = 1.25
@@ -2213,6 +2218,7 @@ enlightenment = {
 
 	bonus = {
 		culture_conversion_cost = -0.25
+		sea_merc_reinforce_speed_and_discipline = 0.025
 	}
 
 	trade_company_efficiency = 1.5

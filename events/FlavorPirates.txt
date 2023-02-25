@@ -416,7 +416,7 @@ country_event = {
 			add_base_manpower = 2
 		}
 		release = SLE
-		create_march = SLE
+		create_vassal = SLE
 		SLE = {
 			change_government = republic
 			add_government_reform = pirate_republic_reform
@@ -557,7 +557,7 @@ country_event = {
 			add_base_manpower = 2
 		}
 		release = TET
-		create_march = TET
+		create_vassal = TET
 		TET = {
 			change_government = republic
 			add_government_reform = pirate_republic_reform

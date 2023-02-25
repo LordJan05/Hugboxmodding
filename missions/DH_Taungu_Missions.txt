@@ -10,6 +10,7 @@ tau_slot_1 = {
 			tag = TAU
 			tag = BPR
 			tag = AVA
+			tag = BMA
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -252,6 +253,7 @@ tau_slot_2 = {
 			tag = TAU
 			tag = BPR
 			tag = AVA
+			tag = BMA
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -264,7 +266,10 @@ tau_slot_2 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					ROOT = { tag = TAU }
+					OR = {
+						ROOT = { tag = TAU }
+						ROOT = { tag = BMA }
+					}
 					province_id = 4396
 					NOT = {
 						owned_by = ROOT
@@ -282,6 +287,7 @@ tau_slot_2 = {
 						NOT = {
 							tag = TAU
 							tag = BPR
+							tag = BMA
 						}
 					}
 					owner = {
@@ -293,7 +299,10 @@ tau_slot_2 = {
 		trigger = {
 			if = {
 				limit = {
-					tag = TAU
+					OR = {
+						tag = TAU
+						tag = BMA
+					}
 				}
 				4396 = {
 					owned_by = ROOT
@@ -398,6 +407,7 @@ tau_slot_2 = {
 			}
 		}
 		trigger = {
+			is_at_war = no
 			stability = 2
 			legitimacy = 90
 			kachin_area = {
@@ -434,10 +444,9 @@ tau_slot_2 = {
 			set_government_rank = 3
 			if = {
 				limit = {
-					NOT = { any_country = { has_country_flag = is_burma } }
+					NOT = { exists = BMA }
 				}
-				override_country_name = BURMA
-				set_country_flag = is_burma
+				change_tag = BMA
 			}
 			northern_thai_area = {
 				limit = {
@@ -452,10 +461,14 @@ tau_slot_2 = {
 					OR = {
 						tag = TAU
 						tag = BPR
+						tag = BMA
 					}
 				}
 				custom_tooltip = mjl_tau_idea_buff_tt
-				swap_free_idea_group = yes
+				hidden_effect = { swap_free_idea_group = yes }
+			}
+			hidden_effect = {
+				complete_mission = tau_universal_ruler
 			}
 		}
 		ai_weight = {
@@ -585,6 +598,7 @@ tau_slot_3 = {
 			tag = TAU
 			tag = BPR
 			tag = AVA
+			tag = BMA
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -759,6 +773,7 @@ tau_slot_4 = {
 			tag = TAU
 			tag = BPR
 			tag = AVA
+			tag = BMA
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -968,6 +983,7 @@ tau_slot_5 = {
 			tag = TAU
 			tag = BPR
 			tag = AVA
+			tag = BMA
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }

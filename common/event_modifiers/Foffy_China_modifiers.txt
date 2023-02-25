@@ -189,8 +189,7 @@ h_wuu_anc1_1 = {
 }
 
 h_wuu_anc1_2 = {
-	#merc_maintenance_modifier = -0.15
-	land_maintenance_modifier = -0.075
+	merc_maintenance_modifier = -0.15
 }
 
 h_wuu_anc1_3 = {
@@ -212,9 +211,8 @@ h_wuu_anc2_3 = {
 }
 	
 h_wuu_anc3_1 = {
-	amount_of_banners = 0.3
-	#amount_of_cawa = 0.3
-	#mercenary_discipline = 0.05
+	mercenary_manpower = 0.5
+	mercenary_discipline = 0.05
 }
 
 h_wuu_anc3_2 = {
@@ -291,9 +289,8 @@ h_qic_legacy = {
 
 h_wuu_legacy = {
 	advisor_cost = -0.15
-	amount_of_banners = 0.3
-	#amount_of_cawa = 0.3
-	#mercenary_discipline = 0.05
+	mercenary_manpower = 0.5
+	mercenary_discipline = 0.05
 }
 
 h_yue_legacy = {

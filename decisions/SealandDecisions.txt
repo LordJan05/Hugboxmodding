@@ -725,7 +725,80 @@ country_decisions = { # Weaker Prussia
 		}
 		ai_importance = 400
 	}
-	form_austria_hungary_empire = { # Austra Hungary empire
+	form_austrian_empire = { # Hungary-Austria empire
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_austrian_empire_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = HAB
+			NOT = { tag = AUE }
+			NOT = { exists = AUE }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+		}
+		allow = {
+			tag = HAB
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+			}
+		}
+		effect = {
+			change_tag = AUE
+			restore_country_name_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_country_flag = formed_austrian_empire_flag
+			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_north_german_flag
+			set_country_flag = formed_rhineland_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			south_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_austria_hungary_empire = { # Hungary-Austria empire
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
@@ -735,11 +808,7 @@ country_decisions = { # Weaker Prussia
 				ai = no
 				is_playing_custom_nation = no
 			}
-			OR = {
-				tag = HAB
-				tag = AUE
-				tag = HUN
-			}
+			tag = HUN
 			NOT = { exists = AHE }
 			NOT = { exists = HAE }
 		}
@@ -765,28 +834,12 @@ country_decisions = { # Weaker Prussia
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		allow = {
-			if = {
-				limit = {
-					OR = {
-						tag = HAB
-						tag = AUE
-					}
-				}
-				tag = AUE
-				NOT = { exists = HUN }
-				NOT = { exists = AHE }
-				adm_tech = 20
-			}
-			if = {
-				limit = {
-					tag = HUN
-				}
-				tag = HUN
-				NOT = { exists = HAB }
-				NOT = { exists = AUE }
-				NOT = { exists = HAE }
-				adm_tech = 15
-			}
+			tag = HUN
+			NOT = { exists = HAB }
+			NOT = { exists = AUE }
+			NOT = { exists = AHE }
+			NOT = { exists = HAE }
+			adm_tech = 15
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -856,21 +909,7 @@ country_decisions = { # Weaker Prussia
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						tag = HAB
-						tag = AUE
-					}
-				}
-				change_tag = AHE
-			}
-			if = {
-				limit = {
-					tag = HUN
-				}
-				change_tag = HAE
-			}
+			change_tag = HAE
 			if = {
 				limit = {
 					NOT = { government = monarchy }
@@ -1224,6 +1263,107 @@ country_decisions = {
 			hidden_effect = {
 				add_republican_tradition = 50
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	become_barbie_states = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = united_barbie_states_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = BIE }
+			OR = {
+				tag = BYS
+				AND = {
+					is_colonial_nation_of = BYS
+					capital_scope = {
+						colonial_region = colonial_the_carribean
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = cuba_area
+				area = east_cuba_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			NOT = { exists = BIE }
+			adm_tech = 10
+			is_at_war = no
+			OR = {
+				tag = BYS
+				capital_scope = {
+					colonial_region = colonial_the_carribean
+					is_core = ROOT
+				}
+			}
+			cuba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_cuba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			change_tag = BIE
+			if = {
+				limit = {
+					tag = BYS
+				}
+				custom_tooltip = become_barbie_states_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							capital_scope = {
+								colonial_region = colonial_the_carribean
+							}
+							OR = {
+								is_subject_of_type = colony
+								is_subject_of_type = crown_colony
+								is_subject_of_type = private_enterprise
+								is_subject_of_type = self_governing_colony
+							}
+						}
+						ROOT = { inherit = PREV }
+					}
+					ROOT = { set_country_flag = old_world_to_new_world_flag }
+					ROOT = { set_country_flag = no_colonial_nations }
+				}
+				remove_non_electors_emperors_from_empire_effect = yes
+				set_country_flag = changed_from_colonial_nation
+				set_capital = 484
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					is_colonial_nation_of = BYS
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_country_flag = united_barbie_states_flag
 		}
 		ai_will_do = {
 			factor = 1
@@ -2056,6 +2196,174 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	# Africa Corridor:
+	sea_colonize_east_sahara_corridor = {
+		potential = {
+			NOT = { tag = TUN }
+			2474 = { is_empty = yes }
+			2475 = { is_empty = yes }
+			OR = {
+				owns = 2448
+				owns = 2275
+				owns = 2277
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2474
+				province_id = 2475
+				province_id = 2448
+				province_id = 2275
+				province_id = 2277
+			}
+			OR = {
+				NOT = { is_core = ROOT }
+				is_empty = yes
+			}
+		}
+		allow = {
+			OR = {
+				owns_core_province = 2448
+				owns_core_province = 2275
+				owns_core_province = 2277
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					2474 = { is_empty = yes }
+				}
+				2474 = { add_core = ROOT cede_province = ROOT }
+			}
+			if = {
+				limit = {
+					2475 = { is_empty = yes }
+				}
+				2475 = { add_core = ROOT cede_province = ROOT }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	sea_colonize_west_sahara_corridor = {
+		potential = {
+			NOT = { tag = MOR }
+			1127 = { is_empty = yes }
+			OR = {
+				owns = 2466
+				owns = 2460
+				owns = 1128
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1127
+				province_id = 2466
+				province_id = 2460
+				province_id = 1128
+			}
+			OR = {
+				NOT = { is_core = ROOT }
+				is_empty = yes
+			}
+		}
+		allow = {
+			OR = {
+				owns_core_province = 2466
+				owns_core_province = 2460
+				owns_core_province = 1128
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					1127 = { is_empty = yes }
+				}
+				1127 = { add_core = ROOT cede_province = ROOT }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Fishing game?:
+	sea_fishing_game = {
+		potential = {
+			any_owned_province = {
+				trade_goods = fish
+			}
+		}
+		provinces_to_highlight = {
+			trade_goods = fish
+			NOT = { has_province_modifier = sea_fishing_game_modifier }
+			owned_by = ROOT
+		}
+		allow = {
+			if = {
+				limit = {
+					any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
+				}
+				custom_trigger_tooltip = {
+					tooltip = sea_fishing_game_tt
+					OR = {
+						NOT = { has_country_flag = sea_fishing_game_timeout_tt }
+						had_country_flag = {
+							flag = sea_fishing_game_timeout_tt
+							days = 280
+						}
+						always = no
+					}
+				}
+			}
+			else = {
+				any_owned_province = {
+					trade_goods = fish
+					NOT = { has_province_modifier = sea_fishing_game_modifier }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = sea_fishing_game_timeout_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
+					}
+					every_owned_province = { clr_province_flag = sea_fishing_game_modifier_flag }
+					every_owned_province = { remove_province_triggered_modifier = sea_fishing_game_triggered_modifier }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					trade_goods = fish
+					NOT = { has_province_modifier = sea_fishing_game_modifier }
+				}
+				custom_tooltip = sea_fishing_game_ttt
+				hidden_effect = {
+					add_province_triggered_modifier = sea_fishing_game_triggered_modifier
+					set_province_flag = sea_fishing_game_modifier_flag
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	bagirmi_move_capital_decision = {
+		major = yes
+		potential = {
+			tag = BAG
+			ai = no
+			NOT = { has_country_flag = bagirmi_move_capital_decision_flag }
+			NOT = { mission_completed = west_africa_strong_leadership }
+		}
+		allow = {
+			is_at_war = no
+			NOT = { mission_completed = west_africa_strong_leadership }
+		}
+		effect = {
+			set_country_flag = bagirmi_move_capital_decision_flag
+			set_capital = 5049
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
 
 # Janissaries
@@ -2655,6 +2963,191 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	# Songhai:
+	songhai_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_songhai_flag }
+			capital_scope = {
+				OR = {
+					region = niger_region
+					region = sahel_region
+				}
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SON }
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = SON }
+					num_of_cities = 5 #Carnage
+				}
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2262
+				province_id = 1133
+				province_id = 2268
+				province_id = 1130
+				province_id = 2271
+				province_id = 2269
+				province_id = 1142
+				province_id = 2270
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SON }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 2262
+			owns_core_province = 1133
+			owns_core_province = 2268
+			owns_core_province = 1130
+			owns_core_province = 2271
+			owns_core_province = 2269
+			owns_core_province = 1142
+			owns_core_province = 2270
+			capital_scope = {
+				OR = {
+					region = niger_region
+					region = sahel_region
+				}
+			}
+		}
+		effect = {
+			change_tag = SON
+			if = {
+				limit = {
+					NOT = { primary_culture = songhai }
+				}
+				change_primary_culture = songhai
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = hausa_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_songhai_flag
+			if = {
+				limit = { has_dlc = "Origins" }
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	# Bengal:
+	bengal_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bengal_flag }
+			NOT = { tag = BNG }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			culture_group = eastern_aryan
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_bengal_area
+				area = west_bengal_area
+				area = gaur_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = BNG }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			culture_group = eastern_aryan
+			gaur_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_bengal_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_bengal_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = BNG
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_bengal_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
 }
 
 # Milan Ambrosian to Ambrosian Merchant:
@@ -2727,33 +3220,87 @@ country_decisions = {
 	}
 }
 
-# Switz mercs:
+# Mercs:
 country_decisions = {
+	sea_mercs_inf_to_cav_switch = {
+		major = yes
+		potential = {
+			always = yes
+			NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = sea_mercs_no_inf_mercs_tt
+				NOT = {
+					any_hired_mercenary_company = {
+						OR = {
+							template = sea_medium_merc_comp_0
+							template = sea_medium_merc_comp_1
+							template = sea_medium_merc_comp_2
+							template = sea_medium_merc_comp_3
+							template = sea_medium_merc_comp_4
+							template = sea_medium_merc_comp_5
+							template = sea_medium_merc_comp_6
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = sea_mercs_inf_to_cav_switch_flag
+			custom_tooltip = sea_mercs_inf_to_cav_switch_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sea_mercs_cav_to_inf_switch = {
+		major = yes
+		potential = {
+			always = yes
+			has_country_flag = sea_mercs_inf_to_cav_switch_flag
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = sea_mercs_no_cav_mercs_tt
+				NOT = {
+					any_hired_mercenary_company = {
+						OR = {
+							template = sea_cav2_merc_comp_0
+							template = sea_cav2_merc_comp_1
+							template = sea_cav2_merc_comp_2
+							template = sea_cav2_merc_comp_3
+							template = sea_cav2_merc_comp_4
+							template = sea_cav2_merc_comp_5
+							template = sea_cav2_merc_comp_6
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = sea_mercs_inf_to_cav_switch_flag
+			custom_tooltip = sea_mercs_cav_to_inf_switch_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+# Switz mercs:
 	# Enable:
 	swi_recruit_merc_inf_enable = {
 		major = yes
 		potential = {
 			tag = SWI
 			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
+			mission_completed = emp_swi_mercenaries
 		}
 		allow = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = swi_recruit_merc_inf_recruited }
-				}
-				mil_power = 300
-			}
-			else = { mil_power = 100}
+			mil_power = 100
 		}
 		effect = {
 			set_country_flag = swi_recruit_merc_inf_enabled
-			if = {
-				limit = {
-					NOT = { has_country_flag = swi_recruit_merc_inf_recruited }
-				}
-				add_mil_power = -300
-			}
-			else = { add_mil_power = -100 }
+			add_mil_power = -100
 			set_country_flag = swi_recruit_merc_inf_recruited
 			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_tt
 			custom_tooltip = swi_recruit_merc_inf_enable_tt
@@ -2768,6 +3315,7 @@ country_decisions = {
 		potential = {
 			tag = SWI
 			has_country_flag = swi_recruit_merc_inf_enabled
+			mission_completed = emp_swi_mercenaries
 		}
 		allow = {
 			NOT = { sea_swiss_mercenaries_1 = 1 }
@@ -2789,6 +3337,7 @@ country_decisions = {
 		potential = {
 			has_country_flag = swi_recruit_merc_inf_enabled
 			tag = SWI
+			mission_completed = emp_swi_mercenaries
 		}
 		allow = {
 			treasury = 30
@@ -2816,11 +3365,11 @@ country_decisions = {
 					NOT = { sea_swiss_mercenaries_1 = 20 }
 				}
 			}
-			# Tech 12-25
+			# Tech 12-22
 			if = {
 				limit = {
 					mil_tech = 12
-					NOT = { mil_tech = 26 }
+					NOT = { mil_tech = 23 }
 				}
 				if = {
 					limit = {
@@ -2857,10 +3406,10 @@ country_decisions = {
 					NOT = { sea_swiss_mercenaries_2 = 60 }
 				}
 			}
-			# Tech 26-
+			# Tech 23-32
 			if = {
 				limit = {
-					mil_tech = 26
+					mil_tech = 23
 				}
 				if = {
 					limit = {
@@ -2931,13 +3480,13 @@ country_decisions = {
 					if = {
 						limit = {
 							mil_tech = 12
-							NOT = { mil_tech = 26 }
+							NOT = { mil_tech = 23 }
 						}
 						sea_swiss_mercenaries_2 = ROOT
 					}
 					if = {
 						limit = {
-							mil_tech = 26
+							mil_tech = 23
 						}
 						sea_swiss_mercenaries_2 = ROOT
 					}
@@ -2957,7 +3506,7 @@ country_decisions = {
 					if = {
 						limit = {
 							mil_tech = 12
-							NOT = { mil_tech = 26 }
+							NOT = { mil_tech = 23 }
 						}
 						capital_scope = {
 							sea_swiss_mercenaries_2 = ROOT
@@ -2965,7 +3514,7 @@ country_decisions = {
 					}
 					if = {
 						limit = {
-							mil_tech = 26
+							mil_tech = 23
 						}
 						capital_scope = {
 							sea_swiss_mercenaries_3 = ROOT

@@ -127,7 +127,7 @@ uluru = {
 			local_gold_depletion_chance_modifier = -0.1
 		}
 		country_modifiers = {
-			amount_of_banners = 0.1
+			mercenary_manpower = 0.25
 		}
 		on_upgraded = { }
 	}
@@ -146,7 +146,7 @@ uluru = {
 		}
 		country_modifiers = {
 			yearly_army_professionalism = 0.0015
-			amount_of_banners = 0.15
+			mercenary_manpower = 0.33
 		}
 		on_upgraded = { }
 	}
@@ -165,7 +165,7 @@ uluru = {
 		}
 		country_modifiers = {
 			yearly_army_professionalism = 0.003
-			amount_of_banners = 0.2
+			mercenary_manpower = 0.5
 		}
 		on_upgraded = { }
 	}

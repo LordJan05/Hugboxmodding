@@ -1414,7 +1414,7 @@ ancestor_fierce_negotiator_personality = {
 	
 	peace_desire = -10
 	
-	land_maintenance_modifier = -0.1
+	merc_maintenance_modifier = -0.25
 	nation_designer_cost = 2
 }
 

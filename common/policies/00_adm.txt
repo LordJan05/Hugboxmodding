@@ -1129,7 +1129,7 @@ the_licensing_of_the_press_act = {
 	}
 
 	legitimacy = 1
-	republican_tradition = 0.1
+	republican_tradition = 0.3
 	devotion = 1
 	horde_unity = 1
 	meritocracy = 0.5

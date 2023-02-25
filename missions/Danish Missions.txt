@@ -633,6 +633,21 @@ sealand_denmark_missions_2 = {
 				}
 				set_government_rank = 3
 			}
+			custom_tooltip = form_north_sea_mission_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						primary_culture = english
+					}
+					change_primary_culture = anglosaxon2
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = english
+					}
+					change_culture = anglosaxon2
+				}
+			}
 			add_prestige = 25
 			country_event = { id = ideagroups.1 } #Swap Ideas
 			british_isles_region  = {
@@ -644,6 +659,12 @@ sealand_denmark_missions_2 = {
 			}
 			hidden_effect = {
 				complete_mission = north_sea_empire
+			}
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = north_sea_monarchy_reform
 			}
 		}
 	}

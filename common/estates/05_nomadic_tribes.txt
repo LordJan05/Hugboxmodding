@@ -1,5 +1,10 @@
 estate_nomadic_tribes = {
 	icon = 5
+	
+	# Used for when declaring independence
+	independence_government = tribal
+	starting_reform = steppe_horde
+	independence_tech_group = nomad_group
 
 	# If true, country will get estate
 	trigger = {

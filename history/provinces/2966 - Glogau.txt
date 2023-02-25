@@ -2,6 +2,7 @@
 
 owner = GLG
 controller = GLG
+add_claim = BOH
 culture = schlesian
 religion = catholic
 capital = "Glogau"

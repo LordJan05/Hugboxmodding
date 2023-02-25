@@ -1,8 +1,8 @@
 # Added by Sealand
 government = monarchy
-add_government_reform = feudalism_reform
-primary_culture = danish
-add_accepted_culture = english
+add_government_reform = north_sea_monarchy_reform
+primary_culture = anglosaxon2
+add_accepted_culture = danish
 add_accepted_culture = norwegian
 religion = catholic
 technology_group = western

@@ -180,6 +180,7 @@ declarewar = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -197,6 +198,7 @@ declarewar = {
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
 			ROOT = { NOT = { tag = ASK } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -386,6 +388,7 @@ allianceaction = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -451,6 +454,7 @@ enforce_peace = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -818,6 +822,7 @@ support_independence_action = {
 	condition = {
 		tooltip = support_independence_action_tt
 		potential = {
+			FROM = { is_subject = yes }
 		}
 		allow = {
 			FROM = { overlord = { ai = yes } }
@@ -874,6 +879,7 @@ guaranteeaction = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -920,6 +926,7 @@ warningaction = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -966,6 +973,7 @@ threaten_war = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -1133,6 +1141,7 @@ tributary_state_action = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {
@@ -1181,6 +1190,7 @@ ask_for_tributary_state_action = {
 			ROOT = { NOT = { tag = UES } }
 			ROOT = { NOT = { tag = SMZ } }
 			ROOT = { NOT = { tag = TKD } }
+			ROOT = { NOT = { is_subject_of_type = daimyo_vassal } }
 		}
 		allow = {
 			OR = {

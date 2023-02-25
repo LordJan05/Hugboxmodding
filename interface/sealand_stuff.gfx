@@ -64,6 +64,11 @@ spriteTypes = {
 		name = "discover_cahokia_pic"
 		texturefile = "gfx//interface//missions//discover_cahokia_pic.dds"
 	}
+
+	spriteType = {
+		name = "conquer_east_italy"
+		texturefile = "gfx//interface//missions//conquer_east_italy.dds"
+	}
 	
 	# ME animed mission logo
 	frameAnimatedSpriteType = {
@@ -156,6 +161,11 @@ spriteTypes = {
 		name = "government_reform_sea_aztecs_monarchy"
 		texturefile = "gfx//interface//government_reform_icons//sea_aztecs_monarchy.dds"
  	}
+	
+	spriteType = {
+		name = "government_reform_sea_north_sea_government"
+		texturefile = "gfx//interface//government_reform_icons//sea_north_sea_government.dds"
+ 	}
 
 ##############
 #### FACTIONS
@@ -245,6 +255,70 @@ spriteTypes = {
 		name = "GFX_faction_sea_colonial_mil_2"	
 		texturefile = "gfx//interface//aristocrats_icon.tga"
 	}
+	##
+	
+	## VENICE
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_aristocrats"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_aristocrats"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_aristocrats2"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_aristocrats2"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_traders"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_traders"	
+		texturefile = "gfx//interface//traders_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_traders2"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_traders2"	
+		texturefile = "gfx//interface//sea_ven_traders2_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_guilds"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_guilds"	
+		texturefile = "gfx//interface//guilds_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sea_ven_guilds2"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sea_ven_guilds2"	
+		texturefile = "gfx//interface//sea_ven_guilds2_icon.tga"
+	}
+	##
+	
+	## MERC
+	spriteType = {
+		name = "GFX_faction_sea_merc_mil_2"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
 	
 ##############
 #### AGES
@@ -298,12 +372,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/age_iv_african_reinforce.dds"
 	}
 	spriteType = {
-		name = "GFX_age_ii_increased_banner_mercs"
-		texturefile = "gfx/interface/ages/age_ii_increased_banner_mercs.dds"
+		name = "GFX_age_ii_increased_mercs"
+		texturefile = "gfx/interface/ages/age_ii_increased_mercs.dds"
 	}
 	spriteType = {
 		name = "GFX_age_iii_warscore_cost"
 		texturefile = "gfx/interface/ages/age_iii_warscore_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_age_ii_colonial_focus"
+		texturefile = "gfx/interface/ages/age_ii_colonial_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_age_iii_vassal_fl"
+		texturefile = "gfx/interface/ages/age_iii_vassal_fl.dds"
 	}
 
 ##############
@@ -1086,6 +1168,22 @@ spriteTypes = {
 		texturefile = "gfx//interface//buildings//southamerica_fort7.tga"
 		loadType = "INGAME"
 	}
+	
+	spriteType = {
+		name = "GFX_gen_marketplace"
+		texturefile = "gfx//interface//buildings//latin_gen_marketplace.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_gen_trade_depot"
+		texturefile = "gfx//interface//buildings//latin_gen_trade_depot.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_gen_stock_exchange"
+		texturefile = "gfx//interface//buildings//latin_gen_stock_exchange.tga"
+		loadType = "INGAME"
+	}
 
 ##############
 #### PRIVILEGE
@@ -1093,6 +1191,10 @@ spriteTypes = {
 	spriteType = {
 		name = "privilege_sea_castille_autonomous_duchies"
 		texturefile = "gfx/interface/privileges/privilege_sea_castille_autonomous_duchies.dds"
+	}
+	spriteType = {
+		name = "privilege_tribal_allegiance"
+		texturefile = "gfx/interface/privileges/privilege_tribal_allegiance.dds"
 	}
 
 ##############
@@ -1346,6 +1448,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_ship_galley_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_ship_galley_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_disaster_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_disaster_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_fish_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_fish_logo.dds"
 	}
 	
 	# Small Icons fit for event options:
@@ -1624,5 +1734,44 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_morale_damage_received"
 		texturefile = "gfx/interface/sea_event_logos/sea_morale_damage_received.dds"
+	}
+
+##############
+#### DIPLO
+
+	spriteType = {
+		name = "GFX_sea_guaranteed_subject_icon"
+		texturefile = "gfx//interface//sea_guaranteed_subject_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_diplomacy_guaranteed_icon"
+		texturefile = "gfx//interface//sea_diplomacy_guaranteed_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_diplomacy_guaranting_icon"
+		texturefile = "gfx//interface//sea_diplomacy_guaranting_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sea_trade_league_subject_icon"
+		texturefile = "gfx//interface//sea_trade_league_subject_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_diplomacy_trade_leagued_icon"
+		texturefile = "gfx//interface//sea_diplomacy_trade_leagued_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_diplomacy_trade_leaguing_icon"
+		texturefile = "gfx//interface//sea_diplomacy_trade_leaguing_icon.dds"
+	}
+
+##############
+#### OTHER
+
+	textSpriteType = {
+		name = "gfx_sea_button_base_button"
+		texturefile = "gfx//interface//sea_button_base_button.dds"
+		
+		clicksound = click
 	}
 }

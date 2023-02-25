@@ -587,8 +587,6 @@ central_africa_region = { # African Great Lakes
 		sankuru_area
 		ituri_area # Sealand
 		turkana_area # Sealand
-		sangha_area # Sealand
-		manjia_area # Sealand
 		bunyoro_area # replaces imatong_area # MJL Africa
 	}
 	monsoon = {
@@ -615,6 +613,8 @@ kongo_region = {
 		#tshopo_area # Removed
 		congo_basin_area # Removed
 		etosha_area # Removed
+		sangha_area # Sealand
+		manjia_area # Sealand
 	}
 	monsoon = {
 		00.02.01

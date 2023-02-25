@@ -202,9 +202,9 @@ age_of_discovery = {
 		#		factor = 1000
 		#	}
 		#}
-		age_ii_increased_banner_mercs = {
+		age_ii_increased_mercs = {
 			modifier = {
-				amount_of_banners = 0.33
+				mercenary_manpower = 0.5
 			}
 			ai_will_do = {
 				factor = 30
@@ -238,15 +238,16 @@ age_of_discovery = {
 		}
 
 		ab_portugal_colonial_growth = {
-		
 			allow = {
-				OR = {
-					tag = POR
-					tag = KOR
+				capital_scope = {
+					NOT = { superregion = africa_superregion }
+					NOT = { superregion = southern_africa_superregion  }
 				}
 			}
 			modifier = {
-				global_colonial_growth = 50
+				colonists = 1
+				range = 0.5
+				global_colonial_growth = 10
 			}
 			ai_will_do = {
 				factor = 10
@@ -476,13 +477,32 @@ age_of_reformation = {
 	
 	abilities = {
 	
-		ab_allow_religion_enforced = {
-			effect = {
-				custom_tooltip = religion_enforced_edict
-				set_country_flag = religion_enforced_edict
+		#ab_allow_religion_enforced = {
+		#	effect = {
+		#		custom_tooltip = religion_enforced_edict
+		#		set_country_flag = religion_enforced_edict
+		#	}
+		#	ai_will_do = {
+		#		factor = 0
+		#	}
+		#}
+		age_ii_colonial_focus = {
+			allow = {
+				NOT = { has_country_flag = ab_portugal_colonial_growth_flag }
+				is_subject = no
+				NOT = { num_of_colonists = 1 }
+				NOT = { has_subject_of_type = crown_colony }
+				NOT = { has_subject_of_type = private_enterprise }
+				NOT = { has_subject_of_type = self_governing_colony }
+			}
+			modifier = {
+				colonists = 2
+				global_colonial_growth = 50
+				range = 1
+				may_explore = yes
 			}
 			ai_will_do = {
-				factor = 0
+				factor = 10
 			}
 		}
 	
@@ -508,7 +528,7 @@ age_of_reformation = {
 		
 		ab_mercenary_discipline = {
 			modifier = {
-				fire_damage = 0.075
+				mercenary_discipline = 0.05
 			}
 			ai_will_do = {
 				factor = 100
@@ -558,14 +578,6 @@ age_of_reformation = {
 				factor = 30
 			}
 		}
-		#age_ii_increased_banner_mercs = { # Moved to 1st age
-		#	modifier = {
-		#		amount_of_banners = 0.33
-		#	}
-		#	ai_will_do = {
-		#		factor = 30
-		#	}
-		#}
 		age_ii_cheap_cannons = {
 			modifier = {
 				artillery_cost = -0.33
@@ -735,10 +747,21 @@ age_of_absolutism = {
 	
 	abilities = {
 	
-		ab_allow_edict_of_absolutism = {
-			effect = {
-				custom_tooltip = edict_of_absolutism_tt
-				set_country_flag = edict_of_absolutism
+		#ab_allow_edict_of_absolutism = {
+		#	effect = {
+		#		custom_tooltip = edict_of_absolutism_tt
+		#		set_country_flag = edict_of_absolutism
+		#	}
+		#	ai_will_do = {
+		#		factor = 0
+		#	}
+		#}
+		age_iii_vassal_fl = {
+			allow = {
+				is_subject = no
+			}
+			modifier = {
+				vassal_forcelimit_bonus = 2
 			}
 			ai_will_do = {
 				factor = 0

@@ -905,24 +905,12 @@ ajuuran_offense_slot = {
 		required_missions = {  }
 		position = 1
 		trigger = {
-			#custom_trigger_tooltip = {
-			#	tooltip = aju_the_mamluk_soldiers_tt
-			#	any_hired_mercenary_company = {
-			#		template = merc_aju_mamluk_soldiers
-			#	}
-			#}
-			if = {
-				limit = {
-					MAM = { exists = yes }
-				}
-				alliance_with = MAM
-				MAM = {
-					NOT = {
-						war_with = ROOT
-					}
+			custom_trigger_tooltip = {
+				tooltip = aju_the_mamluk_soldiers_tt
+				any_hired_mercenary_company = {
+					template = merc_aju_mamluk_soldiers
 				}
 			}
-			else = { army_size_percentage = 1 }
 		}
 		effect = {
 			add_army_tradition = 10

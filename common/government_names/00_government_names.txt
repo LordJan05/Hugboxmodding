@@ -180,7 +180,12 @@ islamic_caliphate = {
 	}
 
 	trigger = {
-		has_country_modifier = unified_islam
+		OR = {
+			has_country_modifier = unified_islam
+			has_reform = fatimid_government
+			has_reform = eschatological_theocracy_caliphate_reform
+			has_reform = andalusia_government
+		}
 	}
 }
 

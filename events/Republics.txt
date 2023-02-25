@@ -1390,7 +1390,7 @@ country_event = {
 			name = offensive_modifier
 			duration = 3650
 		}
-		add_stability = -1
+		#add_stability = -1
 	}
 	option = {
 		name = "EVTOPTB9557" #Defense sounds better at this stage
@@ -1399,7 +1399,7 @@ country_event = {
 			name = defensive_modifier
 			duration = 3650
 		}
-		add_stability = -1
+		#add_stability = -1
 	}
 }
 

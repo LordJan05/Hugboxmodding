@@ -4229,6 +4229,60 @@ add_influence_to_random_faction = {
 				influence = $influence$
 			}
 		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_aristocrats 
+			}
+			add_faction_influence = {
+				faction = sea_ven_aristocrats 
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_aristocrats2 
+			}
+			add_faction_influence = {
+				faction = sea_ven_aristocrats2 
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_traders 
+			}
+			add_faction_influence = {
+				faction = sea_ven_traders 
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_traders2 
+			}
+			add_faction_influence = {
+				faction = sea_ven_traders2 
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_guilds 
+			}
+			add_faction_influence = {
+				faction = sea_ven_guilds 
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = {
+				has_faction = sea_ven_guilds2 
+			}
+			add_faction_influence = {
+				faction = sea_ven_guilds2 
+				influence = $influence$
+			}
+		}
 	}
 }
 
@@ -4269,6 +4323,24 @@ add_influence_to_adm_faction = {
 			influence = $influence$
 		}				
 	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_guilds 
+		}
+		add_faction_influence = {
+			faction = sea_ven_guilds 
+			influence = $influence$
+		}
+	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_guilds2 
+		}
+		add_faction_influence = {
+			faction = sea_ven_guilds2 
+			influence = $influence$
+		}
+	}
 }
 
 add_influence_to_dip_faction = {
@@ -4308,6 +4380,24 @@ add_influence_to_dip_faction = {
 			influence = $influence$
 		}				
 	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_traders 
+		}
+		add_faction_influence = {
+			faction = sea_ven_traders 
+			influence = $influence$
+		}
+	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_traders2 
+		}
+		add_faction_influence = {
+			faction = sea_ven_traders2 
+			influence = $influence$
+		}
+	}
 }
 
 add_influence_to_mil_faction = {
@@ -4346,6 +4436,24 @@ add_influence_to_mil_faction = {
 			faction = temples
 			influence = $influence$
 		}				
+	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_aristocrats 
+		}
+		add_faction_influence = {
+			faction = sea_ven_aristocrats 
+			influence = $influence$
+		}
+	}
+	if = {
+		limit = { 
+			has_faction = sea_ven_aristocrats2 
+		}
+		add_faction_influence = {
+			faction = sea_ven_aristocrats2 
+			influence = $influence$
+		}
 	}
 }
 

@@ -13,6 +13,7 @@ indonesians_3 = {
 		NOT = { tag = PGS }
 		NOT = { tag = MNA }
 		NOT = { tag = MAS }
+		NOT = { tag = MHL }
 		NOT = { tag = CEB }
 		NOT = { tag = BTU }
 		NOT = { tag = MGD }
@@ -175,6 +176,7 @@ indonesians_4 = {
 		NOT = { tag = PGS }
 		NOT = { tag = MNA }
 		NOT = { tag = MAS }
+		NOT = { tag = MHL }
 		NOT = { tag = CEB }
 		NOT = { tag = BTU }
 		NOT = { tag = MGD }
@@ -768,6 +770,7 @@ indonesians_5 = {
 		NOT = { tag = PGS }
 		NOT = { tag = MNA }
 		NOT = { tag = MAS }
+		NOT = { tag = MHL }
 		NOT = { tag = CEB }
 		NOT = { tag = BTU }
 		NOT = { tag = MGD }

@@ -58,7 +58,7 @@ defaults_reform = {
 	force_admiral_leader = no
 	admirals_become_rulers = no
 	generals_become_rulers = no
-	allow_banners = yes
+	allow_banners = no
 	uses_revolutionary_zeal = no
 	revolutionary = no
 	revolutionary_client_state = no
@@ -1267,10 +1267,10 @@ great_mongol_state_legacy = {
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
 	}
-	#conditional = {
-	#	allow = { has_dlc = "Mandate of Heaven" }
-	#	allow_banners = yes
-	#}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
 	ai = {
 		factor = 0
 	}

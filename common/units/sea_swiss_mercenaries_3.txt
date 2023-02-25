@@ -3,12 +3,14 @@
 type = infantry
 unit_type = sea_special_units
 
-# Tech 26- I sure do hope it's not op...
+# Tech 23-32 I sure do hope it's not op...
 
 maneuver = 1
-offensive_morale = 5
-defensive_morale = 5
+offensive_morale = 4
+defensive_morale = 4
 offensive_fire = 4
 defensive_fire = 4
-offensive_shock = 5
-defensive_shock = 5
+offensive_shock = 4
+defensive_shock = 4
+
+manpower = 2.5

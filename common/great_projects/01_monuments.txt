@@ -13676,6 +13676,10 @@ malbork_castle = {
 			fort_maintenance_modifier = -0.5
 		}
 		on_upgraded = {
+			add_permanent_province_modifier = {
+				name = teu_malbork_castle_modifier
+				duration = -1
+			}
 		}
 	}
 }

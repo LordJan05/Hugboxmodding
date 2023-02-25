@@ -1,6 +1,5 @@
-owner = BAG
-controller = BAG
-add_core = BAG
+owner = KWA
+controller = KWA
 add_core = KWA
 culture = jukun
 religion = shamanism #Fetishism

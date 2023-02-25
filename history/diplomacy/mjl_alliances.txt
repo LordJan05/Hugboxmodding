@@ -1,10 +1,4 @@
 vassal = {
-	first = GRK
-	second = LWA
-	start_date = 1444.1.1
-	end_date = 1447.3.13
-}
-vassal = {
 	first = GEO
 	second = IME
 	start_date = 1444.1.1

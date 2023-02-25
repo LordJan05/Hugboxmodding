@@ -5197,7 +5197,6 @@ poland_sca_slot_5_e = {
 		}
 		effect = { 
 			custom_tooltip = pol_if_chose_hre_path
-			custom_tooltip = generic_more_mercs_available_tt
 			custom_tooltip = pol_alternatively_tt
 			tooltip = {
 				vorpommern_area = {
@@ -5244,11 +5243,6 @@ poland_sca_slot_5_e = {
 							duration = 7300 
 							hidden = yes
 						}
-					}
-					add_country_modifier = {
-						name = "mercenaries_to_the_standard"
-						duration = 3650
-						hidden = yes
 					}
 				}
 			}
@@ -5378,7 +5372,6 @@ poland_sca_slot_5_plc_3 = {
 		}
 		effect = { 
 			custom_tooltip = pol_if_chose_hre_path
-			custom_tooltip = generic_more_mercs_available_tt
 			custom_tooltip = pol_alternatively_tt
 			tooltip = {
 				vorpommern_area = {
@@ -5425,11 +5418,6 @@ poland_sca_slot_5_plc_3 = {
 							duration = 7300 
 							hidden = yes
 						}
-					}
-					add_country_modifier = {
-						name = "mercenaries_to_the_standard"
-						duration = 3650
-						hidden = yes
 					}
 				}
 			}

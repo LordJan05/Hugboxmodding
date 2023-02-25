@@ -58,6 +58,7 @@ inti_reforms = {
 	
 	inti_reform_1 = {
 		manpower_recovery_speed = 0.1
+		max_hostile_attrition = 1
 	}
 	inti_reform_2 = {
 		colonists = 2

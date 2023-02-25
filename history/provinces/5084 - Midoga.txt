@@ -1,6 +1,7 @@
 owner = WAD
 controller = WAD
 add_core = WAD
+add_claim = YAO
 culture = bilala
 religion = sunni
 capital = "Midoga"

@@ -1,6 +1,7 @@
 # Sealand
 government = monarchy
 add_government_reform = fatimid_government
+government_rank = 3
 technology_group = muslim
 religion = sunni
 primary_culture = tunisian

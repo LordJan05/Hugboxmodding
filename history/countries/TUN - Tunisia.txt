@@ -35,9 +35,9 @@ change_estate_land_share = {
 		adm = 4
 		dip = 3
 		mil = 3
-		leader = { name = "'Uthman"		type = general	fire = 3	shock = 3	manuever = 4	siege = 2}
+		leader = { name = "'Uthman"		type = general	fire = 3	shock = 3	manuever = 4	siege = 4}
 	}
-	leader = { name = "'Uthman"		type = admiral	fire = 3	shock = 3	manuever = 4	siege = 2}
+	leader = { name = "'Uthman"		type = admiral	fire = 3	shock = 3	manuever = 4	siege = 4}
 }
 
 1488.1.1 = {

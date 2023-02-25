@@ -986,7 +986,7 @@
      swz_middle_1_mission_tt:0 "Not completed Mission §GSubjugate and Tax§! or Mission §RWar Tax and Defence§!"
      swz_middle_1_title:0 "§MExplore and Colonize§!"
      swz_middle_1_desc:0 "Explore and Colonize"
-     swz_explocolo_modifier_tt:0 "[Root.GetName] improves '§YOriginis of the First Humans§!' national idea with the following bonuses:\nAllows recruitment of explorers & conquistadors.\nColonists: §G+1§!"
+     swz_explocolo_modifier_tt:0 "[Root.GetName] improves '§YOriginis of the First Humans§!' national idea with the following bonuses:\nColonists: §G+1§!\nGlobal Settler Increase: §G+15.00§!\nAllows recruitment of explorers & conquistadors."
      
      swz_right_1_empty_title:0 "§RWar Tax and Defence§!"
      swz_right_1_empty_desc:0 "Improved War Tax and Defence"
@@ -1121,8 +1121,6 @@
      sea_SWZ_ideas_1:0 "Swazi Ideas"
      sea_SWZ_ideas_1_start:0 "Swazi Traditions"
      sea_SWZ_ideas_1_bonus:0 "Swazi Ambition"
-     swz_origin_of_first_human_1:0 "Originis of the First Humans"
-     swz_origin_of_first_human_1_desc:0 "Originis of the First Humans"
      swz_explocolo_modifier:0 "Explore and Colonize"
      desc_swz_explocolo_modifier:0 "§RModifier is locked for Swazi tag.§!"
      swz_wtaxattr_modifier:0 "Improved War Tax and Defence"
@@ -1152,9 +1150,19 @@
     tribe_becomes_monarchy_reform_swazi:0 "Reform into Swazi Monarchy"
     tribe_becomes_monarchy_reform_swazi_desc:0 "Swazi Government is Absolute Diarchy Monarchy, where the king, Ngwenyama, and his queen mother, Ndlovukati, rule and share the same amount of power, as to balance each other out. When current king dies, then new ruler is chosen by Traditional Council, called Liqoqo, who chooses one of the most prominent wifes of the deceased king to be the next Queen Mother and whose son will automatically become the new king."
     swazi_government_reform:0 "Swazi Government"
-    swazi_government_reform_desc:0 "Is Absolute Diarchy Monarchy, where the king, Ngwenyama, and his queen mother, Ndlovukati, rule and share the same amount of power, as to balance each other out. When current king dies, then new ruler is chosen by Traditional Council, called Liqoqo, who chooses one of the most prominent wifes of the deceased king to be the next Queen Mother and whose son will automatically become the new king."  
+    swazi_government_reform_desc:0 "Is Absolute Diarchy Monarchy, where the king, Ngwenyama, and his queen mother, Ndlovukati, rule and share the same amount of power, as to balance each other out. When current king dies, then new ruler is chosen by Traditional Council, called Liqoqo, who chooses one of the most prominent wifes of the deceased king to be the next Queen Mother and whose son will automatically become the new king."
+    mechanic_swazi_government_reform_zulu_warriors_yes:0 "Unlocks '§YZulu Warriors§!' Nobility Privilege. Which when enacted:"
+    # Privileges:
+    estate_nobles_zulu_warriors_special_units:0 "Zulu Warriors"
+    estate_nobles_zulu_warriors_special_units_desc:0 "Those spirited warriors, who don't know how to deflect from bullets and never run out of breath to keep on daring to sprit towards their enemies."
+    estate_nobles_zulu_warriors_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+    estate_nobles_zulu_warriors_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+    # Modifiers:
+    zulu_warriors_units:0 "Zulu Warriors"
+    desc_zulu_warriors_units:0 "Those spirited warriors, who don't know how to deflect from bullets and never run out of breath to keep on daring to sprit towards their enemies."
     NGWENYAMA:0 "Ngwenyama"
     NDLOVUKATI:0 "Ndlovukati"
+    # Events:
     swazi_election_government.1.t:0 "Start of the New Era"
     swazi_election_government.1.d:0 "Our Ngwenyama, king, has died, leaving for Liqoqo, us, to decide, who is going to be our next Ndlovukati, queen mother, and her son as the next Ngwenyama. Luckily we got some of the best, from many, already presented to us, each with their own Cult abilities.\n\n(Unlocking more Cults, gives more options to choose from.)"
     swazi_election_government.1.dd:0 "Our heir has died, leaving for Liqoqo, us, to decide, who is going to be our next Ndlovukati, queen mother, and her son as the next Ngwenyama. Luckily we got some of the best, from many, already presented to us, each with their own Cult abilities.\n\n(Unlocking more Cults, gives more options to choose from.)"
@@ -1277,3 +1285,8 @@
    # Kilwa:
     # Modifier:
     zan_great_kilwa_gold_modifier:0 "Kilwan Gold Conduct"
+    
+   # Songhai:
+    # Decisions:
+    songhai_nation_title:0 "@SON Become New Songhai"
+    songhai_nation_desc:0 ""

@@ -12,7 +12,11 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
-
+add_casus_belli = {
+    target = FRA
+    type = cb_hundred_years_war
+    months = 120
+}
 
 change_estate_land_share = {
 	estate = estate_church

@@ -1,23 +1,82 @@
 ﻿l_english:
- # Decisions:
- sealandmercs_switch_cawa_decision_title:0 "Switch to Infantry Only Mercenaries"
- sealandmercs_switch_cawa_decision_desc:0 "§YInfantry Only Mercenaries§! are cheaper to maintain (Base Maintenance: §Y0.55¤§! aka Maintenance Cost:  §R+150.0%§!), than §YBanner Mercenaries§! but cost §Y25¤§! to recruit.\nHas no other penalties.\n\nCurrent §YBanner Mercenaries§! are expensive to maintain (Base Maintenance: §Y0.99¤§! aka Maintenance Cost:  §R+450.00%§!), than §YInfantry Only Mercenaries§! but cost nothing to recruit.\nIncludes following penalty: Discipline Bonus: §R-5.00%§!."
- sealandmercs_switch_to_cawa_tt:0 "Switches to §YInfantry Only Mercenaries§!."
- sealandmercs_switch_banner_decision_title:0 "Switch to Banner Mercenaries"
- sealandmercs_switch_banner_decision_desc:0 "§YBanner Mercenaries§! are expensive to maintain (Base Maintenance: §Y0.99¤§! aka Maintenance Cost:  §R+450.00%§!), than §YInfantry Only Mercenaries§! but cost nothing to recruit.\nIncludes following penalty: Discipline Bonus: §R-5.00%§!.\n\nCurrent §YInfantry Only Mercenaries§! are cheaper to maintain (Base Maintenance: §Y0.55¤§! aka Maintenance Cost:  §R+150.0%§!), than §YBanner Mercenaries§! but cost §Y25¤§! to recruit.\nHas no other penalties."
- sealandmercs_switch_to_banner_tt:0 "Switches to §YBanner Mercenaries§!."
- 
- # Modifiers:
-  sealand_cawa_fl_base:0 "" # Base Forcelimit for Infantry Only Mercenaries
-  sealand_banners_fl_base:0 "" # Base Forcelimit for Banners Mercenaries
-  sealand_cawa_base_maintenance:0 "" # Base Maintenance Cost for Infantry Only Mercenaries
-  sealand_banners_fl_base_512:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_256:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_128:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_64:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_32:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_16:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_8:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_4:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_2:0 "Mercenaries Base Forcelimit"
-  sealand_banners_fl_base_1:0 "Mercenaries Base Forcelimit"
+  # Modifiers:
+    sealand_cawa_fl_base:0 "" # Base Forcelimit for Infantry Only Mercenaries
+    sealand_banners_fl_base:0 "" # Base Forcelimit for Banners Mercenaries
+    sealand_cawa_base_maintenance:0 "" # Base Maintenance Cost for Infantry Only Mercenaries
+    
+    
+  # Decision:
+    sea_mercs_inf_to_cav_switch_title:0 "£sea_merc_logo£ Replace Medium Merc with Cav Merc"
+    sea_mercs_inf_to_cav_switch_desc:0 "Replaces §YMed Merc Comp§! with §YCav Merc Comp§! on a month tick."
+    sea_mercs_no_inf_mercs_tt:0 "Does not have any §YMed Merc Comp§! employed."
+    sea_mercs_inf_to_cav_switch_tt:0 "Replaces §YMed Merc Comp§! with §YCav Merc Comp§! on a month tick.\n§RAny recruited §YMed Merc Comp§! will be removed.§!"
+    sea_mercs_cav_to_inf_switch_title:0 "£sea_merc_logo£ Replace Cav Merc with Medium Merc"
+    sea_mercs_cav_to_inf_switch_desc:0 "Replaces §YCav Merc Comp§! with §YMed Merc Comp§! on a month tick."
+    sea_mercs_no_cav_mercs_tt:0 "Does not have any §YCav Merc Comp§! employed."
+    sea_mercs_cav_to_inf_switch_tt:0 "Replaces §YCav Merc Comp§! with §YMed Merc Comp§! on a month tick.\n§RAny recruited §YCav Merc Comp§! will be removed.§!"
+  # Events:
+    sealand_mercs_fl_base_event.4.t:0 "Obselete Mercenary Companies"
+    sealand_mercs_fl_base_event.4.d:0 "We have obselete §YMercenary Companies§!. In order to gain upgraded §YMercenary Company§!, we have to delete the old one.\nThis only includes for basic §YMercenary Companies§! and not for unique ones."
+    sealand_mercs_fl_base_event.4.a:0 "Understood."
+    
+  # Mercs:
+    sea_small_merc_comp_0:0 "Small Merc Comp"
+    sea_medium_merc_comp_0:0 "Med Merc Comp"
+    sea_big_merc_comp_0:0 "Large Merc Comp"
+    sea_cav_merc_comp_0:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_0:0 "Cav Merc Comp"
+    # Renaissance
+    sea_merc_shock_damage:0 "Mercenary Shock Damage"
+    sea_small_merc_comp_1:0 "Small Merc Comp"
+    sea_medium_merc_comp_1:0 "Med Merc Comp"
+    sea_big_merc_comp_1:0 "Large Merc Comp"
+    sea_cav_merc_comp_1:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_1:0 "Cav Merc Comp"
+    # Colonialism
+    sea_merc_fire_damage_and_cost:0 "Increases §YMercenary Companies§! Force Limit.\nMercenary Cost and Maintenance: §G-20.0%§!\nMercenary Fire Damage"
+    sea_small_merc_comp_2:0 "Small Merc Comp"
+    sea_medium_merc_comp_2:0 "Med Merc Comp"
+    sea_big_merc_comp_2:0 "Large Merc Comp"
+    sea_cav_merc_comp_2:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_2:0 "Cav Merc Comp"
+    # Priting Press
+    sea_merc_morale_and_manpower:0 "Increases §YMercenary Companies§! Force Limit.\nUnlocks: §YMix Merc Company§!\nMercenary Morale: §G+5.0%§!\nMercenary Manpower"
+    sealand_mercenary_manpower_modifier_printing_press:0 "Priting Press"
+    sea_small_merc_comp_3:0 "Med Merc Comp"
+    sea_medium_merc_comp_3:0 "Med Merc Comp"
+    sea_big_merc_comp_3:0 "Large Merc Comp"
+    sea_cav_merc_comp_3:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_3:0 "Cav Merc Comp"
+    sea_inf_cav_merc_comp_3:0 "Mix Merc Comp"
+    # Global Trade
+    sea_merc_cost_and_power:0 "Increases §YMercenary Companies§! Force Limit.\nMercenary Cost and Maintenance: §G-20.0%§!\nMercenary Combat Ability"
+    sea_small_merc_comp_4:0 "Med Merc Comp"
+    sea_medium_merc_comp_4:0 "Med Merc Comp"
+    sea_big_merc_comp_4:0 "Large Merc Comp"
+    sea_cav_merc_comp_4:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_4:0 "Cav Merc Comp"
+    sea_inf_cav_merc_comp_4:0 "Mix Merc Comp"
+    # Manufactories
+    sea_merc_manpower:0 "Increases §YMercenary Companies§! Force Limit.\nUnlocks additional: §YLarge Merc Company§!\nMercenary Manpower"
+    sealand_mercenary_manpower_modifier_manufactories:0 "Manufactories"
+    sea_small_merc_comp_5:0 "Med Merc Comp"
+    sea_medium_merc_comp_5:0 "Med Merc Comp"
+    sea_big_merc_comp_5:0 "Large Merc Comp"
+    sea_cav_merc_comp_5:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_5:0 "Cav Merc Comp"
+    sea_inf_cav_merc_comp_5:0 "Mix Merc Comp"
+    sea_additional_inf_merc_comp_5:0 "Large Merc Comp"
+    # Enlightenment
+    sea_merc_reinforce_speed_and_discipline:0 "Increases §YMercenary Companies§! Force Limit.\nMercenary Reinforce Speed: §G+25.0%§!\nMercenary Discipline"
+    sea_small_merc_comp_6:0 "Med Merc Comp"
+    sea_medium_merc_comp_6:0 "Med Merc Comp"
+    sea_big_merc_comp_6:0 "Large Merc Comp"
+    sea_cav_merc_comp_6:0 "Cav Merc Comp"
+    sea_cav2_merc_comp_6:0 "Cav Merc Comp"
+    sea_inf_cav_merc_comp_6:0 "Mix Merc Comp"
+    sea_additional_inf_merc_comp_6:0 "Large Merc Comp"
+    
+    # Other:
+    sea_ancient_robots:0 "Mechanized Assault Force"
+    hanys_mercs:0 "Hanys Merc Comp"
+    polska_gurom_mercs:0 "POLSKA GUROM!"

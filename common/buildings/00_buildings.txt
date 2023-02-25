@@ -31,6 +31,9 @@ marketplace = {
 	cost = 100
 	time = 12
 
+	potential = {
+		NOT = { has_country_flag = genoa_market_buildings }
+	}
 	modifier = {
 		province_trade_power_modifier = 0.5
 	}
@@ -82,6 +85,64 @@ marketplace = {
 		factor = 0
 	}
 }
+#####################################
+gen_marketplace = {
+	cost = 200
+	time = 12
+
+	potential = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	build_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	keep_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	modifier = {
+		province_trade_power_modifier = 1
+		land_forcelimit = 0.25
+		local_manpower_modifier = 0.1
+	}
+	on_built = {
+		ROOT = {
+			if = {
+				limit = {
+					has_building = road_network
+				}
+				add_permanent_province_modifier = { 
+					name = road_marketplace_modifier
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = num_of_buildings_built
+					value = 1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = road_marketplace_modifier
+				}
+				remove_province_modifier = road_marketplace_modifier
+			}
+		}
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+#####################################
 
 workshop = {
 	cost = 100
@@ -524,7 +585,7 @@ coastal_defence = {
 		allowed_num_of_buildings = 1
 		blockade_force_required = 1
 		hostile_disembark_speed = 1.0
-		hostile_fleet_attrition = 3
+		hostile_fleet_attrition = 5
 		block_slave_raid = yes
 	}
 
@@ -541,12 +602,13 @@ courthouse = {
 	cost = 100
 	time = 12
 	build_trigger = {
-		development = 10
+		development = 20
 	}
 	modifier = {
-		local_state_maintenance_modifier = -0.25
+		local_state_maintenance_modifier = -0.2
 		local_autonomy = -0.1
-		local_governing_cost = -0.25
+		local_governing_cost = -0.2
+		allowed_num_of_buildings = 1
 	}
 	on_built = {
 		add_development_from_building = {
@@ -962,7 +1024,7 @@ naval_battery = {
 		allowed_num_of_buildings = 1
 		blockade_force_required = 2.0
 		hostile_disembark_speed = 2.0
-		hostile_fleet_attrition = 6
+		hostile_fleet_attrition = 10
 		block_slave_raid = yes
 	}
 	on_built = {
@@ -1162,7 +1224,9 @@ trade_depot = {
 	time = 12
 
 	make_obsolete = marketplace
-
+	potential = {
+		NOT = { has_country_flag = genoa_market_buildings }
+	}
 	modifier = {
 		province_trade_power_modifier = 1
 	}
@@ -1217,6 +1281,65 @@ trade_depot = {
 		factor = 0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
 }
+#####################################
+gen_trade_depot = {
+	cost = 300
+	time = 12
+
+	make_obsolete = gen_marketplace
+	potential = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	build_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	keep_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	modifier = {
+		province_trade_power_modifier = 1
+		land_forcelimit = 0.5
+		local_manpower_modifier = 0.25
+	}
+	on_built = {
+		ROOT = {
+			if = {
+				limit = {
+					has_building = road_network
+				}
+				add_permanent_province_modifier = { 
+					name = road_marketplace_modifier
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = num_of_buildings_built
+					value = 1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = road_marketplace_modifier
+				}
+				remove_province_modifier = road_marketplace_modifier
+			}
+		}
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+#####################################
 
 grand_shipyard = {
 	cost = 300
@@ -1553,6 +1676,9 @@ stock_exchange = {
 	time = 12
 
 	make_obsolete = trade_depot
+	potential = {
+		NOT = { has_country_flag = genoa_market_buildings }
+	}
 
 	modifier = {
 		province_trade_power_modifier = 1.25
@@ -1628,6 +1754,65 @@ stock_exchange = {
 		factor = 0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
 }
+#####################################
+gen_stock_exchange = {
+	cost = 400
+	time = 12
+
+	make_obsolete = gen_trade_depot
+	potential = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	build_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	keep_trigger = {
+		FROM = { has_country_flag = genoa_market_buildings }
+	}
+	modifier = {
+		province_trade_power_modifier = 1.25
+		land_forcelimit = 1
+		local_manpower_modifier = 0.5
+	}
+	on_built = {
+		ROOT = {
+			if = {
+				limit = {
+					has_building = road_network
+				}
+				add_permanent_province_modifier = { 
+					name = road_marketplace_modifier
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = num_of_buildings_built
+					value = 1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = road_marketplace_modifier
+				}
+				remove_province_modifier = road_marketplace_modifier
+			}
+		}
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+#####################################
 
 counting_house = {
 	cost = 400
@@ -1749,12 +1934,13 @@ town_hall = {
 	make_obsolete = courthouse
 
 	build_trigger = {
-		development = 20
+		development = 30
 	}
 	modifier = {
-		local_state_maintenance_modifier = -0.5
+		local_state_maintenance_modifier = -0.4
 		local_autonomy = -0.2
-		local_governing_cost = -0.5
+		local_governing_cost = -0.4
+		allowed_num_of_buildings = 1
 	}
 
 	on_built = {
@@ -2751,11 +2937,11 @@ furnace = {
 }
 
 ramparts = {
-	cost = 500	# manufactory = {
+	cost = 200	# manufactory = {
 	time = 30	#	all
 			#}
 
-	#build_trigger = {
+	build_trigger = {
 	#	NOT = {
 	#		OR = {
 	#			has_building = fort_15th
@@ -2767,9 +2953,18 @@ ramparts = {
 	#			has_building = fort_18th
 	#		}
 	#	}
-	#}
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = drylands
+			has_terrain = desert
+			has_terrain = coastal_desert
+		}
+	}
 	modifier = {
-		allowed_num_of_buildings = 1
+		max_attrition = 1
 		local_hostile_attrition = 1
 		local_defensiveness = 0.15
 		local_defender_dice_roll_bonus = 1

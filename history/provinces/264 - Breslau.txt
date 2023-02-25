@@ -2,6 +2,7 @@
 
 owner = OPL
 controller = OPL
+add_claim = BOH
 culture = schlesian
 religion = catholic
 capital = "Breslau"

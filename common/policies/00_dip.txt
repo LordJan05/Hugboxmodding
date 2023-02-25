@@ -601,7 +601,7 @@ professional_diplomatic_corps = {
 		full_idea_group = quality_ideas
 	}
 	
-	morale_damage = 0.05
+	morale_damage = 0.1
 	war_exhaustion = -0.05
 
 	ai_will_do = {
@@ -952,8 +952,8 @@ record_keeping_act = {
 		full_idea_group = diplomatic_ideas
 	}
 
-	amount_of_banners = 0.3
-	land_maintenance_modifier = -0.1
+	mercenary_manpower = 0.33
+	merc_maintenance_modifier = -0.1
 
 	ai_will_do = {
 		factor = 0.6

@@ -2661,6 +2661,24 @@ country_event = {
 	}
 	
 	option = {
+		name = "EVTOPTM5060"		# Sealand
+		random_list = {
+			50 = {
+				if = {
+					limit = { NOT = { stability = -2 } }
+					add_adm_power = -200
+				}		
+				if = {
+					limit = { stability = -2 }
+					add_stability = -2
+				}
+			}
+			50 = { }
+		}
+		hidden_effect = {}
+	}
+	
+	option = {
 		name = "EVTOPTA5060"		# It's an omen
 		if = {
 			limit = { NOT = { stability = -2 } }
@@ -2795,7 +2813,7 @@ country_event = {
 			limit = { stability = -2 }
 			add_stability = -1
 		}
-	}		
+	}			
 }
 
 #########################################################

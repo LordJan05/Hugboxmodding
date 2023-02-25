@@ -146,24 +146,27 @@ CN_Generic_missions_2 = {
 				}
 				ai = no
 			}
-			if = {
-				limit = {
-					ai = yes
-				}
-				colonial_parent = {
-					has_opinion = {
-						who = ROOT
-						value = 125
+			OR = {
+				if = {
+					limit = {
+						ai = yes
+					}
+					colonial_parent = {
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
 					}
 				}
-			}
-			else = {
-				colonial_parent = {
-					has_opinion = {
-						who = ROOT
-						value = 200
+				else = {
+					colonial_parent = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
 					}
 				}
+				is_year = 1533
 			}
 		}
 		effect = {
@@ -574,7 +577,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 					NOT = { num_of_times_improved = 3 }
 				}
 				AND = {
-					region_for_scope_province = {
+					colonial_region_for_scope_province = {
 						is_capital_of = ROOT
 					}
 					NOT = { owned_by = ROOT }
@@ -590,7 +593,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 				}
 				NOT = {
 					capital_scope = {
-						region_for_scope_province = {
+						colonial_region_for_scope_province = {
 							type = all
 							owned_by = ROOT
 						}
@@ -615,7 +618,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 					num_of_times_improved = 3
 				}
 				capital_scope = {
-					region_for_scope_province = {
+					colonial_region_for_scope_province = {
 						type = all
 						owned_by = ROOT
 					}
@@ -657,7 +660,6 @@ CN_Generic_missions_4 = {
 			region_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
 			ROOT = {
 				NOT = { grown_by_development = 75 }
 				NOT = { grown_by_states = 3 }
@@ -676,12 +678,6 @@ CN_Generic_missions_4 = {
 			OR = {
 				grown_by_development = 75
 				grown_by_states = 3
-				capital_scope = {
-					region_for_scope_province = {
-						type = all
-						owned_by = ROOT
-					}
-				}
 			}
 		}
 		effect = {
@@ -713,17 +709,16 @@ CN_Generic_missions_4 = {
 		position = 3
 		required_missions = { CN_beyond_our_borders }
 		provinces_to_highlight = {
-			region_for_scope_province = {
+			colonial_region_for_scope_province = {
 				is_capital_of = ROOT
 			}
 			NOT = { owned_by = ROOT }
-			owner = {
-				OR = {
-					is_colonial_nation = yes
-					capital_scope = {
-						OR = {
-							continent = north_america
-							continent = south_america
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 20
+						colonial_region_for_scope_province = {
+							is_capital_of = ROOT
 						}
 					}
 				}
@@ -739,19 +734,10 @@ CN_Generic_missions_4 = {
 				}
 				ai = no
 			}
-			capital_scope = {
-				region_for_scope_province = {
-					type = all
-					OR = {
-						owned_by = ROOT
-						owner = {
-							is_colonial_nation = no
-							capital_scope = {
-								NOT = { continent = north_america }
-								NOT = { continent = south_america }
-							}
-						}
-					}
+			num_of_owned_provinces_with = {
+				value = 20
+				colonial_region_for_scope_province = {
+					is_capital_of = ROOT
 				}
 			}
 		}
@@ -835,7 +821,7 @@ CN_Generic_missions_5 = {
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = {
-			region_for_scope_province = {
+			colonial_region_for_scope_province = {
 				is_capital_of = ROOT
 			}
 			NOT = { owned_by = ROOT }
@@ -843,8 +829,7 @@ CN_Generic_missions_5 = {
 				NOT = {
 					num_of_owned_provinces_with = {
 						value = 10
-						any_province = {
-							region = PREV
+						colonial_region_for_scope_province = {
 							is_capital_of = ROOT
 						}
 					}
@@ -863,8 +848,7 @@ CN_Generic_missions_5 = {
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				any_province = {
-					region = PREV
+				colonial_region_for_scope_province = {
 					is_capital_of = ROOT
 				}
 			}
@@ -882,7 +866,7 @@ CN_Generic_missions_5 = {
 		position = 2
 		required_missions = { CN_colonial_expansion }
 		provinces_to_highlight = {
-			region_for_scope_province = {
+			colonial_region_for_scope_province = {
 				is_capital_of = ROOT
 			}
 			NOT = { owned_by = ROOT }
@@ -903,7 +887,7 @@ CN_Generic_missions_5 = {
 			OR = {
 				num_of_colonies = 2
 				capital_scope = {
-					region_for_scope_province = {
+					colonial_region_for_scope_province = {
 						type = all
 						owned_by = ROOT
 					}
@@ -923,7 +907,7 @@ CN_Generic_missions_5 = {
 		position = 4
 		required_missions = { CN_extensive_colonization CN_subdue_natives }
 		provinces_to_highlight = {
-			region_for_scope_province = {
+			colonial_region_for_scope_province = {
 				is_capital_of = ROOT
 			}
 			NOT = { owned_by = ROOT }
@@ -939,7 +923,7 @@ CN_Generic_missions_5 = {
 				ai = no
 			}
 			capital_scope = {
-				region_for_scope_province = {
+				colonial_region_for_scope_province = {
 					type = all
 					owned_by = ROOT
 				}

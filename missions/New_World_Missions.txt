@@ -647,6 +647,10 @@ new_world_natives_missions_slot5 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
+			add_country_modifier = {
+				name = sea_sunset_invasion_modifier
+				duration = -1
+			}
 		}
 	}
 	control_unrest = {

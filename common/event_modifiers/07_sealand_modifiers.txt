@@ -3,6 +3,10 @@
 change_school_modifier = {
 	# Nothing is needed here
 }
+# Fishing game?:
+sea_fishing_game_modifier = {
+	trade_goods_size = -1
+}
 ################
 # Diplo actions:
 # Muslim Jihad:
@@ -47,6 +51,15 @@ discover_new_land_modifier = {
 discover_new_land_short_modifier = {
 	range = 1
 }
+sea_sunset_invasion_modifier = {
+	movement_speed = 0.1
+	reinforce_speed = 0.05
+	recover_army_morale_speed = 0.05
+}
+# Catholic action:
+papal_legate_2 = {
+	global_colonial_growth = 15
+}
 ################
 # Cooldowns:
 military_reform_cooldown_modifier = {
@@ -58,13 +71,13 @@ birthplace_of_the_embracemonke = {
 ##########################################
 # Buildings:
 road_workshop_modifier = {
-	local_production_efficiency = 0.05
+	local_production_efficiency = 0.1
 }
 road_temple_modifier = {
-	local_tax_modifier = 0.1
+	local_tax_modifier = 0.175
 }
 road_marketplace_modifier = {
-	province_trade_power_modifier = 0.15
+	province_trade_power_modifier = 0.25
 }
 ##########################################
 # North-America:
@@ -134,6 +147,9 @@ teu_knights_of_war_modifier = {
 	cavalry_cost = -0.1
 	cavalry_fire = 0.5
 }
+teu_malbork_castle_modifier = {
+	fort_level = 1
+}
 ##########################################
 # Qara Qoyunlu:
 cavarly_focused_society_modifier = {
@@ -198,9 +214,14 @@ prepare_for_europe_hugbox_modifier = {
 	reinforce_speed = 0.3
 }
 abbasid_governors_modifier = {
-	governing_capacity = 200
-	max_absolutism = 50
+	governing_capacity = 150
+	max_absolutism = 10
 	global_autonomy = -0.05
+}
+##########################################
+# Ethiopia:
+eth_tame_the_mountains_modifier = {
+	local_development_cost = -0.1
 }
 ##########################################
 # Korea:
@@ -313,12 +334,30 @@ new_living_space_modifier = {
 }
 ##########################################
 # England/Great Britain:
-gb_royal_marines_units = {
+gb_royal_marines_units_elite = { # Special
 	regiment_disembark_speed = 2
 	discipline = 0.05
+	infantry_power = 0.15
+	fire_damage = 0.1
 	reinforce_speed = 1
 	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition
 	is_cawa_modifier = yes
+}
+gb_royal_marines_units_national = { # National
+	regiment_disembark_speed = 1
+	discipline = 0.025
+	infantry_power = 0.1
+	fire_damage = 0.05
+	reinforce_speed = 0.5
+	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition
+	is_cawa_modifier = yes
+}
+sealand_cawa_fl_base_gb_increase = {
+	local_amount_of_cawa = 10
+}
+eng_war_france_modifier = {
+	siege_ability = 0.15
+	reinforce_speed = 0.2
 }
 ##########################################
 # France:
@@ -360,10 +399,18 @@ mor_religious_reasons_modifier = {
 	discipline = 0.025
 	siege_ability = 0.2
 }
+mor_siege_modifier = {
+	siege_ability = 0.33
+	core_creation = -0.15
+}
 ##########################################
 # Tunis/Emirate of Two Sicilies:
-tunis_siege_modifier = {
-	siege_ability = 0.25
+tun_siege_modifier = {
+	siege_ability = 0.33
+	core_creation = -0.15
+}
+tun_morocco_conquered = {
+	manpower_recovery_speed = 0.1
 }
 
 ets_mediterranean_pirates_modifier = {
@@ -401,6 +448,13 @@ fatimid_government_janissaries_boost_3 = {
 	is_janissary_modifier = yes
 	fire_damage_received = -0.15
 	shock_damage_received = -0.15
+}
+##########################################
+# Andalusia:
+andalusia_government_janissaries = {
+	is_janissary_modifier = yes
+	fire_damage = 0.1
+	shock_damage_received = -0.3
 }
 ##########################################
 # Ottoman:
@@ -497,6 +551,11 @@ return_to_italy = {
 	infantry_power = 0.1
 }
 ##########################################
+# Novgorod:
+nov_sway_muscovite_subjects_modifier = {
+	province_warscore_cost = -0.25
+}
+##########################################
 # Sealand:
 sealand_modifier = {
 	global_sailors = 1
@@ -546,6 +605,13 @@ swz_control_madagascar_modifier = {
 swz_tame_the_steppes_modifier = {
 	supply_limit = 1
 	local_friendly_movement_speed = 0.2
+}
+zulu_warriors_units = {
+	reinforce_speed = 1 # movement_speed and morale_recovery_speed Does not work, because intentional not to... :(
+	morale_damage = 0.33
+	infantry_shock = 0.5
+	fire_damage_received = 0.2
+	is_cawa_modifier = yes
 }
 ########
 # Central:
@@ -684,19 +750,19 @@ nog_black_sea_slave_trade_revived = {
 # Japan:
 japan_samurai_special_units_early = {
 	infantry_power = 0.1
-	discipline = 0.025
+	discipline = 0.05
 	is_cawa_modifier = yes
 }
 japan_samurai_special_units_late = {
 	infantry_power = 0.1
 	discipline = 0.05
-	fire_damage = 0.1
+	fire_damage = 0.15
 	is_cawa_modifier = yes
 }
 ##########################################
 # Venice:
 ven_ability_to_raid_modifier = {
-	may_perform_slave_raid = yes
+	may_perform_slave_raid_on_same_religion = yes
 }
 emp_ven_reclaim_the_aegean_modifier = {
 	is_marine_modifier = yes
@@ -711,6 +777,56 @@ emp_ven_control_the_means_of_transaction_modifier = {
 emp_ven_expand_the_terraferma_modifier = {
 	sailors_recovery_speed = 0.25
 	allowed_marine_fraction = 0.25
+}
+##########################################
+# Genoa
+sea_gen_triangle_trade_prov_mod = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+sea_gen_triangle_trade_modifier = {
+	merchants = 1
+	mercantilism_cost = -0.1
+}
+tradenode_tangiers_modifier = {
+	trade_company_investment_cost = -0.15
+}
+sea_gen_sicily_modifier = {
+	allowed_marine_fraction = 0.5
+}
+sea_gen_corsica_modifier = {
+	galley_power = 0.15
+	prestige_from_naval = 1
+}
+emp_gen_grand_fleet_modifier = {
+	landing_penalty = -2
+	regiment_disembark_speed = 1
+	transport_attrition = -1
+}
+emp_gen_the_spanish_question_modifier = {
+	landing_penalty = -1
+	regiment_disembark_speed = 0.5
+	transport_attrition = -0.5
+}
+genoese_crossbowmen_special_units = {
+	infantry_fire = 0.5
+	morale_damage = 0.1
+	fire_damage_received = -0.3
+	reinforce_speed = 0.5
+	is_cawa_modifier = yes
+}
+##########################################
+# North Sea Empire:
+jomsvikings_special_units = {
+	discipline = 0.1
+	morale_damage_received = -0.35
+	is_cawa_modifier = yes
+}
+berserker_special_units = {
+	fire_damage_received = -0.1
+	shock_damage = 0.15
+	morale_damage = 0.25
+	is_cawa_modifier = yes
 }
 ##########################################
 # 1.4.1 Decision stuff:

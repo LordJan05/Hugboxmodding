@@ -34,9 +34,8 @@ the_mercenary_registration_act = {
 		full_idea_group = quantity_ideas
 	}
 
-	amount_of_banners = 0.2
-	#amount_of_cawa = 0.2
-	land_maintenance_modifier = -0.05
+	mercenary_manpower = 0.25
+	merc_maintenance_modifier = -0.15
 	
 	ai_will_do = {
 		factor = 0
@@ -367,6 +366,7 @@ underhanded_diplomacy_act = {
 	}
 	
 	backrow_artillery_damage = 0.1
+	mercenary_manpower = 0.33
 
 	ai_will_do = {
 		factor = 0

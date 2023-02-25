@@ -7,19 +7,31 @@ technology_group = western
 historical_friend = DAN
 capital = 17 #Akershus
 
-1397.1.1 = {
-	set_estate_privilege = estate_nobles_danish_nobility
-	set_estate_privilege = estate_nobles_nobles_instead_of_royal_court
-}
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
-
-
+change_estate_land_share = {
+	estate = estate_church
+	share = -5
+}
 change_estate_land_share = {
 	estate = estate_nobles
-	share = -0.502
+	share = -5.502
+}
+1397.1.1 = {
+	set_estate_privilege = estate_nobles_danish_nobility
+	set_estate_privilege = estate_nobles_nobles_instead_of_royal_court
+}
+
+1414.1.1 = { # Generic
+	monarch = {
+		name = "Kretyn"
+		birth_date = 1414.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+	}
 }
 
 

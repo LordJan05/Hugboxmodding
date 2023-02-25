@@ -39,7 +39,6 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = enable_swiss_guard
 			set_country_flag = sea_enable_swiss_guard_mercs
 		}
 	}

@@ -120,6 +120,10 @@ tr_novgorod_1 = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = nov_sway_muscovite_subjects_modifier
+				duration = 3650
+			}
 			if = {
 				limit = {
 					exists = MOS
@@ -136,11 +140,6 @@ tr_novgorod_1 = {
 						RYA = { is_subject_of = MOS }
 					}
 				}
-				MOS = {
-					every_subject_country = {
-						add_liberty_desire = 50
-					}
-				}
 				custom_tooltip = nov_sway_muscovite_subjects_tttt
 				every_country = {
 					limit = {
@@ -151,7 +150,13 @@ tr_novgorod_1 = {
 						}
 					}
 					hidden_effect = { MOS = { free_vassal = prev } }
-					ROOT = { vassalize = prev }
+					#ROOT = { vassalize = prev }
+					ROOT = {
+						create_subject = {
+							subject_type = novgorod_vassal
+							subject = prev 
+						}
+					}
 				}
 			}
 			4249 = {
@@ -249,9 +254,23 @@ tr_novgorod_1 = {
 			}
 		}
 	}
+	nov_own_moskva = {
+		icon = mission_conquer_moscow
+		required_missions = { nov_sway_muscovite_subjects }
+		provinces_to_highlight = {
+			province_id = 295
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			295 = { owned_by = ROOT }
+		}
+		effect = {
+			country_event = { id = sea_novgorod_events.1 }
+		}
+	}
 	nov_defeat_mos = {
 		icon = mission_defeat_muscovy
-		required_missions = { nov_sway_muscovite_subjects }
+		required_missions = { nov_own_moskva }
 		provinces_to_highlight = {
 			OR = {
 				area = vologda_area
@@ -303,7 +322,7 @@ tr_novgorod_1 = {
 		effect = {
 			add_country_modifier = {
 				name = "nov_defeated_muscovy"
-				duration = 7300
+				duration = -1
 			}
 			oka_area = {
 				limit = {
@@ -329,6 +348,64 @@ tr_novgorod_1 = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+		}
+	}
+	nov_conquer_princes = {
+		icon = mission_dethrone_the_rurikovichs
+		required_missions = { nov_defeat_mos nov_subjugate_tver }
+		provinces_to_highlight = {
+			OR = {
+				area = oka_area
+				area = ryazan_area
+				province_id = 2408
+				province_id = 274
+				province_id = 1960
+				owner = {
+					AND = {
+						dynasty = "Rurikovich"
+						culture_group = east_slavic
+					}
+				}
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					AND = {
+						dynasty = "Rurikovich"
+						culture_group = east_slavic
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			oka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ryazan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2408 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			274 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1960 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nov_ruriks_eliminated"
+				duration = 7300
 			}
 		}
 	}
@@ -407,67 +484,44 @@ tr_novgorod_2 = {
 			}
 		}
 	}
-	nov_conquer_princes = {
-		icon = mission_dethrone_the_rurikovichs
-		required_missions = { nov_conquer_tver nov_defeat_mos  }
+	nov_subjugate_tver = {
+		icon = mission_have_two_subjects
+		required_missions = { nov_conquer_tver }
 		provinces_to_highlight = {
 			OR = {
-				area = oka_area
-				area = ryazan_area
-				province_id = 2408
-				province_id = 274
-				province_id = 1960
-				owner = {
-					AND = {
-						dynasty = "Rurikovich"
-						culture_group = east_slavic
-					}
-				}
+				province_id = 4249
+				province_id = 294
+				province_id = 4248
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			NOT = {
-				any_country = {
-					AND = {
-						dynasty = "Rurikovich"
-						culture_group = east_slavic
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			oka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ryazan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2408 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			274 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1960 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			4249 = { country_or_non_sovereign_subject_holds = ROOT }
+			294 = { country_or_non_sovereign_subject_holds = ROOT }
+			4248 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			add_country_modifier = {
-				name = "nov_ruriks_eliminated"
-				duration = 7300
+			custom_tooltip = nov_subjugate_tver_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						TVE = { is_subject_of = ROOT }
+					}
+					create_subject = {
+						subject_type = novgorod_vassal
+						subject = TVE
+					}
+				}
+				else = { add_adm_power = 100 }
 			}
 		}
 	}
 	nov_conquer_lubeck = {
 		icon = mission_heart_of_the_hansa
 		required_missions = { nov_conquer_danzig  }
+		position = 4
 		provinces_to_highlight = {
 			OR = {
 				province_id = 45

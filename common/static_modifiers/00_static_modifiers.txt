@@ -233,7 +233,12 @@ no_adjacent_controlled = {
 }
 
 provincial_tax_income = {
-	regiment_recruit_speed = -0.01
+	regiment_recruit_speed = -0.02
+	local_build_time = -0.01
+	local_institution_spread = 0.02
+	tax_income = 0.2
+	local_garrison_size = 0.02
+	garrison_growth = 0.01
 }
 
 provincial_production_size = {
@@ -265,7 +270,7 @@ development = {
 	naval_forcelimit = 0.1			# special case, affected by autonomy & set to 0 by code if not port
 	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
-	#local_amount_of_banners = 0.066
+	local_amount_of_banners = 0.066
 	#local_amount_of_cawa = 0.125
 	local_amount_of_carolean = 0.1
 	local_amount_of_hussars = 0.01
@@ -385,6 +390,7 @@ same_culture_group = {
 	local_tax_modifier = -0.15				#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
 	local_manpower_modifier = -0.15
 	local_sailors_modifier = -0.1
+	local_governing_cost = 0.05
 }
 
 non_accepted_culture = {
@@ -393,6 +399,7 @@ non_accepted_culture = {
 	local_manpower_modifier = -0.33
 	local_sailors_modifier = -0.2
 	local_unrest = 2					#1% revolt risk!
+	local_governing_cost = 0.1
 }
 
 accepted_culture_demoted = {
@@ -594,8 +601,6 @@ war_taxes = {
 	land_maintenance_modifier = -0.15
 	naval_maintenance_modifier = -0.15
 	merc_maintenance_modifier = -0.05
-	#amount_of_cawa = 0.05
-	amount_of_banners = 0.05
 }
 
 stability = {
@@ -647,8 +652,7 @@ positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
 	global_trade_goods_size_modifier = -0.5
 	global_unrest = 3
-	amount_of_banners = -0.25
-	#amount_of_cawa = -0.25
+	mercenary_manpower = -0.5
 	global_manpower_modifier = -0.25
 	technology_cost = 0.2
 	idea_cost = 0.2
@@ -665,8 +669,7 @@ lost_mandate_of_heaven = {
 	shock_damage_received = 0.25
 	reduced_liberty_desire = -50
 	legitimacy = -1
-	amount_of_banners = -0.25
-	#amount_of_cawa = -0.25
+	mercenary_manpower = -0.5
 	global_manpower_modifier = -0.5
 }
 
@@ -712,8 +715,7 @@ bankruptcy = {
 	idea_cost = 0.5
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
-	amount_of_banners = -0.75
-	amount_of_cawa = -0.75
+	defensiveness = -0.25
 	sea_por_trade_influence = 0.25 # Portugal faction
 }
 
@@ -1263,8 +1265,6 @@ absolutism = {
 low_army_professionalism = {
 	mercenary_cost = -0.15
 	mercenary_manpower = 0.15
-	#amount_of_cawa = 0.15
-	amount_of_banners = 0.15
 }
 
 high_army_professionalism = {
@@ -1298,7 +1298,6 @@ power_projection_25 = {
 land_forcelimit = {
     free_land_leader_pool = 1.25 #80 Army forcelimit -> +1 free leader
 	amount_of_cawa = 2
-	#amount_of_banners = 1.5
 }
 
 #100 Naval Forcelimit = 1
@@ -1342,6 +1341,7 @@ self_governing_colony_overlord = {
 crown_colony_subject = {
 	global_autonomy = -0.1
 	global_colonial_growth = 15
+	papal_influence = 3
 }
 
 private_enterprise_subject = {
@@ -1349,12 +1349,14 @@ private_enterprise_subject = {
 	global_trade_goods_size_modifier = 0.1
 	naval_tradition_from_trade = 0.1
 	ship_power_propagation = 0.1
+	papal_influence = 3
 }
 
 self_governing_colony_subject = {
 	colonists = 1
 	development_cost = -0.05
 	liberty_desire = 25
+	papal_influence = 3
 }
 march_subject = {
 	land_forcelimit = 1
@@ -1468,7 +1470,7 @@ dishonoured_alliance =  {
 }
 
 drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
-	#yearly_army_professionalism = 0.01
+	yearly_army_professionalism = 0.01
 	sea_por_conti_influence = 0.1 # Portugal faction
 }
 
@@ -1833,10 +1835,10 @@ marine_regiment = {
 }
 
 banner_regiment = {
-	discipline = -0.05
-	land_maintenance_modifier = 1
-	#reinforce_speed = -0.5
-	regiment_manpower_usage = -1
+	discipline = 0.05
+	land_maintenance_modifier = -0.5
+	reinforce_speed = -0.5
+	regiment_manpower_usage = -0.75
 }
 
 streltsy_regiment = {
@@ -1929,13 +1931,10 @@ expanded_infrastructure = {
 	local_build_cost = -0.05
 	local_build_time = -0.05
 	province_trade_power_modifier = 0.05
-	trade_value_modifier = 0.05
 	trade_goods_size_modifier = 0.05
 	local_governing_cost_increase = 15
 	local_governing_cost = 0.1
 	local_great_project_upgrade_cost = -0.05
-	land_forcelimit = 2
-	naval_forcelimit = 2
 }
 
 centralize_state = {
@@ -2017,4 +2016,20 @@ tumen_subject_nation = {
 subject_vastille_vassal = {
 	land_forcelimit = -3
 	global_manpower = -2
+}
+
+# Venice subject:
+subject_venice_vassal_1 = {
+	global_tax_income = -10
+	naval_forcelimit = -10
+	cav_to_inf_ratio = 0.5
+	placed_merchant_power = 2
+	embargo_efficiency = 0.33
+}
+subject_venice_vassal_2 = {
+	global_tax_income = -5
+	naval_forcelimit = -5
+	cav_to_inf_ratio = 0.5
+	placed_merchant_power = 5
+	embargo_efficiency = 0.5
 }

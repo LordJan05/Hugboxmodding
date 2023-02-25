@@ -1,6 +1,5 @@
-owner = BAG
-controller = BAG
-add_core = BAG
+owner = GBA
+controller = GBA
 add_core = GBA
 culture = jukun
 religion = shamanism #Fetishism

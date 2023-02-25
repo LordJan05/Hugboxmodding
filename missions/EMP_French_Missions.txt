@@ -234,11 +234,9 @@ emp_france_missions_1 = {
 				area = west_midlands_area
 				area = wales_area
 				area = yorkshire_area
-				area = pyrenees_area
 				area = poitou_area
 				area = loire_area
 				province_id = 199
-				province_id = 194
 				province_id = 195
 				province_id = 4697
 			}
@@ -285,10 +283,6 @@ emp_france_missions_1 = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = angevin_mission_requirements_fra_tt
-				pyrenees_area = {
-					type = all
-					owned_by = ROOT
-				}
 				poitou_area = {
 					type = all
 					owned_by = ROOT
@@ -298,7 +292,6 @@ emp_france_missions_1 = {
 					owned_by = ROOT
 				}
 				199 = { owned_by = ROOT }
-				194 = { owned_by = ROOT }
 				195 = { owned_by = ROOT }
 				4697 = { owned_by = ROOT }
 			}
@@ -1441,6 +1434,14 @@ emp_france_missions_3 = {
 			}
 		}
 		effect = {
+			define_general = {
+				name = "Jean Bureau"
+				fire = 4
+				shock = 4
+				manuever = 1
+				siege = 3
+				trait = siege_specialist_personality
+			}
 			provence_area = {
 				limit = {
 					NOT = { is_core = ROOT }

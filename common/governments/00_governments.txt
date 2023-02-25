@@ -84,6 +84,8 @@ monarchy = {
 				lotharingia_monarchy_reform
 				france_monarchy_reform
 				aztecs_monarchy_reform
+				north_sea_monarchy_reform
+				andalusia_government
 			}
 		}
 		hereditary_vs_nobility = {
@@ -370,6 +372,7 @@ republic = {
 			reforms = {
 				oligarchy_reform
 				merchants_reform
+				genoa_merchants_reform # Sealand
 				venice_merchants_reform
 				pirate_republic_reform
 				noble_elite_reform

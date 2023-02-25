@@ -131,6 +131,7 @@ country_decisions = {
 	aotearoa_nation = {
 		major = yes
 		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
 			NOT = { exists = AOT }
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
@@ -180,6 +181,15 @@ country_decisions = {
 			NOT = { exists = AOT }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
 			change_tag = AOT
 			change_primary_culture = maori
 			change_religion = dreamtime
@@ -225,6 +235,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1

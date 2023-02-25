@@ -312,11 +312,9 @@ sea_nogai_missions_2 = {
 			}
 		}
 		trigger = {
-			ai = no
-			owns = 286
 			OR = {
 				AND = {
-					treasury = 200
+					owns = 286
 					azov_area = {
 						type = all
 						OR = {
@@ -336,7 +334,7 @@ sea_nogai_missions_2 = {
 					has_opinion = {
 						who = ROOT
 						value = 100
-						}
+					}
 					is_at_war = no
 				}
 			}
@@ -344,32 +342,8 @@ sea_nogai_missions_2 = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
-						azov_area = {
-							type = all
-							owned_by = GEN
-						}
-						crimea_area = {
-							type = all
-							owned_by = GEN
-						}
-					}
+					owns = 286
 				}
-				add_treasury = -200
-				azov_area = {
-					limit = {
-						owned_by = GEN
-					}
-					cede_province = ROOT
-				}
-				crimea_area = {
-					limit = {
-						owned_by = GEN
-					}
-					cede_province = ROOT
-				}
-			}
-			else = {
 				286 = {
 					center_of_trade = 1
 					add_permanent_province_modifier = {
@@ -382,16 +356,32 @@ sea_nogai_missions_2 = {
 						power = 15
 						key = nog_black_sea_slave_trade_revived_tt
 					}
-					if = {
-						limit = {
-							NOT = {
-								is_permanent_claim = ROOT
-								is_core = ROOT
+				}
+			}
+			if = {
+				limit = {
+					#GEN = {
+					#	random_owned_province = {
+					#		limit = {
+					#			OR = {
+					#				area = azov_area
+					#				area = crimea_area
+					#			}
+					#		}
+					#	}
+					#}
+					GEN = {
+						any_owned_province = {
+							OR = {
+								area = azov_area
+								area = crimea_area
 							}
-						}	
-						add_permanent_claim = ROOT
+						}
 					}
 				}
+				ROOT = { country_event = { id = sea_nogai_events.1 } }
+			}
+			else = {
 				2447 = {
 					if = {
 						limit = {
@@ -445,8 +435,26 @@ sea_nogai_missions_2 = {
 			}
 		}
 		effect = {
-			286 = {
-				center_of_trade = 1
+			if = {
+				limit = {
+					286 = { has_province_modifier = nog_black_sea_slave_trade_revived }
+				}
+				286 = { add_center_of_trade_level = 1 }
+			}
+			else = {
+				286 = {
+					center_of_trade = 2
+					add_permanent_province_modifier = {
+						name = nog_black_sea_slave_trade_revived
+						duration = -1
+					}
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 15
+						key = nog_black_sea_slave_trade_revived_tt
+					}
+				}
 			}
 			azov_area = {
 				limit = {

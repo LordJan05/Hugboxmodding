@@ -1,6 +1,9 @@
 estate_church = {
 	icon = 1
 
+	# Used for when declaring independence
+	independence_government = theocracy
+
 	# If true, country will get estate
 	trigger = {
 		NOT = { has_government_attribute = disables_estate_church }
@@ -220,7 +223,10 @@ estate_church = {
 	custom_name = {
 		desc = estate_babaylanes
 		trigger = {
-			tag = MAS
+			OR = {
+				tag = MAS
+				tag = MHL
+			}
 		}
 	}
 	custom_name = {

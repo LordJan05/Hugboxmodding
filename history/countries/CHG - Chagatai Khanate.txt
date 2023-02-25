@@ -7,6 +7,12 @@ technology_group = nomad_group
 capital = 739 #Kashgar
 religious_school = hanafi_school
 add_accepted_culture = kirgiz
+historical_rival = KAZ
+historical_rival = GOL
+historical_rival = TRS
+historical_rival = SHY
+historical_rival = SIB
+historical_rival = NOG
 
 #Khans of Mughalistan
 1399.1.1 = {

@@ -1089,7 +1089,7 @@ emp_burgundy_4 = {
 					NOT = {
 						has_opinion = {
 							who = root
-							value = 100
+							value = 75
 						}
 					}
 				}
@@ -1146,12 +1146,16 @@ emp_burgundy_4 = {
 							is_subject_of = FRA
 							has_opinion = {
 								who = root
-								value = 100
+								value = 75
 							}
 						}
 					}
 					NOT = { exists = FRA }
 					FRA = { is_subject_of = ROOT }
+					#is_in_war = {
+					#	attacker_leader = FRA
+					#	defender_leader = ROOT
+					#}
 				}
 			}
 			else = {

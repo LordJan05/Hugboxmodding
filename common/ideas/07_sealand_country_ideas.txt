@@ -328,20 +328,20 @@ sea_PRA_ideas = { # North German Confederation
 		army_tradition_decay = -0.005
 	}
 	pra_army_professionalism = {
-		land_morale = 0.125
+		land_morale = 0.15
 	}	
 	pra_noble_cadets = {
 		nobles_loyalty_modifier = 0.10
 	}
 	pra_goose_step = {
-		infantry_power = 0.15
+		infantry_power = 0.2
 	}
 	pra_regimental_cantons = {
-		global_manpower_modifier = 0.15
-		global_regiment_recruit_speed = -0.05
+		global_manpower_modifier = 0.2
+		global_regiment_recruit_speed = -0.1
 	}
 	pra_religious_toleration = {
-		global_tax_modifier = 0.1
+		development_cost = -0.05
 		tolerance_heretic = 1
 	}
 }
@@ -521,7 +521,10 @@ sea_BYS_ideas = { # Barbary States
 	}
 	
 	trigger = {
-		tag = BYS
+		OR = {
+			tag = BYS
+			tag = BIE
+		}
 	}
 	free = yes
 	
@@ -726,41 +729,6 @@ sea_SWZ_ideas = { # Swazi ideas
 		republican_tradition = 0.2
 		devotion = 1
 		horde_unity = 1
-	}
-}
-sea_SWZ_ideas_1 = { # Swazi ideas explo ugrade, since can't make it a modifier
-	start = {
-		infantry_power = 0.1
-		global_trade_goods_size_modifier = 0.1
-	}
-	
-	bonus = {
-		infantry_shock = 1
-	}
-	
-	
-	trigger = {
-		tag = SWZ
-		has_country_flag = swz_explocolo_modifier_flag
-	}
-	free = yes
-	
-	swz_origin_of_first_human_1 = {
-		monthly_splendor = 4
-		may_explore = yes
-		colonists = 1
-	}
-	swz_tax_the_people = {
-	}
-	swz_worshipping_the_ancestors = {
-	}
-	swz_war_is_tax = {
-	}
-	swz_readiness_for_war = {
-	}
-	swz_umhlanga_festival_popularization = {
-	}
-	swz_absolute_legitimacy = {
 	}
 }
 

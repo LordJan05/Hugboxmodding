@@ -174,12 +174,13 @@ LOU_ideas = {
 
 CUB_ideas = {
 	start = {
-		merchants = 1
+		global_sailors_modifier = 0.1
 		navy_tradition = 1.0
 	}
 	
 	bonus = {
 		artillery_fire = 1
+		sea_repair = yes
 	}
 	
 	trigger = {
@@ -190,6 +191,7 @@ CUB_ideas = {
 		
 	CUB_trade_eff = {
 		trade_efficiency = 0.15
+		merchants = 1
 	}	
 	CUB_cot_upgrade = {
 		center_of_trade_upgrade_cost = -0.3
@@ -204,14 +206,14 @@ CUB_ideas = {
 	}
 	CUB_ships = {
 		leader_naval_manuever = 1
-		ship_durability = 0.05
+		ship_durability = 0.1
 	}
 	CUB_army_quality = {
 		infantry_power = 0.15
+		land_morale = 0.05
 	}
 	CUB_naval_morale = {
 		naval_morale = 0.1
-		land_morale = 0.05
 	}
 }
 HAT_ideas = {
@@ -220,7 +222,7 @@ HAT_ideas = {
 		development_cost = -0.05
 	}
 	bonus = {
-		colonists = 1
+		leader_land_shock = 1
 		leader_land_fire = 1
 	}
 	trigger = {
@@ -229,29 +231,29 @@ HAT_ideas = {
 	free = yes      #will be added at load.
 	HAT_Plantatio_Economy = {
 		production_efficiency = 0.1
-		build_cost = -0.10
+		build_cost = -0.1
 	}
 	HAT_Blue_Mountain = {
 		drill_gain_modifier = 0.2
        		infantry_power = 0.075		
 	}
 	HAT_Suga_Revolution = {
-		discipline = 0.025
+		discipline = 0.05
 	}
 	HAT_Americn_Trade_Hub = {
 		prestige = 1
 		trade_range_modifier = 0.1
 	}
 	HAT_Miskoto_Zambo = {
-		num_accepted_cultures = 2
+		same_culture_advisor_cost = -0.15
 		land_morale = 0.1
 	}
 	HAT_Interconnected_Relations = {
-		diplomatic_reputation = 1
+		governing_cost = -0.15
 		global_unrest = -2
 	}
 	HAT_Colonial  = {
-		prestige_from_land = 0.15
+		prestige_from_land = 0.2
 	}
 }
 
@@ -590,6 +592,7 @@ TAU_buffed_ideas = {
 		OR = {
 			tag = TAU
 			tag = BPR
+			tag = BMA
 		}
 		has_country_flag = mjl_tau_empire_flag
 	}

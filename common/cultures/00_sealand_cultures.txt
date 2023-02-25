@@ -1,8 +1,6 @@
 # When forming Angevin Empire, it converts cultures to this group:
 franco_british = {
 	graphical_culture = westerngfx
-		country = { has_banners = yes}
-		province = { local_has_banners = yes}
 
 	angevin_english = {
 		primary = ENG

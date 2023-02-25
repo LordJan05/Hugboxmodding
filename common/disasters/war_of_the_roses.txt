@@ -109,8 +109,8 @@ war_of_the_roses = {
 
 	modifier = {
 		global_unrest = 5
-		amount_of_banners = 0.1
-		#amount_of_cawa = 0.1
+		mercenary_manpower = 0.133
+		manpower_recovery_speed = 0.1
 	}	
 	
 	

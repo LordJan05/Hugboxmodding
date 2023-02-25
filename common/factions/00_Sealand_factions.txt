@@ -1,3 +1,5 @@
+############################
+############################
 # Portugal:
 sea_por_trade = {
 	monarch_power = ADM
@@ -38,7 +40,8 @@ sea_por_conti = {
 		war_exhaustion = -0.03
 	}
 }
-
+############################
+############################
 # Colonial:
 sea_colonial_adm_1 = { # The Lodge of Colonial Mains
 	monarch_power = ADM
@@ -103,3 +106,78 @@ sea_colonial_mil_2 = { # The Office of Offshore Logistics
 		land_maintenance_modifier = 0.25
 	}
 }
+############################
+############################
+# Venice:
+sea_ven_aristocrats = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		discipline = 0.05
+		reinforce_speed = 0.33
+		manpower_recovery_speed = 0.33
+		yearly_army_professionalism = -0.0066
+	}
+}
+sea_ven_aristocrats2 = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		vassal_forcelimit_bonus = 1
+		ae_impact = -0.2
+		mercenary_manpower = 0.33
+		republican_tradition = -0.33
+	}
+}
+
+sea_ven_traders = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		naval_morale = 0.1
+		landing_penalty = -2
+		transport_attrition = -1
+		naval_maintenance_modifier = 0.5
+		
+	}
+}
+sea_ven_traders2 = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		range = 0.5
+		privateer_efficiency = 0.5
+		may_perform_slave_raid = yes
+		trade_efficiency = -0.5
+		
+	}
+}
+
+sea_ven_guilds = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+		build_cost = -0.1
+		development_cost = -0.05
+		yearly_corruption = 0.2
+	}
+}
+sea_ven_guilds2 = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		reform_progress_growth = 0.33
+		governing_capacity_modifier = 0.25
+		all_estate_loyalty_equilibrium = 0.1
+		advisor_cost = 0.25
+	}
+}
+############################
+############################

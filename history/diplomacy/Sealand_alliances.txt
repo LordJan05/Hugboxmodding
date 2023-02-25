@@ -18,6 +18,32 @@ vassal = {
 	start_date = 1444.10.10
 	end_date = 1454.10.10
 }
+# Kanem-Bornu Yao vassal
+vassal = {
+	first = KBO
+	second = YAO
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+# Gorkha vassals:
+vassal = {
+	first = GRK
+	second = LWA
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+vassal = {
+	first = GRK
+	second = JML
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+vassal = {
+	first = GRK
+	second = DNG
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
 
 # Anti-France shield
 vassal = {
@@ -27,37 +53,53 @@ vassal = {
 	end_date = 1454.10.10
 }
 # Dutch PUvassals:
-union = {
+dependency = {
 	subject_type = "burgundy_juniors"
 	first = BUR
 	second = FLA
 	start_date = 1414.1.1
 	end_date = 1493.1.1
 }
-union = {
+dependency = {
 	subject_type = "burgundy_juniors"
 	first = BUR
 	second = BRB
 	start_date = 1414.1.1
 	end_date = 1477.1.5
 }
-union = {
+dependency = {
 	subject_type = "burgundy_juniors"
 	first = BUR
 	second = HOL
 	start_date = 1414.1.1
 	end_date = 1477.1.5
 }
-vassal = {
-	first = BUR
-	second = CHP
+
+# Venice League:
+dependency = {
+	subject_type = "venetian_league_subjects"
+	first = VEN
+	second = CEP
 	start_date = 1444.1.1
-	end_date = 1465.1.1
+	end_date = 1460.1.1
+}
+dependency = {
+	subject_type = "venetian_league_subjects"
+	first = VEN
+	second = NAX
+	start_date = 1444.1.1
+	end_date = 1579.1.1
+}
+dependency = {
+	subject_type = "venetian_league_subjects"
+	first = VEN
+	second = CRT
+	start_date = 1444.1.1
+	end_date = 1522.12.21
 }
 
-
 # Castille + Aragon = PU mission over Portugal.
-vassal = {
+dependency = {
 	subject_type = "castille_vassal"
 	first = CAS
 	second = ARA
@@ -65,7 +107,7 @@ vassal = {
 	end_date = 1555.11.11
 }
 # Castille + Catalonia
-vassal = {
+dependency = {
 	subject_type = "castille_vassal"
 	first = CAS
 	second = CAT
@@ -73,7 +115,7 @@ vassal = {
 	end_date = 1555.11.11
 }
 # Castille + Valencia
-vassal = {
+dependency = {
 	subject_type = "castille_vassal"
 	first = CAS
 	second = VAL
@@ -81,10 +123,25 @@ vassal = {
 	end_date = 1555.11.11
 }
 # Castille + Navarra
-vassal = {
+dependency = {
 	subject_type = "castille_vassal"
 	first = CAS
 	second = NAV
 	start_date = 1444.10.10
 	end_date = 1555.11.11
+}
+# England + Normandy and Gascony guarantee subjects:
+dependency = {
+	subject_type = "england_guaranteed_state"
+	first = ENG
+	second = NRM
+	start_date = 1417.8.1
+	end_date = 1450.5.1
+}
+dependency = {
+	subject_type = "england_guaranteed_state"
+	first = ENG
+	second = GUY
+	start_date = 1337.5.1
+	end_date = 1453.10.19
 }

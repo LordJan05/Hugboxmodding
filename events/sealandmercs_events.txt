@@ -22,9 +22,24 @@ country_event = {
 			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
 			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
 			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
+			has_estate_privilege = estate_nobles_jomsvikings_special_units
+			has_estate_privilege = estate_nobles_berserker_special_units
+			has_estate_privilege = estate_nobles_zulu_warriors_special_units
+			has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
 		}
 		ai = no
-		NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
+		if = {
+			limit = {
+				has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag
+			}
+			OR = {
+				NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base_gb_increase } }
+				NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
+			}
+		}
+		else = {
+			NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
+		}
 	}
 	immediate = {
 		if = {
@@ -40,6 +55,18 @@ country_event = {
 				name = sealand_cawa_fl_base
 				duration = -1
 				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = sealand_cawa_fl_base_gb_increase
+					duration = -1
+					hidden = yes
+				}
 			}
 		}
 	}
@@ -67,17 +94,50 @@ country_event = {
 			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
 			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
 			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
+			has_estate_privilege = estate_nobles_jomsvikings_special_units
+			has_estate_privilege = estate_nobles_berserker_special_units
+			has_estate_privilege = estate_nobles_zulu_warriors_special_units
+			has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
 		}
 		ai = no
-		num_of_owned_provinces_with = {
-			value = 2
-			has_province_modifier = sealand_cawa_fl_base
+		if = {
+			limit = {
+				has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 2
+					has_province_modifier = sealand_cawa_fl_base_gb_increase
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					has_province_modifier = sealand_cawa_fl_base
+				}
+			}
+		}
+		else = {
+			num_of_owned_provinces_with = {
+				value = 2
+				has_province_modifier = sealand_cawa_fl_base
+			}
 		}
 	}
 	immediate = {
-		every_owned_province = {
-			limit = { is_capital = no }
-			remove_province_modifier = sealand_cawa_fl_base
+		if = {
+			limit = {
+				has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag
+			}
+			every_owned_province = {
+				limit = { is_capital = no }
+				remove_province_modifier = sealand_cawa_fl_base_gb_increase
+				remove_province_modifier = sealand_cawa_fl_base
+			}
+		}
+		else = {
+			every_owned_province = {
+				limit = { is_capital = no }
+				remove_province_modifier = sealand_cawa_fl_base
+			}
 		}
 	}
 	option = { }
@@ -101,103 +161,123 @@ country_event = {
 	}
 	option = { }
 }
-#### BANNER #### SINCE CAWA BARELY BEING MUCH MODDALE AND FOUND OUT FEW ISSUES BIT TOO LATE ON THE MAKING, THEN BANNER STILL IS PRETTY MUCH MJL THAN IT WAS BEFORE, JUST SLIGHTLY CHANGED BUT I KEPT IT LIKE THIS, IN CASE PDX DECIDES TO MAKE CAWA MORE MODDABLE OR SOMETHING...
-# Gives the modifier on any province:
+# Merc companies, obselte mercs warning:
 country_event = {
 	id = sealand_mercs_fl_base_event.4
-	title = none
-	desc = none
-	picture = MYSTIC_IN_PRAYER_eventPicture
-	hidden = yes
-	mean_time_to_happen = { days = 5 }
-	trigger = {
-		#has_country_flag = sealandmercs_switch_merc_flag
-		ai = no
-		variable_arithmetic_trigger = {
-			custom_tooltip = vat_banner_new_value
-			export_to_variable = {
-				which = banner_forcelimit
-				value = trigger_value:land_forcelimit
-			}
-			multiply_variable = {
-				which = banner_forcelimit
-				value = 30
-			}
-			divide_variable = {
-				which = banner_forcelimit
-				value = 100
-			}
-			change_variable = {
-				which = banner_forcelimit
-				value = 10
-			}
-			NOT = {
-				is_variable_equal = {
-					which = banner_forcelimit
-					which = current_banner_forcelimit
-				}
-			}
-		}
-	}
-	immediate = {
-		check_num_of_banners = yes
-		remove_banner_fl_modifiers = yes
-		set_banner_fl_modifiers = yes
-	}
-	option = { }
+	title = sealand_mercs_fl_base_event.4.t
+	desc = sealand_mercs_fl_base_event.4.d
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	is_triggered_only = yes
+	option = { name = sealand_mercs_fl_base_event.4.a }
 }
-# More than 2 provinces with modifiers failsafe:
+# Merc companies, inf cav switch check:
 country_event = {
 	id = sealand_mercs_fl_base_event.5
 	title = none
 	desc = none
-	picture = MYSTIC_IN_PRAYER_eventPicture
+	picture = SCOTTISH_MERCENARIES_eventPicture
 	hidden = yes
-	mean_time_to_happen = { days = 5 }
 	trigger = {
-		#has_country_flag = sealandmercs_switch_merc_flag
-		ai = no
-		num_of_owned_provinces_with = {
-			value = 2
-			has_province_flag = sealand_banners_fl_base_flag
-		}
-	}
-	immediate = {
-		check_num_of_banners = yes
-		remove_banner_fl_modifiers = yes
-		set_banner_fl_modifiers = yes
-	}
-	option = { }
-}
-# Removed for AI:
-country_event = {
-	id = sealand_mercs_fl_base_event.6
-	title = none
-	desc = none
-	picture = MYSTIC_IN_PRAYER_eventPicture
-	hidden = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		#has_country_flag = sealandmercs_switch_merc_flag
-		ai = yes
-		any_owned_province = {
+		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
+		any_hired_mercenary_company = {
+			hired_for_months = 1
 			OR = {
-				has_province_flag = sealand_banners_fl_base_flag
-				has_province_modifier = sealand_banners_fl_base_512
-				has_province_modifier = sealand_banners_fl_base_256
-				has_province_modifier = sealand_banners_fl_base_128
-				has_province_modifier = sealand_banners_fl_base_64
-				has_province_modifier = sealand_banners_fl_base_32
-				has_province_modifier = sealand_banners_fl_base_16
-				has_province_modifier = sealand_banners_fl_base_8
-				has_province_modifier = sealand_banners_fl_base_4
-				has_province_modifier = sealand_banners_fl_base_2
-				has_province_modifier = sealand_banners_fl_base_1
+				template = sea_cav2_merc_comp_0
+				template = sea_cav2_merc_comp_1
+				template = sea_cav2_merc_comp_2
+				template = sea_cav2_merc_comp_3
+				template = sea_cav2_merc_comp_4
+				template = sea_cav2_merc_comp_5
+				template = sea_cav2_merc_comp_6
 			}
 		}
 	}
 	immediate = {
-		remove_banner_fl_modifiers = yes
+		random_hired_mercenary_company = {
+			limit = {
+				OR = {
+					template = sea_cav2_merc_comp_0
+					template = sea_cav2_merc_comp_1
+					template = sea_cav2_merc_comp_2
+					template = sea_cav2_merc_comp_3
+					template = sea_cav2_merc_comp_4
+					template = sea_cav2_merc_comp_5
+					template = sea_cav2_merc_comp_6
+				}
+			}
+			save_event_target_as = inf_to_cav_merc_switch
+		}
+		event_target:inf_to_cav_merc_switch = {
+			disband_mercenary_company = THIS
+		}
+	}
+	option = { }
+}
+country_event = {
+	id = sealand_mercs_fl_base_event.6
+	title = none
+	desc = none
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	hidden = yes
+	trigger = {
+		has_country_flag = sea_mercs_inf_to_cav_switch_flag
+		any_hired_mercenary_company = {
+			hired_for_months = 1
+			OR = {
+				template = sea_medium_merc_comp_0
+				template = sea_medium_merc_comp_1
+				template = sea_medium_merc_comp_2
+				template = sea_medium_merc_comp_3
+				template = sea_medium_merc_comp_4
+				template = sea_medium_merc_comp_5
+				template = sea_medium_merc_comp_6
+			}
+		}
+	}
+	immediate = {
+		random_hired_mercenary_company = {
+			limit = {
+				OR = {
+					template = sea_medium_merc_comp_0
+					template = sea_medium_merc_comp_1
+					template = sea_medium_merc_comp_2
+					template = sea_medium_merc_comp_3
+					template = sea_medium_merc_comp_4
+					template = sea_medium_merc_comp_5
+					template = sea_medium_merc_comp_6
+				}
+			}
+			save_event_target_as = inf_to_cav_merc_switch
+		}
+		event_target:inf_to_cav_merc_switch = {
+			disband_mercenary_company = THIS
+		}
+	}
+	option = { }
+}
+country_event = {
+	id = sealand_mercs_fl_base_event.7
+	title = none
+	desc = none
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		has_country_flag = emp_gen_genoese_crossbowmen_flag
+		any_hired_mercenary_company = {
+			template = merc_genoa_crossbowmen_company
+		}
+	}
+	immediate = {
+		random_hired_mercenary_company = {
+			limit = {
+				template = merc_genoa_crossbowmen_company
+			}
+			save_event_target_as = gen_merc_remove
+		}
+		event_target:gen_merc_remove = {
+			disband_mercenary_company = THIS
+		}
 	}
 	option = { }
 }

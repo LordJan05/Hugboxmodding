@@ -3171,6 +3171,7 @@ mor_andalucia = {
 }
 mor_tunis_conquest = {
 	galley_power = 0.2
+	manpower_recovery_speed = 0.1
 }
 mor_beyond_the_canaries = {
 	range = 0.25
@@ -3907,7 +3908,8 @@ mlo_lombard_renaissance = {
 }
 
 mlo_the_swiss_mercs = {
-	infantry_cost = -0.1
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
 }
 
 mlo_capital_of_italy = {
@@ -3993,7 +3995,7 @@ naples_dotf_modifier = {
 }
 
 nap_italian_wars_modifier = {
-	discipline = 0.025
+	mercenary_discipline = 0.05
 }
 
 nap_ragusa_trade = {
@@ -4024,7 +4026,7 @@ reorganzied_swiss_confederacy = {
 }
 
 swi_expanded_papal_guard = {
-	global_regiment_cost = -0.05
+	mercenary_cost = -0.2
 }
 
 ended_the_habsburgs = {
@@ -4209,8 +4211,6 @@ hun_hungary_poland = {
 
 hun_supreme_black_army = {
 	mercenary_discipline = 0.05
-	#amount_of_banners = 0.25
-	#amount_of_cawa = 0.25
 	core_creation = -0.1
 }
 
@@ -4695,7 +4695,8 @@ ven_venture_captain_recruitment = {
 }
 
 ven_mercenaries_paid_with_land = {
-	global_regiment_cost = -0.1
+	mercenary_cost = -0.1
+	merc_maintenance_modifier = -0.2
 }
 
 ned_security_on_and_from_the_sea = {
@@ -5116,8 +5117,7 @@ bohemian_commonwealth = {
 	diplomatic_annexation_cost = -0.15
 }
 pap_papal_swiss_guard = {
-	mercenary_discipline = 0.05
-	merc_maintenance_modifier = 0.25
+	mercenary_discipline = 0.1
 }
 
 pap_papal_mission = {
@@ -6945,8 +6945,8 @@ gen_hoa_control_coastline_modifier = {
 
 warband_assembled = {
 	army_tradition = 0.5
-	land_morale = 0.1
-	#merc_maintenance_modifier = -0.1
+	land_morale = 0.05
+	merc_maintenance_modifier = -0.1
 }
 
 w_african_modern_weapons = {

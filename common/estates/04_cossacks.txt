@@ -2,9 +2,9 @@ estate_cossacks = {
 	icon = 4
 	
 	# Used for when declaring independence
-	independence_government = tribal
-	starting_reform = steppe_horde
-	independence_tech_group = nomad_group
+	independence_government = republic
+	starting_reform = cossacks_reform
+	independence_tech_group = eastern
 
 	province_independence_weight = {
 		factor = 1
@@ -67,6 +67,7 @@ estate_cossacks = {
 				NOT = { has_reform = celestial_empire }
 				NOT = { has_reform = revolutionary_empire_reform }
 			}
+			has_country_flag = sea_gen_steppe_cossacks_flag
 		}
 		#NOT = { has_government_attribute = is_merchant_republic }
 		#NOT = { has_reform = trading_city }
@@ -76,11 +77,11 @@ estate_cossacks = {
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		cavalry_cost = -0.2
-		cavalry_power = 0.2
+		cavalry_power = 0.1
 		cav_to_inf_ratio = 0.10
 	}
 	country_modifier_neutral = {
-		cavalry_power = 0.2
+		cavalry_cost = 0.1
 	}	
 	country_modifier_angry = {
 		cavalry_cost = 0.2

@@ -12,3 +12,10 @@ cb_hab_boh_union = {
 	months = 120
 	war_goal = hab_take_capital_personal_union
 }
+# Tunis/Morocco:
+cb_tun_mor_unite_barbary = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 120
+	war_goal = tun_mor_unite_barbary
+}

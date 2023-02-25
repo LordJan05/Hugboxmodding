@@ -48,7 +48,7 @@ west_africa_military_missions = {
 	#2nd mission: Strong Leadership
 	west_africa_strong_leadership = { 
 		icon = mission_mal_fighting_musa
-		required_missions = { west_africa_assemble_warband west_africa_gathering_tributes } 
+		required_missions = { west_africa_gathering_tributes } 
 		position = 2
 		provinces_to_highlight = {
 			owner = {
@@ -233,9 +233,17 @@ west_africa_economic_missions = {
 		trigger = {
 			if = {
 				limit = {
+					NOT = { tag = KBO }
 					has_dlc = "Art of War"
 				}
 				num_of_war_reparations = 3
+			}
+			else_if = {
+				limit = {
+					tag = KBO
+				}
+				army_size_percentage = 1
+				num_of_generals = 1
 			}
 			else = {
 				treasury = 200
@@ -246,6 +254,32 @@ west_africa_economic_missions = {
 			add_country_modifier = {
 				name = w_african_tax_collectors
 				duration = 3650
+			}
+			if = {
+				limit = {
+					tag = KBO
+				}
+				hausa_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				katsina_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				zazzau_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		ai_weight = {

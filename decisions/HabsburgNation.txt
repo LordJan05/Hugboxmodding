@@ -15,7 +15,10 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			primary_culture = austrian
+			OR = {
+				tag = BAV
+				primary_culture = austrian
+			}
 			NOT = { tag = HAB }
 			NOT = { tag = AUE }
 			NOT = { tag = AHE }
@@ -65,6 +68,12 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = HAB
+			if = {
+				limit = {
+					NOT = { primary_culture = austrian }
+				}
+				change_primary_culture = austrian
+			}
 			add_prestige = 10
 			austria_proper_area = {
 				limit = {

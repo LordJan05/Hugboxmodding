@@ -41,8 +41,7 @@ aristocracy_ideas = {
 		general_cost = -0.1
 	}
 	noble_resilience = {
-		amount_of_banners = 0.2
-		#amount_of_cawa = 0.15
+		mercenary_manpower = 0.33
 	}
 	
 
@@ -75,8 +74,8 @@ plutocracy_ideas = {
 	#}
 
 	tradition_of_payment = {
-		land_maintenance_modifier = -0.05 # mercenary_cost = -0.2
-		fire_damage = 0.1 # mercenary_discipline = 0.05
+		mercenary_cost = -0.2
+		mercenary_discipline = 0.05
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
@@ -1013,20 +1012,19 @@ administrative_ideas = {
 	}
 
 	organised_mercenary_payment = {
-		global_regiment_cost = -0.05
+		mercenary_cost = -0.15
 	}
 	adaptability = {
 		core_creation = -0.25
 	}
 	benefits_for_mercenaries = {
-		land_maintenance_modifier = -0.1
+		merc_maintenance_modifier = -0.2
 	}
 	bookkeeping = {
 		interest = -0.5
 	}
 	organised_mercenary_recruitment = {
-		amount_of_banners = 0.15
-		#amount_of_cawa = 0.15
+		mercenary_manpower = 0.33
 	}
 	administrative_efficiency_idea = {
 		#advisor_pool = 1

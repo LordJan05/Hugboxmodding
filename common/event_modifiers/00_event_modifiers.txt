@@ -1495,7 +1495,7 @@ rome_reborn = {
 	legitimacy = 0.25
 	tolerance_own = 1
 	global_missionary_strength = 0.01
-	global_regiment_cost = -0.05
+	mercenary_cost = -0.25
 }
 
 rebel_sentiment = {
@@ -2360,9 +2360,8 @@ swedish_military_reforms = {
 }
 
 swedish_mercenary_core = {
-	land_maintenance_modifier = -0.05
-	amount_of_banners = 0.25
-	#amount_of_cawa = 0.25
+	merc_maintenance_modifier = -0.1
+	mercenary_manpower = 0.5
 }
 
 swedish_naval_reforms = {
@@ -2687,7 +2686,7 @@ mam_recover_from_plague = {
 }
 
 mlo_cheap_mercs = {
-	land_maintenance_modifier = -0.1
+	merc_maintenance_modifier = -0.33
 }
 
 encourage_culture = {
@@ -11427,8 +11426,7 @@ john_calvin_modifier = {
 
 # Swiss monopoly on mercenaries
 mercenary_monopoly_modifier = {
-	amount_of_banners = 0.1
-	#amount_of_cawa = 0.1
+	mercenary_manpower = 0.25
 	prestige_from_land = 0.1
 }
 
@@ -11750,8 +11748,7 @@ the_dying_of_the_light = {
 }
 
 an_eye_for_an_eye = {
-	amount_of_banners = 0.25
-	#amount_of_cawa = 0.25
+	mercenary_manpower = 0.5
 	global_manpower_modifier = -0.25
 }
 
@@ -12093,7 +12090,7 @@ junior_central_african_ancestor_cult = {
 }
 
 junior_mwari_cult = {
-	discipline = 0.015
+	discipline = 0.0125
 	religion = yes
 }
 

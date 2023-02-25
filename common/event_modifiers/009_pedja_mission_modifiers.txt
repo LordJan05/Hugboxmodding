@@ -39,7 +39,7 @@ marzban_of_mosul = {
 }
 sas_struggle_for_levant = {
 	land_morale = 0.075
-	amount_of_banners = 0.2
+	mercenary_manpower = 0.5
 }
 sas_persian_administration = {
 	governing_capacity_modifier = 0.2
