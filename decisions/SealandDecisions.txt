@@ -4240,34 +4240,54 @@ country_decisions = {
 					check_variable = { which = sil_hanys_upgrade_var value = 1 }
 					NOT = { check_variable = { which = sil_hanys_upgrade_var value = 2 } }
 				}
-				num_of_owned_provinces_with = { has_latent_trade_goods = coal value = 1 }
+				num_of_owned_provinces_with = {
+					has_latent_trade_goods = coal
+					value = 1
+					development = 30
+				}
 			}
 			if = {
 				limit = {
 					check_variable = { which = sil_hanys_upgrade_var value = 2 }
 					NOT = { check_variable = { which = sil_hanys_upgrade_var value = 3 } }
 				}
-				num_of_owned_provinces_with = { has_latent_trade_goods = coal value = 3 }
+				num_of_owned_provinces_with = {
+					has_latent_trade_goods = coal
+					value = 3
+					development = 30
+				}
 			}
 			if = {
 				limit = {
 					check_variable = { which = sil_hanys_upgrade_var value = 3 }
 					NOT = { check_variable = { which = sil_hanys_upgrade_var value = 4 } }
 				}
-				num_of_owned_provinces_with = { has_latent_trade_goods = coal value = 5 }
+				num_of_owned_provinces_with = {
+					has_latent_trade_goods = coal
+					value = 5
+					development = 25
+				}
 			}
 			if = {
 				limit = {
 					check_variable = { which = sil_hanys_upgrade_var value = 4 }
 					NOT = { check_variable = { which = sil_hanys_upgrade_var value = 5 } }
 				}
-				num_of_owned_provinces_with = { has_latent_trade_goods = coal value = 7 }
+				num_of_owned_provinces_with = {
+					has_latent_trade_goods = coal
+					value = 7
+					development = 20
+				}
 			}
 			if = {
 				limit = {
 					check_variable = { which = sil_hanys_upgrade_var value = 5 }
 				}
-				num_of_owned_provinces_with = { has_latent_trade_goods = coal value = 9 }
+				num_of_owned_provinces_with = {
+					has_latent_trade_goods = coal
+					value = 9
+					development = 20
+				}
 			}
 		}
 		effect = {

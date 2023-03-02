@@ -319,7 +319,13 @@ country_event = {
 			}
 		}
 		STY = { create_alliance = TIR }
-		HAB = { declare_war = STY }
+		HAB = {
+			declare_war_with_cb = {
+				who = STY
+				casus_belli = cb_annex
+				war_goal_province = 1863
+			}
+		}
 		release = CLI
 		CLI = {
 			add_treasury = 500

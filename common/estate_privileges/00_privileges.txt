@@ -2488,7 +2488,7 @@ estate_church_inwards_perfection = {
 	#mechanics = {
 	#	exempt_from_seize_land
 	#}
-	cooldown_years = 25
+	cooldown_years = 20
 	ai_will_do = {
 		factor = 1
 		modifier = {
