@@ -686,7 +686,7 @@ the_loyalty_act = {
 }
 
 exchange_of_ideas = {
-	monarch_power = ADM
+	monarch_power = DIP
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -698,8 +698,8 @@ exchange_of_ideas = {
 		full_idea_group = trade_ideas
 	}	
 	
-	idea_cost = -0.1
-	global_institution_spread = 0.2
+	mercantilism_cost = -0.25 # idea_cost = -0.1
+	trade_efficiency = 0.1 # global_institution_spread = 0.2
 	
 	ai_will_do = {
 		factor = 0.8
@@ -720,7 +720,7 @@ vassal_obligations_act = {
 	}	
 	
 	vassal_income = 0.25
-	vassal_forcelimit_bonus = 1
+	land_attrition = -0.1 # vassal_forcelimit_bonus = 1
 	
 	ai_will_do = {
 		factor = 1
@@ -782,6 +782,7 @@ vassal_integration_act = {
 	}	
 	
 	diplomatic_annexation_cost = -0.2
+	merc_maintenance_modifier = -0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -851,7 +852,7 @@ overseas_dominions = {
 }
 
 enlightened_aristocracy = {
-	monarch_power = ADM
+	monarch_power = MIL
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -863,8 +864,8 @@ enlightened_aristocracy = {
 		full_idea_group = aristocracy_ideas
 	}	
 	
-	production_efficiency = 0.1
-	religious_unity = 0.2
+	production_efficiency = 0.05
+	shock_damage = 0.15 # religious_unity = 0.2
 	
 	ai_will_do = {
 		factor = 1
@@ -1095,7 +1096,7 @@ supply_convoys = {
 }
 
 cultural_recognition_act = {
-	monarch_power = ADM
+	monarch_power = MIL
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -1107,8 +1108,8 @@ cultural_recognition_act = {
 		full_idea_group = plutocracy_ideas
 	}	
 	
-	num_accepted_cultures = 1
-	global_institution_spread = 0.1
+	global_regiment_cost = -0.05 # num_accepted_cultures = 1
+	fire_damage = 0.15 # global_institution_spread = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -1128,6 +1129,7 @@ the_licensing_of_the_press_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
+	recover_army_morale_speed = 0.25
 	legitimacy = 1
 	republican_tradition = 0.3
 	devotion = 1
@@ -1306,7 +1308,7 @@ taxation_with_representation = {
 }
 
 cultural_understanding = {
-	monarch_power = ADM
+	monarch_power = DIP
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -1319,7 +1321,7 @@ cultural_understanding = {
 	}	
 	
 	global_unrest = -1
-	rebel_support_efficiency = 0.25
+	movement_speed = 0.1 # rebel_support_efficiency = 0.25
 	
 	ai_will_do = {
 		factor = 1
@@ -1347,7 +1349,7 @@ cultural_understanding = {
 }
 
 the_citrus_statute = {
-	monarch_power = ADM
+	monarch_power = DIP
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -1359,7 +1361,7 @@ the_citrus_statute = {
 		full_idea_group = maritime_ideas
 	}	
 	
-	global_tax_modifier = 0.10
+	navy_tradition = 1 # global_tax_modifier = 0.10
 	sunk_ship_morale_hit_recieved = -0.33
 	
 	ai_will_do = {
@@ -1574,7 +1576,7 @@ calming_the_tides_policy = {
 	}
 	
 	global_unrest = -2
-	prestige = 0.5
+	horde_unity = 1
 	
 	ai_will_do = {
 		factor = 1
@@ -1728,8 +1730,8 @@ omnism_policy = {
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	tolerance_heathen = 2
-	tolerance_heretic = 2
+	devotion = 1 # tolerance_heathen = 2
+	manpower_in_own_culture_provinces = 0.15 # tolerance_heretic = 2
 	
 	ai_will_do = {
 		factor = 1
@@ -1875,8 +1877,8 @@ disruptive_innovation_policy = {
 		full_idea_group = indigenous_ideas
 	}
 	
-	development_cost = -0.05
-	global_institution_spread = 0.2
+	innovativeness_gain = 0.5
+	siege_ability = 0.2
 
 	ai_will_do = {
 		factor = 1

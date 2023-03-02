@@ -50,6 +50,7 @@ sea_fishing_game_triggered_modifier = {
 				owner = {
 					if = {
 						limit = {
+							is_year = 1555
 							NOT = { has_country_flag = got_legendary_general_flag }
 						}
 						country_event = { id = sealand_events.17 days = 100 }

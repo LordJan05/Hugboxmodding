@@ -150,6 +150,41 @@
         
     # Brandenburg/Prussia:
       # Missions
+      
+    # Silesia:
+      # Government:
+        silesia_monarchy_reform:0 "Polonia Bytom"
+        silesia_monarchy_reform_desc:0 "Polonia Bytom to je fusbalowo skupina ze Bytumja. Ny ma pewne a je uo to zwada, eli rachowac jygo fungowany uod 1920 roku, eli uod 1945. Klub uo takim mjany fungowoł we lotach 1920 - 1922, nale nyskorzi uostoł rozwjunzany, we 1945 uogłoszuno jygo reaktywacyjo, nale powojynny klub nawjunzywol do tradycyje Poguni Lwuw, a tygo ny buło we downyj Polunije."
+        mechanic_silesia_monarchy_reform_hanys_yes:0 "Unlocks '§YHanys§!' Nobility Privileges. Which when enacted:"
+        silesia_monarchy_reform_tt:0 "Production of §YCoal§!: §G+50.0%§!\nEvery owned province with §YCoal§! as latent trade goods gains:\nLocal Development Cost: §G-20.0%§!\nLocal Unrest: §G-2.00§!"
+        silesia_monarchy_reform_coal_bonus:0 "Bytom wungla"
+        silesia_monarchy_reform_coal_latent:0 "Bytom wungla"
+      # Devision:
+        sil_hanys_upgrade_title:0 "@SIL Kuchna Slunsko"
+        sil_hanys_upgrade_desc:0 "Those are Hanys upgrades."
+        sil_hanys_upgrade_tt:0 "§REach upgrade increases required amount of Coal as latent trade goods by §Y2§!.§!"
+      # Events:
+        sealand_events.23.t:0 "Kuchna Slunsko"
+        sealand_events.23.d:0 "Slunsko kuchna nolezi do kuchni strzodkowoojropejskich, nale mo tyz swoje charaktyrystyczne tajle. Na Slunsku jydzom danja typowo slunske, tyz dana znone we panstwach sumsadujuncych, czynsto znone sam pod slunskim mjanym lb. krepel abo buchta rolada, slunske kluski a modro kapusta to slunske dana narodowe. Powszechne uwazo se, ize nojczynstszym slunskim jodlym sum rolady wroz s slunskimi kluskuma a modrum kapustum, zas pjyrsze dane to nudelzupa."
+        sealand_events.23.a:0 "Karminadle."
+        silesia_hanys_special_units_upgrade_1:0 "Karminadle"
+        sealand_events.23.b:0 "Gumiklyjzy."
+        silesia_hanys_special_units_upgrade_2:0 "Gumiklyjzy"
+        sealand_events.23.c:0 "Modro kapusta."
+        silesia_hanys_special_units_upgrade_3:0 "Modro kapusta"
+        sealand_events.23.e:0 "Wodzunka."
+        silesia_hanys_special_units_upgrade_4:0 "Wodzunka"
+        sealand_events.23.f:0 "Makuwki."
+        silesia_hanys_special_units_upgrade_5:0 "Makuwki"
+        silesia_hanys_special_units_upgrade_55:0 "Makuwki"
+      # Privilege:
+        estate_nobles_silesia_hanys_special_units:0 "Hanys"
+        estate_nobles_silesia_hanys_special_units_desc:0 "Uokryslyny czowjeka, kery uod pokolynuw mjyszko we Slunsku a mo se za Slunzoka. Czynsto Hanys to je tyz Slunzok, kery mjyszko poza granicuma Slunska. Pojynce Hanys uobmyslyli Poloki a wzyno se uod mjymjeckigo mjana Hans, co mjało uoznaczac, ize Slunzoki sum Mjymcuma. Mjało byc uune uobrazliwe, nale przijino se skirz podkryslyno uodrymbnosci Hanysuw."
+        estate_nobles_silesia_hanys_special_units_granted_tt:0 "Gives §YSpecial Infantries§! Forcelimit."
+        estate_nobles_silesia_hanys_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
+      # Modifiers:
+        silesia_hanys_special_units:0 "Hanys"
+        desc_aztecs_eagle_special_units:0 "Uokryslyny czowjeka, kery uod pokolynuw mjyszko we Slunsku a mo se za Slunzoka. Czynsto Hanys to je tyz Slunzok, kery mjyszko poza granicuma Slunska. Pojynce Hanys uobmyslyli Poloki a wzyno se uod mjymjeckigo mjana Hans, co mjało uoznaczac, ize Slunzoki sum Mjymcuma. Mjało byc uune uobrazliwe, nale przijino se skirz podkryslyno uodrymbnosci Hanysuw."
      
       # Others:
         # Special government reform:
@@ -793,6 +828,7 @@
         emp_gen_genoese_crossbowmen_title:0 "Genoese Crossbowmen"
         emp_gen_genoese_crossbowmen_desc:0 "Genoese Crossbowmen"
         emp_gen_genoese_crossbowmen_tt:0 "Disables §YGenoese Crossbowmen§! mercenary company."
+        genoa_trade_node_power_modifier:0 "Aggressive Trade Expansion"
         sea_gen_corsica_title:0 "Secure Corsica"
         sea_gen_corsica_desc:0 "Secure Corsica"
         sea_gen_corsica_modifier:0 "Confronting Mediterranean Pirates"
@@ -1429,7 +1465,7 @@
         crown_land_level_11:0 "Crown Land Ownership"
         recruit_40_trad_general_title:0 "£sea_general_cost_logo£Recruit a General with §G40§! tradition"
         recruit_40_trad_general_desc:0 "This is a one time decision to recruit slightly better general, unless we get unlucky RNG."
-        militia_act_tt:0 "[Root.GetName] gets '§YThe Militia Act§!' until the end of the game, giving the following effects:\nStability Cost Modifier: §R+5.0%§!\nDiscipline: §G+6.0%§!\n§YThis modifier is disabled if 'Humanist Ideas' or 'Influence Ideas' is removed.§!"
+        militia_act_tt:0 "[Root.GetName] gets '§YThe Militia Act§!' until the end of the game, giving the following effects:\nStability Cost Modifier: §R+5.0%§!\nDiscipline: §G+5.0%§!\n§YThis modifier is disabled if 'Humanist Ideas' or 'Influence Ideas' is removed.§!"
         sea_colonize_east_sahara_corridor_title:0 "Colonize East Sahara Corridor"
         sea_colonize_east_sahara_corridor_desc:0 "Allows us to colonize the corrider, thus enabling to expand further."
         sea_colonize_west_sahara_corridor_title:0 "Colonize West Sahara Corridor"
@@ -1703,7 +1739,7 @@
         sea_angevin_events.2.a:0 "Quality over quantity."
         sea_angevin_events.2.a.tt:0 "[Root.GetName] '§YBritish Royal Marines§!' Nobility Privilege §YSpecial Infantries§! gain following bonuses:\nInfantry Combat Ability: §G+15.0%§!\nDiscipline: §G+5.0%§!\nReinforce Speed: §G+100.0%§!\nLand Fire Damage: §G+10.0%§!\nDisembark Time: §G+200.0%§!\n\n§RThis is a one time decision.§!"
         sea_angevin_events.2.b:0 "We need as many as we can."
-        sea_angevin_events.2.b.tt:0 "[Root.GetName] '§YBritish Royal Marines§!' Nobility Privilege  §YSpecial Infantries§! gain following bonuses:\nDoubles §YSpecial Infantries§! Forcelimit.\nInfantry Combat Ability: §G+7.5%§!\nDiscipline: §G+2.5%§!\nReinforce Speed: §G+50.0%§!\nLand Fire Damage: §G+10.0%§!\nDisembark Time: §G+100.0%§!\n\n§RThis is a one time decision.§!"
+        sea_angevin_events.2.b.tt:0 "[Root.GetName] '§YBritish Royal Marines§!' Nobility Privilege  §YSpecial Infantries§! gain following bonuses:\nInfantry Combat Ability: §G+7.5%§!\nDiscipline: §G+2.5%§!\nReinforce Speed: §G+50.0%§!\nLand Fire Damage: §G+10.0%§!\nDisembark Time: §G+100.0%§!\nSpecial Infantry Force Limit: §G+100.0%§!\n\n§RThis is a one time decision.§!"
       # Privilege:
         estate_nobles_gb_royal_marines_special_units:0 "British Royal Marines"
         estate_nobles_gb_royal_marines_special_units_desc:0 "They are just like normal Marines, except they do not rely on sailors only but also use manpower, since ever Brit is trained to be sailor anyway."
@@ -1945,11 +1981,11 @@
         nog_horse_population_boom_desc:0 "Breeding More Horses"
         # Events:
         sea_nogai_events.1.t:0 "Genoese Crimea Holdings"
-        sea_nogai_events.1.d:0 "We have option to gain those lands, which Genoa holds in Crimea, through diplomatic ways, with no bloodshed. If they accept, then only with a mere §Y300§!¤ they would sell their holdings in Crimea."
+        sea_nogai_events.1.d:0 "We have option to gain those lands, which Genoa holds in Crimea, through diplomatic ways, with no bloodshed. If they accept, then only with a mere §Y500§!¤ they would sell their holdings in Crimea."
         sea_nogai_events.1.a:0 "It is be best offer we can make."
         sea_nogai_events.1.tt:0 "Should they accept, then following will happen:"
         sea_nogai_events.1.b:0 "We have no interest in those lands."
-        sea_nogai_events.2.d:0 "We have received word that Nogai has interest in our lands in Crimea and is willing to offer §Y300§!¤ for the provinces. If we truly have no interest in Crimea, then it would be a good offer but then again, should we decline the offer, they might want to take it by force."
+        sea_nogai_events.2.d:0 "We have received word that Nogai has interest in our lands in Crimea and is willing to offer §Y500§!¤ for the provinces. If we truly have no interest in Crimea, then it would be a good offer but then again, should we decline the offer, they might want to take it by force."
         sea_nogai_events.2.a:0 "We can agree to that offer."
         sea_nogai_events.2.b:0 "Those lands are worth much more."
         sea_nogai_events.3.d:0 "Genoa has agreed to sell their Crimean holdings to us."
@@ -2553,8 +2589,9 @@
         france_king_musketeers_units:0 "Mousquetaires du Roi"
         desc_france_king_musketeers_units:0 "The King's Musketeers are open to the lower nobility and provide them with an opportunity to prove their military skill and loyalty to the crown."
         # Elan:
-        sea_fra_elan_modifier_tt:0 "§Y[Root.GetName]§! gets '§YElan!§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Prestige: §G+1.00§!\n§RModifier is locked for France tag.§!\n"
+        sea_fra_elan_modifier_tt:0 "§Y[Root.GetName]§! gets '§YElan!§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+10.0%§!\nYearly Prestige: §G+1.00§!\n§RModifier is locked for France tag.§!\n"
         sea_fra_elan_modifier:0 "Elan!"
+        alpine_forticiations_modifier:0 "Alpine Forticiations"
       # Countries:
         AGL:0 "Angoulême"
         AGL_ADJ:0 "Angoumoisine"
@@ -2617,6 +2654,13 @@
         sea_ven_guilds2:0 "The Bureaucrats"
         sea_ven_guilds2_influence:0 "The Bureaucrats Influence"
         sea_ven_guilds2_FACTION_DESC:0 "\nReform Progress Growth: §G+33.0%§!\nGoverning Capacity Modifier: §G+25.0%§!\nAll Estates' Loyalty Equilibrium: §G+10.0%§!\nAdvisor Cost: §R+25.0%§!"
+        
+    # Muscovy/Russia:
+      # Russian Government:
+        rus_gov_mec_streltsy_regiment:0 "Streltsy"
+      # Missions:
+        sea_rus_streltsy_mission_title:0 "Mass Recruitment"
+        sea_rus_streltsy_mission_desc:0 "Armies of peasants are the backbone of our army. We must continue to recruit and provision the peasants to uphold our military traditions."
         
     # Novgorod:
       # Government:
@@ -2753,6 +2797,6 @@
         estate_nobles_aztecs_jaguar_special_units_revoked_tt:0 "Removes §YSpecial Infantries§! Forcelimit."
         # Modifiers:
         aztecs_eagle_special_units:0 "Eagle Warriors"
-        desc_aztecs_eagle_special_units:0 ""
+        desc_aztecs_eagle_special_units:0 "It is one of the most elite types of warriors in the Aztec military. Eagle Warriors wear helemts and suits decorated with eagle feathers, sometimes even eagle heads as heads. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."
         aztecs_jaguar_special_units:0 "Jaguar Warriors"
-        desc_aztecs_jaguar_special_units:0 ""
+        desc_aztecs_jaguar_special_units:0 "It is one of the most elite types of warriors in the Aztec military. Jaguar Warriors wear hide or skin of a jaguar and faces were shown out of the open jaguar mouth. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."

@@ -2167,11 +2167,7 @@ poland_sca_slot_3_b = {
 		effect = {
 			custom_tooltip = pol_hold_moscow_and_novgorod_and_neva_tt
 			tooltip = { 
-				if = { 
-					limit = { has_dlc = "Third Rome" } 
-					custom_tooltip = pol_10_streltsy_in_capital
-				}
-				else = { add_yearly_manpower = 2 } 
+				add_yearly_manpower = 2
 				russia_region = {
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -2186,7 +2182,6 @@ poland_sca_slot_3_b = {
 					name = broke_the_rus
 					duration = 9125 
 				}
-				add_yearly_manpower = 2
 				karelia_area = {
 					limit = { 
 						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
@@ -2525,25 +2520,7 @@ poland_sca_slot_3_plc_1 = {
 		effect = {
 			custom_tooltip = pol_hold_moscow_and_novgorod_and_neva_tt
 			tooltip = { 
-				if = { 
-					limit = { has_dlc = "Third Rome" } 
-					custom_tooltip = pol_10_streltsy_in_capital
-					hidden_effect = { 
-						capital_scope = { 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-							streltsy_infantry = ROOT 
-						}
-					}
-				}
-				else = { add_yearly_manpower = 2 } 
+				add_yearly_manpower = 2
 				russia_region = {
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -2558,7 +2535,6 @@ poland_sca_slot_3_plc_1 = {
 					name = broke_the_rus
 					duration = 9125 
 				}
-				add_yearly_manpower = 2
 				karelia_area = {
 					limit = { 
 						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
@@ -2584,23 +2560,11 @@ poland_sca_slot_3_plc_1 = {
 			hidden_effect = {
 				if = { 
 					limit = { 
-						has_dlc = "Third Rome" 
 						295 = { owned_by = ROOT } 
 						33 = { owned_by = ROOT }
 						310 = { owned_by = ROOT } 
 					}
-					capital_scope = { 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-						streltsy_infantry = ROOT 
-					}
+					add_yearly_manpower = 2
 					russia_region = {
 						limit = { 
 							NOT = { owned_by = ROOT } 
@@ -2610,7 +2574,6 @@ poland_sca_slot_3_plc_1 = {
 					}
 				}
 				else = { 
-					add_yearly_manpower = 2 
 					add_country_modifier = { 
 						name = broke_the_rus
 						duration = 9125 

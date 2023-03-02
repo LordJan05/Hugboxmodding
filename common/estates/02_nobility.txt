@@ -440,6 +440,7 @@ estate_nobles = {
 		estate_nobles_berserker_special_units # Sealand. North Sea Empire
 		estate_nobles_zulu_warriors_special_units # Sealand. Swazi
 		estate_nobles_genoese_crossbowmen_special_units # Sealand. Genoa
+		estate_nobles_silesia_hanys_special_units # Sealand. Silesia
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
 		estate_nobles_officer_corp

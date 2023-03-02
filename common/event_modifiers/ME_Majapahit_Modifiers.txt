@@ -1,5 +1,5 @@
 MAJ_unruly_adipatis = {
-	global_autonomy = 0.05
+	global_autonomy = 0.033
 }
 
 MAJ_diplomatic = {
@@ -10,12 +10,12 @@ MAJ_diplomatic = {
 MAJ_economic_problems = {
 	global_tax_modifier = -0.1
 	land_maintenance_modifier = 0.2
-	interest = 1
+	#interest = 1
 }
 
 MAJ_dynastic = {
-	monarch_lifespan = -0.4
-	stability_cost_modifier = 0.4
+	monarch_lifespan = -0.5
+	#stability_cost_modifier = 0.4
 }
 
 MAJ_attempt_on_root_life = {
@@ -30,7 +30,7 @@ MAJ_weve_learned_our_lessons = {
 }
 
 MAJ_help_of_merchants = {
-	interest = -1
+	#interest = -1
 	trade_efficiency = 0.1
 	legitimacy = -1
 }

@@ -564,7 +564,7 @@ commercial_embassies = {
 }
 
 mandatory_service = {
-	monarch_power = DIP
+	monarch_power = MIL
 	potential = {
 		has_idea_group = diplomatic_ideas
 		has_idea_group = plutocracy_ideas
@@ -575,13 +575,13 @@ mandatory_service = {
 		full_idea_group = plutocracy_ideas
 	}
 	
-	reelection_cost = -0.10
+	reelection_cost = -0.1
 	legitimacy = 1.0
 	devotion = 1.0
 	horde_unity = 1.0
 	meritocracy = 0.5
-	may_recruit_female_generals = yes
-	female_advisor_chance = 0.25
+	leader_land_fire = 1 # may_recruit_female_generals = yes
+	# female_advisor_chance = 0.25
 
 	ai_will_do = {
 		factor = 0
@@ -690,7 +690,7 @@ chaplains_of_the_fleet = {
 }
 
 multilingual_diplomats = {
-	monarch_power = DIP
+	monarch_power = ADM
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -702,8 +702,8 @@ multilingual_diplomats = {
 		full_idea_group = diplomatic_ideas
 	}	
 	
+	administrative_efficiency = 0.05 # improve_relation_modifier = 0.33
 	num_accepted_cultures = 2
-	improve_relation_modifier = 0.33
 	
 	ai_will_do = {
 		factor = 1
@@ -711,7 +711,7 @@ multilingual_diplomats = {
 }
 
 native_assimilation_act = {
-	monarch_power = DIP
+	monarch_power = ADM
 	
 	potential = {
 		has_idea_group = humanist_ideas
@@ -724,7 +724,7 @@ native_assimilation_act = {
 	}	
 	
 	global_colonial_growth = 10
-	native_assimilation = 0.5
+	build_cost = -0.1 # native_assimilation = 0.5
 	
 	ai_will_do = {
 		factor = 1
@@ -752,8 +752,8 @@ the_foreign_aid_act = {
 		full_idea_group = influence_ideas
 	}	
 	
-	diplomatic_upkeep = 1
-	diplomatic_reputation = 1
+	can_fabricate_for_vassals = yes # diplomatic_upkeep = 1
+	accept_vassalization_reasons = 15 # diplomatic_reputation = 1
 	
 	ai_will_do = {
 		factor = 0.9
@@ -871,7 +871,7 @@ fortified_trading_posts = {
 }
 
 the_integrated_administration_act = {
-	monarch_power = DIP
+	monarch_power = MIL
 	
 	potential = {
 		has_idea_group = influence_ideas
@@ -883,8 +883,8 @@ the_integrated_administration_act = {
 		full_idea_group = quality_ideas
 	}	
 	
-	vassal_income = 0.25
-	global_institution_spread = 0.1
+	reserves_organisation = 0.15 # vassal_income = 0.25
+	global_institution_spread = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -990,7 +990,7 @@ colonial_administration_act = {
 }
 
 naval_school_act = {
-	monarch_power = DIP
+	monarch_power = ADM
 
 	potential = {
 		has_idea_group = administrative_ideas
@@ -1002,7 +1002,7 @@ naval_school_act = {
 		full_idea_group = maritime_ideas
 	}
 
-	navy_tradition = 1
+	development_cost = -0.05
 
 	ai_will_do = {
 		factor = 1
@@ -1097,7 +1097,7 @@ black_chamber_act = {
 }
 
 diplomatic_defence_act = {
-	monarch_power = DIP
+	monarch_power = MIL
 	potential = {
 		has_idea_group = diplomatic_ideas
 		has_idea_group = defensive_ideas
@@ -1108,8 +1108,8 @@ diplomatic_defence_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	recover_army_morale_speed = 0.05
-	diplomatic_upkeep = 1
+	recover_army_morale_speed = 0.15
+	war_exhaustion = -0.03 # diplomatic_upkeep = 1
 	
 	ai_will_do = {
 		factor = 0.7
@@ -1296,7 +1296,7 @@ passport_to_merchants_policy = {
 		full_idea_group = trade_ideas
 	}
 	
-	mercantilism_cost = -0.2
+	caravan_power = 0.2 # mercantilism_cost = -0.2
 	global_own_trade_power = 0.1
 
 	ai_will_do = {
@@ -1324,7 +1324,7 @@ faith_advisors_policy = {
 	yearly_harmony = 0.5
 	yearly_karma_decay = 0.05
 	monthly_piety = 0.001
-	diplomatic_reputation = 1
+	morale_damage_received = -0.1 # diplomatic_reputation = 1
 
 	ai_will_do = {
 		factor = 1	
@@ -1344,8 +1344,8 @@ one_and_true = {
 		full_idea_group = influence_ideas
 	}
 	
-	reduced_liberty_desire = 10
-	global_missionary_strength = 0.01
+	reduced_liberty_desire = 15
+	diplomatic_upkeep = 2 # global_missionary_strength = 0.01
 
 	ai_will_do = {
 		factor = 0

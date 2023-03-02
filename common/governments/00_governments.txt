@@ -86,6 +86,7 @@ monarchy = {
 				aztecs_monarchy_reform
 				north_sea_monarchy_reform
 				andalusia_government
+				silesia_monarchy_reform
 			}
 		}
 		hereditary_vs_nobility = {

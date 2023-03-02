@@ -217,7 +217,7 @@ tribe_becomes_monarchy_reform_swazi = {
 			}
 			remove_estate_privilege = estate_church_heir_shrine
 		}
-		lose_reforms = 4
+		#lose_reforms = 4
 		change_government = monarchy
 		add_government_reform = swazi_government_reform
 		country_event = { id = swazi_election_government.1 }
@@ -1378,5 +1378,67 @@ genoa_merchants_reform = {
 	custom_attributes = {
 		is_merchant_republic = yes
 		elections_increase_factions_influence = yes
+	}
+}
+# Silesia:
+silesia_monarchy_reform = {
+	icon = "peasants"
+	allow_normal_conversion = no
+	potential = {
+		tag = SIL
+	}
+	trigger = {
+		tag = SIL
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	modifiers = {
+		max_absolutism = 10
+	}
+	effect = {
+		custom_tooltip = silesia_monarchy_reform_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = { trade_goods = coal }
+					add_province_modifier = { 
+						name = silesia_monarchy_reform_coal_bonus
+						duration = -1
+						hidden = yes
+					}
+				}
+				if = {
+					limit = { has_latent_trade_goods = coal }
+					add_province_modifier = { 
+						name = silesia_monarchy_reform_coal_latent
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = { has_province_modifier = silesia_monarchy_reform_coal_bonus }
+					remove_province_modifier = silesia_monarchy_reform_coal_bonus
+				}
+				if = {
+					limit = { has_province_modifier = silesia_monarchy_reform_coal_latent }
+					remove_province_modifier = silesia_monarchy_reform_coal_latent
+				}
+			}
+		}
+	}
+	custom_attributes = {
+		silesia_monarchy_reform_hanys = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
 	}
 }

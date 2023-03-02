@@ -262,6 +262,10 @@ emp_gen_missions_western_med = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = genoa_trade_node_power_modifier
+				duration = 3650
+			}
 			corsica_area = {
 				limit = {
 					NOT = {

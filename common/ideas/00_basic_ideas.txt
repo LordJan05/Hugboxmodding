@@ -74,7 +74,7 @@ plutocracy_ideas = {
 	#}
 
 	tradition_of_payment = {
-		mercenary_cost = -0.2
+		mercenary_cost = -0.15
 		mercenary_discipline = 0.05
 	}
 	abolished_serfdom = {

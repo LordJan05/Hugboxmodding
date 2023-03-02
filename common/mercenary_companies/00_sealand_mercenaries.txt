@@ -11,7 +11,7 @@ sea_small_merc_comp_0 = { # 4
 }
 sea_medium_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
-	cost_modifier = 1.2
+	cost_modifier = 1.25
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		is_allowed_to_recruit_mercenaries = yes
@@ -20,7 +20,7 @@ sea_medium_merc_comp_0 = { # 8
 }
 sea_big_merc_comp_0 = { # 16
 	regiments_per_development = 0.4
-	cost_modifier = 1.2
+	cost_modifier = 1.25
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		NOT = { has_institution = renaissance }
@@ -28,7 +28,7 @@ sea_big_merc_comp_0 = { # 16
 }
 sea_cav_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
-	cost_modifier = 1.2
+	cost_modifier = 1.25
 	cavalry_weight = 1
 	cavalry_cap = 8
 	trigger = {
@@ -41,7 +41,7 @@ sea_cav_merc_comp_0 = { # 8
 }
 sea_cav2_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
-	cost_modifier = 1.2
+	cost_modifier = 1.25
 	cavalry_weight = 1
 	cavalry_cap = 8
 	trigger = {
@@ -55,8 +55,8 @@ sea_cav2_merc_comp_0 = { # 8
 }
 ####################################
 # 1. Renaissance:
-sea_small_merc_comp_1 = { # 4
-	regiments_per_development = 0
+sea_small_merc_comp_1 = { # 6
+	regiments_per_development = 0.15
 	cost_modifier = 0.75
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_0 } }
@@ -68,9 +68,9 @@ sea_small_merc_comp_1 = { # 4
 		shock_damage = 0.05
 	}
 }
-sea_medium_merc_comp_1 = { # 8
-	regiments_per_development = 0.2
-	cost_modifier = 1.2
+sea_medium_merc_comp_1 = { # 10
+	regiments_per_development = 0.25
+	cost_modifier = 1.25
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_0 } }
@@ -82,9 +82,9 @@ sea_medium_merc_comp_1 = { # 8
 		shock_damage = 0.05
 	}
 }
-sea_big_merc_comp_1 = { # 16
-	regiments_per_development = 0.4
-	cost_modifier = 1.2
+sea_big_merc_comp_1 = { # 20
+	regiments_per_development = 0.5
+	cost_modifier = 1.25
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_0 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -95,11 +95,11 @@ sea_big_merc_comp_1 = { # 16
 		shock_damage = 0.05
 	}
 }
-sea_cav_merc_comp_1 = { # 8
-	regiments_per_development = 0.2
-	cost_modifier = 1.2
+sea_cav_merc_comp_1 = { # 10
+	regiments_per_development = 0.25
+	cost_modifier = 1.25
 	cavalry_weight = 1
-	cavalry_cap = 8
+	cavalry_cap = 10
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_cav_merc_comp_0 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -111,11 +111,11 @@ sea_cav_merc_comp_1 = { # 8
 		shock_damage = 0.05
 	}
 }
-sea_cav2_merc_comp_1 = { # 8
-	regiments_per_development = 0.2
-	cost_modifier = 1.2
+sea_cav2_merc_comp_1 = { # 10
+	regiments_per_development = 0.25
+	cost_modifier = 1.25
 	cavalry_weight = 1
-	cavalry_cap = 8
+	cavalry_cap = 10
 	trigger = {
 		has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		NOT = { any_hired_mercenary_company = { template = sea_cav2_merc_comp_0 } }
@@ -130,9 +130,9 @@ sea_cav2_merc_comp_1 = { # 8
 }
 ####################################
 # 2. Colonialism:
-sea_small_merc_comp_2 = { # 6
-	regiments_per_development = 0.15
-	cost_modifier = 0.75
+sea_small_merc_comp_2 = { # 8
+	regiments_per_development = 0.2
+	cost_modifier = 0.9
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_1 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -144,8 +144,9 @@ sea_small_merc_comp_2 = { # 6
 		fire_damage = 0.05
 	}
 }
-sea_medium_merc_comp_2 = { # 10
-	regiments_per_development = 0.25
+sea_medium_merc_comp_2 = { # 12
+	regiments_per_development = 0.3
+	cost_modifier = 1.1
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_1 } }
@@ -158,8 +159,9 @@ sea_medium_merc_comp_2 = { # 10
 		fire_damage = 0.05
 	}
 }
-sea_big_merc_comp_2 = { # 18
-	regiments_per_development = 0.45
+sea_big_merc_comp_2 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 1.1
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_1 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -171,8 +173,9 @@ sea_big_merc_comp_2 = { # 18
 		fire_damage = 0.05
 	}
 }
-sea_cav_merc_comp_2 = { # 10
-	regiments_per_development = 0.25
+sea_cav_merc_comp_2 = { # 12
+	regiments_per_development = 0.3
+	cost_modifier = 1.1
 	cavalry_weight = 1
 	cavalry_cap = 12
 	trigger = {
@@ -187,8 +190,9 @@ sea_cav_merc_comp_2 = { # 10
 		fire_damage = 0.05
 	}
 }
-sea_cav2_merc_comp_2 = { # 10
-	regiments_per_development = 0.25
+sea_cav2_merc_comp_2 = { # 12
+	regiments_per_development = 0.3
+	cost_modifier = 1.1
 	cavalry_weight = 1
 	cavalry_cap = 12
 	trigger = {
@@ -206,8 +210,9 @@ sea_cav2_merc_comp_2 = { # 10
 }
 ####################################
 # 3. Printing Press:
-sea_small_merc_comp_3 = { # 12
-	regiments_per_development = 0.3
+sea_small_merc_comp_3 = { # 14
+	regiments_per_development = 0.35
+	cost_modifier = 1.1
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_2 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -220,8 +225,9 @@ sea_small_merc_comp_3 = { # 12
 		land_morale = 0.05
 	}
 }
-sea_medium_merc_comp_3 = { # 12
-	regiments_per_development = 0.3
+sea_medium_merc_comp_3 = { # 14
+	regiments_per_development = 0.35
+	cost_modifier = 1.1
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_2 } }
@@ -235,8 +241,9 @@ sea_medium_merc_comp_3 = { # 12
 		land_morale = 0.05
 	}
 }
-sea_big_merc_comp_3 = { # 20
-	regiments_per_development = 0.5
+sea_big_merc_comp_3 = { # 26
+	regiments_per_development = 0.65
+	cost_modifier = 1.1
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_2 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -249,10 +256,11 @@ sea_big_merc_comp_3 = { # 20
 		land_morale = 0.05
 	}
 }
-sea_cav_merc_comp_3 = { # 12
-	regiments_per_development = 0.3
+sea_cav_merc_comp_3 = { # 14
+	regiments_per_development = 0.35
+	cost_modifier = 1.1
 	cavalry_weight = 1
-	cavalry_cap = 12
+	cavalry_cap = 14
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_cav_merc_comp_2 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -266,10 +274,11 @@ sea_cav_merc_comp_3 = { # 12
 		land_morale = 0.05
 	}
 }
-sea_cav2_merc_comp_3 = { # 12
-	regiments_per_development = 0.3
+sea_cav2_merc_comp_3 = { # 14
+	regiments_per_development = 0.35
+	cost_modifier = 1.1
 	cavalry_weight = 1
-	cavalry_cap = 12
+	cavalry_cap = 14
 	trigger = {
 		has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		NOT = { any_hired_mercenary_company = { template = sea_cav2_merc_comp_2 } }
@@ -284,10 +293,11 @@ sea_cav2_merc_comp_3 = { # 12
 		land_morale = 0.05
 	}
 }
-sea_inf_cav_merc_comp_3 = { # 20
-	regiments_per_development = 0.5
+sea_inf_cav_merc_comp_3 = { # 26
+	regiments_per_development = 0.65
+	cost_modifier = 1.1
 	cavalry_weight = 0.5
-	cavalry_cap = 10
+	cavalry_cap = 13
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = printing_press
@@ -302,9 +312,9 @@ sea_inf_cav_merc_comp_3 = { # 20
 }
 ####################################
 # 4. Global Trade:
-sea_small_merc_comp_4 = { # 16
-	regiments_per_development = 0.4
-	cost_modifier = 0.8
+sea_small_merc_comp_4 = { # 18
+	regiments_per_development = 0.45
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_3 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -318,9 +328,9 @@ sea_small_merc_comp_4 = { # 16
 		land_morale = 0.05
 	}
 }
-sea_medium_merc_comp_4 = { # 16
-	regiments_per_development = 0.4
-	cost_modifier = 0.8
+sea_medium_merc_comp_4 = { # 18
+	regiments_per_development = 0.45
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_3 } }
@@ -335,9 +345,9 @@ sea_medium_merc_comp_4 = { # 16
 		land_morale = 0.05
 	}
 }
-sea_big_merc_comp_4 = { # 24
-	regiments_per_development = 0.6
-	cost_modifier = 0.8
+sea_big_merc_comp_4 = { # 30
+	regiments_per_development = 0.75
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_3 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -351,11 +361,11 @@ sea_big_merc_comp_4 = { # 24
 		land_morale = 0.05
 	}
 }
-sea_cav_merc_comp_4 = { # 16
-	regiments_per_development = 0.4
-	cost_modifier = 0.8
+sea_cav_merc_comp_4 = { # 18
+	regiments_per_development = 0.45
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 18
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_cav_merc_comp_3 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -370,11 +380,11 @@ sea_cav_merc_comp_4 = { # 16
 		land_morale = 0.05
 	}
 }
-sea_cav2_merc_comp_4 = { # 16
-	regiments_per_development = 0.4
-	cost_modifier = 0.8
+sea_cav2_merc_comp_4 = { # 18
+	regiments_per_development = 0.45
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 18
 	trigger = {
 		has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		NOT = { any_hired_mercenary_company = { template = sea_cav2_merc_comp_3 } }
@@ -390,11 +400,11 @@ sea_cav2_merc_comp_4 = { # 16
 		land_morale = 0.05
 	}
 }
-sea_inf_cav_merc_comp_4 = { # 24
-	regiments_per_development = 0.6
-	cost_modifier = 0.8
+sea_inf_cav_merc_comp_4 = { # 30
+	regiments_per_development = 0.75
+	cost_modifier = 0.95
 	cavalry_weight = 0.5
-	cavalry_cap = 12
+	cavalry_cap = 15
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_inf_cav_merc_comp_3 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -412,9 +422,9 @@ sea_inf_cav_merc_comp_4 = { # 24
 }
 ####################################
 # 5. Manufactories:
-sea_small_merc_comp_5 = { # 20
-	regiments_per_development = 0.5
-	cost_modifier = 0.8
+sea_small_merc_comp_5 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_4 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -428,9 +438,9 @@ sea_small_merc_comp_5 = { # 20
 		land_morale = 0.05
 	}
 }
-sea_medium_merc_comp_5 = { # 20
-	regiments_per_development = 0.5
-	cost_modifier = 0.8
+sea_medium_merc_comp_5 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_4 } }
@@ -445,9 +455,9 @@ sea_medium_merc_comp_5 = { # 20
 		land_morale = 0.05
 	}
 }
-sea_big_merc_comp_5 = { # 32
-	regiments_per_development = 0.8
-	cost_modifier = 0.8
+sea_big_merc_comp_5 = { # 34
+	regiments_per_development = 0.85
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_4 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -461,11 +471,11 @@ sea_big_merc_comp_5 = { # 32
 		land_morale = 0.05
 	}
 }
-sea_cav_merc_comp_5 = { # 20
-	regiments_per_development = 0.5
-	cost_modifier = 0.8
+sea_cav_merc_comp_5 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 24
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_cav_merc_comp_4 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -480,11 +490,11 @@ sea_cav_merc_comp_5 = { # 20
 		land_morale = 0.05
 	}
 }
-sea_cav2_merc_comp_5 = { # 20
-	regiments_per_development = 0.5
-	cost_modifier = 0.8
+sea_cav2_merc_comp_5 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 24
 	trigger = {
 		has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		NOT = { any_hired_mercenary_company = { template = sea_cav2_merc_comp_4 } }
@@ -500,11 +510,11 @@ sea_cav2_merc_comp_5 = { # 20
 		land_morale = 0.05
 	}
 }
-sea_inf_cav_merc_comp_5 = { # 32
-	regiments_per_development = 0.8
-	cost_modifier = 0.8
+sea_inf_cav_merc_comp_5 = { # 34
+	regiments_per_development = 0.85
+	cost_modifier = 0.95
 	cavalry_weight = 0.5
-	cavalry_cap = 16
+	cavalry_cap = 17
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_inf_cav_merc_comp_4 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -520,9 +530,9 @@ sea_inf_cav_merc_comp_5 = { # 32
 		land_morale = 0.05
 	}
 }
-sea_additional_inf_merc_comp_5 = { # 32
-	regiments_per_development = 0.8
-	cost_modifier = 0.8
+sea_additional_inf_merc_comp_5 = { # 34
+	regiments_per_development = 0.85
+	cost_modifier = 0.95
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = manufactories
@@ -539,7 +549,7 @@ sea_additional_inf_merc_comp_5 = { # 32
 # 6. Enlightenment:
 sea_small_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_small_merc_comp_5 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -556,7 +566,7 @@ sea_small_merc_comp_6 = { # 32
 }
 sea_medium_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 		NOT = { any_hired_mercenary_company = { template = sea_medium_merc_comp_5 } }
@@ -574,7 +584,7 @@ sea_medium_merc_comp_6 = { # 32
 }
 sea_big_merc_comp_6 = { # 40
 	regiments_per_development = 1
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_5 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -591,9 +601,9 @@ sea_big_merc_comp_6 = { # 40
 }
 sea_cav_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 32
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_cav_merc_comp_5 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -611,9 +621,9 @@ sea_cav_merc_comp_6 = { # 32
 }
 sea_cav2_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	cavalry_weight = 1
-	cavalry_cap = 40
+	cavalry_cap = 32
 	trigger = {
 		has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		NOT = { any_hired_mercenary_company = { template = sea_cav2_merc_comp_5 } }
@@ -632,7 +642,7 @@ sea_cav2_merc_comp_6 = { # 32
 }
 sea_inf_cav_merc_comp_6 = { # 40
 	regiments_per_development = 1
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	cavalry_weight = 0.5
 	cavalry_cap = 20
 	trigger = {
@@ -653,7 +663,7 @@ sea_inf_cav_merc_comp_6 = { # 40
 }
 sea_additional_inf_merc_comp_6 = { # 40
 	regiments_per_development = 1
-	cost_modifier = 0.8
+	cost_modifier = 0.95
 	trigger = {
 		NOT = { any_hired_mercenary_company = { template = sea_additional_inf_merc_comp_5 } }
 		is_allowed_to_recruit_mercenaries = yes
@@ -732,6 +742,7 @@ hanys_mercs = {
 	home_province = 264
 	sprites = { dlc054_pru_sprite_pack dlc028_bra_sprite_pack pru_base_sprite_pack }
 	trigger = {
+		NOT = { tag = SIL }
 		any_owned_province = {
 			area = silesia_area
 			owned_by = ROOT

@@ -294,7 +294,7 @@ MAJ_missions_2 = {
 		required_missions = { }
 		position = 1
 		trigger = {
-			army_size = 14
+			army_size = 16
 		}
 		effect = {
 			add_adm_power = 50

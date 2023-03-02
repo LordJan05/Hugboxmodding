@@ -7,6 +7,11 @@ change_school_modifier = {
 sea_fishing_game_modifier = {
 	trade_goods_size = -1
 }
+# Russian Gov mech:
+rus_gov_mec_streltsy_regiment = {
+	fire_damage = 0.1
+	is_streltsy_modifier = yes
+}
 ################
 # Diplo actions:
 # Muslim Jihad:
@@ -15,7 +20,7 @@ sea_sunni_crusade_jihad_diplo_action_modifier = {
 }
 # Sabotage Enemy defences diplo action:
 sea_spy_sabotage_defences_covert_action_modifier = {
-	defensiveness = -0.1
+	defensiveness = -0.15
 }
 ##########################################
 # Privileges:
@@ -149,6 +154,52 @@ teu_knights_of_war_modifier = {
 }
 teu_malbork_castle_modifier = {
 	fort_level = 1
+}
+##########################################
+# Silesia:
+silesia_monarchy_reform_coal_bonus = {
+	local_production_efficiency = 0.5
+}
+silesia_monarchy_reform_coal_latent = {
+	local_development_cost = -0.2
+	local_unrest = -2
+}
+silesia_hanys_special_units = {
+	discipline = -0.025
+	infantry_power = -0.05
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_1 = {
+	land_maintenance_modifier = 0.1
+	morale_damage = 0.1
+	fire_damage_received = -0.15
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_2 = {
+	land_maintenance_modifier = 0.1
+	morale_damage = 0.1
+	shock_damage_received = -0.15
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_3 = {
+	land_maintenance_modifier = 0.1
+	drill_gain_modifier = 0.33
+	drill_decay_modifier = -0.33
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_4 = {
+	land_maintenance_modifier = 0.1
+	recover_army_morale_speed = 0.25
+	reinforce_speed = 0.5
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_5 = {
+	land_maintenance_modifier = 0.1
+	sea_special_units_double_fl = 1
+	is_cawa_modifier = yes
+}
+silesia_hanys_special_units_upgrade_55 = {
+	local_amount_of_cawa = 10
 }
 ##########################################
 # Qara Qoyunlu:
@@ -349,6 +400,7 @@ gb_royal_marines_units_national = { # National
 	infantry_power = 0.1
 	fire_damage = 0.05
 	reinforce_speed = 0.5
+	sea_special_units_double_fl = 1
 	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition
 	is_cawa_modifier = yes
 }
@@ -365,6 +417,9 @@ france_king_musketeers_units = {
 	fire_damage = 0.2
 	morale_damage_received = -0.2
 	is_cawa_modifier = yes
+}
+alpine_forticiations_modifier = {
+	defensiveness = 0.2
 }
 ##########################################
 # Dutch/Burgundy:
@@ -814,6 +869,9 @@ genoese_crossbowmen_special_units = {
 	fire_damage_received = -0.3
 	reinforce_speed = 0.5
 	is_cawa_modifier = yes
+}
+genoa_trade_node_power_modifier = {
+	ae_impact = -0.1
 }
 ##########################################
 # North Sea Empire:

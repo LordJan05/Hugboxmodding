@@ -3,7 +3,7 @@
 owner = PCH
 controller = PCH
 add_core = PCH
-culture = wichita
+culture = yoron
 religion = totemism
 capital = "Utsehta"
 trade_goods = iron

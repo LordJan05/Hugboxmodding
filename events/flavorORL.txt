@@ -21,6 +21,12 @@ country_event = {
 		add_legitimacy = 10
 		if = {
 			limit = {
+				exists = ORL
+			}
+			ORL = { set_country_flag = had_maid_of_orleans }
+		}
+		if = {
+			limit = {
 				exists = FRA
 			}
 			FRA = { set_country_flag = had_maid_of_orleans }
@@ -178,7 +184,7 @@ country_event = {
 
 	# Late game bonus for FRA, early Absolutism with extra fun for ORL runs
 	mean_time_to_happen = {
-		years = 10
+		years = 5
 
 		modifier = {
 			factor = 0.75

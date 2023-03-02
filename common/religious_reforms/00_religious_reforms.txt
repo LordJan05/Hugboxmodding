@@ -206,6 +206,12 @@ sea_animism_reforms = {
 		}
 	}
 	
+	sea_animism_reform_4 = {
+		colonists = 1
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+		global_colonial_growth = -5
+	}
 	sea_animism_reform_1 = {
 		may_recruit_female_generals = yes
 		war_taxes_cost_modifier = -1
@@ -223,12 +229,6 @@ sea_animism_reforms = {
 		no_religion_penalty = yes
 		possible_adm_policy = 1
 		monthly_reform_progress_modifier = 0.33
-		global_colonial_growth = -5
-	}
-	sea_animism_reform_4 = {
-		colonists = 1
-		may_explore = yes
-		auto_explore_adjacent_to_colony = yes
 		global_colonial_growth = -5
 	}
 	sea_animism_reform_5 = {

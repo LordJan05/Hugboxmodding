@@ -654,8 +654,7 @@ country_event = {
 
 	trigger = {
 		tag = LBV
-		is_year = 1445
-		NOT = { is_year = 1447 }
+		NOT = { is_year = 1445 }
 		is_subject = no
 		government = monarchy
 		dynasty = "von Wittelsbach"

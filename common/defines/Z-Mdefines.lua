@@ -34,7 +34,7 @@ NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5475
 --NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 10		-- Will see how much affects.
 NDefines.NEconomy.TRADE_NON_CAPITAL_OFFICE = -0.2	-- Will see how much affects.
 
-NDefines.NMilitary.WARGOAL_MAX_BONUS = 35
+NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.7
 
 NDefines.NMilitary.MAX_DRAFT_SIZE_TO_YEARLY_INCOME_COST_RATIO = 1.33 -- How much of your yearly income it costs to draft the above ratio's worth of units
@@ -104,6 +104,13 @@ NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.25
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.15
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY = -0.15
 NDefines.NMilitary.CANNOT_RETREAT_DAYS = 6
+
+NDefines.NMilitary.PARTICIPATION_SCORE_BLOCKADE = 0.002
+NDefines.NMilitary.PARTICIPATION_SCORE_BATTLE = 0.05
+NDefines.NMilitary.PARTICIPATION_SCORE_SIEGE = 0.02
+NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 7
+NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 6
+NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 55
 
 NDefines.NGovernment.YEARLY_TRIBAL_ALLEGIANCE_MAX = -5
 NDefines.NGovernment.CONSCRIPT_FROM_TRIBES_AMOUNT = 10

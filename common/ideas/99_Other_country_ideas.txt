@@ -43,12 +43,12 @@ DRV_ideas = {
 # Hunterrio
 MHL_ideas = { # Maharlika aka Philippines 
     start = {
-        galley_power = 0.2
+        galley_power = 0.15
         development_cost = -0.05
     }
     
     bonus = {
-        discipline = 0.05
+        land_morale = 0.1
     }    
 
     trigger = {
@@ -59,23 +59,23 @@ MHL_ideas = { # Maharlika aka Philippines
     mas_hinalliwood = {
         idea_cost = -0.1
     }
-    mhl_chola_empire = {
-        prestige = 1
-    }
-    mhl_philippine_monopoly = {
-        trade_efficiency = 0.1
-        global_prov_trade_power_modifier = 0.1
-    }
-    mhl_defend_the_faith = {
-        tolerance_own = 1
-        manpower_in_true_faith_provinces = 0.2
-    }
     mhl_maritime_tradition = {
         naval_morale = 0.1
     }
     mhl_malayan_ambition = {
-        land_morale = 0.1
+        discipline = 0.05
         reserves_organisation = 0.1
+    }
+    mhl_defend_the_faith = {
+        tolerance_own = 1
+        manpower_in_true_faith_provinces = 0.1
+    }
+    mhl_philippine_monopoly = {
+        trade_efficiency = 0.1
+        global_prov_trade_power_modifier = 0.05
+    }
+    mhl_chola_empire = {
+        prestige = 1
     }
     mhl_mortars_of_revolution = {
         backrow_artillery_damage = 0.1

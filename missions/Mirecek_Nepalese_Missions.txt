@@ -212,6 +212,7 @@ mirecek_npl_big2 = {
 		required_missions = {  }
 		trigger = {
 			army_size_percentage = 1.0
+			num_of_generals = 1
 		}
 		effect = {
 			add_country_modifier = {

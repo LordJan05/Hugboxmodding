@@ -4710,6 +4710,12 @@ on_province_owner_change = {
 		}
 		remove_province_modifier = sealand_cawa_fl_base_gb_increase
 	}
+	if = {
+		limit = {
+			has_province_modifier = silesia_hanys_special_units_upgrade_55
+		}
+		remove_province_modifier = silesia_hanys_special_units_upgrade_55
+	}
 	##### ##### ##### ##### 
 }
 
@@ -4816,7 +4822,15 @@ on_russian_oprichnina = {
 
 # country
 on_russian_streltsy = {
-
+	if = {
+		limit = {
+			NOT = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+		}
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
+		}
+	}	
 }
 
 # province
@@ -5630,6 +5644,12 @@ on_conquest = {
 		}
 		remove_province_modifier = sealand_cawa_fl_base_gb_increase
 	}
+	if = {
+		limit = {
+			has_province_modifier = silesia_hanys_special_units_upgrade_55
+		}
+		remove_province_modifier = silesia_hanys_special_units_upgrade_55
+	}
 	##### ##### ##### ##### 
 }
 
@@ -6040,6 +6060,7 @@ on_capital_moved = {
 					has_estate_privilege = estate_nobles_berserker_special_units
 					has_estate_privilege = estate_nobles_zulu_warriors_special_units
 					has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
+					has_estate_privilege = estate_nobles_silesia_hanys_special_units
 				}
 			}
 		}
@@ -6067,6 +6088,22 @@ on_capital_moved = {
 				every_owned_province = {
 					limit = { is_capital = no }
 					remove_province_modifier = sealand_cawa_fl_base_gb_increase
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_country_flag = silesia_hanys_special_units_upgrade_5_flag }
+			}
+			add_province_modifier = {
+				name = silesia_hanys_special_units_upgrade_55
+				duration = -1
+				hidden = yes
+			}
+			owner = {
+				every_owned_province = {
+					limit = { is_capital = no }
+					remove_province_modifier = silesia_hanys_special_units_upgrade_55
 				}
 			}
 		}

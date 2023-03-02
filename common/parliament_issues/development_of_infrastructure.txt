@@ -16,10 +16,6 @@ development_of_infrastructure = {
 	
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 0.25
-			has_idea_group = economic_ideas
-		}
 	}
 
 	ai_will_do = {

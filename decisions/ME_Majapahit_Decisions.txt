@@ -75,7 +75,7 @@ country_decisions = {
 			has_country_modifier = MAJ_dynastic
 		}
 		allow = {
-			stability = 2
+			#stability = 2
 			legitimacy_equivalent = 90
 		}
 		effect = {

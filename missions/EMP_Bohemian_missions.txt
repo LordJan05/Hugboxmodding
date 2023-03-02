@@ -900,25 +900,12 @@ emp_bohemia_4 = {
 			}
 		}
 		effect = {
-			if = {
+			mittelmark_area = {
 				limit = {
-					exists = BRA
-					
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					target = BRA
-					type = cb_vassalize_mission
-					months = 120
-				}
-			}
-			else = {
-				mittelmark_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = {  is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -926,16 +913,8 @@ emp_bohemia_4 = {
 		icon = electorate_of_brandenburg
 		required_missions = { emp_boh_humiliate_austria }
 		provinces_to_highlight = {
-			OR = {
-				owner = {
-					tag = BRA
-					NOT = { is_subject_of = ROOT }
-				}
-				AND = {
-					area = mittelmark_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-			}
+			area = mittelmark_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {

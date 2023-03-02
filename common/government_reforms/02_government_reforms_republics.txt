@@ -996,6 +996,18 @@ veche_republic = {
 		trade_city_reform = trading_city
 	}
 	duration = 4
+	effect = {
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+			remove_country_modifier = rus_gov_mec_streltsy_regiment
+		}
+	}
 }
 
 great_veche_republic = {
@@ -1144,6 +1156,18 @@ great_veche_republic = {
 			russian_mechanic
 		}
 		claim_states = yes
+	}
+	effect = {
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+			remove_country_modifier = rus_gov_mec_streltsy_regiment
+		}
 	}
 }
 
@@ -1696,7 +1720,7 @@ cossacks_reform = {
 		candidate_random_bonus = 2
 		#cavalry_power = 0.2
 		cavalry_cost = -0.2
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.5
 		governing_capacity = 150
 		max_absolutism = 20
 		republican_tradition = 0.2

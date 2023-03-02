@@ -160,14 +160,19 @@ country_decisions = {
 					}
 				}
 			}
-			OR = {
-				PAP = {
-					has_opinion = { 
-						who = root
-						value = 100
-					}
+			if = {
+				limit = {
+					NOT = { tag = ORL }
 				}
-				is_papal_controller = yes
+				OR = {
+					PAP = {
+						has_opinion = { 
+							who = root
+							value = 100
+						}
+					}
+					is_papal_controller = yes
+				}
 			}
 		}
 		effect = {

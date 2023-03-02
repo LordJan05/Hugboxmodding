@@ -275,7 +275,7 @@ h_csh_3 = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
-				development = 20
+				development = 15
 				num_of_buildings_in_province = 2
 			}
 		}

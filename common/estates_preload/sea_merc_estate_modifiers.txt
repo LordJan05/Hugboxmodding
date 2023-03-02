@@ -23,4 +23,8 @@ estate_sea_mercs = {
 		key = sea_merc_reinforce_speed_and_discipline
 		trigger = { always = yes }
 	}
+	modifier_definition = {
+		key = sea_special_units_double_fl
+		trigger = { always = yes }
+	}
 }

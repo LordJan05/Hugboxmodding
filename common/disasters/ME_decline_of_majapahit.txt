@@ -44,7 +44,10 @@ ME_decline_of_majapahit = {
 	
 
 	modifier = {
-		all_power_cost = 0.05
+		all_power_cost = 0.025
+		legitimacy = 0.5
+		ae_impact = -0.05
+		manpower_in_true_faith_provinces = 0.05
 	}
 	
 	on_start = ME_Majapahit_Events.1

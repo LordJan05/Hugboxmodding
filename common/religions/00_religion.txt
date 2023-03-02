@@ -196,7 +196,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 182 }
+						NOT = { num_of_streltsy = 182 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -212,7 +212,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 154 }
+						NOT = { num_of_streltsy = 154 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -228,7 +228,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 126 }
+						NOT = { num_of_streltsy = 126 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -244,7 +244,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 98 }
+						NOT = { num_of_streltsy = 98 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -260,7 +260,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 70 }
+						NOT = { num_of_streltsy = 70 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -276,7 +276,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 42 }
+						NOT = { num_of_streltsy = 42 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -292,7 +292,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 28 }
+						NOT = { num_of_streltsy = 28 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -308,7 +308,7 @@ christian = {
 							tooltip = sea_recruited_swiss_guard_mercs_trigger_tooltip
 							NOT = { has_country_modifier = sea_recruited_swiss_guard_mercs_modifier }
 						}
-						NOT = { num_of_mercenaries = 14 }
+						NOT = { num_of_streltsy = 14 }
 						any_owned_province = {
 							has_siege = no
 							controlled_by = ROOT
@@ -364,13 +364,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -378,13 +378,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -434,13 +434,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -448,13 +448,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -504,13 +504,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -518,13 +518,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -574,13 +574,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -588,13 +588,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -644,13 +644,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -658,13 +658,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -714,13 +714,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -728,13 +728,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -784,13 +784,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -798,13 +798,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -854,13 +854,13 @@ christian = {
 								}
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}
@@ -868,13 +868,13 @@ christian = {
 							capital_scope = {
 								custom_tooltip = pap_bless_monarch_tt
 								hidden_effect = {
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
-									mercenary_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
+									streltsy_infantry = ROOT
 								}
 							}
 						}

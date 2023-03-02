@@ -9,7 +9,7 @@ the_military_act = {
 			full_idea_group =  influence_ideas
 		}
 	}
-	discipline = 0.06
+	discipline = 0.05
 	stability_cost_modifier = 0.05
 }
 ##########################################
@@ -274,7 +274,7 @@ sea_fra_elan_modifier = {
 	trigger = {
 		has_country_flag = emp_fra_conquer_picardy_fra_flag
 	}
-	land_morale = 0.05
+	land_morale = 0.1
 	prestige = 1
 }
 ##########################################

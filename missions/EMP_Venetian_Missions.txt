@@ -483,17 +483,18 @@ emp_ven_slot_4 = {
 		position = 1
 		
 		trigger = {
-			navy_size_percentage = 1
-			sailors_percentage = 0.6
+			OR = {
+				AND = {
+					navy_size_percentage = 1
+					sailors_percentage = 0.6
+				}
+				AND = {
+					army_size_percentage = 1
+					num_of_generals = 1
+				}
+			}
 		}
 		effect = {
-			add_navy_tradition = 10
-			define_admiral = {
-				shock = 3
-				fire = 2
-				manuever = 4
-				siege = 3
-			}
 			add_country_modifier = {
 				name = "ven_arsenal_marines"
 				duration = -1
@@ -532,6 +533,39 @@ emp_ven_slot_4 = {
 				}
 			}
 			3003 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4753 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			136 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			137 = {
 				if = {
 					limit = {
 						NOT = {

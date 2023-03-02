@@ -883,6 +883,18 @@ principality = {
 			russian_mechanic
 		}
 	}
+	effect = {
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+			remove_country_modifier = rus_gov_mec_streltsy_regiment
+		}
+	}
 }
 
 tsardom = {
@@ -947,6 +959,18 @@ tsardom = {
 			russian_mechanic
 		}
 		claim_states = yes
+	}
+	effect = {
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+			remove_country_modifier = rus_gov_mec_streltsy_regiment
+		}
 	}
 }
 

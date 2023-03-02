@@ -12,7 +12,7 @@ privy_council_establishment_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	defensiveness = 0.10
+	defensiveness = 0.15
 	yearly_corruption = -0.1
 	
 	ai_will_do = {
@@ -209,7 +209,7 @@ superior_fortification_act = {
 	}
 	
 	defensiveness = 0.1
-	fort_maintenance_modifier = -0.10
+	fort_maintenance_modifier = -0.15
 
 
 	ai_will_do = {
@@ -409,7 +409,7 @@ the_tenures_abolition_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	free_leader_pool = 1
+	leader_land_shock = 1 # free_leader_pool = 1
 	all_estate_loyalty_equilibrium = 0.05
 		
 	ai_will_do = {
@@ -583,7 +583,8 @@ inspirational_leaders = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	leader_land_shock = 1
+	land_attrition = -0.25
+	garrison_size = 0.25
 	
 	ai_will_do = {
 		factor = 0
@@ -628,8 +629,7 @@ the_preparation_act = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	land_attrition = -0.25
-	war_exhaustion = -0.05
+	own_territory_dice_roll_bonus = 1
 	
 	ai_will_do = {
 		factor = 0
@@ -649,7 +649,7 @@ local_militias = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	war_exhaustion = -0.03
+	garrison_size = 0.2 # war_exhaustion = -0.03
 	defensiveness = 0.1
 	
 	ai_will_do = {
@@ -671,7 +671,7 @@ foreign_conscription_centers = {
 	}	
 	
 	reinforce_cost_modifier = -0.20
-	diplomatic_upkeep = 1
+	artillery_cost = -0.1 # diplomatic_upkeep = 1
 	
 	ai_will_do = {
 		factor = 0
@@ -691,8 +691,8 @@ guerilla_warfare = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	hostile_attrition = 1
-	global_garrison_growth = 0.1
+	reinforce_speed = 0.25 # hostile_attrition = 1
+	global_garrison_growth = 0.15
 	
 	ai_will_do = {
 		factor = 0
@@ -990,7 +990,7 @@ the_three_sisters_policy = {
 }
 
 by_the_people_for_the_people_policy = {
-	monarch_power = MIL
+	monarch_power = ADM
 
 	potential = {
 		has_idea_group = indigenous_ideas
@@ -1002,8 +1002,8 @@ by_the_people_for_the_people_policy = {
 		full_idea_group = humanist_ideas
 	}
 
-	defensiveness = 0.25
-	garrison_size = 0.1
+	defensiveness = 0.1
+	development_cost = -0.05 # garrison_size = 0.1
 	
 	ai_will_do = {
 		factor = 0
@@ -1094,7 +1094,7 @@ psychological_warfare_policy = {
 }
 
 kharash_policy = { 
-	monarch_power = MIL
+	monarch_power = DIP
 
 	potential = {
 		has_idea_group = horde_gov_ideas
@@ -1106,8 +1106,8 @@ kharash_policy = {
 		full_idea_group = influence_ideas
 	}
 
-	land_morale = 0.05
-	vassal_forcelimit_bonus = 1.0
+	vassal_income = 0.25 # land_morale = 0.05
+	diplomatic_upkeep = 2 # vassal_forcelimit_bonus = 1.0
 
 	ai_will_do = {
 		factor = 0

@@ -122,7 +122,7 @@ estate_church_service_to_god = {
 	}
 	modifier_by_land_ownership = {
 		production_efficiency = -0.2
-		land_forcelimit_modifier = 0.3
+		land_forcelimit_modifier = 0.25
 		manpower_in_true_faith_provinces = 0.5
 	}
 	penalties = {
@@ -1537,6 +1537,123 @@ estate_nobles_genoese_crossbowmen_special_units = {
 				has_province_modifier = sealand_cawa_fl_base
 			}
 			remove_province_modifier = sealand_cawa_fl_base
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+################################
+# Silesia:
+estate_nobles_silesia_hanys_special_units = {
+	icon = privilege_cawa_offensive_fighters
+	land_share = 10
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		has_reform = silesia_monarchy_reform
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_silesia_hanys_special_units_granted_tt
+		add_country_modifier = {
+			name = silesia_hanys_special_units
+			duration = -1
+		}
+		if = {
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			add_country_modifier = {
+				name = silesia_hanys_special_units_upgrade_4
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			add_country_modifier = {
+				name = silesia_hanys_special_units_upgrade_4
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			add_country_modifier = {
+				name = silesia_hanys_special_units_upgrade_4
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			add_country_modifier = {
+				name = silesia_hanys_special_units_upgrade_4
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_5_flag }
+			add_country_modifier = {
+				name = silesia_hanys_special_units_upgrade_5
+				duration = -1
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = silesia_hanys_special_units_upgrade_55
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = sealand_cawa_fl_base
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	penalties = {
+		mercenary_manpower = -0.5
+	}
+	can_revoke = {
+		always = no
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_silesia_hanys_special_units_revoked_tt
+		remove_country_modifier = silesia_hanys_special_units
+		remove_country_modifier = silesia_hanys_special_units_upgrade_1
+		remove_country_modifier = silesia_hanys_special_units_upgrade_2
+		remove_country_modifier = silesia_hanys_special_units_upgrade_3
+		remove_country_modifier = silesia_hanys_special_units_upgrade_4
+		remove_country_modifier = silesia_hanys_special_units_upgrade_5
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = silesia_hanys_special_units_upgrade_55
+			}
+			remove_province_modifier = silesia_hanys_special_units_upgrade_55
+		}
+	}
+	on_invalid = {
+		remove_country_modifier = silesia_hanys_special_units
+		remove_country_modifier = silesia_hanys_special_units_upgrade_1
+		remove_country_modifier = silesia_hanys_special_units_upgrade_2
+		remove_country_modifier = silesia_hanys_special_units_upgrade_3
+		remove_country_modifier = silesia_hanys_special_units_upgrade_4
+		remove_country_modifier = silesia_hanys_special_units_upgrade_5
+		every_owned_province = {
+			limit = {
+				has_province_modifier = sealand_cawa_fl_base
+			}
+			remove_province_modifier = sealand_cawa_fl_base
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = silesia_hanys_special_units_upgrade_55
+			}
+			remove_province_modifier = silesia_hanys_special_units_upgrade_55
 		}
 	}
 	ai_will_do = {

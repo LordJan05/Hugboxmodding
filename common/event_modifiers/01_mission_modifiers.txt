@@ -5117,7 +5117,8 @@ bohemian_commonwealth = {
 	diplomatic_annexation_cost = -0.15
 }
 pap_papal_swiss_guard = {
-	mercenary_discipline = 0.1
+	discipline = 0.1
+	is_streltsy_modifier = yes
 }
 
 pap_papal_mission = {

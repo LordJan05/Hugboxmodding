@@ -121,7 +121,7 @@ sea_KLU_ideas = { # Kalmar Union
 	}
 	klu_den_danske_lov = {
 		global_unrest = -1
-		global_allowed_num_of_buildings = 1
+		own_coast_naval_combat_bonus = 1 # global_allowed_num_of_buildings = 1
 	}
 }
 sea_NSE_ideas = { # North Sea Empire
@@ -145,8 +145,8 @@ sea_NSE_ideas = { # North Sea Empire
 		fire_damage = 0.1
 	}
 	nse_everyone_must_serve = {
-		global_manpower_modifier = 0.2
-		global_sailors_modifier = 0.2
+		global_manpower_modifier = 0.15 # 0.2
+		global_sailors_modifier = 0.15 # 0.2
 	}
 	nse_sharing_common_naval_traditions = {
 		naval_morale = 0.15
@@ -162,7 +162,7 @@ sea_NSE_ideas = { # North Sea Empire
 	}
 	nse_industry_on_ships = {
 		naval_maintenance_modifier = -0.15
-		naval_forcelimit_modifier = 0.5
+		naval_forcelimit_modifier = 0.33 # 0.5
 	}
 	nse_united_under_single_banner = {
 		max_absolutism = 10
@@ -171,8 +171,8 @@ sea_NSE_ideas = { # North Sea Empire
 }
 sea_ABA_ideas = { # Abbasid Chaliphate
 	start = {
-		cavalry_power = 0.25
-		movement_speed = 0.2
+		cavalry_power = 0.2 # 0.25
+		movement_speed = 0.1 # 0.2
 	}
 	
 	bonus = {
@@ -190,7 +190,7 @@ sea_ABA_ideas = { # Abbasid Chaliphate
 		prestige = 1
 	}
 	aba_reformed_army = {
-		land_morale = 0.15
+		land_morale = 0.1 # 0.15
 		reinforce_speed = 0.25
 	}
 	aba_return_of_barmakids = {
@@ -199,15 +199,15 @@ sea_ABA_ideas = { # Abbasid Chaliphate
 	}
 	aba_traders_of_middle_east = {
 		caravan_power = 0.2
-		trade_efficiency = 0.2
+		#trade_efficiency = 0.2
 	}
 	aba_islamic_science_continues = {
 		technology_cost = -0.05
 		idea_cost = -0.05
 	}
 	aba_restore_legacy_of_past = {
-		build_cost = -0.05
-		development_cost = -0.05
+		build_cost = -0.1 # -0.05
+		#development_cost = -0.05
 	}
 	aba_grand_navy = {
 		naval_forcelimit_modifier = 0.2
@@ -217,8 +217,8 @@ sea_ABA_ideas = { # Abbasid Chaliphate
 
 sea_GMV_ideas = { # Copy of vanilla Moravia but better ideas.
 	start = {
-		manpower_recovery_speed = 0.2
-		reinforce_speed = 0.2
+		manpower_recovery_speed = 0.1
+		reinforce_speed = 0.25
 	}
 	bonus = {
 		caravan_power = 0.2
@@ -239,14 +239,14 @@ sea_GMV_ideas = { # Copy of vanilla Moravia but better ideas.
 	}
 	gmv_cities_of_moravia = {
 		build_cost = -0.1
-		development_cost = -0.1
+		#development_cost = -0.1
 	}
 	gmv_land_of_vinyards = {
 		production_efficiency = 0.1
 		global_trade_goods_size_modifier = 0.1
 	}
 	gmv_german_quarters = {
-		same_culture_advisor_cost = -0.25
+		same_culture_advisor_cost = -0.15
 	}
 	gmv_jesuit_university = {
 		papal_influence = 1
@@ -254,7 +254,7 @@ sea_GMV_ideas = { # Copy of vanilla Moravia but better ideas.
 	}
 	gmv_legacy_of_great_moravia = {
 		discipline = 0.05
-		land_morale = 0.1
+		#land_morale = 0.1
 	}
 }
 
@@ -606,7 +606,7 @@ sea_FAT_ideas = {
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.15
-		development_cost = -0.05
+		#development_cost = -0.05
 	}
 	trigger = {
 		tag = FAT
@@ -626,12 +626,12 @@ sea_FAT_ideas = {
 		tolerance_heathen = 2
 	}
 	fat_traders_of_fatimid = {
-		caravan_power = 0.2
-		trade_efficiency = 0.2
+		caravan_power = 0.15 # 0.2
+		trade_efficiency = 0.1 # 0.2
 	}
 	fat_islamic_science_continues = {
-		technology_cost = -0.05
-		idea_cost = -0.05
+		technology_cost = -0.1 # -0.05
+		#idea_cost = -0.05
 	}
 	fat_improved_defence_system = {
 		hostile_attrition = 1
@@ -1004,7 +1004,7 @@ sea_RHI_ideas = {
 	}
 	rhi_fkn_free_knights_of_franconia = {
 		cavalry_power = 0.15
-		shock_damage_received = -0.1
+		shock_damage_received = -0.15
 	}
 	rhi_fkn_main_trading = {
 		trade_efficiency = 0.2

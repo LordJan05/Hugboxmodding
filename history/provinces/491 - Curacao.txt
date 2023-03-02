@@ -3,7 +3,7 @@
 owner = CAB
 controller = CAB
 add_core = CAB
-culture = arawak
+culture = guajiro
 religion = animism
 capital = "Curacao"
 trade_goods = sugar

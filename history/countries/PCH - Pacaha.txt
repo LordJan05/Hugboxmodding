@@ -27,3 +27,30 @@ define_ruler = {
 	age = 33
 }
 add_ruler_personality = ancestor_expansionist_personality
+every_province = {
+	limit = {
+		OR = {
+			continent = north_america
+			continent = south_america
+			superregion = near_east_superregion
+			superregion = persia_superregion
+			superregion = india_superregion
+		}
+	}
+	discover_country = ROOT
+}
+every_province = {
+	limit = {
+		OR = {
+			continent = north_america
+			continent = south_america
+			superregion = near_east_superregion
+			superregion = persia_superregion
+			superregion = india_superregion
+		}
+	}
+	sea_zone = {
+		discover_country = ROOT
+	}
+}
+set_country_flag = discovered_america_flag

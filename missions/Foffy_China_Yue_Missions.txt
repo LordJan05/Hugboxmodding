@@ -643,7 +643,7 @@ h_yue_tier2_3 = {
 			}
 			OR = {
 				NOT = { owned_by = root }
-				NOT = { development = 20 }
+				NOT = { development = 15 }
 				NOT = { num_of_buildings_in_province = 2 }
 			} 
         }

@@ -26,6 +26,7 @@ country_event = {
 			has_estate_privilege = estate_nobles_berserker_special_units
 			has_estate_privilege = estate_nobles_zulu_warriors_special_units
 			has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
+			has_estate_privilege = estate_nobles_silesia_hanys_special_units
 		}
 		ai = no
 		if = {
@@ -37,13 +38,25 @@ country_event = {
 				NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
 			}
 		}
+		else_if = {
+			limit = {
+				has_country_flag = silesia_hanys_special_units_upgrade_5_flag
+			}
+			OR = {
+				NOT = { any_owned_province = { has_province_modifier = silesia_hanys_special_units_upgrade_55 } }
+				NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
+			}
+		}
 		else = {
 			NOT = { any_owned_province = { has_province_modifier = sealand_cawa_fl_base } }
 		}
 	}
 	immediate = {
 		if = {
-			limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
+			limit = {
+				NOT = { has_country_modifier = sealand_cawa_base_maintenance }
+				NOT = { has_estate_privilege = estate_nobles_silesia_hanys_special_units }
+			}
 			add_country_modifier = {
 				name = sealand_cawa_base_maintenance
 				duration = -1
@@ -64,6 +77,18 @@ country_event = {
 			capital_scope = {
 				add_province_modifier = {
 					name = sealand_cawa_fl_base_gb_increase
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = silesia_hanys_special_units_upgrade_5_flag
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = silesia_hanys_special_units_upgrade_55
 					duration = -1
 					hidden = yes
 				}
@@ -98,6 +123,7 @@ country_event = {
 			has_estate_privilege = estate_nobles_berserker_special_units
 			has_estate_privilege = estate_nobles_zulu_warriors_special_units
 			has_estate_privilege = estate_nobles_genoese_crossbowmen_special_units
+			has_estate_privilege = estate_nobles_silesia_hanys_special_units
 		}
 		ai = no
 		if = {
@@ -108,6 +134,21 @@ country_event = {
 				num_of_owned_provinces_with = {
 					value = 2
 					has_province_modifier = sealand_cawa_fl_base_gb_increase
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					has_province_modifier = sealand_cawa_fl_base
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = silesia_hanys_special_units_upgrade_5_flag
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 2
+					has_province_modifier = silesia_hanys_special_units_upgrade_55
 				}
 				num_of_owned_provinces_with = {
 					value = 2
@@ -130,6 +171,16 @@ country_event = {
 			every_owned_province = {
 				limit = { is_capital = no }
 				remove_province_modifier = sealand_cawa_fl_base_gb_increase
+				remove_province_modifier = sealand_cawa_fl_base
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = silesia_hanys_special_units_upgrade_5_flag
+			}
+			every_owned_province = {
+				limit = { is_capital = no }
+				remove_province_modifier = silesia_hanys_special_units_upgrade_55
 				remove_province_modifier = sealand_cawa_fl_base
 			}
 		}
@@ -276,6 +327,32 @@ country_event = {
 			save_event_target_as = gen_merc_remove
 		}
 		event_target:gen_merc_remove = {
+			disband_mercenary_company = THIS
+		}
+	}
+	option = { }
+}
+country_event = {
+	id = sealand_mercs_fl_base_event.8
+	title = none
+	desc = none
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	hidden = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		tag = SIL
+		any_hired_mercenary_company = {
+			template = hanys_mercs
+		}
+	}
+	immediate = {
+		random_hired_mercenary_company = {
+			limit = {
+				template = hanys_mercs
+			}
+			save_event_target_as = hanys_merc_remove
+		}
+		event_target:hanys_merc_remove = {
 			disband_mercenary_company = THIS
 		}
 	}
