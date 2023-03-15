@@ -805,8 +805,8 @@ country_event = {
         	days = 1
     	}
 	trigger = {
-		is_year = 1475
-		NOT = { is_year = 1480 }
+		is_year = 1455
+		NOT = { is_year = 1460 }
 		NOT = { has_country_flag = discovered_america_more_flag }
 		capital_scope = {
 			OR = {
@@ -859,8 +859,8 @@ country_event = {
         	days = 1
     	}
 	trigger = {
-		is_year = 1500
-		NOT = { is_year = 1505 }
+		is_year = 1488
+		NOT = { is_year = 1500 }
 		NOT = { has_country_flag = discovered_america_more_more_flag }
 		capital_scope = {
 			OR = {

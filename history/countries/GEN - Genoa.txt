@@ -69,8 +69,8 @@ add_country_modifier = {
 	monarch = {
 		name = "Raffaele Adorno"
 		birth_date = 1375.1.1
-		adm = 1
-		dip = 3
+		adm = 4
+		dip = 4
 		mil = 4
 	}
 }

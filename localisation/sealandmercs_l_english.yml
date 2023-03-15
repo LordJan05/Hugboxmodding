@@ -28,7 +28,7 @@
     sea_cav_merc_comp_0:0 "Cav Merc Comp"
     sea_cav2_merc_comp_0:0 "Cav Merc Comp"
     # Renaissance
-    sea_merc_shock_damage:0 "Mercenary Shock Damage"
+    sea_merc_shock_damage:0 "Increases §YMercenary Companies§! Force Limit.\nMercenary Shock Damage"
     sea_small_merc_comp_1:0 "Small Merc Comp"
     sea_medium_merc_comp_1:0 "Med Merc Comp"
     sea_big_merc_comp_1:0 "Large Merc Comp"

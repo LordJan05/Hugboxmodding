@@ -23,8 +23,8 @@ add_accepted_culture = karelian
 1429.1.1 = {
 	monarch = {
 		name = "Evfimy II"
-		adm = 3
-		dip = 4
+		adm = 2
+		dip = 3
 		mil = 2
 	}
 }

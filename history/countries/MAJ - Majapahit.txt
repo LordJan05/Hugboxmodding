@@ -23,7 +23,7 @@ change_estate_land_share = {
 		dynasty = "Rajasanagara"
 		adm = 4
 		dip = 3
-		mil = 2
+		mil = 4
 	}
 }
 

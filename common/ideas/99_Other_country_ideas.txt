@@ -6,6 +6,7 @@ DRV_ideas = {
 	}
 	bonus = {
 		development_cost = -0.1
+		discipline = 0.05
 	}
 	trigger = {
 		tag = DRV
@@ -35,7 +36,7 @@ DRV_ideas = {
 		colonists = 1
 	}
 	drv_learn_from_the_sikh = {
-		land_morale = 0.1
+		land_morale = 0.2
 		naval_morale = 0.1
 	}
 

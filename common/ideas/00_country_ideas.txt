@@ -3321,6 +3321,7 @@ ORI_ideas = {
 
 	bonus = {
 		trade_steering = 0.20
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -3330,6 +3331,7 @@ ORI_ideas = {
 	
 	lord_of_elephants = { #Gajapati
 		infantry_power = 0.1
+		land_forcelimit_modifier = 0.1
 	}
 	servitor_of_jagganath = {
 		legitimacy = 1

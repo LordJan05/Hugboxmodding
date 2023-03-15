@@ -6,13 +6,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			philosopher = 3
-			advisor_legitimate_government = 3
-			advisor_horde_government = 3
-			advisor_republic_government = 3
-			advisor_devoted_government = 3
-		}
+		philosopher = 3
 		NOT = { has_country_flag = philosopher }
 	}
 	
@@ -36,7 +30,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = philosopher }
 	option = {
 		name = "EVTOPTA4021"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -48,7 +42,6 @@ country_event = {
 		}
 		add_meritocracy_effect = yes
 		add_stability_or_adm_power = yes
-		set_country_flag = philosopher
 	}
 		
 	option = {
@@ -62,7 +55,6 @@ country_event = {
 		}
 		add_meritocracy_effect = yes
 		add_prestige = 50
-		set_country_flag = philosopher
 	}
 }
 
@@ -145,15 +137,7 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		OR = {
-			army_reformer = 3
-			advisor_fire_damage = 3
-			advisor_fire_damage_received = 3
-			advisor_shock_damage = 3
-			advisor_shock_damage_received = 3
-			advisor_morale_damage = 3
-			advisor_morale_damage_received = 3
-		}
+		army_reformer = 3
 		NOT = { has_country_flag = army_reformer }
 	}
 	
@@ -177,7 +161,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = army_reformer }
 	option = {
 		name = "EVTOPTA4023"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -223,20 +207,7 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		OR = {
-			naval_reformer = 3
-			advisor_naval_engagement = 3
-			advisor_naval_attrition = 3
-			advisor_naval_durability = 3
-			advisor_naval_morale_recovery = 3
-			advisor_naval_sailors = 3
-			advisor_naval_maintenance = 3
-			advisor_naval_forcelimit = 3
-			advisor_naval_repair = 3
-			advisor_naval_heavy_combat = 3
-			advisor_naval_light_combat = 3
-			advisor_naval_galley_combat = 3
-		}
+		naval_reformer = 3
 		NOT = { has_country_flag = naval_reformer }
 	}
 	
@@ -260,7 +231,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = naval_reformer }
 	option = {
 		name = "EVTOPTA4024"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -276,7 +247,6 @@ country_event = {
 			name = "naval_investment"
 			duration = 2190
 		}
-		set_country_flag = naval_reformer
 	}
 		
 	option = {
@@ -294,7 +264,6 @@ country_event = {
 			name = "naval_investment"
 			duration = 2190
 		}
-		set_country_flag = naval_reformer
 	}
 }
 
@@ -307,11 +276,7 @@ country_event = {
 	picture = PAINTER_ARTIST_eventPicture
 	
 	trigger = {
-		OR = {
-			artist = 3
-			advisor_reform_growth = 3
-			advisor_splendor_blendor = 3
-		}
+		artist = 3
 		NOT = { has_country_flag = artist }
 	}
 	
@@ -336,7 +301,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = artist }
 	option = {
 		name = "EVTOPTA4025"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -352,7 +317,6 @@ country_event = {
 			name = "reduced_stability_cost"
 			duration = 2190
 		}
-		set_country_flag = artist
 	}
 
 	option = {
@@ -370,7 +334,6 @@ country_event = {
 			name = "reduced_stability_cost"
 			duration = 2190
 		}
-		set_country_flag = artist
 	}
 }
 
@@ -455,11 +418,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			theologian = 3
-			advisor_centralize_autonomy = 3
-			advisor_war_exhaust = 3
-		}
+		theologian = 3
 		NOT = { has_country_flag = theologian }
 	}
 	
@@ -484,7 +443,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = theologian }
 	option = {
 		name = "EVTOPTA4027"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -500,7 +459,6 @@ country_event = {
 			name = "theology"
 			duration = 2190
 		}
-		set_country_flag = theologian
 	}
 		
 	option = {
@@ -518,7 +476,6 @@ country_event = {
 			name = "theology"
 			duration = 2190
 		}		
-		set_country_flag = theologian
 	}
 }
 
@@ -531,11 +488,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			statesman = 3
-			advisor_imperial_authority = 3
-			advisor_mandate_growth = 3
-		}
+		statesman = 3
 		NOT = { has_country_flag = statesman }
 	}
 	
@@ -560,7 +513,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = statesman }
 	option = {
 		name = "EVTOPTA4028"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -576,7 +529,6 @@ country_event = {
 			name = "government_investment"
 			duration = 2190
 		}
-		set_country_flag = statesman
 	}
 		
 	option = {
@@ -594,7 +546,6 @@ country_event = {
 			name = "government_investment"
 			duration = 2190
 		}
-		set_country_flag = statesman
 	}
 }
 
@@ -679,10 +630,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			spymaster = 3
-			advisor_defence_spymaster = 3
-		}
+		spymaster = 3
 		NOT = { has_country_flag = spymaster }
 	}
 	
@@ -706,7 +654,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = spymaster }
 	option = {
 		name = "EVTOPTA4030"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -721,8 +669,7 @@ country_event = {
 		add_country_modifier = {
 			name = "spy"
 			duration = 2190
-		}
-		set_country_flag = spymaster		
+		}	
 	}
 		
 	option = {
@@ -739,8 +686,7 @@ country_event = {
 		add_country_modifier = {
 			name = "spy"
 			duration = 2190
-		}
-		set_country_flag = spymaster		
+		}	
 	}
 }
 
@@ -753,10 +699,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			diplomat = 3
-			advisor_corrupt_decay = 3
-		}
+		diplomat = 3
 		NOT = { has_country_flag = diplomat }
 	}
 	
@@ -780,7 +723,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = diplomat }
 	option = {
 		name = "EVTOPTA4031"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -793,7 +736,6 @@ country_event = {
 		add_meritocracy_effect = yes
 		add_stability_or_adm_power = yes
 		add_dip_power = 50
-		set_country_flag = diplomat
 	}
 		
 	option = {
@@ -808,7 +750,6 @@ country_event = {
 		add_meritocracy_effect = yes
 		add_prestige = 50
 		add_dip_power = 50
-		set_country_flag = diplomat
 	}
 }
 
@@ -957,10 +898,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			navigator = 3
-			advisor_colonial_increase = 3
-		}
+		navigator = 3
 		NOT = { has_country_flag = navigator }
 	}
 	
@@ -984,7 +922,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = navigator }
 	option = {
 		name = "EVTOPTA4110"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1000,7 +938,6 @@ country_event = {
 			name = "navigator_boost"
 			duration = 2190
 		}		
-		set_country_flag = navigator
 	}
 		
 	option = {
@@ -1018,7 +955,6 @@ country_event = {
 			name = "navigator_boost"
 			duration = 2190
 		}
-		set_country_flag = navigator
 	}
 }
 
@@ -1031,10 +967,7 @@ country_event = {
 	picture = ADVISOR_eventPicture	
 	
 	trigger = {
-		OR = {
-			grand_captain = 3
-			advisor_land_attrition = 3
-		}
+		grand_captain = 3
 		NOT = { has_country_modifier = PR_grand_captain_cooldown }
 		NOT = { has_country_flag = grand_captain }
 	}
@@ -1059,7 +992,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = grand_captain }
 	option = {
 		name = "EVTOPTA4114"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1075,7 +1008,6 @@ country_event = {
 			name = "grand_captain_boost"
 			duration = 2190
 		}		
-		set_country_flag = grand_captain
 	}
 
 	option = {
@@ -1093,7 +1025,6 @@ country_event = {
 			name = "grand_captain_boost"
 			duration = 2190
 		}
-		set_country_flag = grand_captain
 	}
 	
 	option = {
@@ -1104,6 +1035,7 @@ country_event = {
 			name = "PR_grand_captain_cooldown"
 			duration = 7300
 		}
+		clr_country_flag = grand_captain
 	}
 }
 
@@ -1116,11 +1048,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			army_organiser = 3
-			advisor_cav_to_inf_ratio = 3
-			advisor_speedy_boys = 3
-		}
+		army_organiser = 3
 		NOT = { has_country_flag = army_organiser }
 	}
 	
@@ -1144,7 +1072,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = army_organiser }
 	option = {
 		name = "EVTOPTA4115"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1160,7 +1088,6 @@ country_event = {
 			name = "army_organiser_boost"
 			duration = 2190
 		}		
-		set_country_flag = army_organiser
 	}
 
 	option = {
@@ -1178,7 +1105,6 @@ country_event = {
 			name = "army_organiser_boost"
 			duration = 2190
 		}
-		set_country_flag = army_organiser
 	}
 }
 
@@ -1191,12 +1117,7 @@ country_event = {
 	picture = Harambe_eventPicture
 	
 	trigger = {
-		OR = {
-			commandant = 3
-			advisor_inf_combat = 3
-			advisor_cav_combat = 3
-			advisor_art_combat = 3
-		}
+		commandant = 3
 		NOT = { has_country_modifier = PR_commandant_cooldown }
 		NOT = { has_country_flag = commandant }
 	}
@@ -1222,7 +1143,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = commandant }
 	option = {
 		name = "EVTOPTA4116"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1238,7 +1159,6 @@ country_event = {
 			name = "commandant_boost"
 			duration = 2190
 		}		
-		set_country_flag = commandant
 	}
 
 	option = {
@@ -1256,7 +1176,6 @@ country_event = {
 			name = "commandant_boost"
 			duration = 2190
 		}
-		set_country_flag = commandant
 	}
 	
 	option = {
@@ -1267,6 +1186,7 @@ country_event = {
 			name = "PR_commandant_cooldown"
 			duration = 7300
 		}
+		clr_country_flag = commandant
 	}
 }
 
@@ -1279,12 +1199,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			quartermaster = 3
-			advisor_morale_recovery = 3
-			advisor_drill_gain = 3
-			advisor_drill_decay = 3
-		}
+		quartermaster = 3
 		NOT = { has_country_flag = quartermaster }
 	}
 	
@@ -1308,7 +1223,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = quartermaster }
 	option = {
 		name = "EVTOPTA4117"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1324,7 +1239,6 @@ country_event = {
 			name = "quartermaster_boost"
 			duration = 2190
 		}		
-		set_country_flag = quartermaster
 	}
 
 	option = {
@@ -1342,7 +1256,6 @@ country_event = {
 			name = "quartermaster_boost"
 			duration = 2190
 		}
-		set_country_flag = quartermaster
 	}
 }
 
@@ -1426,10 +1339,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		OR = {
-			fortification_expert = 3
-			advisor_siege_ability = 3
-		}
+		fortification_expert = 3
 		NOT = { has_country_flag = fortification_expert }
 	}
 	
@@ -1453,7 +1363,7 @@ country_event = {
 			NOT = { innovativeness_ideas = 2 }
 		}
 	}
-	
+	immediate = { set_country_flag = fortification_expert }
 	option = {
 		name = "EVTOPTA4119"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1469,7 +1379,6 @@ country_event = {
 			name = "fortification_expert_boost"
 			duration = 2190
 		}		
-		set_country_flag = fortification_expert
 	}
 		
 	option = {
@@ -1487,7 +1396,6 @@ country_event = {
 			name = "fortification_expert_boost"
 			duration = 2190
 		}
-		set_country_flag = fortification_expert
 	}
 }
 

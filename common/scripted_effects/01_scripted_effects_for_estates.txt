@@ -1603,6 +1603,31 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		remove_province_modifier = h_populate_altai_mountains_mod
 	}
+	if = {
+		limit = {
+			has_climate = arctic
+			region = tibet_region
+			owner = {
+				has_estate_privilege = mjl_estate_church_npl_tamed_mountains
+			}
+			NOT = { has_province_modifier = "mirecek_artic_adaptation_npl" }
+		}
+		add_province_modifier = {
+			name = "mirecek_artic_adaptation_npl"
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_climate = arctic
+			region = tibet_region
+			has_province_modifier = "mirecek_artic_adaptation_npl"
+			owner = {
+				NOT = { has_estate_privilege = mjl_estate_church_npl_tamed_mountains }
+			}
+		}
+		remove_province_modifier = "mirecek_artic_adaptation_npl"
+	}
 ############################################ Sealand:
 	# Norway:
 	#if = {

@@ -83,9 +83,9 @@ change_estate_land_share = {
 	monarch = {
 		name = "Abu Zaid Malik az-Zahir"
 		dynasty = "Pasai"
-		adm = 3
+		adm = 4
 		dip = 3
-		mil = 3
+		mil = 4
 	}
 }
 
@@ -97,9 +97,9 @@ change_estate_land_share = {
 		birth_date = 1410.1.1
 		death_date = 1477.1.1
 		claim = 95
-		adm = 3
-		dip = 3
-		mil = 2
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 }
 

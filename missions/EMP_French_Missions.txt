@@ -87,14 +87,16 @@ emp_france_missions_1 = {
 		icon = the_auld_alliance
 		required_missions = { emp_fra_brest emp_fra_end_hyw }
 		provinces_to_highlight = {
-			owner = {
-				NOT = { tag = ENG }
-				NOT = { tag = GBR }
-				capital_scope = {
-					region = british_isles_region
-				}
-				total_development = 70
+			OR = {
+				area = home_counties_area
+				area = wessex_area
+				area = east_anglia_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = wales_area
+				area = yorkshire_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -110,9 +112,35 @@ emp_france_missions_1 = {
 						total_development = 70
 					}
 				}
-				british_isles_region = {
-					country_or_non_sovereign_subject_holds = ROOT
-					type = all
+				AND = {
+					home_counties_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					wessex_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					east_anglia_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					east_midlands_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					west_midlands_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					wales_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					yorkshire_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
 				}
 			}
 		}
@@ -1818,6 +1846,7 @@ emp_france_missions_4 = {
 			if = {
 				limit = {
 					government = monarchy
+					tag = FRA
 				}
 				add_government_reform = france_monarchy_reform
 			}

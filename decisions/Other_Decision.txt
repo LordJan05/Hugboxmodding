@@ -167,15 +167,7 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			if = {
-				limit = {
-					OR = {
-						culture = hakka
-						culture = cantonese
-					}
-				}
-				override_country_name = MAI_MAHARLIKA
-			}
+			country_event = { id = hunterrio_events.1 }
 			set_country_flag = formed_mhl_flag
 		}
 		ai_will_do = {

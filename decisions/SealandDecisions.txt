@@ -583,7 +583,24 @@ country_decisions = { # Weaker Prussia
 				is_playing_custom_nation = no
 			}
 			capital_scope = {
-				region = north_german_region
+				OR = {
+					area = alsace_area
+					area = upper_rhineland_area
+					area = lower_swabia_area
+					area = upper_swabia_area
+					area = palatinate_area
+					area = franconia_area
+					area = upper_franconia_area
+					area = hesse_area
+					area = thuringia_area
+					area = westphalia_area
+					area = braunschweig_area
+					area = north_westphalia_area
+					area = north_rhine_area
+					area = lower_rhineland_area
+					area = switzerland_area
+					area = romandie_area
+				}
 			}
 			culture_group = germanic
 			NOT = { tag = RHI }

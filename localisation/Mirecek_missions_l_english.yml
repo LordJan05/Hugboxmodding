@@ -68,13 +68,13 @@
  npl_nation_of_faith_desc:0 ""
 
  npl_thriving_arms_industry:0 "Thriving Arms Industry"
- npl_tame_the_mountains_tt:0 "Grants new '§YTame the Mountains§!' privilege that gives to all owned §YArctic§! provinces in §YTibet§! region '§YArtic Adaptation§!' modifier, giving the following effects:\nLocal Development Cost: §G-35.0%§!"
+ npl_tame_the_mountains_tt:0 "Grants new '§YTame the Mountains§!' privilege that gives to all owned §YArctic§! provinces in §YTibet§! region '§YArctic Adaptation§!' modifier, giving the following effects:\nLocal Development Cost: §G-35.0%§!"
  mjl_estate_church_npl_tamed_mountains:0 "Tame the Mountains"
  mjl_estate_church_npl_tamed_mountains_desc:0 ""
  mjl_estate_brahmins_npl_tamed_mountains:0 "Tame the Mountains"
  mjl_estate_brahmins_npl_tamed_mountains_desc:0 ""
  mjl_estate_church_npl_tamed_mountains_effect_tooltip:1 "§G-35%§! local development cost in all §YArctic§! provinces in the §YTibet§! region."
- mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip:0 "Removes §YArtic Adaptation§! modifier from all owned provinces."
+ mjl_estate_church_npl_tamed_mountains_mod_revoke_tooltip:0 "Removes §YArctic Adaptation§! modifier from all owned provinces."
  npl_simroungarh_maintenance_mission_reward:0 "Simroungarh Fort"
  npl_palpa_maintenance_mission_reward:0 "Palpa Fort"
  

@@ -66,9 +66,16 @@
      # Decision:
      mhl_nation_title:0 "@MHL Unify The Philippines"
      mhl_nation_desc:0 "Unify the many princes of the Philippine islands into the mighty nation of Maharlika."
+     # Events:
+     hunterrio_events.1.t:0 "Naming Our Country"
+     hunterrio_events.1.d:0 "The islands which we inhabit have been known by many names throughout the ages, we must choose what we wish for our nation to be called."
+     hunterrio_events.1.a:0 "Mahárlika, as our people call us."
+     hunterrio_events.1.a.tt:0 "Country name will be kept as §YMahárlika§!."
+     hunterrio_events.1.b:0 "Mai, as the Chinese explorers called us."
+     hunterrio_events.1.c:0 "The Philippine, as the Spanish called us."
      # Country:
-     MHL:0 "Maharlika"
-     MHL_ADJ:0 "Maharlikan"
+     MHL:0 "Mahárlika"
+     MHL_ADJ:0 "Mahárlikan"
      MAI_MAHARLIKA:0 "Mai"
      MAI_MAHARLIKA_ADJ:0 "Mai"
      MHL_ideas:0 "Maharlikan Ideas"
