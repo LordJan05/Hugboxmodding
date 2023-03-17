@@ -70,6 +70,7 @@
  # cradle_of_civilization:
   adopt_wahabism_title:0 "£sea_hanbali_logo£Embrace Wahabism"
   trade_propagation_convert_to_islam_title:0 "£sea_islam_logo£Adopt Islam as the State Religion"
+  ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+1%§!\nRecruit Mercenary: §R-2%§!"
  # decisions:
   unite_japan_subject_tooltip:1 "Every Subject Daimyo of Japan will become normal vassal.\nEvery Daimyo Subject of Japan:\nAbolish §YDaimyo§! Government Reform!"
   pol_commonwealth_title:0 "@PLC Form Polish-Lithuanian Commonwealth"

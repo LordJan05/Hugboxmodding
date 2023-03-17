@@ -804,6 +804,7 @@ nog_black_sea_slave_trade_revived = {
 ##########################################
 # Japan:
 japan_samurai_special_units_early = {
+	land_maintenance_modifier = -0.25
 	infantry_power = 0.1
 	discipline = 0.05
 	is_cawa_modifier = yes

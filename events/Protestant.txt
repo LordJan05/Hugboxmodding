@@ -128,19 +128,19 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 0.9
 			is_year = 1505
 		}
 		modifier = {
-			factor = 4
+			factor = 0.6
 			is_year = 1510
 		}
 		modifier = {
-			factor = 7
+			factor = 0.3
 			is_year = 1515
 		}
 		modifier = {
-			factor = 10
+			factor = 0
 			is_year = 1520
 		}
 	}

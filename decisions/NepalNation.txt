@@ -72,20 +72,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = { area = nepal_area }
-						NOT = { area = baisi_rajya_area }
-						NOT = { area = himalayan_hills_area }
-						NOT = { area = mithila_area }
-					}
-				}
-				557 = {
-					add_base_tax = 1
-					move_capital_effect = yes
-				}
-			}
 			change_tag = NPL
 			restore_country_name = yes
 			swap_non_generic_missions = yes
