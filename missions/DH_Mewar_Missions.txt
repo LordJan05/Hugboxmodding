@@ -1031,6 +1031,7 @@ mer_army_tree = {
 				has_manpower_building_trigger = yes
 			}
 			livestock = 5
+			grain_livestock = 5
 		}
 		effect = {
 			add_country_modifier = {

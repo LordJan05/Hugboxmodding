@@ -75,7 +75,11 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_tribal_allegiance = 10
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 10
+		}
 		add_years_of_income = -0.15
 		event_target:clan_province = {
 			add_local_autonomy = 25
@@ -109,7 +113,11 @@ country_event = {
 			has_reform = seljuk_empire_government
 		}
 		num_of_cities = 3
-		tribal_allegiance = 10
+		has_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 10
+		}
 		any_owned_province = {
 			is_capital = no
 			is_state = yes
@@ -185,7 +193,11 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_tribal_allegiance = 25
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 25
+		}
 		event_target:urban_province = {
 			add_province_modifier = {
 				name = "urbanites_chastised"
@@ -198,7 +210,11 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_tribal_allegiance = -5
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -5
+		}
 		event_target:urban_province = {
 			add_local_autonomy = 25
 			add_province_modifier = {
@@ -223,7 +239,11 @@ country_event = {
 			has_reform = seljuk_empire_government
 		}
 		num_of_cities = 7
-		tribal_allegiance = 10
+		has_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 10
+		}
 		any_owned_province = {
 			is_capital = no
 			is_state = yes
@@ -251,6 +271,7 @@ country_event = {
 					is_state = yes
 					OR = {
 						trade_goods = livestock
+						trade_goods = grain_livestock
 						base_manpower = 3
 					}
 					NOT = { has_province_modifier = favored_clan }
@@ -275,7 +296,11 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_tribal_allegiance = -7
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -7
+		}
 		event_target:clan_area = {
 			area = {
 				limit = { owned_by = ROOT }
@@ -325,7 +350,11 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_tribal_allegiance = -10
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -10
+		}
 		event_target:clan_area = {
 			area = {
 				limit = { owned_by = ROOT }
@@ -352,7 +381,11 @@ country_event = {
 	}
 	option = {
 		name = tribal_federation_events.3.c #
-		add_tribal_allegiance = 15
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 15
+		}
 		ai_chance = {
 			factor = 50
 		}
@@ -447,7 +480,11 @@ country_event = {
 			factor = 35
 		}
 		add_piety = -0.10
-		add_tribal_allegiance = 10
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 10
+		}
 		define_advisor = {
 			type = theologian
 			skill = 2
@@ -719,7 +756,13 @@ country_event = {
 			has_reform = tribal_federation
 			has_reform = seljuk_empire_government
 		}
-		NOT = { tribal_allegiance = 50 }
+		NOT = { 
+			has_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = 50
+			}
+		}
 		NOT = { legitimacy = 90 }
 		has_regency = no
 		num_of_cities = 10
@@ -747,7 +790,11 @@ country_event = {
 
 	option = {
 		name = tribal_federation_events.7.a #
-		add_tribal_allegiance = -15
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -15
+		}
 		event_target:revolt_province = {
 			spawn_rebels = {
 				type = pretender_rebels
@@ -941,7 +988,11 @@ country_event = {
 			has_reform = tribal_federation
 			has_reform = seljuk_empire_government
 		}
-		tribal_allegiance = 10
+		has_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = 10
+		}
 		army_professionalism = 0.015
 	}
 	
@@ -953,7 +1004,11 @@ country_event = {
 
 	option = {
 		name = tribal_federation_events.10.a #Let us expand the honor guard.
-		add_tribal_allegiance = 10
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -10
+		}
 		add_army_professionalism = -0.015
 		ai_chance = {
 			factor = 25
@@ -961,7 +1016,11 @@ country_event = {
 	}
 	option = {
 		name = tribal_federation_events.10.b #We need men of ability, not more meaningless ceremony.
-		add_tribal_allegiance = -10
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -10
+		}
 		add_army_professionalism = 0.015
 		ai_chance = {
 			factor = 75
@@ -984,7 +1043,11 @@ province_event = {
 				has_reform = tribal_federation
 				has_reform = seljuk_empire_government
 			}
-			tribal_allegiance = 40
+			has_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = 40
+			}
 			any_owned_province = {
 				any_neighbor_province = {
 					province_id = ROOT
@@ -997,7 +1060,13 @@ province_event = {
 				has_reform = seljuk_empire_government
 			}
 			NOT = { has_ruler_flag = province_defected_to_tribe }
-			NOT = { tribal_allegiance = 40 }
+			NOT = { 
+				has_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = 40
+				}
+			}
 		}
 	}
 	
@@ -1009,7 +1078,13 @@ province_event = {
 
 	option = {
 		name = tribal_federation_events.11.a
-		controller = { add_tribal_allegiance = -25 }
+		controller = { 
+			add_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = -25
+			}
+		}
 		owner = {
 			country_event = { id = tribal_federation_events.12 }
 			set_ruler_flag = province_defected_to_tribe
@@ -1018,7 +1093,13 @@ province_event = {
 	}
 	option = {
 		name = tribal_federation_events.11.b
-		controller = { add_tribal_allegiance = 15 }
+		controller = { 
+			add_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = 15
+			}
+		}
 	}
 }
 
@@ -1034,7 +1115,11 @@ country_event = {
 
 	option = {
 		name = tribal_federation_events.12.a 
-		add_tribal_allegiance = -15
+		add_government_power = {
+			mechanic_type = tribal_federation_mechanic
+			power_type = tribal_allegiance
+			value = -15
+		}
 	}
 }
 

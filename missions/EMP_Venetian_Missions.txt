@@ -164,6 +164,11 @@ emp_ven_slot_2 = {
 			owns_core_province = 112
 		}
 		effect = {
+			if = {
+				limit = { has_reform = venice_merchants_reform }
+				custom_tooltip = emp_ven_expand_the_doges_palace_tt
+				hidden_effect = { add_faction = sea_ven_guilds2 }
+			}
 			add_prestige = 50
 			if = {
 				limit = {
@@ -383,6 +388,11 @@ emp_ven_slot_3 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = { has_reform = venice_merchants_reform }
+				custom_tooltip = emp_ven_north_italian_rivals_tt
+				hidden_effect = { add_faction = sea_ven_aristocrats }
+			}
 			tirol_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -412,6 +422,7 @@ emp_ven_slot_3 = {
 			if = {
 				limit = {
 					exists = HAB
+					HAB = { ai = yes }
 				}
 				add_casus_belli = {
 					type = cb_vassalize_mission
@@ -775,15 +786,17 @@ emp_ven_slot_5 = {
 						limit = {
 							is_subject_of_type = venetian_league_subjects
 						}
+						set_country_flag = venice_trading_city_flag
 						if = {
 							limit = {
 								NOT = { government = republic }
 							}
 							change_government = republic
 						}
-						add_government_reform = trading_city
+						add_government_reform = ven_league_trading_nation
 					}
 				}
+				set_country_flag = subject_venice_vassal_flag 
 				custom_tooltip = emp_ven_monopolize_adriatic_trade_tt
 			}
 			else = {
@@ -817,6 +830,11 @@ emp_ven_slot_5 = {
 			142 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
+			if = {
+				limit = { has_reform = venice_merchants_reform }
+				custom_tooltip = emp_ven_reclaim_the_aegean_tt
+				hidden_effect = { add_faction = sea_ven_traders2 }
+			}
 			add_country_modifier = {
 				name = emp_ven_reclaim_the_aegean_modifier
 				duration = -1

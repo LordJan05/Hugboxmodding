@@ -74,6 +74,8 @@ country_decisions = {
 				}
 			}
 			change_tag = CUB
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

@@ -76,6 +76,7 @@ feudalism = {
 					culture_group = dravidian
 					culture_group = east_asian
 					culture_group = east_slavic
+					culture_group = slavic
 					culture_group = eastern_aryan
 					culture_group = japanese_g
 					culture_group = korean_g
@@ -398,7 +399,17 @@ renaissance = {
 	can_start = {
 		is_year = 1450
 		is_institution_enabled = feudalism
-		region = italy_region
+		OR = {
+			AND = {
+				development = 27
+				NOT = { superregion = china_superregion }
+			}
+			AND = {
+				development = 30
+				superregion = china_superregion
+			}
+			region = italy_region
+		}
 		is_state = yes
 		NOT = { province_id = 126 }
 		is_island = no
@@ -1103,15 +1114,23 @@ printing_press = {
 		is_island = no
 		is_state = yes
 		OR = {
-			development = 15
-			is_capital = yes
-			trade_goods = paper
-		}
-		OR = {
-			religion = protestant
-			religion = reformed
-			region = north_german_region
-			region = south_german_region
+			AND = {
+				OR = {
+					development = 15
+					is_capital = yes
+					trade_goods = paper
+				}
+				OR = {
+					religion = protestant
+					religion = reformed
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+			AND = {
+				development = 20
+				trade_goods = paper
+			}
 		}
 
 	}
@@ -1961,6 +1980,7 @@ manufactories = {
 					trade_goods = grain
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = grain_livestock
 				}
 				manufactories_origin = {
 					same_continent = PREV
@@ -2095,6 +2115,7 @@ manufactories = {
 					trade_goods = grain
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = grain_livestock
 				}
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
@@ -2958,6 +2979,7 @@ industrialization = {
 					trade_goods = grain
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = grain_livestock
 				}
 			}
 			custom_trigger_tooltip = {
@@ -3092,6 +3114,7 @@ industrialization = {
 					trade_goods = grain
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = grain_livestock
 				}
 				industrialization_origin = {
 					NOT = { same_continent = PREV }

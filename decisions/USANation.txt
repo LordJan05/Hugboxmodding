@@ -77,6 +77,7 @@ country_decisions = {
 				}
 			}
 			change_tag = USA
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			if = {
 				limit = {
@@ -93,7 +94,12 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					culture_group = british
+					OR = {
+						culture_group = british
+						culture = angevin_english
+						culture = angevin_welsh
+						culture = angevin_cornish
+					}
 					NOT = { primary_culture = american }
 				}
 				change_primary_culture = american

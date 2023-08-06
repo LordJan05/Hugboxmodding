@@ -57,6 +57,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ISR
+			on_change_tag_effect = yes
 			custom_tooltip = hebrew_culture_provinces_tooltip
 			hidden_effect = {
 				every_owned_province = {

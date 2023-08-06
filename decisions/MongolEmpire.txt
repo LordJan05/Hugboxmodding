@@ -116,6 +116,7 @@ country_decisions = {
 				}
 			}
 			change_tag = MGE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = {
@@ -175,9 +176,9 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			persia_region = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = persia_region
 			}
 		}
 		effect = {
@@ -246,13 +247,14 @@ country_decisions = {
 			NOT = { exists = ILK }
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			persia_region = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = persia_region
 			}
 		}
 		effect = {
 			change_tag = ILK
+			on_change_tag_effect = yes
 			if = {
 				limit = { 
 					is_revolutionary = no

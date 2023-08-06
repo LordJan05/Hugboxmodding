@@ -78,6 +78,7 @@ atw_missions_1 = {
 		}
 		effect = {
 			change_tag = SHA
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
@@ -357,6 +358,7 @@ atw_missions_3 = {
 			set_country_flag = establish_vinland_flag
 			custom_tooltip = establish_vinland_tooltip
 			change_tag = VIN
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = republic }
@@ -877,6 +879,7 @@ atw_missions_3 = {
 		}
 		effect = {
 			change_tag = IRO
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

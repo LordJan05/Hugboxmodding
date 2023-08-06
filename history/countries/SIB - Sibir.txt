@@ -9,8 +9,9 @@ historical_rival = KAZ
 historical_rival = GOL
 historical_rival = TRS
 historical_rival = SHY
-historical_rival = NOG
+#historical_rival = NOG
 historical_rival = CHG
+historical_rival = MOS
 
 1468.1.1 = {
 	monarch = {

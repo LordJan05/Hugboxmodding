@@ -21,6 +21,7 @@ peasant_war = {
 				NOT = { has_country_flag = had_great_peasant_war }
 			}
 		}
+		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 	
 	

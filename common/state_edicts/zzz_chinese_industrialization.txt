@@ -1,0 +1,26 @@
+chinese_industrialization = {
+	potential = {
+		has_country_flag = enable_industrialisation_flag
+	}
+	
+	allow = {
+		is_emperor_of_china = yes 
+		custom_trigger_tooltip = {
+			tooltip = sea_remove_state_edicts_flag_tt
+			NOT = { has_country_flag = sea_state_edicts_flag }
+		}
+	}
+	
+	modifier = {
+		local_development_cost_modifier = -0.05
+		trade_goods_size_modifier = 0.2
+	}
+	
+	color = { 5 371 129 }
+	
+	
+	ai_will_do = {
+		# has to be around at least 10 to be picked (depends on maintainance cost and general economy)
+		factor = 10
+	}
+}

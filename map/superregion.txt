@@ -75,6 +75,7 @@ africa_superregion = {
 	horn_of_africa_region
 	maghreb_region
 	#middle_africa_region # Sealand
+	africa_wasteland_passing_through_region
 }
 
 southern_africa_superregion = {

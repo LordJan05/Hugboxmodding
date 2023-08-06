@@ -36,7 +36,7 @@ DRV_ideas = {
 		colonists = 1
 	}
 	drv_learn_from_the_sikh = {
-		land_morale = 0.2
+		land_morale = 0.15
 		naval_morale = 0.1
 	}
 

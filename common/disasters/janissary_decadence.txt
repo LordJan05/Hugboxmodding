@@ -4,12 +4,15 @@
 
 janissary_decadence = {
 	potential = {
+		NOT = { has_dlc = "Domination" }
 		normal_or_historical_nations = yes
 		OR = {
 			has_reform = ottoman_government
 			has_reform = seljuk_empire_government
 		}
 		NOT = { has_country_flag = had_janissary_decadence }
+		NOT = { has_country_flag = tur_had_janissary_coup }
+		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 
 	can_start = {
@@ -148,6 +151,7 @@ janissary_decadence = {
 		legitimacy = -1
 		technology_cost = 0.25
 		idea_cost = 0.25
+		janissaries_influence_modifier = 0.3
 	}
 
 	on_start = janissary_decadence.1

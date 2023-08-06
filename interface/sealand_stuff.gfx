@@ -82,6 +82,18 @@ spriteTypes = {
 		play_on_show = yes
 		pause_on_loop = 1
 	}
+	
+	frameAnimatedSpriteType = {
+		name = "sea_for_frodo_gif"
+		texturefile = "gfx//interface//missions//for_frodo_gif.dds"
+		noOfFrames = 32
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 1
+	}
 
 ##############
 #### MONUMENTS
@@ -98,7 +110,7 @@ spriteTypes = {
 		name = "GFX_great_project_korea_japan_bridge"	
 		texturefile = "gfx//interface//great_projects//great_project_korea_japan_bridge.dds"
 	}
-
+	
 ##############
 #### GOVERNMENT REFORMS
 
@@ -166,6 +178,112 @@ spriteTypes = {
 		name = "government_reform_sea_north_sea_government"
 		texturefile = "gfx//interface//government_reform_icons//sea_north_sea_government.dds"
  	}
+	
+	spriteType = {
+		name = "government_reform_sea_musketeers_reform"
+		texturefile = "gfx//interface//government_reform_icons//sea_musketeers_reform.dds"
+	}
+
+##############
+#### GOVERNMENT MECHANICS
+
+	# MOROCCO
+	spriteType = {
+		name = "GFX_moroccan_power_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_moroccan_power_government_power_bar_frame.dds"
+		alwaystransparent = yes
+	}
+	progressbartype = {
+		name = "GFX_moroccan_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/morocco_iqta/sea_moroccan_power_government_power_bar_green.dds"
+		textureFile2 = "gfx/interface/government_mechanics/morocco_iqta/sea_moroccan_power_government_power_bar_black.dds"
+		size = { x = 226 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_sea_conscript_subject_maritime_button"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_conscript_subject_maritime_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_conscript_subject_infantry_button"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_conscript_subject_infantry_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_conscript_subject_cavalry_button"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_conscript_subject_cavalry_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_moroccan_iqta_decrease_button"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_moroccan_iqta_decrease_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_moroccan_iqta_increase_button"
+		texturefile = "gfx/interface/government_mechanics/morocco_iqta/sea_moroccan_iqta_increase_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	# SWITZERLAND
+	spriteType = {
+		name = "GFX_swiss_cantons_power_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_power_government_power_bar_frame.dds"
+		alwaystransparent = yes
+	}
+	progressbartype = {
+		name = "GFX_swiss_cantons_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_power_government_power_bar_green.dds"
+		textureFile2 = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_power_government_power_bar_red.dds"
+		size = { x = 202 y = 19 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_increase_button"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_increase_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_empty_button"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_empty_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_decrease_button"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_decrease_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_1"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_2"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_2.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sea_swiss_cantons_3"
+		texturefile = "gfx/interface/government_mechanics/swiss_cantons/sea_swiss_cantons_3.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 
 ##############
 #### FACTIONS
@@ -1196,15 +1314,14 @@ spriteTypes = {
 		name = "privilege_tribal_allegiance"
 		texturefile = "gfx/interface/privileges/privilege_tribal_allegiance.dds"
 	}
+	spriteType = {
+		name = "privilege_iqta_icon"
+		texturefile = "gfx/interface/privileges/privilege_iqta_icon.dds"
+	}
 
 ##############
 #### RELIGION
 
-	spriteType = {
-		name = "GFX_sea_fervor_peace"
-		texturefile = "gfx//interface//sea_fervor_peace.dds"
-		loadType = "INGAME"
-	}
 	spriteType = {
 		name = "GFX_hogomod_get_new_general_icon"
 		texturefile = "gfx//interface//hogomod_get_new_general_icon.dds"
@@ -1456,6 +1573,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_fish_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_fish_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_roulette_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_roulette_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_parliament_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_parliament_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_factions_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_factions_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_republican_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_republican_logo.dds"
 	}
 	
 	# Small Icons fit for event options:

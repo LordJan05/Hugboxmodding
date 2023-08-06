@@ -187,13 +187,41 @@ can_colonize_province = {
 			}
 		}
 		allow = {
-			OR = {
-				FROM = {
-					capital_scope = {
-						colonial_region = ROOT
-					}
+			FROM = {
+				capital_scope = {
+					colonial_region = ROOT
 				}
 			}
+		}
+	}
+	condition = {
+		tooltip = "MJL_CANT_COLONIZE_OTHER_INDIA_SUPERREGION"
+		potential = {
+			FROM = {
+				has_reform = trade_company_government
+			}
+		}
+		allow = {
+			superregion = india_superregion
+		}
+	}
+	condition = {
+		tooltip = "MJL_CANT_COLONIZE_OTHER_INDIA_SUPERREGION"
+		potential = {
+			FROM = {
+				has_reform = trade_company_government
+			}
+		}
+		allow = {
+			superregion = india_superregion
+		}
+	}
+	condition = {
+		tooltip = "AFRICA_WASTELANDS_CANNOT_COLONIZE"
+		potential = { }
+		allow = {
+			NOT = { province_id = 5001 }
+			NOT = { province_id = 5004 }
 		}
 	}
 }
@@ -253,6 +281,9 @@ can_colonize_province_siberian_frontier = {
 }
 
 can_add_seat_in_parliament = {
+}
+
+can_remove_seat_in_parliament = {
 }
 
 can_add_estate = {

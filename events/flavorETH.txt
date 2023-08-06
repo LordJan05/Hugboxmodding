@@ -489,7 +489,7 @@ country_event = {
 		add_casus_belli = {
 			target = MAM
 			type = cb_insult
-			months = 1825
+			months = 120
 		}
 		MAM = {
 			country_event = { id = flavor_eth.13 days = 14 }
@@ -1462,6 +1462,7 @@ country_event = {
 			duration = 9125
 		}
 		change_tag = AKS
+		on_change_tag_effect = yes
 		add_prestige = 25
 		if = {
 			limit = {
@@ -2306,6 +2307,7 @@ country_event = {
 			continent = ROOT
 			NOT = { has_province_modifier = itinerant_capital_area }
 			NOT = { has_province_flag = is_itinerent_capital }
+			is_city = yes
 		}
 		ai = yes
 	}
@@ -2321,6 +2323,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 			}
 			save_event_target_as = eth_new_capital
 		}
@@ -2330,6 +2333,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				development = 10
 			}
 			save_event_target_as = eth_new_capital
@@ -2340,6 +2344,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				development = 20
 			}
 			save_event_target_as = eth_new_capital
@@ -2350,6 +2355,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				development = 30
 			}
 			save_event_target_as = eth_new_capital
@@ -2360,6 +2366,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				development = 40
 			}
 			save_event_target_as = eth_new_capital
@@ -2371,6 +2378,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				OR = {
 					local_autonomy = 20
 					development = 10
@@ -2386,6 +2394,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				OR = {
 					local_autonomy = 40
 					development = 20
@@ -2401,6 +2410,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				OR = {
 					local_autonomy = 60
 					development = 30
@@ -2416,6 +2426,7 @@ country_event = {
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
+				is_city = yes
 				OR = {
 					local_autonomy = 80
 					development = 40

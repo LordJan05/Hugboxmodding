@@ -26,6 +26,15 @@ sea_big_merc_comp_0 = { # 16
 		NOT = { has_institution = renaissance }
 	}
 }
+sea_big_merc_comp_reform_0 = { # 16
+	regiments_per_development = 0.4
+	cost_modifier = 1.25
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		NOT = { has_institution = renaissance }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
+	}
+}
 sea_cav_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
 	cost_modifier = 1.25
@@ -90,6 +99,20 @@ sea_big_merc_comp_1 = { # 20
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = renaissance
 		NOT = { has_institution = new_world_i }
+	}
+	modifier = {
+		shock_damage = 0.05
+	}
+}
+sea_big_merc_comp_reform_1 = { # 20
+	regiments_per_development = 0.5
+	cost_modifier = 1.25
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_0 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = renaissance
+		NOT = { has_institution = new_world_i }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
 	}
 	modifier = {
 		shock_damage = 0.05
@@ -173,6 +196,21 @@ sea_big_merc_comp_2 = { # 24
 		fire_damage = 0.05
 	}
 }
+sea_big_merc_comp_reform_2 = { # 24
+	regiments_per_development = 0.6
+	cost_modifier = 1.1
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_1 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = new_world_i
+		NOT = { has_institution = printing_press }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
+	}
+	modifier = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+	}
+}
 sea_cav_merc_comp_2 = { # 12
 	regiments_per_development = 0.3
 	cost_modifier = 1.1
@@ -249,6 +287,22 @@ sea_big_merc_comp_3 = { # 26
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = printing_press
 		NOT = { has_institution = global_trade }
+	}
+	modifier = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+		land_morale = 0.05
+	}
+}
+sea_big_merc_comp_reform_3 = { # 26
+	regiments_per_development = 0.65
+	cost_modifier = 1.1
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_2 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = printing_press
+		NOT = { has_institution = global_trade }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
 	}
 	modifier = {
 		shock_damage = 0.05
@@ -361,6 +415,23 @@ sea_big_merc_comp_4 = { # 30
 		land_morale = 0.05
 	}
 }
+sea_big_merc_comp_reform_4 = { # 30
+	regiments_per_development = 0.75
+	cost_modifier = 0.95
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_3 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = global_trade
+		NOT = { has_institution = manufactories }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
+	}
+	modifier = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+		infantry_power = 0.05
+		land_morale = 0.05
+	}
+}
 sea_cav_merc_comp_4 = { # 18
 	regiments_per_development = 0.45
 	cost_modifier = 0.95
@@ -463,6 +534,23 @@ sea_big_merc_comp_5 = { # 34
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = manufactories
 		NOT = { has_institution = enlightenment }
+	}
+	modifier = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+		infantry_power = 0.05
+		land_morale = 0.05
+	}
+}
+sea_big_merc_comp_reform_5 = { # 34
+	regiments_per_development = 0.85
+	cost_modifier = 0.95
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_4 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = manufactories
+		NOT = { has_institution = enlightenment }
+		has_government_attribute = unlock_additional_sea_big_merc_comp
 	}
 	modifier = {
 		shock_damage = 0.05
@@ -589,6 +677,24 @@ sea_big_merc_comp_6 = { # 40
 		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_5 } }
 		is_allowed_to_recruit_mercenaries = yes
 		has_institution = enlightenment
+	}
+	modifier = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+		infantry_power = 0.05
+		land_morale = 0.05
+		discipline = 0.025
+		reinforce_speed = 0.25
+	}
+}
+sea_big_merc_comp_reform_6 = { # 40
+	regiments_per_development = 1
+	cost_modifier = 0.95
+	trigger = {
+		NOT = { any_hired_mercenary_company = { template = sea_big_merc_comp_reform_5 } }
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = enlightenment
+		has_government_attribute = unlock_additional_sea_big_merc_comp
 	}
 	modifier = {
 		shock_damage = 0.05

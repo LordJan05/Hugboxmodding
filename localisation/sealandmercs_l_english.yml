@@ -5,7 +5,6 @@
     sealand_cawa_base_maintenance:0 "" # Base Maintenance Cost for Infantry Only Mercenaries
     sea_special_units_double_fl:0 "Special Infantry Force Limit"
     
-    
   # Decision:
     sea_mercs_inf_to_cav_switch_title:0 "£sea_merc_logo£ Replace Medium Merc with Cav Merc"
     sea_mercs_inf_to_cav_switch_desc:0 "Replaces §YMed Merc Comp§! with §YCav Merc Comp§! on a month tick."
@@ -20,11 +19,19 @@
     sealand_mercs_fl_base_event.4.t:0 "Obselete Mercenary Companies"
     sealand_mercs_fl_base_event.4.d:0 "We have obselete §YMercenary Companies§!. In order to gain upgraded §YMercenary Company§!, we have to delete the old one.\nThis only includes for basic §YMercenary Companies§! and not for unique ones."
     sealand_mercs_fl_base_event.4.a:0 "Understood."
+    sealand_events.24.t:0 "Replace Mercenary Company"
+    sealand_events.24.d:0 "Are you sure you want to replace and switch out current mercenary company with different mercenary company?"
+    sealand_events.24.a:0 "Make the switch."
+    sealand_events.24.b:0 "Never mind."
+    
+  # Government:
+    mechanic_unlock_additional_sea_big_merc_comp_yes:0 "Unlocks additional: §YLarge Merc Company§!"
     
   # Mercs:
     sea_small_merc_comp_0:0 "Small Merc Comp"
     sea_medium_merc_comp_0:0 "Med Merc Comp"
     sea_big_merc_comp_0:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_0:0 "Large Merc Comp"
     sea_cav_merc_comp_0:0 "Cav Merc Comp"
     sea_cav2_merc_comp_0:0 "Cav Merc Comp"
     # Renaissance
@@ -32,6 +39,7 @@
     sea_small_merc_comp_1:0 "Small Merc Comp"
     sea_medium_merc_comp_1:0 "Med Merc Comp"
     sea_big_merc_comp_1:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_1:0 "Large Merc Comp"
     sea_cav_merc_comp_1:0 "Cav Merc Comp"
     sea_cav2_merc_comp_1:0 "Cav Merc Comp"
     # Colonialism
@@ -39,6 +47,7 @@
     sea_small_merc_comp_2:0 "Small Merc Comp"
     sea_medium_merc_comp_2:0 "Med Merc Comp"
     sea_big_merc_comp_2:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_2:0 "Large Merc Comp"
     sea_cav_merc_comp_2:0 "Cav Merc Comp"
     sea_cav2_merc_comp_2:0 "Cav Merc Comp"
     # Priting Press
@@ -47,6 +56,7 @@
     sea_small_merc_comp_3:0 "Med Merc Comp"
     sea_medium_merc_comp_3:0 "Med Merc Comp"
     sea_big_merc_comp_3:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_3:0 "Large Merc Comp"
     sea_cav_merc_comp_3:0 "Cav Merc Comp"
     sea_cav2_merc_comp_3:0 "Cav Merc Comp"
     sea_inf_cav_merc_comp_3:0 "Mix Merc Comp"
@@ -55,6 +65,7 @@
     sea_small_merc_comp_4:0 "Med Merc Comp"
     sea_medium_merc_comp_4:0 "Med Merc Comp"
     sea_big_merc_comp_4:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_4:0 "Large Merc Comp"
     sea_cav_merc_comp_4:0 "Cav Merc Comp"
     sea_cav2_merc_comp_4:0 "Cav Merc Comp"
     sea_inf_cav_merc_comp_4:0 "Mix Merc Comp"
@@ -64,6 +75,7 @@
     sea_small_merc_comp_5:0 "Med Merc Comp"
     sea_medium_merc_comp_5:0 "Med Merc Comp"
     sea_big_merc_comp_5:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_5:0 "Large Merc Comp"
     sea_cav_merc_comp_5:0 "Cav Merc Comp"
     sea_cav2_merc_comp_5:0 "Cav Merc Comp"
     sea_inf_cav_merc_comp_5:0 "Mix Merc Comp"
@@ -73,6 +85,7 @@
     sea_small_merc_comp_6:0 "Med Merc Comp"
     sea_medium_merc_comp_6:0 "Med Merc Comp"
     sea_big_merc_comp_6:0 "Large Merc Comp"
+    sea_big_merc_comp_reform_6:0 "Large Merc Comp"
     sea_cav_merc_comp_6:0 "Cav Merc Comp"
     sea_cav2_merc_comp_6:0 "Cav Merc Comp"
     sea_inf_cav_merc_comp_6:0 "Mix Merc Comp"

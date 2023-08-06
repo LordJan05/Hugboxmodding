@@ -77,7 +77,7 @@ fervor_stability = {
 	}	
 }
 
-sea_fervor_peace = {
+fervor_diplomacy = {
 	cost = 3
 	effect = {
 		production_efficiency = 0.05

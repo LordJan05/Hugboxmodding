@@ -244,6 +244,7 @@ sealand_atl_missions_2 = {
 		}
 		effect = {
 			change_tag = ATL
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = republic }

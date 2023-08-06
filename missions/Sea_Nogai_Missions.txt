@@ -1338,7 +1338,10 @@ sea_nogai_missions_5 = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { nog_industrialize_the_steppes }
 		provinces_to_highlight = {
-			trade_goods = livestock
+			OR = {
+				trade_goods = livestock
+				trade_goods = grain_livestock
+			}
 			has_terrain = steppe
 			OR = {
 				NOT = { has_manpower_building_trigger = yes }
@@ -1348,7 +1351,10 @@ sea_nogai_missions_5 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				has_terrain = steppe
-				trade_goods = livestock
+				OR = {
+					trade_goods = livestock
+					trade_goods = grain_livestock
+				}
 				OR = {
 					has_manpower_building_trigger = yes
 					has_forcelimit_building_trigger = yes
@@ -1364,7 +1370,10 @@ sea_nogai_missions_5 = {
 			every_owned_province = {
 				limit = {
 					has_terrain = steppe
-					trade_goods = livestock
+					OR = {
+						trade_goods = livestock
+						trade_goods = grain_livestock
+					}
 				}
 				add_base_manpower = 2
 			}

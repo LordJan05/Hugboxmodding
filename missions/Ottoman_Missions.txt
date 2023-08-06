@@ -4,8 +4,13 @@ tur_conquerors_of_the_near_east = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -304,8 +309,13 @@ tur_eastern_balkans = {
 	
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -402,8 +412,13 @@ tur_conquest_of_middle_east = {
 	
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -756,8 +771,13 @@ tur_black_sea = {
 	slot = 4
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -831,8 +851,13 @@ tur_eastern_mediterrenean_missions = {
 	
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -1097,8 +1122,13 @@ tur_conquer_western_mediterrenean = {
 	slot = 2
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM
@@ -1198,7 +1228,7 @@ tur_conquer_western_mediterrenean = {
 		effect = {
 			add_country_modifier = {
 				name = "tur_barbary_pirates"
-				duration = 9125
+				duration = -1
 			}
 		}
 	}
@@ -1208,8 +1238,13 @@ tur_indian_ocean = {
 	slot = 4
 	potential = {
 		OR = {
-			tag = TUR
-			tag = OSM
+			AND = {
+				NOT = { has_dlc = "Domination" }
+				OR = {
+					tag = TUR
+					tag = OSM
+				}
+			}
 			AND = {
 				NOT = { was_tag = MAM }
 				tag = RUM

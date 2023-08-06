@@ -324,6 +324,9 @@ estate_nobles_zulu_warriors_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -358,7 +361,7 @@ estate_nobles_gb_royal_marines_special_units = {
 	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
-		has_reform = gb_english_monarchy
+		has_reform = royal_marines_reform2
 		OR = {
 			has_country_flag = estate_nobles_gb_royal_marines_special_units_elite_army_flag
 			has_country_flag = estate_nobles_gb_royal_marines_special_units_national_army_flag
@@ -413,6 +416,9 @@ estate_nobles_gb_royal_marines_special_units = {
 				}
 			}
 		}
+	}
+	benefits = {
+		nobles_privilege_slots = 1
 	}
 	penalties = {
 		mercenary_manpower = -0.5
@@ -475,66 +481,6 @@ estate_nobles_gb_royal_marines_special_units = {
 	}
 }
 ################################
-# France:
-estate_nobles_france_king_musketeers_special_units = {
-	icon = privilege_cawa_peacekeeper
-	land_share = 10
-	max_absolutism = -10
-	influence = 0.1
-	is_valid = {
-		has_reform = france_monarchy_reform
-	}
-	on_granted = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-				add_country_modifier = {
-					name = sealand_cawa_base_maintenance
-					duration = -1
-					hidden = yes
-				}
-			}
-		}
-		custom_tooltip = estate_nobles_france_king_musketeers_special_units_granted_tt
-		add_country_modifier = {
-			name = france_king_musketeers_units
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = sealand_cawa_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	penalties = {
-		mercenary_manpower = -0.5
-	}
-	on_revoked = {
-		custom_tooltip = estate_nobles_france_king_musketeers_special_units_revoked_tt
-		remove_country_modifier = france_king_musketeers_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	on_invalid = {
-		remove_country_modifier = france_king_musketeers_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-################################
 # Dutch/Burgundy:
 estate_nobles_dutch_maurician_special_units = {
 	icon = privilege_cawa_peacekeeper
@@ -542,8 +488,10 @@ estate_nobles_dutch_maurician_special_units = {
 	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
-		or = {
+		OR = {
 			has_reform = dutch_republic
+			has_reform = stadthalter_monarchy_reform
+			has_reform = dutch_theocracy_reform
 			has_reform = lotharingia_monarchy_reform
 		}
 	}
@@ -570,6 +518,9 @@ estate_nobles_dutch_maurician_special_units = {
 				hidden = yes
 			}
 		}
+	}
+	benefits = {
+		nobles_privilege_slots = 1
 	}
 	penalties = {
 		mercenary_manpower = -0.5
@@ -642,130 +593,19 @@ estate_nobles_castille_autonomous_duchies = {
 		factor = 0
 	}
 }
-
-estate_nobles_spain_tercios_special_units_pike = {
-	icon = privilege_cawa_peacekeeper
-	land_share = 10
-	max_absolutism = -10
-	influence = 0.1
+################################
+# Morocco:
+estate_nobles_moroccan_iqta = {
+	icon = privilege_iqta_icon
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.10
 	is_valid = {
-		has_reform = spain_monarchy_reform
-		OR = {
-			current_age = age_of_discovery
-			current_age = age_of_reformation
-		}
+		mission_completed = gc_mor_algiers
+		has_government_mechanic = moroccan_iqta_mechanic
 	}
-	on_granted = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-				add_country_modifier = {
-					name = sealand_cawa_base_maintenance
-					duration = -1
-					hidden = yes
-				}
-			}
-		}
-		custom_tooltip = estate_nobles_spain_tercios_special_units_pike_granted_tt
-		add_country_modifier = {
-			name = tercios_special_pike_units
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = sealand_cawa_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	penalties = {
-		mercenary_manpower = -0.5
-	}
-	on_revoked = {
-		custom_tooltip = estate_nobles_spain_tercios_special_units_pike_revoked_tt
-		remove_country_modifier = tercios_special_pike_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	on_invalid = {
-		remove_country_modifier = tercios_special_pike_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-estate_nobles_spain_tercios_special_units_fire = {
-	icon = privilege_cawa_offensive_fighters
-	land_share = 10
-	max_absolutism = -10
-	influence = 0.1
-	is_valid = {
-		has_reform = spain_monarchy_reform
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
-		}
-	}
-	on_granted = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-				add_country_modifier = {
-					name = sealand_cawa_base_maintenance
-					duration = -1
-					hidden = yes
-				}
-			}
-		}
-		custom_tooltip = estate_nobles_spain_tercios_special_units_fire_granted_tt
-		add_country_modifier = {
-			name = tercios_special_fire_units
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = sealand_cawa_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	penalties = {
-		mercenary_manpower = -0.5
-	}
-	on_revoked = {
-		custom_tooltip = estate_nobles_spain_tercios_special_units_fire_revoked_tt
-		remove_country_modifier = tercios_special_fire_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	on_invalid = {
-		remove_country_modifier = tercios_special_fire_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
+	on_granted = { custom_tooltip = estate_nobles_moroccan_iqta_tt }
+	ai_will_do = { factor = 0 }
 }
 ################################
 # Nogai:
@@ -877,6 +717,14 @@ estate_church_no_church_unrest = {
 			remove_province_modifier = estate_church_no_church_unrest_modifier
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.03 }
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
 	ai_will_do = {
 		factor = 100
 	}
@@ -890,7 +738,10 @@ estate_nobles_varangian_guards_special_units = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
-		has_reform = byzantium_government
+		OR = {
+			has_reform = byzantine_autocracy_reform
+			has_reform = reformed_byzantine_monarchy_reform
+		}
 	}
 	on_granted = {
 		hidden_effect = {
@@ -927,6 +778,9 @@ estate_nobles_varangian_guards_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -944,138 +798,6 @@ estate_nobles_varangian_guards_special_units = {
 	on_invalid = {
 		remove_country_modifier = varangian_guards_special_units_upgraded
 		remove_country_modifier = varangian_guards_special_units
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-################################
-# Japan:
-estate_nobles_japan_samurai_special_units_early = {
-	icon = privilege_cawa_peacekeeper
-	land_share = 0
-	loyalty = 0.05
-	max_absolutism = -10
-	influence = 0.1
-	is_valid = {
-		OR = {
-			has_reform = shogunate
-			has_reform = daimyo
-			has_reform = indep_daimyo
-		}
-		NOT = { mil_tech = 12 }
-	}
-	on_granted = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-				add_country_modifier = {
-					name = sealand_cawa_base_maintenance
-					duration = -1
-					hidden = yes
-				}
-			}
-		}
-		custom_tooltip = estate_nobles_japan_samurai_special_units_early_granted_tt
-		add_country_modifier = {
-			name = japan_samurai_special_units_early
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = sealand_cawa_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	penalties = {
-		mercenary_manpower = -0.25
-	}
-	can_revoke = {
-		always = no
-	}
-	on_revoked = {
-		custom_tooltip = estate_nobles_japan_samurai_special_units_early_revoked_tt
-		remove_country_modifier = japan_samurai_special_units_early
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	on_invalid = {
-		remove_country_modifier = japan_samurai_special_units_early
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-estate_nobles_japan_samurai_special_units_late = {
-	icon = privilege_cawa_offensive_fighters
-	land_share = 10
-	max_absolutism = -10
-	influence = 0.1
-	is_valid = {
-		OR = {
-			has_reform = shogunate
-			has_reform = indep_daimyo
-			has_reform = imperial_japan_monarchy
-		}
-		mil_tech = 12
-	}
-	on_granted = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_modifier = sealand_cawa_base_maintenance } }
-				add_country_modifier = {
-					name = sealand_cawa_base_maintenance
-					duration = -1
-					hidden = yes
-				}
-			}
-		}
-		custom_tooltip = estate_nobles_japan_samurai_special_units_late_granted_tt
-		add_country_modifier = {
-			name = japan_samurai_special_units_late
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = sealand_cawa_fl_base
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	penalties = {
-		mercenary_manpower = -0.5
-	}
-	on_revoked = {
-		custom_tooltip = estate_nobles_japan_samurai_special_units_late_revoked_tt
-		remove_country_modifier = japan_samurai_special_units_late
-		every_owned_province = {
-			limit = {
-				has_province_modifier = sealand_cawa_fl_base
-			}
-			remove_province_modifier = sealand_cawa_fl_base
-		}
-	}
-	on_invalid = {
-		remove_country_modifier = japan_samurai_special_units_late
 		every_owned_province = {
 			limit = {
 				has_province_modifier = sealand_cawa_fl_base
@@ -1121,6 +843,9 @@ estate_nobles_aztecs_eagle_special_units = {
 				hidden = yes
 			}
 		}
+	}
+	benefits = {
+		nobles_privilege_slots = 1
 	}
 	penalties = {
 		mercenary_manpower = -0.5
@@ -1184,6 +909,9 @@ estate_nobles_aztecs_jaguar_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -1222,7 +950,7 @@ estate_marathas_rajput_regiments = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		special_unit_forcelimit = 0.5
+		allowed_rajput_fraction = 0.5
 	}
 	penalties = {
 	}
@@ -1399,6 +1127,9 @@ estate_nobles_jomsvikings_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -1458,6 +1189,9 @@ estate_nobles_berserker_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -1485,6 +1219,7 @@ estate_nobles_berserker_special_units = {
 	}
 }
 ################################
+# Genoa:
 estate_nobles_genoese_crossbowmen_special_units = {
 	icon = privilege_cawa_peacekeeper
 	land_share = 10
@@ -1516,6 +1251,9 @@ estate_nobles_genoese_crossbowmen_special_units = {
 				hidden = yes
 			}
 		}
+	}
+	benefits = {
+		nobles_privilege_slots = 1
 	}
 	penalties = {
 		mercenary_manpower = -0.5
@@ -1609,6 +1347,9 @@ estate_nobles_silesia_hanys_special_units = {
 			}
 		}
 	}
+	benefits = {
+		nobles_privilege_slots = 1
+	}
 	penalties = {
 		mercenary_manpower = -0.5
 	}
@@ -1670,7 +1411,7 @@ estate_nobles_tribal_allegiance = {
 		has_government_mechanic = tribal_federation_mechanic
 	}
 	benefits = {
-		yearly_tribal_allegiance = 1
+		monthly_tribal_allegiance = 0.1
 	}
 	ai_will_do = {
 		factor = 10

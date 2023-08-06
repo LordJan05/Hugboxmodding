@@ -10,7 +10,7 @@ normal_or_historical_nations = yes
 country_event = {
 	id = flavor_swe.1
 	title = flavor_swe.1.t
-	desc = flavor_swe.1.swe_debt_with_the_burghers
+	desc = flavor_swe.1.d
 	picture = {
 		trigger = {
 			has_dlc = "Lions of the North"
@@ -1620,28 +1620,40 @@ country_event = {
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				trade_goods = grain 
+				OR = {
+					trade_goods = grain 
+					trade_goods = grain_livestock
+				}
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				trade_goods = grain 
+				OR = {
+					trade_goods = grain 
+					trade_goods = grain_livestock
+				}
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				trade_goods = grain 
+				OR = {
+					trade_goods = grain 
+					trade_goods = grain_livestock
+				}
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				trade_goods = grain 
+				OR = {
+					trade_goods = grain 
+					trade_goods = grain_livestock
+				}
 			}
 			add_base_production = 1 
 		} 

@@ -205,18 +205,21 @@ country_event = {
 		name = ME_Malaya_Events.3.a
 
 		MSA_change_china_loyalty = { value = 20 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 	}
 
 	option = {
 		name = ME_Malaya_Events.3.b
 
 		MSA_change_china_loyalty = { value = 0 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 	}
 
 	option = {
 		name = ME_Malaya_Events.3.c
 
 		MSA_change_china_loyalty = { value = -20 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 	}
 
 	after = {
@@ -323,7 +326,7 @@ country_event = {
 
 	option = {
 		name = ME_Malaya_Events.6.a #farewell
-
+		custom_tooltip = chinese_expedition_bonus_concluded_tt
 		MSA_the_end = yes
 	}
 
@@ -414,12 +417,14 @@ country_event = {
 		name = ME_Malaya_Events.8.a #farewell
 
 		MSA_change_china_loyalty = { value = 10 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 	}
 
 	option = {
 		name = ME_Malaya_Events.8.b #farewell
 
 		MSA_change_china_loyalty = { value = 0 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 		custom_tooltip = MSA_gain_cb_to_install
 	}
 
@@ -427,6 +432,7 @@ country_event = {
 		name = ME_Malaya_Events.8.c #farewell
 
 		MSA_change_china_loyalty = { value = -10 }
+		custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 	}
 }
 
@@ -2708,7 +2714,7 @@ country_event = {
 	trigger = {
 		tag = MSA
 		NOT = { has_country_flag = MSA_chose_religious_tree }
-		religion = hinduism
+		religion_group = dharmic
 	}
 
 	mean_time_to_happen = {
@@ -2749,7 +2755,7 @@ country_event = {
 		NOT = { has_country_flag = MSA_chose_religious_tree }
 		NOT = {
 			OR = {
-				religion = hinduism
+				religion_group = dharmic
 				religion_group = muslim
 			}
 		}

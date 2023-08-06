@@ -5,6 +5,14 @@ random_new_world_region = {
 }
 
 ########################################
+########################################
+# Sealand:
+africa_wasteland_passing_through_region = {
+	areas = {
+		africa_wasteland_passing_through_area
+	}
+}
+########################################
 # EUROPE                               #
 ########################################
 
@@ -495,6 +503,11 @@ sahel_region = {
 		kobbe_area
 		bahiouda_desert_area
 		guera_area
+		el_eglab_area
+		afelele_area
+		tanezruft_area
+		touaricks_area
+		tibesti_area
 	}
 	monsoon = {
 		00.06.01

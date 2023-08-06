@@ -34,6 +34,25 @@ turkana_area = {
 }
 
 #####
+# Sahara desert wasteland:
+el_eglab_area = {
+	1127 5155 5156 5157 5159
+}
+afelele_area = {
+	5158 5160 5161 5162 5164
+}
+western_sahara_area = {
+	1128 5163 5165 5166 5167
+}
+
+touaricks_area = {
+	5169 5170 5171 5172 
+}
+tibesti_area = {
+	2474 5173 5174 5176 5178
+}
+
+#####
 # Middle Africa wasteland:
 # Not in use: 
 
@@ -80,6 +99,9 @@ mbam_area = {
 	5022 5023 5025 
 }
 
+africa_wasteland_passing_through_area = {
+	5001 5004
+}
 #####
 # South Africa wasteland:
 # North America river passage: 4972 4973 
@@ -536,7 +558,7 @@ upper_andalucia_area = { #4
 
 castille_area = { #5
 	color = { 58 58 207 }
-	215 217 2755 4551 4789
+	217 2755 4551 4789
 }
 
 toledo_area = { #5
@@ -544,7 +566,7 @@ toledo_area = { #5
 }
 
 asturias_area = { #4
-	 207 1745 4552 1746
+	 1745 4552 1746 215
 }
 
 galicia_area = { #4
@@ -561,7 +583,7 @@ basque_country = { #3
 
 leon_area = { #3
 	color = { 243 235 28 }
-	208 216 4553 
+	208 216 4553 207 
 }
 
 extremadura_area = {
@@ -1522,7 +1544,7 @@ cyrenaica_area = { #5
 }
 
 fezzan_area = { #4
-	2448 2449 2474 4567 5145
+	2448 2449 4567 5145 5168
 }
 
 tunisia_area = { #5
@@ -1907,8 +1929,8 @@ te_waipounamu_area = { #3
 # West Africa					       #
 ########################################
 
-western_sahara_area = { #5
-    1127 1128 1129 1130 2271
+tanezruft_area = { # Sealand
+    1129 1130 2271
 }
 
 cap_verde_area = { #2 
@@ -1996,7 +2018,7 @@ azbin_area = { #5
 }
 
 east_azbin_area = { #3
-	2275 2277 2475
+	2275 2277 2475 5175 5177
 }
 
 atacora_oueme_area = { #5
@@ -3501,7 +3523,7 @@ banda_oriental_area = { #5
 }
 
 guyana_area = { #4
-	502 743 744 2803 
+	743 744 2803 
 }
 
 suriname_area = { #3
@@ -3541,11 +3563,11 @@ central_llanos_area = {
 }
 
 bogota_area = { #4
-	825 832 4602 4603
+	825 832 4602 4603 4600
 }
 
 popayan_area = { #4	
-	823 826 2818 4596 4604
+	823 2818 4604 2817 
 }
 
 colombian_amazonas_area = { #3
@@ -3553,7 +3575,7 @@ colombian_amazonas_area = { #3
 }
 
 cordillera_occidental_area = { #5
-	824 827 2817 4600 4607
+	824 827 4607 826 4596
 }
 
 coquivacoa_area = { #5
@@ -3561,11 +3583,11 @@ coquivacoa_area = { #5
 }
 
 northern_chile_area = { #5
-	792 793 796 2840 2841
+	793 796 2840 
 }
 
 central_chile_area = { #3
-	784 787 2862
+	784 787 2862 792 2841
 }
 
 southern_chile_area = { #3
@@ -3641,11 +3663,11 @@ connecticut_valley_area = { #3
 }
 
 hudson_valley_area = { #4
-    961 963 964 2559 4912
+    961 964 2559 4912
 }
 
 new_york_area = { #3 NEW
-    965 2558 2639
+    963 965 2558 2639
 }
 
 delaware_valley_area = { #4
@@ -3661,7 +3683,7 @@ south_iroquoisia_area = { #3
 }
 
 susquehanna_area = { #4
-    955 2556 2557 4876
+    2556 2557 4876
 }
 
 westsylvania_area = { #3 NEW
@@ -3669,7 +3691,7 @@ westsylvania_area = { #3 NEW
 }
 
 maryland_area = { #3
-    953 2553 2554
+    953 955 2553 2554
 }
 
 chesapeake_area = { #5
@@ -3681,7 +3703,7 @@ great_valley_area = { #4
 }
 
 piedmont_north_america_area = { #3
-    2544 2545 4878
+    2544 2545 4878 
 }
 
 carolinas_area = { #4
@@ -3717,23 +3739,23 @@ appalachia_area = { #3
 }
 
 south_appalachia_area = { #3
-    935 936 2527 4879
+    935 2527 4879 936
 }
 
 west_florida_area = { #5
-    921 922 923 2530 2533
+    922 923 2533 924 925 
 }
 
 mississippi_area = { #4
-    919 920 2528 2529 4884
+   920 2528 2529 4884
 }
 
 choctaw_area = { #4
-    918 934 939 4913
+   918 919 939
 }
 
 alabama_area = { #5
-    924 925 2531 2532 4883
+   934 4913 2531 2532 4883
 }
 
 kentucky_area = { #3
@@ -3741,7 +3763,7 @@ kentucky_area = { #3
 }
 
 western_kentucky_area = { #3 NEW
-    940 4887 4921
+    940 4921 4887
 }
 
 ohio_country_area = { #5
@@ -3777,7 +3799,7 @@ wisconsin_area = { #4
 }
 
 lower_louisiana_area = { # 3
-    893 2014 2516
+    893 2014 2516 921 2530 
 }
 
 upper_louisiana_area = { #4
@@ -4076,7 +4098,7 @@ mixteca_area = { #4
 }
 
 eastern_mexico_area = { #5
-    2630 2631 2647
+    2630 2631 2632 2647
 }
 
 huasteca_area = {
@@ -4088,7 +4110,7 @@ chiapas_area = { #4
 }
 
 yucatan_area = { #5
-    846 2633 2651 4590
+    846 2633 4590
 }
 
 east_yucatan_area = { #4
@@ -4096,7 +4118,7 @@ east_yucatan_area = { #4
 }
 
 campeche_area = { #3
-    845 2632 2650 
+    845 2650 2651
 }
 
 guatemala_area = { #4
@@ -4140,7 +4162,7 @@ dominica_area = { #5
 }
 
 greater_antilles_area = { #4
-    487 481 491 492
+    487 481 491 492 502
 }
 
 lucayan_area = { #2

@@ -27,7 +27,6 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			# is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = PRG }
@@ -48,6 +47,8 @@ country_decisions = {
 				}
 			}
 			change_tag = PRG
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

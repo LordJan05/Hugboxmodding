@@ -101,7 +101,7 @@ bonus = {
 }
 
 bonus = {
-    key = crown_land_level_9
+    key = crown_land_level_8_1
     range_from = 80.0
     range_to = 90.0
     modifier = {
@@ -115,7 +115,7 @@ bonus = {
 }
 
 bonus = {
-    key = crown_land_level_10
+    key = crown_land_level_9
     range_from = 90.0
     range_to = 100.0
     modifier = {
@@ -129,7 +129,7 @@ bonus = {
 }
 
 bonus = {
-    key = crown_land_level_11
+    key = crown_land_level_10
     range_from = 100.0
     range_to = 9001.0
     modifier = {

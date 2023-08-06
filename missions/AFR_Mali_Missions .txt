@@ -640,6 +640,7 @@ mali_conquest_slot = {
 				limit = {
 					exists = JOL
 					JOL = {
+						ai = yes
 						is_free_or_tributary_trigger = yes
 					}
 				}
@@ -692,7 +693,7 @@ mali_conquest_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sahara_area = {
+			tanezruft_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -757,7 +758,7 @@ mali_conquest_slot = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			total_development = 350
+			#total_development = 350
 			num_of_owned_provinces_with = {
 				region = sahel_region
 				value = 12
@@ -1051,9 +1052,9 @@ mali_empire_slot = {
 		}
 		effect = {
 			mal_add_disaster_stability = yes
-			country_event = {
-				id = flavor_mal.28
-			}
+			#country_event = {
+			#	id = flavor_mal.28
+			#}
 		}
 		ai_weight = {
 			factor = 500	#Important for them so they can survive
@@ -1325,15 +1326,15 @@ mali_slot_disaster_slot = {
 		trigger = {
 			estate_loyalty = {
 				estate = estate_burghers
-				loyalty = 60
+				loyalty = 50
 			}
 			estate_loyalty = {
 				estate = estate_church
-				loyalty = 60
+				loyalty = 50
 			}
 			estate_loyalty = {
 				estate = estate_nobles
-				loyalty = 60
+				loyalty = 50
 			}
 		}
 		effect = {
@@ -1359,7 +1360,7 @@ mali_slot_disaster_slot = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 				has_owner_accepted_culture = no
-				NOT = { development = 15 }
+				#NOT = { development = 15 }
 			}
 		}
 		trigger = {
@@ -1368,9 +1369,9 @@ mali_slot_disaster_slot = {
 				primary_culture = senegambian
 				accepted_culture = senegambian
 			}
-			1114 = {
-				development = 15
-			}
+			#1114 = {
+			#	development = 15
+			#}
 			OR = {
 				NOT = { exists = KBU }
 				KBU = {
@@ -1408,7 +1409,7 @@ mali_slot_disaster_slot = {
 		trigger = {
 			NOT = { exists = FUL }
 			NOT = { exists = KBU }
-			stability = 2
+			stability = 1
 			NOT = { num_of_rebel_armies = 1 }
 		}
 		effect = {

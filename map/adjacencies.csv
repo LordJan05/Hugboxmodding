@@ -6,6 +6,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1033;1031;sea;1386;-1;-1;-1;-1;Sakhalin-Peni'un'kur JAPAN
 2154;1829;sea;1372;-1;-1;-1;-1;Xiamen-Kelang TAIWAN
 4350;656;sea;1395;-1;-1;-1;-1;Manila-Mindoro PHILIPPINE
+655;637;sea;1368;-1;-1;-1;-1;Palawan-ApiApi PHILIPPINE
+4354;651;sea;1398;-1;-1;-1;-1;Zamboanga-Sulu PHILIPPINE
+651;2703;sea;1398;-1;-1;-1;-1;Sulu-Lehad Datu PHILIPPINE
 4049;4020;sea;1449;-1;-1;-1;-1;Comoros-Ibo MADAGASCAR
 4020;4022;sea;1449;-1;-1;-1;-1;Comoros-Iboina MADAGASCAR
 2982;126;sea;1305;-1;-1;-1;-1;Siracusa-Malta MEDITERRANEAN
@@ -66,6 +69,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 990;4893;sea;4972;-1;-1;-1;-1;Maisouna-Nebesek GREAT LAKES
 994;4893;sea;4972;-1;-1;-1;-1;Stadacona-Nebesek GREAT LAKES
 994;2583;sea;4972;-1;-1;-1;-1;Stadacona-Kikonteku GREAT LAKES
+5054;5001;sea;1797;-1;-1;-1;-1;Dar Runga-Congo Basin AFRICA WASTELANDS
+5045;5001;sea;1797;-1;-1;-1;-1;Bangi-Congo Basin AFRICA WASTELANDS
+5012;5001;sea;1797;-1;-1;-1;-1;Aruwimi-Congo Basin AFRICA WASTELANDS
+5036;5001;sea;1797;-1;-1;-1;-1;Nyanza-Congo Basin AFRICA WASTELANDS
+4953;5001;sea;1797;-1;-1;-1;-1;Boma-Congo Basin AFRICA WASTELANDS
+4958;5001;sea;1797;-1;-1;-1;-1;Ruweng-Congo Basin AFRICA WASTELANDS
+5090;5001;sea;1797;-1;-1;-1;-1;Marra-Congo Basin AFRICA WASTELANDS
+4992;5004;sea;1801;-1;-1;-1;-1;Ovambo-Kalahari AFRICA WASTELANDS
+5756;5004;sea;1801;-1;-1;-1;-1;Otjomuise-Kalahari AFRICA WASTELANDS
+5121;5004;sea;1801;-1;-1;-1;-1;Koranna-Kalahari AFRICA WASTELANDS
+4782;5004;sea;1801;-1;-1;-1;-1;Tswana-Kalahari AFRICA WASTELANDS
+4981;5004;sea;1801;-1;-1;-1;-1;Batoana-Kalahari AFRICA WASTELANDS
 #############################################
 333;4559;sea;1300;-1;-1;-1;-1;Majorca-Minorca
 4560;333;sea;1295;-1;-1;-1;-1;Ibiza-Majorca

@@ -23,8 +23,8 @@ sea_TEU_ideas = {
 		land_forcelimit_modifier = 0.15
 	}
 	brother_knight_idea = { # Part of the_spirits_of_tannenberg mission.
-		shock_damage = 0.2
-		land_morale = 0.15
+		shock_damage = 0.1
+		land_morale = 0.1
 	}
 	teu_idea_4 = {
 		papal_influence = 1
@@ -65,7 +65,7 @@ sea_SJK_ideas = { # Seljuk Empire
 	}
 	sjk_the_grey_sheeps_of_qoyunlus = {
 		land_morale = 0.15
-		yearly_tribal_allegiance = 2
+		monthly_tribal_allegiance = 0.2
 	}
 	sjk_qar_dynamic_warfare = {
 		leader_land_manuever = 1
@@ -131,7 +131,7 @@ sea_NSE_ideas = { # North Sea Empire
 	}
 	
 	bonus = {
-		blockade_efficiency = 0.33
+		blockade_efficiency = 0.25
 		allowed_marine_fraction = 0.5
 	}
 	
@@ -149,8 +149,8 @@ sea_NSE_ideas = { # North Sea Empire
 		global_sailors_modifier = 0.15 # 0.2
 	}
 	nse_sharing_common_naval_traditions = {
-		naval_morale = 0.15
-		heavy_ship_power = 0.15
+		naval_morale = 0.1
+		heavy_ship_power = 0.05
 	}
 	nse_proficient_army = {
 		discipline = 0.05
@@ -171,7 +171,7 @@ sea_NSE_ideas = { # North Sea Empire
 }
 sea_ABA_ideas = { # Abbasid Chaliphate
 	start = {
-		cavalry_power = 0.2 # 0.25
+		cavalry_power = 0.15 # 0.25
 		movement_speed = 0.1 # 0.2
 	}
 	
@@ -260,8 +260,8 @@ sea_GMV_ideas = { # Copy of vanilla Moravia but better ideas.
 
 sea_LUS_ideas = { # Lusitanian aka Portuguese Empire
 	start = {
-		global_sailors_modifier = 0.2
-		allowed_marine_fraction = 0.7
+		global_sailors_modifier = 0.15
+		allowed_marine_fraction = 0.5
 	}
 	
 	bonus = {
@@ -276,11 +276,11 @@ sea_LUS_ideas = { # Lusitanian aka Portuguese Empire
 	
 	LUS_legacy_of_the_navigator = {
 		leader_naval_manuever = 1
-		naval_morale = 0.15
+		naval_morale = 0.1
 		sea_repair = yes
 	}
 	LUS_afonsine_ordinances = {
-		global_trade_goods_size_modifier = 0.2
+		global_trade_goods_size_modifier = 0.1
 		infantry_power = 0.15
 	}
 	LUS_case_de_india = {
@@ -296,12 +296,12 @@ sea_LUS_ideas = { # Lusitanian aka Portuguese Empire
 		development_cost = -0.05
 	}
 	LUS_royal_absolutism = {
-		discipline = 0.05
+		discipline = 0.025
 		yearly_absolutism = 0.5
 	}
 	LUS_por_royal_military_academy = {
 		defensiveness = 0.25
-		artillery_fire = 1
+		artillery_fire = 0.75
 	}
 }
 
@@ -391,8 +391,8 @@ sea_AUE_ideas = { # Austrian Empire
 }
 sea_AHE_ideas = { # Austro-Hungarian Empire
 	start = {
-		land_morale = 0.175 # Before: land_morale = 0.2
-		manpower_recovery_speed = 0.15
+		land_morale = 0.2
+		manpower_recovery_speed = 0.1
 	}
 	
 	bonus = {
@@ -409,7 +409,7 @@ sea_AHE_ideas = { # Austro-Hungarian Empire
 		province_warscore_cost = -0.2
 	}
 	ahe_bulwark_of_christianity = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.15
 		land_forcelimit_modifier = 0.15
 	}
 	ahe_fugger_banks = {
@@ -433,7 +433,7 @@ sea_AHE_ideas = { # Austro-Hungarian Empire
 }
 sea_HAE_ideas = { # Hungro-Austrian Empire
 	start = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		recover_army_morale_speed = 0.05
 	}
 	
@@ -452,8 +452,8 @@ sea_HAE_ideas = { # Hungro-Austrian Empire
 		province_warscore_cost = -0.2
 	}
 	hae_bulwark_of_christianity = {
-		global_manpower_modifier = 0.2
-		land_forcelimit_modifier = 0.15
+		global_manpower_modifier = 0.15
+		land_forcelimit_modifier = 0.1
 	}
 	hae_hofkriegsrat = {
 		reinforce_speed = 0.3
@@ -560,10 +560,10 @@ sea_BYS_ideas = { # Barbary States
 sea_ETS_ideas = { # Emirate of Two Sicilies
 	start = {
 		may_perform_slave_raid = yes
-		galley_power = 0.25	
+		galley_power = 0.2
 	}
 	bonus = {
-		naval_forcelimit_modifier = 0.25
+		naval_forcelimit_modifier = 0.2
 		global_trade_goods_size_modifier = 0.1
 	}
 	trigger = {
@@ -571,7 +571,7 @@ sea_ETS_ideas = { # Emirate of Two Sicilies
 	}
 	free = yes
 	ets_tun_catalan_guard = {
-		infantry_power = 0.1
+		infantry_power = 0.075
 		land_morale = 0.075
 	}
 	ets_dual_diplomacy = {
@@ -583,12 +583,12 @@ sea_ETS_ideas = { # Emirate of Two Sicilies
 		production_efficiency = 0.1
 	}
 	ets_tun_attract_foreign_pirates = {
-		global_sailors_modifier = 0.25
-		global_manpower_modifier = 0.2
+		global_sailors_modifier = 0.2
+		global_manpower_modifier = 0.1
 	}
 	ets_tun_board_of_captains = {
 		leader_naval_manuever = 1
-		naval_morale = 0.15
+		naval_morale = 0.05
 	}
 	ets_tun_export_monopolies = {
 		global_own_trade_power = 0.2
@@ -602,7 +602,7 @@ sea_ETS_ideas = { # Emirate of Two Sicilies
 sea_FAT_ideas = {
 	start = {
 		advisor_cost = -0.1
-		galley_power = 0.2		
+		galley_power = 0.15	
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.15
@@ -638,8 +638,8 @@ sea_FAT_ideas = {
 		defensiveness = 0.3
 	}
 	fat_grand_navy = {
-		naval_forcelimit_modifier = 0.2
-		global_sailors_modifier = 0.2
+		naval_forcelimit_modifier = 0.1
+		global_sailors_modifier = 0.1
 	}
 }
 
@@ -818,8 +818,8 @@ sea_LEL_ideas = {
 		harsh_treatment_cost = -1
 	}
 	lel_pray_for_old_gods = {
-		warscore_cost_vs_other_religion = -0.2
-		manpower_in_true_faith_provinces = 0.2
+		warscore_cost_vs_other_religion = -0.1
+		manpower_in_true_faith_provinces = 0.15
 	}
 	lel_agoge = {
 		drill_gain_modifier = 0.5
@@ -829,7 +829,7 @@ sea_LEL_ideas = {
 # Vinland:
 sea_VIN_ideas = {
 	start = {
-		ship_durability = 0.2
+		ship_durability = 0.1
 		discipline = 0.05
 		sea_repair = yes
 	}
@@ -876,7 +876,7 @@ sea_VIN_ideas = {
 # Kemet:
 sea_KEM_ideas = {
 	start = {
-		naval_morale = 0.1
+		naval_morale = 0.075
 		trade_efficiency = 0.2
 	}
 	
@@ -893,11 +893,11 @@ sea_KEM_ideas = {
 	free = yes
 	
 	kem_successors_of_ra = {
-		manpower_in_true_faith_provinces= 0.15
+		manpower_in_true_faith_provinces = 0.1
 		land_morale = 0.1
 	}
 	kem_chariots_of_war = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		cavalry_shock = 0.5
 	}
 	kem_children_of_the_gods = {
@@ -924,8 +924,8 @@ sea_KEM_ideas = {
 # Atlantis:
 sea_ATL_ideas = {
 	start = {
-		allowed_marine_fraction = 0.9
-		discipline = 0.05
+		allowed_marine_fraction = 1
+		discipline = 0.075
 		sea_repair = yes
 	}
 	
@@ -945,18 +945,18 @@ sea_ATL_ideas = {
 	}
 	atl_beyond_pillars_of_herculers = {
 		naval_forcelimit_modifier = 0.25
-		global_sailors_modifier = 0.25
+		global_sailors_modifier = 0.33
 	}
 	atl_protected_by_poseiodon = {
 		own_coast_naval_combat_bonus = 1
 		defensiveness = 0.5
 	}
 	atl_ideal_state_of_republic = {
-		republican_tradition = 0.2
+		republican_tradition = 0.3
 		prestige = 1.5
 	}
 	atl_learned_from_mistakes = {
-		naval_morale = 0.15
+		naval_morale = 0.1
 		artillery_fire = 1
 	}
 	atl_chastise_the_corrupt = {
@@ -964,7 +964,7 @@ sea_ATL_ideas = {
 		global_unrest = -2
 	}
 	atl_restore_long_lost_empire = {
-		province_warscore_cost = -0.2
+		province_warscore_cost = -0.1
 		administrative_efficiency = 0.05
 	}
 }
@@ -978,7 +978,7 @@ sea_RHI_ideas = {
 	
 	bonus = {
 		discipline = 0.05
-		land_morale = 0.1
+		#land_morale = 0.1
 	}
 	
 	trigger = {
@@ -1012,53 +1012,5 @@ sea_RHI_ideas = {
 	}
 	rhi_wes_cities_of_the_rhineland = {
 		global_prov_trade_power_modifier = 0.15
-	}
-}
-
-# Angevin Empire:
-sea_ANG_ideas = {
-	start = {
-		infantry_power = 0.1
-		global_manpower_modifier = 0.2
-	}
-	
-	bonus = {
-		discipline = 0.05
-		global_unrest = -2
-	}	
-
-	trigger = {
-		tag = ANG
-	}
-	free = yes		#will be added at load.
-	
-	ang_gbr_acts_of_union = {
-		diplomatic_annexation_cost = -0.15
-		governing_capacity_modifier = 0.15
-	}
-	ang_elan = {
-		land_morale = 0.2
-		fire_damage = 0.1
-	}
-	ang_estates_general = {
-		global_tax_modifier = 0.2
-		free_leader_pool = 1
-	}
-	ang_british_industrialization = {
-		global_trade_goods_size_modifier = 0.1
-		production_efficiency = 0.1
-	}
-	ang_royal_navy = {
-		navy_tradition = 0.33
-		heavy_ship_power = 0.15
-		allowed_marine_fraction = 0.33
-	}
-	ang_gbr_the_royal_society = {
-		technology_cost = -0.05
-		idea_cost = -0.05
-	}
-	ang_british_merchant_navy = {
-		merchants = 2
-		trade_efficiency = 0.15
 	}
 }

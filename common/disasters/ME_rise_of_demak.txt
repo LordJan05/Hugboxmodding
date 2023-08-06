@@ -2,7 +2,7 @@ ME_rise_of_demak = {
 	ended_by_country_breaking_to_rebels = no
 	potential = {
 		has_disaster = ME_decline_of_majapahit
-		
+		NOT = { has_country_flag = demak_seceded_flag }
 	}
 	
 	can_start = {

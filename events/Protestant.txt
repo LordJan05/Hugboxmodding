@@ -49,7 +49,16 @@ country_event = {
 				culture_group = germanic
 				culture_group = scandinavian
 				culture_group = british
+				culture = angevin_english
+				culture = angevin_welsh
+				culture = angevin_cornish
+				primary_culture = anglois
+				primary_culture = angevin_english
 				culture_group = west_slavic
+				primary_culture = czech_new
+				primary_culture = sorbian_new
+				primary_culture = schlesian_new
+				primary_culture = polish_new
 			}
 		}
 		modifier = {
@@ -106,6 +115,18 @@ country_event = {
 		modifier = {
 			factor = 2.0
 			government = theocracy
+		}
+		modifier = {
+			factor = 2
+			has_dlc = "Rule Britannia"	#For Anglicanism
+			OR = {
+				culture_group = british
+				culture = angevin_english
+				culture = angevin_welsh
+				culture = angevin_cornish
+				primary_culture = anglois
+				primary_culture = angevin_english
+			}
 		}
 		modifier = {
 			factor = 8.0

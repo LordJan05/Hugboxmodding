@@ -358,7 +358,7 @@ jol_missions_conquest_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sahara_area = {
+			tanezruft_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

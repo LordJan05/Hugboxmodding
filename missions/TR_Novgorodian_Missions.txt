@@ -364,7 +364,10 @@ tr_novgorod_1 = {
 				owner = {
 					AND = {
 						dynasty = "Rurikovich"
-						culture_group = east_slavic
+						OR = {
+							culture_group = east_slavic
+							culture_group = slavic
+						}
 					}
 				}
 			}
@@ -377,7 +380,10 @@ tr_novgorod_1 = {
 				any_country = {
 					AND = {
 						dynasty = "Rurikovich"
-						culture_group = east_slavic
+						OR = {
+							culture_group = east_slavic
+							culture_group = slavic
+						}
 						NOT = {
 							is_subject_of = ROOT
 						}
@@ -754,6 +760,7 @@ tr_novgorod_3 = {
 			set_country_flag = united_finland_flag
 			change_primary_culture = finnish
 			change_tag = FIN
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			if = {
 				limit = {

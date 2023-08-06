@@ -219,11 +219,17 @@ grain_depot = {
 	time = 36
 	build_trigger = { # Adm Tech 16
 		is_core = FROM
-		trade_goods = grain
+		OR = {
+			trade_goods = grain
+			trade_goods = grain_livestock
+		}
 	}
 	keep_trigger = { # Adm Tech 16
 		is_core = FROM
-		trade_goods = grain
+		OR = {
+			trade_goods = grain
+			trade_goods = grain_livestock
+		}
 	}
 	modifier = {
 		land_forcelimit_modifier = 0.05

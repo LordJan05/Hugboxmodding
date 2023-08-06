@@ -11,6 +11,7 @@ por_african_ambitions = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -131,6 +132,7 @@ por_moroccan_conquest = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -247,6 +249,7 @@ por_brazilian_ambitions = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -330,6 +333,7 @@ por_east_african_ambitions = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -546,6 +550,7 @@ por_south_africa_mission = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -601,6 +606,7 @@ por_zanzibar_mission = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 
@@ -647,6 +653,7 @@ por_indonesia_trade_dominance = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 
@@ -688,6 +695,7 @@ por_hormuz_mission = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	

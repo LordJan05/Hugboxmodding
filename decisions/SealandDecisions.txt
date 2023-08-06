@@ -197,6 +197,7 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = GMV
+			on_change_tag_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
@@ -510,6 +511,7 @@ country_decisions = { # Weaker Prussia
 		}
 		effect = {
 			change_tag = PRA
+			on_change_tag_effect = yes
 			set_country_flag = formed_prussia_flag
 			set_country_flag = formed_pomerania_flag
 			set_country_flag = formed_hannover_flag
@@ -662,6 +664,7 @@ country_decisions = { # Weaker Prussia
 		}
 		effect = {
 			change_tag = RHI
+			on_change_tag_effect = yes
 			set_country_flag = formed_prussia_flag
 			set_country_flag = formed_pomerania_flag
 			set_country_flag = formed_hannover_flag
@@ -770,6 +773,7 @@ country_decisions = { # Weaker Prussia
 		}
 		effect = {
 			change_tag = AUE
+			on_change_tag_effect = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			set_country_flag = formed_austrian_empire_flag
@@ -927,6 +931,7 @@ country_decisions = { # Weaker Prussia
 		}
 		effect = {
 			change_tag = HAE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = monarchy }
@@ -1216,6 +1221,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = BYS
+			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
@@ -1341,6 +1347,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = BIE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					tag = BYS
@@ -1564,6 +1571,7 @@ country_decisions = { # converting to Zoroastrian:
 		effect = {
 			set_country_flag = formed_sasanid_empire_flag
 			change_tag = SAS
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = monarchy }
@@ -1721,10 +1729,44 @@ country_decisions = { # converting to Zoroastrian:
 		effect = {
 			set_country_flag = formed_achaemenid_empire_flag
 			change_tag = ACE
+			on_change_tag_effect = yes
 			add_prestige = 100
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+}
+
+# Spain:
+country_decisions = {
+	tercios_special_fire_units_decision = {
+		major = yes
+		potential = {
+			NOT = { has_country_modifier = tercios_special_fire_units }
+			has_reform = tercios_reform
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		allow = {
+			has_reform = tercios_reform
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		effect = {
+			custom_tooltip = tercios_special_fire_units_decision_tt
+			add_country_modifier = {
+				name = tercios_special_fire_units
+				duration = -1
+				hidden = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }
@@ -1785,6 +1827,7 @@ country_decisions = {
 		effect = {
 			set_country_flag = united_estonia_flag
 			change_tag = EST
+			on_change_tag_effect = yes
 			set_capital = 36
 			if = {
 				limit = {
@@ -1876,6 +1919,7 @@ country_decisions = {
 		effect = {
 			set_country_flag = united_finland_flag
 			change_tag = FIN
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			if = {
 				limit = {
@@ -2218,6 +2262,7 @@ country_decisions = {
 	# Africa Corridor:
 	sea_colonize_east_sahara_corridor = {
 		potential = {
+			always = no # Turned off since added more provinces
 			NOT = { tag = TUN }
 			2474 = { is_empty = yes }
 			2475 = { is_empty = yes }
@@ -2265,6 +2310,7 @@ country_decisions = {
 	}
 	sea_colonize_west_sahara_corridor = {
 		potential = {
+			always = no # Turned off since added more provinces
 			NOT = { tag = MOR }
 			1127 = { is_empty = yes }
 			OR = {
@@ -2363,6 +2409,46 @@ country_decisions = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+	sea_roulette_game = {
+		potential = {
+			always = yes
+		}
+		allow = {
+			mil_power = 50
+			if = {
+				limit = {
+					has_country_flag = sea_roulette_game_timeout_tt
+				}
+				custom_trigger_tooltip = {
+					tooltip = sea_roulette_game_tt
+					had_country_flag = {
+						flag = sea_roulette_game_timeout_tt
+						days = 3650
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = sea_roulette_game_ttt
+			hidden_effect = {
+				if = {
+					limit = {
+						any_owned_province = { has_province_modifier = sea_roulette_game_triggered_modifier }
+					}
+					every_owned_province = { clr_province_flag = sea_roulette_game_modifier_flag }
+					every_owned_province = { remove_province_triggered_modifier = sea_roulette_game_triggered_modifier }
+				}
+				capital_scope = {
+					add_province_triggered_modifier = sea_roulette_game_triggered_modifier
+					set_province_flag = sea_roulette_game_modifier_flag
+				}
+				set_country_flag = sea_roulette_game_timeout_tt
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	bagirmi_move_capital_decision = {
 		major = yes
 		potential = {
@@ -2390,6 +2476,7 @@ country_decisions = {
 	reform_ottoman_empire = {
 		major = yes
 		potential = {
+			always = no # Put into mission and removed reformed Janissaries decisions for OSM
 			normal_or_historical_nations = yes
 			NOT = { has_country_flag = reformed_ottoman_empire_flag }
 			OR = {
@@ -2437,6 +2524,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = OSM
+			on_change_tag_effect = yes
 			hidden_effect = {
 				swap_free_idea_group = yes
 			}
@@ -2463,8 +2551,8 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2487,8 +2575,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2519,8 +2607,8 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2543,8 +2631,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2575,8 +2663,8 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2605,8 +2693,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2652,11 +2740,11 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			OR = {
-				tag = TUR
-				tag = OSM
+			#OR = {
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
-			}
+			#}
 		}
 		provinces_to_highlight = {
 			region = persia_region
@@ -2676,8 +2764,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2708,8 +2796,8 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2732,8 +2820,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2764,8 +2852,8 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -2800,8 +2888,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			OR = {
-				tag = TUR
-				tag = OSM
+				#tag = TUR
+				#tag = OSM
 				tag = RUM
 				tag = SJK
 			}
@@ -3060,6 +3148,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SON
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { primary_culture = songhai }
@@ -3152,6 +3241,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = BNG
+			on_change_tag_effect = yes
 			restore_country_name = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -3246,6 +3336,7 @@ country_decisions = {
 		potential = {
 			always = yes
 			NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
+			NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_event_active }
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -3280,9 +3371,8 @@ country_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = sea_mercs_inf_to_cav_switch_cooldown
-			set_country_flag = sea_mercs_inf_to_cav_switch_flag
-			custom_tooltip = sea_mercs_inf_to_cav_switch_tt
+			set_country_flag = sea_mercs_inf_to_cav_switch_event_active
+			country_event = { id = sealand_events.24 }
 		}
 		ai_will_do = {
 			factor = 0
@@ -3769,6 +3859,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = IJP
+			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

@@ -625,6 +625,7 @@ sealand_denmark_missions_2 = {
 		}
 		effect = {
 			change_tag = NSE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = {
@@ -1165,6 +1166,7 @@ sealand_denmark_missions_4 = {
 				duration = 5475
 			}
 			change_tag = KLU
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = {

@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = iqta
+add_government_reform = moroccan_sultanate_reform
 primary_culture = moroccan
 religion = sunni
 technology_group = muslim
@@ -10,7 +10,6 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
-
 add_treasury = 200
 
 change_estate_land_share = {

@@ -73,6 +73,8 @@ country_decisions = {
 				}
 			}
 			change_tag = VNZ
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					has_custom_ideas = no

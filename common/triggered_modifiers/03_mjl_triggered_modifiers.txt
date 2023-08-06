@@ -47,6 +47,7 @@ new_world_player_nerf = {
 	potential = {
 		OR = {	
 			is_colonial_nation = yes
+			has_reform = trade_company_government
 			has_country_flag = changed_from_colonial_nation
 			AND = {
 				capital_scope = {
@@ -87,6 +88,7 @@ new_world_player_nerf_600 = {
 				continent = oceania
 			}
 			is_colonial_nation = yes
+			has_reform = trade_company_government
 			has_country_flag = changed_from_colonial_nation
 		}
 		was_player = yes
@@ -104,7 +106,10 @@ new_world_player_nerf_600 = {
 }
 new_world_player_nerf_1200 = {
 	potential = {
-		is_colonial_nation = yes
+		OR = {
+			is_colonial_nation = yes
+			has_reform = trade_company_government
+		}
 		was_player = yes
 	}
 
@@ -120,7 +125,10 @@ new_world_player_nerf_1200 = {
 }
 new_world_player_nerf_2400 = {
 	potential = {
-		is_colonial_nation = yes
+		OR = {
+			is_colonial_nation = yes
+			has_reform = trade_company_government
+		}
 		was_player = yes
 	}
 

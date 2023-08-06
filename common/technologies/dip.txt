@@ -3,8 +3,7 @@ monarch_power = DIP
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	trade_efficiency = 0.2
-
-
+	monthly_russian_modernization = 0.05
 	yearly_corruption = -0.05
 }
 
@@ -281,6 +280,7 @@ technology = { #Development of Maritime Law
 	trade_range				=	20
 	
 	admiralty = yes
+	allow_client_states = yes		
 
 }
 
@@ -420,7 +420,6 @@ technology = { #Heavy Frigates
 	
 	global_colonial_growth  = 	25	
 	range					=	150
-	allow_client_states = yes		
 
 	
 	enable = heavy_frigate

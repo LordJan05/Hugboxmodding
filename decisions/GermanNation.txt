@@ -117,6 +117,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GER
+			on_change_tag_effect = yes
 			restore_country_name_effect = yes
 			if = {
 				limit = {
@@ -171,7 +172,7 @@ country_decisions = {
 					NOT = { government = republic }
 					NOT = { government = monarchy }
 				}
-				change_government_to_monarchy = yes
+				change_government = monarchy
 				add_government_reform = germany_monarchy
 			}
 			if = {

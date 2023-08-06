@@ -663,7 +663,7 @@ MSA_Missions_Expansion_3 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						religion = hindu
+						religion_group = dharmic
 					}
 					add_country_modifier = {
 						name = MSA_legacy_of_the_hindu_empire
@@ -3331,9 +3331,32 @@ MSA_Missions_Hindu_1 = {
 		required_missions = { MSA_disciples }
 		position = 24
 		trigger = {
-			OR = {
-				has_ruler_modifier = hindu_withdrawn_contemplation
-				has_ruler_modifier = jnana
+			if = {
+				limit = {
+					religion = hinduism
+				}
+				OR = {
+					has_ruler_modifier = hindu_withdrawn_contemplation
+					has_ruler_modifier = jnana
+				}
+			}
+			if = {
+				limit = {
+					religion = sikhism
+				}
+				OR = {
+					current_guru_is = guru_nanak
+					current_guru_is = guru_angad
+					current_guru_is = guru_amar_das
+					current_guru_is = guru_ram_das
+					current_guru_is = guru_arjan
+					current_guru_is = guru_hargobind
+					current_guru_is = guru_har_rai
+					current_guru_is = guru_har_krishan
+					current_guru_is = guru_tegh_bahadur
+					current_guru_is = guru_gobind_singh
+					current_guru_is = guru_granth_sahib
+				}
 			}
 		}
 		effect = {
@@ -3516,7 +3539,7 @@ MSA_Missions_Hindu_3 = {
 			num_of_allies = 2
 			calc_true_if = {
 				all_ally = {
-					religion = hinduism
+					religion_group = dharmic
 					has_opinion = {
 						who = ROOT
 						value = 100
@@ -3534,7 +3557,7 @@ MSA_Missions_Hindu_3 = {
 			hidden_effect = {
 				random_ally = {
 					limit = {
-						religion = hinduism
+						religion_group = dharmic
 						has_opinion = {
 							who = ROOT
 							value = 100
@@ -3567,29 +3590,29 @@ MSA_Missions_Hindu_3 = {
 			}
 			owner = {
 				NOT = {
-					religion = hinduism
+					religion_group = dharmic
 				}
 			}
 		}
 		trigger = {
 			552 = {
 				owner = {
-					religion = hinduism
+					religion_group = dharmic
 				}
 			}
 			536 = {
 				owner = {
-					religion = hinduism
+					religion_group = dharmic
 				}
 			}
 			2052 = {
 				owner = {
-					religion = hinduism
+					religion_group = dharmic
 				}
 			}
 			511 = {
 				owner = {
-					religion = hinduism
+					religion_group = dharmic
 				}
 			}
 		}
@@ -3602,7 +3625,7 @@ MSA_Missions_Hindu_3 = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						religion = hinduism
+						religion_group = dharmic
 					}
 					add_local_autonomy = -10
 				}
@@ -3623,8 +3646,20 @@ MSA_Missions_Hindu_3 = {
 			}
 		}
 		effect = {
-			set_country_flag = MSA_hindu_decision_flag
-			custom_tooltip = MSA_switch_diety
+			if = {
+				limit = {
+					NOT = { religion = hinduism }
+				}
+				custom_tooltip = MSA_switch_diety_pre
+			}
+			if = {
+				limit = {
+					religion = hinduism
+				}
+				set_country_flag = MSA_hindu_decision_flag
+				custom_tooltip = MSA_switch_diety
+			}
+			tooltip = { custom_tooltip = MSA_switch_diety }
 			custom_tooltip = MSA_strengthen_holy_sites_of_hindu
 			hidden_effect = {
 				remove_country_modifier = MSA_holy_sites_of_hindu

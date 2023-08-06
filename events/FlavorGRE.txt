@@ -17,7 +17,7 @@ country_event = {
 	trigger ={
 		NOT = { exists = GRE }
 		NOT = { exists = BYZ }
-		NOT = { exists = LAT }
+		NOT = { exists = LAE }
 		NOT = { has_global_flag = greek_cores }
 		NOT = { primary_culture = greek }
 		NOT = { primary_culture = pontic_greek }

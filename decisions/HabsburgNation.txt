@@ -68,6 +68,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = HAB
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { primary_culture = austrian }

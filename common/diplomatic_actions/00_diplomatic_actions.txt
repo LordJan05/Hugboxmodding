@@ -116,6 +116,45 @@ declarewar = {
 #			}
 #		}
 #	}
+	condition = {
+		tooltip = AI_CANNOT_DECLARE_WHEN_STABILITY_LOSS
+		potential = {
+			ai = yes
+		}
+		allow = {
+			ai = yes
+			NOT = {
+				has_global_modifier_value = {
+					which = stability_cost_to_declare_war
+					value = 1
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DECLARE_WARS_OTHER_THAN_INDEPENDENCE_WARS
+		potential = {
+			has_country_modifier = revoked_war_rights
+			FROM = { NOT = { overlord_of = ROOT } }
+		}
+		allow = {
+			OR = {
+				NOT = { has_country_modifier = revoked_war_rights }
+				FROM = { overlord_of = ROOT }
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
+		potential = {
+			ai = yes 
+			has_country_flag = teu_joined_the_hre
+			FROM = { is_part_of_hre = yes }
+		}
+		allow = { 
+			FROM = { is_part_of_hre = no }
+		}
+	}
 	#
 	condition = {
 		tooltip = mjl_cn_cannot_be_independent
@@ -223,6 +262,7 @@ declarewar = {
 	}
 	#
 	effect = {
+		on_war_declaration_effect = yes
 		if = {
 			limit = { 
 				has_country_flag = nor_norwegian_independence_modifier
@@ -331,12 +371,30 @@ allianceaction = {
 		}
 		allow = {
 			OR = {
-				OR = {
-					government = republic 
-					is_revolutionary = yes
-				}
+				government = republic 
+				is_revolutionary = yes
 				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics_or_non_rev } }
 			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_MAKE_ALLIANCES
+		potential = {
+			has_government_attribute = cannot_form_alliances
+		}
+		allow = {
+			NOT = { has_government_attribute = cannot_form_alliances }
+		}
+	}
+	condition = {
+		tooltip = FROM_CANNOT_MAKE_ALLIANCES
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_form_alliances
+			}
+		}
+		allow = {
+			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
 		}
 	}
 	#
@@ -406,6 +464,38 @@ allianceaction = {
 		}
 		allow = {
 			is_year = 1500
+		}
+	}
+	condition = {
+		tooltip = cannot_ally_colonial_nations
+		potential = {
+			FROM = { 
+				is_colonial_nation = yes
+			}
+		}
+		allow = {
+			ROOT = {
+				OR = {
+					is_colonial_nation = yes
+					has_reform = trade_company_government
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = cannot_ally_trade_company_government
+		potential = {
+			FROM = { 
+				has_reform = trade_company_government
+			}
+		}
+		allow = {
+			ROOT = { 
+				OR = {
+					is_colonial_nation = yes
+					has_reform = trade_company_government
+				}
+			}
 		}
 	}
 }
@@ -537,23 +627,11 @@ annexationaction = {
 		tooltip = ANNEX_TOO_LOW
 		potential = {
 			FROM = {
-				vassal_of = ROOT
-			}
-		}
-		allow = {
-			FROM = {
-				has_opinion = {
-					who = ROOT
-					value = 190
+				OR = {
+					is_subject_of_type = core_eyalet
+					is_subject_of_type = appanage
+					vassal_of = ROOT
 				}
-			}
-		}
-	}
-	condition = {
-		tooltip = ANNEX_TOO_LOW
-		potential = {
-			FROM = {
-				is_subject_of = ROOT
 			}
 		}
 		allow = {
@@ -581,6 +659,58 @@ annexationaction = {
 	#		}
 	#	}
 	#}
+	condition = {
+		tooltip = CANNOT_ANNEX
+		potential = {
+			FROM = {
+				has_country_modifier = tur_mamlukian_administration
+			}
+		}
+		allow = {
+			FROM = {
+				NOT = { has_country_modifier = tur_mamlukian_administration }
+			}
+		}
+	}
+	condition = {
+		tooltip = NEEDS_50_CROWNLAND_TT
+		potential = {
+			has_government_attribute = need_crownland_to_annex
+			NOT = { crown_land_share = 50 }
+		}
+		allow = {
+			crown_land_share = 50
+		}
+	}
+	condition = {
+		tooltip = NEEDS_TO_HAVE_SEIZED_LAND
+		potential = {
+			has_government_attribute = has_appanages
+			NOT = {
+				check_variable = {
+					which = can_annex_appanages_points
+					value = 1
+				}
+			}
+		}
+		allow = {
+			check_variable = {
+				which = can_annex_appanages_points
+				value = 1
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = { is_subject_of_type = appanage }
+			}
+			subtract_variable = {
+				which = can_annex_appanages_points
+				value = 1
+			}
+		}
+	}
 }
 
 integrationaction = {
@@ -607,6 +737,19 @@ integrationaction = {
 			NOT = { has_government_attribute = cannot_integrate_personal_unions }
 		}
 	}
+	condition = {
+		tooltip = CANNOT_ANNEX
+		potential = {
+			FROM = {
+				has_country_modifier = tur_mamlukian_administration
+			}
+		}
+		allow = {
+			FROM = {
+				NOT = { has_country_modifier = tur_mamlukian_administration }
+			}
+		}
+	}
 }
 
 vassalaction = {
@@ -627,7 +770,7 @@ vassalaction = {
 	}
 }
 
-abandon_union_action = {
+abandon_union = {
 	condition = {
 		potential = {
 		}
@@ -663,7 +806,7 @@ form_coalition = {
 				has_opinion_modifier = {
 					modifier = aggressive_expansion
 					who = FROM
-					value = -50
+					value = -49
 				}
 			}
 		}
@@ -826,6 +969,15 @@ support_independence_action = {
 		}
 		allow = {
 			FROM = { overlord = { ai = yes } }
+		}
+	}
+	condition = {
+		tooltip = appanages_cannot_ask_for_independence_support_tt
+		potential = {
+			ROOT = { is_subject_of_type = appanage }
+		}
+		allow = {
+			ai = no
 		}
 	}
 }
@@ -1211,6 +1363,13 @@ ask_for_tributary_state_action = {
 		}
 	}
 }
+
+break_alliance = {
+	effect = {
+		on_alliance_broken_effect = yes
+	}
+}
+
 callaction= {
 	condition = {
 		tooltip = cannot_call_defender_of_faith

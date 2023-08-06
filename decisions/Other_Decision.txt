@@ -34,7 +34,6 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1948 #Bidar
-				province_id = 542 #Hyderabad
 				province_id = 569 #Bijapur
 				province_id = 541 #Vijayanagar
 				province_id = 2089 #Chaul
@@ -66,6 +65,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = DRV
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
@@ -148,6 +148,7 @@ country_decisions = {
 				add_permanent_claim = root
 			}
 			change_tag = MHL
+			on_change_tag_effect = yes
 			add_prestige = 20
 			add_country_modifier = {
 				name = "centralization_modifier"

@@ -141,7 +141,14 @@ country_decisions = {
 	retrial_of_joan_of_arc = {
 		potential = {
 			NOT = { has_global_flag = retrial_of_joan_of_arc }
-			culture_group = french
+			OR = {
+				culture_group = french
+				culture = angevin_cosmopolitan_french
+				culture = angevin_gascon
+				culture = angevin_normand
+				culture = angevin_aquitaine
+				culture = angevin_breton
+			}
 			religion = catholic
 			owns_core_province = 184 # Orleans
 			current_age = age_of_discovery

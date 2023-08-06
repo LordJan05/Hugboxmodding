@@ -215,7 +215,7 @@ georgia_1_missions = {
 			normal_or_historical_nations = yes
 			religion = orthodox
 			NOT = { exists = BYZ }
-			NOT = { exists = LAT }
+			NOT = { exists = LAE }
 			owns_core_province = 151
 			151 = {		# Constantinople
 				is_state = yes
@@ -227,6 +227,7 @@ georgia_1_missions = {
 				move_capital_effect = yes
 			}
 			change_tag = BYZ
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { culture_group = byzantine }
@@ -302,7 +303,7 @@ georgia_1_missions = {
 				}
 				change_government_to_monarchy = yes
 			}
-			add_government_reform = byzantium_government
+			add_government_reform = byzantine_autocracy_reform
 			set_government_rank = 3
 			if = {
 				limit = { has_custom_ideas = no }

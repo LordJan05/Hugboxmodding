@@ -809,7 +809,7 @@ country_event = {
 				set_country_flag = savonarola_dead
 			}
 			2 = {
-				change_government_to_theocracy = yes
+				change_government = theocracy
 				#set_legacy_government = theocratic_government
 				add_government_reform = leading_clergy_reform
 			}
@@ -957,7 +957,7 @@ country_event = {
 	
 	option = {
 		name = flavor_tus.18.a
-		change_government_to_theocracy = yes
+		change_government = theocracy
 		add_government_reform = leading_clergy_reform
 	}
 }
@@ -1108,8 +1108,7 @@ country_event = {
 		trigger = {
 			NOT = { government = monarchy }
 		}
-		change_government_to_monarchy = yes
-		change_government_reform_progress = 100
+		change_government = monarchy
 		add_government_reform = autocracy_reform
 	}
 	option = {
@@ -1127,8 +1126,7 @@ country_event = {
 			limit = {
 				NOT = { government = republic }
 			}
-			change_government_to_republic = yes
-			change_government_reform_progress = 100
+			change_government = republic
 		}
 		if = {
 			limit = {

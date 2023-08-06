@@ -582,7 +582,7 @@ h_wuu_tier2_3 = {
 	china_wuu_huaian_push = { #Push to Huai-an
 		icon = mission_chinese_general_riding
 		required_missions = { china_wuu_yangtze_delta }
-		position = 5
+		position = 6
         provinces_to_highlight = {
 			OR = {
 				area = huai-an_area
@@ -872,7 +872,7 @@ h_wuu_tier3_2 = {
 }
 
 h_wuu_tier3_3 = {
-	slot = 3
+	slot = 2
 	generic = no
 	ai = yes
 	potential = {
@@ -957,10 +957,27 @@ h_wuu_tier3_3 = {
 			country_event = { id = foffy_china.2 } #Wang Shouren event
 		}
 	}
+}
+h_wuu_tier3_33 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = WUU
+		OR = {
+			has_reform = h_reform_warlord_1
+			has_reform = h_reform_warlord_2
+			has_reform = h_reform_warlord_3
+			has_reform = h_reform_warlord_4
+			has_reform = celestial_empire
+		}
+	}
+	has_country_shield = yes
 
 	china_wuu_tianyi_ge = { #Renovate Tianyi Ge
 		icon = mission_court_education
-		required_missions = { china_wuu_kingdom_of_wu }
+		required_missions = { china_wuu_secure_southern_border }
+		position = 7
         provinces_to_highlight = {
         	province_id = 5556
         }

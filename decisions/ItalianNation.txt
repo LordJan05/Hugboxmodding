@@ -128,6 +128,7 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			change_tag = ITA
+			on_change_tag_effect = yes
 			#this is so that a tier 1 reform is always selected, preventing the user from just never selecting one and enjoying loads of absolutism
 			if = {
 				limit = {
@@ -151,6 +152,13 @@ country_decisions = {
 			}
 			swap_non_generic_missions = yes
 			set_country_flag = formed_italy_flag
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				custom_tooltip = sea_enable_holy_states_mechanic_tt
+				set_country_flag = enable_holy_orders_flag
+			}
 		}
 		ai_will_do = {
 			factor = 400
@@ -249,6 +257,13 @@ country_decisions = {
 					change_religion = catholic
 				}
 				add_cardinal = yes
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				custom_tooltip = sea_enable_holy_states_mechanic_tt
+				set_country_flag = enable_holy_orders_flag
 			}
 			override_country_name = KINGDOM_OF_GOD
 			set_country_flag = is_kingdom_of_god_flag

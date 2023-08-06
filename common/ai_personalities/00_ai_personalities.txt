@@ -62,6 +62,13 @@ ai_colonialist = {
 			tag = SPA
 		}
 		modifier = {
+			factor = 0.2
+			OR = {
+				tag = POL
+				tag = PLC
+			}
+		}
+		modifier = {
 			factor = 100
 			tag = ATW
 		}

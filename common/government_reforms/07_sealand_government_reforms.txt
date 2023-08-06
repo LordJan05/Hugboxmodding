@@ -61,7 +61,9 @@ crusade_against_the_world = {
 	}
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
-		militarised_society = yes
+		government_abilities = {
+			militarization_mechanic
+		}
 	}
 	ai = {
 		factor = 1000
@@ -99,10 +101,16 @@ seljuk_empire_government = {
 			tribal_federation_mechanic
 		}
 		has_pashas = yes
+		has_janissaries = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man" 
+		}
 		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
 	}
 	ai = {
 		factor = 1000
@@ -126,6 +134,7 @@ barbary_states_reform = {
 	}
 	modifiers = {
 		may_perform_slave_raid = yes
+		coast_raid_range = 1
 		admiral_cost = -0.15
 		republican_tradition = -0.5
 		max_absolutism = 20
@@ -163,6 +172,7 @@ barbary_states_reform = {
 				capture_ship_chance = 0.33
 				may_perform_slave_raid_on_same_religion = yes
 				republican_tradition = 0.5
+				coast_raid_range = 2
 			}
 
 			monarchists = {
@@ -177,6 +187,7 @@ barbary_states_reform = {
 				sailors_recovery_speed = -0.2
 				republican_tradition = -1
 				navy_tradition = -1
+				coast_raid_range = -3
 			}
 		}
 	}
@@ -349,7 +360,7 @@ oirat_steppe_horde = {
 
 # Republic Tsardom
 veche_tsardom = {
-	icon = "merchant"
+	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
 		always = no # PDX decided to make one as well almost a year after I've made it. Shame.
@@ -377,6 +388,10 @@ veche_tsardom = {
 					}
 					AND = {
 						is_playing_custom_nation = yes
+						have_had_reform = veche_tsardom
+					}
+					AND = {
+						is_playing_custom_nation = yes
 						have_had_reform = tsardom
 					}
 				}
@@ -393,15 +408,22 @@ veche_tsardom = {
 	nation_designer_cost = 40
 
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
+		NOT = { primary_culture = ruthenian }
+		NOT = { primary_culture = byelorussian }
 		religion = orthodox
 	}
 
 	modifiers = {
-		global_manpower_modifier = 0.20
-		merchants = 2
-		global_autonomy = -0.05
-		governing_capacity = 250
+		global_manpower_modifier = 0.2
+		merchants = 1
+		max_absolutism = 20
+		governing_capacity = 350
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
 	}
 
 	factions = {
@@ -418,83 +440,44 @@ veche_tsardom = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
-			NOT = { has_dlc = "Third Rome" }
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
-			NOT = { has_dlc = "Third Rome" }
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
 	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Third Rome" }
-		}
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Third Rome"
-			NOT = { has_dlc = "Mare Nostrum" }
-			NOT = { has_dlc = "Res Publica" }
+		allow = { 
+			has_dlc = "Third Rome" 
+			NOT = { has_dlc = "Domination" }
 		}
 		government_abilities = {
 			russian_mechanic
 		}
 	}
 	conditional = {
-		allow = {
-			has_dlc = "Third Rome"
-			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
-		}
+		allow = { has_dlc = "Domination" }
 		government_abilities = {
 			russian_mechanic
+			russian_modernization_mechanic
 		}
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Third Rome"
-			NOT = { has_dlc = "Mare Nostrum" }
-			has_dlc = "Res Publica"
-		}
-		government_abilities = {
-			russian_mechanic
-		}
-		can_use_trade_post = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Third Rome"
-			has_dlc = "Mare Nostrum"
-			has_dlc = "Res Publica"
-		}
-		government_abilities = {
-			russian_mechanic
-		}
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
 	}
 	duration = 4
-	conditional = {
-		allow = { has_dlc = "Third Rome" }
-		government_abilities = {
-			russian_mechanic
+	effect = {
+		add_country_modifier = {
+			name = rus_gov_mec_streltsy_regiment
+			duration = -1
 		}
-		claim_states = yes
+	}
+	removed_effect = {
+		if = {
+			limit = { has_country_modifier = rus_gov_mec_streltsy_regiment }
+			remove_country_modifier = rus_gov_mec_streltsy_regiment
+		}
 	}
 	ai = {
 		factor = 1000
@@ -576,6 +559,7 @@ eschatological_theocracy_caliphate_reform = { # For Hormuz Caliphate
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_pashas = yes
+		has_janissaries = yes
 	}
 	effect = {
 		add_country_modifier = {
@@ -640,6 +624,34 @@ sasanian_government = {
 	}
 }
 
+# Morocco:
+moroccan_sultanate_reform = {
+	icon = "barbary_eyalet_government"
+	allow_normal_conversion = yes
+	potential = {
+		tag = MOR
+	}
+	queen = no
+	valid_for_nation_designer = no
+	modifiers = {
+		land_attrition = -0.1
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		navy_tradition_decay = -0.005
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
+		government_abilities = {
+			moroccan_iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+
 # Fatimid Caliphate:
 fatimid_government = {
 	icon = "mamluk_government"
@@ -668,6 +680,7 @@ fatimid_government = {
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_pashas = yes
+		has_janissaries = yes
 	}
 	effect = {
 		add_country_modifier = {
@@ -705,52 +718,6 @@ fatimid_government = {
 		factor = 1000
 	}
 }
-# Andalusia:
-andalusia_government = {
-	icon = "mamluk_government"
-	allow_normal_conversion = yes
-	potential = {
-		tag = ADU
-	}
-	valid_for_nation_designer = no
-	lock_level_when_selected = yes
-
-	modifiers = {
-		technology_cost = -0.05
-		establish_order_cost = -0.33
-		max_absolutism = 10
-		governing_capacity = 100
-		vassal_income = 0.5
-		vassal_forcelimit_bonus = 1
-	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			iqta_mechanic
-		}
-	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes
-	}
-	effect = {
-		add_country_modifier = {
-			name = andalusia_government_janissaries
-			duration = -1
-		}
-	}
-	removed_effect = {
-		if = {
-			limit = {
-				has_country_modifier = andalusia_government_janissaries
-			}
-			remove_country_modifier = andalusia_government_janissaries
-		}
-	}
-	ai = {
-		factor = 1000
-	}
-}
 
 # Exodus Leleges:
 leleges_military_government = {
@@ -778,7 +745,9 @@ leleges_military_government = {
 		allow = {
 			has_dlc = "Rights of Man"
 		}
-		militarised_society = yes
+		government_abilities = {
+			militarization_mechanic
+		}
 	}
 	conditional = {
 		allow = { has_dlc = "Third Rome" }
@@ -801,14 +770,19 @@ vinland_government = {
 		tag = VIN
 	}
 	modifiers = {
-		naval_morale = 0.1
+		naval_morale = 0.05
 		max_absolutism = 30
 		republican_tradition = 0.2
 		may_perform_slave_raid_on_same_religion = yes
 	}
 
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -839,7 +813,7 @@ kemet_government = {
 		max_absolutism = 30
 		global_autonomy = -0.05
 		governing_capacity = 100
-		yearly_tribal_allegiance = 2
+		monthly_tribal_allegiance = 0.2
 		global_tax_modifier = 0.2
 	}
 
@@ -975,70 +949,6 @@ ambrosian_merchants_republic = {
 	}
 }
 
-# England/Great Britain:
-gb_english_monarchy = {
-	icon = "english_monarchy"
-	allow_normal_conversion = no
-	potential = {
-		tag = GBR
-	}
-	trigger = {
-		tag = GBR
-	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = no
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 150
-		legitimacy = 1
-		global_unrest = -2
-		max_absolutism = 10
-	}
-	custom_attributes = {
-		gb_english_monarchy_gb_royal_marines = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
-	}
-	conditional = {
-		allow = { has_dlc = "Common Sense" }
-		has_parliament = yes
-	}
-}
-
-# France
-france_monarchy_reform = {
-	icon = "letat_cest_moi"
-	allow_normal_conversion = no
-	potential = {
-		tag = FRA
-		has_country_flag = france_king_musketeers_units_flag
-	}
-	trigger = {
-		tag = FRA
-		has_country_flag = france_king_musketeers_units_flag
-	}
-	valid_for_nation_designer = no
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 100
-		allow_free_estate_privilege_revocation = yes
-		max_absolutism = 20
-	}
-	custom_attributes = {
-		france_monarchy_reform_france_king_musketeers = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
-	}
-}
-
 # Burgundy/Lotharingia:
 lotharingia_monarchy_reform = {
 	icon = "king"
@@ -1068,64 +978,6 @@ lotharingia_monarchy_reform = {
 	}
 }
 
-# Castille/Spain:
-spain_monarchy_reform = {
-	icon = "king"
-	allow_normal_conversion = yes
-	valid_for_nation_designer = no
-	potential = {
-		tag = SPA
-	}
-	trigger = {
-		tag = SPA
-	}
-	modifiers = {
-		max_absolutism = 10
-		establish_order_cost = -0.33
-		governing_capacity = 150
-		warscore_cost_vs_other_religion = -0.1
-	}
-	custom_attributes = {
-		spain_monarchy_reform_spain_tercios = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
-	}
-	ai = {
-		factor = 100
-	}
-}
-
-# Portugal: Wasn't really needed, could just trigger the factions.
-portugal_feudalism_reform = {
-	icon = "castle"
-	allow_normal_conversion = yes
-	valid_for_nation_designer = no
-	potential = {
-		OR = {
-			tag = POR
-			tag = LUS
-		}
-	}
-	modifiers = {
-		vassal_income = 0.25
-		nobles_influence_modifier = 0.05
-		maratha_exclusive_influence_modifier = 0.05
-		rajput_exclusive_influence_modifier = 0.05
-	}
-	factions = {
-		sea_por_trade
-		sea_por_explo
-		sea_por_conti
-	}
-	ai = {
-		factor = 100
-	}
-}
-
 # Germany:
 germany_monarchy = {
 	icon = "sea_germany_monachy"
@@ -1148,7 +1000,17 @@ germany_monarchy = {
 
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
-		militarised_society = yes
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
 		has_parliament = yes
 	}
 }
@@ -1174,7 +1036,17 @@ germany_republic = {
 
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
-		militarised_society = yes
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
 		has_parliament = yes
 	}
 }
@@ -1212,73 +1084,12 @@ imperial_japan_monarchy = {
 		max_absolutism = 33
 		culture_conversion_cost = -0.33
 		warscore_cost_vs_other_religion = -0.33
-	}
-	custom_attributes = {
-		japan_reform_japan_samurai = yes
+		allowed_samurai_fraction = 0.33
 	}
 	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
-	}
-	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		militarised_society = yes
-	}
-}
-
-# Byzantium:
-byzantium_government = {
-	lock_level_when_selected = yes
-	allow_normal_conversion = yes
-	icon = "sea_byzantine_government"
-	potential = {
-		OR = {
-			AND = {
-				OR = {
-					tag = BYZ
-					tag = LAT
-					AND = {
-						was_tag = BYZ
-						tag = ROM
-					}
-				}
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = byzantium_government
-			}
-		}
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 40
-	maintain_dynasty = yes
-	modifiers = {
-		unjustified_demands = -0.1
-		legitimacy = 0.5
-		max_absolutism = 10
-		governing_capacity = 200
-	}
-
-	custom_attributes = {
-		locked_government_type = yes
-		byzantium_government_varangian_guards = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
+		allow = { has_dlc = "Mandate of Heaven" }
+		government_abilities = {
+			militarization_mechanic
 		}
 	}
 }
@@ -1313,10 +1124,43 @@ north_sea_monarchy_reform = {
 		allow_cawa = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
 		has_parliament = yes
 	}
 }
+# Venetian League:
+ven_league_trading_nation = {
+	icon = "trading_city"
+	allow_normal_conversion = no
+	potential = {
+		has_country_flag = venice_trading_city_flag
+	}
+	valid_for_nation_designer = no
+	boost_income = yes
+	lock_level_when_selected = yes
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	modifiers = {
+		global_trade_power = 0.1
+		merchants = 1
+		max_absolutism = 20
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		elections_increase_factions_influence = yes
+	}
+	duration = 4
+}
+
 # Genoa:
 genoa_merchants_reform = {
 	icon = "politician"
@@ -1357,8 +1201,13 @@ genoa_merchants_reform = {
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
-	custom_attributes = {
-		genoa_merchants_reform_genoese_crossbowmen = yes
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		custom_attributes = {
+			genoa_merchants_reform_genoese_crossbowmen = yes
+		}
 	}
 	conditional = {
 		allow = {

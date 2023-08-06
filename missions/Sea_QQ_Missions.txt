@@ -642,7 +642,11 @@ sealand_qq_missions_3 = {
 				name = "thriving_arms_industry"
 				duration = 9125 #25 years
 			}
-			add_tribal_allegiance = 30
+			add_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = 30
+			}
 			custom_tooltip = the_great_expansion_tooltip
 			hidden_effect = {
 				every_province = {
@@ -863,6 +867,7 @@ sealand_qq_missions_3_5 = {
 				complete_mission = restore_seljuk_empire
 			}
 			change_tag = SJK
+			on_change_tag_effect = yes
 			428 = {
 				move_capital_effect = yes
 			}
@@ -1243,7 +1248,11 @@ sealand_qq_missions_5 = {
 				ai = no
 			}
 			OR = {
-				tribal_allegiance = 50
+				has_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = 50
+				}
 				army_tradition = 80
 			}
 			shirvan_area = {

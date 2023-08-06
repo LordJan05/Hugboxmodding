@@ -66,6 +66,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = HAU
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { primary_culture = hausa }

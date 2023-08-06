@@ -225,6 +225,7 @@ mongol_missions_2 = {
 			tag = YUA
 		}
 		NOT = { map_setup = map_setup_random }
+
 	}
 	has_country_shield = yes
 	
@@ -236,10 +237,8 @@ mongol_missions_2 = {
 				province_id = 2116
 				province_id = 4678
 			}
-			NOT = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
 		}
 		trigger = {
 			owns_core_province = 2116
@@ -471,6 +470,7 @@ mongol_missions_3 = {
 			tag = YUA
 		}
 		NOT = { map_setup = map_setup_random }
+
 	}
 	has_country_shield = yes
 	

@@ -84,3 +84,36 @@ tun_mor_unite_barbary = {
 	}
 	war_name = CLAIM_WAR_NAME
 }
+# Hundred Years Union
+eng_fra_hundred_years = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 0.8
+		prestige_factor = 1
+		peace_cost_factor = 0.8
+		allowed_provinces = {
+			OR = {
+				is_claim = ROOT
+				is_core = ROOT
+			}
+		}
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	defender = {
+		badboy_factor = 0.8
+		prestige_factor = 1
+		peace_cost_factor = 0.8
+		allowed_provinces = {
+			OR = {
+				is_claim = ROOT
+				is_core = ROOT
+			}
+		}
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	war_name = VASSAL_MISSION_WAR_NAME
+}

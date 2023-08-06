@@ -183,6 +183,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		set_country_flag = demak_seceded_flag
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -588,6 +589,7 @@ country_event = {
 		country_event = { id = ME_Majapahit_Events.4 }
 		end_disaster = ME_decline_of_majapahit
 		change_tag = MTR
+		on_change_tag_effect = yes
 		swap_non_generic_missions = yes
 		custom_tooltip = ME_Majapahit_Events_16_a_tt
 

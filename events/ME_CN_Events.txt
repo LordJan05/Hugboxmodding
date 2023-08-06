@@ -439,23 +439,41 @@ province_event = {  #Growth of city
 		name = ME_CN_Events.10.a
 
 		ai_chance = { factor = 40 }
-
 		change_trade_goods = paper
+		if = {
+			limit = {
+				has_manufactory_trigger = yes
+				NOT = { has_building = mills }
+			}
+			add_building = mills
+		}
 	}
 
 	option = { #Glass
 		name = ME_CN_Events.10.b
 
 		ai_chance = { factor = 40 }
-
 		change_trade_goods = glass
+		if = {
+			limit = {
+				has_manufactory_trigger = yes
+				NOT = { has_building = mills }
+			}
+			add_building = mills
+		}
 	}
 
 	option = { #cloth
 		name = ME_CN_Events.10.c
 		ai_chance = { factor = 20 }
-
 		change_trade_goods = cloth
+		if = {
+			limit = {
+				has_manufactory_trigger = yes
+				NOT = { has_building = textile }
+			}
+			add_building = textile
+		}
 	}
 
 	option = { #silk
@@ -466,8 +484,14 @@ province_event = {  #Growth of city
 		}
 
 		ai_chance = { factor = 60 }
-
 		change_trade_goods = silk
+		if = {
+			limit = {
+				has_manufactory_trigger = yes
+				NOT = { has_building = textile }
+			}
+			add_building = textile
+		}
 	}
 
 	option = { #chinaware
@@ -478,8 +502,14 @@ province_event = {  #Growth of city
 		}
 
 		ai_chance = { factor = 60 }
-
 		change_trade_goods = chinaware
+		if = {
+			limit = {
+				has_manufactory_trigger = yes
+				NOT = { has_building = mills }
+			}
+			add_building = mills
+		}
 	}
 	option = { #Nothing
 		name = ME_CN_Events.10.g

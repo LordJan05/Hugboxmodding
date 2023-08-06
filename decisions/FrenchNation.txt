@@ -18,12 +18,18 @@ country_decisions = {
 			NOT = { tag = FRA }
 			NOT = { tag = PAP }
 			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
+			NOT = { tag = AVE }		# Anglois is also valid
 			OR = {
 				ai = no
 				NOT = { exists = FRA }
 			}
 			OR = {
 				culture_group = french
+				culture = angevin_cosmopolitan_french
+				culture = angevin_gascon
+				culture = angevin_normand
+				culture = angevin_aquitaine
+				culture = angevin_breton
 				primary_culture = basque
 				primary_culture = breton
 			}
@@ -84,6 +90,7 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = FRA
+			on_change_tag_effect = yes
 			restore_country_name = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes

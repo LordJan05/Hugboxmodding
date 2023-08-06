@@ -17,9 +17,9 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = TUR }
 			NOT = { tag = BYZ }
-			NOT = { tag = LAT }
+			NOT = { tag = LAE }
 			NOT = { exists = BYZ }
-			NOT = { exists = LAT }
+			NOT = { exists = LAE }
 			NOT = { exists = GRE }
 			primary_culture = greek
 			is_colonial_nation = no
@@ -86,6 +86,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GRE
+			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
@@ -179,7 +180,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = TUR }
 			NOT = { tag = BYZ }
-			NOT = { tag = LAT }
+			NOT = { tag = LAE }
 			NOT = { exists = ICE }
 			is_colonial_nation = no		
 			OR = {
@@ -240,6 +241,7 @@ country_decisions = {
 				}
 			}		
 			change_tag = ICE
+			on_change_tag_effect = yes
 			set_country_flag = formed_iceland
 			if = {
 				limit = { NOT = { primary_culture = norwegian } }

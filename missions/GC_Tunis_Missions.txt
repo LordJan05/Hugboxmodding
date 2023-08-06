@@ -232,27 +232,21 @@ gc_tunis_1 = {
 			}
 		}
 		effect = {
-			if = {
+			touaricks_area = {
 				limit = {
-					2474 = {
-						is_empty = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				2474 = {
-					add_core = ROOT
-					cede_province = ROOT
-				}
+				discover_country = ROOT	
+				add_permanent_claim = ROOT
 			}
-			if = {
+			tibesti_area = {
 				limit = {
-					2475 = {
-						is_empty = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				2475 = {
-					add_core = ROOT
-					cede_province = ROOT
-				}
+				discover_country = ROOT	
+				add_permanent_claim = ROOT
 			}
 			azbin_area = {
 				limit = {
@@ -1690,6 +1684,7 @@ gc_tunis_5 = {
 		}
 		effect = {
 			change_tag = FAT
+			on_change_tag_effect = yes
 			add_prestige = 10
 			if = {
 				limit = {

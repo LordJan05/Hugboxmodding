@@ -151,3 +151,6 @@ bananas = {
 macaroni = {
 	base_price = 4
 }
+grain_livestock = {
+	base_price = 2.25
+}

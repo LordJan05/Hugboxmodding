@@ -193,6 +193,7 @@ che_missions_2 = {
 			set_country_flag = establish_leleges_flag
 			custom_tooltip = establish_leleges_tooltip
 			change_tag = LEL
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = republic }
@@ -255,6 +256,7 @@ che_missions_2 = {
 				change_trade_goods = gold
 			}
 			change_tag = CHE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
@@ -342,6 +344,7 @@ che_missions_2 = {
 		}
 		effect = {
 			change_tag = CRE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

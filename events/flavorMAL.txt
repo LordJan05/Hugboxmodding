@@ -1760,6 +1760,7 @@ country_event = {
 	picture = AFRICAN_FIGHT_EUROPEANS_eventPicture
 
 	is_triggered_only = yes
+	trigger = { always = no } # Turned off
 
 	option = {	#Move capital to Timbuktu
 		name = flavor_mal.28.a

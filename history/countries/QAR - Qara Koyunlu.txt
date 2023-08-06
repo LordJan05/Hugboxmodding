@@ -56,8 +56,8 @@ change_estate_land_share = {
 
 1420.1.1 = {
 	heir = {
-		name = "JahÃ¢n"
-		monarch_name = "JahÃ¢n ShÃ¢h"
+		name = "Jahân"
+		monarch_name = "Jahân Shâh"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		death_date = 1467.11.11
@@ -70,7 +70,7 @@ change_estate_land_share = {
 
 1438.4.22 = {
 	monarch = {
-		name = "JahÃ¢n ShÃ¢h"
+		name = "Jahân Shâh"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		adm = 3

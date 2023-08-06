@@ -18,7 +18,8 @@ change_estate_land_share = {
 	share = -0.502
 }
 
-
+historical_rival = GOL
+historical_rival = NOG
 national_focus = ADM
 
 1389.5.19 = {
@@ -29,6 +30,8 @@ national_focus = ADM
 		dip = 3
 		mil = 2
 	}
+	set_estate_privilege = estate_nobles_mestnichestvo
+	set_estate_privilege = estate_nobles_strong_duchies
 }
 
 1415.3.10 = {
@@ -59,9 +62,10 @@ national_focus = ADM
 	clear_scripted_personalities = yes
 	add_ruler_personality = careful_personality
 	add_ruler_personality = intricate_web_weaver_personality
+	set_ruler_flag = has_vasily_ii
 }
 
-1430.1.1 = { leader = {	name = "Dmitry Shemiaka"	type = general	fire = 3	shock = 4	manuever = 3	siege = 0	death_date = 1453.1.1 } }
+1430.1.1 = { leader = {	name = "Dmitry Shemiaka Rurikovich"	type = general	fire = 3	shock = 4	manuever = 3	siege = 0	death_date = 1453.1.1 } }
 
 1433.1.1 = {
 	queen = {
@@ -116,7 +120,7 @@ national_focus = ADM
 		birth_date = 1479.3.25
 		death_date = 1533.12.3
 		claim = 95
-		adm =6
+		adm = 6
 		dip = 4
 		mil = 1
 	}

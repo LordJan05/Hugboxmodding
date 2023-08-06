@@ -2087,6 +2087,7 @@ emp_hab_diplo_branch = {
 				complete_mission = emp_hab_all_minorities_are_welcome
 			}
 			change_tag = AHE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = monarchy }
@@ -2479,7 +2480,13 @@ emp_hab_diplo_branch = {
 					NOT = { accepted_culture = slovak }
 					NOT = { primary_culture = slovak }
 				}
-				add_accepted_culture_or_dip_power = { culture = slovak }
+				if = {
+					limit = { has_updated_culture = { culture = slavic } }
+					add_accepted_culture_or_dip_power = { culture = slovak_new }
+				}
+				else = {
+					add_accepted_culture_or_dip_power = { culture = slovak }
+				}
 				if = {
 					limit = {
 						1772 = { culture = austrian }
@@ -2738,6 +2745,14 @@ emp_hab_balkans_2 = {
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest (though they got the crown not through war, but marriages are a little bit too mysterious and complex for the AI)
+			modifier = {
+				factor = 0
+				bohemia_area = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
 		}
 	}
 	recover_silesia = {
@@ -2880,6 +2895,32 @@ emp_hab_balkans_2 = {
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest
+			modifier = {
+				factor = 0
+				malopolska_area = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				slovakia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				malopolska_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				red_ruthenia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
 		}
 	}
 	emp_hab_union_with_poland = {

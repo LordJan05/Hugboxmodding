@@ -99,6 +99,7 @@ sealand_kem_missions_1 = {
 		}
 		effect = {
 			change_tag = KEM
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government = theocracy }

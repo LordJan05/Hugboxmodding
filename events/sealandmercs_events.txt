@@ -12,14 +12,9 @@ country_event = {
 		#always = no # Turned off
 		#NOT = { has_country_flag = sealandmercs_switch_merc_flag }
 		OR = { # For special units:
-			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
-			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
 			has_estate_privilege = estate_nobles_varangian_guards_special_units
 			has_estate_privilege = estate_nobles_gb_royal_marines_special_units
-			has_estate_privilege = estate_nobles_france_king_musketeers_special_units
 			has_estate_privilege = estate_nobles_dutch_maurician_special_units
-			has_estate_privilege = estate_nobles_japan_samurai_special_units_early
-			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
 			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
 			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
 			has_estate_privilege = estate_nobles_jomsvikings_special_units
@@ -109,14 +104,9 @@ country_event = {
 		#always = no # Turned off
 		#NOT = { has_country_flag = sealandmercs_switch_merc_flag }
 		OR = { # For special units:
-			has_estate_privilege = estate_nobles_spain_tercios_special_units_pike
-			has_estate_privilege = estate_nobles_spain_tercios_special_units_fire
 			has_estate_privilege = estate_nobles_varangian_guards_special_units
 			has_estate_privilege = estate_nobles_gb_royal_marines_special_units
-			has_estate_privilege = estate_nobles_france_king_musketeers_special_units
 			has_estate_privilege = estate_nobles_dutch_maurician_special_units
-			has_estate_privilege = estate_nobles_japan_samurai_special_units_early
-			has_estate_privilege = estate_nobles_japan_samurai_special_units_late
 			has_estate_privilege = estate_nobles_aztecs_eagle_special_units
 			has_estate_privilege = estate_nobles_aztecs_jaguar_special_units
 			has_estate_privilege = estate_nobles_jomsvikings_special_units
@@ -353,6 +343,49 @@ country_event = {
 			save_event_target_as = hanys_merc_remove
 		}
 		event_target:hanys_merc_remove = {
+			disband_mercenary_company = THIS
+		}
+	}
+	option = { }
+}
+# Merc companies, big merc reform check:
+country_event = {
+	id = sealand_mercs_fl_base_event.9
+	title = none
+	desc = none
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	hidden = yes
+	trigger = {
+		NOT = { has_government_attribute = unlock_additional_sea_big_merc_comp }
+		any_hired_mercenary_company = {
+			hired_for_months = 1
+			OR = {
+				template = sea_big_merc_comp_reform_0
+				template = sea_big_merc_comp_reform_1
+				template = sea_big_merc_comp_reform_2
+				template = sea_big_merc_comp_reform_3
+				template = sea_big_merc_comp_reform_4
+				template = sea_big_merc_comp_reform_5
+				template = sea_big_merc_comp_reform_6
+			}
+		}
+	}
+	immediate = {
+		random_hired_mercenary_company = {
+			limit = {
+				OR = {
+					template = sea_big_merc_comp_reform_0
+					template = sea_big_merc_comp_reform_1
+					template = sea_big_merc_comp_reform_2
+					template = sea_big_merc_comp_reform_3
+					template = sea_big_merc_comp_reform_4
+					template = sea_big_merc_comp_reform_5
+					template = sea_big_merc_comp_reform_6
+				}
+			}
+			save_event_target_as = remove_sea_big_merc_comp_reform
+		}
+		event_target:remove_sea_big_merc_comp_reform = {
 			disband_mercenary_company = THIS
 		}
 	}

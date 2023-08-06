@@ -148,6 +148,7 @@ sealand_hormuz_missions_1_1 = { # Forming Yemen removes this missions
 		effect = {
 			set_country_flag = keep_hormuz_missions
 			change_tag = YEM
+			on_change_tag_effect = yes
 			change_primary_culture = yemeni_culture
 			add_accepted_culture = gulf_arabic
 			hidden_effect = {
@@ -749,6 +750,7 @@ sealand_hormuz_missions_3 = {
 				complete_mission = restore_rashidun_caliphate
 			}
 			change_tag = RSH
+			on_change_tag_effect = yes
 			384 = {
 				move_capital_effect = yes
 			}
@@ -1214,6 +1216,7 @@ sealand_hormuz_missions_5 = {
 		}
 		effect = {
 			change_tag = PER
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					has_country_flag = keep_hormuz_missions

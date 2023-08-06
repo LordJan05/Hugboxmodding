@@ -5,7 +5,7 @@ byz_western = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -146,6 +146,10 @@ byz_western = {
 			owns_or_non_sovereign_subject_of = 4703
 		}
 		effect = {
+			if = {
+				limit = { has_reform = byzantine_autocracy_reform }
+				add_government_reform = reformed_byzantine_monarchy_reform
+			}
 			apulia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -279,7 +283,7 @@ byz_east = {
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 	}
 	

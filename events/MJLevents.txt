@@ -517,56 +517,6 @@ country_event = {
 	}
 }
 
-#country_event = {
-#	id = mjl_events.6
-#	title = "mjl_events.EVTNAME6"
-#	desc = "mjl_events.EVTDESC6"
-#	picture = COURT_eventPicture
-#	
-#	trigger = {
-#		has_reform = african_colonists_reform
-#		NOT = {
-#			OR = {
-#				has_idea_group = expansion_ideas
-#				has_idea_group = exploration_ideas
-#			}
-#		}
-#		any_owned_province = {
-#			is_colony = yes
-#			colonysize = 1
-#			OR = {
-#				NOT = { continent = africa }
-#				AND = {
-#					continent = africa
-#					is_island = yes
-#				}
-#			}
-#		}
-#	}
-#	mean_time_to_happen = {
-#		months = 1
-#	}
-#	option = {
-#		name = "mjl_events.EVTOPTA6"
-#		custom_tooltip = mjl_non_africa_province_colonised_tt
-#		hidden_effect = {
-#			every_owned_province = {
-#				limit = {
-#					is_colony = yes
-#					OR = {
-#						NOT = { continent = africa }
-#						AND = {
-#							continent = africa
-#							is_island = yes
-#						}
-#					}
-#				}
-#				add_colonysize = -1000
-#			}
-#		}
-#	}
-#}
-
 #clean up event after an ai
 country_event = {
 	id = mjl_events.7
@@ -575,7 +525,10 @@ country_event = {
 	picture = COURT_eventPicture
 	
 	trigger = {
-		is_colonial_nation = yes
+		OR = {
+			is_colonial_nation = yes
+			has_reform = trade_company_government
+		}
 		ai = no
 		NOT = { has_country_flag = mjl_cn_clean_up_ai_mess }
 	}
@@ -686,21 +639,21 @@ country_event = {
 					has_reform = frequent_elections_reform
 				}
 				remove_government_reform = frequent_elections_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = consolidation_of_power_reform
 				}
 				remove_government_reform = consolidation_of_power_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = force_reelection_reform 
 				}
 				remove_government_reform = force_reelection_reform 
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			#t4
 			if = {
@@ -708,176 +661,393 @@ country_event = {
 					has_reform = papal_embassy_reform
 				}
 				remove_government_reform = papal_embassy_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = focus_of_the_patriarchy_reform
 				}
 				remove_government_reform = focus_of_the_patriarchy_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = lands_for_the_monasteries_reform
 				}
 				remove_government_reform = lands_for_the_monasteries_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = zoroastrian_focus_reform
 				}
 				remove_government_reform = zoroastrian_focus_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = power_to_the_synagogoues_reform
 				}
 				remove_government_reform = power_to_the_synagogoues_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = head_of_the_reformed_church_reform
 				}
 				remove_government_reform = head_of_the_reformed_church_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = confucian_governing_reform
 				}
 				remove_government_reform = confucian_governing_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = empower_buddhist_temples_reform
 				}
 				remove_government_reform = empower_buddhist_temples_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = public_hindu_practices_reform
 				}
 				remove_government_reform = public_hindu_practices_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = strengthen_shaman_privileges_reform
 				}
 				remove_government_reform = strengthen_shaman_privileges_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = abolished_caste_system_reform
 				}
 				remove_government_reform = abolished_caste_system_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = strengthen_the_ulema_reform
 				}
 				remove_government_reform = strengthen_the_ulema_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = strengthen_the_dhimmi_reform
 				}
 				remove_government_reform = strengthen_the_dhimmi_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = legacy_of_the_steppes_reform
 				}
 				remove_government_reform = legacy_of_the_steppes_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = state_and_shrines_intertwined_reform
 				}
 				remove_government_reform = state_and_shrines_intertwined_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = embedded_norse_government_reform
 				}
 				remove_government_reform = embedded_norse_government_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = strengthen_clergy_reform
 				}
 				remove_government_reform = strengthen_clergy_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = curtail_clergy_power_reform
 				}
 				remove_government_reform = curtail_clergy_power_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = secure_clergy_power_reform
 				}
 				remove_government_reform = secure_clergy_power_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = maintain_clergy_balance_of_power_reform
 				}
 				remove_government_reform = maintain_clergy_balance_of_power_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = separate_clergy_from_state_affairs_reform
 				}
 				remove_government_reform = separate_clergy_from_state_affairs_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			#t5
 			if = {
 				limit = {
-					has_reform = provincial_governments_reform
+					has_reform = organized_military_staff_reform
 				}
-				remove_government_reform = provincial_governments_reform
-				change_government_reform_progress = 50
+				remove_government_reform = organized_military_staff_reform
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
-					has_reform = administrative_divisions_reform
+					has_reform = military_engineering_reform
 				}
-				remove_government_reform = administrative_divisions_reform
-				change_government_reform_progress = 50
+				remove_government_reform = military_engineering_reform
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
-					has_reform = union_of_states_reform
+					has_reform = defensive_stance_reform
 				}
-				remove_government_reform = union_of_states_reform
-				change_government_reform_progress = 50
+				remove_government_reform = defensive_stance_reform
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
-					has_reform = cultural_administration_reform
+					has_reform = sygnakhs_system_reform
 				}
-				remove_government_reform = cultural_administration_reform
-				change_government_reform_progress = 50
+				remove_government_reform = sygnakhs_system_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = sustained_discipline_reform
+				}
+				remove_government_reform = sustained_discipline_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = cavalry_warfare_reform
+				}
+				remove_government_reform = cavalry_warfare_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = mercenary_leadership_reform
+				}
+				remove_government_reform = mercenary_leadership_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = amphibious_specialization_reform
+				}
+				remove_government_reform = amphibious_specialization_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = royal_marines_reform
+				}
+				remove_government_reform = royal_marines_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = maritime_military_reform
+				}
+				remove_government_reform = maritime_military_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = doppelsoldner_reform
+				}
+				remove_government_reform = doppelsoldner_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = wei_suo_system_reform
+				}
+				remove_government_reform = wei_suo_system_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = eight_banners_reform
+				}
+				remove_government_reform = eight_banners_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = green_standard_army_reform
+				}
+				remove_government_reform = green_standard_army_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = ashigaru_reform
+				}
+				remove_government_reform = ashigaru_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = the_righteous_army_reform
+				}
+				remove_government_reform = the_righteous_army_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = subutais_strategies_reform
+				}
+				remove_government_reform = subutais_strategies_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = ahmudan_system_reform
+				}
+				remove_government_reform = ahmudan_system_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = ghazi_reform
+				}
+				remove_government_reform = ghazi_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = the_cawa_regiments_reform
+				}
+				remove_government_reform = the_cawa_regiments_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = ordennancas_reform
+				}
+				remove_government_reform = ordennancas_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = volunteers_of_the_faith_reform
+				}
+				remove_government_reform = volunteers_of_the_faith_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = condottieri_contracts_reform
+				}
+				remove_government_reform = condottieri_contracts_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = compagnie_dordonnance_reform
+				}
+				remove_government_reform = compagnie_dordonnance_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = gendarmes_reform 
+				}
+				remove_government_reform = gendarmes_reform 
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = general_war_commissariat_reform
+				}
+				remove_government_reform = general_war_commissariat_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = swiss_mercenary_reform
+				}
+				remove_government_reform = swiss_mercenary_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = boyars_army_reform
+				}
+				remove_government_reform = boyars_army_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = staatse_leger_reform
+				}
+				remove_government_reform = staatse_leger_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = watergeuzen_reform
+				}
+				remove_government_reform = watergeuzen_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = lessons_of_the_hussite_wars_reform
+				}
+				remove_government_reform = lessons_of_the_hussite_wars_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = qollar_aghasi_regiments_reform
+				}
+				remove_government_reform = qollar_aghasi_regiments_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = manrent_reform
+				}
+				remove_government_reform = manrent_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = merchant_arsenal_reform
+				}
+				remove_government_reform = merchant_arsenal_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = expanded_black_army_reform
+				}
+				remove_government_reform = expanded_black_army_reform
+				change_government_reform_progress = 60
 			}
 			#t6
 			if = {
@@ -885,216 +1055,266 @@ country_event = {
 					has_reform = parliamentary_reform
 				}
 				remove_government_reform = parliamentary_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = presidential_reform
 				}
 				remove_government_reform = presidential_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = estate_council_reform
 				}
 				remove_government_reform = estate_council_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = attorney_general_reform
 				}
 				remove_government_reform = attorney_general_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			#t7
+			if = {
+				limit = {
+					has_reform = provincial_governments_reform
+				}
+				remove_government_reform = provincial_governments_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = administrative_divisions_reform
+				}
+				remove_government_reform = administrative_divisions_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = union_of_states_reform
+				}
+				remove_government_reform = union_of_states_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = cultural_administration_reform
+				}
+				remove_government_reform = cultural_administration_reform
+				change_government_reform_progress = 60
+			}
+			#t8
 			if = {
 				limit = {
 					has_reform = empower_the_burghers_reform
 				}
 				remove_government_reform = empower_the_burghers_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = curtail_the_burghers_reform
 				}
 				remove_government_reform = curtail_the_burghers_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = mercantilistic_approach_reform
 				}
 				remove_government_reform = mercantilistic_approach_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = free_trade_reform
 				}
 				remove_government_reform = free_trade_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = embrace_the_economic_theory_reform
 				}
 				remove_government_reform = embrace_the_economic_theory_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = war_economy_reform
+				}
+				remove_government_reform = war_economy_reform
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = lockean_proviso_reform
 				}
 				remove_government_reform = lockean_proviso_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
-			#t8
+			if = {
+				limit = {
+					has_reform = vodka_of_the_crown_reform
+				}
+				remove_government_reform = vodka_of_the_crown_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
+					has_reform = jap_gokaido_reform
+				}
+				remove_government_reform = jap_gokaido_reform
+				change_government_reform_progress = 60
+			}
+			#t9
 			if = {
 				limit = {
 					has_reform = broaden_executive_powers_reform
 				}
 				remove_government_reform = broaden_executive_powers_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = devolution_of_powers_reform
 				}
 				remove_government_reform = devolution_of_powers_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = consolidate_power_to_the_ruler_reform
 				}
 				remove_government_reform = consolidate_power_to_the_ruler_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = consolidate_power_into_different_candidates_reform
 				}
 				remove_government_reform = consolidate_power_into_different_candidates_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
-			#t9
+			#t10
 			if = {
 				limit = {
 					has_reform = political_principle_reform
 				}
 				remove_government_reform = political_principle_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = moral_principle_reform
 				}
 				remove_government_reform = moral_principle_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = stability_principle_reform
 				}
 				remove_government_reform = stability_principle_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = enlightened_principle_reform
 				}
 				remove_government_reform = enlightened_principle_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = military_principle_reform
 				}
 				remove_government_reform = military_principle_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
-			#t10
+			#t11
 			if = {
 				limit = {
 					has_reform = landholders_reform
 				}
 				remove_government_reform = landholders_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = citizenry_reform
 				}
 				remove_government_reform = citizenry_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = admiralty_reform
 				}
 				remove_government_reform = admiralty_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = military_rulership_reform
 				}
 				remove_government_reform = military_rulership_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = dynastic_rulership_reform
 				}
 				remove_government_reform = dynastic_rulership_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
-			#t11
+			#t12
 			if = {
 				limit = {
 					has_reform = appointment_by_committee_reform
 				}
 				remove_government_reform = appointment_by_committee_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = bureaucratic_aparatus_reform
 				}
 				remove_government_reform = bureaucratic_aparatus_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = universal_suffrage_reform
 				}
 				remove_government_reform = universal_suffrage_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
-			#t12
+			#t13
 			if = {
 				limit = {
 					has_reform = strengthen_executive_powers_reform 
 				}
 				remove_government_reform = strengthen_executive_powers_reform 
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = reinforce_republican_values_reform
 				}
 				remove_government_reform = reinforce_republican_values_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 			if = {
 				limit = {
 					has_reform = federal_senate_reform
 				}
 				remove_government_reform = federal_senate_reform
-				change_government_reform_progress = 50
+				change_government_reform_progress = 60
 			}
 		}
 	}
@@ -1142,311 +1362,25 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = mjl_events.8
-	title = "mjl_events.EVTNAME8"
-	desc = "mjl_events.EVTDESC8"
-	picture = COURT_eventPicture
-	
-	trigger = {
-		is_colonial_nation = yes
-		capital_scope = {
-			colonial_region = colonial_louisiana
-			is_core = ROOT
-		}
-		NOT = { has_country_flag = mjl_louisiana_naval_fl_buff }
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
-	option = {
-		name = "mjl_events.EVTOPTA8"
-		set_country_flag = mjl_louisiana_naval_fl_buff
-		add_country_modifier = {
-			name = "mjl_lousiana_fl_buff"
-			duration = -1
-		}
-	}
-}
+country_event = { id = mjl_events.8 title = "mjl_events.EVTNAME8" desc = "mjl_events.EVTDESC8" picture = COURT_eventPicture trigger = { is_colonial_nation = yes capital_scope = { colonial_region = colonial_louisiana is_core = ROOT } NOT = { has_country_flag = mjl_louisiana_naval_fl_buff } } mean_time_to_happen = { months = 1 } option = { name = "mjl_events.EVTOPTA8" set_country_flag = mjl_louisiana_naval_fl_buff add_country_modifier = { name = "mjl_lousiana_fl_buff" duration = -1 } } }
 
-country_event = {
-    id = mjl_events.9
-    title = "mjl_events.EVTNAME9"
-    desc = "mjl_events.EVTDESC9"
-    picture = COURT_eventPicture
+country_event = { id = mjl_events.9 title = "mjl_events.EVTNAME9" desc = "mjl_events.EVTDESC9" picture = COURT_eventPicture is_triggered_only = yes hidden = yes trigger = { NOT = { has_country_flag = discovered_australia_event } technology_group = chinese } immediate = { name = "mjl_events.EVTOPTA9" set_country_flag = discovered_australia_event australia_region = { ROOT = { discover_province = PREV } } south_china_sea_region = { ROOT = { discover_province = PREV } } east_indian_ocean_region = { ROOT = { discover_province = PREV } } south_west_pacific_region = { ROOT = { discover_province = PREV } } moluccas_region = { ROOT = { discover_province = PREV } } te_waipounamu_area = { ROOT = { discover_province = PREV } } te_ika_a_maui_hauauru_area = { ROOT = { discover_province = PREV } } te_ika_a_maui_waho_area = { ROOT = { discover_province = PREV } } melanesia_area = { ROOT = { discover_province = PREV } } 1431 = { ROOT = { discover_province = PREV } } 1430 = { ROOT = { discover_province = PREV } } 1432 = { ROOT = { discover_province = PREV } } 1726 = { ROOT = { discover_province = PREV } } }  option = { } }
+country_event = { id = mjl_events.10 title = "mjl_events.EVTNAME10" desc = "mjl_events.EVTDESC10" picture = Danny_eventPicture fire_only_once = yes trigger = { 1104 = { owned_by = ROOT is_core = ROOT is_city = yes } 1105 = { owned_by = ROOT is_core = ROOT is_city = yes } } mean_time_to_happen = { months = 24 } option = { name = "mjl_events.EVTOPTA10" 1104 = { change_trade_goods = ivory if = { limit = { has_building = wharf } hidden_effect = { remove_building = wharf } add_building = tradecompany  } } 1105 = { change_trade_goods = ivory if = { limit = { has_building = wharf } hidden_effect = { remove_building = wharf } add_building = tradecompany } } add_prestige = 10 } }
 
-    is_triggered_only = yes
-    hidden = yes
-    
-    trigger = {
-        NOT = { has_country_flag = discovered_australia_event }
-        technology_group = chinese
-    }
+country_event = { id = mjl_events.12 title = "mjl_events.EVTNAME12" desc = "mjl_events.EVTDESC12" picture = Danny_eventPicture fire_only_once = yes trigger = { tag = KON owns_core_province = 4086 } mean_time_to_happen = { months = 48 } option = { name = "mjl_events.EVTOPTA12" 4086 = { if = { limit = { NOT = { has_building = cathedral } } add_building = cathedral } add_province_modifier = { name = "mjl_boon_of_szyna" duration = -1 } } } }
 
-    immediate = {
-        name = "mjl_events.EVTOPTA9"
-        set_country_flag = discovered_australia_event
-        australia_region = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        south_china_sea_region = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        east_indian_ocean_region = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        south_west_pacific_region = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        moluccas_region = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        te_waipounamu_area = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        te_ika_a_maui_hauauru_area = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        te_ika_a_maui_waho_area = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-		melanesia_area = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        1431 = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        1430 = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        1432 = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-        1726 = {
-            ROOT = {
-                discover_province = PREV
-            }
-        }
-    }
-    option = {
-    }
-}
+country_event = { id = mjl_events.14 title = "mjl_events.EVTNAME14" desc = "mjl_events.EVTDESC14" picture = Danny_eventPicture hidden = yes is_triggered_only = yes trigger = { OR = { tag = HAB tag = BRA tag = SWI tag = LAN tag = BOH tag = HES tag = DAN tag = HSA tag = HAM tag = SAX tag = UBV tag = ING tag = LBV tag = KOL tag = HOL tag = MLO tag = DTT tag = SAV } NOT = { has_country_flag = mjl_hre_capital_spy_boost_flag } is_part_of_hre = yes capital_scope = { is_part_of_hre = yes } } immediate = { set_country_flag = mjl_hre_capital_spy_boost_flag add_country_modifier = { name = "mjl_hre_spy_boost_modifier" duration = 36500 } } option = { name = "mjl_events.EVTOPTA14" } }
 
-country_event = {
-	id = mjl_events.10
-	title = "mjl_events.EVTNAME10"
-	desc = "mjl_events.EVTDESC10"
-	#picture = TRADEGOODS_eventPicture
-	picture = Danny_eventPicture
-	
-	fire_only_once = yes
+country_event = { id = mjl_events.15 title = none desc = none picture = none hidden = yes is_triggered_only = yes trigger = { } immediate = { add_country_modifier = { name = "mjl_absolutism_age_max_abso" duration = -1 } } option = { name = "mjl_events.EVTOPTA15" } }
 
-	trigger = {
-		1104 = {
-			owned_by = ROOT
-			is_core = ROOT
-			is_city = yes
-		}
-		1105 = {
-			owned_by = ROOT
-			is_core = ROOT
-			is_city = yes
-		}
-	}
-	mean_time_to_happen = {
-		months = 24
-	}
-	option = {
-		name = "mjl_events.EVTOPTA10"
-		1104 = {
-			change_trade_goods = ivory
-			if = {
-				limit = {
-					has_building = wharf
-				}
-				hidden_effect = { remove_building = wharf }
-				add_building = tradecompany 
-			}
-		}
-		1105 = {
-			change_trade_goods = ivory
-			if = {
-				limit = {
-					has_building = wharf
-				}
-				hidden_effect = { remove_building = wharf }
-				add_building = tradecompany 
-			}
-		}
-		add_prestige = 10
-	}
-}
+# Mongolia events:
+namespace = mjl_mongol_events
+normal_or_historical_nations = yes
+#Mongolia movespeed boost
+country_event = { id = mjl_mongol_events.1 title = none desc = none picture = none hidden = yes is_triggered_only = yes fire_only_once = yes trigger = { tag = KRC } immediate = { hidden_effect = { mongolia_region = { limit = { is_city = yes NOT = { area = cicigar_area } NOT = { area = eastern_mongolia } NOT = { area = chifeng_area } } add_province_modifier = { name = "mjl_mongolia_movespeed_boost" hidden = yes duration = -1 } } } } option = { } }
 
-#country_event = {
-#	id = mjl_events.11
-#	title = "mjl_events.EVTNAME11"
-#	desc = "mjl_events.EVTDESC11"
-#	#picture = TRADEGOODS_eventPicture
-#	picture = Danny_eventPicture
-#
-#	trigger = {
-#		has_country_flag = mjl_revolution_age_abso_ability
-#		has_country_flag = mjl_absolutism_age_abso_ability
-#		NOT = { has_country_flag = mjl_absolutism_gained }
-#	}
-#	mean_time_to_happen = {
-#		months = 1
-#	}
-#	option = {
-#		name = "mjl_events.EVTOPTA11"
-#		add_absolutism = 15
-#		set_country_flag = mjl_absolutism_gained
-#	}
-#}
+#Esen Death
+country_event = { id = mjl_mongol_events.2 title = "mjl_mongol_events.2.t" desc = "mjl_mongol_events.2.d" picture = DIPLOMACY_eventPicture is_triggered_only = yes trigger = { tag = ZUN NOT = { has_global_flag = mjl_esen_choros_death_global_flag } } immediate = { hidden_effect = { set_global_flag = mjl_esen_choros_death_global_flag } } option = { name = "mjl_mongol_events.3.a" add_prestige = 10 add_country_modifier = { name = "mjl_esen_choros_death_modifier" duration = 1825 } OIR = { every_subject_country = { add_liberty_desire = 100 } if = { limit = { SYG = { is_subject_of = OIR } } free_vassal = SYG } if = { limit = { TUM = { is_subject_of = OIR } } free_vassal = TUM } if = { limit = { HMI = { is_subject_of = OIR } } free_vassal = HMI } } } }
 
-country_event = {
-	id = mjl_events.12
-	title = "mjl_events.EVTNAME12"
-	desc = "mjl_events.EVTDESC12"
-	#picture = TRADEGOODS_eventPicture
-	picture = Danny_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = KON
-		owns_core_province = 4086
-	}
-	mean_time_to_happen = {
-		months = 48
-	}
-	option = {
-		name = "mjl_events.EVTOPTA12"
-		4086 = {
-			if = {
-				limit = {
-					NOT = { has_building = cathedral }
-				}
-				add_building = cathedral
-			}
-			add_province_modifier = {
-				name = "mjl_boon_of_szyna"
-				duration = -1
-			}
-		}
-	}
-}
-
-#country_event = {
-#	id = mjl_events.13
-#	title = "mjl_events.EVTNAME13"
-#	desc = "mjl_events.EVTDESC13"
-#	picture = Loaf_eventPicture
-#
-#	is_triggered_only = yes
-#
-#	trigger = {
-#		NOT = { has_country_flag = mjl_loaf_event_flag }
-#		ai = no
-#	}
-#
-#	option = {
-#		name = "mjl_events.EVTOPTA13"
-#		set_country_flag = mjl_loaf_event_flag
-#		add_prestige = 5
-#	}
-#}
-
-country_event = {
-	id = mjl_events.14
-	title = "mjl_events.EVTNAME14"
-	desc = "mjl_events.EVTDESC14"
-	picture = Danny_eventPicture
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		OR = {
-			tag = HAB
-			tag = BRA
-			tag = SWI
-			tag = LAN
-			tag = BOH
-			tag = HES
-			tag = DAN
-			tag = HSA
-			tag = HAM
-			tag = SAX
-			tag = UBV
-			tag = ING
-			tag = LBV
-			tag = KOL
-			tag = HOL
-			tag = MLO
-			tag = DTT
-			tag = SAV
-		}
-		NOT = { has_country_flag = mjl_hre_capital_spy_boost_flag }
-		is_part_of_hre = yes
-		capital_scope = {
-			is_part_of_hre = yes
-		}
-	}
-	immediate = {
-		set_country_flag = mjl_hre_capital_spy_boost_flag
-		add_country_modifier = {
-			name = "mjl_hre_spy_boost_modifier"
-			duration = 36500
-		}
-	}
-	option = {
-		name = "mjl_events.EVTOPTA14"
-	}
-}
-
-country_event = {
-	id = mjl_events.15
-	title = none
-	desc = none
-	picture = none
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-	}
-	immediate = {
-		add_country_modifier = {
-			name = "mjl_absolutism_age_max_abso"
-			duration = -1
-		}
-	}
-	option = {
-		name = "mjl_events.EVTOPTA15"
-	}
-}
+#Esen Death Failsafe if he dont die after 10 years.
+country_event = { id = mjl_mongol_events.5 title = none desc = none picture = none hidden = yes fire_only_once = yes trigger = { tag = ZUN is_year = 1454 OIR = { has_ruler = "Esen Taishi" } } mean_time_to_happen = { months = 1 } immediate = { hidden_effect = { OIR = { kill_ruler = yes } } country_event = { id = mjl_mongol_events.2 } } option = { } }

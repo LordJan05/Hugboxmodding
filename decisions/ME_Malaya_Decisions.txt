@@ -216,6 +216,7 @@ country_decisions = {
 			else = {
 				set_country_flag = MSA_expedition_tooltip_off
 			}
+			custom_tooltip = chinese_expedition_bonus_on_concluded_tt
 		}
 		ai_will_do = {
 			factor = 0

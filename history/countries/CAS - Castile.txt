@@ -91,6 +91,12 @@ change_estate_land_share = {
 1422.1.1 = { leader = {	name = "Álvaro de Luna"	type = general	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.6.2 } }
 
 
+1425.1.5 = {
+	if = { 
+		limit = { has_dlc = "Domination" }
+		set_estate_privilege = estate_nobles_factionalist_nobility
+	}
+}
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_castille_autonomous_duchies
 }

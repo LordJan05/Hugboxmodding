@@ -120,49 +120,6 @@ estate_jains_advisor = {
 	}
 }
 
-
-#estate_vaisyas_devcost_privilege = {
-#	icon = privilege_royal_authority
-#	max_absolutism = -10
-#	loyalty = 0.1
-#	influence = 0.1
-#	penalties = {
-#		global_autonomy = 0.02
-#	}
-#	benefits = {
-#		development_cost = -0.05
-#	}
-#	ai_will_do = {
-#		factor = 10
-#	}
-#}
-
-
-estate_church_piety_privilege = {
-	icon = privilege_recruit_minister
-	max_absolutism = -5
-	influence = 0.10
-	is_valid = {
-		religion_group = muslim
-		NOT = { tag = TUN }
-	}
-	can_select = {
-		NOT = { has_estate_privilege = estate_church_clerical_ministers }
-	}
-	penalties = {
-	}
-	benefits = {
-		monthly_piety = -0.002
-	}
-	ai_will_do = {
-		factor = 1000
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
-
 mjl_estate_tribes_advisors = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
@@ -208,31 +165,6 @@ estate_tribes_tribal_primacy = {
 	}
 	ai_will_do = {
 		factor = 2000
-	}
-}
-
-estate_tun_church_piety_privilege = {
-	icon = privilege_recruit_minister
-	max_absolutism = -5
-	influence = 0.10
-	is_valid = {
-		religion_group = muslim
-		tag = TUN
-	}
-	can_select = {
-		NOT = { has_estate_privilege = estate_church_clerical_ministers }
-	}
-	penalties = {
-	}
-	benefits = {
-		monthly_piety = -0.003
-	}
-	ai_will_do = {
-		factor = 1000
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
 	}
 }
 

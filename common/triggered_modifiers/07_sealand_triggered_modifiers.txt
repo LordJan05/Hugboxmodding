@@ -292,6 +292,73 @@ sea_cas_united_spain_modifier = {
 	land_morale = 0.05
 }
 ##########################################
+# Portugal:
+gc_por_establishes_foothold_brazil_modifier = {
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	trigger = {
+		mission_completed = gc_por_establishes_foothold_brazil
+	}
+	manpower_recovery_speed = 0.1
+	land_forcelimit_modifier = 0.1
+}
+gc_por_caribbean_modifier = {
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	trigger = {
+		mission_completed = gc_por_caribbean
+	}
+	land_morale = 0.05
+	artillery_fire = 0.25
+}
+gc_por_colonise_central_africa_modifier = {
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	trigger = {
+		mission_completed = gc_por_colonise_central_africa
+	}
+	land_maintenance_modifier = -0.1
+	production_efficiency = 0.1
+}
+gc_por_discovers_cape_good_hope_modifier = {
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	trigger = {
+		mission_completed = gc_por_discovers_cape_good_hope
+	}
+	trade_steering = 0.1
+	infantry_power = 0.05
+}
+gc_por_conquers_zanzibar_modifier = {
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+	}
+	trigger = {
+		mission_completed = gc_por_conquers_zanzibar
+	}
+	discipline = 0.025
+	global_foreign_trade_power = 0.1
+}
+##########################################
 # Genoa:
 sea_gen_northern_genoa_trade_modifier = {
 	potential = {
@@ -488,8 +555,7 @@ achiev_war_is_a_defeat_for_humanity = {
 	horde_unity = 1
 	meritocracy = 0.3
 	republican_tradition = 0.3
-	yearly_tribal_allegiance = 0.05
-	monthly_militarized_society = 0.05
+	yearly_government_power = 0.5
 	yearly_absolutism = 0.5
 	monthly_fervor_increase = 1
 	church_power_modifier = 0.5
@@ -913,4 +979,14 @@ achiev_country_roads = {
 		}
 	}
 	movement_speed = 0.05
+}
+achiev_we_shall_fight_on_the_bitches = {
+	potential = { }
+	trigger = {
+		num_of_owned_provinces_with = {
+			value = 100
+			has_port = yes
+		}
+	}
+	defensiveness = 0.05
 }

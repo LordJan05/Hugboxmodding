@@ -447,6 +447,7 @@ tau_slot_2 = {
 					NOT = { exists = BMA }
 				}
 				change_tag = BMA
+				on_change_tag_effect = yes
 			}
 			northern_thai_area = {
 				limit = {

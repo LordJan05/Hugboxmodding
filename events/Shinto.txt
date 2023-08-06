@@ -1954,6 +1954,7 @@ country_event = {
 				end_incident = incident_nanban
 			}
 		}
+		set_country_flag = jap_chose_kaikoku_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -2002,6 +2003,7 @@ country_event = {
 				end_incident = incident_nanban
 			}
 		}
+		set_country_flag = jap_chose_trade_with_west_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -2056,6 +2058,7 @@ country_event = {
 				end_incident = incident_nanban
 			}
 		}
+		set_country_flag = jap_chose_sakoku_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -2271,6 +2274,7 @@ country_event = {
 				end_incident = incident_firearms
 			}
 		}
+		set_country_flag = perfecting_the_musket_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -2318,6 +2322,7 @@ country_event = {
 				end_incident = incident_firearms
 			}
 		}
+		set_country_flag = proliferation_firearms_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -2371,6 +2376,7 @@ country_event = {
 				end_incident = incident_firearms
 			}
 		}
+		set_country_flag = example_of_bushido_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
@@ -3044,12 +3050,14 @@ country_event = {
 				end_incident = incident_spread_of_christianity
 			}
 		}
+		set_country_flag = significant_christian_presence_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
 			name = "significant_christian_presence"
 			duration = 18250
 		}
+		tooltip = { swap_non_generic_missions = yes }
 	}
 	
 }
@@ -3099,12 +3107,14 @@ country_event = {
 				end_incident = incident_spread_of_christianity
 			}
 		}
+		set_country_flag = christianity_defeated_flag
 		set_country_flag = shinto_incident_recent
 		clr_country_flag = active_incident_flag
 		add_country_modifier = {
 			name = "christianity_defeated"
 			duration = 18250
 		}
+		tooltip = { swap_non_generic_missions = yes }
 	}
 }
 
@@ -3573,11 +3583,8 @@ country_event = {
 				}
 			}
 		}
-		hidden_effect = {
-			set_country_flag = ikko_ikki_peasants_flag
-		}
-		change_government_to_theocracy = yes
-		add_government_reform = leading_clergy_reform
+		change_government = theocracy
+		add_government_reform = ikko_ikki_reform
 		add_stability = -2
 		change_religion = mahayana
 		capital_scope = {
@@ -3613,11 +3620,8 @@ country_event = {
 				}
 			}
 		}
-		hidden_effect = {
-			set_country_flag = ikko_ikki_peasants_flag
-		}
-		change_government_to_republic = yes
-		add_government_reform = peasants_republic
+		change_government = theocracy
+		add_government_reform = ikko_ikki_reform
 		add_stability = -2
 		change_religion = mahayana
 		capital_scope = {

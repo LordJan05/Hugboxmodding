@@ -1,14 +1,13 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new dieties, make sure they are uniquely named.
 
-odin =
-{
+odin = {
 	legitimacy = 1
 	horde_unity = 1
 	republican_tradition = 0.3
 	core_creation = -0.2
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -16,8 +15,11 @@ odin =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 7
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -36,7 +38,7 @@ freya =
 	global_manpower_modifier = 0.2
 	global_tax_modifier = 0.2
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -44,8 +46,11 @@ freya =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 8
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -59,12 +64,11 @@ freya =
 	}
 }
 
-tor =
-{
+tor = {
 	defensiveness = 0.33
 	artillery_fire = 1
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -72,8 +76,11 @@ tor =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 9
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -99,12 +106,11 @@ tor =
 	}
 }
 
-tyr =
-{
+tyr = {
 	global_sailors_modifier = 0.2
 	land_morale = 0.15
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -112,8 +118,11 @@ tyr =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 10
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -127,12 +136,11 @@ tyr =
 	}
 }
 
-njord =
-{
+njord = {
 	trade_efficiency = 0.2
 	global_trade_goods_size_modifier = 0.1
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -140,8 +148,11 @@ njord =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 11
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -160,14 +171,13 @@ njord =
 }
 
 
-snotra =
-{
+snotra = {
 	technology_cost = -0.05
 	idea_cost = -0.05
 	#build_cost = -0.1
 	development_cost = -0.05
 	
-	allow = {
+	potential = {
 		religion = norse_pagan_reformed
 		OR = {
 			tag = VIN
@@ -175,8 +185,11 @@ snotra =
 			tag = DAN
 		}
 	}
+	trigger = {}
 	sprite = 12
 	
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {

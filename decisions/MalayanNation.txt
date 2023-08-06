@@ -41,33 +41,26 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			if = {
-				limit = {
-					religion_group = muslim
-				}
-				owns = 617
-				owns = 596
-				owns = 636
-				owns = 641
-				owns = 629
-			}
-			else = {
-				owns = 622
-				owns = 2687
-				owns = 628
-				owns = 638
-				owns = 2390
+			owns = 617
+			owns = 596
+			owns = 622
+			owns = 2687
+			owns = 628
+			owns = 636
+			owns = 638
+			owns = 641
+			num_of_owned_provinces_with = {
+				value = 20
+				region = malaya_region
 			}
 			num_of_owned_provinces_with = {
-				value = 40
-				OR = {
-					region = malaya_region
-					region = indonesia_region
-				}
+				value = 30
+				region = indonesia_region
 			}
 		}
 		effect = {
 			change_tag = MSA
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

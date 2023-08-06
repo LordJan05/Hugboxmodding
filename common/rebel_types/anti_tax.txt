@@ -36,6 +36,10 @@ anti_tax_rebels = {
 	spawn_chance = {
 		factor = 2
 		modifier = {
+			factor = 100.0
+			has_province_modifier = rus_discontent_peasantry
+		}
+		modifier = {
 			factor = 10
 			owner = {
 				has_global_flag = great_peasants_war_flag
@@ -160,6 +164,12 @@ anti_tax_rebels = {
 			remove_country_modifier = obsolete_forces
 			remove_country_modifier = isolate_rebels
 			add_prestige = -50
+		}
+		if = {
+			limit = { has_disaster = castilian_civil_war }
+			set_country_flag = cas_civil_war_rebels_won
+			country_event = { id = castilian_civil_war.100 }
+			end_disaster = castilian_civil_war
 		}
 		if = {
 			limit = {

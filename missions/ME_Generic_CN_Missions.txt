@@ -1,3 +1,377 @@
+s_d_colonial_missions_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = ALA
+			tag = CUB
+			tag = AUS
+			tag = COL
+		}
+	}
+	has_country_shield = yes
+
+	s_d_colonial_navy = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			navy_size = 200
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_colonial_navy_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = CAL
+			tag = CAN
+			tag = WSI
+		}
+	}
+	has_country_shield = yes
+
+	s_d_colonial_treasury = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			treasury = 5000
+			monthly_income = 100
+			NOT = { num_of_loans = 1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_colonial_treasury_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		tag = USA
+	}
+	has_country_shield = yes
+
+	s_d_the_usmc = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			sailors = 40000
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_the_usmc_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_4 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		tag = LAP
+	}
+	has_country_shield = yes
+
+	s_d_professional_army = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			army_tradition = 40
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_professional_army_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_5 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		tag = PEU
+	}
+	has_country_shield = yes
+
+	s_d_gunsmiths_of_lima = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			num_of_artillery = 30
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_gunsmiths_of_lima_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_6 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = SNA
+			tag = FLO
+			tag = BRZ
+		}
+	}
+	has_country_shield = yes
+
+	s_d_recruitment_drive = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			max_manpower = 150
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_recruitment_drive_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_7 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = CSC
+			tag = LOU
+		}
+	}
+	has_country_shield = yes
+
+	s_d_rough_riders = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			num_of_cavalry = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_rough_riders_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_8 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = CAM
+			tag = VNZ
+			tag = NZL
+		}
+	}
+	has_country_shield = yes
+
+	s_d_fighting_the_good_fight = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			army_size = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_fighting_the_good_fight_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_9 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = VRM
+			tag = QUE
+			tag = PRG
+		}
+	}
+	has_country_shield = yes
+
+	s_d_power_of_the_new_world = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			army_size = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_power_of_the_new_world_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+s_d_colonial_missions_10 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		is_colonial_nation = yes
+		OR = {
+			tag = MEX
+			tag = TEX
+		}
+	}
+	has_country_shield = yes
+
+	s_d_assimilation_effort = {
+		icon = sea_for_frodo_gif
+		position = 1
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_player = yes
+						is_colonial_nation = yes
+					}
+				}
+				ai = no
+			}
+			num_of_cities = 70
+		}
+		effect = {
+			add_country_modifier = {
+				name = s_d_assimilation_effort_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+
 CN_Generic_missions_1 = {
 	slot = 1
 	generic = no

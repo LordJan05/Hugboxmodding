@@ -13,7 +13,7 @@ country_event = {
 	picture = STRELTSY_MARCHING_eventPicture
 
 	trigger = {
-		always = no
+		has_country_modifier = rus_gov_mec_streltsy_regiment
 		has_dlc = "Third Rome"
 		OR = {
 			AND = {
@@ -101,9 +101,9 @@ country_event = {
 				has_government_mechanic = russian_mechanic
 			}
 			add_government_power = {
-				government_mechanic = russian_mechanic
-				which = MIL
-				amount = -15
+				mechanic_type = russian_mechanic
+				power_type = russian_mil_power
+				value = -15
 			}
 		}
 		hidden_effect = {
@@ -162,9 +162,9 @@ country_event = {
 				has_government_mechanic = russian_mechanic
 			}
 			add_government_power = {
-				government_mechanic = russian_mechanic
-				which = MIL
-				amount = -15
+				mechanic_type = russian_mechanic
+				power_type = russian_mil_power
+				value = -15
 			}
 		}
 		hidden_effect = {
@@ -677,7 +677,7 @@ country_event = {
 	picture = PEASANTS_ON_STEPPES_eventPicture
 
 	trigger = {
-		always = no
+		has_country_modifier = rus_gov_mec_streltsy_regiment
 		has_dlc = "Third Rome"
 		num_of_streltsy = 5
 		is_at_war = no
@@ -710,9 +710,9 @@ country_event = {
 			factor = 20
 		}
 		add_government_power = {
-			government_mechanic = russian_mechanic
-			which = MIL
-			amount = -25
+			mechanic_type = russian_mechanic
+			power_type = russian_mil_power
+			value = -25
 		}
 	}
 }
@@ -726,7 +726,7 @@ country_event = {
 	picture = STRELTSY_MARCHING_eventPicture
 
 	trigger = {
-		always = no
+		has_country_modifier = rus_gov_mec_streltsy_regiment
 		has_dlc = "Third Rome"
 		num_of_streltsy = 5
 		is_at_war = no
@@ -756,9 +756,9 @@ country_event = {
 		add_years_of_income = -0.25
 		add_army_professionalism = 0.01
 		add_government_power = {
-			government_mechanic = russian_mechanic
-			which = MIL
-			amount = 10
+			mechanic_type = russian_mechanic
+			power_type = russian_mil_power
+			value = 10
 		}
 		add_country_modifier = {
 			name = "streltsy_inspection"
@@ -771,9 +771,9 @@ country_event = {
 			factor = 20
 		}
 		add_government_power = {
-			government_mechanic = russian_mechanic
-			which = MIL
-			amount = -15
+			mechanic_type = russian_mechanic
+			power_type = russian_mil_power
+			value = -15
 		}
 	}
 }
@@ -787,7 +787,7 @@ country_event = {
 	picture = STRELTSY_MARCHING_eventPicture
 
 	trigger = {
-		always = no
+		has_country_modifier = rus_gov_mec_streltsy_regiment
 		has_dlc = "Third Rome"
 		num_of_streltsy = 5
 		NOT = { has_country_modifier = streltsy_garrison }
@@ -838,9 +838,9 @@ country_event = {
 				has_government_mechanic = russian_mechanic
 			}
 			add_government_power = {
-				government_mechanic = russian_mechanic
-				which = MIL
-				amount = 15
+				mechanic_type = russian_mechanic
+				power_type = russian_mil_power
+				value = 15
 			}
 		}
 	}
@@ -855,7 +855,7 @@ country_event = {
 	picture = STRELTSY_MARCHING_eventPicture
 
 	trigger = {
-		always = no
+		has_country_modifier = rus_gov_mec_streltsy_regiment
 		has_dlc = "Third Rome"
 		OR = {
 			has_reform = principality
@@ -874,18 +874,18 @@ country_event = {
 	option = {
 		name = streltsy_events.6.a #
 		add_government_power = {
-			government_mechanic = russian_mechanic
-			which = MIL
-			amount = 25
+			mechanic_type = russian_mechanic
+			power_type = russian_mil_power
+			value = 25
 		}
 		add_mil_power = -40
 	}
 	option = {
 		name = streltsy_events.6.b #
 		add_government_power = {
-			government_mechanic = russian_mechanic
-			which = MIL
-			amount = 25
+			mechanic_type = russian_mechanic
+			power_type = russian_mil_power
+			value = 25
 		}
 		add_years_of_income = -0.25
 	}

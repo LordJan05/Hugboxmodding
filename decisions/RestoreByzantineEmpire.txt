@@ -14,7 +14,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = LAT }
+			NOT = { exists = LAE }
 			NOT = { exists = BYZ }
 			NOT = { exists = GRE }
 			NOT = { tag = HLR }
@@ -76,7 +76,8 @@ country_decisions = {
 			151 = {
 				move_capital_effect = yes
 			}
-			change_tag = LAT
+			change_tag = LAE
+			on_change_tag_effect = yes
 			restore_country_name = yes
 			if = {
 				limit = {
@@ -186,7 +187,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 10
-			LAT = {
+			LAE = {
 				add_core = 151 # Constantinople
 			}
 			if = {
@@ -210,13 +211,15 @@ country_decisions = {
 				limit = {
 					NOT = { government = monarchy }
 				}
-				change_government_to_monarchy = yes
+				change_government = monarchy
 			}
-			add_government_reform = byzantium_government
+			add_government_reform = byzantine_autocracy_reform
 			set_government_rank = 3
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = { NOT = { has_idea_group = LAE_ideas } }
+				country_event = {
+					id = ideagroups.1
+				}
 			}
 			set_country_flag = formed_byzantium_flag
 		}

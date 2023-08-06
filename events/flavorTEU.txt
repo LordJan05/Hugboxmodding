@@ -399,6 +399,7 @@ country_event = {
 		hidden_effect = {
 			DNZ = { 
 				change_tag = RPR
+				on_change_tag_effect = yes
 				#override_country_name = RPR
 				set_country_flag = is_RPR_flag
 			}
@@ -520,6 +521,7 @@ country_event = {
 		name = flavor_teu.5.a
 		end_disaster = prussian_confederation_disaster
 		change_tag = DNZ
+		on_change_tag_effect = yes
 		if = {
 			limit = {
 				owns = 43
@@ -646,10 +648,10 @@ country_event = {
 			}
 		}
 		custom_tooltip = flavor_teu.10.b.ct
-		if = {
-			limit = { is_part_of_hre = yes }
-			set_in_empire = no
-		}
+		#if = {
+		#	limit = { is_part_of_hre = yes }
+		#	set_in_empire = no
+		#}
 		samogitia_area = {
 			limit = {
 				NOT = { is_core = ROOT }
@@ -999,36 +1001,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 30
-			modifier = {
-				factor = 0
-				OR = {
-					ai = no
-					was_player = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					is_enemy = FROM
-					is_rival = FROM
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = { 
-					diplomatic_reputation = 1
-					NOT = { diplomatic_reputation = 2 }
-				}
-			}
-			modifier = {
-				factor = 3
-				FROM = { diplomatic_reputation = 2 }
-			}
-			modifier = {
-				factor = 0.5
-				FROM = { NOT = { diplomatic_reputation = 0 }}
-			}
+			factor = 100
 		}
 	}
 	
@@ -1049,22 +1022,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 70
-			modifier = {
-				factor = 0.57
-				FROM = { 
-					diplomatic_reputation = 1
-					NOT = { diplomatic_reputation = 2 }
-				}
-			}
-			modifier = {
-				factor = 0.29
-				FROM = { diplomatic_reputation = 2 }
-			}
-			modifier = {
-				factor = 1.21
-				FROM = { NOT = { diplomatic_reputation = 0 } }
-			}
+			factor = 0
 		}
 	}
 }
@@ -1443,6 +1401,7 @@ country_event = {
 		NOT = { in_league = catholic }
 		NOT = { in_league = protestant }
 		hre_leagues_enabled = yes
+		is_free_or_tributary_trigger = yes
 	}
 	mean_time_to_happen = {
 		months = 3
@@ -1561,7 +1520,7 @@ country_event = {
 		#}
 		hidden_effect = {
 			unlock_government_reform = {
-				government_reform = prussian_monarchy
+				government_reform = prussian_monarchy_base
 			}
 			unlock_government_reform = {
 				government_reform = prussian_republic_reform
@@ -1574,7 +1533,7 @@ country_event = {
 			limit = { NOT = { government = monarchy } }
 			change_government = monarchy
 		}
-		add_government_reform = prussian_monarchy
+		add_government_reform = prussian_monarchy_base
 		if = {
 			limit = { NOT = { government_rank = 2 } }
 			set_government_rank = 2
@@ -1823,8 +1782,20 @@ country_event = {
 	option = {	# Okay.
 		name = flavor_teu.30.a
 		custom_tooltip = flavor_teu.30.a.tt
-		set_in_empire = yes
-		set_country_flag = teu_joined_the_hre
+		if = {
+			limit = {
+				NOT = { has_country_flag = teu_crusader_path }
+			}
+			set_in_empire = yes
+			set_country_flag = teu_joined_the_hre
+		}
+		else = {
+			custom_tooltip = flavor_teu.30.a.bt
+			if = {
+				limit = { is_part_of_hre = yes }
+				set_in_empire = no
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -1953,6 +1924,7 @@ country_event = {
 			NOT = { has_country_flag = teu_is_allowed_to_stay_in_the_hre }
 		}
 		change_tag = PRU
+		on_change_tag_effect = yes
 		restore_country_name_effect = yes
 		if = {
 			limit = {
@@ -2031,6 +2003,7 @@ country_event = {
 	option = {
 		name = flavor_teu.35.a
 		change_tag = GER
+		on_change_tag_effect = yes
 		restore_country_name_effect = yes
 		if = {
 			limit = {
@@ -2097,7 +2070,7 @@ country_event = {
 				NOT = { government = republic }
 				NOT = { government = monarchy }
 			}
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = germany_monarchy
 		}
 		if = {
@@ -2192,8 +2165,18 @@ country_event = {
 	goto = 295
 	option = {	#Integrate the Muscovites
 		name = flavor_teu.37.a
-		add_accepted_culture_or_dip_power = {
-			culture = russian
+		if = {
+			limit = {
+				has_updated_culture = { culture = slavic }
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = russian_new
+			}
+		}
+		else = {
+			add_accepted_culture_or_dip_power = {
+				culture = russian
+			}
 		}
 		add_dip_power = 100
 		295 = {
@@ -2895,7 +2878,7 @@ country_event = {
 		}
 		hidden_effect = {
 			unlock_government_reform = {
-				government_reform = prussian_monarchy
+				government_reform = prussian_monarchy_base
 			}
 			unlock_government_reform = {
 				government_reform = prussian_republic_reform

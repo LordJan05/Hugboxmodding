@@ -803,6 +803,7 @@ sea_mam_missions_3 = {
 				set_government_rank = 3
 			}
 			change_tag = ABA
+			on_change_tag_effect = yes
 			add_prestige = 100
 			add_country_modifier = {
 				name = "unified_islam"

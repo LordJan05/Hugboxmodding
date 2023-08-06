@@ -4418,8 +4418,13 @@ sealand_swz_missions_middle = {
 			OR = {
 				area = mombasa_area
 				area = central_swahili_coast_area
-				area = mozambique_area
-				area = quelimane_area
+				#area = mozambique_area
+				province_id = 4049
+				province_id = 1195
+				province_id = 788
+				#area = quelimane_area
+				province_id = 1192
+				province_id = 1186
 				#area = sakalava_area 
 				#area = madagascar_highlands_area
 				#area = betsimasaraka_area
@@ -4449,14 +4454,19 @@ sealand_swz_missions_middle = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			mozambique_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			quelimane_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#mozambique_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			4049 = { country_or_non_sovereign_subject_holds = ROOT }
+			1195 = { country_or_non_sovereign_subject_holds = ROOT }
+			788 = { country_or_non_sovereign_subject_holds = ROOT }
+			#quelimane_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			1192 = { country_or_non_sovereign_subject_holds = ROOT }
+			1186 = { country_or_non_sovereign_subject_holds = ROOT }
 			#sakalava_area = {
 			#	type = all
 			#	country_or_non_sovereign_subject_holds = ROOT

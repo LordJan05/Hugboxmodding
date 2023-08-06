@@ -763,9 +763,9 @@ country_decisions = {
 					clr_global_flag = empire_of_china_dismantled
 				}
 				add_government_reform = celestial_empire
-				hidden_effect = { # Has to be 2x
-					add_government_reform = celestial_empire
-				}
+				#hidden_effect = { # Has to be 2x
+				#	add_government_reform = celestial_empire
+				#}
 				set_global_flag = empire_of_china_formed
 				set_meritocracy = 50
 				set_mandate = 60

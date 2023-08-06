@@ -63,6 +63,7 @@ country_decisions = {
 					tag = SWZ
 				}
 				change_tag = ZUL
+				on_change_tag_effect = yes
 				swap_free_idea_group = yes
 				define_ruler = {
 					name = "Shaka"

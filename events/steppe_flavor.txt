@@ -337,7 +337,10 @@ country_event = {
 			}
 		}
 		any_owned_province = { 
-			trade_goods = livestock
+			OR = {
+				trade_goods = livestock
+				trade_goods = grain_livestock
+			}
 			any_neighbor_province = {  
 				NOT = { owned_by = ROOT }
 			}
@@ -352,7 +355,10 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					trade_goods = livestock
+					OR = {
+						trade_goods = livestock
+						trade_goods = grain_livestock
+					}
 					any_neighbor_province = {  
 						NOT = { owned_by = ROOT }
 					}

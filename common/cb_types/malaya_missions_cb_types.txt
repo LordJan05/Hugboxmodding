@@ -3,12 +3,14 @@ cb_defeat_chinese_enemies = {
 
 	is_triggered_only = no
 	months = 120
-
-	prerequisites = {
+	prerequisites_self = {
 		OR = {
 			has_country_flag = MSA_swayed_flag
 			has_country_flag = MSA_absolutely_loyal_flag
 		}
+	}
+
+	prerequisites = {
 		FROM = {
 			has_country_flag = MSA_insulting_flag
 		}
@@ -53,8 +55,12 @@ cb_palapa_oath = {
 	is_triggered_only = no
 	months = 120
 
-	prerequisites = {
+
+	prerequisites_self = {
 		has_country_flag = MAJ_palapa_campaigns_cb
+	}
+
+	prerequisites = {
 		claim = FROM
 		FROM = {
 			culture_group = malay

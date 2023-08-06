@@ -351,7 +351,7 @@ hun_ottoman_group = {
 		}
 		
 		trigger = {
-			NOT = { exists = LAT }
+			NOT = { exists = LAE }
 			NOT = { exists = BYZ }
 			owns = 151  # Constantinople
 			151 = {		# Constantinople
@@ -386,7 +386,8 @@ hun_ottoman_group = {
 			151 = {
 				move_capital_effect = yes
 			}
-			change_tag = LAT
+			change_tag = LAE
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { religion = orthodox }
@@ -406,7 +407,7 @@ hun_ottoman_group = {
 				duration = 7300
 			}
 			add_prestige = 10
-			LAT = {
+			LAE = {
 				add_core = 151 # Constantinople
 			}
 			hidden_effect = {
@@ -414,7 +415,7 @@ hun_ottoman_group = {
 					limit = {
 						is_core = BYZ
 					}
-					add_core = LAT
+					add_core = LAE
 					remove_core = BYZ
 				}
 			}
@@ -430,11 +431,13 @@ hun_ottoman_group = {
 				}
 				change_government_to_monarchy = yes
 			}
-			add_government_reform = byzantium_government
+			add_government_reform = byzantine_autocracy_reform
 			set_government_rank = 3
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = { NOT = { has_idea_group = LAE_ideas } }
+				country_event = {
+					id = ideagroups.1
+				}
 			}
 			set_country_flag = formed_byzantium_flag
 			anatolia_region = {

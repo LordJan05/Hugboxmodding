@@ -1145,6 +1145,7 @@ sealand_norway_missions_2 = {
 				}
 			}
 			change_tag = VIN
+			on_change_tag_effect = yes
 			NOR = { set_country_flag = no_nor_missions_for_you }
 			custom_tooltip = loses_old_world_provs_tt
 			hidden_effect = {

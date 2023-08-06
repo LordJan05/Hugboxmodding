@@ -15,6 +15,7 @@ country_event = {
 	option = { # change to Pueblo
 		name = flavor_pue.1.a
 		change_tag = PUE
+		on_change_tag_effect = yes
 		if = {
 			limit = {
 				NOT = { government_rank = 2 }

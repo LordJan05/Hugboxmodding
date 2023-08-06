@@ -105,18 +105,19 @@ gc_morocco_1 = {
 			}
 		}		
 		effect = {
-			if = {
-				limit = {
-					1127 = {
-						is_empty = yes
-						any_neighbor_province = {
-							owned_by = ROOT
-						}
-					}
-				}
-				set_country_flag = mor_sudanese_expedition
-				country_event = { id = flavor_mor.9 }
-			}
+			#if = {
+			#	limit = {
+			#		1127 = {
+			#			is_empty = yes
+			#			any_neighbor_province = {
+			#				owned_by = ROOT
+			#			}
+			#		}
+			#	}
+			#	set_country_flag = mor_sudanese_expedition
+			#	country_event = { id = flavor_mor.9 }
+			#}
+			create_conquistador = { tradition = 50 }
 			add_country_modifier = {
 				name = mor_saharan_trade
 				duration = 7300
@@ -129,7 +130,7 @@ gc_morocco_1 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1128
+				#province_id = 1128
 				province_id = 1129
 				province_id = 1132
 				province_id = 2247
@@ -140,9 +141,9 @@ gc_morocco_1 = {
 		}
 		
 		trigger = {
-			1128 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#1128 = {
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			1129 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -171,7 +172,7 @@ gc_morocco_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sahara_area = {
+			tanezruft_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -194,7 +195,7 @@ gc_morocco_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = niger_bend_area
-				area = western_sahara_area
+				area = tanezruft_area
 				area = dendi_area
 			}
 			NOT = {
@@ -207,7 +208,7 @@ gc_morocco_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			western_sahara_area = {
+			tanezruft_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -709,6 +710,7 @@ gc_morocco_3 = {
 		}
 		
 		effect = {
+			custom_tooltip = gc_mor_algiers_tt
 			add_casus_belli = {
 				type = cb_tun_mor_unite_barbary
 				months = 120

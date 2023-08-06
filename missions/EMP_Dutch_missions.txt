@@ -793,6 +793,12 @@ emp_ned_slot3_branch = {
 				colonial_australia = {
 					has_discovered = ROOT
 				}
+				trade_company_indonesia = {
+					has_discovered = ROOT
+				}
+				trade_company_moluccas = {
+					has_discovered = ROOT
+				}
 			}
 		}
 		
@@ -855,7 +861,7 @@ emp_ned_slot4_branch = { # Statists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -864,7 +870,7 @@ emp_ned_slot4_branch = { # Statists
 			else_if = {
 				limit = {
 					government = republic
-					NOT = { has_reform = dutch_republic }
+					NOT = { has_government_attribute = has_dutch_election }
 				}
 				add_republican_tradition = 10
 			}
@@ -884,7 +890,7 @@ emp_ned_slot4_branch = { # Statists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -893,7 +899,7 @@ emp_ned_slot4_branch = { # Statists
 			else_if = {
 				limit = {
 					government = republic
-					NOT = { has_reform = dutch_republic }
+					NOT = { has_government_attribute = has_dutch_election }
 				}
 				add_republican_tradition = 15
 			}
@@ -932,7 +938,7 @@ emp_ned_slot4_branch = { # Statists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -941,7 +947,7 @@ emp_ned_slot4_branch = { # Statists
 			else_if = {
 				limit = {
 					government = republic
-					NOT = { has_reform = dutch_republic }
+					NOT = { has_government_attribute = has_dutch_election }
 				}
 				add_republican_tradition = 15
 			}
@@ -1039,7 +1045,7 @@ emp_ned_slot4_branch = { # Statists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1048,7 +1054,7 @@ emp_ned_slot4_branch = { # Statists
 			else_if = {
 				limit = {
 					government = republic
-					NOT = { has_reform = dutch_republic }
+					NOT = { has_government_attribute = has_dutch_election }
 				}
 				add_republican_tradition = 20
 			}
@@ -1071,7 +1077,7 @@ emp_ned_slot4_branch = { # Statists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1080,7 +1086,7 @@ emp_ned_slot4_branch = { # Statists
 			else_if = {
 				limit = {
 					government = republic
-					NOT = { has_reform = dutch_republic }
+					NOT = { has_government_attribute = has_dutch_election }
 				}
 				add_republican_tradition = 20
 			}
@@ -1237,7 +1243,7 @@ emp_ned_slot5_branch = { # Orangists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1266,7 +1272,7 @@ emp_ned_slot5_branch = { # Orangists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1313,7 +1319,7 @@ emp_ned_slot5_branch = { # Orangists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1381,7 +1387,7 @@ emp_ned_slot5_branch = { # Orangists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}
@@ -1432,7 +1438,7 @@ emp_ned_slot5_branch = { # Orangists
 			if = {
 				limit = {
 					OR = {
-						has_reform = dutch_republic
+						has_government_attribute = has_dutch_election
 						has_reform = states_general_reform
 					}
 				}

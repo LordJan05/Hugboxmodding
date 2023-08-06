@@ -47,13 +47,20 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = {
-					has_opinion = {
-						who = emperor
-						value = 0
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					NOT = {
+						will_back_reform = emperor_privilegia_de_non_appelando
 					}
 				}
-			}	
+				else = {
+					NOT = {
+						will_back_reform = privilegia_de_non_appelando
+					}
+				}
+			}
 		}
 		set_country_flag = fire_hre_vassals_3_flag
 		emperor = {
@@ -67,9 +74,14 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				has_opinion = {
-					who = emperor
-					value = 0
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					will_back_reform = emperor_privilegia_de_non_appelando
+				}
+				else = {
+					will_back_reform = privilegia_de_non_appelando
 				}
 			}	
 			
@@ -110,11 +122,13 @@ country_event = {
 	option = {
 		name = "EVTOPTA9075"
 		change_tag = HLR
+		on_change_tag_effect = yes
 		restore_country_name_effect = yes
 		add_country_modifier = {
 			name = "rome_reborn"
 			duration = -1
 		}
+		custom_tooltip = hre_core_tt
 		hidden_effect = {
 			every_province = {
 				limit = {
@@ -127,6 +141,9 @@ country_event = {
 				}
 				add_core = emperor
 			}
+		}
+		custom_tooltip = hre_inheritance_tt
+		hidden_effect = {
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -140,9 +157,11 @@ country_event = {
 		}
 		dismantle_hre = yes
 		set_government_rank = 3
-		add_adm_power = 200
-		add_dip_power = 200
-		add_mil_power = 200
+		if = {
+			limit = { has_dlc = "Domination" }
+			add_government_reform = holy_imperial_monarchy_reform
+		}
+		add_adm_power = 250
 		if = {
 			limit = {
 				has_custom_ideas = no
@@ -181,6 +200,7 @@ country_event = {
 	
 	trigger = {
 		is_emperor = yes
+		NOT = { has_country_flag = has_internal_election_first }
 	}
 	
 	option = {
@@ -679,6 +699,32 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 100
+		}
+	}
+}
+
+# Dismantling the Holy Roman Empire
+country_event = {
+	id = hre_event.15
+	title = hre_event.15.t
+	desc = hre_event.15.desc
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hre_event.15.a
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_splendor = 200
+		add_power_projection = {
+			type = dismantled_the_hre
+			amount = 25
+		}
+		
+		ai_chance = {
+			factor = 1
 		}
 	}
 }

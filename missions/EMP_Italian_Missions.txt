@@ -365,113 +365,10 @@ emp_ita_war_branch = {
 					}
 				}
 				fort_level = 1
-				NOT = {
-					AND = {
-						if = {
-							limit = {
-								ROOT = {
-									NOT = { mil_tech = 14 }
-								}
-							}
-							OR = {
-								has_building = fort_15th
-								has_building = fort_16th
-								has_building = fort_17th
-								has_building = fort_18th
-							}
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									AND = {
-										mil_tech = 14
-										NOT = { mil_tech = 19 }
-									}
-								}
-							}
-							OR = {
-								has_building = fort_16th
-								has_building = fort_17th
-								has_building = fort_18th
-							}
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									AND = {
-										mil_tech = 19
-										NOT = { mil_tech = 24 }
-									}
-								}
-							}
-							OR= { 
-								has_building = fort_17th
-								has_building = fort_18th
-							}
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									mil_tech = 24
-								}
-							}
-							has_building = fort_18th
-						}
-					}
-				}
+				NOT = { province_has_current_tech_fort_trigger = yes }
 			}
 			else = {
-				NOT = {
-					AND = {
-						if = {
-							limit = {
-								ROOT = {
-									NOT = { mil_tech = 14 }
-								}
-							}
-							has_building = fort_15th
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									AND = {
-										mil_tech = 14
-										NOT = { mil_tech = 19 }
-									}
-								}
-							}
-							OR = {
-								has_building = fort_16th
-								has_building = fort_17th
-								has_building = fort_18th
-							}
-
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									AND = {
-										mil_tech = 19
-										NOT = { mil_tech = 24 }
-									}
-								}
-							}
-							OR = {
-								has_building = fort_17th
-								has_building = fort_18th
-							}
-
-						}
-						else_if = {
-							limit = {
-								ROOT = {
-									mil_tech = 24
-								}
-							}
-							has_building = fort_18th
-						}
-					}
-				}
+				NOT = { province_has_current_tech_fort_trigger = yes }
 			}
 		}
 		trigger = {
@@ -487,56 +384,7 @@ emp_ita_war_branch = {
 					area = po_valley_area
 					area = venetia_area
 				}
-				if = {
-					limit = {
-						ROOT = {
-							NOT = { mil_tech = 14 }
-						}
-					}
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							AND = {
-								mil_tech = 14
-								NOT = { mil_tech = 19 }
-							}
-						}
-					}
-					OR = {
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							AND = {
-								mil_tech = 19
-								NOT = { mil_tech = 24 }
-							}
-						}
-					}
-					OR = {
-						has_building = fort_17th
-						has_building = fort_18th
-					}
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							mil_tech = 24
-						}
-					}
-					has_building = fort_18th
-				}
+				province_has_current_tech_fort_trigger = yes
 			}
 		}
 		effect = {

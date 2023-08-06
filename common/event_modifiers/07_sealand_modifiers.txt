@@ -10,7 +10,30 @@ sea_fishing_game_modifier = {
 # Russian Gov mech:
 rus_gov_mec_streltsy_regiment = {
 	fire_damage = 0.1
+	fire_damage_received = -0.1
 	is_streltsy_modifier = yes
+}
+trained_subject_officers = {
+	discipline = 0.025
+	land_morale = 0.1
+}
+national_focus_remove_cooldown_modifier = {
+	national_focus_years = -30
+}
+national_focus_adm_modifier = {
+	country_admin_power = 2
+	country_diplomatic_power = -1
+	country_military_power = -1
+}
+national_focus_dip_modifier = {
+	country_admin_power = -1
+	country_diplomatic_power = 2
+	country_military_power = -1
+}
+national_focus_mil_modifier = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = 2
 }
 ################
 # Diplo actions:
@@ -152,9 +175,6 @@ teu_knights_of_war_modifier = {
 	cavalry_cost = -0.1
 	cavalry_fire = 0.5
 }
-teu_malbork_castle_modifier = {
-	fort_level = 1
-}
 ##########################################
 # Silesia:
 silesia_monarchy_reform_coal_bonus = {
@@ -227,7 +247,7 @@ royal_road_modifier = {
 	local_hostile_movement_speed = 0.15
 }
 clans_united_modifier = {
-	yearly_tribal_allegiance = 1
+	monthly_tribal_allegiance = 0.1
 }
 ##########################################
 # Mamluks:
@@ -391,7 +411,7 @@ gb_royal_marines_units_elite = { # Special
 	infantry_power = 0.15
 	fire_damage = 0.1
 	reinforce_speed = 1
-	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition
+	# landing_penalty = -1 # Sadly doesn't work, nor transport_attrition for 1.35 even
 	is_cawa_modifier = yes
 }
 gb_royal_marines_units_national = { # National
@@ -411,15 +431,26 @@ eng_war_france_modifier = {
 	siege_ability = 0.15
 	reinforce_speed = 0.2
 }
+# Angevin:
+ave_musketeers_modifier = {
+	has_musketeer = yes 
+	allowed_musketeer_fraction = 0.15
+}
 ##########################################
 # France:
-france_king_musketeers_units = {
-	fire_damage = 0.2
-	morale_damage_received = -0.2
-	is_cawa_modifier = yes
+france_reformed_musketeers_units = {
+	discipline = 0.025
+	regiment_manpower_usage = -0.15
+	drill_gain_modifier = 1
+	land_attrition = -0.15
+	is_musketeer_modifier = yes
 }
 alpine_forticiations_modifier = {
 	defensiveness = 0.2
+}
+
+musketeers_reform_modifier = {
+	allowed_musketeer_fraction = 0.2
 }
 ##########################################
 # Dutch/Burgundy:
@@ -509,7 +540,7 @@ fatimid_government_janissaries_boost_3 = {
 andalusia_government_janissaries = {
 	is_janissary_modifier = yes
 	fire_damage = 0.1
-	shock_damage_received = -0.3
+	shock_damage_received = -0.2
 }
 ##########################################
 # Ottoman:
@@ -613,6 +644,12 @@ nov_sway_muscovite_subjects_modifier = {
 ##########################################
 # Sealand:
 sealand_modifier = {
+	global_sailors = 1
+}
+soldier_zlewikk_modifier = {
+	global_manpower = 0.001
+}
+deckhand_davlan_modifier = {
 	global_sailors = 1
 }
 sealand_home_modifier = {
@@ -733,18 +770,13 @@ zan_great_kilwa_gold_modifier = {
 ##########################################
 # Castille/Spain:
 focus_on_france_modifier = {
-	discipline = 0.05
-	reinforce_speed = 0.2
-}
-tercios_special_pike_units = {
-	fire_damage = 0.1
-	shock_damage_received = -0.3
-	is_cawa_modifier = yes
+	discipline = 0.025
+	reinforce_speed = 0.25
 }
 tercios_special_fire_units = {
-	fire_damage = 0.3
-	shock_damage_received = -0.1
-	is_cawa_modifier = yes
+	fire_damage = 0.2
+	shock_damage_received = 0.2
+	is_tercio_modifier = yes
 }
 ##########################################
 # Portugal:
@@ -800,20 +832,6 @@ nog_silk_road_modifier = {
 }
 nog_black_sea_slave_trade_revived = {
 	trade_goods_size = 2.0
-}
-##########################################
-# Japan:
-japan_samurai_special_units_early = {
-	land_maintenance_modifier = -0.25
-	infantry_power = 0.1
-	discipline = 0.05
-	is_cawa_modifier = yes
-}
-japan_samurai_special_units_late = {
-	infantry_power = 0.1
-	discipline = 0.05
-	fire_damage = 0.15
-	is_cawa_modifier = yes
 }
 ##########################################
 # Venice:

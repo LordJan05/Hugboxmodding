@@ -52,7 +52,7 @@ byz_pp_balkans_north_italy = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
@@ -230,7 +230,7 @@ byz_pp_balkans_north_italy = {
 			}
 			if = {
 				limit = {
-					tag = LAT
+					tag = LAE
 				}
 				add_country_modifier = {
 					name = "venetian_revenge"
@@ -254,7 +254,7 @@ byz_pp_italian = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
@@ -444,7 +444,7 @@ byz_pp_maritime = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
@@ -848,6 +848,7 @@ byz_pp_maritime = {
 				move_capital_effect = yes
 			}
 			change_tag = ROM
+			on_change_tag_effect = yes
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			hidden_effect = {
@@ -1105,7 +1106,7 @@ byz_pp_religion = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
@@ -1398,12 +1399,12 @@ byz_pp_religion = {
 				}
 				if = {
 					limit = {
-						tag = LAT
+						tag = LAE
 					}
 					every_country = {
 						limit = { 
 							religion = catholic 
-							knows_country = LAT
+							knows_country = LAE
 						}
 						country_event = { id = flavor_byz.2 }
 					}
@@ -1426,7 +1427,7 @@ byz_pp_east = {
 	potential = {
 		OR = {
 			tag = BYZ
-			tag = LAT
+			tag = LAE
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
@@ -1584,7 +1585,7 @@ byz_pp_east = {
 			}
 			if = {
 				limit = {
-					tag = LAT
+					tag = LAE
 				}
 				add_country_modifier = {
 					name = "the_theme_system"

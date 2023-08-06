@@ -298,7 +298,7 @@ LAP_ideas = {
 	}
 	LAP_shock_dmg = {
 		shock_damage_received = -0.2
-		attack_bonus_in_capital_terrain = yes
+		attack_bonus_in_capital_terrain = 1
 	}
 }
 PRG_ideas = {
@@ -356,8 +356,8 @@ VNZ_ideas = {
 	
 	VNZ_colonies = {
 		global_colonial_growth = 15
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		native_uprising_chance = -1
+		native_assimilation = 1
 	}	
 	VNZ_tech_cost = {
 		mil_tech_cost_modifier = -0.1
@@ -399,8 +399,7 @@ CAM_ideas = {
 		
 	CAM_colonies = {
 		global_colonial_growth = 10
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		reform_progress_growth = 0.15
 	}	
 	CAM_tech_cost = {
 		mil_tech_cost_modifier = -0.1
@@ -425,11 +424,12 @@ CAM_ideas = {
 }
 COL_ideas = {
 	start = {
-		land_attrition = -0.2
-		global_manpower_modifier = 0.2
+		transport_attrition = -0.5
+		landing_penalty = -1
 	}
 	bonus = {
-		movement_speed = 0.1
+		naval_forcelimit_modifier = 0.33
+		global_sailors_modifier = 0.33
 	}
 	trigger = {
 		tag = COL
@@ -437,12 +437,15 @@ COL_ideas = {
 	free = yes      #will be added at load.
 	COL_independence = {
 		prestige = 1
+		global_manpower_modifier = 0.1
 	}
 	COL_legacy_of_the_libertadores = {
-		land_morale = 0.1
+		naval_morale_damage = 0.15
+		naval_morale_damage_received = -0.15
 	}
 	COL_union_of_nations = {
-		core_creation = -0.2
+		global_tax_modifier = 0.2
+		global_naval_engagement_modifier = 0.1
 	}
 	COL_federal_state = {
       no_religion_penalty = yes
@@ -453,9 +456,11 @@ COL_ideas = {
 	}
 	COL_fight_for_freedom = {
 		discipline = 0.025
+		ship_durability = 0.1
 	}
 	COL_new_army = {
 		infantry_power = 0.1
+		movement_speed = 0.1
 	}
 }
 

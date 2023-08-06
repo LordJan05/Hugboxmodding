@@ -72,12 +72,21 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					culture_group = french
+					OR = {
+						culture_group = french
+						culture = angevin_cosmopolitan_french
+						culture = angevin_gascon
+						culture = angevin_normand
+						culture = angevin_aquitaine
+						culture = angevin_breton
+					}
 					NOT = { primary_culture = quebecois }
 				}
 				change_primary_culture = quebecois
 			}
 			change_tag = CAN
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

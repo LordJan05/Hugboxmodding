@@ -73,6 +73,8 @@ country_decisions = {
 				}
 			}
 			change_tag = NZL
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -191,6 +193,7 @@ country_decisions = {
 				}
 			}
 			change_tag = AOT
+			on_change_tag_effect = yes
 			change_primary_culture = maori
 			change_religion = dreamtime
 			if = {

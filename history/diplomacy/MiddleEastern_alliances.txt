@@ -4,12 +4,6 @@ vassal = {
 	start_date = 1435.1.1
 	end_date = 1469.2.4
 }
-vassal = {
-	first = QAR
-	second = MLK
-	start_date = 1435.1.1
-	end_date = 1469.2.4
-}
 alliance = {
 	first = ARL
 	second = KRY
