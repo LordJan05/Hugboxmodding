@@ -17,6 +17,10 @@ trained_subject_officers = {
 	discipline = 0.025
 	land_morale = 0.1
 }
+trained_marines_act_marines = {
+	infantry_power = 0.1
+	is_marine_modifier = yes
+}
 national_focus_remove_cooldown_modifier = {
 	national_focus_years = -30
 }

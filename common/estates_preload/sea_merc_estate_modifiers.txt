@@ -35,4 +35,8 @@ estate_sea_mercs = {
 		key = trained_subject_officers_tt
 		trigger = { always = yes }
 	}
+	modifier_definition = {
+		key = trained_marines_act_marines_tt
+		trigger = { always = yes }
+	}
 }

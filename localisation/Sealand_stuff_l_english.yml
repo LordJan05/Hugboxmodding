@@ -906,7 +906,11 @@
  # Other stuff:
         # Ideas/Policies:
         trained_subject_officers:0 "Trained Subject Officers"
+        desc_trained_subject_officers:0 "Our army is nothing without our subjects filling the shoes, and the shoes are nothing without some quality."
         trained_subject_officers_tt:0 "Has the following effects on our non-colonial subjects:\n    Morale of Armies: §G+10.0%§!\n    Discipline"
+        trained_marines_act_marines:0 "The Organized Marines Act"
+        desc_trained_marines_act_marines:0 "Our warships are equipped with capable marines, making them more resilient to enemy boarding action."
+        trained_marines_act_marines_tt:0 "§YMarines§! gain the following bonus:\n    Infantry Combat Ability"
         # Naval Doctrines:
         sea_ship_durability:0 "Iron Fleet"
         sea_ship_durability_desc:0 "Our ships are not safe on every corner of the sea, so we must always take care of our ship and be ready for unwanted disruptions."
@@ -1456,6 +1460,7 @@
         # Diplomatic Actions:
         support_independence_action_tt:0 "Cannot support player subject independence."
         cannot_call_defender_of_faith:0 "Defender of the Faith cannot be called into war."
+        cannot_call_hre_emperor:0 "Emperor cannot be called into war."
         # Achievements:
         achiev_war_is_a_defeat_for_humanity:0 "§YAchievement:§! War is a Defeat for Humanity"
         achiev_war_is_a_defeat_for_humanity_tt:0 "Clicked funny dev button §Y2137§! times."
@@ -2639,6 +2644,13 @@
       # Modifiers:
         dutch_maurician_special_units:0 "Dutch Mauricians"
         desc_dutch_maurician_special_units:0 "In the 16th century, the musket (a handheld firearm) became commonplace, but they were very slow to reload. Army tacticians typically deployed musket-men in formations to maximize firepower. The muskets would thus be arranged in lines (twelve, eight or six deep). When the front rank fired, they would move away to the rear to reload, after which the next rank would fire. This maximized the firepower of the 16th century muskets and overcame their disadvantage of slow reloading. It was Maurice of Nassau who pioneered the use of these musket formations and taught it to Dutch troops in the Eighty Years' War. His development of military strategy and tactics made the Dutch army the most modern in Europe."
+      # Missions:
+        emp_bur_subjects_tt:0 "§YEmperor§! is not able to defend target nation when using that Casus Belli.\n\n§Y[Root.GetName]§! unlocks §YLowlands Conquest§! Casus Belli, where §YEmperor§! is not able to defend target nation."
+      # CB:
+        cb_bur_conquest_hre:0 "Lowlands Conquest"
+        cb_bur_conquest_hre_desc:0 "They hold provinces that we have claims on, which Emperor is not able to protect."
+        cb_bur_conquest_lor:0 "Lorraine Conquest"
+        cb_bur_conquest_lor_desc:0 "They hold provinces that we have claims on, which Emperor is not able to protect."
         
     # Venice:
       # Missions:

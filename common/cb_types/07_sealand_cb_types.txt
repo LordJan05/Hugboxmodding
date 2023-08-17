@@ -19,3 +19,22 @@ cb_tun_mor_unite_barbary = {
 	months = 120
 	war_goal = tun_mor_unite_barbary
 }
+# Burgundy:
+cb_bur_conquest_hre = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		mission_completed = emp_bur_subjects
+	}
+
+	prerequisites = {
+		claim = FROM
+		FROM = { capital_scope = { region = low_countries_region } }
+	}
+	war_goal = take_claim
+}
+cb_bur_conquest_lor = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	war_goal = take_claim
+}

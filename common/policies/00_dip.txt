@@ -1381,11 +1381,19 @@ trained_marines_act = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.1
+	trained_marines_act_marines_tt = 0.1 # naval_morale = 0.1
 	allowed_marine_fraction = 0.1
 
-	effect = {}
-	removed_effect = {}
+	effect = {
+		add_country_modifier = {
+			name = trained_marines_act_marines
+			duration = -1
+			hidden = yes
+		}
+	}
+	removed_effect = {
+		remove_country_modifier = trained_marines_act_marines
+	}
 	ai_will_do = {
 		factor = 1
 		modifier = {

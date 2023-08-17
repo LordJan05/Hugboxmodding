@@ -299,24 +299,31 @@ country_event = {
 		}
 		release = STY
 		STY = {
-			add_treasury = 500
+			convert_ruler_to_general = 100
+			add_treasury = 1000
 			add_legitimacy = 100
-			add_manpower = 15
+			add_manpower = 25
 			capital_scope = {
+				infantry = STY
 				infantry = STY
 				infantry = STY
 				infantry = STY
 				infantry = STY
 				infantry = STY
 				cavalry = STY
+				cavalry = STY
 			}
 		}
 		release = TIR
 		TIR = {
-			add_treasury = 500
+			convert_ruler_to_general = 100
+			add_treasury = 1000
 			add_legitimacy = 100
-			add_manpower = 15
+			add_manpower = 25
 			capital_scope = {
+				infantry = TIR
+				infantry = TIR
+				infantry = TIR
 				infantry = TIR
 				infantry = TIR
 				infantry = TIR
@@ -340,6 +347,26 @@ country_event = {
 				infantry = CLI
 				infantry = CLI
 				infantry = CLI
+			}
+		}
+		while = {
+			limit = { manpower = 20 }
+			add_manpower = -2
+		}
+		while = {
+			limit = { num_of_infantry = 20 }
+			random_province = {
+				limit = {
+					OR = {
+						is_claim = ROOT
+						owned_by = ROOT
+					}
+				}
+				kill_units = {
+					who = ROOT
+					type = infantry
+					amount = 1
+				}
 			}
 		}
 	}

@@ -109,6 +109,7 @@ wooden_wall = {
 	can_select = {
 		#is_primitive = no
 		OR = {
+			culture_group = british
 			culture = angevin_english
 			culture = angevin_welsh
 			culture = angevin_cornish
