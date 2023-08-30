@@ -737,7 +737,7 @@ achiev_gold_digger = {
 				tooltip = achiev_gold_digger_ttt
 				any_owned_province = {
 					trade_goods = gold
-					base_production = 14
+					base_production = 16
 				}
 			}
 		}
