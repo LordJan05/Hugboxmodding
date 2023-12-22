@@ -17,7 +17,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		NOT = { is_year = 1470 }
 		has_faction = bureaucrats
 		has_faction = enuchs
@@ -52,7 +62,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1450
 		NOT = { is_year = 1490 }
 		owns = 1816
@@ -122,7 +142,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1500
 		NOT = { is_year = 1540 }
 		owns = 1816
@@ -199,7 +229,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1500
 		NOT = { is_year = 1550 }
 		chinaware = 3
@@ -234,7 +274,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		num_of_ports = 1
 		any_country = {
 			capital_scope = { 
@@ -280,7 +330,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1558
 		NOT = { is_year = 1588 }
 	}
@@ -309,7 +369,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		
 		NOT = { religion_group = christian }
 		num_of_ports = 1
@@ -409,7 +479,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1550
 		NOT = { is_year = 1600 }
 	}
@@ -476,7 +556,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1600
 		any_owned_province = {
 			OR = {
@@ -557,7 +647,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1600
 		NOT = { is_year = 1625 }
 	}
@@ -753,7 +853,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1640
 		num_of_loans = 10
 	}
@@ -788,7 +898,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_reform = celestial_empire
+		#if = {
+		#	limit = {
+		#		event_target:EmperorOfChina = {
+		#			exists = yes
+		#		}
+		#	}
+		#	has_reform = celestial_empire
+		#}
+		#else = {
+			culture_group = east_asian
+		#}
 		is_year = 1700
 		has_country_flag = mng_accepted_jesuits
 		NOT = { religion = catholic }
@@ -843,7 +963,15 @@ country_event = {
 		OR = {
 			tag = QNG
 			AND = {
-				tag = MNG
+				#OR = {
+					#AND = {
+					#	culture_group = east_asian
+					#	event_target:EmperorOfChina = {
+					#		exists = no
+					#	}
+					#}
+					has_reform = celestial_empire
+				#}
 				NOT = { exists = QNG }
 			}
 		}
@@ -897,7 +1025,15 @@ country_event = {
 		OR = {
 			tag = QNG
 			AND = {
-				has_reform = celestial_empire
+				#OR = {
+					#AND = {
+					#	culture_group = east_asian
+					#	event_target:EmperorOfChina = {
+					#		exists = no
+					#	}
+					#}
+					has_reform = celestial_empire
+				#}
 				NOT = { exists = QNG }
 			}
 		}
@@ -1645,6 +1781,8 @@ country_event = {
 	picture = MERITOCRACY_eventPicture
 	is_triggered_only = yes 
 
+	goto = 700
+
 	option = {
 		name = flavor_mng.30.a 
 		
@@ -1808,7 +1946,7 @@ country_event = { #The Karma Kagyu School and the [Root.Monarch.Dynasty.GetName]
 				duration = 7300 
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 		}
@@ -3251,7 +3389,7 @@ country_event = {
 		}
 		else = { 
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 		}
@@ -3463,19 +3601,23 @@ country_event = { #The Hijin Policy of the Empire of China
 	title = flavor_mng.55.t
 	desc = flavor_mng.55.d
 	picture = HARBOUR_eventPicture
-	fire_only_once = yes 
-	
 	trigger = { 
 		is_emperor_of_china = yes 
 		has_dlc = "Domination"
 		tag = MNG 
+		not = { has_country_flag = mng_had_branching_mission_event }
+	}
+	immediate = {
+		hidden_effect = { set_country_flag = mng_had_branching_mission_event }
 	}
 	
 	mean_time_to_happen = { months = 24 } 
 	
 	option = { 
 		name = flavor_mng.55.a 
-		
+		trigger = {
+			ai = yes
+		}
 		set_country_flag = mng_dynamic_1 
 		swap_non_generic_missions = yes 
 		add_country_modifier = { 
@@ -3488,7 +3630,9 @@ country_event = { #The Hijin Policy of the Empire of China
 	
 	option = { 
 		name = flavor_mng.55.b
-		
+		trigger = {
+			ai = yes
+		}
 		set_country_flag = mng_dynamic_2
 		swap_non_generic_missions = yes 
 		add_country_modifier = { 
@@ -3497,6 +3641,14 @@ country_event = { #The Hijin Policy of the Empire of China
 			desc = until_we_complete_the_appropriate_missions_desc
 		}
 		custom_tooltip = mng_open_trade_tt
+	}
+
+	option = {
+		name = flavor_mng.55.c
+		trigger = {
+			ai = no
+		}
+		enable_branching_mission_review_without_ai = { key = MNG }
 	}
 }
 	

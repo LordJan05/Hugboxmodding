@@ -9,8 +9,76 @@ the_military_act = {
 			full_idea_group =  influence_ideas
 		}
 	}
-	discipline = 0.05
+	manpower_recovery_speed = 0.15
 	stability_cost_modifier = 0.05
+}
+sahara_corridor_modifier = {
+	potential = {
+			OR = {
+				AND = {
+					adm_tech = 7
+					NOT = { tag = MOR }
+					NOT = { tag = TUN }
+					NOT = { tag = SON }
+					NOT = { tag = MAL }
+					capital_scope = {
+						OR = {
+							region = maghreb_region
+							region = sahel_region
+							region = niger_region
+							region = guinea_region
+						}
+					}
+				}
+				OR = {
+					adm_tech = 7
+					has_country_flag = can_colonize_the_strait
+				}
+			}
+			any_province = {
+				OR = {
+					area = el_eglab_area
+					area = afelele_area
+					area = western_sahara_area
+					area = touaricks_area
+					area = tibesti_area
+					area = east_azbin_area
+				}
+				is_neighbor_of = ROOT
+				is_empty = yes
+			}
+	}
+	trigger = {
+			if = {
+				limit = {
+					NOT = { tag = MOR }
+					NOT = { tag = TUN }
+					NOT = { tag = SON }
+					NOT = { tag = MAL }
+				}
+				capital_scope = {
+					OR = {
+						region = maghreb_region
+						region = sahel_region
+						region = niger_region
+						region = guinea_region
+					}
+				}
+			}
+			any_province = {
+				OR = {
+					area = el_eglab_area
+					area = afelele_area
+					area = western_sahara_area
+					area = touaricks_area
+					area = tibesti_area
+					area = east_azbin_area
+				}
+				is_neighbor_of = ROOT
+				is_empty = yes
+			}
+	}
+	may_establish_frontier = yes
 }
 ##########################################
 # Sweden:
@@ -20,6 +88,7 @@ livgardet_modifier = {
 			tag = SWE
 			tag = SCA
 		}
+		mission_completed = establish_livgardet
 	}
 	trigger = {
 		mission_completed = establish_livgardet
@@ -38,6 +107,7 @@ gryf_prevailed_modifier = {
 			tag = KLU
 			tag = SCA
 		}
+		has_country_flag = end_gryf_rebellion_flag
 	}
 	trigger = {
 		has_country_flag = end_gryf_rebellion_flag
@@ -53,6 +123,7 @@ great_viking_army_modifier = {
 			tag = KLU
 			tag = SCA
 		}
+		mission_completed = revive_great_viking_army
 	}
 	trigger = {
 		mission_completed = revive_great_viking_army
@@ -69,6 +140,7 @@ do_a_little_raiding_modifier = {
 			tag = NOR
 			tag = VIN
 		}
+		mission_completed = focus_on_north_sea
 	}
 	trigger = {
 		mission_completed = focus_on_north_sea
@@ -81,12 +153,19 @@ norwegian_army_modifier = {
 			tag = NOR
 			tag = VIN
 		}
-	}
-	trigger = {
 		OR = {
 			mission_completed = disciplined_peasants
 			mission_completed = nor_disciplined_peasants
 		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				NOT = { has_dlc = "Lions of the North" }
+			}
+			mission_completed = disciplined_peasants
+		}
+		else = { mission_completed = nor_disciplined_peasants }
 	}
 	infantry_fire = 1
 	infantry_power = 0.2
@@ -130,11 +209,18 @@ swz_wtaxattr_modifier = {
 swz_tradprod_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_left_2_middle
 			mission_completed = swz_left_2_right
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_left_2_tt
+			OR = {
+				mission_completed = swz_left_2_middle
+				mission_completed = swz_left_2_right
+			}
 		}
 	}
 	trade_efficiency = 0.125
@@ -143,11 +229,18 @@ swz_tradprod_modifier = {
 swz_navtrad_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_middle_2_left
 			mission_completed = swz_middle_2_right
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_middle_2_tt
+			OR = {
+				mission_completed = swz_middle_2_left
+				mission_completed = swz_middle_2_right
+			}
 		}
 	}
 	navy_tradition = 1
@@ -156,11 +249,18 @@ swz_navtrad_modifier = {
 swz_profdril_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_right_2_left
 			mission_completed = swz_right_2_middle
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_right_2_tt
+			OR = {
+				mission_completed = swz_right_2_left
+				mission_completed = swz_right_2_middle
+			}
 		}
 	}
 	yearly_army_professionalism = 0.003
@@ -170,8 +270,6 @@ swz_profdril_modifier = {
 swz_deve_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_left_3_middle_1
 			mission_completed = swz_left_3_middle_2
@@ -179,13 +277,22 @@ swz_deve_modifier = {
 			mission_completed = swz_left_3_right_2
 		}
 	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_left_3_tt
+			OR = {
+				mission_completed = swz_left_3_middle_1
+				mission_completed = swz_left_3_middle_2
+				mission_completed = swz_left_3_right_1
+				mission_completed = swz_left_3_right_2
+			}
+		}
+	}
 	development_cost = -0.05
 }
 swz_navmora_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_middle_3_left_1
 			mission_completed = swz_middle_3_left_2
@@ -193,18 +300,38 @@ swz_navmora_modifier = {
 			mission_completed = swz_middle_3_right_2
 		}
 	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_middle_3_tt
+			OR = {
+				mission_completed = swz_middle_3_left_1
+				mission_completed = swz_middle_3_left_2
+				mission_completed = swz_middle_3_right_1
+				mission_completed = swz_middle_3_right_2
+			}
+		}
+	}
 	naval_morale = 0.1
 }
 swz_armmora_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_right_3_left_1
 			mission_completed = swz_right_3_left_2
 			mission_completed = swz_right_3_middle_1
 			mission_completed = swz_right_3_middle_2
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_right_3_tt
+			OR = {
+				mission_completed = swz_right_3_left_1
+				mission_completed = swz_right_3_left_2
+				mission_completed = swz_right_3_middle_1
+				mission_completed = swz_right_3_middle_2
+			}
 		}
 	}
 	land_morale = 0.10
@@ -213,8 +340,6 @@ swz_armmora_modifier = {
 swz_admeff_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_left_4_middle_11
 			mission_completed = swz_left_4_middle_12
@@ -226,13 +351,26 @@ swz_admeff_modifier = {
 			mission_completed = swz_left_4_right_22
 		}
 	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_left_4_tt
+			OR = {
+				mission_completed = swz_left_4_middle_11
+				mission_completed = swz_left_4_middle_12
+				mission_completed = swz_left_4_middle_21
+				mission_completed = swz_left_4_middle_22
+				mission_completed = swz_left_4_right_11
+				mission_completed = swz_left_4_right_12
+				mission_completed = swz_left_4_right_21
+				mission_completed = swz_left_4_right_22
+			}
+		}
+	}
 	administrative_efficiency = 0.05
 }
 swz_coast_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_middle_4_left_11
 			mission_completed = swz_middle_4_left_12
@@ -244,14 +382,27 @@ swz_coast_modifier = {
 			mission_completed = swz_middle_4_right_22
 		}
 	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = swz_middle_4_tt
+			OR = {
+				mission_completed = swz_middle_4_left_11
+				mission_completed = swz_middle_4_left_12
+				mission_completed = swz_middle_4_left_21
+				mission_completed = swz_middle_4_left_22
+				mission_completed = swz_middle_4_right_11
+				mission_completed = swz_middle_4_right_12
+				mission_completed = swz_middle_4_right_21
+				mission_completed = swz_middle_4_right_22
+			}
+		}
+	}
 	global_sailors_modifier = 0.25
 	naval_forcelimit_modifier = 0.25
 }
 swz_disc_modifier = {
 	potential = {
 		tag = SWZ
-	}
-	trigger = {
 		OR = {
 			mission_completed = swz_right_4_left_11
 			mission_completed = swz_right_4_left_12
@@ -263,19 +414,22 @@ swz_disc_modifier = {
 			mission_completed = swz_right_4_middle_22
 		}
 	}
-	discipline = 0.05
-}
-##########################################
-# France:
-sea_fra_elan_modifier = {
-	potential = {
-		tag = FRA
-	}
 	trigger = {
-		has_country_flag = emp_fra_conquer_picardy_fra_flag
+		custom_trigger_tooltip = {
+			tooltip = swz_right_4_tt
+			OR = {
+				mission_completed = swz_right_4_left_11
+				mission_completed = swz_right_4_left_12
+				mission_completed = swz_right_4_left_21
+				mission_completed = swz_right_4_left_22
+				mission_completed = swz_right_4_middle_11
+				mission_completed = swz_right_4_middle_12
+				mission_completed = swz_right_4_middle_21
+				mission_completed = swz_right_4_middle_22
+			}
+		}
 	}
-	land_morale = 0.1
-	prestige = 1
+	discipline = 0.05
 }
 ##########################################
 # Castille/Spain:
@@ -285,6 +439,7 @@ sea_cas_united_spain_modifier = {
 			tag = CAS
 			tag = SPA
 		}
+		mission_completed = sea_unite_spain
 	}
 	trigger = {
 		mission_completed = sea_unite_spain
@@ -299,6 +454,7 @@ gc_por_establishes_foothold_brazil_modifier = {
 			tag = POR
 			tag = LUS
 		}
+		mission_completed = gc_por_establishes_foothold_brazil
 	}
 	trigger = {
 		mission_completed = gc_por_establishes_foothold_brazil
@@ -312,6 +468,7 @@ gc_por_caribbean_modifier = {
 			tag = POR
 			tag = LUS
 		}
+		mission_completed = gc_por_caribbean
 	}
 	trigger = {
 		mission_completed = gc_por_caribbean
@@ -325,6 +482,7 @@ gc_por_colonise_central_africa_modifier = {
 			tag = POR
 			tag = LUS
 		}
+		mission_completed = gc_por_colonise_central_africa
 	}
 	trigger = {
 		mission_completed = gc_por_colonise_central_africa
@@ -338,6 +496,7 @@ gc_por_discovers_cape_good_hope_modifier = {
 			tag = POR
 			tag = LUS
 		}
+		mission_completed = gc_por_discovers_cape_good_hope
 	}
 	trigger = {
 		mission_completed = gc_por_discovers_cape_good_hope
@@ -351,6 +510,7 @@ gc_por_conquers_zanzibar_modifier = {
 			tag = POR
 			tag = LUS
 		}
+		mission_completed = gc_por_conquers_zanzibar
 	}
 	trigger = {
 		mission_completed = gc_por_conquers_zanzibar
@@ -363,6 +523,7 @@ gc_por_conquers_zanzibar_modifier = {
 sea_gen_northern_genoa_trade_modifier = {
 	potential = {
 		tag = GEN
+		mission_completed = sea_gen_northern_genoa_trade
 	}
 	trigger = {
 		mission_completed = sea_gen_northern_genoa_trade
@@ -375,6 +536,7 @@ sea_gen_northern_genoa_trade_modifier = {
 swi_recruit_merc_inf_enabled_modifier = {
 	potential = {
 		tag = SWI
+		has_country_flag = swi_recruit_merc_inf_enabled
 	}
 	trigger = {
 		has_country_flag = swi_recruit_merc_inf_enabled
@@ -433,14 +595,16 @@ sea_emperor_catholic_modifier_3 = {
 	monthly_splendor = 2
 }
 # Holy Roman Empire Emperor reforms:
+# Centralization:
 emperor_hofgericht_modifier = {
 	potential = {
 		is_emperor = yes
 		NOT = { hre_reform_passed = emperor_hofgericht }
 		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+		has_global_flag = emperor_hofgericht_decision_flag
 	}
 	trigger = {
-		has_global_flag = emperor_hofgericht_decision_flag
+		is_emperor = yes
 	}
 	imperial_authority = 0.1
 	land_morale = 0.05
@@ -451,9 +615,10 @@ emperor_imperial_estates_modifier = {
 		is_emperor = yes
 		NOT = { hre_reform_passed = emperor_imperial_estates }
 		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+		has_global_flag = emperor_imperial_estates_decision_flag
 	}
 	trigger = {
-		has_global_flag = emperor_imperial_estates_decision_flag
+		is_emperor = yes
 	}
 	province_warscore_cost = -0.15
 	idea_cost = -0.033
@@ -464,12 +629,15 @@ emperor_erbkaisertum_modifier = {
 		is_emperor = yes
 		NOT = { hre_reform_passed = emperor_erbkaisertum }
 		NOT = { hre_reform_passed = emperor_reichstag_collegia }
-	}
-	trigger = {
 		has_global_flag = emperor_erbkaisertum_decision_flag
 	}
+	trigger = {
+		is_emperor = yes
+	}
 	global_manpower_modifier = 0.05
+	global_sailors_modifier = 0.05
 	manpower_recovery_speed = 0.05
+	sailors_recovery_speed = 0.05
 	imperial_authority = 0.1
 }
 emperor_privilegia_de_non_appelando_modifier = {
@@ -477,13 +645,76 @@ emperor_privilegia_de_non_appelando_modifier = {
 		is_emperor = yes
 		NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
 		NOT = { hre_reform_passed = emperor_reichstag_collegia }
+		has_global_flag = emperor_privilegia_de_non_appelando_decision_flag
 	}
 	trigger = {
-		has_global_flag = emperor_privilegia_de_non_appelando_decision_flag
+		is_emperor = yes
 	}
 	possible_policy = 1
 	num_accepted_cultures = 3
 	promote_culture_cost = -0.5
+}
+# Decentralization:
+emperor_reichstag_collegia_modifier = {
+	potential = {
+		is_emperor = no
+		is_elector = yes
+		hre_reform_passed = emperor_reichstag_collegia
+	}
+	trigger = {
+		is_elector = yes
+	}
+	idea_cost = -0.025
+	technology_cost = -0.025
+}
+emperor_expand_gemeiner_pfennig_modifier = {
+	potential = {
+		is_emperor = no
+		is_elector = yes
+		hre_reform_passed = emperor_expand_gemeiner_pfennig
+	}
+	trigger = {
+		is_elector = yes
+	}
+	core_creation = -0.1
+	province_warscore_cost = -0.1
+}
+emperor_rechenschaft_modifier = {
+	potential = {
+		is_emperor = no
+		is_elector = yes
+		hre_reform_passed = emperor_rechenschaft
+	}
+	trigger = {
+		is_elector = yes
+	}
+	global_manpower_modifier = 0.05
+	global_sailors_modifier = 0.05
+	land_morale = 0.05
+}
+emperor_geteilte_macht_modifier = {
+	potential = {
+		is_emperor = no
+		is_elector = yes
+		hre_reform_passed = emperor_geteilte_macht
+	}
+	trigger = {
+		is_elector = yes
+	}
+	global_tax_modifier = 0.1
+	production_efficiency = 0.05
+}
+emperor_reichskrieg_modifier = {
+	potential = {
+		is_emperor = no
+		is_elector = yes
+		hre_reform_passed = emperor_reichskrieg
+	}
+	trigger = {
+		is_elector = yes
+	}
+	free_policy = 1
+	possible_policy = 1
 }
 ##########################################
 # Muslim Jihad:

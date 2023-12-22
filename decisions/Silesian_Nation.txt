@@ -5,6 +5,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { tag = SIL }
+			NOT = { was_tag = SIL }
 			NOT = { has_country_flag = formed_silesia_flag }
 			OR = {
 				ai = no

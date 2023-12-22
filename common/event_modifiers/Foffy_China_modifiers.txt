@@ -323,6 +323,7 @@ china_cyi_bai_harmonized = {
 
 china_cyi_bai_converted = {
 	local_culture_conversion_cost = -0.35
+	local_culture_conversion_time = -0.35
 }
 
 china_cyi_fortified_castles = {

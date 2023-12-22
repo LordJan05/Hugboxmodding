@@ -184,7 +184,7 @@ MLC_missions_1 = {
 			}
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = bornean }
+			add_accepted_culture_or_dip_power = { culture = bornean dip_reward = yes }
 			south_sulawesi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -377,7 +377,7 @@ MLC_missions_2 = {
 				name = MLC_srivijaya
 				duration = -1
 			}
-			add_accepted_culture_or_dip_power = { culture = sumatran }
+			add_accepted_culture_or_dip_power = { culture = sumatran dip_reward = yes }
 			east_java_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -780,10 +780,10 @@ MLC_missions_4 = {
 			NOT = { province_trade_power = 50 }
 			OR = {
 				NOT = { has_dlc = "Mandate of Heaven" }
-				is_emperor_of_china = yes
-				all_countries_including_self = {
-					is_emperor_of_china = no
-				}
+				#is_emperor_of_china = yes
+				#all_countries_including_self = {
+				#	is_emperor_of_china = no
+				#}
 				AND = {
 					NOT = { has_country_flag = MSA_insulting_flag }
 					NOT = { has_country_flag = MSA_in_defiance_flag }
@@ -799,44 +799,44 @@ MLC_missions_4 = {
 				tooltip = MLC_chinese_expedition_has_concluded
 				has_country_flag = MSA_chinese_expedition_concluded
 			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					is_emperor_of_china = no
-					any_country = {
-						is_emperor_of_china = yes
-					}
-					OR = {
-						has_country_flag = MSA_insulting_flag
-						has_country_flag = MSA_in_defiance_flag
-					}
-				}
-				event_target:EmperorOfChina = { has_been_insulted_by_root = yes }
-			}
-			else_if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					is_emperor_of_china = no
-					any_country = {
-						is_emperor_of_china = yes
-					}
-					OR = {
-						has_country_flag = MSA_swayed_flag
-						has_country_flag = MSA_absolutely_loyal_flag
-					}
-				}
-				event_target:EmperorOfChina = {
-					has_opinion = {
-						who = ROOT
-						value = 100
-					}
-				}
-			}
-			else = {
+			#if = {
+			#	limit = {
+			#		has_dlc = "Mandate of Heaven"
+			#		is_emperor_of_china = no
+			#		any_country = {
+			#			is_emperor_of_china = yes
+			#		}
+			#		OR = {
+			#			has_country_flag = MSA_insulting_flag
+			#			has_country_flag = MSA_in_defiance_flag
+			#		}
+			#	}
+			#	event_target:EmperorOfChina = { has_been_insulted_by_root = yes }
+			#}
+			#else_if = { 
+			#	limit = {
+			#		has_dlc = "Mandate of Heaven"
+			#		is_emperor_of_china = no
+			#		any_country = {
+			#			is_emperor_of_china = yes
+			#		}
+			#		OR = {
+			#			has_country_flag = MSA_swayed_flag
+			#			has_country_flag = MSA_absolutely_loyal_flag
+			#		}
+			#	}
+			#	event_target:EmperorOfChina = {
+			#		has_opinion = {
+			#			who = ROOT
+			#			value = 100
+			#		}
+			#	}
+			#}
+			#else = {
 				capital_scope = {
 					province_trade_power = 50
 				}
-			}
+			#}
 		}
 		effect = {
 			custom_tooltip = MLC_if_we_were_swayed

@@ -43,6 +43,15 @@ marketplace = {
 			type = production
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+			}
+			add_prosperity = 5
+		}
 		ROOT = {
 			if = {
 				limit = {
@@ -68,6 +77,16 @@ marketplace = {
 			building = marketplace
 			type = production
 			value = 1
+		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+				
+			}
+			add_prosperity = -5
 		}
 		ROOT = {
 			if = {
@@ -224,6 +243,7 @@ temple = {
 		local_tax_modifier = 0.5
 	}
 	on_built = {
+		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_building = {
 			building = temple
@@ -267,6 +287,28 @@ temple = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			add_province_modifier = {
+				name = turkoman_peaceful_worshipping
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
+			}
+			FROM = {
+				change_estate_land_share = {
+					estate = all
+					share = -0.25
+				}
+			}
+		}
 		ROOT = {
 			if = {
 				limit = {
@@ -296,6 +338,14 @@ temple = {
 		}
 		if = {
 			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			remove_province_modifier = turkoman_peaceful_worshipping
+		}
+		if = {
+			limit = {
 				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
 			}
 			FROM = {
@@ -306,10 +356,16 @@ temple = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
-		remove_development_from_building = {
-			building = temple
-			type = tax
-			value = 1
+		if = {
+			limit = {
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
+			}
+			FROM = {
+				change_estate_land_share = {
+					estate = all
+					share = 0.25
+				}
+			}
 		}
 		ROOT = {
 			if = {
@@ -635,7 +691,7 @@ coastal_defence = {
 		}
 	}
 	modifier = {
-		allowed_num_of_buildings = 1
+		#allowed_num_of_buildings = 1
 		blockade_force_required = 1
 		hostile_disembark_speed = 1.0
 		hostile_fleet_attrition = 5
@@ -1150,7 +1206,7 @@ naval_battery = {
 		has_port = yes
 	}
 	modifier = {
-		allowed_num_of_buildings = 1
+		#allowed_num_of_buildings = 1
 		blockade_force_required = 2.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 10
@@ -1184,6 +1240,7 @@ cathedral = {
 		local_tax_modifier = 1
 	}
 	on_built = {
+		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = cathedral
@@ -1211,6 +1268,28 @@ cathedral = {
 			add_province_modifier = {
 				name = gov_expanded_temple_rights_mod
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			add_province_modifier = {
+				name = turkoman_peaceful_worshipping
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
+			}
+			FROM = {
+				change_estate_land_share = {
+					estate = all
+					share = -0.25
+				}
 			}
 		}
 		ROOT = {
@@ -1253,6 +1332,14 @@ cathedral = {
 		}
 		if = {
 			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			remove_province_modifier = turkoman_peaceful_worshipping
+		}
+		if = {
+			limit = {
 				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
 			}
 			FROM = {
@@ -1263,10 +1350,16 @@ cathedral = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
-		remove_development_from_building = {
-			building = cathedral
-			type = tax
-			value = 3
+		if = {
+			limit = {
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
+			}
+			FROM = {
+				change_estate_land_share = {
+					estate = all
+					share = 0.25
+				}
+			}
 		}
 		ROOT = {
 			if = {
@@ -1369,6 +1462,15 @@ trade_depot = {
 			value = 2
 			upgrade_value = 1
 		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+			}
+			add_prosperity = 5
+		}
 		ROOT = {
 			if = {
 				limit = {
@@ -1394,6 +1496,16 @@ trade_depot = {
 			building = trade_depot
 			type = production
 			value = 2
+		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+				
+			}
+			add_prosperity = -5
 		}
 		ROOT = {
 			if = {
@@ -1912,6 +2024,15 @@ stock_exchange = {
 				value = 3
 			}
 		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+			}
+			add_prosperity = 5
+		}
 		ROOT = {
 			if = {
 				limit = {
@@ -1937,6 +2058,16 @@ stock_exchange = {
 			building = stock_exchange
 			type = production
 			value = 3
+		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+				
+			}
+			add_prosperity = -5
 		}
 		ROOT = {
 			if = {
@@ -3118,6 +3249,14 @@ farm_estate = {
 			type = production 
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = 1
+		}
 		hidden_effect = {
 			FROM = {
 				change_variable = {
@@ -3137,6 +3276,14 @@ farm_estate = {
 			building = manufactory 
 			type = production 
 			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = -1
 		}
 	}
 	on_obsolete = {
@@ -3290,32 +3437,31 @@ ramparts = {
 			#}
 
 	build_trigger = {
-	#	NOT = {
-	#		OR = {
-	#			has_building = fort_15th
-	#			has_building = fort3
-	#			has_building = fort_16th
-	#			has_building = fort5
-	#			has_building = fort_17th
-	#			has_building = fort7
-	#			has_building = fort_18th
-	#		}
-	#	}
 		OR = {
-			has_terrain = farmlands
-			has_terrain = grasslands
-			has_terrain = steppe
-			has_terrain = savannah
-			has_terrain = drylands
-			has_terrain = desert
-			has_terrain = coastal_desert
+			has_building = fort_15th
+			has_building = fort3
+			has_building = fort_16th
+			has_building = fort5
+			has_building = fort_17th
+			has_building = fort7
+			has_building = fort_18th
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_15th
+			has_building = fort3
+			has_building = fort_16th
+			has_building = fort5
+			has_building = fort_17th
+			has_building = fort7
+			has_building = fort_18th
 		}
 	}
 	modifier = {
-		max_attrition = 1
-		local_hostile_attrition = 1
+		max_attrition = 2
+		local_hostile_attrition = 3
 		local_defensiveness = 0.15
-		local_defender_dice_roll_bonus = 1
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -3349,6 +3495,10 @@ ramparts = {
 	}
 	
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = per_reinforced_defenses }
+			remove_province_modifier = per_reinforced_defenses
+		}
 		remove_dev_from_building = {
 			building = manufactory 
 			type = manpower 

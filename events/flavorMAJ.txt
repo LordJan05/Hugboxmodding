@@ -158,6 +158,7 @@ country_event = {
 	hidden = yes
 	
 	immediate = {
+		on_non_estate_disaster_end = yes
 		#hidden_effect = {
 		#	set_country_flag = majapahit_me_disaster_flag
 		#}

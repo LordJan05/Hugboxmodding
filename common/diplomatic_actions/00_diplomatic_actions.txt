@@ -397,6 +397,9 @@ allianceaction = {
 			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
 		}
 	}
+	effect = {
+		change_asha_vahishta = { value = 2 }
+	}
 	#
 	condition = {
 		tooltip = h_tooltip_allycommandery
@@ -518,6 +521,21 @@ enforce_peace = {
 			}
 			add_papal_influence = 25
 		}
+		if = {
+			limit = {
+				has_government_mechanic = the_three_royal_fires_mechanic
+				FROM = {
+					any_war_enemy_country = {
+						religion = zoroastrian
+						is_in_war = {
+							defender_leader = this
+							attacker_leader = from
+						}
+					}
+				}
+			}
+			change_asha_vahishta = { value = 5 }
+		}
 	}
 	#
 	condition = {
@@ -577,6 +595,9 @@ royal_marriage = {
 		allow = {
 			NOT = { war_with = FROM }
 		}
+	}
+	effect = {
+		change_asha_vahishta = { value = 0.5 }
 	}
 	condition = {
 		tooltip = h_tooltip_marrycommandery
@@ -983,6 +1004,9 @@ support_independence_action = {
 }
 
 guaranteeaction = {
+	effect = {
+		change_asha_vahishta = { value = 1 }
+	}
 	condition = {
 		tooltip = h_tooltip_guaranteecommandery
 		potential = {
@@ -1101,6 +1125,9 @@ warningaction = {
 }
 
 threaten_war = {
+	effect = {
+		change_asha_vahishta = { value = -10 }
+	}
 	condition = {
 		tooltip = h_tooltip_commanderythreaten
 		potential = {
@@ -1150,6 +1177,12 @@ threaten_war = {
 	}
 }
 
+insultaction = {
+	effect = {
+		change_asha_vahishta = { value = -5 }
+	}
+}
+
 warsubsidy = {
 	condition = {
 		tooltip = h_tooltip_commanderysubsidy
@@ -1193,6 +1226,9 @@ offerloan = {
 }
 
 giftaction = {
+	effect = {
+		change_asha_vahishta = { value = 1 }
+	}
 	condition = {
 		tooltip = h_tooltip_commanderygift
 		potential = {
@@ -1210,6 +1246,41 @@ giftaction = {
 		allow = {
 			always = no
 		}
+	}
+}
+
+fabricate_claim = {
+	effect = {
+		change_asha_vahishta = { value = -1 }
+	}
+}
+break_marriage = {
+	effect = {
+		change_asha_vahishta = { value = -1 }
+	}
+}
+takeondebt = {
+	effect = {
+		change_asha_vahishta = { value = 2 }
+	}
+	condition = {
+		tooltip = sea_takeondebt_tt
+		potential = {
+			FROM = { ai = no }
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+influence_nation = {
+	effect = {
+		change_asha_vahishta = { value = 2 }
+	}
+}
+intervene_in_war = {
+	effect = {
+		change_asha_vahishta = { value = 50 }
 	}
 }
 

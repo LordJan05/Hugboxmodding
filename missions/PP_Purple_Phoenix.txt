@@ -9,6 +9,7 @@ byz_pp_revive_varangian_guards = {
 		tag = BYZ
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -17,7 +18,7 @@ byz_pp_revive_varangian_guards = {
 		required_missions = { }
 		position = 1
 		trigger = {
-			has_idea = regulations_for_mercenaries
+			has_idea = repopulation_of_countryside
 			has_parliament = yes
 			custom_trigger_tooltip = {
 				tooltip = sea_revive_varangian_guards_tt
@@ -56,6 +57,7 @@ byz_pp_balkans_north_italy = {
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -258,6 +260,7 @@ byz_pp_italian = {
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -448,6 +451,7 @@ byz_pp_maritime = {
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -1110,6 +1114,7 @@ byz_pp_religion = {
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -1431,6 +1436,7 @@ byz_pp_east = {
 		}
 		has_dlc = "Purple Phoenix"
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	

@@ -2,7 +2,7 @@ moroccan_iqta_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 2
 	available = {
-		tag = MOR
+		has_dlc = "Domination"
 	}
 	
 	powers = {

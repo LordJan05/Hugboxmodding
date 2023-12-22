@@ -13,3 +13,10 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+1444.1.1 = {
+	monarch = {
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

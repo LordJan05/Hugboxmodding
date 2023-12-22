@@ -12,6 +12,13 @@ add_country_modifier = {
 	duration = -1
 }
 
+if = {
+	limit = {
+		ai = yes
+	}
+	add_truce_with = NRM
+	add_truce_with = BRI
+}
 
 change_estate_land_share = {
 	estate = estate_nobles

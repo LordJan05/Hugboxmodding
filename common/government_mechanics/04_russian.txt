@@ -130,6 +130,7 @@ russian_mechanic = {
 					}
 					has_siege = no
 				}
+				NOT = { cossacks_percentage = 0.5 }
 			}
 			effect = { 
 				#create_unit_forcelimit_percentage = {

@@ -252,7 +252,6 @@ country_event = {
 		ai_chance = { factor = 10 }
 		add_stability_or_adm_power = yes
 	}
-	
 }
 
 # The itinerant capital
@@ -545,7 +544,7 @@ country_event = {
 				add_casus_belli = {
 					target = MAM
 					type = cb_insult
-					months = 1825
+					months = 120
 				}
 			}
 		}

@@ -857,6 +857,7 @@ country_event = {
 			government = republic
 		}
 		set_ruler = flo_exiled_ruler
+		clr_country_flag = savonarola_block_election_flag
 		remove_government_reform = millenarian_theocracy_reform
 	}
 	option = {
@@ -885,6 +886,7 @@ country_event = {
 			}
 			set_heir = flo_exiled_heir
 		}
+		clr_country_flag = savonarola_block_election_flag
 		remove_government_reform = millenarian_theocracy_reform
 	}
 }
@@ -920,6 +922,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
 	
 	option = {
 		name = flavor_tus.17.a

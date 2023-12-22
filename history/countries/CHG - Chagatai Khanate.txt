@@ -3,8 +3,7 @@ add_government_reform = steppe_horde
 primary_culture = uyghur
 religion = sunni
 technology_group = nomad_group
-#capital = 715
-capital = 739 #Kashgar
+capital = 460
 religious_school = hanafi_school
 add_accepted_culture = kirgiz
 historical_rival = KAZ
@@ -14,6 +13,10 @@ historical_rival = SHY
 historical_rival = SIB
 #historical_rival = NOG
 historical_rival = MOS
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
 
 #Khans of Mughalistan
 1399.1.1 = {

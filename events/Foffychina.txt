@@ -1019,7 +1019,6 @@ country_event = {
 	
 	trigger = {
 		owns = 5551 #Hengyang
-		has_reform = h_reform_warlord_3
 		5551 = {
 			NOT = { trade_goods = gold }
 		}

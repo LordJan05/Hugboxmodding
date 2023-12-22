@@ -22,9 +22,9 @@ change_estate_land_share = {
 	monarch = {
 		name= "Arliqo"
 		dynasty = "Gareen"
-		dip = 6
-		mil = 5
-		adm = 6
+		dip = 3
+		mil = 4
+		adm = 3
 	}
 	add_piety = 0.25
 }

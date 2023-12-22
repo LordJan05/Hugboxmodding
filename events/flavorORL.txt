@@ -27,6 +27,18 @@ country_event = {
 		}
 		if = {
 			limit = {
+				exists = NRM
+			}
+			NRM = { set_country_flag = had_maid_of_orleans }
+		}
+		if = {
+			limit = {
+				exists = BRI
+			}
+			BRI = { set_country_flag = had_maid_of_orleans }
+		}
+		if = {
+			limit = {
 				exists = FRA
 			}
 			FRA = { set_country_flag = had_maid_of_orleans }

@@ -6,6 +6,7 @@ sea_nogai_missions_1 = {
 		OR = {
 			tag = NOG
 			tag = GLH
+			tag = AST
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -18,6 +19,7 @@ sea_nogai_missions_1 = {
 			OR = {
 				area = lower_don_area
 				area = astrakhan_area
+				area = lower_yik_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -29,6 +31,10 @@ sea_nogai_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			astrakhan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_yik_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -104,6 +110,13 @@ sea_nogai_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			kama_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			nogai_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -292,6 +305,7 @@ sea_nogai_missions_2 = {
 		OR = {
 			tag = NOG
 			tag = GLH
+			tag = AST
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -638,6 +652,7 @@ sea_nogai_missions_3 = {
 		OR = {
 			tag = NOG
 			tag = GLH
+			tag = AST
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -903,6 +918,7 @@ sea_nogai_missions_4 = {
 		OR = {
 			tag = NOG
 			tag = GLH
+			tag = AST
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1180,6 +1196,7 @@ sea_nogai_missions_5 = {
 		OR = {
 			tag = NOG
 			tag = GLH
+			tag = AST
 		}
 		NOT = { map_setup = map_setup_random }
 	}

@@ -25,6 +25,7 @@ LAT = "countries/SeaLatinEmpire.txt" # Changed to LAE, since PDX added as well n
 RSH = "countries/SeaRashidunCaliphate.txt"
 RPR = "countries/SeaPrussia3.txt" # Ducal Prussia
 BMA = "countries/SeaBurma.txt"
+SRE = "countries/SeaSerbianEmpire.txt"
 
 SEX = "countries/SeaPayPalStates.txt"
 AGL = "countries/Angoulême.txt"

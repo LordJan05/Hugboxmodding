@@ -12,6 +12,7 @@ historical_rival = CXI
 historical_rival = CYI
 historical_rival = CSH
 historical_rival = WUU
+historical_rival = RYU
 historical_rival = YUE
 historical_rival = QIC
 

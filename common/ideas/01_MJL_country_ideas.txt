@@ -133,6 +133,7 @@ LOU_ideas = {
 	start = {
 		colonists = 1
 		may_explore = yes
+		effect = { remove_temporary_colonist = yes }
 	}
 	
 	bonus = {

@@ -292,6 +292,7 @@ estate_maratha_support_independence = {
 		is_at_war = no
 		is_subject = no
 		any_rival_country = {
+			ai = yes
 			NOT = { has_reform = daimyo }
 			NOT = { ROOT = { truce_with = prev } }
 			any_subject_country = {

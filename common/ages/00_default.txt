@@ -126,7 +126,7 @@ age_of_discovery = {
 				artillery_cost = -0.66
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 0
 			}
 		}
 		

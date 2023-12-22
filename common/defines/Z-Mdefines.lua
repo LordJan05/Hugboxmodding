@@ -37,7 +37,6 @@ NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.7
 
 NDefines.NMilitary.MAX_DRAFT_SIZE_TO_YEARLY_INCOME_COST_RATIO = 1.33 -- How much of your yearly income it costs to draft the above ratio's worth of units
-NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05
 
 NDefines.NReligion.MAX_CHURCH_POWER = 300
 NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 20
@@ -70,6 +69,9 @@ NDefines.NDiplomacy.DEFENDER_OF_FAITH_PENALTY_DAYS = 0
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -5.0
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.06
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_REFORM_COST = 70
+
+NDefines.NDiplomacy.SPY_NETWORK_SIEGE_EFFECT = 0.3 -- 0.2
+NDefines.NDiplomacy.SPY_NETWORK_AE_EFFECT = -0.4 -- -0.3
 
 NDefines.NCountry.HRE_MAX_RANK = 2
 NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 3

@@ -34,6 +34,12 @@ vassal = {
 	start_date = 1444.1.1
 	end_date = 1517.1.1
 }
+vassal = {
+	first = MAM
+	second = SYR
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
 guarantee = {
 	first = MAM
 	second = MDA

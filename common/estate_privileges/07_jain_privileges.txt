@@ -187,6 +187,10 @@ estate_jains_diplomacy = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		can_select_monarch_power_privilege = {
+			estate = estate_jains
+			type = dip
+		}
 	}
 	on_granted = {
 	}
@@ -263,25 +267,6 @@ estate_jains_indebted_to_jains = {
 				estate_loan = yes
 			}
 		}
-		set_country_flag = mjl_indebted_to_burghers_flag
-		hidden_effect = {
-			export_to_variable = {
-				which = burghers_loans_use_was_set_year
-				value = trigger_value:is_year
-			}
-			export_to_variable = {
-				which = burghers_loans_use_set_month
-				value = trigger_value:is_month
-			}
-			set_variable = {
-				which = burghers_loans_use_length
-				value = 10
-			}
-			change_variable = {
-				which = burghers_loans_use_length
-				which = burghers_loans_use_was_set_year
-			}
-		}
 	}
 	penalties = {
 		trade_efficiency = -0.05
@@ -289,15 +274,11 @@ estate_jains_indebted_to_jains = {
 	benefits = {
 	}
 	can_select = {
-		OR = {
-			has_estate_loan = no
-			custom_trigger_tooltip = {
-				tooltip = burghers_loans_use_for_10_years_tooltip
-				OR = {
-					NOT = { has_country_flag = mjl_indebted_to_burghers_flag }
-					had_country_flag = { flag = mjl_indebted_to_burghers_flag days = 3650 }
-				}
+		if = {
+			limit = {
+				has_estate_privilege = estate_jains_indebted_to_jains
 			}
+			has_estate_loan = yes
 		}
 	}
 	can_revoke = {

@@ -2,7 +2,7 @@ country_decisions = {
 	ethiopia_nation = {
 		major = yes
 		potential = {
-			always = no
+			tag = DAR
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_ethiopia_flag }
@@ -24,7 +24,6 @@ country_decisions = {
 			}
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
-			primary_culture = amhara
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -61,6 +60,12 @@ country_decisions = {
 			owns_core_province = 2770	# Agew
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { primary_culture = amhara }
+				}
+				change_primary_culture = amhara
+			}
 			change_tag = ETH
 			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes

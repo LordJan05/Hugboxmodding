@@ -3,7 +3,7 @@
 owner = GEO
 controller = GEO
 culture = azerbaijani
-religion = shiite
+religion = sunni
 capital = "Shaki"
 trade_goods = wool
 hre = no
@@ -31,6 +31,9 @@ add_province_modifier = {
 	remove_core = SRV # was AKK
 	revolt = { }
 } # Ismail conquers Tabriz and defeats Alwand
+1532.1.1 = {
+	religion = shiite
+} # Estimated time when the Safavids convert the Sunni to Shia
 1578.9.9 = { controller = TUR } # Ottoman conquest
 1590.3.21 = { owner = TUR add_core = TUR } # Peace of Istanbul
 1607.1.1 = { controller = PER } # Persian reconquest

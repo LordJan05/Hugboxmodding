@@ -927,63 +927,63 @@ country_event = {
 }
 
 # Fjodor Baikov's Diplomatic Incident
-country_event = {
-	id = flavor_rus.18	
-	title = "flavor_rus.EVTNAME3419"
-	desc = "flavor_rus.EVTDESC3419"
-	picture = DIPLOMACY_eventPicture
-	
-	trigger = {
-		tag = RUS
-		event_target:EmperorOfChina = {
-			exists = yes
-			is_neighbor_of = ROOT
-		}
-	}
-	
-	fire_only_once = yes
-	
-		
-	mean_time_to_happen = {
-		months = 240
-	}
-
-	option = {		# Ignore the demands
-		name = "flavor_rus.EVTOPTA3419"
-		ai_chance = { factor = 75 }
-		event_target:EmperorOfChina = {
-			add_opinion = {
-				who = ROOT
-				modifier = rus_ignored_vassal_demands
-			}
-		}
-	}
-	option = {		# Pretend to be a Chinese Vassal
-		name = "flavor_rus.EVTOPTB3419"
-		ai_chance = { factor = 20 }
-		add_legitimacy = -5
-		event_target:EmperorOfChina = {
-			add_opinion = {
-				who = ROOT
-				modifier = rus_paid_vassal_respect
-			}
-		}
-	}
-	option = {		# Pretend to be a Chinese Vassal and pay Tribute
-		name = "flavor_rus.EVTOPTC3419"
-		ai_chance = {
-			factor = 5
-		}
-		add_legitimacy = -5
-		add_years_of_income = -0.25
-		event_target:EmperorOfChina = {
-			add_opinion = {
-				who = ROOT
-				modifier = rus_paid_vassal_tribute
-			}
-		}
-	}
-}
+#country_event = {
+#	id = flavor_rus.18	
+#	title = "flavor_rus.EVTNAME3419"
+#	desc = "flavor_rus.EVTDESC3419"
+#	picture = DIPLOMACY_eventPicture
+#	
+#	trigger = {
+#		tag = RUS
+#		event_target:EmperorOfChina = {
+#			exists = yes
+#			is_neighbor_of = ROOT
+#		}
+#	}
+#	
+#	fire_only_once = yes
+#	
+#		
+#	mean_time_to_happen = {
+#		months = 240
+#	}
+#
+#	option = {		# Ignore the demands
+#		name = "flavor_rus.EVTOPTA3419"
+#		ai_chance = { factor = 75 }
+#		event_target:EmperorOfChina = {
+#			add_opinion = {
+#				who = ROOT
+#				modifier = rus_ignored_vassal_demands
+#			}
+#		}
+#	}
+#	option = {		# Pretend to be a Chinese Vassal
+#		name = "flavor_rus.EVTOPTB3419"
+#		ai_chance = { factor = 20 }
+#		add_legitimacy = -5
+#		event_target:EmperorOfChina = {
+#			add_opinion = {
+#				who = ROOT
+#				modifier = rus_paid_vassal_respect
+#			}
+#		}
+#	}
+#	option = {		# Pretend to be a Chinese Vassal and pay Tribute
+#		name = "flavor_rus.EVTOPTC3419"
+#		ai_chance = {
+#			factor = 5
+#		}
+#		add_legitimacy = -5
+#		add_years_of_income = -0.25
+#		event_target:EmperorOfChina = {
+#			add_opinion = {
+#				who = ROOT
+#				modifier = rus_paid_vassal_tribute
+#			}
+#		}
+#	}
+#}
 
 # Stepan Rasin's Cossack Uprising
 country_event = {
@@ -2006,7 +2006,7 @@ country_event = {
 				factor = 0
 				NOT = {
 					ruler_total_stats = {
-						stats = 15
+						amount = 15
 					}
 				}
 			}
@@ -2024,7 +2024,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				ruler_total_stats = {
-					stats = 15
+					amount = 15
 				}
 			}
 			modifier = {
@@ -4065,6 +4065,12 @@ country_event = {
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = 25
+			}
+		}
+		event_target:revolt_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
 			}
 		}
 		ai_chance = {

@@ -5,6 +5,10 @@ primary_culture = breton
 religion = catholic
 technology_group = western
 capital = 172
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
 
 change_estate_land_share = {
 	estate = estate_nobles
@@ -12,6 +16,15 @@ change_estate_land_share = {
 }
 
 
+if = {
+	limit = {
+		ai = no
+	}
+	capital_scope = {
+		infantry = ROOT
+		infantry = ROOT
+	}
+}
 
 1345.9.16 = {
 	monarch = {
@@ -120,9 +133,9 @@ change_estate_land_share = {
 		name = "François I"
 		dynasty = "de Dreux"
 		birth_date = 1414.5.14
-		adm = 1
-		dip = 3
-		mil = 2
+		adm = 4
+		dip = 4
+		mil = 6
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = charismatic_negotiator_personality 
@@ -136,9 +149,9 @@ change_estate_land_share = {
 		birth_date = 1418.7.7
 		death_date = 1457.9.22
 		claim = 95
-		adm = 2
-		dip = 2
-		mil = 3
+		adm = 5
+		dip = 4
+		mil = 4
 	}
 }
 

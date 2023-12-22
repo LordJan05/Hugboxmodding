@@ -227,8 +227,8 @@ inclusive_monarchy_decision = {
 
 promote_bureaucratic_faction_decision = {
 	empire = celestial_empire 
-	trigger = { 
-		NOT = { empire_of_china_reform_passed = promote_military_faction_decision }
+	trigger = {
+		not = { empire_of_china_reform_passed = promote_military_faction_decision }
 	}
 	member = {
 		church_loyalty_modifier = 0.05
@@ -238,12 +238,13 @@ promote_bureaucratic_faction_decision = {
 		tolerance_own = 1 
 		missionaries = 1
 	}
+	disabled_by = promote_military_faction_decision
 }
 
 promote_military_faction_decision = {
 	empire = celestial_empire 
-	trigger = { 
-		NOT = { empire_of_china_reform_passed = promote_bureaucratic_faction_decision } 
+	trigger = {
+		not = { empire_of_china_reform_passed = promote_bureaucratic_faction_decision }
 	}
 	member = {
 		nobles_loyalty_modifier = 0.05 
@@ -253,6 +254,7 @@ promote_military_faction_decision = {
 		army_tradition = 0.5 
 		navy_tradition = 0.5
 	}
+	disabled_by = promote_bureaucratic_faction_decision
 }
 
 unifed_trade_market_decision = {

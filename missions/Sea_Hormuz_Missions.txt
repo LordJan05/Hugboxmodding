@@ -5,6 +5,7 @@ sealand_hormuz_missions_1 = {
 	potential = {
 		OR = {
 			tag = ORM
+			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
 		NOT = { map_setup = map_setup_random }
@@ -110,7 +111,10 @@ sealand_hormuz_missions_1_1 = { # Forming Yemen removes this missions
 	generic = no
 	ai = yes
 	potential = {
-		tag = ORM
+		OR = {
+			tag = ORM
+			tag = OMA
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -258,6 +262,7 @@ sealand_hormuz_missions_2 = {
 	potential = {
 		OR = {
 			tag = ORM
+			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
 		NOT = { map_setup = map_setup_random }
@@ -550,6 +555,7 @@ sealand_hormuz_missions_3 = {
 	potential = {
 		OR = {
 			tag = ORM
+			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
 		NOT = { map_setup = map_setup_random }
@@ -825,6 +831,7 @@ sealand_hormuz_missions_4 = {
 	potential = {
 		OR = {
 			tag = ORM
+			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
 		NOT = { map_setup = map_setup_random }
@@ -1071,6 +1078,7 @@ sealand_hormuz_missions_5 = {
 	potential = {
 		OR = {
 			tag = ORM
+			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
 		NOT = { map_setup = map_setup_random }

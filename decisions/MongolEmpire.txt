@@ -232,11 +232,14 @@ country_decisions = {
 			}
 			NOT = { tag = TIM }
 			NOT = { tag = PER }
+			NOT = { tag = ERS }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = ARB }
+			NOT = { tag = SAS }
+			NOT = { tag = SJK }
 			#NOT = { dynasty = "Timurid" }
 		}
 		provinces_to_highlight = {
@@ -245,6 +248,9 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = ILK }
+			NOT = { exists = PER }
+			NOT = { exists = ERS }
+			NOT = { exists = SAS }
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {

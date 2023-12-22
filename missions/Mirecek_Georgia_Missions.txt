@@ -2,8 +2,13 @@ georgia_1_missions = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = GEO
+		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 
@@ -318,8 +323,13 @@ georgia_2_missions = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = GEO
+		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 
@@ -418,8 +428,13 @@ georgia_3_missions = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = GEO
+		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	georgia_strenght_is_in_unity = {
@@ -593,8 +608,13 @@ georgia_4_missions = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = GEO
+		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 
@@ -748,8 +768,13 @@ georgia_5_missions = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = GEO
+		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 

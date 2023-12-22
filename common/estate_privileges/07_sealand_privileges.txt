@@ -1033,6 +1033,65 @@ estate_burghers_geo_tame_the_mountains = {
 	}
 }
 ################################
+# Tibet:
+estate_burghers_tib_tame_the_mountains = {
+	icon = privilege_dev_cost_mountain
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_burghers_tib_tame_the_mountains }
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_tib_tame_the_mountains_granted_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = mountain
+						has_terrain = glacier
+					}
+				}
+				add_province_modifier = {
+					name = tib_tame_the_mountains_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_tib_tame_the_mountains_revoked_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = tib_tame_the_mountains_modifier }
+				remove_province_modifier = tib_tame_the_mountains_modifier
+			}
+		}
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_burghers
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_burghers_tib_tame_the_mountains }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+################################
 # Ethiopia:
 estate_burghers_eth_tame_the_mountains = {
 	icon = privilege_dev_cost_mountain

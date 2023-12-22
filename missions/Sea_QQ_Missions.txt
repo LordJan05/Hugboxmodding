@@ -4,8 +4,14 @@ sealand_qq_missions_1 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -242,8 +248,14 @@ sealand_qq_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -611,8 +623,14 @@ sealand_qq_missions_3 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -657,6 +675,20 @@ sealand_qq_missions_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			tabriz_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 			armenia_area = {
 				limit = {
@@ -708,9 +740,13 @@ sea_sjk_missions_6 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "King of Kings" }
+	}
 	potential = {
 		tag = SJK
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -760,8 +796,14 @@ sealand_qq_missions_3_5 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -923,8 +965,14 @@ sealand_qq_missions_4 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1217,8 +1265,14 @@ sealand_qq_missions_5 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = QAR
-			tag = SJK
+			tag = IRQ
+			AND = {
+				OR = {
+					tag = QAR
+					tag = SJK
+				}
+				NOT = { has_dlc = "King of Kings" }
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}

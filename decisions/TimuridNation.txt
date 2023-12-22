@@ -18,7 +18,10 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = PER }
+			NOT = { tag = ERS }
 			NOT = { tag = SAS }
+			NOT = { tag = ILK }
+			NOT = { tag = SJK }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -89,6 +92,7 @@ country_decisions = {
 			define_heir = {
 				dynasty = "Timurid"
 			}
+			set_country_flag = enthroned_a_timurid_prince
 		}
 		ai_will_do = {
 			factor = 10
@@ -122,9 +126,11 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = PER }
+			NOT = { tag = ERS }
 			NOT = { tag = TIM }
 			NOT = { tag = ARB }
 			NOT = { tag = SAS }
+			NOT = { tag = ILK }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

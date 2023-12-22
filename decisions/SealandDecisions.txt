@@ -421,18 +421,27 @@ country_decisions = { # Serbia Tsardom
 			}
 		}
 		allow = {
+			tag = SER
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			religion = orthodox
+			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 30
 				region = balkan_region
 				is_core = ROOT
 			}
-			tag = SER
-			religion = orthodox
-			is_at_war = no
 		}
 		effect = {
+			change_tag = SRE
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			set_country_flag = serbia_unite_jugosland_flag
 			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
 			if = {
 				limit = {
 					government = republic
@@ -446,6 +455,11 @@ country_decisions = { # Serbia Tsardom
 					government = monarchy
 				}
 				add_government_reform = tsardom
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -1493,6 +1507,8 @@ country_decisions = { # converting to Zoroastrian:
 				}
 			}
 			NOT = { tag = PER }
+			NOT = { tag = ERS }
+			NOT = { tag = ILK }
 			OR = {
 				owns_core_province = 433
 				religion = zoroastrian
@@ -1541,7 +1557,11 @@ country_decisions = { # converting to Zoroastrian:
 			}
 			NOT = { exists = SAS }
 			NOT = { exists = PER }
+			NOT = { exists = ERS }
+			NOT = { exists = ILK }
 			NOT = { tag = PER }
+			NOT = { tag = ILK }
+			NOT = { tag = SJK }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1558,7 +1578,10 @@ country_decisions = { # converting to Zoroastrian:
 		}
 		allow = {
 			religion = zoroastrian
+			NOT = { exists = SAS }
 			NOT = { exists = PER }
+			NOT = { exists = ERS }
+			NOT = { exists = ILK }
 			owns_core_province = 410
 			owns_core_province = 433
 			owns_core_province = 428
@@ -2259,95 +2282,6 @@ country_decisions = {
 			factor = 0
 		}
 	}
-	# Africa Corridor:
-	sea_colonize_east_sahara_corridor = {
-		potential = {
-			always = no # Turned off since added more provinces
-			NOT = { tag = TUN }
-			2474 = { is_empty = yes }
-			2475 = { is_empty = yes }
-			OR = {
-				owns = 2448
-				owns = 2275
-				owns = 2277
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2474
-				province_id = 2475
-				province_id = 2448
-				province_id = 2275
-				province_id = 2277
-			}
-			OR = {
-				NOT = { is_core = ROOT }
-				is_empty = yes
-			}
-		}
-		allow = {
-			OR = {
-				owns_core_province = 2448
-				owns_core_province = 2275
-				owns_core_province = 2277
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					2474 = { is_empty = yes }
-				}
-				2474 = { add_core = ROOT cede_province = ROOT }
-			}
-			if = {
-				limit = {
-					2475 = { is_empty = yes }
-				}
-				2475 = { add_core = ROOT cede_province = ROOT }
-			}
-		}
-		ai_will_do = { factor = 0 }
-	}
-	sea_colonize_west_sahara_corridor = {
-		potential = {
-			always = no # Turned off since added more provinces
-			NOT = { tag = MOR }
-			1127 = { is_empty = yes }
-			OR = {
-				owns = 2466
-				owns = 2460
-				owns = 1128
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1127
-				province_id = 2466
-				province_id = 2460
-				province_id = 1128
-			}
-			OR = {
-				NOT = { is_core = ROOT }
-				is_empty = yes
-			}
-		}
-		allow = {
-			OR = {
-				owns_core_province = 2466
-				owns_core_province = 2460
-				owns_core_province = 1128
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					1127 = { is_empty = yes }
-				}
-				1127 = { add_core = ROOT cede_province = ROOT }
-			}
-		}
-		ai_will_do = { factor = 0 }
-	}
 	# Fishing game?:
 	sea_fishing_game = {
 		potential = {
@@ -2411,7 +2345,7 @@ country_decisions = {
 	}
 	sea_roulette_game = {
 		potential = {
-			always = yes
+			always = no # Turned off
 		}
 		allow = {
 			mil_power = 50
@@ -2468,6 +2402,63 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+	}
+	form_smolensk = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_smolensk_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = SMO }
+			ai = no
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			culture_group = russian
+		}
+		provinces_to_highlight = {
+			area = smolensk_area
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			primary_culture = ryazanian
+			smolensk_area = {
+				type = all
+				owned_by = ROOT
+			}
+			293 = { is_state = yes }
+		}
+		effect = {
+			set_country_flag = formed_smolensk_flag
+			change_tag = SMO
+			on_change_tag_effect = yes
+			set_capital = 293
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 }
 

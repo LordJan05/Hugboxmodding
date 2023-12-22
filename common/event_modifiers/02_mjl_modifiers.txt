@@ -48,6 +48,7 @@ mjl_poyang_conquest = {
 mjl_convert_dali = {
 	local_missionary_strength = 0.025
 	local_culture_conversion_cost = -0.2
+	local_culture_conversion_time = -0.2
 	local_unrest = 4
 }
 

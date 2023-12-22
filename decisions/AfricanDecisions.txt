@@ -1,38 +1,98 @@
 country_decisions = {
 	colonize_tuat_decision = {
 		potential = {
-			always = no # Turned off
-			has_country_flag = can_colonize_the_strait
-			1127 = {
+			always = no # Turned off, made into siberian frontier modifier
+			OR = {
+				AND = {
+					NOT = { tag = MOR }
+					NOT = { tag = TUN }
+					NOT = { tag = SON }
+					NOT = { tag = MAL }
+					capital_scope = {
+						OR = {
+							region = maghreb_region
+							region = sahel_region
+							region = niger_region
+							region = guinea_region
+						}
+					}
+				}
+				OR = {
+					adm_tech = 7
+					has_country_flag = can_colonize_the_strait
+				}
+			}
+			any_province = {
+				OR = {
+					area = el_eglab_area
+					area = afelele_area
+					area = western_sahara_area
+					area = touaricks_area
+					area = tibesti_area
+					area = east_azbin_area
+				}
+				is_neighbor_of = ROOT
 				is_empty = yes
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 1128
-			NOT = { owned_by = ROOT }
+			OR = {
+				area = el_eglab_area
+				area = afelele_area
+				area = western_sahara_area
+				area = touaricks_area
+				area = tibesti_area
+				area = east_azbin_area
+			}
+			is_empty = yes
 		}
 		allow = {
 			is_at_war = no
-			any_core_province = {
-				base_manpower = 5
-				owned_by = ROOT
-				is_state = yes
+			if = {
+				limit = {
+					NOT = { tag = MOR }
+					NOT = { tag = TUN }
+					NOT = { tag = SON }
+					NOT = { tag = MAL }
+				}
+				adm_tech = 7
+				capital_scope = {
+					OR = {
+						region = maghreb_region
+						region = sahel_region
+						region = niger_region
+						region = guinea_region
+					}
+				}
 			}
-			owns = 1128
-			1127 = { is_empty = yes }
+			any_province = {
+				OR = {
+					area = el_eglab_area
+					area = afelele_area
+					area = western_sahara_area
+					area = touaricks_area
+					area = tibesti_area
+					area = east_azbin_area
+				}
+				is_neighbor_of = ROOT
+				is_empty = yes
+			}
 		}
 		effect = {
-			clr_country_flag = can_colonize_the_strait
-			create_colony_mission_reward = {
-				province = 1127
-			}
-			random_owned_province = {
+			random_province = {
 				limit = {
-					base_manpower = 5
-					is_core = ROOT
-					is_state = yes
+					OR = {
+						area = el_eglab_area
+						area = afelele_area
+						area = western_sahara_area
+						area = touaricks_area
+						area = tibesti_area
+						area = east_azbin_area
+					}
+					is_neighbor_of = ROOT
+					is_empty = yes
 				}
-				add_base_manpower = -2
+				add_siberian_construction = 100
 			}
 		}
 		ai_will_do = {

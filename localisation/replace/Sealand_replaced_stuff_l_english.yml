@@ -82,10 +82,10 @@
   polish_nation_title:0 "@POL Form Polish Nation"
   australia_nation_title:0 "@AUS Form Australian Nation"
   andalusian_nation_title:0 "@ADU Restore Al-Andalus"
-  tuscan_nation_title:0 "@ADU Form Tuscany"
+  tuscan_nation_title:0 "@TUS Form Tuscany"
   icelandic_nation_title:0 "@ICE Embrace Icelandic Identity"
   tatar_nation_title:0 "@GLH Re-form the Golden Horde"
-  from_great_yuan_title:0 "@YUA Reform Great Yuan"
+  form_great_yuan_title:0 "@YUA Reform Great Yuan"
   yemen_nation_title:0 "@YEM Unite Yemen"
   georgia_nation_title:0 "@GEO Unite Georgia"
   turkish_nation_title:0 "@RUM Restore the Sultanate of Rûm"
@@ -136,6 +136,7 @@
   COT_RIGHT_CLICK_TO_DOWNGRADE_SUBJECT:0 "Right click to downgrade to $NAME|Y$ for 0 prestige. Downgrading a Center of Trade controlled by a subject will add §R$LIBERTY_DESIRE$%§! Liberty Desire."
   COT_DOWNGRADE_CONFIRM_DESC:0 "Downgrade to $NAME|Y$:\n$DESCRIPTION$.\nThis will provide the following benefits:\n$BENEFITS$\nand will cost 0 prestige."
  # domination:
+  earlier_coal_available_tt:0 "§YCoal§! is now available if we have embraced the §YGlobal Trade§! institution and have reached Administrative Technology of §Y19§!."
   flavor_gbr.109.a.tt:0 "As long this modifier is active:\n§YGains a modifier depending on the type and skill of the advisor:§!\n -§YPhilosopher§!, §YNatural Scientist§! and §YReformator§!\n    - Tolerance of Heretics: §G+1.00§! per skill\n -§YArtist§!, §YLegitimator§!, §YRepublican§!, §YDevoted§!, §YHorde Uniter§! and §YExhauster§!\n    - Tolerance of the True Faith: §G+1.00§! per skill\n -§YTreasurer§!, §YMaster of Mint§! and §YSplendid§!\n    - Religious Unity: §G+15.0%§! per skill\n -§YInquisitor§!, §YTheologian§!, §YBureaucrat§! and §YAbsolutor§!\n    - Missionary Strength vs Heretics: §G+1.0%§! per skill"
   mng_inward_perfection_reward_tt:0 "Choosing to complete this mission via the Inward Perfection Estate Privilege will further empower the privilege by granting it the following supplemental modifiers:\nAll Estate Loyalty Equilibrium: §G+10%§!\nMonarch Administrative Skill: §G+1§!\nGreat Project Upgrade Cost: §G-15%§!"
   mng_palace_bureaucracy_benefits_tt:0 "Enacting the 'Expand Palace Bureaucracy' Decree will also grant §G-10%§! Advisor Cost"
@@ -257,7 +258,7 @@
   obj_emperor_of_china_desc:0 "Be Holy Roman Emperor with over §Y40§! Imperial Authority or grow by at least §Y1000§! development as an Empire."
   obj_cultures_accepted_desc:0 "Have at least §Y5§! different promoted cultures."
   obj_large_subject_desc:0 "Have a subject with over §Y250§! development."
-  obj_disc_army_desc:0 "Have least 120% discipline in your armies."
+  obj_disc_army_desc:0 "Have at least 120% discipline in your armies."
   obj_huge_capital_desc:0 "At least §Y35§! development in the capital."
   obj_two_institutions_desc:0 "Own and Control at least §Y1§! origin of institution."
   ab_portugal_colonial_growth:0 "Colonial Growth\n§RDisables '§YColonial Ambitions§!' Age Ability.§!"
@@ -405,6 +406,17 @@
   insult_pvp6:0 "Before the vice to asking, the virtue of not giving"
   insult_pvp9:0 "You will die more than  Imperator Rome"
   insult_pvp10:0 "Hugboxer!"
+ # king_of_kings:
+  arm_coptic_restoration_insight_tt:0 "\n§GEvent Insight:§!\nThis event grants us access to §YGrant Privileges to the Cawa§! Tier 5 government reform, permanent claims on all Coptic provinces in the world, and Egypt region also gains the following modifier:"
+  unlock_the_cawa_regiments_reform_tt:0 "Grants us access to §YGrant Privileges to the Cawa§! Tier 5 government reform."
+  mam_naval_ideas_yes_tt:1 "\n£yes£ Should we complete the mission having a fleet equal or larger than §Y300§!:"
+  geo_metropolitan_bonus_tt:0 "§YConsecrating a Metropolitan§! now gives §G-5.0%§! Local Development Cost."
+  border_nation1:0 "Border Nation" # No exist
+  border_nation1_desc:0 "Armenia, since ancient times, has often been a battleground between larger nations for centuries. Even after regaining our sovereignty, it is often hard to maintain a neutral stance. It is hard to appease everyone, but it is achievable."
+  sygnakhs1:0 "Sygnakhs" # No exist
+  sygnakhs1_desc:0 "Sygnakhs are military structures in Armenia for recruiting organizations, fortification systems, signal beacons and logistical support. Usually each melik would have his own sygnakh, but larger sygnakhs are shared by different meliks. Establishing such sygnakhs allows us to rally our troops more effectively."
+  YEM_win_10_wars_against_heretics:0 "Has §YWon§! at least §Y6§! wars against §YHeretics§!. (Currently: §Y[Root.GetNumWarsAgainstHeretics]§!.)"
+  YEM_win_20_wars_against_non_believers:0 "Has §YWon§! at least §Y10§! wars against §Yother religions§!. (Currently: §Y[Root.GetNumWarsAgainstNonBelievers]§!.)"
  # leviathan:
   aotearoa_nation_title:0 "@AOT Form Aotearoa"
   unite_hawaii_title:0 "@HAW Unite Hawaii"
@@ -603,6 +615,7 @@
   nubian_nation_title:0 "@NBI Unite the Nubians"
   rozwi_nation_title:0 "@RZI Establish Rozwi"
   somalia_nation_title:0 "@SOM Unite the Somalian Clans"
+  can_colonize_the_strait_tt:0 "Allows us the ability to colonize Saharan corridors."
  # personalityoptions:
   immortal_personality:0 "Warlord"
   desc_immortal_personality:0 "This ruler is vying for control of China in the vacuum left by the collapse of the Ming Dynasty."
@@ -731,7 +744,7 @@
   cb_hundred_years_union_desc:0 "The Duchy of France must bow to us in perpetuity."
  # scandinavia:
   flavor_swe.121.desc:0 "The war with our former masters was not so bloody one. One would even say that there was no war to begin with. But somehow we prevailed and achieved our independence!\nAs the Kalmar Union now falls apart, the rise of a new kingdom in Scandinavia - of [Root.GetName] - has begun."
- flavor_swe.121.a:0 "This is the start of a new era."
+  flavor_swe.121.a:0 "This is the start of a new era."
   allow_earlier_scandinavia_formation_tt:0 "The country of §YScandinavia§! no longer needs an §YAdministrative Technology§! of §Y15§! to be formed."
   swe_repay_estate_church_title:0 "£sea_estate_logo£Repay Debt to the [Root.GetChurchOrFallbackName]"
   swe_repay_estate_burghers_title:0 "£sea_estate_logo£Repay Debt to the [Root.GetBurghersOrFallbackName]"

@@ -17,6 +17,13 @@ add_casus_belli = {
     type = cb_hundred_years_war
     months = 120
 }
+if = {
+	limit = {
+		ai = yes
+	}
+	add_truce_with = NRM
+	add_truce_with = BRI
+}
 
 change_estate_land_share = {
 	estate = estate_church

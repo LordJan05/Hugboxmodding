@@ -3,6 +3,9 @@ sealand_teutonic_missions_0_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
@@ -81,6 +84,9 @@ sealand_teutonic_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
@@ -338,6 +344,9 @@ sealand_teutonic_missions_2 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
@@ -469,6 +478,9 @@ sealand_teutonic_missions_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
@@ -1158,6 +1170,9 @@ sealand_teutonic_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU
@@ -1338,6 +1353,9 @@ sealand_teutonic_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		NOT = { has_dlc = "Lions of the North" }
 		tag = TEU

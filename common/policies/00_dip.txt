@@ -884,7 +884,7 @@ cultural_unity = {
 		full_idea_group = religious_ideas
 	}	
 	
-	culture_conversion_time = -0.1
+	culture_conversion_time = -0.2
 	culture_conversion_cost = -0.1
 	
 	effect = {}

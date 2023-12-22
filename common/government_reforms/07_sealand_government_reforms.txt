@@ -13,6 +13,7 @@ teutonic_order_government = {
 		devotion = 0.5
 		papal_influence = 0.5
 		culture_conversion_cost = -0.1
+		culture_conversion_time = -0.1
 		promote_culture_cost = -0.1
 	}
 	rulers_can_be_generals = yes
@@ -72,7 +73,7 @@ crusade_against_the_world = {
 
 # Seljuk Empire. From mission. Tribal Federation and Ottoman government hybrid.
 seljuk_empire_government = {
-	icon = "chieftain"
+	icon = "turkoman_ottoman_institutions"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
@@ -796,12 +797,12 @@ vinland_government = {
 # Exodus Kemet
 kemet_government = {
 	icon = "sea_kemet_reform"
-	monarchy = yes
 	allow_normal_conversion = yes
 	valid_for_nation_designer = no
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes
 	royal_marriage = yes
+	heir = yes
 	potential = {
 		tag = KEM
 	}
@@ -966,6 +967,8 @@ lotharingia_monarchy_reform = {
 		monarch_lifespan = 0.5
 		monarch_military_power = 1
 		max_absolutism = 10
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.2
 	}
 	custom_attributes = {
 		dutch_reform_dutch_maurician = yes
@@ -1059,6 +1062,7 @@ diverse_society_reform = {
 	modifiers = {
 		num_accepted_cultures = 3
 		culture_conversion_cost = -0.15
+		culture_conversion_time = -0.15
 		promote_culture_cost = -0.15
 	}
 	ai = {
@@ -1083,6 +1087,7 @@ imperial_japan_monarchy = {
 	modifiers = {
 		max_absolutism = 33
 		culture_conversion_cost = -0.33
+		culture_conversion_time = -0.33
 		warscore_cost_vs_other_religion = -0.33
 		allowed_samurai_fraction = 0.33
 	}

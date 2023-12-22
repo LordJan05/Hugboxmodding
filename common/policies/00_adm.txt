@@ -974,8 +974,7 @@ the_liberation_act = {
 		full_idea_group = offensive_ideas
 	}	
 	
-	global_unrest = -1
-	years_of_nationalism = -5
+	assault_fort_ability = 0.5
 	
 	effect = {}
 	removed_effect = {}

@@ -39,7 +39,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 151		# Constantinople
+				#province_id = 151		# Constantinople
 				province_id = 316		# Iznik
 				province_id = 323		# Konya
 				province_id = 326		# Ankara
@@ -68,8 +68,10 @@ country_decisions = {
 			else = {
 				NOT = { exists = TUR }
 			}
-			NOT = { exists = BYZ }
-			owns_core_province = 151		# Constantinople
+			#OR = {
+			#	NOT = { exists = BYZ }
+			#	owns_core_province = 151		# Constantinople
+			#}
 			owns_core_province = 316		# Iznik
 			owns_core_province = 323		# Konya
 			owns_core_province = 326		# Ankara
@@ -95,6 +97,18 @@ country_decisions = {
 					add_government_reform = sultanate_of_rum_reform
 				}
 			}
+			#if = { # Got specific tag already...
+			#	limit = {
+			#		OR = {
+			#			tag = AKK
+			#			tag = QAR
+			#			was_tag = AKK
+			#			was_tag = QAR
+			#		}
+			#	}
+			#	override_country_name = SELJUK_EMPIRE
+			#	set_country_flag = is_SELJUK_EMPIRE_flag
+			#}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

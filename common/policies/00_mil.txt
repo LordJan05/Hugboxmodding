@@ -678,7 +678,8 @@ the_preparation_act = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	own_territory_dice_roll_bonus = 1
+	garrison_damage = 0.5
+	garrison_size = 0.25
 	
 	effect = {}
 	removed_effect = {}

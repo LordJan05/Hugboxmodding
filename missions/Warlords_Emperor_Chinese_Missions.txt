@@ -179,7 +179,7 @@ warlord_ming_missions_1_b = {
 				add_corruption = -2
 				change_government_reform_progress = 100
 				change_ruler_stat = {
-					stat = adm
+					type = adm
 					amount = 1
 				}
 			}
@@ -353,6 +353,11 @@ warlord_ming_missions_2_b = {
 		required_missions = { warlord_mng_cornerstone_empire warlord_mng_reform_civil_registration }
 		position = 9
 		
+		provinces_to_highlight = {
+			province_id = 700 
+			NOT = { owned_by = ROOT }
+		}
+		
 		trigger = {
 			OR = {
 				has_reform = examination_system_reform
@@ -363,7 +368,6 @@ warlord_ming_missions_2_b = {
 				}
 			}
 			crown_land_share = 45 
-			stability = 3 
 			700 = { owned_by = ROOT }
 		}
 		
@@ -374,64 +378,25 @@ warlord_ming_missions_2_b = {
 			}
 			custom_tooltip = mng_insight_30_tt
 			
-			custom_tooltip = mng_cmb_reward_tt #Reduce Malus of the starting negative modifier by -10% 
-			
-			if = {
-				limit = {
-					NOT = { has_harmonized_with = pagan }
-					NOT = { has_harmonized_with = vajrayana }
-					religion = confucianism
-				}
-				custom_tooltip = mng_db_reward_1_tt
-				tooltip = {
-					add_harmonized_religion = pagan
-					add_harmonized_religion = vajrayana
-					add_harmony = 10
-				}
-			}
-			else = {
-				custom_tooltip = mng_db_reward_1_tt
-				tooltip = {
-					add_country_modifier = {
-						name = mng_decentralized_migration_modifier
-						duration = -1 
-					}
-				}
-			}
-			
-			custom_tooltip = mng_erc_reward_tt #20 mana per Eunuch privilege 
-			
-			custom_tooltip = mng_rf_reward_tt 
-			
-			custom_tooltip = mng_rc_reward_tt
-			
-			custom_tooltip = mng_rotc_reward_tt
+			custom_tooltip = pol_alternatively_tt
 			tooltip = {
-				if = {
-					limit = { 
-						has_dlc = "Rights of Man" 
-						NOT = { num_of_ruler_traits = { amount = 3 } }
-						NOT = { dip = 6 } 
-					}
-					change_dip = 1
-					add_ruler_personality = silver_tongue_personality
+				define_advisor = {
+					name = "Buwei Zhao" 
+					type = natural_scientist
+					cost_multiplier = 0.33 
+					skill = 2
 				}
-				else_if = { 
-					limit = { 
-						NOT = { dip = 5 } 
-					}
-					change_dip = 1
-					add_dip_power = 100 
-				} 
-				else = { add_dip_power = 200 }
-			}
-			
-			custom_tooltip = mng_cc_reward_tt
-			tooltip = { 
-				create_explorer = { tradition = 80 } 
-				add_country_modifier = { 
-					name = mng_colonial_focus
-					duration = 7300 
+				define_advisor = {
+					name = "Yilong Ma" 
+					type = trader
+					cost_multiplier = 0.33
+					skill = 2
+				}
+				define_advisor = {
+					name = "Chao Meng" 
+					type = quartermaster
+					cost_multiplier = 0.33
+					skill = 2
 				}
 			}
 			hidden_effect = {
@@ -439,246 +404,25 @@ warlord_ming_missions_2_b = {
 					limit = { has_reform = examination_system_reform }
 					country_event = { id = flavor_mng.30 }
 				}
-				else = { change_government_reform_progress = -250 }
-				
-				if = {
-					limit = { 
-						has_country_modifier = mng_starting_malus_5_modifier 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					}
-					remove_country_modifier = mng_starting_malus_5_modifier 
-					add_country_modifier = {
-						name = mng_starting_malus_4_modifier
-						duration = -1 
-					}
-				}
-				else_if = {
-					limit = { 
-						has_country_modifier = mng_starting_malus_4_modifier 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					}
-					remove_country_modifier = mng_starting_malus_4_modifier
-					add_country_modifier = {
-						name = mng_starting_malus_3_modifier
-						duration = -1 
-					}
-				}
-				else_if = {
-					limit = { 
-						has_country_modifier = mng_starting_malus_3_modifier 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					}
-					remove_country_modifier = mng_starting_malus_3_modifier
-					add_country_modifier = {
-						name = mng_starting_malus_2_modifier
-						duration = -1 
-					}
-				}
-				else_if = {
-					limit = { 
-						has_country_modifier = mng_starting_malus_2_modifier 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					}
-					remove_country_modifier = mng_starting_malus_1_modifier
-					add_country_modifier = {
-						name = mng_starting_malus_2_modifier
-						duration = -1 
-					}
-				}
-				else_if = {
-					limit = { 
-						has_country_modifier = mng_starting_malus_1_modifier 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					}
-					remove_country_modifier = mng_starting_malus_1_modifier
-				}
-				else_if = {
-					limit = { 
-						is_emperor_of_china = yes 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					} 
-					add_mandate = 5
-				}
-				else_if = {
-					limit = { 
-						is_emperor_of_china = no 
-						OR = {
-							has_reform = centralize_empire_reform
-							has_reform = centralize_reform 
-						}
-					} 
-					add_adm_power = 200 
-				}
-				
-				if = {
-					limit = {
-						NOT = { has_harmonized_with = pagan }
-						NOT = { has_harmonized_with = vajrayana }
-						religion = confucianism
-					}
-					change_government_reform_progress = -250
-					add_harmonized_religion = pagan
-					add_harmonized_religion = vajrayana
-				}
-				else = {
-					change_government_reform_progress = -250
-					add_country_modifier = {
-						name = mng_decentralized_migration_modifier
-						duration = -1 
-					}
-				}
-				if = {
-					limit = { has_reform = expand_imperial_court_reform }
-					add_country_modifier = {
-						name = mng_expanded_eunuch_palatial_rights_modifier  
-						duration = -1 
-					}
-					set_estate_privilege = estate_eunuchs_bookkeepers_privilege
-					if = {
-						limit = { 
-							num_of_estate_privileges = {
-								estate = estate_eunuchs 
-								value = 6 
-							}
-						}
-						add_adm_power = 120 
-						add_dip_power = 120 
-						add_mil_power = 120 
-					}
-					else_if = {
-						limit = { 
-							num_of_estate_privileges = {
-								estate = estate_eunuchs 
-								value = 5 
-							}
-						}
-						add_adm_power = 100
-						add_dip_power = 100 
-						add_mil_power = 100
-					}
-					else_if = {
-						limit = { 
-							num_of_estate_privileges = {
-								estate = estate_eunuchs 
-								value = 4 
-							}
-						}
-						add_adm_power = 80
-						add_dip_power = 80 
-						add_mil_power = 80
-					}
-					else_if = {
-						limit = { 
-							num_of_estate_privileges = {
-								estate = estate_eunuchs 
-								value = 3 
-							}
-						}
-						add_adm_power = 60
-						add_dip_power = 60 
-						add_mil_power = 60
-					}
-					else_if = {
-						limit = { 
-							num_of_estate_privileges = {
-								estate = estate_eunuchs 
-								value = 2 
-							}
-						}
-						add_adm_power = 40
-						add_dip_power = 40 
-						add_mil_power = 40
-					}
-					else = {
-						add_adm_power = 20
-						add_dip_power = 20 
-						add_mil_power = 20
-					}
-				}
-				if = {
+				else = { 
 					limit = { has_reform = limit_imperial_court_reform }
 					define_advisor = {
 						name = "Buwei Zhao" 
 						type = natural_scientist
-						cost_multiplier = 0.5 
+						cost_multiplier = 0.33 
 						skill = 2
 					}
 					define_advisor = {
 						name = "Yilong Ma" 
 						type = trader
-						cost_multiplier = 0.5 
+						cost_multiplier = 0.33 
 						skill = 2
 					}
 					define_advisor = {
 						name = "Chao Meng" 
 						type = quartermaster
-						cost_multiplier = 0.5 
+						cost_multiplier = 0.33 
 						skill = 2
-					}
-				}
-				if = {
-					limit = { has_reform = regional_council_reform }
-					every_owned_province = {
-						limit = { has_courthouse_building_trigger = yes development = 15 } 
-						add_building = town_hall
-						add_base_tax = 1 
-					}
-				}
-				if = {
-					limit = { 
-						has_reform = representation_of_the_crown_reform
-						has_dlc = "Rights of Man" 
-						NOT = { num_of_ruler_traits = { amount = 3 } }
-						NOT = { dip = 6 } 
-					}
-					every_subject_country = {
-						add_trust = {
-							who = ROOT 
-							value = 20
-							mutual = yes 
-						}
-						add_liberty_desire = -25 
-					}
-					change_dip = 1
-					add_ruler_personality = silver_tongue_personality
-				}
-				else_if = { 
-					limit = { 
-						has_reform = representation_of_the_crown_reform
-						NOT = { dip = 5 } 
-					}
-					change_dip = 1
-					add_dip_power = 100 
-				} 
-				else_if = { 
-					limit = { has_reform = representation_of_the_crown_reform } 
-					add_dip_power = 200 
-				}
-				
-				if = {
-					limit = { has_reform = penal_colonies_reform } 
-					create_explorer = { tradition = 80 } 
-					add_country_modifier = { 
-						name = mng_colonial_focus
-						duration = 7300 
 					}
 				}
 			}
@@ -692,29 +436,30 @@ warlord_ming_missions_2_b = {
 		
 		trigger = {
 			OR = {
-			
-					calc_true_if = {
-						all_subject_country = {
-							is_subject_of_type_with_overlord = { who = ROOT type = tributary_state }
-							NOT = { liberty_desire = 10 } 
-							has_opinion = { 
-								who = ROOT 
-								value = 120 
-							}
+				calc_true_if = {
+					all_subject_country = {
+						is_subject_of_type_with_overlord = { who = ROOT type = tributary_state }
+						NOT = { liberty_desire = 10 } 
+						has_opinion = { 
+							who = ROOT 
+							value = 120 
 						}
-						desc = mng_5_tribs_with_opinion_and_lib_desire_tt
-						amount = 5
 					}
-				
+					desc = mng_5_tribs_with_opinion_and_lib_desire_tt
+					amount = 5
+				}
 				calc_true_if = {
 					all_ally = {
 						has_opinion = {
 							who = ROOT 
 							value = 150 
 						}
-						trust = {
-							who = ROOT 
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = {
+								who = ROOT 
+								value = 70 
+							}
 						}
 					}
 					amount = 4 
@@ -762,9 +507,12 @@ warlord_ming_missions_2_b = {
 									who = ROOT 
 									value = 150 
 								}
-								trust = {
-									who = ROOT 
-									value = 70
+								if = {
+									limit = { has_dlc = "Leviathan" }
+									trust = {
+										who = ROOT 
+										value = 70 
+									}
 								}
 							}
 							amount = 4 
@@ -776,9 +524,12 @@ warlord_ming_missions_2_b = {
 								who = ROOT 
 								value = 150 
 							}
-							trust = {
-								who = ROOT 
-								value = 70
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = {
+									who = ROOT 
+									value = 70 
+								}
 							}
 						}
 						add_country_modifier = {
@@ -799,9 +550,12 @@ warlord_ming_missions_2_b = {
 									who = ROOT 
 									value = 150 
 								}
-								trust = {
-									who = ROOT 
-									value = 70
+								if = {
+									limit = { has_dlc = "Leviathan" }
+									trust = {
+										who = ROOT 
+										value = 70 
+									}
 								}
 							}
 							ROOT = { add_mandate = 5 } 
@@ -814,9 +568,12 @@ warlord_ming_missions_2_b = {
 									who = ROOT 
 									value = 150 
 								}
-								trust = {
-									who = ROOT 
-									value = 70
+								if = {
+									limit = { has_dlc = "Leviathan" }
+									trust = {
+										who = ROOT 
+										value = 70 
+									}
 								}
 							}
 							ROOT = { 
@@ -1155,15 +912,15 @@ warlord_ming_missions_3_b = {
 				duration = 9125 
 			}
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 		}

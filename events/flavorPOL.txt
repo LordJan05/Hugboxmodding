@@ -1,7 +1,7 @@
 ######################################## 
 # Flavor events for Poland
 # 
-# written by Sara Wendel-�rtqvist
+# written by Sara Wendel-?rtqvist
 ######################################## 
 
 namespace = flavor_pol
@@ -1181,7 +1181,7 @@ country_event = {
 	}
 }
 
-# Michal Sedziw�j
+# Michal Sedziw?j
 country_event = {
 	id = flavor_pol.6
 	title = "flavor_pol.EVTNAME6"
@@ -1835,7 +1835,7 @@ country_event = {
 		}
 		name = flavor_pol.18.a #We must retain the Jagiellon Dynasty
 		ai_chance = { 
-			factor = 75 
+			factor = 0 
 		}
 		LIT = { 
 			country_event = { id = flavor_lit.16 }
@@ -1845,12 +1845,13 @@ country_event = {
 			custom_tooltip = pol_impact_future_missions_tt 
 			set_country_flag = pol_chose_pu_flag
 		}
+		custom_tooltip = pol_potential_cb_on_hungary_tt
 	}
 	
 	option = {
 		name = flavor_pol.18.b #Appoint a Local Noble.
 		ai_chance = { 
-			factor = 25
+			factor = 100
 		}
 		define_ruler = {
 			#change_dip = 3
@@ -1883,6 +1884,7 @@ country_event = {
 			custom_tooltip = pol_impact_future_missions_tt 
 			set_country_flag = pol_denied_pu_flag
 		}
+		custom_tooltip = pol_potential_cb_on_bohemia_tt
 	}
 }
 
@@ -2029,6 +2031,9 @@ country_event = {
 	major = yes
 	fire_only_once = yes
 	is_triggered_only = yes
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
 	
 	option = {
 		trigger = {
@@ -2697,7 +2702,6 @@ country_event = { #The Crown of Rome
 		LAE = { 
 			change_religion = catholic
 			set_dynasty = ROOT
-			set_country_flag = is_LAE_flag
 			hidden_effect = { 
 				every_owned_province = { 
 					limit = {

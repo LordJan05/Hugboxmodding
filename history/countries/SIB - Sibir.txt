@@ -12,14 +12,18 @@ historical_rival = SHY
 #historical_rival = NOG
 historical_rival = CHG
 historical_rival = MOS
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
 
-1468.1.1 = {
+1444.1.1 = {
 	monarch = {
 		name = "Ibak"
 		dynasty = "Shaybanid"
-		adm = 2
-		dip = 2
-		mil = 2
+		adm = 3
+		dip = 3
+		mil = 3
 	}
 }
 

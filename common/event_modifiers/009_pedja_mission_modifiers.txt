@@ -76,6 +76,7 @@ sas_afgan_frontier = {
 }
 sas_eranshahr = {
 	culture_conversion_cost = -0.25
+	culture_conversion_time = -0.25
 	max_absolutism = 20
 	yearly_absolutism = 1
 }

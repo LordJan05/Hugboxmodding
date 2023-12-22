@@ -946,6 +946,13 @@ country_event = {
 			}
 			if = {
 				limit = {
+					has_reform = fuero_militar_reform
+				}
+				remove_government_reform = fuero_militar_reform
+				change_government_reform_progress = 60
+			}
+			if = {
+				limit = {
 					has_reform = ordennancas_reform
 				}
 				remove_government_reform = ordennancas_reform

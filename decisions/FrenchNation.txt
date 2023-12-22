@@ -19,6 +19,8 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
 			NOT = { tag = AVE }		# Anglois is also valid
+			NOT = { tag = LOT }
+			NOT = { was_tag = LOT }
 			OR = {
 				ai = no
 				NOT = { exists = FRA }

@@ -232,6 +232,13 @@ gc_tunis_1 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = can_colonize_the_strait } }
+				custom_tooltip = can_colonize_the_strait_tt
+				hidden_effect = {
+					set_country_flag = can_colonize_the_strait
+				}
+			}
 			touaricks_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1811,6 +1818,10 @@ sealand_tunis_emirate_5 = {
 			}			
 		}
 		effect = {
+			add_country_modifier = { 
+				name = BYZ_may_construct_galleass
+				duration = -1
+			}
 			add_treasury = 500
 			add_yearly_sailors = 5
 			add_mil_power = 75

@@ -104,6 +104,25 @@ hannoverian_group_1 = {
 				}
 				add_permanent_claim = root
 			}
+			custom_tooltip = han_unite_the_welfs_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bad_prepare_for_war_modifier
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_core_province = 52
+						owns_core_province = 4741
+					}
+					add_country_modifier = {
+						name = bad_prepare_for_war_modifier
+						duration = 3650
+					}
+				}
+			}
 		}
 	}
 	
@@ -196,6 +215,7 @@ hannoverian_group_1 = {
 				area = northern_saxony_area
 				area = south_saxony_area
 				area = thuringia_area
+				province_id = 58
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			NOT = {
@@ -213,6 +233,7 @@ hannoverian_group_1 = {
 		}
 		
 		trigger = {
+			owns_core_province = 58
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10 #out of 12
 				OR = {
@@ -224,6 +245,12 @@ hannoverian_group_1 = {
 		}
 
 		effect = {
+			58 = {
+				add_latest_building = {
+					fort = yes
+					builder = ROOT
+				}
+			}
 			mittelmark_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }

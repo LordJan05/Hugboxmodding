@@ -363,6 +363,7 @@ emp_bav_missions_conquest = {
 					exists = BRA #deliberately not PRU, that would be OP
 					BRA = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -1066,6 +1067,7 @@ emp_bav_missions_conquer_austria = {
 					exists = HAB
 					HAB = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {

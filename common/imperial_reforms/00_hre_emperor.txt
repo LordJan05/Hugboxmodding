@@ -12,6 +12,9 @@ emperor_reichsreform = {
 		local_institution_spread = 0.1
 		local_defensiveness = 0.1
 	}
+	emperor = {
+		imperial_authority_value = 0.1
+	}
 	on_effect = {
 		imperial_ban_allowed = yes
 	}
@@ -35,7 +38,7 @@ emperor_reichsregiment = {
 		local_tax_modifier = 0.1
 	}
 	emperor = {
-		imperial_authority_value = 0.1
+		imperial_authority_value = 0.05
 	}
 	required_reform = emperor_reichsreform
 	gui_container = mainline
@@ -51,10 +54,11 @@ emperor_reichsstabilitaet = {
 	}
 	province = {
 		local_manpower_modifier = 0.05
+		local_sailors_modifier = 0.05
 		local_production_efficiency = 0.05
 	}
 	emperor = {
-		imperial_authority_value = 0.1
+		imperial_authority_value = 0.05
 	}
 	on_effect = {
 		custom_tooltip = "EXPAND_EMPIRE_CB"
@@ -247,10 +251,12 @@ emperor_rechenschaft = {
 	}
 	emperor = {
 		global_manpower_modifier = 0.05
+		global_sailors_modifier = 0.05
 		land_morale = 0.05
 	}
 	elector = {
 		global_manpower_modifier = 0.05
+		global_sailors_modifier = 0.05
 		land_morale = 0.05
 	}
 }
@@ -350,7 +356,9 @@ emperor_erbkaisertum = {
 	}
 	emperor = {
 		global_manpower_modifier = 0.05
+		global_sailors_modifier = 0.05
 		manpower_recovery_speed = 0.05
+		sailors_recovery_speed = 0.05
 		imperial_authority = 0.1
 	}
 	required_reform = emperor_imperial_estates

@@ -1,5 +1,54 @@
 # These missions should require X provinces in [region] rather than entire regions
 
+buryatia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	brt_warriors_wrath = {
+		icon = qng_modernize_the_banners
+		trigger = {
+			num_of_cavalry = 30
+		}
+		effect = {
+			add_country_modifier = {
+				name = brt_warriors_wrath_modifier
+				duration = 3650
+			}
+		}
+	}
+	brt_fast_expansion = {
+		icon = mission_steppe_warriors
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2190
+				province_id = 2116
+				province_id = 1053
+			}
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		trigger = {
+			owns_core_province = 2190
+			owns_core_province = 2116
+			owns_core_province = 1053
+		}
+		effect = {
+			add_country_modifier = {
+				name = brt_fast_expansion_modifier
+				duration = 5475
+			}
+		}
+	}
+}
+
 oir_missions_1 = {
 	slot = 1
 	generic = no
@@ -53,6 +102,7 @@ mongol_missions_1 = {
 			primary_culture = altaic_new
 			tag = YUA
 		}
+		NOT = { can_preview_missions = yes }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -224,6 +274,7 @@ mongol_missions_2 = {
 			primary_culture = altaic_new
 			tag = YUA
 		}
+		NOT = { can_preview_missions = yes }
 		NOT = { map_setup = map_setup_random }
 
 	}
@@ -233,16 +284,12 @@ mongol_missions_2 = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
-				province_id = 2116
-				province_id = 4678
-			}
+			province_id = 2116
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }
 		}
 		trigger = {
 			owns_core_province = 2116
-			owns_core_province = 4678
 			is_subject = no
 		}
 		effect = {
@@ -469,6 +516,7 @@ mongol_missions_3 = {
 			primary_culture = altaic_new
 			tag = YUA
 		}
+		NOT = { can_preview_missions = yes }
 		NOT = { map_setup = map_setup_random }
 
 	}
@@ -640,6 +688,7 @@ mongol_missions_4 = {
 			primary_culture = altaic_new
 			tag = YUA
 		}
+		NOT = { can_preview_missions = yes }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

@@ -2311,19 +2311,19 @@ coal = {
 				}
 			}
 			provincial_institution_progress = {
-				which = enlightenment
-				value = 100
-			}
-			owner = { has_institution = enlightenment }
-		}
-		else = {
-			provincial_institution_progress = {
 				which = manufactories
 				value = 100
 			}
+			owner = { has_institution = manufactories }
+		}
+		else = {
+			provincial_institution_progress = {
+				which = global_trade
+				value = 100
+			}
 			owner = {
-				has_institution = manufactories
-				adm_tech = 23
+				has_institution = global_trade
+				adm_tech = 19
 			}
 		}
 	}

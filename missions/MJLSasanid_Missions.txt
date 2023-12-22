@@ -590,7 +590,10 @@ pedja_sasanid_missions3 = {
 		icon = mission_protect_granada
 		required_missions = {  }
 		trigger = {
-			has_idea = aswaran_knights
+			OR = {
+				has_idea = aswaran_knights
+				cavalry_fraction = 0.5
+			}
 			farm_estate = 3
 		}
 		effect = {

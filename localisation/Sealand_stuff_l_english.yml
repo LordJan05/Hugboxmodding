@@ -155,8 +155,8 @@
         silesia_monarchy_reform_desc:0 "Polonia Bytom to je fusbalowo skupina ze Bytumja. Ny ma pewne a je uo to zwada, eli rachowac jygo fungowany uod 1920 roku, eli uod 1945. Klub uo takim mjany fungowoł we lotach 1920 - 1922, nale nyskorzi uostoł rozwjunzany, we 1945 uogłoszuno jygo reaktywacyjo, nale powojynny klub nawjunzywol do tradycyje Poguni Lwuw, a tygo ny buło we downyj Polunije."
         mechanic_silesia_monarchy_reform_hanys_yes:0 "Unlocks '§YHanys§!' Nobility Privileges. Which when enacted:"
         silesia_monarchy_reform_tt:0 "Production of §YCoal§!: §G+50.0%§!\nEvery owned province with §YCoal§! as latent trade goods gains:\nLocal Development Cost: §G-20.0%§!\nLocal Unrest: §G-2.00§!"
-        silesia_monarchy_reform_coal_bonus:0 "Bytom wungla"
-        silesia_monarchy_reform_coal_latent:0 "Bytom wungla"
+        silesia_monarchy_reform_coal_bonus:0 "Bytom Wungla"
+        silesia_monarchy_reform_coal_latent:0 "Bytom Wungla"
       # Devision:
         sil_hanys_upgrade_title:0 "@SIL Kuchna Slunsko"
         sil_hanys_upgrade_desc:0 "Those are Hanys upgrades."
@@ -233,6 +233,10 @@
         restore_rum_desc:0 "Sultanate of Rûm"
         restore_seljuk_empire_title:0 "Restore Seljuk Empire"
         restore_seljuk_empire_desc:0 "Restore Seljuk Empire"
+        restore_seljuk_empire_2_title:0 "Restore Seljuk Empire"
+        restore_seljuk_empire_2_desc:0 "Restore Seljuk Empire"
+        restore_seljuk_empire_3_title:0 "Restore Seljuk Empire"
+        restore_seljuk_empire_3_desc:0 "Restore Seljuk Empire"
         descendants_of_jalayirid_title:0 "Descendants of Jalayirid"
         descendants_of_jalayirid_desc:0 "Descendants of Jalayirid"
         unite_persia_title:0 "Unite Persia"
@@ -302,13 +306,19 @@
         cross_mediterranean_sea_desc:0 "Land on Sicily"
         red_sea_naval_base_title:0 "Red Sea Naval Base"
         red_sea_naval_base_desc:0 "Red Sea Naval Base"
+        red_sea_naval_base_2_title:0 "Red Sea Naval Base"
+        red_sea_naval_base_2_desc:0 "Red Sea Naval Base"
         colonial_ambitions_modifier:0 "Colonial Ambitions"
         colonize_australia_title:0 "Colonize Australia"
         colonize_australia_desc:0 "Colonize Australia"
+        colonize_australia_2_title:0 "Colonize Australia"
+        colonize_australia_2_desc:0 "Colonize Australia"
         colonize_australia_tooltip:0 "§Y[Root.GetName]§! or their subjects own at least one fully colonized province in the Colonial Australia colonial region."
         australian_gold_modifier:0 "Australian Gold"
         restore_abbasid_caliphate_title:0 "Restore Abbasid"
         restore_abbasid_caliphate_desc:0 "Restore Abbasid"
+        restore_abbasid_caliphate_2_title:0 "Restore Abbasid"
+        restore_abbasid_caliphate_2_desc:0 "Restore Abbasid"
         abbasid_governors_modifier:0 "Abbasid Governors"
         mam_unite_arabia_title:0 "Unite Arabia"
         mam_unite_arabia_desc:0 "Unite Arabia"
@@ -317,6 +327,8 @@
         prepare_for_war_desc:0 "Prepare for War"
         mesopotamian_mamluks_title:0 "Mesopotamian Mamluks"
         mesopotamian_mamluks_desc:0 "Mesopotamian Mamluks"
+        mesopotamian_mamluks_2_title:0 "Mesopotamian Mamluks"
+        mesopotamian_mamluks_2_desc:0 "Mesopotamian Mamluks"
         mesopotamian_mamluks_modifier:0 "Mesopotamian Mamluks"
         mesopotamian_mamluks_tooltip:0 "The §YMesopotamian Mamluks§! mercenary company becomes available for hire."
         subjugation_of_beyliks_modifier:0 "Subjugation of Beyliks"
@@ -500,6 +512,7 @@
         end_gryf_rebellion_tooltip:0 "§Y[Root.GetName]§! gets '§YGryf Prevailed§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+5.0%§!\nYearly Legitimacy: §G+1.00§!\n"
         wittelsbach_prevailed_modifier:0 "Wittelsbach Prevailed"
         gryf_prevailed_modifier:0 "Gryf Prevailed"
+        end_gryf_rebellion_flag:0 "Gryf Prevailed"
         northern_threat_title:0 "Northern Threat"
         northern_threat_desc:0 "Northern Threat"
         recover_norway_title:0 "Recover Norway"
@@ -812,6 +825,7 @@
         swi_recruit_merc_inf_enabled_modifier_tt:0 "[Root.GetName] gets '§YSwiss Mercenaries§!' until the end of the game, giving the following effects:\nMercenary Manpower: §R-50.0%§!\n"
         swi_recruit_merc_inf_enabled_modifier_ttt:0 "§YSwiss Mercenaries§! will be removed from [Root.GetName].\n"
         swi_recruit_merc_inf_enabled_modifier:0 "Swiss Mercenaries"
+        swi_recruit_merc_inf_enabled:0 "Swiss Mercenaries"
         swi_recruit_merc_inf_title:0 "£sea_merc_logo£ §MRecruit Swiss Mercenaries§!"
         swi_recruit_merc_inf_desc:0 "§RWhen switching unit types, then it will also switch for those units!§!"
         sea_swiss_mercenaries_1:0 "§OSwiss Mercenaries§!"
@@ -922,7 +936,6 @@
         mjl_change_muslim_school_trigger_tooltip:0 "Can change Muslim School on §Y[GetMonthName_change_school_modifier] [Root.change_school_modifier_length.GetValue]§!."
         # Privileges timer:
         mercantilism_for_10_years_tooltip:0 "Get ability to gain Mercantilism again on §Y[GetMonthName_mercantilism_use] [Root.mercantilism_use_length.GetValue]§!."
-        burghers_loans_use_for_10_years_tooltip:0 "Can grant this privilege again on §Y[GetMonthName_burghers_loans_use] [Root.burghers_loans_use_length.GetValue]§!."
         # Religions:
          # Catholic:
          papal_legate_2:0 "Papal Legate"
@@ -1001,7 +1014,7 @@
         oirat_steppe_horde:0 "Oirat Steppe Nomads"
         oirat_steppe_horde_desc:0 "A governmental form where a sovereign or military ruler rule a tribal chiefdom, with constant Casus Bellis on all their neighbors and troops who fight better on the plains."
         # Serbia Tsardom:
-        serbia_unite_jugosland_title:0 "@SER Unite Balkan Slavs"
+        serbia_unite_jugosland_title:0 "@SRE Restore Serbian Empire"
         serbia_unite_jugosland_desc:0 "Neither Death nor Dishonor."
         # Tribal Divese Society:
         diverse_society_reform:0 "Diverse Society"
@@ -1073,6 +1086,10 @@
         building_fort3:0 "Keep"
         building_fort5:0 "Redoubt"
         building_fort7:0 "Ravelin"
+        # Age modifiers:
+        sea_reformation_increased_condo_modifier:0 "Increased Condottieries"
+        sea_absolutism_increased_condo_modifier:0 "Increased Condottieries"
+        sea_revolutions_increased_condo_modifier:0 "Increased Condottieries"
         # Ages:
         age_i_autonomy:0 "Centralization"
         age_i_pp_insults:0 "Advanced Diplomacy"
@@ -1091,6 +1108,7 @@
         age_iv_extra_merchant:0 "Extra Merchant"
         age_iv_african_reinforce:0 "African Reinforcements"
         # HRE:
+        IS_NOT_HRE_HERETIC_RELIGION:0 "Is NOT HRE Heretic Religion"
         sea_elector_splendor_modifier:0 "Elector Splendor"
         sea_emperor_catholic_modifier_1:0 "Catholic Emperor"
         desc_sea_emperor_catholic_modifier_1:0 "Is available as long as §YHoly Roman Empire§! religion and our nation religion is §YCatholic§!.\nIn the year §Y1500§! gains additional bonus:\nManpower against Imperial enemies: §G+15000.00§!"
@@ -1105,50 +1123,62 @@
         emperor_imperial_estates:0 "Imperial Estates Curtailed"
         emperor_privilegia_de_non_appelando_province:0 "Revoke The Privilegia"
         emperor_reichstag_collegia_elector:0 "Reichstag Collegia"
+        emperor_reichsreform_emperor:0 "Reichsreform"
         emperor_reichsregiment:0 "Reichsregiment"
+        emperor_expand_gemeiner_pfennig_emperor:0 "Gemeiner Pfennig"
         emperor_expand_gemeiner_pfennig_elector:0 "Gemeiner Pfennig"
         emperor_rechenschaft_elector:0 "Rechenschaft Measures"
+        emperor_geteilte_macht_emperor:0 "Geteilte Macht"
         emperor_geteilte_macht_elector:0 "Geteilte Macht"
+        emperor_reichskrieg_emperor:0 "Reichskrieg"
         emperor_reichskrieg_elector:0 "Reichskrieg"
         emperor_erbkaisertum:0 "Proclaim Erbkaisertum"
         emperor_gemeinerpfenning_emperor:0 "Gemeiner Pfennig"
-         # Failsafe event:
-         sealand_events.12.t:0 "Failsafe: Curtail the Imperial Estates"
-         sealand_events.12.d:0 "You thought you can get away with the little exploit of having both Centralization and Decentralization paths at the same time? For that you lose the special privileges you gained from it. Shame on you, sir!"
-         sealand_events.12.a:0 "Nice."
-         sealand_events.13.t:0 "Failsafe: Revoke The Privilegia"
-         sealand_events.13.d:0 "Should've integrated all those subjects you gained from that privilege, before enacting 'Establish the Reichstag Collegia' Reform, now you're going to have to lose them all."
-         sealand_events.13.a:0 "Next time I know."
-         sealand_events.13.a.tt:0 "Every vassal gained from '§YRevoke The Privilegia§!' Reform will be released."
-         # HRE Decisions:
-         emperor_hofgericht_decision_title:0 "£sea_hre_logo£Centralization 1: Reform the Hofgericht"
-         emperor_hofgericht_decision_desc:0 "Reduce legislative independence by making the Emperor the final legal authority within the Empire."
-         emperor_hofgericht_decision_tt:0 "Emperor gets:\n Morale of Armies: §G+5.0%§!\n Discipline: §G+2.5%§!\n Imperial Authority Growth Modifier: §G+10.0%§!"
-         emperor_hofgericht_modifier:0 "Reform the Hofgericht"
-         #
-         emperor_imperial_estates_decision_title:0 "£sea_hre_logo£Centralization 2: Curtail the Imperial Estates"
-         emperor_imperial_estates_decision_desc:0 "Curb the freedoms of the Imperial Estates so that they are no longer able to defy the Emperor."
-         emperor_imperial_estates_decision_tt:0 "§YReform the Hofgericht§! is enacted"
-         emperor_imperial_estates_decision_ttt:0 "Emperor gets:\n Technology Cost: §G-5.0%§!\n Idea Cost: §G-5.0%§!\n Province War Score Cost: §G-15.0%§!\n§YHRE is now always inherited by the same country.\nSubject princes no longer occupy Emperor's diplomatic relations slots§!"
-         emperor_imperial_estates_modifier:0 "Imperial Estates Curtailed"
-         #
-         emperor_erbkaisertum_decision_title:0 "£sea_hre_logo£Centralization 3: Proclaim Erbkaisertum"
-         emperor_erbkaisertum_decision_desc:0 "Abolish the elective monarchy of The Holy Roman Empire."
-         emperor_erbkaisertum_decision_tt:0 "§YCurtail the Imperial Estates§! is enacted"
-         emperor_erbkaisertum_decision_ttt:0 "Emperor gets:\n National Manpower Modifier: §G+10.0%§!\n Manpower Recovery Speed: §G+5.0%§!\n Imperial Authority Growth Modifier: §G+10.0%§!"
-         emperor_erbkaisertum_modifier:0 "Proclaim Erbkaisertum"
-         #
-         emperor_privilegia_de_non_appelando_decision_title:0 "£sea_hre_logo£Centralization 4: Revoke The Privilegia"
-         emperor_privilegia_de_non_appelando_decision_desc:0 "Revoke The Privilege of Non-Appeal."
-         emperor_privilegia_de_non_appelando_decision_tt:0 "§YProclaim Erbkaisertum§! is enacted"
-         emperor_privilegia_de_non_appelando_decision_ttt:0 "Emperor gets:\n Max Promoted Cultures: §G+3§!\n Promote Culture Cost: §G-50.0%§!\n Possible Policies: §G+1§!\n§YAll memebers of the Holy Roman Empire who have +25 opinion of us, will become our dircet vassals, and those who do not have +25 opinion of us, will leave the empire, giving us claim on their lands.§!"
-         emperor_privilegia_de_non_appelando_modifier:0 "Revoke The Privilegia"
-         #
-         emperor_renovatio_decision_title:0 "£sea_hre_mflag_logo£Centralization 5: Renovatio Imperii"
-         emperor_renovatio_decision_desc:0 "Unite the Disparate states of The Empire into a nation state."
-         emperor_renovatio_decision_tt:0 "§YRevoke The Privilegia§! is enacted"
-         emperor_renovatio_decision_ttt:0 "§YUnite the Holy Roman Empire to one country!§!"
+         # Centralization:
+          # Failsafe event:
+          sealand_events.12.t:0 "Failsafe: Curtail the Imperial Estates"
+          sealand_events.12.d:0 "You thought you can get away with the little exploit of having both Centralization and Decentralization paths at the same time? For that you lose the special privileges you gained from it. Shame on you, sir!"
+          sealand_events.12.a:0 "Nice."
+          sealand_events.13.t:0 "Failsafe: Revoke The Privilegia"
+          sealand_events.13.d:0 "Should've integrated all those subjects you gained from that privilege, before enacting 'Establish the Reichstag Collegia' Reform, now you're going to have to lose them all."
+          sealand_events.13.a:0 "Next time I know."
+          sealand_events.13.a.tt:0 "Every vassal gained from '§YRevoke The Privilegia§!' Reform will be released."
+          # HRE Decisions:
+          emperor_hofgericht_decision_title:0 "£sea_hre_logo£Centralization 1: Reform the Hofgericht"
+          emperor_hofgericht_decision_desc:0 "Reduce legislative independence by making the Emperor the final legal authority within the Empire."
+          emperor_hofgericht_decision_tt:0 "Emperor gets:\n Morale of Armies: §G+5.0%§!\n Discipline: §G+2.5%§!\n Imperial Authority Growth Modifier: §G+10.0%§!"
+          emperor_hofgericht_modifier:0 "Reform the Hofgericht"
+          #
+          emperor_imperial_estates_decision_title:0 "£sea_hre_logo£Centralization 2: Curtail the Imperial Estates"
+          emperor_imperial_estates_decision_desc:0 "Curb the freedoms of the Imperial Estates so that they are no longer able to defy the Emperor."
+          emperor_imperial_estates_decision_tt:0 "§YReform the Hofgericht§! is enacted"
+          emperor_imperial_estates_decision_ttt:0 "Emperor gets:\n Technology Cost: §G-5.0%§!\n Idea Cost: §G-5.0%§!\n Province War Score Cost: §G-15.0%§!\n§YHRE is now always inherited by the same country.\nSubject princes no longer occupy Emperor's diplomatic relations slots§!"
+          emperor_imperial_estates_modifier:0 "Imperial Estates Curtailed"
+          #
+          emperor_erbkaisertum_decision_title:0 "£sea_hre_logo£Centralization 3: Proclaim Erbkaisertum"
+          emperor_erbkaisertum_decision_desc:0 "Abolish the elective monarchy of The Holy Roman Empire."
+          emperor_erbkaisertum_decision_tt:0 "§YCurtail the Imperial Estates§! is enacted"
+          emperor_erbkaisertum_decision_ttt:0 "Emperor gets:\n National Manpower Modifier: §G+10.0%§!\n Manpower Recovery Speed: §G+5.0%§!\n Imperial Authority Growth Modifier: §G+10.0%§!"
+          emperor_erbkaisertum_modifier:0 "Proclaim Erbkaisertum"
+          #
+          emperor_privilegia_de_non_appelando_decision_title:0 "£sea_hre_logo£Centralization 4: Revoke The Privilegia"
+          emperor_privilegia_de_non_appelando_decision_desc:0 "Revoke The Privilege of Non-Appeal."
+          emperor_privilegia_de_non_appelando_decision_tt:0 "§YProclaim Erbkaisertum§! is enacted"
+          emperor_privilegia_de_non_appelando_decision_ttt:0 "Emperor gets:\n Max Promoted Cultures: §G+3§!\n Promote Culture Cost: §G-50.0%§!\n Possible Policies: §G+1§!\n§YAll memebers of the Holy Roman Empire who have +25 opinion of us, will become our dircet vassals, and those who do not have +25 opinion of us, will leave the empire, giving us claim on their lands.§!"
+          emperor_privilegia_de_non_appelando_modifier:0 "Revoke The Privilegia"
+          #
+          emperor_renovatio_decision_title:0 "£sea_hre_mflag_logo£Centralization 5: Renovatio Imperii"
+          emperor_renovatio_decision_desc:0 "Unite the Disparate states of The Empire into a nation state."
+          emperor_renovatio_decision_tt:0 "§YRevoke The Privilegia§! is enacted"
+          emperor_renovatio_decision_ttt:0 "§YUnite the Holy Roman Empire to one country!§!"
+         # Decentralization:
+          emperor_reichstag_collegia_modifier:0 "Reichstag Collegia"
+          emperor_expand_gemeiner_pfennig_modifier:0 "Gemeiner Pfennig"
+          emperor_rechenschaft_modifier:0 "Rechenschaft Measures"
+          emperor_geteilte_macht_modifier:0 "Geteilte Macht"
+          emperor_reichskrieg_modifier:0 "Reichskrieg"
         # Diplomatic Actions:
+        sea_takeondebt_tt:0 "We are not allowed to pay off player nation debt."
         diplo_no_war_on_subject_with_truce:0 "We are not allowed to declare war on a subject, while we have truce with their overlord."
         sea_sunni_crusade_jihad_diplo_action_title:0 "Call for Jihad"
         sea_sunni_crusade_jihad_diplo_action_tooltip:0 "Jihads give Sunni countries a significant manpower and income bonus while at war with them."
@@ -1291,16 +1321,16 @@
             sea_advisor_event.2.13:0 "£sea_range£ Colonial Range: §G+20.0%§!"
             sea_advisor_event.2.14:0 "£sea_colonist_placement_chance£ Settler Chance: §G+5.0%§!"
             sea_advisor_event.2.15:0 "£sea_naval_morale£ Morale of Navies: §G+10.0%§!"
-            sea_advisor_event.2.16:0 "£sea_heavy_ship_power£ Heavy Ship Combat Ability: §G+10.0%§!"
-            sea_advisor_event.2.17:0 "£sea_light_ship_power£ Light Ship Combat Ability: §G+10.0%§!"
-            sea_advisor_event.2.18:0 "£sea_galley_power£ Galley Combat Ability: §G+10.0%§!"
-            sea_advisor_event.2.19:0 "£sea_ship_durability£ Ship Durability: §G+10.0%§!"
+            sea_advisor_event.2.16:0 "£sea_heavy_ship_power£ Heavy Ship Combat Ability: §G+15.0%§!"
+            sea_advisor_event.2.17:0 "£sea_light_ship_power£ Light Ship Combat Ability: §G+15.0%§!"
+            sea_advisor_event.2.18:0 "£sea_galley_power£ Galley Combat Ability: §G+15.0%§!"
+            sea_advisor_event.2.19:0 "£sea_ship_durability£ Ship Durability: §G+15.0%§!"
             sea_advisor_event.2.20:0 "£sea_global_naval_engagement_modifier£ Global Naval Engagement: §G+10.0%§!"
             sea_advisor_event.2.23:0 "£sea_global_sailors_modifier£ National Sailors Modifier: §G+10.0%§!"
             sea_advisor_event.2.21:0 "£sea_naval_forcelimit_modifier£ Naval Force Limit Modifier: §G+10.0%§!"
             sea_advisor_event.2.22:0 "£sea_naval_maintenance_modifier£ Naval Maintenance Modifier: §G-10.0%§!"
             sea_advisor_event.2.24:0 "£sea_naval_attrition£ Naval Attrition: §G-15.0%§!"
-            sea_advisor_event.2.25:0 "£sea_recover_navy_morale_speed£ Recover Navy Morale Speed: §G+15.0%§!"
+            sea_advisor_event.2.25:0 "£sea_recover_navy_morale_speed£ Recover Navy Morale Speed: §G+20.0%§!"
             sea_advisor_event.2.26:0 "£sea_global_ship_repair£ Global Ship Repair: §G+20.0%§!"
             # Great Men:
             greatmen_event.1.t:0 "$ADVISOR_LEGITIMATE_GOVERNMENT$"
@@ -1433,15 +1463,15 @@
             sea_advisor_event.3.t:0 "Military Advisors"
             sea_advisor_event.3.2:0 "£sea_land_morale£ Morale of Armies: §G+10.0%§!"
             sea_advisor_event.3.3:0 "£sea_discipline£ Discipline: §G+5.0%§!"
-            sea_advisor_event.3.4:0 "£sea_infantry_power£ Infantry Combat Ability: §G+10.0%§!"
-            sea_advisor_event.3.5:0 "£sea_cavalry_power£ Cavalry Combat Ability: §G+10.0%§!"
-            sea_advisor_event.3.6:0 "£sea_artillery_power£ Artillery Combat Ability: §G+10.0%§!"
-            sea_advisor_event.3.77:0 "£sea_morale_damage£ Morale Damage: §G+10.0%§!"
-            sea_advisor_event.3.88:0 "£sea_morale_damage_received£ Morale Damage Received: §G-10.0%§!"
-            sea_advisor_event.3.7:0 "£sea_fire_damage£ Land Fire Damage: §G+10.0%§!"
-            sea_advisor_event.3.8:0 "£sea_fire_damage_received£ Fire Damage Received: §G-10.0%§!"
-            sea_advisor_event.3.9:0 "£sea_shock_damage£ Shock Damage: §G+10.0%§!"
-            sea_advisor_event.3.10:0 "£sea_shock_damage_received£ Shock Damage Received: §G-10.0%§!"
+            sea_advisor_event.3.4:0 "£sea_infantry_power£ Infantry Combat Ability: §G+12.5%§!"
+            sea_advisor_event.3.5:0 "£sea_cavalry_power£ Cavalry Combat Ability: §G+12.5%§!"
+            sea_advisor_event.3.6:0 "£sea_artillery_power£ Artillery Combat Ability: §G+15.0%§!"
+            sea_advisor_event.3.77:0 "£sea_morale_damage£ Morale Damage: §G+15.0%§!"
+            sea_advisor_event.3.88:0 "£sea_morale_damage_received£ Morale Damage Received: §G-15.0%§!"
+            sea_advisor_event.3.7:0 "£sea_fire_damage£ Land Fire Damage: §G+15.0%§!"
+            sea_advisor_event.3.8:0 "£sea_fire_damage_received£ Fire Damage Received: §G-15.0%§!"
+            sea_advisor_event.3.9:0 "£sea_shock_damage£ Shock Damage: §G+15.0%§!"
+            sea_advisor_event.3.10:0 "£sea_shock_damage_received£ Shock Damage Received: §G-15.0%§!"
             sea_advisor_event.3.11:0 "£sea_cavalry_flanking£ Cavalry Flanking Ability: §G+25.0%§!  £sea_cav_to_inf_ratio£ Cavalry to Infantry Ration: §G+50.0%§!"
             sea_advisor_event.3.12:0 "£sea_movement_speed£ Movement Speed: §G+15.0%§!"
             sea_advisor_event.3.13:0 "£sea_reinforce_speed£ Reinforce Speed: §G+33.0%§!"
@@ -1449,7 +1479,7 @@
             sea_advisor_event.3.15:0 "£sea_land_forcelimit_modifier£ Land Force Limit Modifier: §G+10.0%§!"
             sea_advisor_event.3.16:0 "£sea_land_maintenance_modifier£ Land Maintenance Modifier: §G-10.0%§!"
             sea_advisor_event.3.17:0 "£sea_land_attrition£ Land Attrition: §G-15.0%§!"
-            sea_advisor_event.3.18:0 "£sea_recover_army_morale_speed£ Recover Army Morale Speed: §G+15.0%§!"
+            sea_advisor_event.3.18:0 "£sea_recover_army_morale_speed£ Recover Army Morale Speed: §G+20.0%§!"
             sea_advisor_event.3.19:0 "£sea_siege_ability£ Siege Ability: §G+15.0%§!"
             sea_advisor_event.3.20:0 "£sea_defensiveness£ Fort Defence: §G+20.0%§!"
             sea_advisor_event.3.21:0 "£sea_drill_gain£ Army Drill Gain Modifier: §G+25.0%§!"
@@ -1503,11 +1533,10 @@
         # Other and Decisions::
         recruit_40_trad_general_title:0 "£sea_general_cost_logo£Recruit a General with §G40§! tradition"
         recruit_40_trad_general_desc:0 "This is a one time decision to recruit slightly better general, unless we get unlucky RNG."
-        militia_act_tt:0 "[Root.GetName] gets '§YThe Militia Act§!' until the end of the game, giving the following effects:\nStability Cost Modifier: §R+5.0%§!\nDiscipline: §G+5.0%§!\n§YThis modifier is disabled if 'Humanist Ideas' or 'Influence Ideas' is removed.§!"
-        sea_colonize_east_sahara_corridor_title:0 "Colonize East Sahara Corridor"
-        sea_colonize_east_sahara_corridor_desc:0 "Allows us to colonize the corrider, thus enabling to expand further."
-        sea_colonize_west_sahara_corridor_title:0 "Colonize West Sahara Corridor"
-        sea_colonize_west_sahara_corridor_desc:0 "Allows us to colonize the corrider, thus enabling to expand further."
+        militia_act_tt:0 "[Root.GetName] gets '§YThe Militia Act§!' until the end of the game, giving the following effects:\nStability Cost Modifier: §R+5.0%§!\nManpower Recovery Speed: §G+15.0%§!\n§YThis modifier is disabled if 'Humanist Ideas' or 'Influence Ideas' is removed.§!"
+        sahara_corridor_modifier:0 "Settling in Sahara"
+        desc_sahara_corridor_modifier:0 "We can settle on Sahara corridors and send some of our people there."
+        can_only_colonize_sahara_corridors_tt:0 "§RCan't establish Siberian Frontier here. Find another way to colonize this provinces.§!"
          # Fishing:
          sea_fishing_game_title:0 "£sea_fish_logo£Low Budget Fishing Game"
          sea_fishing_game_desc:0 "This is a Fishing game, but because not enough funds, it is low budget and thus not fully made into proper gaming mechanic. On the bright side, fishing itself is not bad and while it gives nothing much and takes long time, it is still in the end an honest work."
@@ -2345,6 +2374,8 @@
        improve_ottoman_janissary_modifier:0 "Reform Ottoman Janissaries"
        sea_rum_golden_age_title:0 "Golden Age of Janissaries"
        sea_rum_golden_age_desc:0 "Rum Golden Age"
+       sea_rum_golden_age_2_title:0 "Golden Age of Janissaries"
+       sea_rum_golden_age_2_desc:0 "Rum Golden Age"
        sea_rum_golden_age_tt:0 "If '§YJanissary Coup§!' disaster has not happened, then will be removed.\nUpgrade all the '§YImproved Ottoman Janissaries§!' modifiers into following:"
        # Seljuks:
        sjk_reformed_janissary_alexandria_title:0 "£sea_janissary£ Janissaries experience from Alexandria"
@@ -2352,6 +2383,10 @@
        sjk_reformed_janissary_alexandria_modifier:0 "Alexandrian Improved Janissaries"
        sea_sjk_golden_age_title:0 "Golden Age of Janissaries"
        sea_sjk_golden_age_desc:0 "Seljuks Golden Age"
+       sea_sjk_golden_age_2_title:0 "Golden Age of Janissaries"
+       sea_sjk_golden_age_2_desc:0 "Seljuks Golden Age"
+       sea_sjk_golden_age_3_title:0 "Golden Age of Janissaries"
+       sea_sjk_golden_age_3_desc:0 "Seljuks Golden Age"
        sea_sjk_golden_age_tt:0 "If '§YJanissary Coup§!' disaster has not happened, then will be removed.\nUpgrade all the '§YImproved Ottoman Janissaries§!' modifiers into following:"
        # Ideas:
        OSM:0 "Ottoman Empire"
@@ -2396,12 +2431,19 @@
         # Mission for Georgia:
         sea_geo_restore_byzantium_empire_title:0 "Restore Byzantium"
         sea_geo_restore_byzantium_empire_desc:0 "Restore Byzantium"
+        sea_geo_restore_byzantium_empire_2_title:0 "Restore Byzantium"
+        sea_geo_restore_byzantium_empire_2_desc:0 "Restore Byzantium"
         # Privilege
         estate_burghers_geo_tame_the_mountains:0 "Industrialize the Mountains"
         estate_burghers_geo_tame_the_mountains_desc:0 ""
         estate_burghers_geo_tame_the_mountains_granted_tooltip:0 "Every owned §YMountains§!, §YHills§! and §YHighlands§! terrain province gains:\nLocal Development Cost: §G-15.0%§!"
         estate_burghers_geo_tame_the_mountains_revoked_tooltip:0 "Removes '§YIndustrialize the Mountains§!' modifier from every owned province."
         geo_tame_the_mountains_modifier:0 "Industrialize the Mountains"
+        # Missions:
+        geo_revive_the_aznauri_title:0 "Revive the Aznauri"
+        geo_revive_the_aznauri_desc:0 "Revive the Aznauri"
+        geo_envoy_to_the_tsar_tt:0 "§Y[Root.GetName]§! gains a permanent claim on §YMuscovy§! country."
+        geo_envoy_to_the_tsar_tt:0 "§Y[Root.GetName]§! gains a permanent claim on §YRussia§! country."
     
     # Sasanian Empire:
         # Government:
@@ -2481,25 +2523,25 @@
         sea_mor_ready_for_war_title:0 "Ready for War"
         sea_mor_ready_for_war_desc:0 "Ready for War"
         mor_siege_modifier:0 "Improved Siege Tactics"
-        gc_mor_algiers_tt:0 "Unlocks '§YRegulate Berbers Influence§!' Nobility Privilege. Which when enacted:\nEnables '§YDecrease Influence§!' and '§YIncrease Influence§!' actions in §YMoroccan Berbers§! ability.\n"
+        gc_mor_algiers_tt:0 "Unlocks '§YRegulate Berbers Influence§!' Nobility Privilege. Which when enacted:\nEnables '§YDecrease Influence§!' and '§YIncrease Influence§!' actions in §YBarbary Berbers§! ability.\n"
       # Government:
         moroccan_sultanate_reform:0 "Moroccan Sultanate"
         moroccan_sultanate_reform_desc:0 "The Berbers of the Barbary Coast have since long had a tradition of raiding and pirating along the coasts of the Mediterranean. It sustains a loose feudal structure supported by a council of the Berber tribal chiefs."
-        ability_moroccan_iqta_mechanic:0 "Moroccan Berbers"
+        ability_moroccan_iqta_mechanic:0 "Barbary Berbers"
         sea_conscript_subject_maritime:0 "Maritime Conscription"
         sea_conscript_subject_maritime_desc:0 ""
-        sea_conscript_subject_maritime_tt:0 "For every Galley we start constructing, we gain §R2.00§! Moroccan Subject Influence, up to §Y15§! Moroccan Subject Influence."
+        sea_conscript_subject_maritime_tt:0 "For every Galley we start constructing, we gain §R2.00§! Barbary Subject Influence, up to §Y15§! Barbary Subject Influence."
         sea_conscript_subject_infantry:0 "Infantry Conscription"
         sea_conscript_subject_infantry_desc:0 ""
-        sea_conscript_subject_infantry_tt:0 "For every Infantry gained from our subject, we gain §R2.00§! Moroccan Subject Influence, up to §Y50§! Moroccan Subject Influence.\nWe gain maximum §Y10§! Infantry at a time."
+        sea_conscript_subject_infantry_tt:0 "For every Infantry gained from our subject, we gain §R2.00§! Barbary Subject Influence, up to §Y50§! Barbary Subject Influence.\nWe gain maximum §Y10§! Infantry at a time."
         sea_conscript_subject_infantry_ttt:0 "Has infantry in any province owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
         sea_conscript_subject_cavalry:0 "Cavalry Conscription"
         sea_conscript_subject_cavalry_desc:0 ""
-        sea_conscript_subject_cavalry_tt:0 "For every Cavalry gained from our subject, we gain §R2.00§! Moroccan Subject Influence, up to §Y85§! Moroccan Subject Influence.\nWe gain maximum §Y10§! Cavalry at a time."
+        sea_conscript_subject_cavalry_tt:0 "For every Cavalry gained from our subject, we gain §R2.00§! Barbary Subject Influence, up to §Y85§! Barbary Subject Influence.\nWe gain maximum §Y10§! Cavalry at a time."
         sea_conscript_subject_cavalry_ttt:0 "Has cavalry in any province owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
-        moroccan_berbers_influence:0 "Moroccan Subject Influence"
-        moroccan_berbers_influence_desc:0 "Can be increased by being at war, having negative Stability, low Legitimacy, War Exhaustion, Corruption, enabled War Taxes, Bankruptcy.\nCan be decreased by being at peace, having positive Stability, high Legitimacy.\nAdditionally for every §YVassal§! or §YMarch§!, up to §Y10§!, we gain following effects:\nMonthly Moroccan Subject Influence: §G+0.10§!\n\nAt Minimum Power, §YMoroccan Subject Influence§! has the following effects:\nNational Tax Modifier: §G+25.0%§!\nLand Maintenance Modifier: §G-10.0%§!\nYearly Corruption: §G-0.25§!\nMonthly Autonomy Change: §G-0.025§!\n\n"
-        monthly_moroccan_berbers_influence:0 "Monthly Moroccan Subject Influence"
+        moroccan_berbers_influence:0 "Barbary Subject Influence"
+        moroccan_berbers_influence_desc:0 "Can be increased by being at war, having negative Stability, low Legitimacy, War Exhaustion, Corruption, enabled War Taxes, Bankruptcy.\nCan be decreased by being at peace, having positive Stability, high Legitimacy.\nAdditionally for every §YVassal§! or §YMarch§!, up to §Y10§!, we gain following effects:\nMonthly Barbary Subject Influence: §G+0.10§!\n\nAt Minimum Power, §YMoroccan Subject Influence§! has the following effects:\nNational Tax Modifier: §G+25.0%§!\nLand Maintenance Modifier: §G-10.0%§!\nYearly Corruption: §G-0.25§!\nMonthly Autonomy Change: §G-0.025§!\n\n"
+        monthly_moroccan_berbers_influence:0 "Monthly Barbary Subject Influence"
         sea_moroccan_iqta_decrease_influence:0 "Decrease Influence"
         sea_moroccan_iqta_decrease_influence_desc:0 ""
         sea_moroccan_iqta_increase_influence:0 "Increase Influence"
@@ -2507,7 +2549,7 @@
       # Privilege:
         estate_nobles_moroccan_iqta:0 "Regulate Berbers Influence"
         estate_nobles_moroccan_iqta_desc:0 "We can't just let fate and subjects dictate how much influence they have over our nation, instead we should use our own power to influence the influencers."
-        estate_nobles_moroccan_iqta_tt:0 "Enables '§YDecrease Influence§!' and '§YIncrease Influence§!' actions in §YMoroccan Berbers§! ability."
+        estate_nobles_moroccan_iqta_tt:0 "Enables '§YDecrease Influence§!' and '§YIncrease Influence§!' actions in §YBarbary Berbers§! ability."
         
         
         #Others:
@@ -2701,6 +2743,9 @@
       # Missions:
         sea_rus_streltsy_mission_title:0 "Mass Recruitment"
         sea_rus_streltsy_mission_desc:0 "Armies of peasants are the backbone of our army. We must continue to recruit and provision the peasants to uphold our military traditions."
+      # Decision:
+        form_smolensk_title:0 "@SMO Form Smolensk"
+        form_smolensk_desc:0 "Smolensk and their artillery goes together like bread and butter."
         
     # Novgorod:
       # Government:
@@ -2736,7 +2781,7 @@
        bengal_nation_title:0 "@BNG Form Bengal"
        bengal_nation_desc:0 "We must address the elephant in the room, which is Bengal, and how can we become ourselves as those elephant riders."
        
-        
+       
     # CHINA:    
     # Warlords:
      # Missions:
@@ -2881,3 +2926,149 @@
         desc_aztecs_eagle_special_units:0 "It is one of the most elite types of warriors in the Aztec military. Eagle Warriors wear helemts and suits decorated with eagle feathers, sometimes even eagle heads as heads. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."
         aztecs_jaguar_special_units:0 "Jaguar Warriors"
         desc_aztecs_jaguar_special_units:0 "It is one of the most elite types of warriors in the Aztec military. Jaguar Warriors wear hide or skin of a jaguar and faces were shown out of the open jaguar mouth. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."
+        
+  # MINORS:
+        
+    # Tibet:
+     # Privilege:
+        estate_burghers_tib_tame_the_mountains:0 "Industrialize the Mountains"
+        estate_burghers_tib_tame_the_mountains_desc:0 ""
+        estate_burghers_tib_tame_the_mountains_granted_tooltip:0 "Every owned §YMountains§! and §YGlacial§! terrain province gains:\nLocal Development Cost: §G-35.0%§!"
+        estate_burghers_tib_tame_the_mountains_revoked_tooltip:0 "Removes '§YIndustrialize the Mountains§!' modifier from every owned province."
+        geo_tame_the_mountains_modifier:0 "Industrialize the Mountains"
+        unlock_privilege_estate_burghers_tib_tame_the_mountains_tt:0 "Enable the [Root.GetBurghersOrFallbackName] privilege '§YIndustrialize the Mountains§!'."
+        tib_tame_the_mountains_modifier:0 "Industrialize the Mountains"
+    # Ferrara:
+     # Missions:
+        fer_prepare_for_war_title:0 "Prepare for Conquest"
+        fer_prepare_for_war_desc:0 "Prepare for Conquest"
+        fer_new_tuscany_title:0 "New Tuscany"
+        fer_new_tuscany_desc:0 "New Tuscany"
+        fer_new_tuscany_modifier:0 "Tuscan Spirit"
+        fer_consolidate_area_title:0 "Consolidate Ferrara"
+        fer_consolidate_area_desc:0 "Consolidate Ferrara"
+        fer_consolidate_area_modifier:0 "Ferrara Expansionism"
+        fer_lombary_united_title:0 "Secure Lombardy"
+        fer_lombary_united_desc:0 "Secure Lombardy"
+        fer_mighty_ferrara_title:0 "Mighty Ferrara"
+        fer_mighty_ferrara_desc:0 "Mighty Ferrara"
+        fer_mighty_ferrara_modifier:0 "Mighty Ferrara"
+    # Baden:
+     # Missions:
+        bad_prepare_for_war_title:0 "Prepare for Conquest"
+        bad_prepare_for_war_desc:0 "Prepare for Conquest"
+        bad_prepare_for_war_modifier:0 "Diplomatic Expansion"
+        bad_bregenz_fortification_title:0 "Bregenz Fortification"
+        bad_bregenz_fortification_desc:0 "Bregenz Fortification"
+        bad_bregenz_fortification_modifier:0 "Swabian Forests"
+        bad_swiss_conquest_title:0 "Swiss Conquest"
+        bad_swiss_conquest_desc:0 "Swiss Conquest"
+        bad_swiss_conquest_modifier:0 "Swiss Mercenaries"
+    # Baden:
+     # Missions:
+        han_unite_the_welfs_modifier:0 "Expansionistic Welfs"
+        han_unite_the_welfs_tt:0 "If we own §YMagdeburg§! and §YHalle§! provinces, we get following:"
+    # Bytom:
+     # Missions:
+        sil_bottom_bytom_title:0 "Bottom Bytom"
+        sil_bottom_bytom_desc:0 "Bottom Bytom"
+        sil_develop_homeland_title:0 "Develop Homeland"
+        sil_develop_homeland_desc:0 "Develop Homeland"
+        sil_develop_homeland_modifier:0 "Hanys Recruitment"
+        sil_heir_of_polonia_bytom_title:0 "Heir of Polonia Bytom"
+        sil_heir_of_polonia_bytom_desc:0 "Heir of Polonia Bytom"
+        sil_heir_of_polonia_bytom_modifier:0 "Polonia Bytom"
+        sil_coal_kingdom_title:0 "Coal Kingdom"
+        sil_coal_kingdom_desc:0 "Coal Kingdom"
+        sil_coal_kingdom_modifier:0 "Coal Kingdom"
+    # Mazovia:
+     # Missions:
+        maz_conquer_and_prosper_title:0 "Conquer and Prosper"
+        maz_conquer_and_prosper_desc:0 "Conquer and Prosper"
+        maz_new_poland_title:0 "New Poland"
+        maz_new_poland_desc:0 "New Poland"
+        maz_new_poland_modifier:0 "Polska Gurom!"
+        maz_found_the_hussars_title:0 "Found the Hussars"
+        maz_found_the_hussars_desc:0 "Found the Hussars"
+    # Timbuktu:
+     # Missions:
+        tmb_defend_motherland_title:0 "Defend Motherland"
+        tmb_defend_motherland_desc:0 "Defend Motherland"
+        tmb_defend_motherland_modifier:0 "Defend Motherland"
+        tmb_warriors_of_sahel_title:0 "Tribes of Sahel"
+        tmb_warriors_of_sahel_desc:0 "Tribes of Sahel"
+        tmb_warriors_of_sahel_modifier:0 "Tribes of Sahel"
+    # Benin:
+     # Missions:
+        ben_expand_coast_title:0 "In the Benining"
+        ben_expand_coast_desc:0 "In the Benining"
+        ben_trade_kingdom_title:0 "Trading Kingdom"
+        ben_trade_kingdom_desc:0 "Trading Kingdom"
+        ben_trade_kingdom_modifier:0 "Trading Kingdom"
+        ben_trade_empire_title:0 "Trading Empire"
+        ben_trade_empire_desc:0 "Trading Empire"
+        ben_trade_empire_modifier:0 "Trading Empire"
+    # Darfur:
+     # Missions:
+        dar_secure_frontier_title:0 "Secure Frontier"
+        dar_secure_frontier_desc:0 "Secure Frontier"
+        dar_expand_frontier_title:0 "Expand Frontier"
+        dar_expand_frontier_desc:0 "Expand Frontier"
+    # Fezzan:
+     # Missions:
+        fza_kingdom_of_the_sand_title:0 "Kingdom of the Sand"
+        fza_kingdom_of_the_sand_desc:0 "Kingdom of the Sand"
+        fza_kingdom_of_the_sand_modifier:0 "Kingdom of the Sand"
+        dar_expand_frontier_desc:0 "Expand Frontier"
+    # Karaman:
+     # Missions:
+        kar_rise_of_beylik_title:0 "Rise of Beylik"
+        kar_rise_of_beylik_desc:0 "Rise of Beylik"
+    # Yarkand:
+     # Missions:
+        unite_the_tatars1_title:0 "Unite the Tatars"
+        unite_the_tatars1_desc:0 "The Tatar people have been disunited ever since the collapse of the Golden Horde. If Tatar power is ever to be restored, we must unite all of the Khans under our rule."
+        kas_defend_steppes_title:0 "Defend the Steppes"
+        kas_defend_steppes_desc:0 "Defend the Steppes"
+        kas_defend_steppes_modifier:0 "Defend the Steppes"
+    # Mysore:
+     # Missions:
+        mys_from_island_to_just_land_title:0 "From Island to Just Land"
+        mys_from_island_to_just_land_desc:0 "From Island to Just Land"
+        mys_vij_downfall_title:0 "Vijayanagar Downfall"
+        mys_vij_downfall_desc:0 "Vijayanagar Downfall"
+        mys_under_new_administration_title:0 "Under New Administration"
+        mys_under_new_administration_desc:0 "Under New Administration"
+        mys_under_new_administration_modifier:0 "Under New Administration"
+        mys_mega_fast_modifier:0 "Fast as Fuck..."
+    # Buryatia:
+     # Missions:
+        brt_warriors_wrath_title:0 "Warriors Wrath"
+        brt_warriors_wrath_desc:0 "Warriors Wrath"
+        brt_warriors_wrath_modifier:0 "Warriors Wrath"
+        brt_fast_expansion_title:0 "Fast Expansion"
+        brt_fast_expansion_desc:0 "Fast Expansion"
+        brt_fast_expansion_modifier:0 "Fast Expansion"
+        
+        
+    # Serbia:
+      # Serbian Empire:
+        SRE:0 "Serbian Empire"
+        SRE_ADJ:0 "Serbian"
+        sea_SRE_ideas:0 "Serbian Empire Ideas"
+        sea_SRE_ideas_start:0 "Serbian Empire Traditions"
+        sea_SRE_ideas_bonus:0 "Serbian Empire Ambition"
+        sea_code_of_laws:0 "Code of Laws"
+        sea_code_of_laws_desc:0 "A compendium of translations of Greek Byzantine books of law and great works of ancient philosophy to Serbian language was issued by Stephen Dusan on 21st of May 1349 in Skopje. It served as an inspiration for Serbia's very first Code of Laws. "
+        sea_bastion_of_orthodoxy:0 "Bastion of Orthodoxy"
+        sea_bastion_of_orthodoxy_desc:0 "With the Ottoman Empire looming on the eastern horizon and most of Balkans subdued before Baryaktar, Serbia shall serve as the last Balkanite bastion of Orthodoxy, the continuation of the Eastern Christian civilization."
+        sea_home_of_hussars:0 "Home of the Hussars"
+        sea_home_of_hussars_desc:0 "Although light cavalry formations as a concept were an old Roman idea, the first Balkan hussars - or gusars (corsairs or pirates) as they were known, appeared as auxiliary units of the Byzantine empire, recruited mainly from Byzantine held Serbia in the 10th and 11th century. Even after the Byzantine power dwindled, this tradition remained, and was further refined in the following centuries."
+        sea_alemannic_guard:0 "Alemannic Guard"
+        sea_alemannic_guard_desc:0 "Re-establish the Alemmanic Guard - the tradition of a standing army comprised mainly of German nobles and knights, second or third sons with little hope of inheritance, and nothing but a military career as their prospect in life."
+        sea_gold_mines:0 "Gold Mines"
+        sea_gold_mines_desc:0 "Invite the second wave of Saxon miners all the way from the Holy Roman Empire to settle in Serbia. We can re-open the ancient gold mines that had once made the small Serbian Despotate the richest country in Europe."
+        sea_mercenary_armies:0 "Mercenary Armies"
+        sea_mercenary_armies_desc:0 "Adopt the concept of a standing army comprised mostly of foreign mercenaries. This is quite unlike the age-old tradition of levied peasants, reducing the impact of war on the Serbian economy, especially agriculture."
+        sea_balkan_hajduks:0 "Balkan Hajduks"
+        sea_balkan_hajduks_desc:0 "Unlike their northern counterparts in Hungary, Hajduks in Serbia and neighboring Balkan lands have earned a more infamous reputation. These men lived the hard life of brigands, always in danger, always on the move: preying on poorly defended roads, ambushing Turkish tax collectors and merchants. However, during wars these experienced, tough men often filled the ranks of Serbian armies, providing excellent - if a bit undisciplined - infantry."

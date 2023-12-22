@@ -150,13 +150,31 @@ country_decisions = {
 				culture = angevin_breton
 			}
 			religion = catholic
-			owns_core_province = 184 # Orleans
+			if = {
+				limit = {
+					NOT = { tag = NRM }
+					NOT = { tag = BRI }
+				}
+				owns_core_province = 184 # Orleans
+			}
 			current_age = age_of_discovery
 		}
 		allow = {
-			owns_core_province = 183 # Paris
-			owns_core_province = 167 # Rouen
-			owns_core_province = 187 # Bar
+			if = {
+				limit = {
+					OR = {
+						tag = ORL
+						tag = NRM
+						tag = BRI
+					}
+				}
+				offensive_war_with = FRA
+			}
+			else = {
+				owns_core_province = 183 # Paris
+				owns_core_province = 167 # Rouen
+				owns_core_province = 187 # Bar
+			}
 			france_region = {
 				type = all
 				OR = {
@@ -170,6 +188,8 @@ country_decisions = {
 			if = {
 				limit = {
 					NOT = { tag = ORL }
+					NOT = { tag = NRM }
+					NOT = { tag = BRI }
 				}
 				OR = {
 					PAP = {

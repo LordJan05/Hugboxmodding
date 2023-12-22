@@ -80,6 +80,7 @@ country_event = {
 	major = yes
 
 	immediate = {
+		on_non_estate_disaster_end = yes
 		hidden_effect = {
 			set_country_flag = tur_had_ottoman_power_struggle
 			clr_country_flag = tur_has_ottoman_power_struggle
@@ -93,15 +94,15 @@ country_event = {
 			is_revolutionary = no
 		}
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = dip
+			type = dip
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = mil
+			type = mil
 			amount = 2
 		}
 		if = {
@@ -131,15 +132,15 @@ country_event = {
 			is_revolutionary = no
 		}
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = dip
+			type = dip
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = mil
+			type = mil
 			amount = 2
 		}
 		hidden_effect = {
@@ -169,15 +170,15 @@ country_event = {
 			is_revolutionary = yes
 		}
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = dip
+			type = dip
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = mil
+			type = mil
 			amount = 2
 		}
 		hidden_effect = {
@@ -562,6 +563,7 @@ country_event = {
 	major = yes
 	
 	immediate = {
+		on_non_estate_disaster_end = yes
 		hidden_effect = {
 			clr_country_flag = tur_has_janissary_coup
 			clr_country_flag = tur_disable_positive_janissary_privileges
@@ -1480,6 +1482,7 @@ country_event = {
 	major = yes
 
 	immediate = {
+		on_non_estate_disaster_end = yes
 		hidden_effect = {
 			set_country_flag = tur_had_eyalet_rebellion
 			clr_country_flag = tur_has_eyalet_rebellion
@@ -2387,6 +2390,7 @@ country_event = {
 	major = yes
 
 	immediate = {
+		on_non_estate_disaster_end = yes
 		hidden_effect = {
 			set_country_flag = tur_had_pasha_decadence
 			clr_country_flag = tur_has_pasha_decadence
@@ -3016,6 +3020,7 @@ country_event = {
 	major = yes
 
 	immediate = {
+		on_non_estate_disaster_end = yes
 		hidden_effect = {
 			set_country_flag = tur_had_plot_of_the_harem
 			clr_country_flag = tur_has_plot_of_the_harem
@@ -3179,7 +3184,7 @@ country_event = {
 	}
 }
 
-#The Height of the Reign of Women - written by Vasilis 'Big Boss' S.
+#The Height of the Reign of Women - written by Big Boss
 country_event = {
 	id = plot_of_the_harem_events.6
 	title = plot_of_the_harem_events.6.t
@@ -3284,15 +3289,15 @@ country_event = {
 			}
 		}
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = dip
+			type = dip
 			amount = 2
 		}
 		change_ruler_stat = {
-			stat = mil
+			type = mil
 			amount = 2
 		}
 		add_stability = -1

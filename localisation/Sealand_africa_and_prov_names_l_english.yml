@@ -1078,6 +1078,7 @@
      swz_right_1_desc:0 "Improved War Tax and Defence"
      swz_wtaxattr_modifier_tt:0 "[Root.GetName] gets '§YImproved War Tax and Defence§!' until the end of the game, giving the following effects:\nAttrition for Enemies: §G+2.00§!\nWar Taxes Cost: §G-50.0%§!"
      # Tier 2:
+     swz_left_2_tt:0 "Completed Mission §GTrading and Production§!"
      swz_left_2_middle_empty_title:0 "§GTrading and Production§!"
      swz_left_2_middle_empty_desc:0 "Efficient Trading and Production"
      swz_left_2_middle_title:0 "§GTrading and Production§!"
@@ -1086,6 +1087,7 @@
      swz_left_2_right_desc:0 "Efficient Trading and Production"
      swz_tradprod_modifier_tt:0 "[Root.GetName] gets '§YEfficient Trading and Production§!' until the end of the game, giving the following effects:\nTrade Efficiency: §G+12.5%§!\nProduction Efficiency: §G+12.5%§!"
      
+     swz_middle_2_tt:0 "Completed Mission §MNavy Traditions§!"
      swz_middle_2_left_empty_title:0 "§MNavy Traditions§!"
      swz_middle_2_left_empty_desc:0 "Navy Traditions"
      swz_middle_2_left_title:0 "§MNavy Traditions§!"
@@ -1094,6 +1096,7 @@
      swz_middle_2_right_desc:0 "Navy Traditions"
      swz_navtrad_modifier_tt:0 "[Root.GetName] gets '§YNavy Traditions§!' until the end of the game, giving the following effects:\nYearly Navy Tradition: §G+1.00§!\nYearly Navy Tradition Decay: §G-1.0%§!"
      
+     swz_right_2_tt:0 "Completed Mission §RTrained Soldiers§!"
      swz_right_2_left_empty_title:0 "§RTrained Soldiers§!"
      swz_right_2_left_empty_desc:0 "Trained Soldiers"
      swz_right_2_left_title:0 "§RTrained Soldiers§!"
@@ -1102,6 +1105,7 @@
      swz_right_2_middle_desc:0 "Trained Soldiers"
      swz_profdril_modifier_tt:0 "[Root.GetName] gets '§YTrained Soldiers§!' until the end of the game, giving the following effects:\nYearly Army Professionalism: §G+0.3%§!\nRegiment Drill Loss: §G-50.0%§!"
      # Tier 3:
+     swz_left_3_tt:0 "Completed Mission §GImproved Cultivations§!"
      swz_left_3_middle_1_empty_title:0 "§GImproved Cultivations§!"
      swz_left_3_middle_1_empty_desc:0 "Improved Cultivations"
      swz_left_3_middle_1_title:0 "§GImproved Cultivations§!"
@@ -1114,6 +1118,7 @@
      swz_left_3_right_2_desc:0 "Improved Cultivations"
      swz_deve_modifier_tt:0 "[Root.GetName] gets '§YImproved Cultivations§!' until the end of the game, giving the following effects:\nDevelopment Cost: §G-5.0%§!"
      
+     swz_middle_3_tt:0 "Completed Mission §MWind on Our Side§!"
      swz_middle_3_left_1_empty_title:0 "§MWind on Our Side§!"
      swz_middle_3_left_1_empty_desc:0 "Wind on Our Side"
      swz_middle_3_left_1_title:0 "§MWind on Our Side§!"
@@ -1126,6 +1131,7 @@
      swz_middle_3_right_2_desc:0 "Wind on Our Side"
      swz_navmora_modifier_tt:0 "[Root.GetName] gets '§YWind on Our Side§!' until the end of the game, giving the following effects:\nMorale of Navies: §G+10.0%§!"
      
+     swz_right_3_tt:0 "Completed Mission §RWar Propaganda§!"
      swz_right_3_left_1_empty_title:0 "§RWar Propaganda§!"
      swz_right_3_left_1_empty_desc:0 "War Propaganda"
      swz_right_3_left_1_title:0 "§RWar Propaganda§!"
@@ -1138,6 +1144,7 @@
      swz_right_3_middle_2_desc:0 "War Propaganda"
      swz_armmora_modifier_tt:0 "[Root.GetName] gets '§YWar Propaganda§!' until the end of the game, giving the following effects:\nMorale of Armies: §G+10.0%§!"
      # Tier 4:
+     swz_left_4_tt:0 "Completed Mission §GEfficient Administration§!"
      swz_left_4_middle_11_empty_title:0 "§GEfficient Administration§!"
      swz_left_4_middle_11_empty_desc:0 "Efficient Administration"
      swz_left_4_middle_11_title:0 "§GEfficient Administration§!"
@@ -1158,6 +1165,7 @@
      swz_left_4_right_22_desc:0 "Efficient Administration"
      swz_admeff_modifier_tt:0 "[Root.GetName] gets '§YEfficient Administration§!' until the end of the game, giving the following effects:\nAdministrative Efficiency: §G+5.0%§!"
      
+     swz_middle_4_tt:0 "Completed Mission §MThe Impress Service§!"
      swz_middle_4_left_11_empty_title:0 "§MThe Impress Service§!"
      swz_middle_4_left_11_empty_desc:0 "The Impress Service"
      swz_middle_4_left_11_title:0 "§MThe Impress Service§!"
@@ -1178,6 +1186,7 @@
      swz_middle_4_right_22_desc:0 "The Impress Service"
      swz_coast_modifier_tt:0 "[Root.GetName] gets '§YThe Impress Service§!' until the end of the game, giving the following effects:\nNational Sailors Modifier: §G+25.0%§!\nNaval Force Limit Modifier: §G+25.0%§!"
      
+     swz_right_4_tt:0 "Completed Mission §RNo Room for Death§!"
      swz_right_4_left_11_empty_title:0 "§RNo Room for Death§!"
      swz_right_4_left_11_empty_desc:0 "No Room for Death"
      swz_right_4_left_11_title:0 "§RNo Room for Death§!"

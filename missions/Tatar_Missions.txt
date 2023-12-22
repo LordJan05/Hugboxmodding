@@ -1,3 +1,88 @@
+tatar_missions_slot_yarkand_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KAS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	unite_the_tatars1 = {
+		icon = mission_cossack_cavalry
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				area = ferghana_area
+				area = naryn_area
+				area = kashgaria_area
+				area = hotan_area
+				area = shanshan_area
+				area = tarim_basin_area
+				area = yumen_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+				ferghana_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				naryn_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				kashgaria_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				hotan_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				shanshan_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				tarim_basin_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				yumen_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+		}
+		effect = {
+			hidden_effect = {
+				complete_mission = unite_the_tatars
+			}
+				central_asia_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				mongolia_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				tibet_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+	}
+}
 tatar_missions_1 = {
 	slot = 1
 	generic = no
@@ -12,11 +97,10 @@ tatar_missions_1 = {
 			#tag = GLH
 			tag = SIB
 			tag = BSH
-			tag = AST
+			#tag = AST
 			tag = QAS
 			tag = KZH
 			tag = CHG
-			tag = KAS
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -122,6 +206,31 @@ tatar_missions_1 = {
 			}
 		}
 	}
+}
+tatar_missions_11 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = GOL
+			tag = CRI
+			#tag = NOG
+			tag = KAZ
+			tag = SHY
+			#tag = GLH
+			tag = SIB
+			tag = BSH
+			#tag = AST
+			tag = QAS
+			tag = KZH
+			tag = CHG
+			tag = KAS
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	mission_conquer_caucausus = {
 		icon = mission_steppe_warriors
 		required_missions = { unite_the_tatars }
@@ -318,6 +427,33 @@ tatar_missions_1 = {
 	}
 }
 
+tatar_missions_slot_yarkand_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KAS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	kas_defend_steppes = {
+		icon = mission_chinese_general_riding
+		position = 1
+		trigger = {
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kas_defend_steppes_modifier
+				duration = 3650
+			}
+		}
+	}
+}
+
 tatar_missions_slot_2 = {
 	slot = 2
 	generic = no
@@ -332,7 +468,7 @@ tatar_missions_slot_2 = {
 			#tag = GLH
 			tag = SIB
 			tag = BSH
-			tag = AST
+			#tag = AST
 			tag = QAS
 			tag = KZH
 			tag = CHG
@@ -627,7 +763,7 @@ tatar_missions_2 = {
 			#tag = GLH
 			tag = SIB
 			tag = BSH
-			tag = AST
+			#tag = AST
 			tag = QAS
 			tag = KZH
 			tag = CHG

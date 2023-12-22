@@ -7,6 +7,7 @@ religion = shiite
 technology_group = muslim
 capital = 416 # Tabriz
 religious_school = ismaili_school
+set_estate_privilege = estate_nobles_emirs_of_baghdad
 #change_government_reform_progress = 200
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"

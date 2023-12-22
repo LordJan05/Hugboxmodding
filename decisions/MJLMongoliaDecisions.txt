@@ -3,7 +3,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = mjl_choros_leads_confederation }
-			tag = ZUN
+			ai = no
+			OR = {
+				tag = ZUN
+				tag = KAS
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

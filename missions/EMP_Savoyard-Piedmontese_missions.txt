@@ -89,6 +89,7 @@ emp_sav_missions_conquest = {
 					valid_for_personal_unions_trigger = yes
 					COR = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -103,6 +104,7 @@ emp_sav_missions_conquest = {
 					valid_for_personal_unions_trigger = yes
 					SAR = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -189,6 +191,7 @@ emp_sav_missions_conquest = {
 					valid_for_personal_unions_trigger = yes
 					SIC = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -255,6 +258,7 @@ emp_sav_missions_conquest = {
 					valid_for_personal_unions_trigger = yes
 					TTS = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -269,6 +273,7 @@ emp_sav_missions_conquest = {
 					valid_for_personal_unions_trigger = yes
 					NAP = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -816,6 +821,7 @@ emp_sav_missions_conquest_west = {
 					valid_for_personal_unions_trigger = yes
 					FRA = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {

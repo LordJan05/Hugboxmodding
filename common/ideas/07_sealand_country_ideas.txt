@@ -290,6 +290,7 @@ sea_LUS_ideas = { # Lusitanian aka Portuguese Empire
 	LUS_land_before_faith = {
 		colonists = 1
 		global_colonial_growth = 20
+		effect = { remove_temporary_colonist = yes }
 	}
 	LUS_the_bandeirantes = {
 		merchants = 2
@@ -809,6 +810,7 @@ sea_LEL_ideas = {
 	lel_far_from_home = {
 		colonists = 2
 		global_colonial_growth = 36.9
+		effect = { remove_temporary_colonist = yes }
 	}
 	lel_warrior_society = {
 		infantry_power = 0.25
@@ -855,6 +857,7 @@ sea_VIN_ideas = {
 	vin_pioneer_spirit = {
 		colonists = 2
 		global_colonial_growth = 33
+		effect = { remove_temporary_colonist = yes }
 	}
 	vin_nor_shipbuilding = {
 		naval_maintenance_modifier = -0.15
@@ -903,6 +906,7 @@ sea_KEM_ideas = {
 	kem_children_of_the_gods = {
 		colonists = 2
 		global_colonial_growth = 35
+		effect = { remove_temporary_colonist = yes }
 	}
 	kem_thriving_agriculture = {
 		global_trade_goods_size_modifier = 0.1
@@ -1012,5 +1016,49 @@ sea_RHI_ideas = {
 	}
 	rhi_wes_cities_of_the_rhineland = {
 		global_prov_trade_power_modifier = 0.15
+	}
+}
+
+# MINORS:
+# Serbian Empire:
+sea_SRE_ideas = {
+	start = {
+		manpower_recovery_speed = 0.2
+		reinforce_speed = 0.25
+	}
+	
+	bonus = {
+		infantry_power = 0.1
+	}
+	
+	trigger = {
+		tag = SRE
+	}
+	free = yes
+	
+	sea_code_of_laws = {
+		global_unrest = -1
+		discipline = 0.05
+	}
+	sea_bastion_of_orthodoxy = {
+		stability_cost_modifier = -0.1
+	}
+	sea_home_of_hussars = {
+		special_unit_forcelimit = 0.1
+		can_recruit_hussars = yes
+	}	
+	sea_alemannic_guard = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.1
+	}
+	sea_gold_mines = {
+		production_efficiency = 0.1
+	}
+	sea_mercenary_armies = {
+		merc_maintenance_modifier = -0.1
+		mercenary_discipline = 0.05
+	}	
+	sea_balkan_hajduks = {
+		land_morale = 0.10
 	}
 }

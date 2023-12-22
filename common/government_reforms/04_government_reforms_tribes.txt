@@ -168,6 +168,7 @@ polynesian_tribe = {
 	lock_level_when_selected = yes
 	modifiers = {
 		global_manpower_modifier = 0.2
+		global_sailors_modifier = 0.2
 	}
 	ai = {
 		factor = 1
@@ -485,6 +486,7 @@ martial_society_reform = {
 	icon = "tribal_martial_society"
 	modifiers = {
 		global_manpower_modifier = 0.2
+		global_sailors_modifier = 0.2
 	}
 	ai = {
 		factor = 10
@@ -1007,7 +1009,11 @@ tribe_tribal_unity = {
 	icon = "fist_in_air"
 	allow_normal_conversion = yes
 	potential = {
-		has_reform = tribal_federation
+		OR = {
+			has_reform = tribal_federation
+			has_reform = turkoman_ottoman_institutions
+			has_reform = seljuk_empire_government
+		}
 		has_dlc = "Cradle of Civilization"
 	}
 	modifiers = {

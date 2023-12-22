@@ -105,6 +105,13 @@ gc_morocco_1 = {
 			}
 		}		
 		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = can_colonize_the_strait } }
+				custom_tooltip = can_colonize_the_strait_tt
+				hidden_effect = {
+					set_country_flag = can_colonize_the_strait
+				}
+			}
 			#if = {
 			#	limit = {
 			#		1127 = {

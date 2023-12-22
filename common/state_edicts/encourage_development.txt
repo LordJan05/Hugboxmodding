@@ -11,6 +11,8 @@ edict_encourage_development = {
 		}
 	}
 	
+	years_to_notify = 2 #specifies how many years an edict needs to be active to show an alert
+	
 	modifier = {
 		local_development_cost = -0.1
 	}
