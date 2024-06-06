@@ -279,8 +279,13 @@ country_decisions = {
 			has_dlc = "The Cossacks"
 			NOT = { is_emperor_of_china = yes } 
 			NOT = { is_revolutionary = yes }
+			is_free_or_tributary_trigger = yes
+			NOT = { is_year = 1449 }
 		}
 		allow = {
+			NOT = { is_year = 1449 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 0
 			NOT = { government = dictatorship }
 			NOT = { has_reform = presidential_despot_reform }

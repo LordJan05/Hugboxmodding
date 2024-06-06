@@ -19,6 +19,7 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = PAP }
 			NOT = { tag = TUR }
+			NOT = { tag = OSM }
 			NOT = { tag = BYZ }
 			NOT = { exists = GLH }
 			culture_group = tartar
@@ -59,18 +60,18 @@ country_decisions = {
 		allow = {
 			NOT = { exists = GLH }
 			has_reform = steppe_horde
-			owns_core_province = 1082 #Kazan
-			owns_core_province = 464 #Astrakhan
-			owns_core_province = 465 #Nogai
-			owns_core_province = 466 #Sarai
-			owns_core_province = 476 #Kypchak
-			owns_core_province = 1075 #Chimgi-Tura
-			owns_core_province = 1082 #Kazan
-			owns_core_province = 463 #Circassia
-			owns_core_province = 303 #Saratov
-			owns_core_province = 2420 #Agyidel
-			owns_core_province = 2352 #Alty-Kuduk
-			owns_core_province = 288 #Lower Don
+			owns_or_non_sovereign_subject_of = 1082 #Kazan
+			owns_or_non_sovereign_subject_of = 464 #Astrakhan
+			owns_or_non_sovereign_subject_of = 465 #Nogai
+			owns_or_non_sovereign_subject_of = 466 #Sarai
+			owns_or_non_sovereign_subject_of = 476 #Kypchak
+			owns_or_non_sovereign_subject_of = 1075 #Chimgi-Tura
+			owns_or_non_sovereign_subject_of = 1082 #Kazan
+			owns_or_non_sovereign_subject_of = 463 #Circassia
+			owns_or_non_sovereign_subject_of = 303 #Saratov
+			owns_or_non_sovereign_subject_of = 2420 #Agyidel
+			owns_or_non_sovereign_subject_of = 2352 #Alty-Kuduk
+			owns_or_non_sovereign_subject_of = 288 #Lower Don
 			num_of_cities = 30
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
@@ -78,7 +79,22 @@ country_decisions = {
 		effect = {
 			change_tag = GLH
 			on_change_tag_effect = yes
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_dlc = "Winds of Change"
+							NOT = {
+								was_tatar_nation = yes
+								was_mongol_nation = yes
+								was_moghulistan_nation = yes
+							}
+						}
+						NOT = { has_dlc = "Winds of Change" }
+					}
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }

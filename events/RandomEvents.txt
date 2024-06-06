@@ -5482,6 +5482,7 @@ country_event = {
 			}
 			add_republican_tradition = 5
 			add_corruption = -2
+			add_years_of_income = -0.3
 		}
 		if = {
 			limit = {
@@ -7895,6 +7896,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = warriors_do_not_read_books
 		}
+		NOT = { has_country_flag = warriors_can_read_books }
 	}
 	
 	mean_time_to_happen = {
@@ -10283,6 +10285,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -10314,6 +10317,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -10423,6 +10427,7 @@ country_event = {
 						culture = normand
 						culture = gascon
 						culture = burgundian
+						culture = anglois
 						culture = angevin_cosmopolitan_french
 						culture = angevin_gascon
 						culture = angevin_normand
@@ -10452,6 +10457,7 @@ country_event = {
 						culture = normand
 						culture = gascon
 						culture = burgundian
+						culture = anglois
 						culture = angevin_cosmopolitan_french
 						culture = angevin_gascon
 						culture = angevin_normand
@@ -10608,6 +10614,7 @@ country_event = {
 							culture = normand
 							culture = gascon
 							culture = burgundian
+							culture = anglois
 							culture = angevin_cosmopolitan_french
 							culture = angevin_gascon
 							culture = angevin_normand
@@ -10627,6 +10634,7 @@ country_event = {
 							culture = normand
 							culture = gascon
 							culture = burgundian
+							culture = anglois
 							culture = angevin_cosmopolitan_french
 							culture = angevin_gascon
 							culture = angevin_normand
@@ -10658,6 +10666,7 @@ country_event = {
 							culture = normand
 							culture = gascon
 							culture = burgundian
+							culture = anglois
 							culture = angevin_cosmopolitan_french
 							culture = angevin_gascon
 							culture = angevin_normand
@@ -10676,6 +10685,7 @@ country_event = {
 							culture = normand
 							culture = gascon
 							culture = burgundian
+							culture = anglois
 							culture = angevin_cosmopolitan_french
 							culture = angevin_gascon
 							culture = angevin_normand
@@ -10945,6 +10955,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -10970,6 +10981,7 @@ country_event = {
 						culture = normand
 						culture = gascon
 						culture = burgundian
+						culture = anglois
 						culture = angevin_cosmopolitan_french
 						culture = angevin_gascon
 						culture = angevin_normand
@@ -11002,6 +11014,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -11038,6 +11051,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -11093,6 +11107,7 @@ country_event = {
 					culture = normand
 					culture = gascon
 					culture = burgundian
+					culture = anglois
 					culture = angevin_cosmopolitan_french
 					culture = angevin_gascon
 					culture = angevin_normand
@@ -12759,10 +12774,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			grain = 1
-			grain_livestock = 1
-		}
+		grain = 1
 	}
 
 	mean_time_to_happen = {
@@ -13052,8 +13064,43 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA6428"
-		add_years_of_income = 1.0
-		add_inflation = 1
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+				any_owned_province = {
+					has_great_project = {
+						type = golden_kremnica
+						tier = 2
+					}
+				}
+				NOT = {
+					any_owned_province = {
+						has_great_project = {
+							type = golden_kremnica
+							tier = 3
+						}
+					}
+				}
+			}
+			add_years_of_income = 1.5
+			add_inflation = 1
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = golden_kremnica
+						tier = 3
+					}
+				}
+			}
+			add_years_of_income = 2
+			add_inflation = 1
+		}
+		else = {
+			add_years_of_income = 1.0
+			add_inflation = 1
+		}
 	}
 }
 
@@ -13415,16 +13462,10 @@ country_event = {
 	goto = plague_province
 
 	trigger = {
-		OR = {
-			grain = 1
-			grain_livestock = 1
-		}
+		grain = 1
 		num_of_cities = 2
 		any_owned_province = {
-			OR = {
-				trade_goods = grain
-				trade_goods = grain_livestock
-			}
+			trade_goods = grain
 			is_capital = no
 		}
 	}
@@ -13433,10 +13474,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						trade_goods = grain
-						trade_goods = grain_livestock
-					}
+					trade_goods = grain
 					is_capital = no
 				}
 				save_event_target_as = plague_province
@@ -13484,10 +13522,7 @@ country_event = {
 	goto = province_in_question
 
 	trigger = {
-		OR = {
-			grain = 1
-			grain_livestock = 1
-		}
+		grain = 1
 	}
 	
 	
@@ -13501,10 +13536,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						trade_goods = grain
-						trade_goods = grain_livestock
-					}
+					trade_goods = grain
 				}		
 				save_event_target_as = province_in_question
 			}

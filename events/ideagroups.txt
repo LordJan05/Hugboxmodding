@@ -5985,10 +5985,7 @@ country_event = {
 	trigger = {
 		has_idea_group = quantity_ideas
 		NOT = { has_country_modifier = "horse_population_boom" }
-		OR = {
-			livestock = 1
-			grain_livestock = 1
-		}
+		livestock = 1
 	}
 	
 	mean_time_to_happen = {
@@ -7204,7 +7201,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = influence_ideas
+		has_idea_group = spy_ideas
 		NOT = { has_country_modifier = "just_causes" }
 	}
 
@@ -9792,6 +9789,7 @@ country_event = {
 						valid_for_personal_unions_trigger = yes
 						event_target:noble_origin_country = {
 							valid_for_personal_unions_trigger = yes
+							ai = yes
 						}
 					}
 					set_country_flag = noble_man_exiled_dynasty_member
@@ -9803,6 +9801,7 @@ country_event = {
 							NOT = {
 								event_target:noble_origin_country = {
 									valid_for_personal_unions_trigger = yes
+									ai = yes
 								}
 							}
 						}

@@ -17,6 +17,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			NOT = { tag = TUR }
+			NOT = { tag = OSM }
 			NOT = { tag = ARB }
 			NOT = { exists = EGY }
 			NOT = { has_reform = celestial_empire }
@@ -104,7 +105,10 @@ country_decisions = {
 				add_permanent_claim = EGY
 			}
 			set_country_flag = formed_egypt_flag
-			swap_free_idea_group = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			swap_non_generic_missions = yes
 		}
 		ai_will_do = {
@@ -126,6 +130,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			NOT = { tag = TUR }
+			NOT = { tag = OSM }
 			NOT = { tag = ARB }
 			NOT = { tag = EGY }
 			NOT = { tag = ABA }
@@ -212,7 +217,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				adm_tech = 20
+				adm_tech = 10
 			}
 		}
 	}

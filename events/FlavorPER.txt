@@ -1581,7 +1581,7 @@ country_event = {
 	major = yes
 	option = { 
 		name = flavor_tur.252.a 
-		add_prestige = 100
+		add_prestige_or_monarch_power = { amount = 100 }
 		change_price = {
 			trade_goods = silk
 			key = PERSIAN_SILK
@@ -2217,7 +2217,6 @@ country_event = {
 		add_accepted_culture_or_dip_power = {
 			culture = georgian
 			free = yes
-			new_line = yes
 		}
 		add_accepted_culture_or_dip_power = {
 			culture = armenian

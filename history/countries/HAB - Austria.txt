@@ -23,6 +23,7 @@ historical_rival = SWI
 historical_rival = DAN
 
 national_focus = ADM
+set_estate_privilege = estate_nobles_habsburg_disunity
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
@@ -148,9 +149,9 @@ add_accepted_culture = slovene
 		birth_date = 1459.3.22
 		death_date = 1519.1.12
 		claim = 95
-		adm = 2
-		dip = 4
-		mil = 2
+		adm = 5
+		dip = 5
+		mil = 5
 	}
 }
 
@@ -171,9 +172,9 @@ add_accepted_culture = slovene
 		name = "Maximilian I"
 		dynasty = "von Habsburg"
 		birth_date = 1459.3.22
-		adm = 2
-		dip = 4
-		mil = 2
+		adm = 5
+		dip = 5
+		mil = 5
 	}
 }
 

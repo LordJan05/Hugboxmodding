@@ -12,6 +12,10 @@ dan_secure_baltic_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
@@ -406,6 +410,10 @@ dan_north_america_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
@@ -460,7 +468,10 @@ dan_north_america_mission_slot = {
 			}
 			if = {
 				limit = {
-					tag = KLU
+					OR = {
+						tag = KLU
+						tag = NSE
+					}
 				}
 				colonial_canada = {
 					limit = {
@@ -488,6 +499,10 @@ dan_rnw_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -535,6 +550,10 @@ dan_trade_and_colonial_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -599,12 +618,7 @@ dan_trade_and_colonial_mission_slot = {
 			owns_or_non_sovereign_subject_of = 35
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = estonian dip_reward = yes }
-			add_country_modifier = {
-				name = dan_estonian_culture_accepted
-				duration = -1
-				desc = dan_estonian_culture_accepted_tt
-			}
+			add_accepted_culture_or_dip_power = { culture = estonian free = yes}
 			custom_tooltip = dan_livonian_order_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -892,6 +906,10 @@ dan_caribbeans_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
@@ -943,7 +961,10 @@ dan_caribbeans_mission_slot = {
 			}
 			if = {
 				limit = {
-					tag = KLU
+					OR = {
+						tag = KLU
+						tag = NSE
+					}
 				}
 				colonial_louisiana = {
 					limit = {
@@ -979,6 +1000,10 @@ dan_norway_holstein_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -1527,7 +1552,12 @@ dan_norway_holstein_mission_slot = {
 				}
 			}
 			if = {
-				limit = { tag = KLU }
+				limit = { 
+					OR = {
+						tag = KLU
+						tag = NSE
+					}
+				}
 				deccan_region = {
 					limit = {
 						NOT = { is_core = ROOT } 
@@ -1560,6 +1590,10 @@ dan_sweden_and_great_power_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -2112,7 +2146,12 @@ dan_sweden_and_great_power_mission_slot = {
 				}
 			}
 			if = {
-				limit = { tag = KLU }
+				limit = {
+					OR = {
+						tag = KLU
+						tag = NSE
+					}
+				}
 				bengal_region = {
 					limit = {
 						NOT = { is_core = ROOT } 
@@ -2145,6 +2184,10 @@ dan_england_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -2586,6 +2629,10 @@ dan_religion_start_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
@@ -2689,6 +2736,10 @@ dan_religion_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		NOT = { has_country_flag = sca_unlock_catholic_missions }
@@ -3114,6 +3165,10 @@ dan_catholic_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_country_flag = sca_unlock_catholic_missions
 		has_dlc = "Lions of the North"
@@ -3323,6 +3378,10 @@ dan_protestant_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_country_flag = sca_unlock_protestant_missions
 		has_dlc = "Lions of the North"
@@ -3529,6 +3588,10 @@ dan_humanist_mission_slot = {
 				was_tag = DAN
 				tag = KLU
 			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
 		}
 		has_country_flag = sca_unlock_humanist_missions
 		has_dlc = "Lions of the North"
@@ -3634,6 +3697,10 @@ dan_norse_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_country_flag = sca_unlock_norse_missions
@@ -3755,7 +3822,12 @@ dan_norse_mission_slot = {
 				duration = -1
 			}
 			if = {
-				limit = { tag = KLU }
+				limit = { 
+					OR = {
+						tag = KLU
+						tag = NSE
+					}
+				}
 				flanders_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -3824,6 +3896,10 @@ dan_merc_mission_slot = {
 			AND = {
 				was_tag = DAN
 				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
 			}
 		}
 		has_dlc = "Lions of the North"
@@ -3912,8 +3988,16 @@ dan_sca_india_mission_slot_3 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4006,8 +4090,16 @@ dan_sca_india_mission_slot_4 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4075,8 +4167,16 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
@@ -4221,8 +4321,16 @@ dan_sca_colonize_north_america_mission_slot_2 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
@@ -4265,8 +4373,16 @@ dan_sca_conquest_slot_2 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4408,6 +4524,10 @@ dan_sca_conquest_slot_2 = {
 					}
 				}
 				add_dip_power = 100
+				add_country_modifier = {
+					name = "swe_germanic_alliance"
+					duration = 9125
+				}
 				mecklenburg_area = {
 					limit = {
 						is_permanent_claim = ROOT
@@ -4443,8 +4563,16 @@ dan_sca_conquest_slot_3 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4493,7 +4621,7 @@ dan_sca_conquest_slot_3 = {
 			}
 			add_accepted_culture_or_dip_power = {
 				culture = prussian
-				dip_reward = yes
+				value = 100
 			}
 		}
 	}
@@ -4562,8 +4690,16 @@ dan_sca_conquest_slot_4 = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4625,8 +4761,16 @@ dan_sca_merc_mission_slot = {
 	}
 	potential = {
 		always = no # Turned off
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -4670,8 +4814,16 @@ dan_sca_internal_development = {
 		has_dlc = "Lions of the North"
 	}
 	potential = {
-		was_tag = DAN
-		tag = KLU
+		OR = {
+			AND = {
+				was_tag = DAN
+				tag = KLU
+			}
+			AND = {
+				was_tag = DAN
+				tag = NSE
+			}
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}

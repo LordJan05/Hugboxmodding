@@ -279,7 +279,7 @@ great_moravian_principality = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			tag = GMV
+			tag = GMA
 			have_had_reform = great_moravian_principality
 		}
 	}
@@ -293,6 +293,8 @@ great_moravian_principality = {
 		yearly_absolutism = 0.5
 		global_autonomy = -0.05
 		governing_capacity = 250
+		artillery_fire = 0.25
+		artillery_shock = 0.25
 	}
 
 	conditional = {
@@ -306,11 +308,15 @@ great_moravian_principality = {
 				cavalry_power = 0.2
 				cavalry_cost = -0.1
 				cav_to_inf_ratio = 0.5
+				cavalry_fire = 0.25
+				cavalry_shock = 0.25
 			}
 
 			monarchists = {
 				infantry_power = 0.1
 				infantry_cost = -0.1
+				infantry_fire = 0.25
+				infantry_shock = 0.25
 			}
 		}
 	}
@@ -642,7 +648,10 @@ moroccan_sultanate_reform = {
 	}
 	conditional = {
 		allow = {
-			has_dlc = "Cradle of Civilization"
+			OR = {
+				has_dlc = "Cradle of Civilization"
+				has_dlc = "Winds of Change"
+			}
 		}
 		government_abilities = {
 			moroccan_iqta_mechanic
@@ -858,35 +867,6 @@ atlantis_government = {
 
 	ai = {
 		factor = 1000
-	}
-}
-
-# Aztecs
-aztecs_monarchy_reform = {
-	icon = "sea_aztecs_monarchy"
-	allow_normal_conversion = yes
-	potential = {
-		tag = AZT
-	}
-	trigger = {
-		tag = AZT
-	}
-	valid_for_nation_designer = no
-	modifiers = {
-		max_absolutism = 10
-		vassal_income = 0.5
-		vassal_forcelimit_bonus = 0.5
-		can_fabricate_for_vassals = yes
-		can_transfer_vassal_wargoal = yes
-	}
-	custom_attributes = {
-		aztecs_reform_aztec_warriors = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
 	}
 }
 

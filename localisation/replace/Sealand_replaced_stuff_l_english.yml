@@ -47,6 +47,8 @@
   regulate_the_monastaries_title:0 "£sea_vajrayana_logo£Regulate the Monasteries"
   adopt_vajrayana_title:0 "£sea_vajrayana_logo£Adopt Vajrayana Buddhism"
   invite_lama_title:0 "£sea_vajrayana_logo£Invite a Lama to Settle in Our Country"
+ # core:
+  ABANDON_CORE_COST:0 "Abandoning a core may restore your relation with the target country. It will cost you no prestige."
  # cossacks:
   tengri_expel_the_khojas_title:0 "£sea_tengri_logo£Expel the Khojas"
   curtail_estate_noble_title:0 "£sea_estate_logo£Curtail the Nobility"
@@ -58,11 +60,7 @@
   curtail_estate_dhimmi_title:0 "£sea_estate_logo£Curtail the Dhimmi"
   curtail_estate_jains_title:0 "£sea_estate_logo£Curtail the Jains"
   gain_access_to_estate_dhimmi_title:0 "£sea_estate_logo£Establish the Dhimmi Estate"
- # core:
-  ABANDON_CORE_COST:0 "Abandoning a core may restore your relation with the target country. It will cost you no prestige."
  # countries:
-  CHG:0 "Moghulistan"
-  CHG_ADJ:0 "Moghulistani"
   ZUN:1 "Choros"
   ZUN_ADJ:1 "Choros"
   PHA:1 "NO U"
@@ -217,9 +215,7 @@
   brahmin_hindu_deity_decision_title:0 "£sea_estate_logo£Choose Personal Deity Again"
  # emperor_missions:
   emp_lan_reform_the_monte_title:0 "Reform the Monke"
-  emp_hun_bohemian_crown_effect_tooltip:0 "If we complete this mission by vassalizing or enforcing a Personal Union on §YBohemia§!:"
   emp_bur_league_of_public_weal_trigger_tooltip:1 " French vassals on mainland France:\n         Opinion of §Y[Root.GetName]§! is at least §Y120§!."
-  emp_hun_bohemian_crown_effect_tooltip:0 "If we complete this mission by enforcing a Personal Union or vassalization on §YBohemia§!:"
  # EU4:
    #REGCAT_banner:0 "Mercenary"
    #BANNERS_DESC:0 "Banner Mercs!"
@@ -334,6 +330,7 @@
   sea_edict_supply_edict:0 "Supply Edict"
   edict_attrition_edict:0 "Attrition Edict"
   sea_edict_attrition_edict:0 "Attrition Edict"
+  INTI_REFORM_TOOLTIP:0 "Are you sure you want to unlock §Y$NAME$§!? Doing so will cost §Y75§! Authority, lower your stability by §R1§! and plunge the nation into civil war."
  # flavor_events:
   flavor_brapru.15.a.tt:1 "§ROffer 25§§!¤ for the provinces of §YNeumark§! and §YDramburg§!."
   disband_the_janissaries_title:1 "£sea_janissary£ Force Janissaries to Undergo Yoklama"
@@ -913,3 +910,14 @@
   HAVE_AT_LEAST_STRELTSY_THAN:1 "Have at least §Y$VALUE$§! Special Mercenaries.\n"
   STRELTSY_REGIMENT_TYPE:0 "Special Mercenary"
   ADD_STRELTSY_SUB_UNIT_EFFECT:0 "Get '§GSpecial Mercenary§!' $UNIT$ in §Y$WHERE$§!."
+ # winds_of_change:
+ GER_early_coal:0 "§Y[This.GetName]§! will be able to get §YCoal§! with §YGlobal Trade§! Institution and §Y20§! Administrative Technology."
+ INC_further_reforms_will_take_less_stability:0 "Further §YReligious Reforms§! will only remove §R-50§! Authority."
+ hun_emperor_bohemia_pu_tt_yes:1 "£yes£ If we complete this mission by either vassalizing or enforcing a §YPersonal Union§! with @BOH §YBohemia§!, they are an §YElector§!, and we meet the requirements to join the §YHoly Roman Empire§!, we will also receive:"
+ hun_emperor_bohemia_pu_tt_no:1 "£no£ If we complete this mission by either vassalizing or enforcing a §YPersonal Union§! with @BOH §YBohemia§!, they are an §YElector§!, and we meet the requirements to join the §YHoly Roman Empire§!, we will also receive:"
+ form_austria_hungary_title:0 "@AUH Form the Austro-Hungarian Empire"
+ hungarian_nation_title:0 "@HUN Form Hungarian Nation"
+ great_moravia_title:0 "@GMA Restore Great Moravia"
+ hordes_restore_yuan_title:0 "@YUA Restore Great Yuan"
+ FEO_UNLOCK_RUSSIAN_MERCENARY_GUARD:0 "We will unlock the Tier 5 §YRussian Mercenary Guard§! Government Reform, which will allow us to recruit §YSpecial Mercenary§!"
+ FEO_STRELTSY_BUFF_TT:0 "Our §YSpecial Mercenary§! Regiments will get the following bonuses:\n   Regiment Cost: §R+20.0%§!\n   Discipline: §G+5.00%§!\n   Land Fire Damage: §G+10.0%§!\n   Fire Damage Received: §G-10.0%§!\n   Shock Damage Received: §G-10.0%§!"

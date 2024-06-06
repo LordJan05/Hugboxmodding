@@ -271,7 +271,6 @@ country_event = {
 					is_state = yes
 					OR = {
 						trade_goods = livestock
-						trade_goods = grain_livestock
 						base_manpower = 3
 					}
 					NOT = { has_province_modifier = favored_clan }

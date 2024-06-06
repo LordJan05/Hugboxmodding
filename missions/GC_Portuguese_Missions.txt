@@ -1893,13 +1893,32 @@ gc_por_5_bb = {
 		position = 7
 		provinces_to_highlight = {
 			is_capital = yes 
-			owner = { tag = TUR }
+			OR = {
+				owner = { tag = TUR }
+				owner = { tag = OSM }
+			}
 		}
 		trigger = {
-			OR = {
-				navy_size = TUR 
-				total_development = TUR 
-				TUR = { exists = no }
+			if = {
+				limit = {
+					exists = TUR
+				}
+				OR = {
+					navy_size = TUR 
+					total_development = TUR 
+					TUR = { exists = no }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = TUR }
+					exists = OSM
+				}
+				OR = {
+					navy_size = OSM
+					total_development = OSM
+					TUR = { exists = no }
+				}
 			}
 			OR = {
 				army_tradition = 70

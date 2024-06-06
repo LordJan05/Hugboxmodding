@@ -59,7 +59,7 @@ country_event = {
 				prestige = 50
 			}			
 		}
-		add_army_tradition = -5		
+		add_army_tradition = -5
 	}	
 }
  
@@ -337,10 +337,7 @@ country_event = {
 			}
 		}
 		any_owned_province = { 
-			OR = {
-				trade_goods = livestock
-				trade_goods = grain_livestock
-			}
+			trade_goods = livestock
 			any_neighbor_province = {  
 				NOT = { owned_by = ROOT }
 			}
@@ -355,10 +352,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						trade_goods = livestock
-						trade_goods = grain_livestock
-					}
+					trade_goods = livestock
 					any_neighbor_province = {  
 						NOT = { owned_by = ROOT }
 					}
@@ -484,6 +478,14 @@ country_event = {
 	option = {
 		name = "randomeventsstapehordes.8.EVTOPTA"
 		ai_chance = { factor = 100 }
+		
+		if = {
+			limit = {
+				has_country_flag = horde_wargames_buff_flag
+			}
+			add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+		}
+		
 		random_list = {
 			25 = {
 				country_event = { id = randomeventsstapehordes.9 days = 3 random = 2 }
@@ -498,9 +500,17 @@ country_event = {
 				country_event = { id = randomeventsstapehordes.12 days = 3 random = 2 }
 			}
 			15 = {
+				modifier = {
+					factor = 2
+					has_country_flag = horde_wargames_buff_flag
+				}
 				country_event = { id = randomeventsstapehordes.15 days = 3 random = 2 }
 			}
 			5 = {
+				modifier = {
+					factor = 2
+					has_country_flag = horde_wargames_buff_flag
+				}
 				country_event = { id = randomeventsstapehordes.16 days = 3 random = 2 }
 			}			
 		}		
@@ -777,7 +787,15 @@ country_event = {
 		name = "randomeventsstapehordes.15.EVTOPTA"
 		ai_chance = { factor = 50 }
 		add_prestige = 2
-		create_general = { tradition = 50 }
+		if = {
+			limit = {
+				has_country_flag = horde_wargames_buff_flag
+			}
+			create_general_with_pips = { tradition = 50 add_shock = 1 add_siege = 1 }
+		}
+		else = {
+			create_general = { tradition = 50 }
+		}
 		if = {
 			limit = {
 				has_estate = estate_nomadic_tribes
@@ -858,7 +876,15 @@ country_event = {
 			}
 		}
 		add_prestige = 5
-		create_general = { tradition = 75 }
+		if = {
+			limit = {
+				has_country_flag = horde_wargames_buff_flag
+			}
+			create_general_with_pips = { tradition = 75 add_shock = 1 add_siege = 1 }
+		}
+		else = {
+			create_general = { tradition = 75 }
+		}
 		if = {
 			limit = {
 				has_estate = estate_nomadic_tribes

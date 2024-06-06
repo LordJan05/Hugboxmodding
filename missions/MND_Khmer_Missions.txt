@@ -266,10 +266,7 @@ mnd_khmer_3 = {
 		required_missions = { mnd_khm_rebuild }
 		provinces_to_highlight = {
 			region = indo_china_region
-			OR = {
-				trade_goods = grain
-				trade_goods = grain_livestock
-			}
+			trade_goods = grain
 			OR = {
 				NOT = { has_building = farm_estate }
 				NOT = { owned_by = ROOT }
@@ -280,10 +277,7 @@ mnd_khmer_3 = {
 				value = 10
 				region = indo_china_region
 				has_building = farm_estate
-				OR = {
-					trade_goods = grain
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain
 			}
 		}
 		effect = {
@@ -305,10 +299,7 @@ mnd_khmer_3 = {
 					limit = {
 						region = indo_china_region
 						has_building = farm_estate
-						OR = {
-							trade_goods = grain
-							trade_goods = grain_livestock
-						}
+						trade_goods = grain
 					}
 					add_province_modifier = {
 						name = grain_production_improved

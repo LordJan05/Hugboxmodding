@@ -2306,6 +2306,7 @@ coal = {
 		}
 		if = {
 			limit = {
+				NOT = { has_province_flag = GER_specific_coal }
 				owner = {
 					NOT = { has_country_flag = earlier_coal_available }
 				}
@@ -2315,6 +2316,19 @@ coal = {
 				value = 100
 			}
 			owner = { has_institution = manufactories }
+		}
+		else_if = {
+			limit = {
+				has_province_flag = GER_specific_coal
+			}
+			provincial_institution_progress = {
+				which = global_trade
+				value = 100
+			}
+			owner = {
+				has_institution = global_trade
+				adm_tech = 20
+			}
 		}
 		else = {
 			provincial_institution_progress = {

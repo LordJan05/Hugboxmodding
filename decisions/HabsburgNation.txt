@@ -21,8 +21,7 @@ country_decisions = {
 			}
 			NOT = { tag = HAB }
 			NOT = { tag = AUE }
-			NOT = { tag = AHE }
-			NOT = { tag = HAE }
+			NOT = { tag = AUH }
 			OR = {
 				NOT = { exists = HAB }
 				ai = no

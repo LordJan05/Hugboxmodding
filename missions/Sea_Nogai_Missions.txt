@@ -8,6 +8,7 @@ sea_nogai_missions_1 = {
 			tag = GLH
 			tag = AST
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -307,6 +308,7 @@ sea_nogai_missions_2 = {
 			tag = GLH
 			tag = AST
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -654,6 +656,7 @@ sea_nogai_missions_3 = {
 			tag = GLH
 			tag = AST
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -920,6 +923,7 @@ sea_nogai_missions_4 = {
 			tag = GLH
 			tag = AST
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1198,6 +1202,7 @@ sea_nogai_missions_5 = {
 			tag = GLH
 			tag = AST
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1355,10 +1360,7 @@ sea_nogai_missions_5 = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { nog_industrialize_the_steppes }
 		provinces_to_highlight = {
-			OR = {
-				trade_goods = livestock
-				trade_goods = grain_livestock
-			}
+			trade_goods = livestock
 			has_terrain = steppe
 			OR = {
 				NOT = { has_manpower_building_trigger = yes }
@@ -1368,10 +1370,7 @@ sea_nogai_missions_5 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				has_terrain = steppe
-				OR = {
-					trade_goods = livestock
-					trade_goods = grain_livestock
-				}
+				trade_goods = livestock
 				OR = {
 					has_manpower_building_trigger = yes
 					has_forcelimit_building_trigger = yes
@@ -1387,10 +1386,7 @@ sea_nogai_missions_5 = {
 			every_owned_province = {
 				limit = {
 					has_terrain = steppe
-					OR = {
-						trade_goods = livestock
-						trade_goods = grain_livestock
-					}
+					trade_goods = livestock
 				}
 				add_base_manpower = 2
 			}

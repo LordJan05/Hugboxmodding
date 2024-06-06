@@ -2320,12 +2320,21 @@ country_event = {
 			NOT = { exists = TUN }
 			TUN = { vassal_of = ROOT }
 		}
-		TUR = {
-			NOT = { alliance_with = ROOT }
-			NOT = { war_with = ROOT }
-			num_of_cities = 40
-			NOT = { religion_group = christian }
-			owns = 341 #Tunis
+		OR = {
+			TUR = {
+				NOT = { alliance_with = ROOT }
+				NOT = { war_with = ROOT }
+				num_of_cities = 40
+				NOT = { religion_group = christian }
+				owns = 341 #Tunis
+			}
+			OSM = {
+				NOT = { alliance_with = ROOT }
+				NOT = { war_with = ROOT }
+				num_of_cities = 40
+				NOT = { religion_group = christian }
+				owns = 341 #Tunis
+			}
 		}
 	}
 	
@@ -2338,10 +2347,27 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		TUR = {
-			add_opinion = {
-				who = ROOT
-				modifier = supporting_tunisian_claimant
+		if = {
+			limit = {
+				exists = TUR
+			}
+			TUR = {
+				add_opinion = {
+					who = ROOT
+					modifier = supporting_tunisian_claimant
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { exists = TUR }
+				exists = OSM
+			}
+			OSM = {
+				add_opinion = {
+					who = ROOT
+					modifier = supporting_tunisian_claimant
+				}
 			}
 		}
 		341 = {
@@ -2351,10 +2377,27 @@ country_event = {
 	option = {		# Our interests lie elsewhere.
 		name = "flavor_spa.10.b"
 		add_prestige = -5
-		TUR = {
-			add_opinion = {
-				who = ROOT
-				modifier = turned_down_tunisian_claimant
+		if = {
+			limit = {
+				exists = TUR
+			}
+			TUR = {
+				add_opinion = {
+					who = ROOT
+					modifier = supporting_tunisian_claimant
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { exists = TUR }
+				exists = OSM
+			}
+			OSM = {
+				add_opinion = {
+					who = ROOT
+					modifier = supporting_tunisian_claimant
+				}
 			}
 		}
 		ai_chance = {
@@ -2601,8 +2644,10 @@ country_event = {
 		has_heir = no
 		is_lesser_in_union = no
 		marriage_with = HAB
+		is_at_war = no
 		HAB = {
 			ai = yes
+			is_at_war = no
 			OR = {
 				any_subject_country = {
 					any_owned_province = {

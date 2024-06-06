@@ -8,6 +8,7 @@ sealand_hormuz_missions_1 = {
 			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -115,6 +116,7 @@ sealand_hormuz_missions_1_1 = { # Forming Yemen removes this missions
 			tag = ORM
 			tag = OMA
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -186,6 +188,7 @@ sealand_hormuz_missions_1_2 = { # From Hormuz to Yemen new mission
 	generic = no
 	ai = yes
 	potential = {
+		NOT = { has_dlc = "Winds of Change" }
 		has_country_flag = keep_hormuz_missions
 	}
 	has_country_shield = yes
@@ -265,6 +268,7 @@ sealand_hormuz_missions_2 = {
 			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -558,6 +562,7 @@ sealand_hormuz_missions_3 = {
 			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -834,6 +839,7 @@ sealand_hormuz_missions_4 = {
 			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1081,6 +1087,7 @@ sealand_hormuz_missions_5 = {
 			tag = OMA
 			has_country_flag = keep_hormuz_missions
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

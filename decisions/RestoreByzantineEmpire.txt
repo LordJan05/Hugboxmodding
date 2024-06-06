@@ -27,9 +27,9 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
 			NOT = { tag = TUR }
+			NOT = { tag = OSM }
 			OR = {
 				culture_group = byzantine
-				not = { primary_culture = goths }
 				AND = {
 					has_idea = MFA_byzantine_claimants
 					dynasty = "Palaiologos"
@@ -83,7 +83,11 @@ country_decisions = {
 			151 = {
 				move_capital_effect = yes
 			}
-			change_tag = LAE
+			if = {
+				limit = { OR = { tag = FEO tag = TRE } }
+				change_tag = BYZ
+			}
+			else = { change_tag = LAE }
 			on_change_tag_effect = yes
 			restore_country_name = yes
 			if = {
@@ -230,12 +234,34 @@ country_decisions = {
 				}
 			}
 			set_country_flag = formed_byzantium_flag
-			
+			if = {
+				limit = { has_country_flag = feo_byzantium_formation_stats_flag }
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
 			if = {
 				limit = {
 					has_country_flag = BYZ_accepted_ottoman_threat
 				}
 				clr_country_flag = BYZ_accepted_ottoman_threat 
+			}
+			if = {
+				limit = {
+					has_country_flag = tre_byzantium_forming_bonus_mana
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
 			}
 		}
 		ai_will_do = {

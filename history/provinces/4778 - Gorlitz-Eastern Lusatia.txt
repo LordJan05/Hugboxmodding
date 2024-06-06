@@ -1,7 +1,7 @@
 owner = SOR
 controller = SOR
 add_claim = BOH
-capital = "Görlitz"
+capital = "Zhorelec"
 is_city = yes
 culture = sorbian
 religion = catholic

@@ -1,4 +1,4 @@
-# Copy of vanilla Moravia
+#Country Name: Please see filename.
 
 graphical_culture = westerngfx
 

@@ -2247,17 +2247,11 @@ poland_sca_slot_3_a = {
 		position = 4
 		provinces_to_highlight = { 
 			country_or_non_sovereign_subject_holds = ROOT  
-			OR = {
-				trade_goods = grain 
-				trade_goods = grain_livestock
-			}
+			trade_goods = grain 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain
 				has_production_building_trigger = yes 
 				value = 14
 			}
@@ -2295,10 +2289,7 @@ poland_sca_slot_3_a = {
 			hidden_effect = { 
 				every_owned_province = {
 					limit = {
-						OR = {
-							trade_goods = grain 
-							trade_goods = grain_livestock
-						}
+						trade_goods = grain
 						has_production_building_trigger = yes 
 					}
 					add_province_modifier = {

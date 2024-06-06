@@ -714,7 +714,10 @@ ajuuran_defense_slot = {
 		required_missions = {  }
 		position = 3
 		provinces_to_highlight = {
-			owned_by = TUR
+			OR = {
+				owned_by = TUR
+				owned_by = OSM
+			}
 		}
 		trigger = {
 			if = {

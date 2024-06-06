@@ -312,7 +312,10 @@ warlord_ming_missions_2_b = {
 					change_government_reform_progress = -150 
 					add_ruler_personality = reformist_personality
 				}
-				else = { change_government_reform_progress = -100 }
+				else = { 
+					change_government_reform_progress = -100 
+					change_adm = 1
+				}
 			}
 			
 			hidden_effect = {

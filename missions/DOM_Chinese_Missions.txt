@@ -989,7 +989,11 @@ DOM_Qing_Missions_1_b_formable = {
 				num_of_banners = 32 
 			}
 			else = { num_of_cavalry = 50 } 
-			empire_of_china_reform_passed = modernize_the_banners_decision
+			if = {
+				limit = { is_emperor_of_china = yes }
+				empire_of_china_reform_passed = modernize_the_banners_decision
+			}
+			else = { full_idea_group = aristocracy_ideas }
 			OR = {
 				national_focus = MIL 
 				army_reformer = 3 
@@ -1979,7 +1983,10 @@ ming_missions_2_b = {
 					change_government_reform_progress = -150 
 					add_ruler_personality = reformist_personality
 				}
-				else = { change_government_reform_progress = -100 }
+				else = { 
+					change_government_reform_progress = -100 
+					change_adm = 1
+				}
 			}
 			
 			hidden_effect = {
@@ -3407,7 +3414,7 @@ ming_missions_3 = {
 				}
 			}
 			
-			add_power_projection = { 
+			add_permanent_power_projection = { 
 				type = 25_permanent_power_projection
 				amount = 25 
 			}
@@ -7061,14 +7068,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7091,14 +7094,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7121,14 +7120,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7151,14 +7146,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7181,14 +7172,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7211,14 +7198,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7241,14 +7224,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7271,14 +7250,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7301,14 +7276,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7331,14 +7302,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7361,14 +7328,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7391,14 +7354,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7421,14 +7380,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7451,14 +7406,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7481,14 +7432,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}
@@ -7511,14 +7458,10 @@ DOM_Qing_Missions_5_b = {
 						every_trade_node_member_country = {
 							limit = { 
 								NOT = { tag = ROOT } 
-								OR = { 
-									NOT = { alliance_with = ROOT } 
-									NOT = { is_subject_of = ROOT } 
-								}
-								1269 = {
-									trade_share = {
-										country = PREV 
-										share = 25
+								NOT = {
+									OR = {
+										alliance_with = ROOT
+										is_subject_of = ROOT
 									}
 								}
 							}

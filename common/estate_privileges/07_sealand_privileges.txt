@@ -817,7 +817,7 @@ estate_nobles_aztecs_eagle_special_units = {
 	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
-		has_reform = aztecs_monarchy_reform
+		has_reform = aztec_empire_reform
 	}
 	on_granted = {
 		remove_estate_privilege = estate_nobles_aztecs_jaguar_special_units
@@ -882,7 +882,7 @@ estate_nobles_aztecs_jaguar_special_units = {
 	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
-		has_reform = aztecs_monarchy_reform
+		has_reform = aztec_empire_reform
 	}
 	on_granted = {
 		remove_estate_privilege = estate_nobles_aztecs_eagle_special_units
@@ -1357,23 +1357,23 @@ estate_nobles_silesia_hanys_special_units = {
 			duration = -1
 		}
 		if = {
-			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_1_flag }
 			add_country_modifier = {
-				name = silesia_hanys_special_units_upgrade_4
+				name = silesia_hanys_special_units_upgrade_1
 				duration = -1
 			}
 		}
 		if = {
-			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_2_flag }
 			add_country_modifier = {
-				name = silesia_hanys_special_units_upgrade_4
+				name = silesia_hanys_special_units_upgrade_2
 				duration = -1
 			}
 		}
 		if = {
-			limit = { has_country_flag = silesia_hanys_special_units_upgrade_4_flag }
+			limit = { has_country_flag = silesia_hanys_special_units_upgrade_3_flag }
 			add_country_modifier = {
-				name = silesia_hanys_special_units_upgrade_4
+				name = silesia_hanys_special_units_upgrade_3
 				duration = -1
 			}
 		}

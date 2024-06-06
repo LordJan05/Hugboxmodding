@@ -1,46 +1,4 @@
 ###########################################
-# EXODUS SMOLL INCOME
-###########################################
-exodus_player_yearly_small_income = {
-	potential = {
-		OR = {
-			tag = NOR
-			tag = BRI
-		}
-	}
-	trigger = {
-		ai = no
-		NOT = {
-			num_of_cities = 20
-		}
-	}
-
-	
-	global_tax_income = 12
-}
-###########################################
-# EXODUS YEARLY TAX
-###########################################
-exodus_player_yearly_income = {
-	potential = {
-		OR = {
-			tag = KMC
-			tag = JOL
-			tag = TID
-			tag = TER
-		}
-	}
-	trigger = {
-		ai = no
-		NOT = {
-			num_of_cities = 20
-		}
-	}
-
-	
-	global_tax_income = 48
-}
-###########################################
 # Player in new world nerf
 ###########################################
 new_world_player_nerf = {

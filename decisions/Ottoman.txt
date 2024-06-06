@@ -3,6 +3,7 @@ country_decisions = {
 		potential = {
 			OR = {
 				tag = TUR
+				tag = OSM
 				tag = RUM
 			}
 			owns = 151

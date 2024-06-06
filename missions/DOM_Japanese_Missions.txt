@@ -1389,10 +1389,7 @@ DOM_japanse_missions_3_a = {
 		position = 3
 		provinces_to_highlight = {
 			owned_by = ROOT 
-			OR = {
-				trade_goods = grain
-				trade_goods = grain_livestock
-			} 
+			trade_goods = grain
 			has_manufactory_trigger = no
 			num_free_building_slots = 1 
 		}
@@ -1400,10 +1397,7 @@ DOM_japanse_missions_3_a = {
 			NOT = { corruption = 0.1 } 
 			num_of_owned_provinces_with = {
 				region = japan_region 
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain
 				has_manufactory_trigger = yes 
 				value = 5 
 			}
@@ -1993,10 +1987,6 @@ japanese_missions_eoc_3 = {
 			690 = { 
 				owned_by = ROOT 
 				base_production = 12 
-			}
-			if = {
-				limit = { tag = MNG }
-				has_idea = single_whip_law
 			}
 			NOT = { inflation = 1 }
 			NOT = { num_of_loans = 1 } 
@@ -3585,20 +3575,11 @@ japanese_missions_eoc_5 = {
 				num_of_galley = 50 
 				num_of_light_ship = 50
 			}
-			if = {
-				limit = { tag = MNG }
-				OR = {
-					mission_completed = mng_repeal_haijin_policy
-					mission_completed = mng_improve_haijin_policy
-				}
-			}
-			else = {
-				OR = { 
-					full_idea_group = trade_ideas 
-					dip = 6 
-					monthly_dip = 10 
-					national_focus = DIP 
-				}
+			OR = { 
+				full_idea_group = trade_ideas 
+				dip = 6 
+				monthly_dip = 10 
+				national_focus = DIP 
 			}
 		}
 		

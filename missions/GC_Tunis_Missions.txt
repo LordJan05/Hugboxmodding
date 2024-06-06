@@ -1550,7 +1550,10 @@ gc_tunis_5 = {
 		position = 1
 		
 		provinces_to_highlight = {
-			owned_by = TUR
+			OR = {
+				owned_by = TUR
+				owned_by = OSM
+			}
 			is_capital = yes
 		}
 		

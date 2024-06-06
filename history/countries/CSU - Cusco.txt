@@ -41,9 +41,9 @@ change_estate_land_share = {
 		birth_date = 1420.1.1
 		death_date = 1471.1.1
 		claim = 95
-		adm = 5
-		dip = 4
-		mil = 6
+		adm = 4
+		dip = 3
+		mil = 5
 	}
 }
 
@@ -52,13 +52,13 @@ change_estate_land_share = {
 		name = "Pachacuti"
 		dynasty = "Hanan"
 		birth_date = 1420.1.1
-		adm = 5
-		dip = 5
-		mil = 6
+		adm = 4
+		dip = 3
+		mil = 5
 		leader = { name = "Pachacuti"	type = general	fire = 3	shock = 5	manuever = 4	siege = 2 }
 	}
 	clear_scripted_personalities = yes
-	add_ruler_personality = conqueror_personality
+	add_ruler_personality = legendary_conqueror_personality
 }
 	
 1444.1.1 = {
@@ -74,7 +74,7 @@ change_estate_land_share = {
 		mil = 6
 	}
 	clear_scripted_personalities = yes
-	add_ruler_personality = conqueror_personality
+	add_ruler_personality = legendary_conqueror_personality
 	add_heir_personality = lawgiver_personality
 }
 

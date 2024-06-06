@@ -1030,10 +1030,7 @@ mer_army_tree = {
 				value = 5
 				has_manpower_building_trigger = yes
 			}
-			OR = {
-				livestock = 5
-				grain_livestock = 5
-			}
+			livestock = 5
 		}
 		effect = {
 			add_country_modifier = {

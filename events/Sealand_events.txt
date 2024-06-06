@@ -973,7 +973,7 @@ country_event = {
 		if = {
 			limit = {
 				tag = AZT
-				has_reform = aztecs_monarchy_reform
+				has_reform = aztec_empire_reform
 			}
 			custom_tooltip = aztecs_monarchy_reform_tt
 		}
@@ -2775,21 +2775,21 @@ country_event = { # Genoa declines.
 }
 ########################################################################
 # Achievements:
-namespace = achiev_events
-country_event = {
-	id = achiev_events.1
-	title = none
-	desc = none
-	picture = KING_SICK_IN_BED_eventPicture
-	hidden = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		has_country_modifier = achiev_good_samaritan
-		NOT = { has_country_flag = achiev_good_samaritan_flag }
-	}
-	immediate = { set_country_flag = achiev_good_samaritan_flag }
-	option = { }
-}
+#namespace = achiev_events
+#country_event = {
+#	id = achiev_events.1
+#	title = none
+#	desc = none
+#	picture = KING_SICK_IN_BED_eventPicture
+#	hidden = yes
+#	mean_time_to_happen = { days = 1 }
+#	trigger = {
+#		has_country_modifier = achiev_good_samaritan
+#		NOT = { has_country_flag = achiev_good_samaritan_flag }
+#	}
+#	immediate = { set_country_flag = achiev_good_samaritan_flag }
+#	option = { }
+#}
 ########################################################################
 # Advisors:
 namespace = sea_advisor_event

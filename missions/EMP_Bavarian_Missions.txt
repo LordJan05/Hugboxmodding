@@ -113,7 +113,6 @@ emp_bav_prestige_branch = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
-						trade_goods = grain_livestock
 					}
 					NOT = { has_building = farm_estate }
 				}
@@ -126,7 +125,6 @@ emp_bav_prestige_branch = {
 									trade_goods = grain
 									trade_goods = livestock
 									trade_goods = wine
-									trade_goods = grain_livestock
 								}
 							}
 						}
@@ -135,7 +133,6 @@ emp_bav_prestige_branch = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
-						trade_goods = grain_livestock
 					}
 					OR = {
 						owner = { is_subject_of = ROOT }

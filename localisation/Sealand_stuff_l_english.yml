@@ -666,38 +666,17 @@
         new_living_space_modifier:0 "New Living Space"
             
     # Great Moravia:
+      # PDX added own Great Moravia...
       # Formation Decision:
-        sea_great_moravian_nation_title:0 "@GMV Form Great Moravian Nation"
-        sea_great_moravian_nation_desc:0 "Let us form the Great Moravia that used to reign in these regions in the late 9th century."
-        sea_greater_moravian_nation_title:0 "@GMV Become Greater Moravian"
+        sea_greater_moravian_nation_title:0 "@GMA Become Greater Moravian"
         sea_greater_moravian_nation_desc:0 "Not everyone can be great but we are definitely the greatest."
         greater_moravia_name:0 "Greater Moravia"
-        sea_greatest_moravian_nation_title:0 "@GMV Become the Greatest Moravian nation"
+        sea_greatest_moravian_nation_title:0 "@GMA Become the Greatest Moravian nation"
         sea_greatest_moravian_nation_desc:0 "Fear us, for we are the greatest!"
         greatest_moravia_name:0 "Greatest Moravia"
         # Special government reform:
         great_moravian_principality:0 "Great Moravian Principality"
         great_moravian_principality_desc:0 "The rulers come and go, so do their priorities, when it comes to warfare but at the cost of constantly making correct decisions, in order to stick with the right military focus."
-      # New country name:
-        GMV:0 "Great Moravia"
-        GMV_ADJ:0 "Great Moravian"
-        sea_GMV_ideas:0 "Moravian Ideas"
-        sea_GMV_ideas_start:0 "Moravian Traditions"
-        sea_GMV_ideas_bonus:0 "Moravian Ambition"
-        gmv_margraviate:0 "Margraviate of Moravia"
-        gmv_margraviate_desc:0 "The Margraviate of Moravia and the privileges of the Moravian diet date back to the 12th century. This title gives us great influence in the region as kings or even emperors have competed for the good will of the Moravian estates for centuries."
-        gmv_religious_refuge:0 "Religious Sanctuary"
-        gmv_religious_refuge_desc:0 "When the lands of the Bohemian crown got overrun by the Hussite heresy we opened our arms to the Catholic refugees and we should strive to shelter anyone haunted by such religious persecution."
-        gmv_cities_of_moravia:0 "Cities of Moravia"
-        gmv_cities_of_moravia_desc:0 "Moravia is a rich land on the crossroads between Bohemia and Austria. This has allowed our burghers to thrive and both Brno and Olomouc have become influential trading centers in their own right. We must do what we can to make the most of this strategic position, and to strengthen the interests of our burghers and artisans."
-        gmv_land_of_vinyards:0 "Land of Vineyards"
-        gmv_land_of_vinyards_desc:0 "For over a thousand years the hills of Moravia have been used to produce our famous wines. We must continue to protect our vineyards and to promote Moravian wine to our neighbors."
-        gmv_german_quarters:0 "German Quarters"
-        gmv_german_quarters_desc:0 "Our proximity to the German regions has led to a long history of close cooperation and integration with the German political and economic sphere. There is hardly any major Moravian city that does not have a German quarter."
-        gmv_jesuit_university:0 "Jesuit University"
-        gmv_jesuit_university_desc:0 "The Jesuits do admirable work for the counter-reformation and are in many ways at the forefront of education and the crafting of theological arguments. Let us invite the Jesuits to start seminars and create universities within our lands."
-        gmv_legacy_of_great_moravia:0 "Legacy of Great Moravia"
-        gmv_legacy_of_great_moravia_desc:0 "Centuries ago, long before the current powers that now dominate Europe, this region was all subdued by Great Moravia. We must cherish this legacy and build a new empire for the Moravian people."
                
       # Portugal to Lustiana:
        # Mission:
@@ -1679,19 +1658,6 @@
         cb_hab_boh_union_desc:0 "We need to secure them into our fold."
         hab_take_capital_personal_union:0 "Take the capital"
         hab_take_capital_personal_union_desc:0 "War goal is to take the capital."
-        # Missions:
-        hab_convert_venetian_to_german_title:0"Venetian Germanization"
-        hab_convert_venetian_to_german_desc:0"Venetian Germanization"
-        hab_convert_venetian_to_german_tt:0 "All §YVenetian§! culture provinces:\n   Owned by §Y[Root.GetName]§!"
-        hab_convert_venetian_to_german_modifier:0 "Italian Germanization"
-        hab_convert_venetian_to_german_ttt:0 "§YVenetian§! culture changes into §YGermanic§! culture group."
-        sea_ger_venetian:0 "Venetian"
-        hab_control_italy_hre_title:0 "Reign in Northern Italy"
-        hab_control_italy_hre_desc:0 "Reign in Northern Italy"
-        hab_control_italy_hre_tt:0 " in Northern Italy region:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects.\n   Is part of the HRE."
-        hab_subjugate_pope_title:0 "Puppet The Pope"
-        hab_subjugate_pope_desc:0 "Puppet The Pope"
-        hab_subjugate_pope_tt:0 "If §YThe Papal State§! is our vassal and there are §Y6§! Electors or less, then we can make them as our Elector."
        # Austrian Empire:
         # Ideas:
         AUE:0 "Austrian Empire"
@@ -1716,63 +1682,17 @@
         # Decision:
         form_austrian_empire_title:0 "@AUE Become Austrian Empire"
         form_austrian_empire_desc:0 "We used to rule Holy Roman Empire, maybe even now, but for now, we ourselves have no empire in our name, nor are we big enough to call ourselves one. That will change the day we become powerful enough."
-        form_austria_hungary_empire_title:0 "@AHE Unite Austria and Hungary"
-        form_austria_hungary_empire_desc:0 "It may be bit early for something like this to propose for the public but it is for the health of this nation, that we must make compromises with the crowns and form Austro-Hungarian Empire for the benefit to all."
-       # Austro-Hungarian Empire:
-        # Ideas:
-        AHE:0 "Austro-Hungarian Empire"
-        AHE_ADJ:0 "Austro-Hungarian"
-        sea_AHE_ideas:0 "Austro-Hungarian Ideas"
-        sea_AHE_ideas_start:0 "Austro-Hungarian Traditions"
-        sea_AHE_ideas_bonus:0 "Austro-Hungarian Ambition"
-        ahe_imperial_ambitions:0 "Imperial Ambition"
-        ahe_imperial_ambitions_desc:0 "The fall of the House of Hohenstauffen in 1250 led to chaos in the Empire and the Golden Bull of 1356 legalized anarchy by calling a constitution. However, in 1438 the Imperial title was regained by the most noble house of Habsburg from its power base in Austria-Hungary. Austria-Hungary must hold onto this title and seek to reform the Empire to make it Holy, Roman and an Empire once more."
-        ahe_bulwark_of_christianity:0 "Bulwark of Christianity"
-        ahe_bulwark_of_christianity_desc:0 "With Turkish power waning in the south it falls to the people of the Empire of Austria-Hungary to defend Christendom from the Turkish threat. Let it be known that we will not flinch from our duty."
-        ahe_fugger_banks:0 "Fugger Banking"
-        ahe_fugger_banks_desc:0 "The Fuggers are a merchant family from Swabia, who originally made money from weaving and shrewdly invested the profits into land. Building up their power they are now one of the wealthiest houses in the Empire. We must gain exclusive access to their services as bankers."
-        ahe_habsburg_dominance:0 "Habsburg Dominance"
-        ahe_habsburg_dominance_desc:0 "Bella gerant alii, tu felix Austria, nube!"
-        ahe_curtailed_peasantry:0 "Curtail the Freedom of the Peasantry"
-        ahe_curtailed_peasantry_desc:0 "Austria-Hungary is not blessed with natural frontiers on which she can base her defense. The wild plain that first brought our ancestors here was perfect for launching raids into the West, not for defense. If Hungary is to be defended we will need resources. If we agree to allow our magnates to tie the peasantry more closely to the land they will ensure they work harder."
-        ahe_austrian_court:0 "Austro-Hungarian Court"
-        ahe_austrian_court_desc:0 "There is nothing in theory stopping us from having more diplomatic relations, however, maintaining them requires time and effort. By streamlining our court, we can ensure that we get the information we need to smooth ruffled feathers when they occur."
-        ahe_hofkriegsrat:0 "Hofkriegsrat"
-        ahe_hofkriegsrat_desc:0 "Essentially the ministry for war. It is the full-time bureaucracy administering our army. One of its most important jobs is to know where our armies are. That way armies can receive the things they need, in particular men."
-                
+        form_austrian_empire_tt:0 "§RLose access to §YAustria-Hungarian§! formation.§!"
+        
     # Hungary:
         # Missions:
         hun_revive_latin_empire_title:0 "Revive Latin Empire"
         hun_revive_latin_empire_desc:0 "Revive Latin Empire"
-                
-       # Hungro-Austrian Empire:
-        # Ideas:
-        HAE:0 "Hungro-Austrian Empire"
-        HAE_ADJ:0 "Hungro-Austrian"
-        sea_HAE_ideas:0 "Hungro-Austrian Ideas"
-        sea_HAE_ideas_start:0 "Hungro-Austrian Traditions"
-        sea_HAE_ideas_bonus:0 "Hungro-Austrian Ambition"        
-        hae_hun_renaissanse_knowledge:0 "A Renaissance Prince"
-        hae_hun_renaissanse_knowledge_desc:0 "The serfs considered their King a just ruler because he protected them from excessive demands and other abuses by the magnates. He was a true renaissance prince, a successful military leader and administrator, an outstanding linguist and an enlightened patron of the arts."
-        hae_bulwark_of_christianity:0 "Bulwark of Christianity"
-        hae_bulwark_of_christianity_desc:0 "With Turkish power waning in the south it falls to the people of the Empire of Hungary-Austria to defend Christendom from the Turkish threat. Let it be known that we will not flinch from our duty."
-        hae_hofkriegsrat:0 "Hofkriegsrat"
-        hae_hofkriegsrat_desc:0 "Essentially the ministry for war. It is the full-time bureaucracy administering our army. One of its most important jobs is to know where our armies are. That way armies can receive the things they need, in particular men."
-        hae_reformed_coinage:0 "Reformed Coinage"
-        hae_reformed_coinage_desc:0 "To pay for our new professional army we will need a steady stream of revenue. Reforming the coinage to standardize the weights will make this much easier, because we know how much people will have to pay."
-        hae_curtailed_peasantry:0 "Curtail the Freedom of the Peasantry"
-        hae_curtailed_peasantry_desc:0 "Hungary-Austria is not blessed with natural frontiers on which she can base her defense. The wild plain that first brought our ancestors here was perfect for launching raids into the West, not for defense. If Hungary-Austria is to be defended we will need resources. If we agree to allow our magnates to tie the peasantry more closely to the land they will ensure they work harder."
-        hae_austrian_court:0 "Hungro-Austrian Court"
-        hae_austrian_court_desc:0 "There is nothing in theory stopping us from having more diplomatic relations, however, maintaining them requires time and effort. By streamlining our court, we can ensure that we get the information we need to smooth ruffled feathers when they occur."
-        hae_hungarian_estates_general:0 "Create the Estates General"
-        hae_hungarian_estates_general_desc:0 "We have seen Estates General being used in other European countries and have seen the benefits of this. It allows all parts of our realm to feel important. Let Hungary-Austria have one too."
     
     # Italy:
       # Decision:
         sea_enable_holy_states_mechanic_tt:0 "Gain access to the Christian §YHoly Orders§! mechanic."
       # Missions:
-        sea_italian_mercs_title:0 "Italian Mercenaries"
-        sea_italian_mercs_desc:0 "Italian Mercenaries"
         sea_italian_mercs_tt:0 "§YVenetia Company§!, §YLombard Company§!, §YPiedmont Company§!, §YTuscan Company§!, §YNaples Company§! and §YSicily Company§! mercenary companies becomes available for hire."
       # Mercs:
         merc_venetia_company:0 "Venetia Company"
@@ -2637,6 +2557,10 @@
       # Modifiers:
         tercios_special_fire_units:0 "Reformed Tercios"
         desc_tercios_special_fire_units:0 "The tercios were renowned for the effectiveness of their battlefield formations, forming the elite military units of the Spanish Monarchy. And consisting a mix of pikes and firearms. More so heavily on firemans, compared to eariler version."
+        subject_castille_vassal:0 "Castille Subject"
+      # Privilege:
+        estate_nobles_castille_autonomous_duchies:0 "Castille Autonomous Duchies"
+        estate_nobles_castille_autonomous_duchies_desc:0 "Everybody wants to be free."
         
     # France:
       # Events:
@@ -2705,10 +2629,8 @@
         emp_ven_north_italian_rivals_tt:0 "Unlocks §YThe Military§! faction, giving the following effects:\nDiscipline: §G+5.0%§!\nReinforce Speed: §G+33.0%§!\nManpower Recovery Speed: §G+33.0%§!\nYearly army Professionalism: §R-0.6%§!\n"
         emp_ven_reclaim_the_aegean_tt:0 "Unlocks §YThe Pirates§! faction, giving the following effects:\nMay Raid Coasts\nColonial Range: §G+100.0%§!\nPrivateer Efficiency: §G+50.0%§!\nTrade Efficiency: §R-50.0%§!\n"
       # Modifiers:
-        ven_ability_to_raid_modifier:0 "Venecian Merchant Raiders"
-        emp_ven_reclaim_the_aegean_modifier:0 "Disciplined Marines"
-        emp_ven_control_the_means_of_transaction_modifier:0 "Marines Improved Defences"
-        emp_ven_expand_the_terraferma_modifier:0 "Mass Recruitment of Marines"
+        ven_navy_mission_2_modifier:0 "Marines Improved Defences"
+        ven_navy_mission_22_modifier:0 "Mass Recruitment of Marines"
       # Government:
         ven_league_trading_nation:0 "Venetian League Trading Nation"
         ven_league_trading_nation_desc:0 "A governmental form where the nation is governed as a republic with a heavy reliance on trade and commerce."
@@ -2908,10 +2830,10 @@
 
       # Aztecs:
         # Government:
-        aztecs_monarchy_reform:0 "Aztecs Government"
-        aztecs_monarchy_reform_desc:0 "Its government is similar to a monarchy, where Emperor was primary ruler, called Huey Tlatoani. They had absolute power, because they were chosen by gods, and thus had the divine right to rule."
+        #aztecs_monarchy_reform:0 "Aztecs Government"
+        #aztecs_monarchy_reform_desc:0 "Its government is similar to a monarchy, where Emperor was primary ruler, called Huey Tlatoani. They had absolute power, because they were chosen by gods, and thus had the divine right to rule."
         mechanic_aztecs_reform_aztec_warriors_yes:0 "Unlocks '§YEagle Warriors§!' and '§YJaguar Warriors§!' Nobility Privileges. Which when enacted:"
-        aztecs_monarchy_reform_tt:0 "Losing §YAztecs Government§! Reform will also result us losing '§YEagle Warriors§!' and '§YJaguar Warriors§!' Nobility Privileges."
+        aztecs_monarchy_reform_tt:0 "Losing §YAztec Empire§! Reform will also result us losing '§YEagle Warriors§!' and '§YJaguar Warriors§!' Nobility Privileges."
         # Privilege:
         estate_nobles_aztecs_eagle_special_units:0 "Eagle Warriors"
         estate_nobles_aztecs_eagle_special_units_desc:0 "It is one of the most elite types of warriors in the Aztec military. Eagle Warriors wear helemts and suits decorated with eagle feathers, sometimes even eagle heads as heads. And they carried with them wooden clubs with sharp obsidian blades on the edges, alongside with spears and shields."

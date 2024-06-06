@@ -126,7 +126,7 @@ stability_aspect = {
 		add_devotion = 10
 		add_horde_unity = 10
 		add_meritocracy = 10
-		add_republican_tradition = 10
+		add_republican_tradition = 8
 	}
 	ai_will_do = {
 		factor = 3
@@ -253,6 +253,7 @@ diplomats_of_the_reformation_aspect = {
 						religion = protestant
 						religion = reformed
 						religion = anglican
+						religion = hussite
 					}
 				}
 				add_opinion = {

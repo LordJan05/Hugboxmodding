@@ -3,6 +3,7 @@ country_decisions = {
 	turkify_mamluks_decision = { # For Mamluks
 		major = yes
 		potential = {
+			ai = no
 			has_country_flag = enact_mam_turkification_decision
 			NOT = { has_country_flag = enacted_mam_turkification_decision }
 		}
@@ -41,6 +42,7 @@ country_decisions = {
 	turkify_qq_decision = { # For QQ
 		major = yes
 		potential = {
+			ai = no
 			has_country_flag = enact_qq_turkification_decision
 			NOT = { has_country_flag = enacted_qq_turkification_decision }
 		}
@@ -79,297 +81,18 @@ country_decisions = {
 
 # Great Moravia
 country_decisions = {
-	sea_great_moravian_nation = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_great_moravia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = GMV }
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
-			OR = {
-				primary_culture = czech
-				accepted_culture = slovak
-				accepted_culture = czech
-				primary_culture = slovak
-				tag = BOH
-				tag = HUN
-				tag = POL
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = silesia_area
-				area = moravia_area
-				area = slovakia_area
-				area = central_poland_area
-				area = malopolska_area
-				area = sandomierz_area
-				province_id = 266 # Prague
-				province_id = 153 # Pest
-				province_id = 61 # Dresden
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			adm_tech = 10
-			NOT = { exists = GMV }
-			if = {
-				limit = {
-					tag = BOH
-				}
-				accepted_culture = slovak
-				accepted_culture = czech
-			}
-			else_if = {
-				limit = {
-					tag = HUN
-				}
-				accepted_culture = slovak
-				accepted_culture = czech
-			}
-			else_if = {
-				limit = {
-					tag = POL
-				}
-				accepted_culture = slovak
-				accepted_culture = czech
-			}
-			else = {
-				OR = {
-					AND = {
-						primary_culture = czech
-						accepted_culture = slovak
-					}
-					AND = {
-						accepted_culture = czech
-						primary_culture = slovak
-					}
-				}
-			}
-			silesia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			moravia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			slovakia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			central_poland_area = {
-				type = all
-				owned_by = ROOT
-			}
-			malopolska_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sandomierz_area = {
-				type = all
-				owned_by = ROOT
-			}
-			owns_core_province = 266 # Prague
-			owns_core_province = 153 # Pest
-			owns_core_province = 61 # Dresden
-		}
-		effect = {
-			4237 = { # Olomouc
-				move_capital_effect = yes
-			}
-			change_tag = GMV
-			on_change_tag_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 3 } }
-				set_government_rank = 3
-			}
-			add_government_reform = great_moravian_principality
-			lusatia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			erzgebirge_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			bohemia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			silesia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			malopolska_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			transdanubia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			alfold_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GMV
-			}
-			59 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			4744 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			2965 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			133 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			1770 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			259 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			2959 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			2424 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = GMV
-				}
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-				}
-				#country_event = { id = ideagroups.1 } #Swap Ideas
-				swap_free_idea_group = yes # Can't have them abuse the powers
-			}
-			set_country_flag = formed_great_moravia_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
+	# PDX added own Great Moravia, so removed mine...
 	sea_greater_moravian_nation = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_greater_moravia_flag }
-			tag = GMV
+			tag = GMA
 		}
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			tag = GMV
+			tag = GMA
 			total_development = 1000
 		}
 		effect = {
@@ -386,13 +109,13 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = formed_greatest_moravia_flag }
 			has_country_flag = formed_greater_moravia_flag
-			tag = GMV
+			tag = GMA
 		}
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			tag = GMV
+			tag = GMA
 			total_development = 2000
 		}
 		effect = {
@@ -827,156 +550,7 @@ country_decisions = { # Weaker Prussia
 				name = "centralization_modifier"
 				duration = 3650
 			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
-	form_austria_hungary_empire = { # Hungary-Austria empire
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_austria_hungary_empire_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			tag = HUN
-			NOT = { exists = AHE }
-			NOT = { exists = HAE }
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = austria_proper_area
-				area = inner_austria_area
-				area = tirol_area
-				area = krain_area
-				area = slovakia_area
-				area = transdanubia_area
-				area = alfold_area
-				area = transylvania_area
-				area = southern_transylvania_area
-				area = bohemia_area
-				area = moravia_area
-				area = erzgebirge_area
-				area = slavonia_area
-				area = croatia_area
-				area = bosnia_area
-				area = east_adriatic_coast_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		allow = {
-			tag = HUN
-			NOT = { exists = HAB }
-			NOT = { exists = AUE }
-			NOT = { exists = AHE }
-			NOT = { exists = HAE }
-			adm_tech = 15
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			austria_proper_area = {
-				type = all
-				owned_by = ROOT
-			}
-			inner_austria_area = {
-				type = all
-				owned_by = ROOT
-			}
-			tirol_area = {
-				type = all
-				owned_by = ROOT
-			}
-			krain_area = {
-				type = all
-				owned_by = ROOT
-			}
-			slovakia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			transdanubia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			alfold_area = {
-				type = all
-				owned_by = ROOT
-			}
-			transylvania_area = {
-				type = all
-				owned_by = ROOT
-			}
-			southern_transylvania_area = {
-				type = all
-				owned_by = ROOT
-			}
-			bohemia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			moravia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			erzgebirge_area = {
-				type = all
-				owned_by = ROOT
-			}
-			slavonia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			croatia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			bosnia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			east_adriatic_coast_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			change_tag = HAE
-			on_change_tag_effect = yes
-			if = {
-				limit = {
-					NOT = { government = monarchy }
-				}
-				change_government = monarchy
-			}
-			if = {
-				limit = {
-					NOT = { has_reform = austrian_dual_monarchy }
-				}
-				add_government_reform = austrian_dual_monarchy
-			}
-			restore_country_name_effect = yes
-			set_country_flag = formed_austria_hungary_empire_flag 
-			if = {
-				limit = {
-					NOT = { government_rank = 3 }
-				}
-				set_government_rank = 3
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 3650
-			}
+			custom_tooltip = form_austrian_empire_tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -987,6 +561,7 @@ country_decisions = { # Weaker Prussia
 	emperor_hofgericht_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_global_flag = emperor_hofgericht_decision_flag }
 			is_part_of_hre = yes
 			hre_reform_passed = emperor_perpetual_diet
@@ -1010,6 +585,7 @@ country_decisions = { # Weaker Prussia
 	emperor_imperial_estates_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_global_flag = emperor_imperial_estates_decision_flag }
 			is_part_of_hre = yes
 			hre_reform_passed = emperor_perpetual_diet
@@ -1041,6 +617,7 @@ country_decisions = { # Weaker Prussia
 	emperor_erbkaisertum_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_global_flag = emperor_erbkaisertum_decision_flag }
 			is_part_of_hre = yes
 			hre_reform_passed = emperor_perpetual_diet
@@ -1071,6 +648,7 @@ country_decisions = { # Weaker Prussia
 	emperor_privilegia_de_non_appelando_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_global_flag = emperor_privilegia_de_non_appelando_decision_flag }
 			is_part_of_hre = yes
 			hre_reform_passed = emperor_perpetual_diet
@@ -1113,6 +691,7 @@ country_decisions = { # Weaker Prussia
 	emperor_renovatio_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_global_flag = emperor_renovatio_decision_flag }
 			is_part_of_hre = yes
 			hre_reform_passed = emperor_perpetual_diet
@@ -1415,6 +994,7 @@ country_decisions = {
 	#eschatological_theocracy_georgia_decision = { # For Georgia
 	#	major = yes
 	#	potential = {
+	#		ai = no
 	#		NOT = { has_country_flag = eschatological_theocracy_georgia }
 	#		tag = GEO
 	#	}
@@ -1457,6 +1037,7 @@ country_decisions = {
 	eschatological_theocracy_caliphate_decision = { # For Caliphate missions.
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_flag = eschatological_theocracy_caliphate }
 			has_mission = restore_rashidun_caliphate
 		}
@@ -1480,6 +1061,7 @@ country_decisions = { # converting to Zoroastrian:
 	converted_to_zoroastrian = { # converting to Zoroastrian.
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_flag = steps_becoming_sasanid_zoroastrian_flag }
 			OR = {
 				tag = TRS
@@ -1766,6 +1348,7 @@ country_decisions = {
 	tercios_special_fire_units_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_modifier = tercios_special_fire_units }
 			has_reform = tercios_reform
 			OR = {
@@ -1978,8 +1561,8 @@ country_decisions = {
 	sea_remove_state_edicts = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = sea_state_edicts_flag }
 			ai = no
+			NOT = { has_country_flag = sea_state_edicts_flag }
 		}
 		allow = {
 			always = yes
@@ -1995,8 +1578,8 @@ country_decisions = {
 	sea_enable_state_edicts = {
 		major = yes
 		potential = {
-			has_country_flag = sea_state_edicts_flag
 			ai = no
+			has_country_flag = sea_state_edicts_flag
 		}
 		allow = {
 			always = yes
@@ -2012,8 +1595,8 @@ country_decisions = {
 	sea_new_world_kill_ruler_options = {
 		major = yes
 		potential = {
-			has_reform = native_clan_council_reform
 			ai = no
+			has_reform = native_clan_council_reform
 		}
 		allow = {
 			NOT = { has_country_modifier = sea_new_world_kill_ruler_options_cooldown }
@@ -2035,6 +1618,7 @@ country_decisions = {
 	sea_new_world_more_trade_power = {
 		major = yes
 		potential = {
+			ai = no
 			OR = {
 				tag = ATW
 				was_tag = ATW
@@ -2052,7 +1636,6 @@ country_decisions = {
 				was_tag = TUA
 			}
 			NOT = { has_country_flag = sea_new_world_more_trade_power_flag }
-			ai = no
 		}
 		allow = {
 			mercantilism = 50
@@ -2072,6 +1655,7 @@ country_decisions = {
 	sea_new_world_religious_reform_gov_options = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_flag = sea_new_world_religious_reform_gov_options_flag }
 			OR = {
 				tag = TUA
@@ -2080,7 +1664,6 @@ country_decisions = {
 				tag = CSU
 				tag = INC
 			}
-			ai = no
 		}
 		allow = {
 			if = { limit = { tag = TUA } tag = TUA }
@@ -2101,8 +1684,8 @@ country_decisions = {
 	sea_new_world_primitives_heavy_ship_building = {
 		major = yes
 		potential = {
-			primitives = yes
 			ai = no
+			primitives = yes
 		}
 		allow = {
 			primitives = yes
@@ -2151,8 +1734,8 @@ country_decisions = {
 	sea_new_world_primitives_light_ship_building = {
 		major = yes
 		potential = {
-			primitives = yes
 			ai = no
+			primitives = yes
 		}
 		allow = {
 			primitives = yes
@@ -2201,8 +1784,8 @@ country_decisions = {
 	sea_new_world_primitives_galley_ship_building = {
 		major = yes
 		potential = {
-			primitives = yes
 			ai = no
+			primitives = yes
 		}
 		allow = {
 			primitives = yes
@@ -2250,7 +1833,8 @@ country_decisions = {
 	}
 	sea_get_specific_advisor = {
 		major = yes
-		potential = { 
+		potential = {
+			ai = no
 			NOT = { has_country_flag = sea_get_specific_advisor_flag }
 		}
 		allow = {
@@ -2266,7 +1850,8 @@ country_decisions = {
 	}
 	recruit_40_trad_general = {
 		major = yes
-		potential = { 
+		potential = {
+			ai = no
 			NOT = { has_country_flag = recruit_40_trad_general_flag }
 		}
 		allow = {
@@ -2285,6 +1870,7 @@ country_decisions = {
 	# Fishing game?:
 	sea_fishing_game = {
 		potential = {
+			ai = no
 			any_owned_province = {
 				trade_goods = fish
 			}
@@ -2386,8 +1972,8 @@ country_decisions = {
 	bagirmi_move_capital_decision = {
 		major = yes
 		potential = {
-			tag = BAG
 			ai = no
+			tag = BAG
 			NOT = { has_country_flag = bagirmi_move_capital_decision_flag }
 			NOT = { mission_completed = west_africa_strong_leadership }
 		}
@@ -3004,6 +2590,7 @@ country_decisions = {
 	swz_norse_cult_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_flag = swz_norse_cult_decision_flag }
 			tag = SWZ
 			religion = shamanism
@@ -3034,6 +2621,7 @@ country_decisions = {
 	swz_zoroastrian_cult_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { has_country_flag = swz_zoroastrian_cult_decision_flag }
 			tag = SWZ
 			religion = shamanism
@@ -3255,6 +2843,7 @@ country_decisions = {
 	ambrosian_to_ambrosian_merchants_decision = {
 		major = yes
 		potential = {
+			ai = no
 			has_country_flag = ambrosian_to_ambrosian_merchants_flag
 			tag = MLO
 			has_reform = ambrosian_republic
@@ -3325,7 +2914,7 @@ country_decisions = {
 	sea_mercs_inf_to_cav_switch = {
 		major = yes
 		potential = {
-			always = yes
+			ai = no
 			NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_flag }
 			NOT = { has_country_flag = sea_mercs_inf_to_cav_switch_event_active }
 		}
@@ -3372,7 +2961,7 @@ country_decisions = {
 	sea_mercs_cav_to_inf_switch = {
 		major = yes
 		potential = {
-			always = yes
+			ai = no
 			has_country_flag = sea_mercs_inf_to_cav_switch_flag
 		}
 		allow = {
@@ -3416,6 +3005,7 @@ country_decisions = {
 	swi_recruit_merc_inf_enable = {
 		major = yes
 		potential = {
+			ai = no
 			tag = SWI
 			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
 			mission_completed = emp_swi_mercenaries
@@ -3438,6 +3028,7 @@ country_decisions = {
 	swi_recruit_merc_inf_disable = {
 		major = yes
 		potential = {
+			ai = no
 			tag = SWI
 			has_country_flag = swi_recruit_merc_inf_enabled
 			mission_completed = emp_swi_mercenaries
@@ -3460,6 +3051,7 @@ country_decisions = {
 	swi_recruit_merc_inf = {
 		major = yes
 		potential = {
+			ai = no
 			has_country_flag = swi_recruit_merc_inf_enabled
 			tag = SWI
 			mission_completed = emp_swi_mercenaries
@@ -3658,6 +3250,7 @@ country_decisions = {
 	korea_japan_bridge_decision = {
 		major = yes
 		potential = {
+			ai = no
 			is_year = 1500
 			NOT = { has_country_flag = korea_japan_bridge_flag }
 			OR = {
@@ -3892,6 +3485,7 @@ country_decisions = {
 	catholic_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = catholic }
 			any_owned_province = {
@@ -3912,6 +3506,7 @@ country_decisions = {
 	anglican_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = anglican }
 			any_owned_province = {
@@ -3932,6 +3527,7 @@ country_decisions = {
 	hussite_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = hussite }
 			any_owned_province = {
@@ -3952,6 +3548,7 @@ country_decisions = {
 	protestant_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = protestant }
 			any_owned_province = {
@@ -3972,6 +3569,7 @@ country_decisions = {
 	reformed_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = reformed }
 			any_owned_province = {
@@ -3992,6 +3590,7 @@ country_decisions = {
 	orthodox_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = orthodox }
 			any_owned_province = {
@@ -4012,6 +3611,7 @@ country_decisions = {
 	coptic_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = coptic }
 			any_owned_province = {
@@ -4033,6 +3633,7 @@ country_decisions = {
 	sunni_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = sunni }
 			any_owned_province = {
@@ -4053,6 +3654,7 @@ country_decisions = {
 	shiite_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = shiite }
 			any_owned_province = {
@@ -4073,6 +3675,7 @@ country_decisions = {
 	ibadi_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = ibadi }
 			any_owned_province = {
@@ -4093,6 +3696,7 @@ country_decisions = {
 	buddhism_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = buddhism }
 			any_owned_province = {
@@ -4113,6 +3717,7 @@ country_decisions = {
 	vajrayana_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = vajrayana }
 			any_owned_province = {
@@ -4133,6 +3738,7 @@ country_decisions = {
 	mahayana_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = mahayana }
 			any_owned_province = {
@@ -4153,6 +3759,7 @@ country_decisions = {
 	confucianism_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = confucianism }
 			any_owned_province = {
@@ -4173,6 +3780,7 @@ country_decisions = {
 	shinto_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = shinto }
 			any_owned_province = {
@@ -4194,6 +3802,7 @@ country_decisions = {
 	hinduism_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = hinduism }
 			any_owned_province = {
@@ -4214,6 +3823,7 @@ country_decisions = {
 	sikhism_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = sikhism }
 			any_owned_province = {
@@ -4234,6 +3844,7 @@ country_decisions = {
 	jewish_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = jewish }
 			any_owned_province = {
@@ -4254,6 +3865,7 @@ country_decisions = {
 	zoroastrian_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = zoroastrian }
 			any_owned_province = {
@@ -4275,6 +3887,7 @@ country_decisions = {
 	tengri_pagan_reformed_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = tengri_pagan_reformed }
 			any_owned_province = {
@@ -4295,6 +3908,7 @@ country_decisions = {
 	shamanism_convert_decision = {
 		major = yes
 		potential = {
+			ai = no
 			NOT = { tag = PAP }
 			NOT = { religion = shamanism }
 			any_owned_province = {

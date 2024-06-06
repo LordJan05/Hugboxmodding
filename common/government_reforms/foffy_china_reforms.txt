@@ -318,7 +318,6 @@ mjl_altaic_herdsmen = {
 			OR = {
 				trade_goods = livestock
 				trade_goods = grain
-				trade_goods = grain_livestock
 			}
 		}
 	}
@@ -345,16 +344,6 @@ mjl_altaic_herdsmen = {
 				if = {
 					limit = {
 						trade_goods = grain
-					}
-					add_province_modifier = { 
-						name = mjl_herd_bonus_prod
-						duration = -1
-						hidden = yes
-					}
-				}
-				if = {
-					limit = {
-						trade_goods = grain_livestock
 					}
 					add_province_modifier = { 
 						name = mjl_herd_bonus_prod

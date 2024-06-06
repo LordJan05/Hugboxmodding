@@ -16,7 +16,7 @@ innovative_payment_techniques_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -37,8 +37,12 @@ plutocratic_ethos_act = {
 	
 	effect = {}
 	removed_effect = {}
-	ai_will_do = {
-		factor = 0			
+	ai_will_do = {	
+		factor = 1
+		modifier = {
+			factor = 0
+			has_final_tier_reforms_trigger = yes
+		}		
 	}
 }
 
@@ -61,7 +65,7 @@ clan_unity_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1472,7 +1476,7 @@ passport_to_merchants_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1734,7 +1738,7 @@ the_spy_network_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1756,8 +1760,12 @@ the_smooth_integration_act = {
 
 	effect = {}
 	removed_effect = {}
-	ai_will_do = {
-		factor = 0			
+	ai_will_do = {		
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { religion_group = christian }
+		}		
 	}
 }
 
@@ -1780,7 +1788,7 @@ global_trade_networks_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1802,7 +1810,7 @@ colonial_boost_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1825,7 +1833,7 @@ sailor_efficiency_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1848,7 +1856,7 @@ diplomatic_consolidation_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1871,7 +1879,7 @@ centralization_power_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1896,7 +1904,7 @@ loyal_conduct_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1918,7 +1926,7 @@ diplomatic_arms_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1941,7 +1949,7 @@ merchants_hire_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1964,7 +1972,7 @@ transportation_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1987,7 +1995,7 @@ maritime_expertise_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -2010,7 +2018,7 @@ client_state_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 

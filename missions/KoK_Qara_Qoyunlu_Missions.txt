@@ -1083,6 +1083,9 @@ qara_qoyunlu_third = {
 						NOT = {
 							tag = TUR
 						}
+						NOT = {
+							tag = OSM
+						}
 					}
 					reverse_add_casus_belli = {
 						type = cb_vassalize_mission

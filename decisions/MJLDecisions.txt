@@ -4,11 +4,9 @@ country_decisions = {
 			ai = no
 			has_dlc = "Cradle of Civilization"
 			religion_group = muslim
+			NOT = { has_country_flag = mjl_1444_change_school }
 		}
 		allow = {
-			hidden_trigger = {
-				NOT = { has_country_flag = mjl_1444_change_school }
-			}
 			custom_trigger_tooltip = {
 				tooltip = mjl_change_muslim_school_trigger_tooltip
 				NOT = { has_country_modifier = change_school_modifier }
@@ -34,6 +32,7 @@ country_decisions = {
 			1053 = {
 				NOT = { trade_goods = gold }
 			}
+			owns = 1053 #Hinggan
 		}
 		provinces_to_highlight = {
 			province_id = 1053

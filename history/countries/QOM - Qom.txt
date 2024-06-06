@@ -7,6 +7,10 @@ religion = shiite
 technology_group = muslim
 capital = 2213 # Qom
 religious_school = ismaili_school
+
+add_army_tradition = 20			#Years of fighting and infighting before the game start.
+add_army_professionalism = 0.05
+
 add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1

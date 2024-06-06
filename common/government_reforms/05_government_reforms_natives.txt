@@ -83,6 +83,9 @@ native_clan_council_reform = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
+	potential = {
+		is_subject = no
+	}
 	modifiers = {
 		native_assimilation = 1
 		native_uprising_chance = -1
@@ -355,9 +358,11 @@ native_trading_with_foreigners_reform = {
 					exists = yes
 				}
 			}
+			on_native_government_change_effect = yes
 			change_government = native_sponsor_scope
 			embrace_institutions_of = native_sponsor_scope
 			change_government_reform_progress = -350 # Doing it like this to avoid that migration code triggers
+			set_country_flag = was_native_country
 		}
 		else = {
 			custom_tooltip = "GOVERNMENT_FROM_NATIVE_SPONSOR"
@@ -381,8 +386,10 @@ native_becomes_monarchy_reform = {
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
+		on_native_government_change_effect = yes
 		change_government = monarchy
 		change_government_reform_progress = -450 # Doing it like this to avoid that migration code triggers
+		set_country_flag = was_native_country
 	}
 	ai = {
 		factor = 0
@@ -401,8 +408,10 @@ native_becomes_republic_reform = {
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
+		on_native_government_change_effect = yes
 		change_government = republic
 		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		set_country_flag = was_native_country
 	}
 	ai = {
 		factor = 1
@@ -432,8 +441,10 @@ native_becomes_theocracy_reform = {
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
+		on_native_government_change_effect = yes
 		change_government = theocracy
 		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		set_country_flag = was_native_country
 	}
 	ai = {
 		factor = 0
@@ -458,11 +469,13 @@ native_becomes_horde_reform = {
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
+		on_native_government_change_effect = yes
 		change_government = tribal
 		add_government_reform = steppe_horde
 		change_unit_type = nomad_group
 		change_technology_group = nomad_group
 		custom_tooltip = STEPPE_HORDE_BENEFITS
+		set_country_flag = was_native_country
 	}
 	ai = {
 		factor = 0

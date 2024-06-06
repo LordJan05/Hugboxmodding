@@ -4,6 +4,7 @@ tatar_missions_slot_yarkand_1 = {
 	ai = yes
 	potential = {
 		tag = KAS
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -102,6 +103,7 @@ tatar_missions_1 = {
 			tag = KZH
 			tag = CHG
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -227,6 +229,7 @@ tatar_missions_11 = {
 			tag = CHG
 			tag = KAS
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -433,6 +436,7 @@ tatar_missions_slot_yarkand_2 = {
 	ai = yes
 	potential = {
 		tag = KAS
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -474,6 +478,7 @@ tatar_missions_slot_2 = {
 			tag = CHG
 			tag = KAS
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -769,6 +774,7 @@ tatar_missions_2 = {
 			tag = CHG
 			tag = KAS
 		}
+		NOT = { has_dlc = "Winds of Change" }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

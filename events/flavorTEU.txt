@@ -2410,6 +2410,22 @@ country_event = {
 					}
 				}
 			}
+			OSM = {
+				every_owned_province = {
+					limit = {
+						religion_group = christian
+						NOT = { religion = catholic }
+					}
+					change_religion = catholic
+				}
+				every_owned_province = {
+					limit = { religion_group = christian }
+					add_province_modifier = {
+						name = teu_crusade_inspired_by_the_teutons
+						duration = 3650
+					}
+				}
+			}
 		}
 		ai_chance = {
 			factor = 10

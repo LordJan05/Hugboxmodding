@@ -1620,40 +1620,28 @@ country_event = {
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain 
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain 
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain 
 			}
 			add_base_production = 1 
 		}
 		random_owned_province = {
 			limit = { 
 				region = scandinavia_region 
-				OR = {
-					trade_goods = grain 
-					trade_goods = grain_livestock
-				}
+				trade_goods = grain 
 			}
 			add_base_production = 1 
 		} 

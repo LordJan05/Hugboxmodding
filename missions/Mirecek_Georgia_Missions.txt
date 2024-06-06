@@ -315,6 +315,35 @@ georgia_1_missions = {
 				swap_free_idea_group = yes
 			}
 			set_country_flag = formed_byzantium_flag
+			if = {
+				limit = { has_country_flag = feo_byzantium_formation_stats_flag }
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = BYZ_accepted_ottoman_threat
+				}
+				clr_country_flag = BYZ_accepted_ottoman_threat 
+			}
+			if = {
+				limit = {
+					has_country_flag = tre_byzantium_forming_bonus_mana
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
 		}
 	}
 }

@@ -246,7 +246,7 @@ country_event = {
 	
 	option = {
 		name = "china_events.4.a"
-		add_stability_or_adm_power = yes
+		reduce_stability_or_adm_power = yes
 		reduce_mandate_effect = yes
 		reduce_eunuchs_effect = yes
 	}
@@ -256,6 +256,14 @@ country_event = {
 		boost_eunuchs_effect = yes
 		add_mandate_effect = yes
 		add_years_of_income = -0.25
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				NOT = { num_of_loans = 10 }
+				is_bankrupt = no
+			}
+		}
 	}
 }
 
@@ -616,7 +624,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "china_events.12.b" #Northern Literati just donâ€™t compare to southerners...
+		name = "china_events.12.b" #Northern Literati just don’t compare to southerners...
 		reduce_mandate_effect = yes
 		add_meritocracy_large_effect = yes
 		reduce_bureaucrats_effect = yes
@@ -894,6 +902,7 @@ country_event = {
 	
 	option = {
 		name = "china_events.16.a"
+		goto = prosperity_boost_here
 		boost_bureaucrats_effect = yes
 		if = {
 			limit = { has_dlc = "Mandate of Heaven" }
@@ -1098,15 +1107,21 @@ country_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
-	
-	option = {
-		name = "china_events.20.a"
+	immediate = {
 		random_owned_province = {
 			limit = {
 				NOT = { trade_goods = gold }
 				NOT = { development = 10 }
 				has_port = no
 			}
+			save_event_target_as = target_province
+		}
+	}
+	
+	option = {
+		name = "china_events.20.a"
+		goto = target_province
+		event_target:target_province = {
 			change_trade_goods = gold
 		}
 		boost_bureaucrats_effect = yes
@@ -1403,7 +1418,13 @@ country_event = {
 		hidden_effect = {
 			random_known_country = {
 				limit = {
+					any_owned_province = {
+						range = ROOT
+					}
 					NOT = { is_subject_of = ROOT }
+					any_active_trade_node = {
+						has_merchant = ROOT
+					}
 				}
 				save_event_target_as = country_of_interest
 			}
@@ -2316,6 +2337,7 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 	
 	trigger = {
+		is_at_war = no
 		OR = {
 			AND = {
 				has_dlc = "Mandate of Heaven"
@@ -2338,7 +2360,7 @@ country_event = {
 			owns_core_province = 1816
 			owns_core_province = 1821
 			owns_core_province = 700
-			owns_core_province = 5562
+			owns_core_province = 5571
 			amount = 2
 		}
 	}
@@ -2420,7 +2442,7 @@ country_event = {
 	id = china_events.44
 	title = "EVTNAME11242"
 	desc = "EVTDESC11242"
-	picture = FORT_eventPicture
+	picture = SHWEDAGON_PAGON_eventPicture
 	fire_only_once = yes 
 	trigger = {
 		if = { 
