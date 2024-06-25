@@ -11,6 +11,11 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+add_government_power = {
+	mechanic_type = swiss_cantons_mechanic
+	power_type = swiss_cantons_influence
+	value = 50
+}
 
 
 change_estate_land_share = {

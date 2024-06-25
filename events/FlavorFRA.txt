@@ -1751,6 +1751,8 @@ country_event = {
 				cede_province = FRA
 			}
 			add_truce_with = FRA
+			NRM = { grant_independence = yes }
+			GUY = { grant_independence = yes }
 		}
 		FRA = { country_event = { id = flavor_fra.8 } }
 		add_prestige = -10
@@ -1804,6 +1806,30 @@ country_event = {
 				who = FRA
 				casus_belli = cb_hundred_years_war
 			}
+			if = {
+				limit = {
+					NRM = {
+						is_subject_of = ROOT
+						is_subject_of_type = england_guaranteed_state
+					}
+				}
+				create_subject = {
+					subject_type = england_subject_state
+					subject = NRM
+				}
+			}
+			if = {
+				limit = {
+					GUY = {
+						is_subject_of = ROOT
+						is_subject_of_type = england_guaranteed_state
+					}
+				}
+				create_subject = {
+					subject_type = england_subject_state
+					subject = GUY
+				}
+			}
 		}
 		1879 = {
 			change_controller = FRA
@@ -1850,16 +1876,20 @@ country_event = {
 	is_triggered_only = yes
 	
 	major = yes
-
+	immediate = {
+		FROM = { add_truce_with = ROOT }
+		add_truce_with = FROM
+	}
 	option = {
 		name = "flavor_fra.8.a" #
 		add_prestige = 10
 		hidden_effect = {
 			FROM = {
-				add_truce_with = ROOT
+				NRM = { grant_independence = yes }
+				GUY = { grant_independence = yes }
 			}
 		}
-		add_truce_with = FROM
+		tooltip = { add_truce_with = FROM }
 		1879 = {
 			cede_province = FRA
 			hidden_effect = { add_local_autonomy = -50 }

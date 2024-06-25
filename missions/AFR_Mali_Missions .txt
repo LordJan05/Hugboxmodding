@@ -268,6 +268,15 @@ mali_colonization_slot = {
 					add_base_production = 2
 				}
 			}
+			add_country_modifier = {
+				name = discover_new_land_short_modifier
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = colonial_ambitions_modifier
+				duration = 7300
+			}
+			create_explorer = { tradition = 60 }
 		}
 		ai_weight = {
 			factor = 0	#AI Mali should not colonize
@@ -382,7 +391,14 @@ mali_colonization_slot = {
 			}
 			add_country_modifier = {
 				name = mal_colonial_enthusiasm
-				duration = 9125
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = por_bandeirantes_flag }
+				}
+				set_country_flag = por_bandeirantes_flag
+				custom_tooltip = por_bandeirantes_tooltip
 			}
 		}
 		ai_weight = {
@@ -448,6 +464,7 @@ mali_trade_slot = {
 		effect = {
 			mal_add_disaster_stability = yes
 			add_adm_power = 200
+			create_explorer = { tradition = 40 }
 		}
 		ai_weight = {
 			factor = 500	#Important for them so they can survive

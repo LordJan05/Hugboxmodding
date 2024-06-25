@@ -13,6 +13,12 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+remove_faction = mr_aristocrats
+remove_faction = mr_traders
+remove_faction = mr_guilds
+add_faction = sea_gen_aristocrats2
+add_faction = sea_gen_traders
+add_faction = sea_gen_guilds
 
 1394.1.1 = {
 	monarch = {

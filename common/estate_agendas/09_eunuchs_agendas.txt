@@ -935,6 +935,12 @@ estate_eunuchs_porcelain_tower_agenda = {
 					type = porcelain_tower_nanjing
 					tier = 2
 				}
+				NOT = {
+					has_great_project = {
+						type = porcelain_tower_nanjing
+						tier = 3
+					}
+				}
 			}
 		}
 		else = { 
@@ -959,12 +965,12 @@ estate_eunuchs_porcelain_tower_agenda = {
 		}
 		else_if = {
 			limit = { 
-				has_dlc = "Leviathan" 
-				1821 = {
-					has_great_project = {
-						type = porcelain_tower_nanjing
-						tier = 3 
-					}
+				has_dlc = "Leviathan"
+			}
+			1821 = {
+				has_great_project = {
+					type = porcelain_tower_nanjing
+					tier = 3 
 				}
 			}
 		}

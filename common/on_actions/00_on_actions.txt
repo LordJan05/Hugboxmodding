@@ -293,7 +293,6 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
-	## ## ## Mod stuff
 	if = {
 		limit = {
 			any_known_country = {
@@ -2310,6 +2309,28 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	#if = {
+	#	limit = { religion = inti }
+	#	export_to_variable = {
+	#		variable_name = sea_authority_var
+	#		value = trigger_value:authority
+	#	}
+	#	round_variable = {
+	#		which = sea_authority_var
+	#		value < 0
+	#	}
+	#}
+	#if = {
+	#	limit = { religion = nahuatl }
+	#	export_to_variable = {
+	#		variable_name = sea_doom_var
+	#		value = trigger_value:doom
+	#	}
+	#	round_variable = {
+	#		which = sea_doom_var
+	#		value < 0
+	#	}
+	#}
 }
 on_yearly_pulse = {
 	events = {

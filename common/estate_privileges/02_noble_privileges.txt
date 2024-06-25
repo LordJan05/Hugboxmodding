@@ -346,7 +346,7 @@ estate_nobles_levies = {
 		}
 	} 
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.10
+		#global_tax_modifier = -0.10
 		global_manpower_modifier = 0.5
 	}
 	influence_scaled_conditional_modifier = {
@@ -367,9 +367,9 @@ estate_nobles_levies = {
 	}
 	penalties = {
 	}
-	#mechanics = {
-	#	exempt_from_seize_land
-	#}
+	mechanics = {
+		exempt_from_seize_land
+	}
 	conditional_modifier = {
 		trigger = {
 			has_government_attribute = free_noble_levies
@@ -4027,7 +4027,7 @@ estate_nobles_MAY_arm_nobles_with_obsidian_blades = {
 		technology_group = mesoamerican
 	}
 	benefits = {
-		infantry_cost = -0.05
+		infantry_cost = 0.05
 	}
 	on_granted = {
 		if = {
@@ -4053,7 +4053,7 @@ estate_nobles_MAY_arm_nobles_with_obsidian_blades = {
 			has_obsidian_source_trigger = yes
 		}
 		modifier = {
-			infantry_power = 0.1
+			infantry_power = 0.05
 			nobles_influence_modifier = 0.05
 		}
 	}
@@ -4072,7 +4072,7 @@ estate_nobles_MAY_arm_nobles_with_obsidian_blades = {
 			has_obsidian_source_trigger = yes
 		}
 		modifier = {
-			infantry_power = 0.15
+			infantry_power = 0.1
 			nobles_influence_modifier = 0.05
 		}
 	}

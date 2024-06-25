@@ -4,9 +4,13 @@
 new_world_player_nerf = {
 	potential = {
 		OR = {	
-			is_colonial_nation = yes
+			AND = {
+				is_colonial_nation = yes
+				has_country_flag = self_governing_colony_government_flag
+			}
 			has_reform = trade_company_government
 			has_country_flag = changed_from_colonial_nation
+			is_subject_of_type = european_colony
 			AND = {
 				capital_scope = {
 					continent = north_america
@@ -48,6 +52,7 @@ new_world_player_nerf_600 = {
 			is_colonial_nation = yes
 			has_reform = trade_company_government
 			has_country_flag = changed_from_colonial_nation
+			is_subject_of_type = european_colony
 		}
 		was_player = yes
 	}
@@ -67,6 +72,7 @@ new_world_player_nerf_1200 = {
 		OR = {
 			is_colonial_nation = yes
 			has_reform = trade_company_government
+			is_subject_of_type = european_colony
 		}
 		was_player = yes
 	}
@@ -86,6 +92,7 @@ new_world_player_nerf_2400 = {
 		OR = {
 			is_colonial_nation = yes
 			has_reform = trade_company_government
+			is_subject_of_type = european_colony
 		}
 		was_player = yes
 	}

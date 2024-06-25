@@ -210,10 +210,7 @@ prussian_republic_reform = {
 	}
 	trigger = {
 		OR = {
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican
+			religion_group = christian
 			AND = {
 				is_playing_custom_nation = yes
 				OR = {
@@ -371,6 +368,10 @@ venice_merchants_reform = {
 		OR = {
 			tag = VEN
 			AND = {
+				was_tag = VEN
+				tag = ITA
+			}
+			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = venice_merchants_reform
 			}
@@ -378,12 +379,9 @@ venice_merchants_reform = {
 	}
 	boost_income = yes
 	factions = {
-		#sea_ven_aristocrats
-		sea_ven_aristocrats2
-		sea_ven_traders
-		#sea_ven_traders2
-		sea_ven_guilds
-		#sea_ven_guilds2
+		mr_aristocrats
+		mr_traders
+		mr_guilds
 	}
 	conditional = {
 		allow = {
@@ -1442,7 +1440,10 @@ colonial_government = {
 	allow_normal_conversion = no
 	fixed_rank = 1
 	potential = {
-		is_colonial_nation = yes
+		OR = {
+			is_colonial_nation = yes
+			is_subject_of_type = european_colony
+		}
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
@@ -1460,7 +1461,7 @@ colonial_government = {
 		missionaries = 1
 
 		#COLONY DEBUFF
-		development_cost = 0.2
+		development_cost = 0.1
 		global_manpower_modifier = -0.1
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
@@ -1493,6 +1494,7 @@ colonial_government = {
 			if = {
 				limit = { is_subject_of_type = self_governing_colony }
 				add_government_reform = self_governing_colony_government
+				set_country_flag = self_governing_colony_government_flag
 			}
 		}
 	}
@@ -1542,7 +1544,7 @@ crown_colony_government = {
 		missionaries = 1
 
 		#COLONY DEBUFF
-		development_cost = 0.2
+		development_cost = 0.1
 		global_manpower_modifier = -0.1
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
@@ -1624,7 +1626,7 @@ private_enterprise_colony_government = {
 		missionaries = 1
 
 		#COLONY DEBUFF
-		development_cost = 0.2
+		development_cost = 0.1
 		global_manpower_modifier = -0.1
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
@@ -1653,6 +1655,7 @@ private_enterprise_colony_government = {
 			if = {
 				limit = { is_subject_of_type = self_governing_colony }
 				add_government_reform = self_governing_colony_government
+				set_country_flag = self_governing_colony_government_flag
 			}
 		}
 	}
@@ -1665,6 +1668,7 @@ private_enterprise_colony_government = {
 			if = {
 				limit = { is_subject_of_type = self_governing_colony }
 				add_government_reform = self_governing_colony_government
+				set_country_flag = self_governing_colony_government_flag
 			}
 		}
 	}
@@ -1705,7 +1709,7 @@ self_governing_colony_government = {
 		missionaries = 1
 
 		#COLONY DEBUFF
-		development_cost = 0.05
+		development_cost = 0.1
 		global_manpower_modifier = -0.1
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
@@ -2037,10 +2041,10 @@ calvinist_republic_government = {
 		own_territory_dice_roll_bonus = 1
 	}
 
-	custom_attributes = {
-		#enables_plutocratic_idea_group = no
-		enables_divine_idea_group = yes
-	}
+	#custom_attributes = {
+	#	enables_plutocratic_idea_group = no
+	#	enables_divine_idea_group = yes
+	#}
 	duration = 4
 }
 
@@ -2196,10 +2200,10 @@ cossacks_reform = {
 			enables_estate_cossacks = yes
 		}
 	}
-	custom_attributes = {
-		enables_horde_idea_group = yes
-		#disables_estate_nobles = yes
-	}
+	#custom_attributes = {
+	#	enables_horde_idea_group = yes
+	#	disables_estate_nobles = yes
+	#}
 
 	duration = 4
 }

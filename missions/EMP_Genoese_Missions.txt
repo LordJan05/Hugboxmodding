@@ -80,6 +80,11 @@ genoa_missions_africa = {
 				}
 				add_permanent_claim = ROOT
 			}
+			if = {
+				limit = { OR = { has_reform = merchants_reform has_reform = genoa_merchants_reform } }
+				custom_tooltip = emp_gen_take_sardinia_tt
+				hidden_effect = { add_faction = sea_gen_traders2 }
+			}
 		}
 		ai_weight = {
 			factor = 75
@@ -972,6 +977,11 @@ emp_gen_missions_western_med_2 = {
 				name = gen_prosperous_republic
 				duration = 7300
 			}
+			if = {
+				limit = { OR = { has_reform = merchants_reform has_reform = genoa_merchants_reform } }
+				custom_tooltip = emp_gen_reinvigoration_tt
+				hidden_effect = { add_faction = sea_gen_guilds2 }
+			}
 		}
 		ai_weight = {
 			factor = 75
@@ -997,6 +1007,11 @@ emp_gen_missions_western_med_2 = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { OR = { has_reform = merchants_reform has_reform = genoa_merchants_reform } }
+				custom_tooltip = emp_gen_venetian_naval_power_tt
+				hidden_effect = { add_faction = sea_gen_aristocrats }
 			}
 		}
 	}

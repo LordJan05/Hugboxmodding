@@ -47,10 +47,10 @@ steppe_horde = {
 		years_of_nationalism = -5
 		reinforce_cost_modifier = -0.5
 	}
-	custom_attributes = {
-		enables_horde_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_horde_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	ai = {
 		factor = 1000
 	}
@@ -91,10 +91,10 @@ great_mongol_state_reform = {
 			can_recruit_banners_from_primary_culture_provinces = yes
 		}
 	}
-	custom_attributes = {
-		enables_horde_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_horde_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	effect = {
 		hidden_effect = {
 			if = {

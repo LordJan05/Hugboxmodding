@@ -929,6 +929,7 @@ cb_trade_war = {
 
 	prerequisites_self = {
 		is_revolutionary = no
+		NOT = { has_reform = genoa_merchants_reform }
 	}
 
 	prerequisites = {

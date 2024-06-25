@@ -1038,7 +1038,7 @@ root_can_build_manufactory_here_trigger = {
 		}
 		AND = {
             trade_goods = coal
-			ROOT = { adm_tech = 21 }
+			ROOT = { adm_tech = 19 }
 		}
 	}
 }

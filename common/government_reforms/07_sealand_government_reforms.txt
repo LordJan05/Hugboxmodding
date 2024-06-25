@@ -624,7 +624,7 @@ sasanian_government = {
 	}
 	custom_attributes = {
 		locked_government_type = yes
-		enables_divine_idea_group = yes
+		#enables_divine_idea_group = yes
 	}
 	ai = {
 		factor = 1000
@@ -982,9 +982,21 @@ germany_monarchy = {
 	}
 
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = { has_dlc = "Domination" }
 		government_abilities = {
-			militarization_mechanic
+			prussian_militarization_mechanic_1
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
 		}
 	}
 	conditional = {
@@ -1039,11 +1051,17 @@ germany_republic = {
 diverse_society_reform = {
 	allow_normal_conversion = yes
 	icon = "tribal_council"
+	potential = {
+		is_african_primary_culture = yes
+	}
 	modifiers = {
 		num_accepted_cultures = 3
 		culture_conversion_cost = -0.15
 		culture_conversion_time = -0.15
 		promote_culture_cost = -0.15
+	}
+	custom_attributes = {
+		afr_culture_unite_reform_accept_afr_cultures = yes
 	}
 	ai = {
 		factor = 10
@@ -1151,10 +1169,13 @@ genoa_merchants_reform = {
 	icon = "politician"
 	allow_normal_conversion = no
 	potential = {
-		tag = GEN
-	}
-	trigger = {
-		tag = GEN
+		OR = {
+			tag = GEN
+			AND = {
+				was_tag = GEN
+				tag = ITA
+			}
+		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = no
@@ -1167,9 +1188,15 @@ genoa_merchants_reform = {
 	boost_income = yes
 	duration = 4
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		#sea_gen_aristocrats
+		sea_gen_aristocrats2
+		sea_gen_traders
+		#sea_gen_traders2
+		sea_gen_guilds
+		#sea_gen_guilds2
+	}
+	custom_attributes = {
+		genoa_merchants_reform_gen_trade_war = yes
 	}
 	conditional = {
 		allow = {

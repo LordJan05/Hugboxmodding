@@ -377,58 +377,58 @@ spriteTypes = {
 	
 	## VENICE
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_aristocrats"	
+		name = "GFX_faction_bg_sea_gen_aristocrats"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_aristocrats"	
+		name = "GFX_faction_sea_gen_aristocrats"	
 		texturefile = "gfx//interface//aristocrats_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_aristocrats2"	
+		name = "GFX_faction_bg_sea_gen_aristocrats2"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_aristocrats2"	
+		name = "GFX_faction_sea_gen_aristocrats2"	
 		texturefile = "gfx//interface//aristocrats_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_traders"	
+		name = "GFX_faction_bg_sea_gen_traders"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_traders"	
+		name = "GFX_faction_sea_gen_traders"	
 		texturefile = "gfx//interface//traders_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_traders2"	
+		name = "GFX_faction_bg_sea_gen_traders2"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_traders2"	
-		texturefile = "gfx//interface//sea_ven_traders2_icon.tga"
+		name = "GFX_faction_sea_gen_traders2"	
+		texturefile = "gfx//interface//sea_gen_traders2_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_guilds"	
+		name = "GFX_faction_bg_sea_gen_guilds"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_guilds"	
+		name = "GFX_faction_sea_gen_guilds"	
 		texturefile = "gfx//interface//guilds_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_faction_bg_sea_ven_guilds2"	
+		name = "GFX_faction_bg_sea_gen_guilds2"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
 		transparencecheck = yes
 	}	
 	spriteType = {
-		name = "GFX_faction_sea_ven_guilds2"	
-		texturefile = "gfx//interface//sea_ven_guilds2_icon.tga"
+		name = "GFX_faction_sea_gen_guilds2"	
+		texturefile = "gfx//interface//sea_gen_guilds2_icon.tga"
 	}
 	##
 	
@@ -504,6 +504,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_age_iii_vassal_fl"
 		texturefile = "gfx/interface/ages/age_iii_vassal_fl.dds"
+	}
+	# Button
+	spriteType = {
+		name = "GFX_sea_ages_button"
+		texturefile = "gfx/interface/sea_custom_gui/sea_ages_button.dds"
 	}
 
 ##############
@@ -1326,6 +1331,14 @@ spriteTypes = {
 		name = "GFX_hogomod_get_new_general_icon"
 		texturefile = "gfx//interface//hogomod_get_new_general_icon.dds"
 	}
+	spriteType = {
+		name = "sea_piety_action_background"
+		texturefile = "gfx/interface/sea_custom_gui/sea_piety_action_background.dds"
+	}
+	spriteType = {
+		name = "sea_primitive_religion_background"
+		texturefile = "gfx/interface/sea_custom_gui/sea_primitive_religion_background.dds"
+	}
 
 ##############
 #### ICONS
@@ -1589,6 +1602,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sea_republican_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_republican_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_sea_building_logo"
+		texturefile = "gfx/interface/sea_decision_logos/sea_building_logo.dds"
 	}
 	
 	# Small Icons fit for event options:

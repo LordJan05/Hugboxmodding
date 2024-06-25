@@ -8,10 +8,10 @@ sea_por_trade = {
 	modifier = {
 		state_maintenance_modifier = 0.15
 		may_perform_slave_raid = yes
-		advisor_cost = -0.1
-		global_trade_power = 0.1
-		production_efficiency = 0.1
-		global_tax_modifier = 0.2
+		advisor_cost = 0.075
+		global_trade_power = 0.075
+		production_efficiency = 0.075
+		global_tax_modifier = 0.15
 	}
 }
 sea_por_explo = {
@@ -21,8 +21,8 @@ sea_por_explo = {
 	modifier = {
 		sailor_maintenance_modifer = 0.2
 		global_ship_repair = -0.2
-		ship_durability = 0.15
-		range = 0.2
+		ship_durability = 0.1
+		range = 0.15
 		colonists = 1
 		colonist_placement_chance = 0.1
 	}
@@ -35,7 +35,7 @@ sea_por_conti = {
 		stability_cost_modifier = 0.15
 		global_autonomy = 0.1
 		war_taxes_cost_modifier = -0.5
-		naval_morale = 0.1
+		naval_morale = 0.05
 		land_morale = 0.05
 		war_exhaustion = -0.03
 	}
@@ -108,8 +108,8 @@ sea_colonial_mil_2 = { # The Office of Offshore Logistics
 }
 ############################
 ############################
-# Venice:
-sea_ven_aristocrats = {
+# Genoa:
+sea_gen_aristocrats = {
 	monarch_power = MIL
 	always = yes
 
@@ -120,7 +120,7 @@ sea_ven_aristocrats = {
 		yearly_army_professionalism = -0.0066
 	}
 }
-sea_ven_aristocrats2 = {
+sea_gen_aristocrats2 = {
 	monarch_power = MIL
 	always = yes
 
@@ -132,7 +132,7 @@ sea_ven_aristocrats2 = {
 	}
 }
 
-sea_ven_traders = {
+sea_gen_traders = {
 	monarch_power = DIP
 	always = yes
 
@@ -144,7 +144,7 @@ sea_ven_traders = {
 		
 	}
 }
-sea_ven_traders2 = {
+sea_gen_traders2 = {
 	monarch_power = DIP
 	always = yes
 
@@ -157,7 +157,7 @@ sea_ven_traders2 = {
 	}
 }
 
-sea_ven_guilds = {
+sea_gen_guilds = {
 	monarch_power = ADM
 	always = yes
 
@@ -168,7 +168,7 @@ sea_ven_guilds = {
 		yearly_corruption = 0.2
 	}
 }
-sea_ven_guilds2 = {
+sea_gen_guilds2 = {
 	monarch_power = ADM
 	always = yes
 

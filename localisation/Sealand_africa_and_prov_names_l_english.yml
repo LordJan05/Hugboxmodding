@@ -927,7 +927,7 @@
 
  # Great Lakes Africa nations:
     # Culture:
-    oromo:0 "Oromo"
+    #oromo:0 "Oromo" # PDX added own
     # Masai:
     SAI:0 "Maasai"
     SAI_ADJ:0 "Maasai"
@@ -1069,7 +1069,7 @@
      swz_middle_1_mission_tt:0 "Not completed Mission §GSubjugate and Tax§! or Mission §RWar Tax and Defence§!"
      swz_middle_1_title:0 "§MExplore and Colonize§!"
      swz_middle_1_desc:0 "Explore and Colonize"
-     swz_explocolo_modifier_tt:0 "[Root.GetName] improves '§YOriginis of the First Humans§!' national idea with the following bonuses:\nColonists: §G+1§!\nGlobal Settler Increase: §G+15.00§!\nAllows recruitment of explorers & conquistadors."
+     swz_explocolo_modifier_tt:0 "[Root.GetName] improves '§YOriginis of the First Humans§!' national idea with the following bonuses:\nColonists: §G+1§!\nColonial Range: §G+100.0%§!\nGlobal Settler Increase: §G+15.00§!\nAllows recruitment of explorers & conquistadors."
      
      swz_right_1_empty_title:0 "§RWar Tax and Defence§!"
      swz_right_1_empty_desc:0 "Improved War Tax and Defence"

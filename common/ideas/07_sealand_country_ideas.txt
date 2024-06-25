@@ -430,7 +430,7 @@ sea_BYS_ideas = { # Barbary States
 }	
 sea_ETS_ideas = { # Emirate of Two Sicilies
 	start = {
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 		galley_power = 0.2
 	}
 	bonus = {

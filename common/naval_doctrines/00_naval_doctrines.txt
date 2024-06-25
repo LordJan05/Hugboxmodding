@@ -6,8 +6,8 @@ fleet_in_being = {
 	cost = 0.05 # money cost per each sailor employed in the whole navy
 	country_modifier = {
 		naval_maintenance_modifier = -0.15
-		transport_power = 0.33
-		transport_attrition = -0.5
+		global_ship_recruit_speed = -0.33
+		global_ship_repair = 0.15
 	}
 	effect = {
 		if = {
@@ -61,8 +61,9 @@ merchant_navy = {
 
 	cost = 0.05
 	country_modifier = {
+		light_ship_power = 0.2
 		global_ship_trade_power = 0.2
-		light_ship_power = 0.15
+		movement_speed_in_fleet_modifier = 1
 	}
 	effect = {
 		if = {
@@ -115,8 +116,9 @@ sea_ship_durability = {
 
 	cost = 0.05
 	country_modifier = {
-		ship_durability = 0.1
+		ship_durability = 0.15
 		naval_attrition = -0.33
+		global_ship_repair = -0.1
 	}
 	effect = {}
 	removed_effect = {}
@@ -314,6 +316,7 @@ dutch_trade_fleet = {
 	country_modifier = {
 		global_ship_trade_power = 0.25
 		range = 0.5
+		treasure_fleet_income = 0.1
 	}
 	effect = {}
 	removed_effect = {}
@@ -334,6 +337,7 @@ norse_raid_fleet = {
 	country_modifier = {
 		privateer_efficiency = 0.33
 		movement_speed_in_fleet_modifier = 3
+		may_perform_slave_raid_on_same_religion = yes
 	}
 	effect = {}
 	removed_effect = {}
@@ -350,6 +354,24 @@ venetian_arsenal_naval_doctrine = {
 	cost = 0.05
 	country_modifier = {
 		number_of_cannons_modifier = 0.1
+		hull_size_modifier = 0.1
+		sailor_maintenance_modifer = -0.2
+	}
+	effect = {}
+	removed_effect = {}
+
+	button_gfx = 14
+}
+sea_genoese_arsenal_naval_doctrine = {
+	can_select = {
+		#is_primitive = no
+		primary_culture = ligurian
+	}
+
+	cost = 0.05
+	country_modifier = {
+		number_of_cannons_modifier = 0.1
+		hull_size_modifier = 0.1
 		sailor_maintenance_modifer = -0.2
 	}
 	effect = {}
@@ -461,9 +483,10 @@ maghrebi_corsairs = {
 
 	cost = 0.05
 	country_modifier = {
-		privateer_efficiency = 0.25
-		may_perform_slave_raid = yes
+		privateer_efficiency = 0.33
+		movement_speed_in_fleet_modifier = 2
 		available_province_loot = 0.5
+		coast_raid_range = 1
 	}
 	effect = {}
 	removed_effect = {}
@@ -489,8 +512,8 @@ letter_of_marque = {
 
 	cost = 0.05
 	country_modifier = {
-		capture_ship_chance = 0.2
-		disengagement_chance = 0.1
+		capture_ship_chance = 0.33
+		disengagement_chance = 0.15
 		movement_speed_in_fleet_modifier = 1 
 	}
 	effect = {}

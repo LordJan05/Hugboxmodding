@@ -194,6 +194,7 @@ swz_explocolo_modifier = {
 	may_explore = yes
 	colonists = 1
 	global_colonial_growth = 15
+	range = 1
 }
 swz_wtaxattr_modifier = {
 	potential = {
@@ -531,19 +532,6 @@ sea_gen_northern_genoa_trade_modifier = {
 	infantry_cost = -0.1
 	infantry_power = 0.1
 }
-##########################################
-# Switzerland:
-swi_recruit_merc_inf_enabled_modifier = {
-	potential = {
-		tag = SWI
-		has_country_flag = swi_recruit_merc_inf_enabled
-	}
-	trigger = {
-		has_country_flag = swi_recruit_merc_inf_enabled
-	}
-	mercenary_manpower = -0.5
-}
-
 ##########################################
 # Electors
 sea_elector_splendor_modifier = {

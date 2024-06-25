@@ -541,3 +541,230 @@ can_keep_fort_trigger = {
 		}
 	}
 }
+
+is_african_culture = {
+	OR = {
+		# mande
+		culture = mali
+		culture = songhai
+		culture = soninke
+		culture = bambara
+		culture = bozo
+		culture = dyola
+		# sahelian
+		culture = hausa
+		culture = kanuri
+		culture = bilala
+		culture = tunjur
+		culture = tuareg
+		culture = senegambian
+		culture = fulani
+		# west_african
+		culture = yorumba
+		culture = aka
+		culture = nupe
+		culture = fon
+		culture = mossi
+		culture = dagomba
+		# southern_african
+		culture = makua
+		culture = nguni
+		culture = bemba
+		culture = khoisan
+		culture = shona
+		culture = nyasa
+		# kongo_group
+		culture = lunda
+		culture = luba
+		culture = kongolese
+		culture = yaka
+		culture = kuba
+		culture = mbundu
+		culture = chokwe
+		culture = mbangala
+		culture = jukun
+		culture = sawabantu
+		culture = lingala
+		# great_lakes_group
+		culture = rwandan
+		culture = ganda
+		culture = masaba
+		# african
+		culture = madagasque
+		culture = takama
+		culture = bena
+		culture = bantu
+		culture = swahili
+		# cushitic
+		culture = somali
+		culture = harari
+		culture = afar
+		culture = oromo
+		culture = tigray
+		culture = sidamo
+		culture = amhara
+		# sudanese
+		culture = fur_culture
+		culture = acholi
+		culture = nubian
+		culture = beja
+	}
+}
+is_african_primary_culture = {
+	OR = {
+		# mande
+		primary_culture = mali
+		primary_culture = songhai
+		primary_culture = soninke
+		primary_culture = bambara
+		primary_culture = bozo
+		primary_culture = dyola
+		# sahelian
+		primary_culture = hausa
+		primary_culture = kanuri
+		primary_culture = bilala
+		primary_culture = tunjur
+		primary_culture = tuareg
+		primary_culture = senegambian
+		primary_culture = fulani
+		# west_african
+		primary_culture = yorumba
+		primary_culture = aka
+		primary_culture = nupe
+		primary_culture = fon
+		primary_culture = mossi
+		primary_culture = dagomba
+		# southern_african
+		primary_culture = makua
+		primary_culture = nguni
+		primary_culture = bemba
+		primary_culture = khoisan
+		primary_culture = shona
+		primary_culture = nyasa
+		# kongo_group
+		primary_culture = lunda
+		primary_culture = luba
+		primary_culture = kongolese
+		primary_culture = yaka
+		primary_culture = kuba
+		primary_culture = mbundu
+		primary_culture = chokwe
+		primary_culture = mbangala
+		primary_culture = jukun
+		primary_culture = sawabantu
+		primary_culture = lingala
+		# great_lakes_group
+		primary_culture = rwandan
+		primary_culture = ganda
+		primary_culture = masaba
+		# african
+		primary_culture = madagasque
+		primary_culture = takama
+		primary_culture = bena
+		primary_culture = bantu
+		primary_culture = swahili
+		# cushitic
+		primary_culture = somali
+		primary_culture = harari
+		primary_culture = afar
+		primary_culture = oromo
+		primary_culture = tigray
+		primary_culture = sidamo
+		primary_culture = amhara
+		# sudanese
+		primary_culture = fur_culture
+		primary_culture = acholi
+		primary_culture = nubian
+		primary_culture = beja
+	}
+}
+is_african_accepted_culture = {
+	OR = {
+		# mande
+		accepted_culture = mali
+		accepted_culture = songhai
+		accepted_culture = soninke
+		accepted_culture = bambara
+		accepted_culture = bozo
+		accepted_culture = dyola
+		# sahelian
+		accepted_culture = hausa
+		accepted_culture = kanuri
+		accepted_culture = bilala
+		accepted_culture = tunjur
+		accepted_culture = tuareg
+		accepted_culture = senegambian
+		accepted_culture = fulani
+		# west_african
+		accepted_culture = yorumba
+		accepted_culture = aka
+		accepted_culture = nupe
+		accepted_culture = fon
+		accepted_culture = mossi
+		accepted_culture = dagomba
+		# southern_african
+		accepted_culture = makua
+		accepted_culture = nguni
+		accepted_culture = bemba
+		accepted_culture = khoisan
+		accepted_culture = shona
+		accepted_culture = nyasa
+		# kongo_group
+		accepted_culture = lunda
+		accepted_culture = luba
+		accepted_culture = kongolese
+		accepted_culture = yaka
+		accepted_culture = kuba
+		accepted_culture = mbundu
+		accepted_culture = chokwe
+		accepted_culture = mbangala
+		accepted_culture = jukun
+		accepted_culture = sawabantu
+		accepted_culture = lingala
+		# great_lakes_group
+		accepted_culture = rwandan
+		accepted_culture = ganda
+		accepted_culture = masaba
+		# african
+		accepted_culture = madagasque
+		accepted_culture = takama
+		accepted_culture = bena
+		accepted_culture = bantu
+		accepted_culture = swahili
+		# cushitic
+		accepted_culture = somali
+		accepted_culture = harari
+		accepted_culture = afar
+		accepted_culture = oromo
+		accepted_culture = tigray
+		accepted_culture = sidamo
+		accepted_culture = amhara
+		# sudanese
+		accepted_culture = fur_accepted_culture
+		accepted_culture = acholi
+		accepted_culture = nubian
+		accepted_culture = beja
+	}
+}
+has_state_edict_enabled = {
+	OR = {
+		has_state_edict = edict_advancement_effort
+		has_state_edict = edict_centralization_effort
+		has_state_edict = edict_defensive_edict
+		has_state_edict = edict_of_absolutism
+		has_state_edict = edict_of_governance
+		has_state_edict = edict_encourage_development
+		has_state_edict = edict_feudal_de_jure_law
+		has_state_edict = french_infrastructure_network
+		has_state_edict = edict_promote_military_recruitment
+		has_state_edict = edict_protect_trade
+		has_state_edict = protect_trade_empowered
+		has_state_edict = edict_religion_enforced
+		has_state_edict = edict_religious_unity
+		has_state_edict = chinese_industrialization
+		has_state_edict = feudal_taxes_state_edict
+		has_state_edict = religious_tolerance_state_edict
+		has_state_edict = state_integration_state_edict
+		has_state_edict = urbanization_state_edict
+	}
+}

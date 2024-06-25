@@ -232,6 +232,7 @@ country_decisions = {
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
 			set_country_flag = formed_rhineland_flag
+			set_country_flag = formed_hsa_flag
 		}
 		ai_will_do = {
 			factor = 100

@@ -1482,10 +1482,10 @@ caliphate_reform = {
 		missionaries = 1
 		global_missionary_strength = 0.02
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		government_abilities = {
@@ -1637,10 +1637,10 @@ persian_government_reform = {
 		development_cost = -0.025
 		innovativeness_gain = 0.25
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	maintain_dynasty = yes
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
@@ -1686,10 +1686,10 @@ zoroastrian_persian_government_reform = {
 		development_cost = -0.025
 		monarch_admin_power = 2
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	maintain_dynasty = yes
 	conditional = {
 		allow = { has_dlc = "King of Kings" }
@@ -1874,7 +1874,10 @@ stadthalter_monarchy_reform = {
 		}
 	}
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		if = {
+			limit = { is_lesser_in_union = no }
+			country_event = { id = dutch_republic.33 }
+		}
 	}
 
 	custom_attributes = {
@@ -2428,10 +2431,7 @@ prussian_monarchy = {
 	}
 	trigger = {
 		OR = {
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican
+			religion_group = christian
 			has_unlocked_government_reform = { government_reform = prussian_monarchy }
 		}
 	}
@@ -2513,10 +2513,7 @@ prussian_monarchy_base = {
 	}
 	trigger = {
 		OR = {
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican
+			religion_group = christian
 			AND = {
 				is_playing_custom_nation = yes
 				OR = {
@@ -2971,10 +2968,10 @@ feudal_theocracy = {
 			feudal_theocracy_mechanic
 		}
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 }
 
 mughal_government = {
@@ -4269,10 +4266,10 @@ livonian_theocratic_monarchy = {
 		church_loyalty_modifier = 0.05
 		no_stability_loss_on_monarch_death = yes
 	}
-	custom_attributes = {
-		#enables_aristocratic_idea_group = no
-		enables_divine_idea_group = yes
-	}
+	#custom_attributes = {
+	#	enables_aristocratic_idea_group = no
+	#	enables_divine_idea_group = yes
+	#}
 }
 
 # If you want to focus on the estates and hate heirs
@@ -4872,10 +4869,10 @@ andean_empire_reform = {
 		global_unrest = -2
 		max_absolutism_effect = 0.1
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	
 	government_abilities = {
 		divine_authority_mechanic
@@ -4948,6 +4945,15 @@ nahuatl_monarchy_reform = {
 	government_abilities = {
 		blood_gathering_mechanic
 	}
+	custom_attributes = {
+		aztecs_reform_aztec_warriors = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
 }
 
 maya_confederation_reform = {
@@ -4983,10 +4989,10 @@ divine_kingship_reform = {
 		overextension_impact_modifier = -0.1
 		reform_progress_growth = -0.1
 	}
-	custom_attributes = {
-		enables_divine_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_divine_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	
 	custom_attributes = {
 		MAY_max_abso_buff = yes
@@ -5595,10 +5601,10 @@ TIM_plunder_economy = {
 		has_dlc = "Winds of Change"
 		has_unlocked_government_reform = { government_reform = TIM_plunder_economy }
 	}
-	custom_attributes = {
-		enables_horde_idea_group = yes
-		#enables_aristocratic_idea_group = no
-	}
+	#custom_attributes = {
+	#	enables_horde_idea_group = yes
+	#	enables_aristocratic_idea_group = no
+	#}
 	raze_province = yes
 	modifiers = {
 		raze_power_gain = -0.5

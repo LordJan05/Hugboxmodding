@@ -12,7 +12,13 @@ edict_feudal_de_jure_law = {
 		current_age = age_of_discovery
 		custom_trigger_tooltip = {
 			tooltip = sea_remove_state_edicts_flag_tt
-			NOT = { has_country_flag = sea_state_edicts_flag }
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
 		}
 	}
 	
@@ -21,6 +27,7 @@ edict_feudal_de_jure_law = {
 	}
 	
 	color = {  116 198 240  }
+	on_state_edict_revoked = { FROM = { clr_country_flag = sea_state_edicts_decision_edict_feudal_de_jure_law_flag } }
 	
 	
 	ai_will_do = {

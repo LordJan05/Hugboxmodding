@@ -700,19 +700,15 @@ gc_morocco_3 = {
 		}
 		
 		trigger = {
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			337 = { country_or_non_sovereign_subject_holds = ROOT }
-			2461 = { country_or_non_sovereign_subject_holds = ROOT }
-			hautes_plaines_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			tafilalt_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = algiers_area
+					area = hautes_plaines_area
+					area = tafilalt_area
+					province_id = 337
+					province_id = 2461
+				}
+				value = 5
 			}
 		}
 		

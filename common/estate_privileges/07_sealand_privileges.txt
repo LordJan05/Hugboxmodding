@@ -127,6 +127,9 @@ estate_church_service_to_god = {
 	}
 	penalties = {
 	}
+	mechanics = {
+		exempt_from_seize_land
+	}
 	ai_will_do = { # Copy of the Increased Levies
 		factor = 5
 		modifier = {
@@ -231,6 +234,9 @@ estate_burghers_prussian_confederation_conceded = {
 	benefits = {
 		merchants = 2
 		placed_merchant_power = 1
+	}
+	mechanics = {
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 0
@@ -959,7 +965,7 @@ estate_marathas_rajput_regiments = {
 	}
 	mechanics = {
 		enables_rajput_regiments
-		#exempt_from_seize_land
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -967,6 +973,71 @@ estate_marathas_rajput_regiments = {
 			factor = 0
 			NOT = { crown_land_share = 15 }
 		}
+	}
+}
+# TRIBES:
+estate_nomadic_tribes_indebted_to_tribes = {
+	icon = privilege_give_money
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	on_granted = {
+		custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
+		tooltip = {
+			add_inflation = 0.5
+		}
+		hidden_effect = {
+			country_event = { id = zlewikk.2 }
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+		}
+	}
+	penalties = {
+		trade_efficiency = -0.05
+	}
+	benefits = {
+	}
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_nomadic_tribes_indebted_to_tribes
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.03 }
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }
 ################################

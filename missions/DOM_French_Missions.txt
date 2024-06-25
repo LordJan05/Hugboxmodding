@@ -1256,11 +1256,11 @@ french_rev_missions_1 = {
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
-		if = { 
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		#if = { 
+		#	limit = { has_dlc = "Emperor" }
+		#	is_revolution_target = yes 
+		#}
+		#else = { is_revolutionary = yes } 
 	}
 	has_country_shield = yes
 	
@@ -1535,6 +1535,7 @@ french_missions_2 = {
 					every_owned_province = {
 						limit = {
 							region = france_region
+							is_core = PREV
 						}
 						add_core = ROOT
 					}
@@ -2277,7 +2278,7 @@ french_missions_2_Continuation_b = {
 				}
 			}
 			total_development = 500 
-			crown_land_share = 50 
+			crown_land_share = 35
 		}
 		effect = { 
 			if = {
@@ -2349,11 +2350,11 @@ french_rev_missions_2 = {
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
-		if = { 
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		#if = { 
+		#	limit = { has_dlc = "Emperor" }
+		#	is_revolution_target = yes 
+		#}
+		#else = { is_revolutionary = yes } 
 	}
 	has_country_shield = yes
 	
@@ -3766,11 +3767,11 @@ french_rev_missions_3 = {
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
-		if = { 
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		#if = { 
+		#	limit = { has_dlc = "Emperor" }
+		#	is_revolution_target = yes 
+		#}
+		#else = { is_revolutionary = yes } 
 	}
 	has_country_shield = yes
 	
@@ -3853,7 +3854,7 @@ french_rev_missions_3 = {
 			NOT = { inflation = 0.1 } 
 			NOT = { corruption = 0.1 } 
 			NOT = { num_of_loans = 1 } 
-			has_idea = mandats_territoriaux
+			#has_idea = mandats_territoriaux
 		}
 		effect = {
 			add_country_modifier = { 
@@ -5086,11 +5087,11 @@ french_rev_missions_4 = {
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
-		if = { 
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		#if = { 
+		#	limit = { has_dlc = "Emperor" }
+		#	is_revolution_target = yes 
+		#}
+		#else = { is_revolutionary = yes } 
 	}
 	has_country_shield = yes
 	
@@ -6976,11 +6977,11 @@ french_rev_missions_5 = {
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
-		if = { 
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		#if = { 
+		#	limit = { has_dlc = "Emperor" }
+		#	is_revolution_target = yes 
+		#}
+		#else = { is_revolutionary = yes } 
 	}
 	has_country_shield = yes	
 	

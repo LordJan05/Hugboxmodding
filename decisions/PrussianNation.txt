@@ -100,12 +100,7 @@ country_decisions = {
 			NOT = { exists = PRU }
 			NOT = { exists = PRA }
 			adm_tech = 10
-			OR = {
-				religion = protestant
-				religion = reformed
-				religion = hussite
-				religion = anglican
-			}
+			religion_group = christian
 			owns_core_province = 41			# Königsberg
 			OR = {
 				owns_core_province = 43		# Danzig
@@ -230,6 +225,16 @@ country_decisions = {
 				change_culture = prussian
 			}
 			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_hsa_flag
 		}
 		ai_will_do = {
 			factor = 1
@@ -287,19 +292,11 @@ country_decisions = {
 						tooltip = teu_prussia_path_ct
 						has_country_flag = teu_prussian_path
 					}
-					religion = protestant
-					religion = reformed
-					religion = hussite
-					religion = anglican
+					religion_group = christian
 				}
 			}
 			else = {
-				OR = {
-					religion = protestant
-					religion = reformed
-					religion = hussite
-					religion = anglican
-				}
+				religion_group = christian
 			}
  			owns_core_province = 41 # Königsberg
 			41 = { 					# Königsberg
@@ -438,6 +435,16 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_hsa_flag
 		}
 		ai_will_do = {
 			factor = 1
@@ -510,12 +517,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			OR = {
-				religion = protestant
- 				religion = reformed
-				religion = hussite
-				religion = anglican
-			}
+			religion_group = christian
 			owns_core_province = 41			# Königsberg
 			owns_core_province = 42			# Warmia
 			owns_core_province = 43			# Danzig
@@ -625,6 +627,16 @@ country_decisions = {
 				duration = 3650
 			}
 			set_country_flag = formed_prussia_flag
+			set_country_flag = formed_pomerania_flag
+			set_country_flag = formed_hannover_flag
+			set_country_flag = formed_westphalia_flag
+			set_country_flag = formed_saxony_flag
+			set_country_flag = formed_swabia_flag
+			set_country_flag = formed_franconia_flag
+			set_country_flag = formed_bavaria_flag
+			set_country_flag = formed_switzerland_flag
+			set_country_flag = formed_austria_flag
+			set_country_flag = formed_hsa_flag
 		}
 		ai_will_do = {
 			factor = 10

@@ -5698,6 +5698,11 @@ create_european_colony =  {
 			subject_type = european_colony
 			subject = FROM
 		}
+		FROM = {
+			change_government = republic
+			add_government_reform = colonial_government
+			swap_non_generic_missions = yes
+		}
 	}
 	ai_will_do = {
 		always = no

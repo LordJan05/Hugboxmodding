@@ -453,10 +453,10 @@ fish = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			has_province_flag = sea_fishing_game_province_depleted
-		}
+		#modifier = {
+		#	factor = 0
+		#	has_province_flag = sea_fishing_game_province_depleted
+		#}
 	}
 }
 

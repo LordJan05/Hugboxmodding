@@ -4440,12 +4440,34 @@ mint = {
 				}
 			}
 		}
+		ROOT = {
+			if = {
+				limit = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				add_permanent_province_modifier = { 
+					name = mint_temple_modifier
+					duration = -1
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = mint
 			type = tax
 			value = 2
+		}
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = mint_temple_modifier
+				}
+				remove_province_modifier = mint_temple_modifier
+			}
 		}
 	}
 	

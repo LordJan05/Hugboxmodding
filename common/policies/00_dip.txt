@@ -663,7 +663,7 @@ commercial_embassies = {
 }
 
 mandatory_service = {
-	monarch_power = MIL
+	monarch_power = DIP
 	potential = {
 		has_idea_group = diplomatic_ideas
 		has_idea_group = plutocracy_ideas

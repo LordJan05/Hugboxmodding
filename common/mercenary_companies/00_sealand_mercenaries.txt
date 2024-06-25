@@ -37,7 +37,7 @@ sea_big_merc_comp_reform_0 = { # 16
 }
 sea_cav_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
-	cost_modifier = 1.5
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 8
 	trigger = {
@@ -50,7 +50,7 @@ sea_cav_merc_comp_0 = { # 8
 }
 sea_cav2_merc_comp_0 = { # 8
 	regiments_per_development = 0.2
-	cost_modifier = 1.5
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 8
 	trigger = {
@@ -120,7 +120,7 @@ sea_big_merc_comp_reform_1 = { # 20
 }
 sea_cav_merc_comp_1 = { # 10
 	regiments_per_development = 0.25
-	cost_modifier = 1.5
+	cost_modifier = 0.8
 	cavalry_weight = 1
 	cavalry_cap = 10
 	trigger = {
@@ -136,7 +136,7 @@ sea_cav_merc_comp_1 = { # 10
 }
 sea_cav2_merc_comp_1 = { # 10
 	regiments_per_development = 0.25
-	cost_modifier = 1.5
+	cost_modifier = 0.8
 	cavalry_weight = 1
 	cavalry_cap = 10
 	trigger = {
@@ -213,7 +213,7 @@ sea_big_merc_comp_reform_2 = { # 24
 }
 sea_cav_merc_comp_2 = { # 12
 	regiments_per_development = 0.3
-	cost_modifier = 1.35
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 12
 	trigger = {
@@ -230,7 +230,7 @@ sea_cav_merc_comp_2 = { # 12
 }
 sea_cav2_merc_comp_2 = { # 12
 	regiments_per_development = 0.3
-	cost_modifier = 1.35
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 12
 	trigger = {
@@ -312,7 +312,7 @@ sea_big_merc_comp_reform_3 = { # 26
 }
 sea_cav_merc_comp_3 = { # 14
 	regiments_per_development = 0.35
-	cost_modifier = 1.35
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 14
 	trigger = {
@@ -330,7 +330,7 @@ sea_cav_merc_comp_3 = { # 14
 }
 sea_cav2_merc_comp_3 = { # 14
 	regiments_per_development = 0.35
-	cost_modifier = 1.35
+	cost_modifier = 0.75
 	cavalry_weight = 1
 	cavalry_cap = 14
 	trigger = {
@@ -349,7 +349,7 @@ sea_cav2_merc_comp_3 = { # 14
 }
 sea_inf_cav_merc_comp_3 = { # 26
 	regiments_per_development = 0.65
-	cost_modifier = 1.35
+	cost_modifier = 0.9
 	cavalry_weight = 0.5
 	cavalry_cap = 13
 	trigger = {
@@ -434,7 +434,7 @@ sea_big_merc_comp_reform_4 = { # 30
 }
 sea_cav_merc_comp_4 = { # 18
 	regiments_per_development = 0.45
-	cost_modifier = 1.2
+	cost_modifier = 0.6
 	cavalry_weight = 1
 	cavalry_cap = 18
 	trigger = {
@@ -453,7 +453,7 @@ sea_cav_merc_comp_4 = { # 18
 }
 sea_cav2_merc_comp_4 = { # 18
 	regiments_per_development = 0.45
-	cost_modifier = 1.2
+	cost_modifier = 0.6
 	cavalry_weight = 1
 	cavalry_cap = 18
 	trigger = {
@@ -473,7 +473,7 @@ sea_cav2_merc_comp_4 = { # 18
 }
 sea_inf_cav_merc_comp_4 = { # 30
 	regiments_per_development = 0.75
-	cost_modifier = 1.2
+	cost_modifier = 0.75
 	cavalry_weight = 0.5
 	cavalry_cap = 15
 	trigger = {
@@ -561,7 +561,7 @@ sea_big_merc_comp_reform_5 = { # 34
 }
 sea_cav_merc_comp_5 = { # 24
 	regiments_per_development = 0.6
-	cost_modifier = 1.2
+	cost_modifier = 0.55
 	cavalry_weight = 1
 	cavalry_cap = 24
 	trigger = {
@@ -580,7 +580,7 @@ sea_cav_merc_comp_5 = { # 24
 }
 sea_cav2_merc_comp_5 = { # 24
 	regiments_per_development = 0.6
-	cost_modifier = 1.2
+	cost_modifier = 0.55
 	cavalry_weight = 1
 	cavalry_cap = 24
 	trigger = {
@@ -600,7 +600,7 @@ sea_cav2_merc_comp_5 = { # 24
 }
 sea_inf_cav_merc_comp_5 = { # 34
 	regiments_per_development = 0.85
-	cost_modifier = 1.2
+	cost_modifier = 0.75
 	cavalry_weight = 0.5
 	cavalry_cap = 17
 	trigger = {
@@ -707,7 +707,7 @@ sea_big_merc_comp_reform_6 = { # 40
 }
 sea_cav_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 1.2
+	cost_modifier = 0.55
 	cavalry_weight = 1
 	cavalry_cap = 32
 	trigger = {
@@ -727,7 +727,7 @@ sea_cav_merc_comp_6 = { # 32
 }
 sea_cav2_merc_comp_6 = { # 32
 	regiments_per_development = 0.8
-	cost_modifier = 1.2
+	cost_modifier = 0.55
 	cavalry_weight = 1
 	cavalry_cap = 32
 	trigger = {
@@ -748,7 +748,7 @@ sea_cav2_merc_comp_6 = { # 32
 }
 sea_inf_cav_merc_comp_6 = { # 40
 	regiments_per_development = 1
-	cost_modifier = 1.2
+	cost_modifier = 0.75
 	cavalry_weight = 0.5
 	cavalry_cap = 20
 	trigger = {

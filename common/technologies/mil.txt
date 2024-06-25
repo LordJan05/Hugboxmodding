@@ -270,6 +270,7 @@ technology = {
 	maneuver_value 		= 	0.25
 
 	fort_16th = yes
+	war_college = yes
 
 	enable = hungarian_hussar
 	enable = ottoman_spahi		
@@ -461,8 +462,6 @@ technology = {
 	
 	enable = chambered_demi_cannon
 	enable = demi_culverin
-
-	war_college = yes
 }
 
 technology = {

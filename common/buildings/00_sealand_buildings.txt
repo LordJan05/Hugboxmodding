@@ -333,16 +333,33 @@ war_college = { # Mil Tech 16
 	modifier = {
 		army_tradition = 0.5
 		free_leader_pool = 1
+		drill_gain_modifier = 0.25
 	}
 	one_per_country = yes
 
 	on_built = {
+		area = {
+			add_permanent_province_modifier = { 
+				name = war_college_supply_modifier
+				duration = -1
+			}
+		}
 		hidden_effect = {
 			FROM = {
 				change_variable = {
 					which = num_of_buildings_built
 					value = 1
 				}
+			}
+		}
+	}
+	on_destroyed = {
+		area = {
+			if = {
+				limit = {
+					has_province_modifier = war_college_supply_modifier
+				}
+				remove_province_modifier = war_college_supply_modifier
 			}
 		}
 	}

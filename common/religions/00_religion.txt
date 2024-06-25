@@ -4,7 +4,7 @@
 
 christian = {
 	defender_of_faith = yes
-	can_form_personal_unions = yes
+	#can_form_personal_unions = yes
 	
 	center_of_religion = 118 # Rome
 
@@ -3233,7 +3233,7 @@ pagan = {
 		
 		authority = yes
 		religious_reforms = yes
-		require_reformed_for_institution_development = yes
+		#require_reformed_for_institution_development = yes
 		reform_tooltip = INTI_REFORM_TOOLTIP
 		
 		heretic = { INTI_HERETIC }	
@@ -3260,7 +3260,7 @@ pagan = {
 		doom = yes
 		declare_war_in_regency = yes
 		religious_reforms = yes
-		require_reformed_for_institution_development = yes
+		#require_reformed_for_institution_development = yes
 		reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		
 		heretic = { NAHUATL_HERETIC }	
@@ -3285,7 +3285,7 @@ pagan = {
 			local_missionary_strength = 0.02
 		}
 		
-		require_reformed_for_institution_development = yes
+		#require_reformed_for_institution_development = yes
 		religious_reforms = yes
 		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
 		

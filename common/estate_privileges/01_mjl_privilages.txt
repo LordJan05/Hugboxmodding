@@ -6,10 +6,13 @@ estate_rajput_levies = {
 		technology_group = indian
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.10
+		#global_tax_modifier = -0.10
 		global_manpower_modifier = 0.25
 	}
 	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 1000
@@ -129,7 +132,7 @@ mjl_estate_tribes_advisors = {
 		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		mil_advisor_cost = -0.25
+		advisor_cost = -0.15
 	}
 	ai_will_do = {
 		factor = 1000

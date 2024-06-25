@@ -528,6 +528,7 @@ country_event = {
 		OR = {
 			is_colonial_nation = yes
 			has_reform = trade_company_government
+			is_subject_of_type = european_colony
 		}
 		ai = no
 		NOT = { has_country_flag = mjl_cn_clean_up_ai_mess }

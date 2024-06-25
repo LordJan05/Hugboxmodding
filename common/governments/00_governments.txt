@@ -207,6 +207,8 @@ monarchy = {
 				TIM_plunder_economy
 				#
 				h_reform_sinicized_horde
+				# Sealand
+				diverse_society_reform
 			}
 		}
 		bureaucracy = {

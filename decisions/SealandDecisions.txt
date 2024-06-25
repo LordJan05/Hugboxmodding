@@ -127,6 +127,28 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	sea_iro_to_haudenosaunee_nation = {
+		major = yes
+		potential = {
+			always = no
+			NOT = { has_country_flag = sea_iro_to_haudenosaunee_nation_flag }
+			tag = IRO
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			tag = IRO
+		}
+		effect = {
+			set_country_flag = sea_iro_to_haudenosaunee_nation_flag
+			override_country_name = sea_iro_to_haudenosaunee_nation_name
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
 
 country_decisions = { # Serbia Tsardom
@@ -261,6 +283,7 @@ country_decisions = { # Weaker Prussia
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
 			set_country_flag = formed_rhineland_flag
+			set_country_flag = formed_hsa_flag
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -414,6 +437,7 @@ country_decisions = { # Weaker Prussia
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
 			set_country_flag = formed_rhineland_flag
+			set_country_flag = formed_hsa_flag
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -526,6 +550,7 @@ country_decisions = { # Weaker Prussia
 			set_country_flag = formed_austria_flag
 			set_country_flag = formed_north_german_flag
 			set_country_flag = formed_rhineland_flag
+			set_country_flag = formed_hsa_flag
 			if = {
 				limit = {
 					NOT = { government_rank = 3 }
@@ -1558,35 +1583,51 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	sea_remove_state_edicts = {
+	sea_state_edicts_decision = {
 		major = yes
+		provinces_to_highlight = {
+			has_state_edict_enabled = yes
+			owned_by = ROOT
+		}
 		potential = {
 			ai = no
 			NOT = { has_country_flag = sea_state_edicts_flag }
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
 		}
 		allow = {
-			always = yes
+			custom_trigger_tooltip = {
+				tooltip = sea_state_edicts_decision_ttt
+				always = yes
+			}
 		}
 		effect = {
 			set_country_flag = sea_state_edicts_flag
-			custom_tooltip = sea_remove_state_edicts_tt
+			country_event = { id = sealand_events.28 }
+			custom_tooltip = sea_state_edicts_decision_tt
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	sea_enable_state_edicts = {
+	sea_clear_specific_building_decision = {
 		major = yes
 		potential = {
 			ai = no
-			has_country_flag = sea_state_edicts_flag
+			NOT = { has_country_flag = sea_clear_specific_building_flag }
 		}
 		allow = {
 			always = yes
 		}
 		effect = {
-			clr_country_flag = sea_state_edicts_flag
-			custom_tooltip = sea_enable_state_edicts_tt
+			set_country_flag = sea_clear_specific_building_flag
+			country_event = { id = sealand_events.29 }
+			custom_tooltip = sea_clear_specific_building_decision_tt
 		}
 		ai_will_do = {
 			factor = 0
@@ -1868,107 +1909,107 @@ country_decisions = {
 		}
 	}
 	# Fishing game?:
-	sea_fishing_game = {
-		potential = {
-			ai = no
-			any_owned_province = {
-				trade_goods = fish
-			}
-		}
-		provinces_to_highlight = {
-			trade_goods = fish
-			NOT = { has_province_modifier = sea_fishing_game_modifier }
-			owned_by = ROOT
-		}
-		allow = {
-			if = {
-				limit = {
-					any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
-				}
-				custom_trigger_tooltip = {
-					tooltip = sea_fishing_game_tt
-					OR = {
-						NOT = { has_country_flag = sea_fishing_game_timeout_tt }
-						had_country_flag = {
-							flag = sea_fishing_game_timeout_tt
-							days = 280
-						}
-						always = no
-					}
-				}
-			}
-			else = {
-				any_owned_province = {
-					trade_goods = fish
-					NOT = { has_province_modifier = sea_fishing_game_modifier }
-				}
-			}
-		}
-		effect = {
-			set_country_flag = sea_fishing_game_timeout_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
-					}
-					every_owned_province = { clr_province_flag = sea_fishing_game_modifier_flag }
-					every_owned_province = { remove_province_triggered_modifier = sea_fishing_game_triggered_modifier }
-				}
-			}
-			random_owned_province = {
-				limit = {
-					trade_goods = fish
-					NOT = { has_province_modifier = sea_fishing_game_modifier }
-				}
-				custom_tooltip = sea_fishing_game_ttt
-				hidden_effect = {
-					add_province_triggered_modifier = sea_fishing_game_triggered_modifier
-					set_province_flag = sea_fishing_game_modifier_flag
-				}
-			}
-		}
-		ai_will_do = { factor = 0 }
-	}
-	sea_roulette_game = {
-		potential = {
-			always = no # Turned off
-		}
-		allow = {
-			mil_power = 50
-			if = {
-				limit = {
-					has_country_flag = sea_roulette_game_timeout_tt
-				}
-				custom_trigger_tooltip = {
-					tooltip = sea_roulette_game_tt
-					had_country_flag = {
-						flag = sea_roulette_game_timeout_tt
-						days = 3650
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = sea_roulette_game_ttt
-			hidden_effect = {
-				if = {
-					limit = {
-						any_owned_province = { has_province_modifier = sea_roulette_game_triggered_modifier }
-					}
-					every_owned_province = { clr_province_flag = sea_roulette_game_modifier_flag }
-					every_owned_province = { remove_province_triggered_modifier = sea_roulette_game_triggered_modifier }
-				}
-				capital_scope = {
-					add_province_triggered_modifier = sea_roulette_game_triggered_modifier
-					set_province_flag = sea_roulette_game_modifier_flag
-				}
-				set_country_flag = sea_roulette_game_timeout_tt
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	#sea_fishing_game = {
+	#	potential = {
+	#		ai = no
+	#		any_owned_province = {
+	#			trade_goods = fish
+	#		}
+	#	}
+	#	provinces_to_highlight = {
+	#		trade_goods = fish
+	#		NOT = { has_province_modifier = sea_fishing_game_modifier }
+	#		owned_by = ROOT
+	#	}
+	#	allow = {
+	#		if = {
+	#			limit = {
+	#				any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
+	#			}
+	#			custom_trigger_tooltip = {
+	#				tooltip = sea_fishing_game_tt
+	#				OR = {
+	#					NOT = { has_country_flag = sea_fishing_game_timeout_tt }
+	#					had_country_flag = {
+	#						flag = sea_fishing_game_timeout_tt
+	#						days = 280
+	#					}
+	#					always = no
+	#				}
+	#			}
+	#		}
+	#		else = {
+	#			any_owned_province = {
+	#				trade_goods = fish
+	#				NOT = { has_province_modifier = sea_fishing_game_modifier }
+	#			}
+	#		}
+	#	}
+	#	effect = {
+	#		set_country_flag = sea_fishing_game_timeout_tt
+	#		hidden_effect = {
+	#			if = {
+	#				limit = {
+	#					any_owned_province = { has_province_modifier = sea_fishing_game_triggered_modifier }
+	#				}
+	#				every_owned_province = { clr_province_flag = sea_fishing_game_modifier_flag }
+	#				every_owned_province = { remove_province_triggered_modifier = sea_fishing_game_triggered_modifier }
+	#			}
+	#		}
+	#		random_owned_province = {
+	#			limit = {
+	#				trade_goods = fish
+	#				NOT = { has_province_modifier = sea_fishing_game_modifier }
+	#			}
+	#			custom_tooltip = sea_fishing_game_ttt
+	#			hidden_effect = {
+	#				add_province_triggered_modifier = sea_fishing_game_triggered_modifier
+	#				set_province_flag = sea_fishing_game_modifier_flag
+	#			}
+	#		}
+	#	}
+	#	ai_will_do = { factor = 0 }
+	#}
+	#sea_roulette_game = {
+	#	potential = {
+	#		always = no # Turned off
+	#	}
+	#	allow = {
+	#		mil_power = 50
+	#		if = {
+	#			limit = {
+	#				has_country_flag = sea_roulette_game_timeout_tt
+	#			}
+	#			custom_trigger_tooltip = {
+	#				tooltip = sea_roulette_game_tt
+	#				had_country_flag = {
+	#					flag = sea_roulette_game_timeout_tt
+	#					days = 3650
+	#				}
+	#			}
+	#		}
+	#	}
+	#	effect = {
+	#		custom_tooltip = sea_roulette_game_ttt
+	#		hidden_effect = {
+	#			if = {
+	#				limit = {
+	#					any_owned_province = { has_province_modifier = sea_roulette_game_triggered_modifier }
+	#				}
+	#				every_owned_province = { clr_province_flag = sea_roulette_game_modifier_flag }
+	#				every_owned_province = { remove_province_triggered_modifier = sea_roulette_game_triggered_modifier }
+	#			}
+	#			capital_scope = {
+	#				add_province_triggered_modifier = sea_roulette_game_triggered_modifier
+	#				set_province_flag = sea_roulette_game_modifier_flag
+	#			}
+	#			set_country_flag = sea_roulette_game_timeout_tt
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
 	bagirmi_move_capital_decision = {
 		major = yes
 		potential = {
@@ -1984,6 +2025,29 @@ country_decisions = {
 		effect = {
 			set_country_flag = bagirmi_move_capital_decision_flag
 			set_capital = 5049
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	afr_culture_unite_reform_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_reform = diverse_society_reform
+			NOT = { has_country_flag = afr_culture_unite_reform_decision_flag }
+			any_owned_province = {
+				has_owner_accepted_culture = no
+				has_owner_culture = no
+				is_african_culture = yes
+			}
+		}
+		allow = {
+			dip_power = 50
+		}
+		effect = {
+			set_country_flag = afr_culture_unite_reform_decision_flag
+			country_event = { id = sealand_events.27 }
 		}
 		ai_will_do = {
 			factor = 0
@@ -2765,7 +2829,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_bengal_flag }
-			NOT = { tag = BNG }
+			NOT = { is_or_was_tag = { tag = BNG } }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2995,249 +3059,6 @@ country_decisions = {
 		effect = {
 			clr_country_flag = sea_mercs_inf_to_cav_switch_flag
 			custom_tooltip = sea_mercs_cav_to_inf_switch_tt
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-# Switz mercs:
-	# Enable:
-	swi_recruit_merc_inf_enable = {
-		major = yes
-		potential = {
-			ai = no
-			tag = SWI
-			NOT = { has_country_flag = swi_recruit_merc_inf_enabled }
-			mission_completed = emp_swi_mercenaries
-		}
-		allow = {
-			mil_power = 100
-		}
-		effect = {
-			set_country_flag = swi_recruit_merc_inf_enabled
-			add_mil_power = -100
-			set_country_flag = swi_recruit_merc_inf_recruited
-			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_tt
-			custom_tooltip = swi_recruit_merc_inf_enable_tt
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	# Disable:
-	swi_recruit_merc_inf_disable = {
-		major = yes
-		potential = {
-			ai = no
-			tag = SWI
-			has_country_flag = swi_recruit_merc_inf_enabled
-			mission_completed = emp_swi_mercenaries
-		}
-		allow = {
-			NOT = { sea_swiss_mercenaries_1 = 1 }
-			NOT = { sea_swiss_mercenaries_2 = 1 }
-			NOT = { sea_swiss_mercenaries_3 = 1 }
-		}
-		effect = {
-			clr_country_flag = swi_recruit_merc_inf_enabled
-			custom_tooltip = swi_recruit_merc_inf_enabled_modifier_ttt
-			custom_tooltip = swi_recruit_merc_inf_disable_tt
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	# Units:
-	swi_recruit_merc_inf = {
-		major = yes
-		potential = {
-			ai = no
-			has_country_flag = swi_recruit_merc_inf_enabled
-			tag = SWI
-			mission_completed = emp_swi_mercenaries
-		}
-		allow = {
-			treasury = 30
-			any_owned_province = {
-				has_siege = no
-				controlled_by = ROOT
-			}
-			manpower = 1
-			# Tech 1-11
-			if = {
-				limit = {
-					NOT = { mil_tech = 12 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 1
-						NOT = { land_forcelimit = 40 }
-					}
-					NOT = { sea_swiss_mercenaries_1 = 10 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 40
-					}
-					NOT = { sea_swiss_mercenaries_1 = 20 }
-				}
-			}
-			# Tech 12-22
-			if = {
-				limit = {
-					mil_tech = 12
-					NOT = { mil_tech = 23 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 1
-						NOT = { land_forcelimit = 24 }
-					}
-					NOT = { sea_swiss_mercenaries_2 = 10 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 24
-						NOT = { land_forcelimit = 48 }
-					}
-					NOT = { sea_swiss_mercenaries_2 = 20 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 48
-						NOT = { land_forcelimit = 96 }
-					}
-					NOT = { sea_swiss_mercenaries_2 = 30 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 96
-						NOT = { land_forcelimit = 192 }
-					}
-					NOT = { sea_swiss_mercenaries_2 = 40 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 192
-					}
-					NOT = { sea_swiss_mercenaries_2 = 60 }
-				}
-			}
-			# Tech 23-32
-			if = {
-				limit = {
-					mil_tech = 23
-				}
-				if = {
-					limit = {
-						land_forcelimit = 1
-						NOT = { land_forcelimit = 24 }
-					}
-					NOT = { sea_swiss_mercenaries_3 = 10 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 24
-						NOT = { land_forcelimit = 48 }
-					}
-					NOT = { sea_swiss_mercenaries_3 = 20 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 48
-						NOT = { land_forcelimit = 96 }
-					}
-					NOT = { sea_swiss_mercenaries_3 = 30 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 96
-						NOT = { land_forcelimit = 192 }
-					}
-					NOT = { sea_swiss_mercenaries_3 = 40 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 192
-						NOT = { land_forcelimit = 384 }
-					}
-					NOT = { sea_swiss_mercenaries_3 = 80 }
-				}
-				if = {
-					limit = {
-						land_forcelimit = 384
-					}
-					NOT = { sea_swiss_mercenaries_3 = 120 }
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						OR = {
-							has_siege = yes
-							NOT = { controlled_by = ROOT }
-						}
-					}
-				}
-				random_owned_province = {
-					limit = {
-						has_siege = no
-						controlled_by = ROOT
-					}
-					add_treasury = -30
-					add_manpower = -1
-					if = {
-						limit = {
-							NOT = { mil_tech = 12 }
-						}
-						sea_swiss_mercenaries_1 = ROOT
-					}
-					if = {
-						limit = {
-							mil_tech = 12
-							NOT = { mil_tech = 23 }
-						}
-						sea_swiss_mercenaries_2 = ROOT
-					}
-					if = {
-						limit = {
-							mil_tech = 23
-						}
-						sea_swiss_mercenaries_2 = ROOT
-					}
-				}
-			}
-			else = {
-				add_treasury = -30
-				add_manpower = -1
-					if = {
-						limit = {
-							NOT = { mil_tech = 12 }
-						}
-						capital_scope = {
-							sea_swiss_mercenaries_1 = ROOT
-						}
-					}
-					if = {
-						limit = {
-							mil_tech = 12
-							NOT = { mil_tech = 23 }
-						}
-						capital_scope = {
-							sea_swiss_mercenaries_2 = ROOT
-						}
-					}
-					if = {
-						limit = {
-							mil_tech = 23
-						}
-						capital_scope = {
-							sea_swiss_mercenaries_3 = ROOT
-						}
-					}
-			}
 		}
 		ai_will_do = {
 			factor = 0

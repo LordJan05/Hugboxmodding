@@ -1148,11 +1148,6 @@ venice_missions_slot_2 = {
 					NOT = { is_capital_of = ROOT }
 				}
 				AND = {
-					superregion = europe_superregion
-					NOT = { province_id = 112 }
-					higher_development_than = 112
-				}
-				AND = {
 					province_id = 112
 					OR = {
 						NOT = { owned_by = ROOT }
@@ -1170,18 +1165,6 @@ venice_missions_slot_2 = {
 				num_of_buildings_in_province = 6
 				development = 30
 			}
-			capital_scope = {
-				province_id = 112
-				custom_trigger_tooltip = {
-					tooltip = ven_highest_dev_capital_tt
-					NOT = {
-						europe_superregion = {
-							NOT = { province_id = 112 }
-							higher_development_than = 112
-						}
-					}
-				}
-			}	
 		}
 		effect = {
 			if = {
@@ -1792,7 +1775,6 @@ venice_missions_slot_3 = {
 		}
 		trigger = {
 			home_trade_node = { highest_value_trade_node = yes }
-			num_of_trading_bonuses = 6
 		}
 		effect = {
 			add_power_projection = {
@@ -2370,20 +2352,21 @@ venice_missions_slot_4 = {
 		position = 4
 		required_missions = { ven_modern_banking_system }
 		provinces_to_highlight = {
-			NOT = { has_building = university }
+			NOT = { has_building = courthouse }
 			owned_by = ROOT
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				has_building = university 
-				value = 10
+				has_building = courthouse
+				value = 20
 			}
 			112 = {
 				owned_by = ROOT 
-				has_building = university
+				has_building = courthouse
 			}
 		}
 		effect = {
+			112 = { add_building = university }
 			set_country_flag = ven_academy_of_the_unknowns_reward_flag
 			country_event_with_effect_insight = {
 				id = flavor_ven.47
@@ -2753,7 +2736,7 @@ venice_missions_slot_5 = {
 		trigger = {
 			development_in_provinces = {
 				value = 500
-				has_building = university
+				is_prosperous = yes
 			}
 		}
 		effect = {

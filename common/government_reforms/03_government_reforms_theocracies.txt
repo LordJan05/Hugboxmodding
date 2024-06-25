@@ -167,10 +167,7 @@ prussian_theocratic_reform = {
 	}
 	trigger = {
 		OR = {
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican
+			religion_group = christian
 			AND = {
 				is_playing_custom_nation = yes
 				OR = {
@@ -311,7 +308,7 @@ holy_horde_reform = {
 	}
 	fixed_rank = 3
 	custom_attributes = {
-		enables_horde_idea_group = yes
+		#enables_horde_idea_group = yes
 		monastic_order = yes
 	}
 	ai = {
@@ -608,7 +605,7 @@ tibetan_dual_government_reform = {
 	custom_attributes = {
 		theocratic_monarchy_mechanic = yes
 		#enables_aristocratic_idea_group = yes
-		enables_divine_idea_group = yes
+		#enables_divine_idea_group = yes
 	}
 }
 
@@ -685,8 +682,8 @@ dutch_theocracy_reform = {
 	}
 	royal_marriage = yes
 	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_divine_idea_group = no
+		#enables_plutocratic_idea_group = yes
+		#enables_divine_idea_group = no
 		has_dutch_election = yes
 	}
 	custom_attributes = {

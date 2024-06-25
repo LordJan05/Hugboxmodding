@@ -908,14 +908,51 @@ ajuuran_offense_slot = {
 		required_missions = {  }
 		position = 1
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = aju_the_mamluk_soldiers_tt
-				any_hired_mercenary_company = {
-					template = merc_aju_mamluk_soldiers
+			if = {
+				limit = {
+					MAM = { exists = yes }
 				}
+				OR = {
+					AND = {
+						MAM = {
+							NOT = { alliance_with = ROOT }
+							custom_trigger_tooltip = {
+								tooltip = has_been_insulted_by_root
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						MAM = {
+							alliance_with = ROOT
+							OR = {
+								has_opinion = {
+									who = ROOT 
+									value = 150
+								}
+								trust = { who = ROOT value = 60 }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				army_reformer = 1
 			}
 		}
 		effect = {
+			custom_tooltip = flavor_ada.7.a.tt
+			set_country_flag = ada_mamluk_mercs
 			add_army_tradition = 10
 			majarteen_area = {
 				limit = {

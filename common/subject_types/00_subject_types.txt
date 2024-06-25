@@ -729,8 +729,8 @@ crown_colony = {
 	can_send_missionary_to_subject = yes	
 	count = colony
 
-	forcelimit_to_overlord = 0.1
-	manpower_to_overlord = 0.15
+	forcelimit_to_overlord = 0.05
+	manpower_to_overlord = 0.05
 	naval_forcelimit_to_overlord = 0
 	sailors_to_overlord = 0
 
@@ -739,7 +739,6 @@ crown_colony = {
 	support_loyalists = yes
 	subsidize_armies = yes
 	send_officers = yes
-	enforce_religion = yes
 	takeondebt = yes
 	block_settlement_growth = yes
 	allow_settlement_growth = yes
@@ -753,6 +752,12 @@ crown_colony = {
 
 	modifier_subject = {
 		modifier = crown_colony_subject
+	}
+	modifier_subject = {
+		modifier = crown_colony_subject_add
+		trigger = {
+			ROOT = { NOT = { total_development = 400 } }
+		}
 	}
 	
 }
@@ -770,11 +775,15 @@ private_enterprise = {
 
 	forcelimit_to_overlord = 0.0
 	manpower_to_overlord = 0.0
-	naval_forcelimit_to_overlord = 0.1
-	sailors_to_overlord = 0.15
+	naval_forcelimit_to_overlord = 0.05
+	sailors_to_overlord = 0.05
 
 	# Subject Interactions:
-	replace_governor = no
+	embargo_rivals = yes
+	support_loyalists = yes
+	subsidize_armies = yes
+	send_officers = yes
+	takeondebt = yes
 	block_settlement_growth = no
 	allow_settlement_growth = no
 	enforce_culture = yes
@@ -787,6 +796,12 @@ private_enterprise = {
 	
 	modifier_subject = {
 		modifier = private_enterprise_subject
+	}
+	modifier_subject = {
+		modifier = private_enterprise_subject_add
+		trigger = {
+			ROOT = { NOT = { total_development = 400 } }
+		}
 	}
 	
 }
@@ -802,16 +817,20 @@ self_governing_colony = {
 	is_colony_subtype = yes
 	count = colony
 
-	forcelimit_to_overlord = 0.05
-	manpower_to_overlord = 0.1
-	naval_forcelimit_to_overlord = 0.05
-	sailors_to_overlord = 0.1
+	forcelimit_to_overlord = 0.025
+	manpower_to_overlord = 0.025
+	naval_forcelimit_to_overlord = 0.025
+	sailors_to_overlord = 0.025
 
 	# Subject Interactions:
 	replace_governor = no
+	embargo_rivals = yes
+	support_loyalists = yes
+	subsidize_armies = yes
+	send_officers = yes
+	takeondebt = yes
 	block_settlement_growth = no
 	allow_settlement_growth = no
-	press_sailors = no
 	enforce_culture = yes
 	
 	# Modifiers:	
@@ -822,6 +841,12 @@ self_governing_colony = {
 	
 	modifier_subject = {
 		modifier = self_governing_colony_subject
+	}
+	modifier_subject = {
+		modifier = self_governing_colony_subject_add
+		trigger = {
+			ROOT = { NOT = { total_development = 400 } }
+		}
 	}
 	
 }
@@ -1901,6 +1926,7 @@ burgundy_juniors = {
 	overlord_can_attack = no
 	has_power_projection = no
 	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
 	can_have_subjects_of_other_types = yes
 	can_union_break = yes
 	transfer_subjects_when_made = yes

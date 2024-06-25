@@ -161,7 +161,7 @@ merc_black_army_2 = {
 merc_knights_templar = {
 	regiments_per_development = 0.5
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
-	cost_modifier = 1.25
+	cost_modifier = 0.8
 	home_province = 379
 	cavalry_weight = 0.8
 	sprites = { dlc040_kni_sprite_pack westerngfx_sprite_pack }
@@ -186,7 +186,7 @@ merc_mesopotamian_mamluks = {
 	regiments_per_development = 0.8
 	cavalry_weight = 0.625
 	home_province = 410
-	cost_modifier = 1
+	cost_modifier = 0.9
 	sprites = { dlc080_alh_sprite_pack muslimgfx_sprite_pack }
 	trigger = {
 		has_country_flag = mesopotamian_mamluks_flag
@@ -213,7 +213,7 @@ merc_mesopotamian_mamluks = {
 merc_mongol_banner = {
 	regiments_per_development = 0.5
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
-	cost_modifier = 1.25
+	cost_modifier = 0.7
 	cavalry_weight = 1
 	home_province = 718
 	sprites = { dlc069_kha_sprite_pack muslimgfx_sprite_pack }
@@ -349,25 +349,12 @@ merc_zim_butua_warriors = {
 
 merc_aju_mamluk_soldiers = {
 	regiments_per_development = 0.5
-	cost_modifier = 0.75
+	cost_modifier = 0.55
 	cavalry_weight = 1
 	sprites = { dlc098_nav_sprite_pack dlc020_ara_sprite_pack dlc029_spa_sprite_pack dlc049_SPA_sprite_pack dlc053_spa_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		OR = {
-			AND = {
-				is_or_was_tag = {
-					tag = AJU
-				}
-				exists = MAM
-				MAM = {
-					NOT = {
-						war_with = ROOT
-					}
-				}
-			}
-			has_country_flag = ada_mamluk_mercs
-		}
+		has_country_flag = ada_mamluk_mercs
 	}
 	modifier = {
 		cav_to_inf_ratio = 1

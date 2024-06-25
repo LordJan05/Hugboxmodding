@@ -21,6 +21,7 @@ NDefines.NCountry.ABANDON_CORE_PRESTIGE = 0
 NDefines.NCountry.MINIMUM_POLICY_TIME = 5
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 50
 NDefines.NCountry.LIBERTY_DESIRE_MERCANTILISM = 0
+NDefines.NCountry.LAND_FORCELIMIT_EXTRA_COST_FACTOR = 3
 
 NDefines.NEconomy.CARAVAN_FACTOR = 3
 NDefines.NEconomy.CARAVAN_POWER_MAX = 25
@@ -47,6 +48,9 @@ NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -5.0
 NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.05
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = 0
 
+NDefines.NReligion.PIETY_COST = 2 -- Made custom button
+NDefines.NReligion.PIETY_ABS_THRESHOLD = 2 -- Made custom button
+
 
 -- Zlewikk mod part:
 
@@ -55,7 +59,7 @@ NDefines.NGame.MAX_CLIENT_STATES = 15
 
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_TRUST_LOSS = 0
 --NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT = -0.1 -- I forgot what this did.
-NDefines.NDiplomacy.CHANGE_COLONIAL_TYPE_COST = 5000
+NDefines.NDiplomacy.CHANGE_COLONIAL_TYPE_COST = 999999
 
 NDefines.NDiplomacy.MAX_FREE_CITIES = 0
 NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 1
