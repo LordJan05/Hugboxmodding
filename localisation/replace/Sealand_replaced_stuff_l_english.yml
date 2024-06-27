@@ -926,8 +926,16 @@
  FEO_STRELTSY_BUFF_TT:0 "Our §YSpecial Mercenary§! Regiments will get the following bonuses:\n   Regiment Cost: §R+20.0%§!\n   Discipline: §G+5.00%§!\n   Land Fire Damage: §G+10.0%§!\n   Fire Damage Received: §G-10.0%§!\n   Shock Damage Received: §G-10.0%§!"
  ven_upgrade_state_inuisition_idea_tt:0 "Our §YFound the State Inquisition§! national idea will be upgraded to: \nInfantry Combat Ability: §G+15.0%§!"
  AZT_buffed_conditional_benefit_for_obsidian:0 "If any of our §YProvinces§! has the modifier '§YExploited Source of Obsidian§!' or any of our §YSubjects§! or §YAllies§! owns such, we will gain the following modifiers:\n  Infantry Combat Ability: §G+10.0%§!\n  [Root.GetNobilityName] Influence: §Y+5.0%§!
+ #AZT_MODIFY_MECHANIC_HUITZILOPOCHTLI:1 "Make §YHuitzilopochtli§! the main Patron Deity of our nation, which will make §YTonalli Gathering§! have the following effects at maximum power:\n   Morale of Armies: §G+10.0%§!\n   Manpower in same Culture Group provinces: §G+10.0%§!"
+ #AZT_MODIFY_MECHANIC_TLALOC:1 "Make §YTlaloc§! the main Patron Deity of our nation, which will make §YTonalli Gathering§! have the following effects at maximum power:\n   Construction Cost: §G-19.0%§!\n   Development Cost in Primary Cultures: §G-5.0%§!"
  MAY_conditional_benefit_for_obsidian:0 "If any of our §YProvinces§! has the modifier '§YExploited Source of Obsidian§!' or any of our §YSubjects§! or §YAllies§! owns such, we will gain the following modifiers:\n  Infantry Combat Ability: §G+5.0%§!\n  [Root.GetNobilityName] Influence: §Y+5.0%§!"
  MAY_upgrade_obsidian_privilege:1 "Strengthen the '§YArm Lesser [Root.GetNobilityName] with Macuahuitl§!' Estate Privilege for the §Y[Root.GetNobilityName]§!, removing the §YMaximum Absolutism§! penalty and the §Y[Root.GetNobilityName] Influence§! modifier from having the requirements fulfilled.\nWill grant an additional §G+5.00%§! Infantry Combat Ability."
+ #estate_burghers_mountain_expansion_upgraded_gt:0 "Reduce the Development Cost Penalty caused by Terrain type of every owned §YMountains§!, §YHighlands§! and §YHills§! province by §G50.0%§!."
+ #INC_upgrade_mountain_development_privilege:0 "Strengthen the '§YHigh Altitude Adaptation§!' Privilege of the §Y[Root.GetBurghersName]§!, Does not give '§YUnaccustomed Penalty§!'."
+ #SUN_enable_burgher_privilege_for_recovery:0 "Unlock the '§YSupport Recovering Populations§!' Estate Privilege for the §Y[Root.GetBurghersName]§!, allowing us gain §G-5.0%§! Development Cost in Primary Culture provinces [Root.GetPrivilegeForRecoveryModifiers]."
+ MESOAMERICA_ANY_BORDERING_EMPTY_PROVINCE_IS_EMPTY:1 "At least §YOne§! province in our borders in North and South America is §YUncolonized§! and connected to our capital."
+ INC_any_province_available_for_colonization:1 "Any of the provinces can be currently colonized by the §YDecision§!. To colonize a province, you must unlock it via the §YMission Tree§!."
+ INC_will_be_colonized:0 "§Y[This.GetName]§! will be colonized when this §YDecision§! is used."
  
  
  # delete_beta_fixes

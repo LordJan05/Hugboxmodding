@@ -1038,6 +1038,7 @@
         desc_new_wrold_nerfs_modifier:0 "Could use more nerf."
         new_world_splendor:0 "Splendor Blendor"
         sea_sunset_invasion_modifier:0 "Sunset Invasion"
+        sea_frontier_button_tt: "Establish American Frontier"
         # St. Lawrence river passable:
         north_american_lake_area:0 "Great Lakes"
         PROV7055:0 "St. Lawrence"

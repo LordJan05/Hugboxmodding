@@ -2773,6 +2773,17 @@ country_event = {
 	immediate = { set_country_flag = get_war_declare_flag play_sound = declarewar_onus }
 	option = { }
 }
+# Colonization:
+country_event = {
+	id = sealand_events.31
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { event_target:sea_siberian_frontier = { add_siberian_construction = 100 } }
+	option = { }
+}
 
 # Theocracy government:
 namespace = theocracy_election_government

@@ -1,4 +1,5 @@
 country_decisions = {
+	# Moved into custom_gui button.
 	#establish_american_frontier = {
 	#	potential = {
 	#		has_country_flag = mesoamerica_american_frontiers_flag
@@ -19,6 +20,7 @@ country_decisions = {
 	#		}
 	#	}
 	#	effect = {
+	#		change_government_reform_progress = -75
 	#		custom_tooltip = MESOAMERICA_ESTABLISH_AMERICAN_FRONTIERS
 	#		hidden_effect = {
 	#			every_owned_province = {

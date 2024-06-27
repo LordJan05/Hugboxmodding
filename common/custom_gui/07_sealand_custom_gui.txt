@@ -157,3 +157,96 @@ custom_button = {
 #	effect = { set_country_flag = sea_primitive_religion_reform_flag }
 #	tooltip = sea_primitive_religion_modifier_button_tt
 #}
+##########
+# Colonization:
+custom_button = {
+	name = sea_frontier_button
+	potential = {
+		FROM = {
+			OR = {
+				has_country_flag = mesoamerica_american_frontiers_flag
+				AND = {
+					OR = {
+						has_mission = CSU_chanka
+						has_mission = CSU_ground_shaker
+					}
+					INC_has_any_provinces_to_colonize = yes
+				}
+			}
+		}
+	}
+	trigger = {
+		any_neighbor_province = {
+			owned_by = FROM
+			is_in_capital_area = yes
+		}
+		is_colony = no
+		if = {
+			limit = { FROM = { has_country_flag = mesoamerica_american_frontiers_flag } }
+			FROM = {
+				government_reform_progress = 5
+				mil_power = 5
+				manpower = 0.5
+			}
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					AND = {
+						OR = {
+							has_mission = CSU_chanka
+							has_mission = CSU_ground_shaker
+						}
+						INC_has_any_provinces_to_colonize = yes
+					}
+				}
+			}
+			FROM = {
+				treasury = 50
+				mil_power = 10
+				manpower = 0.1
+			}
+			INC_can_be_colonized_without_natives = yes
+		}
+	}
+	effect = {
+		if = {
+			limit = { FROM = { has_country_flag = mesoamerica_american_frontiers_flag } }
+			save_event_target_as = sea_siberian_frontier
+			FROM = {
+				change_government_reform_progress = -5
+				add_mil_power = -5
+				add_manpower = -0.5
+				hidden_effect = { country_event = { id = sealand_events.31 } }
+			}
+			tooltip = { add_siberian_construction = 100 }
+				
+		}
+		if = {
+			limit = {
+				FROM = {
+					AND = {
+						OR = {
+							has_mission = CSU_chanka
+							has_mission = CSU_ground_shaker
+						}
+						INC_has_any_provinces_to_colonize = yes
+					}
+				}
+			}
+			save_event_target_as = sea_siberian_frontier
+			FROM = {
+				add_treasury = -50
+				add_mil_power = -10
+				add_manpower = -0.1
+				hidden_effect = { country_event = { id = sealand_events.31 } }
+			}
+			tooltip = { add_siberian_construction = 100 }
+		}
+	}
+	tooltip = sea_frontier_button_tt
+}
