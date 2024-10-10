@@ -53,7 +53,7 @@ NDefines.NGame.END_DATE = "1836.1.2"
 
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_TRUST_LOSS = 0
 --NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT = -0.1 -- I forgot what this did.
-NDefines.NDiplomacy.CHANGE_COLONIAL_TYPE_COST = 999999
+NDefines.NDiplomacy.CHANGE_COLONIAL_TYPE_COST = 5000
 
 NDefines.NDiplomacy.MAX_FREE_CITIES = 0
 NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 1
