@@ -132,6 +132,7 @@ country_decisions = {
 						mil = 1
 					}
 					NOT = {
+						adm = 6
 						dip = 1
 						mil = 1
 					}
