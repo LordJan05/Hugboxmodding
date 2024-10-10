@@ -1348,6 +1348,7 @@ cb_humiliate_rotw = {
 	prerequisites_self = {
 		ai = no
 		is_revolutionary = no
+		NOT = { has_country_modifier = sea_exodus_boost_modifier }
 	}
 
 	prerequisites = {

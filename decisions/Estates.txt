@@ -274,16 +274,24 @@ country_decisions = {
 			OR = {
 				tag = ZAZ
 				tag = LIT
+				has_country_flag = sea_gen_steppe_cossacks_flag_for_decision
 			}
 			NOT = { has_reform = cossacks_reform }
 			has_dlc = "The Cossacks"
 			NOT = { is_emperor_of_china = yes } 
 			NOT = { is_revolutionary = yes }
 			is_free_or_tributary_trigger = yes
-			NOT = { is_year = 1449 }
+			if = {
+				limit = { NOT = { has_country_flag = sea_gen_steppe_cossacks_flag_for_decision } }
+				NOT = { is_year = 1449 }
+			}
+			NOT = { has_country_flag = embraced_steppes}
 		}
 		allow = {
-			NOT = { is_year = 1449 }
+			if = {
+				limit = { NOT = { has_country_flag = sea_gen_steppe_cossacks_flag_for_decision } }
+				NOT = { is_year = 1449 }
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			stability = 0

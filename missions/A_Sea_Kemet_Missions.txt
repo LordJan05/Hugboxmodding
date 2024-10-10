@@ -64,7 +64,8 @@ sealand_kem_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				region = brazil_region
-				province_id = 2935 
+				region = la_plata_region
+				#province_id = 2935 
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -79,23 +80,27 @@ sealand_kem_missions_1 = {
 				ai = no
 			}
 			tag = TUA
-			owns_core_province = 2935
+			#owns_core_province = 2935
 			num_of_owned_provinces_with = {
 				value = 33
-				region = brazil_region
-			}
-			if = {
-				limit = {
-					OR = {
-						religion = animism
-						religion = inti
-						religion = nahuatl
-						religion = mesoamerican_religion
-					}
+				OR = {
+					region = brazil_region
+					region = la_plata_region
 				}
-				is_religion_reformed = yes
 			}
-			else = { has_institution = new_world_i }
+			#if = {
+			#	limit = {
+			#		OR = {
+			#			religion = animism
+			#			religion = inti
+			#			religion = nahuatl
+			#			religion = mesoamerican_religion
+			#		}
+			#	}
+			#	is_religion_reformed = yes
+			#}
+			#else = { has_institution = new_world_i }
+			has_institution = new_world_i
 		}
 		effect = {
 			change_tag = KEM

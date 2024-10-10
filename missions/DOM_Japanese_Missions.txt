@@ -1086,7 +1086,6 @@ japanese_missions_eoc_2 = {
 					country_event = { id = flavor_mng.30 }
 				}
 				else = { 
-					limit = { has_reform = limit_imperial_court_reform }
 					define_advisor = {
 						type = natural_scientist
 						cost_multiplier = 0.33 
@@ -1554,7 +1553,6 @@ DOM_japanse_missions_3_a = {
 				custom_tooltip = a_kirishitan_realm_tt
 				tooltip = { 
 					override_country_name = KRJ
-					set_country_flag = is_KRJ_flag
 					add_country_modifier = {
 						name = jap_protectors_east_catholicism
 						duration = 10950
@@ -1589,6 +1587,7 @@ DOM_japanse_missions_3_a = {
 				if = {
 					limit = { has_country_flag = a_kirishitan_realm }
 					override_country_name = KRJ
+					set_country_flag = is_KRJ_flag
 					set_country_flag = has_overriden_name_flag
 					add_country_modifier = {
 						name = jap_protectors_east_catholicism

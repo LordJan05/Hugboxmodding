@@ -5,6 +5,10 @@ primary_culture = miskito
 religion = animism
 technology_group = mesoamerican
 capital = 835 # Changed capital for Panama canal.
+add_country_modifier = {
+	name = new_world_canal_tag_no_colonize 
+	duration = -1
+}
 
 1444.11.11 = {
 	monarch = {

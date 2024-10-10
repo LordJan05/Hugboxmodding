@@ -46,6 +46,7 @@ capital = 1170	# M'banza Kongo
 
 1419.1.1 = {
 	monarch = {
+		birth_date = 1411.1.1
 		name = "Nkuwu"
 		dynasty = "Lukeni"
 		adm = 3

@@ -460,23 +460,9 @@ geo_second_branch = {
 		position = 1
 		
 		trigger = {
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-				}
-				OR = {
-					legitimacy = 90
-					AND = {
-						has_heir = yes
-						heir_claim = 60
-					}
-				}
-			}
-			else = {
-				OR = {
-					legitimacy = 90 
-					has_heir = yes
-				}
+			OR = {
+				legitimacy = 85
+				has_heir = yes
 			}
 		}
 		

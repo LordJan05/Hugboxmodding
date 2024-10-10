@@ -557,6 +557,7 @@ mos_rus_eastern_europe = {
 				add_accepted_culture = sorbian
 				add_accepted_culture = schlesian
 				add_accepted_culture = polish
+				add_accepted_culture = slovak
 			}
 			add_country_modifier = {
 				name = rus_west_slavic_union
@@ -568,6 +569,7 @@ mos_rus_eastern_europe = {
 				add_accepted_culture = sorbian
 				add_accepted_culture = schlesian
 				add_accepted_culture = polish
+				add_accepted_culture = slovak
 			}
 			add_country_modifier = {
 				name = "rus_partition_poland_modifier"

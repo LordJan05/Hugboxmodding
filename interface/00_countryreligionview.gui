@@ -548,6 +548,36 @@ guiTypes = {
 				spacing = 0
 			}
 		}
+		windowType = {
+			name = "sea_shinto_isolationism_window"
+			backGround =""
+			position = { x=117 y=229 }
+			size = { x=55 y=32 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			
+			IconType = {
+				name = "sea_shinto_isolationism_background"
+				position = { x=0 y = 0}
+				quadTextureSprite ="sea_shinto_background"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "sea_shinto_isolationism_left"
+				position = { x=4 y = 4}
+				quadTextureSprite ="GFX_arrow_left_big"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "sea_shinto_isolationism_right"
+				position = { x=28 y = 4}
+				quadTextureSprite ="GFX_arrow_right_big"
+				scripted = yes
+			}
+		}
 	
 		############## CONFUCIANISM HARMONY ##############
 		windowType = {

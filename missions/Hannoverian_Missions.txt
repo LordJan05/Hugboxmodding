@@ -107,7 +107,7 @@ hannoverian_group_1 = {
 			custom_tooltip = han_unite_the_welfs_tt
 			tooltip = {
 				add_country_modifier = {
-					name = bad_prepare_for_war_modifier
+					name = han_unite_the_welfs_modifier
 					duration = 3650
 				}
 			}
@@ -118,7 +118,7 @@ hannoverian_group_1 = {
 						owns_core_province = 4741
 					}
 					add_country_modifier = {
-						name = bad_prepare_for_war_modifier
+						name = han_unite_the_welfs_modifier
 						duration = 3650
 					}
 				}

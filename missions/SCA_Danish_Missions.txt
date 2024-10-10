@@ -210,7 +210,7 @@ dan_secure_baltic_mission_slot = {
 		}
 	}
 
-	dan_the_sound_toll = {	#Dominate Northsea, Baltic and LÃ¼beck trade
+	dan_the_sound_toll = {	#Dominate Northsea, Baltic and Lübeck trade
 		icon = mission_the_sound_toll
 		position = 4
 		required_missions = { 
@@ -569,7 +569,7 @@ dan_trade_and_colonial_mission_slot = {
 		trigger = {
 			army_size_percentage = 1
 			navy_size_percentage = 1
-			num_of_galley = 12
+			num_of_galley = 10
 		}
 		effect = {
 			create_admiral = {
@@ -1624,7 +1624,7 @@ dan_sweden_and_great_power_mission_slot = {
 					NOT = { current_age = age_of_reformation }
 					SWE = { is_subject_of = ROOT }
 				}
-				SWE= {
+				SWE = {
 					alliance_with = ROOT
 					has_opinion = {
 						who = ROOT

@@ -756,6 +756,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				#NOT = { was_tag = AKS }
 				#NOT = { was_tag = GZI }
 				#NOT = { was_tag = RZI }
+					NOT = { was_tag = SJK }
 					NOT = { was_tag = SCA }
 					NOT = { was_tag = KLU }
 					NOT = { was_tag = NSE }
@@ -770,6 +771,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 					NOT = { was_tag = OSM }
 					NOT = { was_tag = AUH }
 					NOT = { was_tag = ABA }
+					NOT = { was_tag = GMA }
 
 					NOT = { tag = FRA }
 				#NOT = { tag = MUG }
@@ -808,6 +810,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				#NOT = { tag = AKS }
 				#NOT = { tag = GZI }
 				#NOT = { tag = RZI }
+					NOT = { tag = SJK }
 					NOT = { tag = SCA }
 					NOT = { tag = KLU }
 					NOT = { tag = NSE }
@@ -822,6 +825,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 					NOT = { tag = OSM }
 					NOT = { tag = AUH }
 					NOT = { tag = ABA }
+					NOT = { tag = GMA }
 			}
 		}
 	}
@@ -4755,10 +4759,10 @@ INC_part_of_the_route = {
 }
 
 INC_can_be_colonized_without_natives = {
-	is_empty = yes
+	#is_empty = yes
 	OR = {
 		AND = {
-			ROOT = { has_country_flag = INC_expand_into_coastal_provs_flag }
+			FROM = { has_country_flag = INC_expand_into_coastal_provs_flag }
 			OR = { #chincha valleys and nazca
 				province_id = 806
 				province_id = 2828
@@ -4766,7 +4770,7 @@ INC_can_be_colonized_without_natives = {
 			}
 		}
 		AND = {
-			ROOT = { has_country_flag = INC_expansion_south_flag }
+			FROM = { has_country_flag = INC_expansion_south_flag }
 			OR = { #extent of inca empire south
 				province_id = 796
 				province_id = 793
@@ -4788,10 +4792,10 @@ INC_can_be_colonized_without_natives = {
 				province_id = 801
 				province_id = 2832
 			}
-			ROOT = { has_country_flag = INC_colonize_eastern_edges_flag }
+			FROM = { has_country_flag = INC_colonize_eastern_edges_flag }
 		}
 		AND = {
-			ROOT = { has_country_flag = CSU_will_be_able_to_colonize_mountains_flag }
+			FROM = { has_country_flag = CSU_will_be_able_to_colonize_mountains_flag }
 			OR = { #towards muisca
 				province_id = 4604
 				province_id = 2817
@@ -4800,9 +4804,9 @@ INC_can_be_colonized_without_natives = {
 			}
 		}
 	}
-	any_neighbor_province = {
-		country_or_non_sovereign_subject_holds = ROOT
-	}
+	#any_neighbor_province = {
+	#	country_or_non_sovereign_subject_holds = ROOT
+	#}
 }
 INC_highlight_provinces_that_can_be_colonized = {
 	INC_can_be_colonized_without_natives = yes

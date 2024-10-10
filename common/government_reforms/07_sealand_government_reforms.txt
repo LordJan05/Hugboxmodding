@@ -278,10 +278,7 @@ great_moravian_principality = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			tag = GMA
-			have_had_reform = great_moravian_principality
-		}
+		tag = GMA
 	}
 	fixed_rank = 3
 	valid_for_nation_designer = yes
@@ -293,8 +290,6 @@ great_moravian_principality = {
 		yearly_absolutism = 0.5
 		global_autonomy = -0.05
 		governing_capacity = 250
-		artillery_fire = 0.25
-		artillery_shock = 0.25
 	}
 
 	conditional = {
@@ -308,15 +303,15 @@ great_moravian_principality = {
 				cavalry_power = 0.2
 				cavalry_cost = -0.1
 				cav_to_inf_ratio = 0.5
-				cavalry_fire = 0.25
-				cavalry_shock = 0.25
+				cavalry_fire = 0.2
+				cavalry_shock = 0.2
 			}
 
 			monarchists = {
 				infantry_power = 0.1
 				infantry_cost = -0.1
-				infantry_fire = 0.25
-				infantry_shock = 0.25
+				infantry_fire = 0.2
+				infantry_shock = 0.2
 			}
 		}
 	}
@@ -1030,9 +1025,21 @@ germany_republic = {
 	}
 
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = { has_dlc = "Domination" }
 		government_abilities = {
-			militarization_mechanic
+			prussian_militarization_mechanic_1
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
 		}
 	}
 	conditional = {
@@ -1169,6 +1176,7 @@ genoa_merchants_reform = {
 	icon = "politician"
 	allow_normal_conversion = no
 	potential = {
+		has_country_flag = emp_gen_genoese_crossbowmen_flag
 		OR = {
 			tag = GEN
 			AND = {

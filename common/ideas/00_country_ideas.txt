@@ -3087,7 +3087,7 @@ BOH_ideas = {
 		global_regiment_cost = -0.1 # stability_cost_modifier = -0.10
 	}
 	czech_nationalism = {
-		max_attrition = 2 # same_culture_advisor_cost = -0.25
+		max_hostile_attrition = 2 # same_culture_advisor_cost = -0.25
 	}
 }
 
@@ -18382,7 +18382,7 @@ ARB_ideas = {
 		tolerance_own = 2
 	}
 	ARB_jihad = {
-		extra_manpower_at_religious_war = yes
+		global_manpower_modifier = 0.25
 		land_morale = 0.1
 	}
 	ARB_new_caliphate_rising = {
@@ -18423,7 +18423,6 @@ EGY_ideas = {
 		production_efficiency = 0.10
 	}
 	westernize_the_military = {
-		max_general_fire = 1
 		fire_damage = 0.1
 	}
 	mediterranean_shipwrights = {

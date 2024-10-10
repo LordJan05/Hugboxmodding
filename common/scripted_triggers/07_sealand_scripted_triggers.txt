@@ -740,7 +740,7 @@ is_african_accepted_culture = {
 		accepted_culture = sidamo
 		accepted_culture = amhara
 		# sudanese
-		accepted_culture = fur_accepted_culture
+		accepted_culture = fur_culture
 		accepted_culture = acholi
 		accepted_culture = nubian
 		accepted_culture = beja

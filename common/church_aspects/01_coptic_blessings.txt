@@ -47,25 +47,7 @@ send_monks_to_establish_monasteries = {
 		development_cost = -0.05
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.9
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.7
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.5
-			}
-		}
+		factor = 50
 	}
 }
 
@@ -95,6 +77,6 @@ will_of_the_martyrs = {
 		discipline = 0.05
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 100
 	}
 }

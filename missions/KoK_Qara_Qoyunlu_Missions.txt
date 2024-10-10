@@ -266,7 +266,7 @@ qara_qoyunlu_first = {
 				tooltip = {
 					add_country_modifier = {
 						name = "turkoman_naval_hegemony"
-						duration = 5475
+						duration = -1
 					}
 				}
 			}
@@ -275,7 +275,7 @@ qara_qoyunlu_first = {
 				tooltip = {
 					add_country_modifier = {
 						name = "turkoman_naval_hegemony"
-						duration = 5475
+						duration = -1
 					}
 				}
 			}

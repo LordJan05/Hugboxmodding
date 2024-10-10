@@ -22,10 +22,6 @@ feudalism_reform = {
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	potential = {
-		NOT = { tag = POR }
-		NOT = { tag = LUS }
-	}
 	modifiers = {
 		vassal_income = 0.25
 		nobles_influence_modifier = 0.05
@@ -2524,7 +2520,8 @@ prussian_monarchy_base = {
 					have_had_reform = prussian_republic_reform
 					have_had_reform = prussian_theocratic_reform
 				}
-			}has_unlocked_government_reform = { government_reform = prussian_monarchy_base }
+			}
+			has_unlocked_government_reform = { government_reform = prussian_monarchy_base }
 		}
 	}
 	valid_for_nation_designer = yes
@@ -2909,7 +2906,7 @@ mamluk_government = {
 	}
 
 	modifiers = {
-		num_accepted_cultures = 3ˇ
+		num_accepted_cultures = 3
 		global_autonomy = -0.025
 		monarch_admin_power = 2
 		same_culture_advisor_cost = -0.25
@@ -5722,8 +5719,7 @@ centralize_reform = {
 			has_dlc = "Leviathan"
 		}
 		custom_attributes = {
-			#centralize_state_half_refund = yes
-			sea_centralize_state_reformprgoress_refund = yes
+			centralize_state_half_refund = yes
 			#centralize_state_no_reform_cost = yes
 			#centralize_state_development = yes
 		}

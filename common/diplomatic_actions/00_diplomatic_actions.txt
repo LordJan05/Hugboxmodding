@@ -1265,6 +1265,15 @@ warsubsidy = {
 			always = no
 		}
 	}
+	condition = {
+		tooltip = sea_warsubsidy_tt
+		potential = {
+			FROM = { NOT = { is_subject_of = ROOT } }
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 offerloan = {

@@ -25,6 +25,19 @@ vassal = {
 	start_date = 1444.10.10
 	end_date = 1454.10.10
 }
+# Mewar vassals:
+vassal = {
+	first = MER
+	second = IDR
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
+vassal = {
+	first = MER
+	second = CMP
+	start_date = 1444.10.10
+	end_date = 1454.10.10
+}
 # Gorkha vassals:
 vassal = {
 	first = GRK

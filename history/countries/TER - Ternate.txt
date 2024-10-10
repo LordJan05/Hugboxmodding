@@ -9,6 +9,12 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+set_country_flag = no_colonial_nations
+add_country_modifier = {
+	name = new_world_splendor
+	duration = -1
+}
+add_mercantilism = 35
 
 
 change_estate_land_share = {
@@ -29,10 +35,11 @@ change_estate_land_share = {
 
 1432.1.1 = {
 	monarch = {
+		birth_date = 1411.1.1
 		name = "Marhum"
 		dynasty = "Gapi"
-		adm = 4
-		dip = 4
+		adm = 3
+		dip = 3
 		mil = 3
 	}
 }

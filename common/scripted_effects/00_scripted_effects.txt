@@ -807,6 +807,10 @@ restore_old_nation_on_formation_effect = {
 			event_target:old_tag_target = { swap_non_generic_missions = yes }
 			ROOT = { set_country_flag = old_world_to_new_world_flag }
 			ROOT = { set_country_flag = no_colonial_nations }
+			ROOT = { set_country_flag = changed_from_colonial_nation }
+			ROOT = { set_country_flag = exodus_formed_nation_flag }
+			ROOT = { set_country_flag = sea_new_world_more_trade_power_flag }
+			ROOT = { set_country_flag = sea_new_world_religious_reform_gov_options_flag }
 			every_subject_country = {
 				limit = {
 					capital_scope = { 

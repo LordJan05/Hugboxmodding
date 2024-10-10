@@ -79,6 +79,7 @@ change_estate_land_share = {
 
 1430.1.1 = {
 	monarch = {
+		birth_date = 1411.1.1
 		name = "Musa III"
 		dynasty = "Keita"
 		adm = 4

@@ -917,7 +917,6 @@ republic = {
 			reforms = {
 				empower_the_burghers_reform
 				curtail_the_burghers_reform
-				new_world_exploitation_reform
 				mercantilistic_approach_reform
 				free_trade_reform
 				embrace_the_economic_theory_reform
@@ -1345,7 +1344,6 @@ theocracy = {
 				german_swiss_reform
 				german_swabian_reform
 				german_other_reform
-				#kingdom_of_god_reform # Moved here
 			}
 		}
 		separation_of_power_theocracy = {

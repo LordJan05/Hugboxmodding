@@ -2,8 +2,8 @@
 
 #owner = TIM
 #controller = TIM
-owner = ORM
-controller = ORM
+owner = KRM
+controller = KRM
 culture = persian
 religion = shiite
 capital = "Saidabad"
@@ -15,7 +15,6 @@ base_manpower = 1
 is_city = yes
 add_core = KRM
 #add_core = TIM
-add_core = ORM
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman

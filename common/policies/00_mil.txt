@@ -249,7 +249,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.15
+	infantry_power = 0.125
 
 	effect = {}
 	removed_effect = {}
@@ -395,7 +395,7 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	backrow_artillery_damage = 0.1
+	backrow_artillery_damage = 0.05
 	spy_offence = 0.33
 
 	effect = {}
@@ -678,8 +678,8 @@ the_preparation_act = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	garrison_damage = 0.5
-	garrison_size = 0.25
+	fire_damage_received = -0.075
+	shock_damage_received = -0.075
 	
 	effect = {}
 	removed_effect = {}
@@ -747,8 +747,8 @@ guerilla_warfare = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	reinforce_speed = 0.25 # hostile_attrition = 1
-	shock_damage = 0.05
+	reinforce_speed = 0.20 # hostile_attrition = 1
+	shock_damage = 0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -769,7 +769,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.05
+	discipline = 0.025
 	
 	effect = {}
 	removed_effect = {}
@@ -882,8 +882,8 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.2
-	infantry_power = 0.1
+	global_manpower_modifier = 0.1
+	infantry_power = 0.15
 
 	effect = {}
 	removed_effect = {}

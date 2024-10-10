@@ -108,6 +108,55 @@ custom_button = {
 	}
 }
 ##########
+# Shinto:
+custom_window = {
+	name = sea_shinto_isolationism_window
+	potential = { religion = shinto  }
+}
+custom_icon = {
+	name = sea_shinto_isolationism_background
+}
+custom_button = {
+	name = sea_shinto_isolationism_left
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = sea_shinto_isolationism_flag_tt
+			OR = {
+				NOT = { has_country_flag = sea_shinto_isolationism_flag }
+				had_country_flag = { flag = sea_shinto_isolationism_flag days = 3650 }
+			}
+		}
+		stability = 1
+		isolationism = 1
+	}
+	effect = {
+		set_country_flag = sea_shinto_isolationism_flag
+		add_stability = -1
+		hidden_effect = { add_isolationism = -1 }
+	}
+	tooltip = sea_shinto_isolationism_left_tt
+}
+custom_button = {
+	name = sea_shinto_isolationism_right
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = sea_shinto_isolationism_flag_tt
+			OR = {
+				NOT = { has_country_flag = sea_shinto_isolationism_flag }
+				had_country_flag = { flag = sea_shinto_isolationism_flag days = 3650 }
+			}
+		}
+		stability = 1
+		NOT = { isolationism = 4 }
+	}
+	effect = {
+		set_country_flag = sea_shinto_isolationism_flag
+		add_stability = -1
+		hidden_effect = { add_isolationism = 1 }
+	}
+	tooltip = sea_shinto_isolationism_right_tt
+}
+##########
 # Ages:
 custom_button = {
 	name = sea_ages_button
@@ -165,52 +214,61 @@ custom_button = {
 		FROM = {
 			OR = {
 				has_country_flag = mesoamerica_american_frontiers_flag
-				AND = {
+				has_mission = CSU_chanka
+				has_mission = CSU_ground_shaker
+			}
+		}
+		if = {
+			limit = { FROM = { has_country_flag = mesoamerica_american_frontiers_flag } }
+			OR = {
+				region = mexico_region
+				area = rio_grande_area
+				area = northeast_mexico_area
+				area = chihuahua_area
+				region = central_america_region
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
 					OR = {
 						has_mission = CSU_chanka
 						has_mission = CSU_ground_shaker
 					}
-					INC_has_any_provinces_to_colonize = yes
 				}
 			}
+			INC_can_be_colonized_without_natives = yes
 		}
 	}
 	trigger = {
 		any_neighbor_province = {
 			owned_by = FROM
 			is_in_capital_area = yes
+			is_colony = no
 		}
 		is_colony = no
 		if = {
 			limit = { FROM = { has_country_flag = mesoamerica_american_frontiers_flag } }
 			FROM = {
-				government_reform_progress = 5
-				mil_power = 5
+				treasury = 50
+				mil_power = 15
 				manpower = 0.5
-			}
-			OR = {
-				continent = north_america
-				continent = south_america
 			}
 		}
 		if = {
 			limit = {
 				FROM = {
-					AND = {
-						OR = {
-							has_mission = CSU_chanka
-							has_mission = CSU_ground_shaker
-						}
-						INC_has_any_provinces_to_colonize = yes
+					OR = {
+						has_mission = CSU_chanka
+						has_mission = CSU_ground_shaker
 					}
 				}
 			}
 			FROM = {
 				treasury = 50
-				mil_power = 10
-				manpower = 0.1
+				mil_power = 15
+				manpower = 0.5
 			}
-			INC_can_be_colonized_without_natives = yes
 		}
 	}
 	effect = {
@@ -218,8 +276,8 @@ custom_button = {
 			limit = { FROM = { has_country_flag = mesoamerica_american_frontiers_flag } }
 			save_event_target_as = sea_siberian_frontier
 			FROM = {
-				change_government_reform_progress = -5
-				add_mil_power = -5
+				add_treasury = -50
+				add_mil_power = -15
 				add_manpower = -0.5
 				hidden_effect = { country_event = { id = sealand_events.31 } }
 			}
@@ -229,20 +287,17 @@ custom_button = {
 		if = {
 			limit = {
 				FROM = {
-					AND = {
-						OR = {
-							has_mission = CSU_chanka
-							has_mission = CSU_ground_shaker
-						}
-						INC_has_any_provinces_to_colonize = yes
+					OR = {
+						has_mission = CSU_chanka
+						has_mission = CSU_ground_shaker
 					}
 				}
 			}
 			save_event_target_as = sea_siberian_frontier
 			FROM = {
 				add_treasury = -50
-				add_mil_power = -10
-				add_manpower = -0.1
+				add_mil_power = -15
+				add_manpower = -0.5
 				hidden_effect = { country_event = { id = sealand_events.31 } }
 			}
 			tooltip = { add_siberian_construction = 100 }

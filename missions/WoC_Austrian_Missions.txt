@@ -1830,7 +1830,7 @@ WoC_austria_2_1 = {
 					max_years_since = 25
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					NOT = { exists = TUR }
 					exists = OSM

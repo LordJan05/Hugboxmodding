@@ -610,19 +610,16 @@ mer_fortify_rajputana_tree = {
 		required_missions = { mer_fortify_rajputana }
 		provinces_to_highlight = {
 			province_id = 2058
-			NOT = { development = 11 }
+			NOT = { base_production = 6 }
 		}
 		trigger = {
 			owns = 2058
-			2058 = {
-				development = 11
-				NOT = { num_free_building_slots = 1 }
-			}
+			2058 = { base_production = 6 }
 		}
 		effect = {
 			add_treasury = 300
 			2058 = {
-				add_base_production = 2
+				change_trade_goods = gold
 			}
 		}
 		ai_weight = {

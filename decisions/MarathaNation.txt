@@ -10,12 +10,12 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = MAR }
+			NOT = { is_or_was_tag = { tag = MAR } }
 			OR = {
 				NOT = { exists = MAR }
 				ai = no
 			}
-			primary_culture = marathi
+			capital_scope = { superregion = india_superregion }
 			OR = {
 				ai = no
 				AND = {
@@ -31,6 +31,10 @@ country_decisions = {
 					ai = no
 				}
 			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -63,6 +67,7 @@ country_decisions = {
 				owns_core_province = 2026 #Tanjore
 				owns_core_province = 516 #Broach
 			}
+			primary_culture = marathi
 		}
 		effect = {
 			change_tag = MAR

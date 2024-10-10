@@ -228,6 +228,10 @@ country_decisions = {
 			has_estate = estate_burghers
 		}
 		allow = {
+			if = {
+				limit = { has_country_modifier = henry_the_navigator }
+				NOT = { has_country_modifier = henry_the_navigator }
+			}
 			has_not_any_estate_disaster_active = yes
 			estate_loyalty = {
 				estate = estate_burghers

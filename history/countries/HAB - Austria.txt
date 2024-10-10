@@ -28,6 +28,7 @@ add_country_modifier = {
 	name = "mjl_privateer_efficiency_debuff"
 	duration = -1
 }
+add_manpower = 50
 
 
 change_estate_land_share = {

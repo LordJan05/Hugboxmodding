@@ -166,7 +166,7 @@ legalised_divorces_aspect = {
 		legitimacy = 0.5
 		devotion = 0.5
 		horde_unity = 0.5
-		republican_tradition = 0.2
+		republican_tradition = 0.33
 	}
 	ai_will_do = {
 		factor = 6
@@ -229,6 +229,7 @@ parish_registers_aspect = {
 	}
 	modifier = {
 		free_adm_policy = 1 
+		free_dip_policy = 1 
 	}
 	ai_will_do = {
 		factor = 5
@@ -320,7 +321,7 @@ justified_religious_war_aspect = {
 		}
 	}
 	modifier = {
-		ae_impact = -0.05
+		ae_impact = -0.1
 	}
 	ai_will_do = {
 		factor = 1
@@ -386,7 +387,7 @@ head_of_the_church_aspect = {
 		}
 	}
 	modifier = {
-		global_autonomy = -0.025
+		global_autonomy = -0.03
 	}
 	ai_will_do = {
 		factor = 10
@@ -430,7 +431,7 @@ anglican_aspect = {
 		}
 	}
 	modifier = {
-		global_autonomy = -0.025
+		tolerance_of_heretics_capacity = 1
 	}
 	ai_will_do = {
 		factor = 2

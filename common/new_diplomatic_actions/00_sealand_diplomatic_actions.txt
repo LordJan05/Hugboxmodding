@@ -88,118 +88,118 @@ sea_sunni_crusade_jihad_diplo_action = {
 ############################################
 ########### Espionage Spy Ideas ############
 # Killing heir at 100 spy network:
-sea_spy_kill_heir_diplo_action = {
-	category = covert
-
-	#alert_index = 
-	#alert_tooltip = 
-
-	require_acceptance = no # Whether the recipient gets an option to decline
-
-	is_visible = {
-		is_colonial_nation = no
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				NOT = {
-					is_rival = FROM
-				}
-			}
-			custom_trigger_tooltip = {
-				is_rival = FROM
-				tooltip = sea_spy_kill_heir_covert_action_not_rival
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_spy_network_in = {
-						who = FROM
-						value = 100
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				has_spy_network_in = {
-					who = FROM
-					value = 100
-				}
-				tooltip = sea_spy_kill_heir_covert_action_not_enough_spy_network
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_heir = no
-				}
-			}
-			custom_trigger_tooltip = {
-				FROM = { has_heir = yes }
-				tooltip = sea_spy_kill_heir_covert_action_target_no_heir
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag
-					NOT = {
-						had_country_flag = {
-							flag = sea_spy_kill_heir_covert_action_cooldown_flag
-							days = 10950
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				FROM = {
-					OR = {
-						NOT = { has_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag }
-						had_country_flag = {
-							flag = sea_spy_kill_heir_covert_action_cooldown_flag
-							days = 10950
-						}
-					}
-				}
-				tooltip = sea_spy_kill_heir_covert_action_cooldown
-			}
-		}
-	}
-
-	on_accept = {
-		if = {
-			limit = {
-				has_idea = blackmailing
-			}
-			FROM = {
-				set_country_flag = hunting_accident_heir_assassination_flag
-				country_event = { id = 9459 }
-				set_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag
-			}
-		}
-		else = {
-			FROM = {
-				capital_scope = {
-					add_province_triggered_modifier = sea_spy_kill_heir_diplo_action_modifier
-					set_province_flag = sea_spy_kill_heir_diplo_action_modifier_flag
-				}
-			}
-		}
-		ROOT = {
-			add_spy_network_in = {
-				who = FROM
-				value = -100
-			}
-		}
-	}
-	on_decline = {
-	}
-	ai_acceptance = {
-	}
-	ai_will_do = {
-		always = no
-	}
-}
+#sea_spy_kill_heir_diplo_action = {
+#	category = covert
+#
+#	#alert_index = 
+#	#alert_tooltip = 
+#
+#	require_acceptance = no # Whether the recipient gets an option to decline
+#
+#	is_visible = {
+#		is_colonial_nation = no
+#	}
+#	is_allowed = {
+#		if = {
+#			limit = {
+#				NOT = {
+#					is_rival = FROM
+#				}
+#			}
+#			custom_trigger_tooltip = {
+#				is_rival = FROM
+#				tooltip = sea_spy_kill_heir_covert_action_not_rival
+#			}
+#		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_spy_network_in = {
+#						who = FROM
+#						value = 100
+#					}
+#				}
+#			}
+#			custom_trigger_tooltip = {
+#				has_spy_network_in = {
+#					who = FROM
+#					value = 100
+#				}
+#				tooltip = sea_spy_kill_heir_covert_action_not_enough_spy_network
+#			}
+#		}
+#		if = {
+#			limit = {
+#				FROM = {
+#					has_heir = no
+#				}
+#			}
+#			custom_trigger_tooltip = {
+#				FROM = { has_heir = yes }
+#				tooltip = sea_spy_kill_heir_covert_action_target_no_heir
+#			}
+#		}
+#		if = {
+#			limit = {
+#				FROM = {
+#					has_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag
+#					NOT = {
+#						had_country_flag = {
+#							flag = sea_spy_kill_heir_covert_action_cooldown_flag
+#							days = 10950
+#						}
+#					}
+#				}
+#			}
+#			custom_trigger_tooltip = {
+#				FROM = {
+#					OR = {
+#						NOT = { has_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag }
+#						had_country_flag = {
+#							flag = sea_spy_kill_heir_covert_action_cooldown_flag
+#							days = 10950
+#						}
+#					}
+#				}
+#				tooltip = sea_spy_kill_heir_covert_action_cooldown
+#			}
+#		}
+#	}
+#
+#	on_accept = {
+#		if = {
+#			limit = {
+#				has_idea = blackmailing
+#			}
+#			FROM = {
+#				set_country_flag = hunting_accident_heir_assassination_flag
+#				country_event = { id = 9459 }
+#				set_country_flag = sea_spy_kill_heir_covert_action_cooldown_flag
+#			}
+#		}
+#		else = {
+#			FROM = {
+#				capital_scope = {
+#					add_province_triggered_modifier = sea_spy_kill_heir_diplo_action_modifier
+#					set_province_flag = sea_spy_kill_heir_diplo_action_modifier_flag
+#				}
+#			}
+#		}
+#		ROOT = {
+#			add_spy_network_in = {
+#				who = FROM
+#				value = -100
+#			}
+#		}
+#	}
+#	on_decline = {
+#	}
+#	ai_acceptance = {
+#	}
+#	ai_will_do = {
+#		always = no
+#	}
+#}
 # Killing random general at 60 spy network:
 sea_spy_kill_random_general_diplo_action = {
 	category = covert

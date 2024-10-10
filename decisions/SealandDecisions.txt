@@ -127,28 +127,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	sea_iro_to_haudenosaunee_nation = {
-		major = yes
-		potential = {
-			always = no
-			NOT = { has_country_flag = sea_iro_to_haudenosaunee_nation_flag }
-			tag = IRO
-		}
-		allow = {
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			tag = IRO
-		}
-		effect = {
-			set_country_flag = sea_iro_to_haudenosaunee_nation_flag
-			override_country_name = sea_iro_to_haudenosaunee_nation_name
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
 }
 
 country_decisions = { # Serbia Tsardom
@@ -1633,6 +1611,26 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	sea_add_parliaments_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_parliament = yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = sea_add_parliaments_decision_ttt
+				any_owned_province = { has_seat_in_parliament = no }
+			}
+		}
+		effect = {
+			hidden_effect = { every_owned_province = { set_seat_in_parliament = yes } }
+			custom_tooltip = sea_add_parliaments_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	sea_new_world_kill_ruler_options = {
 		major = yes
 		potential = {
@@ -2822,6 +2820,9 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+}
+# India regional formables:
+country_decisions = {
 	# Bengal:
 	bengal_nation = {
 		major = yes
@@ -2838,7 +2839,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			culture_group = eastern_aryan
+			capital_scope = { superregion = india_superregion }
 			OR = {
 				ai = no
 				AND = {
@@ -2854,6 +2855,10 @@ country_decisions = {
 					ai = no
 				}
 			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -2868,7 +2873,16 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			culture_group = eastern_aryan
+			OR = {
+				culture_group = eastern_aryan
+				capital_scope = {
+					OR = {
+						area = east_bengal_area
+						area = west_bengal_area
+						area = gaur_area
+					}
+				}
+			}
 			gaur_area = {
 				type = all
 				owned_by = ROOT
@@ -2890,6 +2904,584 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			add_prestige = 25
 			set_country_flag = formed_bengal_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Orissa:
+	orissa_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_orissa_flag }
+			NOT = { is_or_was_tag = { tag = ORI } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = orissa_area
+				province_id = 2080
+				province_id = 549
+				province_id = 2048
+				province_id = 4448
+				province_id = 4450
+				province_id = 4471
+				province_id = 553
+				province_id = 4451
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = ORI }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = { area = orissa_area }
+			orissa_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 2080
+			owns_core_province = 549
+			owns_core_province = 2048
+			owns_core_province = 4448
+			owns_core_province = 4450
+			owns_core_province = 4471
+			owns_core_province = 553
+			owns_core_province = 4451
+		}
+		effect = {
+			change_tag = ORI
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_orissa_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Mewar:
+	mewar_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_mewar_flag }
+			NOT = { is_or_was_tag = { tag = MER } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mewar_area
+				province_id = 2093
+				province_id = 528
+				province_id = 525
+				province_id = 4465
+				province_id = 4464
+				province_id = 2067
+				province_id = 514
+				province_id = 4506
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = MER }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = { area = mewar_area }
+			mewar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 2093
+			owns_core_province = 528
+			owns_core_province = 525
+			owns_core_province = 4465
+			owns_core_province = 4464
+			owns_core_province = 2067
+			owns_core_province = 514
+			owns_core_province = 4506
+		}
+		effect = {
+			change_tag = MER
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_mewar_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Malwa:
+	malwa_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_malwa_flag }
+			NOT = { is_or_was_tag = { tag = MLW } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = malwa_area
+				area = gondwana_area
+				area = bundelkhand_area
+				province_id = 4459
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = MLW }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = { area = malwa_area }
+			malwa_area = {
+				type = all
+				owned_by = ROOT
+			}
+			gondwana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bundelkhand_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 4459
+		}
+		effect = {
+			change_tag = MLW
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_malwa_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Gujarat:
+	gujarat_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gujarat_flag }
+			NOT = { is_or_was_tag = { tag = GUJ } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = patan_area
+				area = saurashtra_area
+				area = ahmedabad_area
+				area = tapti_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = GUJ }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = { area = ahmedabad_area }
+			patan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			saurashtra_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ahmedabad_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tapti_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = GUJ
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_gujarat_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Bahmanis:
+	bahmanis_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bahmanis_flag }
+			NOT = { is_or_was_tag = { tag = BAH } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ahmednagar_area
+				area = berar_area
+				area = telingana_area
+				area = maidan_area
+				area = golconda_area
+				area = raichur_doab_area
+				area = desh_area
+				area = konkan_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = BAH }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = {
+				OR = {
+					area = ahmednagar_area
+					area = telingana_area
+					area = maidan_area
+					area = raichur_doab_area
+					area = desh_area
+				}
+			}
+			ahmednagar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			berar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			telingana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			maidan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			golconda_area = {
+				type = all
+				owned_by = ROOT
+			}
+			raichur_doab_area = {
+				type = all
+				owned_by = ROOT
+			}
+			desh_area = {
+				type = all
+				owned_by = ROOT
+			}
+			konkan_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = BAH
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_bahmanis_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+	# Vijayanagar:
+	vijayanagar_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_vijayanagar_flag }
+			NOT = { is_or_was_tag = { tag = VIJ } }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			capital_scope = { superregion = india_superregion }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kanara_area
+				area = mysore_area
+				area = rayalaseema_area
+				area = north_carnatic_area
+				area = south_carnatic_area
+				area = kongu_area
+				area = tanjore_area
+				area = madura_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = VIJ }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			capital_scope = {
+				OR = {
+					area = mysore_area
+					area = rayalaseema_area
+					area = north_carnatic_area
+					area = south_carnatic_area
+					area = kongu_area
+					area = tanjore_area
+				}
+			}
+			kanara_area = {
+				type = all
+				owned_by = ROOT
+			}
+			mysore_area = {
+				type = all
+				owned_by = ROOT
+			}
+			rayalaseema_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_carnatic_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_carnatic_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kongu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tanjore_area = {
+				type = all
+				owned_by = ROOT
+			}
+			madura_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = VIJ
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 25
+			set_country_flag = formed_vijayanagar_flag
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
@@ -3836,5 +4428,341 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 1000
+	}
+}
+# Exodus:
+country_decisions = {
+	# Attiwandaron:
+	exodus_attiwandaron_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = ATW }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = canada_region
+				region = great_lakes_region
+				region = northeast_america_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = ATW }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = canada_region
+					region = great_lakes_region
+					region = northeast_america_region
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = ATW
+			change_primary_culture = anishinabe
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = anishinabe }
+			}
+			change_religion = totemism
+			change_technology_group = north_american
+			change_unit_type = north_american
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Pacaha:
+	exodus_pacaha_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = PCH }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = mississippi_region
+				region = southeast_america_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = PCH }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = mississippi_region
+					region = southeast_america_region
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = PCH
+			change_primary_culture = yoron
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = yoron }
+			}
+			change_religion = totemism
+			change_technology_group = north_american
+			change_unit_type = north_american
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Zia:
+	exodus_zia_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = KER }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = cascadia_region
+				region = california_region
+				region = rio_grande_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = KER }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = cascadia_region
+					region = california_region
+					region = rio_grande_region
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = KER
+			change_primary_culture = pueblo
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = pueblo }
+			}
+			change_religion = totemism
+			change_technology_group = north_american
+			change_unit_type = north_american
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Aztecs:
+	exodus_aztecs_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = AZT }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = guanajuato_area
+				area = huasteca_area
+				area = puebla_area
+				area = mexico_area
+				area = michoacan_area
+				area = jalisco_area
+				area = tierra_caliente_area
+				area = guerrero_area
+				area = mixteca_area
+				area = oaxaca_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = AZT }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					area = guanajuato_area
+					area = huasteca_area
+					area = puebla_area
+					area = mexico_area
+					area = michoacan_area
+					area = jalisco_area
+					area = tierra_caliente_area
+					area = guerrero_area
+					area = mixteca_area
+					area = oaxaca_area
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = AZT
+			change_primary_culture = aztek
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = aztek }
+			}
+			change_religion = nahuatl
+			change_technology_group = mesoamerican
+			change_unit_type = mesoamerican
+			set_country_flag = unlock_aztec_missions_flag
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Carib:
+	exodus_carib_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = CAB }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = carribeans_region
+				region = colombia_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = CAB }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = caribbean_sea_region
+					region = colombia_region
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = CAB
+			change_primary_culture = carib
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = ge }
+			}
+			change_religion = animism
+			change_technology_group = mesoamerican
+			change_unit_type = mesoamerican
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# Tapuia:
+	exodus_tapuia_nation = {
+		major = yes
+		potential = {
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = TUA }
+			OR = { tag = JOL tag = TER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = brazil_region
+				region = la_plata_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = TUA }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = brazil_region
+					region = la_plata_region
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = TUA
+			change_primary_culture = ge
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = ge }
+			}
+			change_religion = animism
+			change_technology_group = andean
+			change_unit_type = south_american
+		}
+		ai_will_do = { factor = 0 }
 	}
 }

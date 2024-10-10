@@ -163,9 +163,6 @@ pacifism_aspect = {
 			}
 		}
 	}
-	ai_will_do = {
-		factor = 0
-	}
 }
 
 regular_defenestrations_aspect = {
@@ -197,6 +194,22 @@ taborite_resurgence_aspect = {
 	modifier = {
 		global_manpower_modifier = 0.2
 		global_sailors_modifier = 0.2
+	}
+	effect = {
+		hidden_effect = { 
+			if = {
+				limit = {
+					has_country_flag = boh_aspect_refund_chance
+				}
+				random_list = { 
+					20 = { 
+						add_church_power = 25
+					}
+					80 = { 
+					}
+				}
+			}
+		}
 	}
 }
 

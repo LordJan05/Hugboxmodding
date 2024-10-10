@@ -273,8 +273,8 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 
 1491.1.1 = {
 	heir = {
-		name = "VÃ®ra Narasimha"
-		monarch_name = "VÃ®ra Narasimha"
+		name = "Vîra Narasimha"
+		monarch_name = "Vîra Narasimha"
 		dynasty = "Tuluva"
 		birth_date = 1483.1.1
 		death_date = 1509.8.9
@@ -285,9 +285,9 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 	}
 }
 
-1503.1.1 = {	#1503 - 1505 VÃ®ra Narasimha acts as regent of Immadhi Narisimha who dies in 1505 leaving VÃ®ra as Raja
+1503.1.1 = {	#1503 - 1505 Vîra Narasimha acts as regent of Immadhi Narisimha who dies in 1505 leaving Vîra as Raja
 	monarch = {
-		name = "VÃ®ra Narasimha"
+		name = "Vîra Narasimha"
 		dynasty = "Tuluva"
 		ADM = 2
 		DIP = 2
@@ -376,8 +376,8 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 
 1542.1.1 = {
 	heir = {
-		name = "SÃ¢dashiva"
-		monarch_name = "SÃ¢dashiva"
+		name = "Sâdashiva"
+		monarch_name = "Sâdashiva"
 		dynasty = "Tuluva"
 		birth_date = 1522.1.1
 		death_date = 1565.1.1
@@ -390,7 +390,7 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 
 1543.1.1 = {	#Final coronation of Sadashiva by Rama Raya who remains the power behind the throne
 	monarch = {
-		name = "SÃ¢dashiva"
+		name = "Sâdashiva"
 		dynasty = "Tuluva"
 		ADM = 0
 		DIP = 0
@@ -519,8 +519,8 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 
 1614.10.1 = {
 	heir = {
-		name = "RÃ¢ma"
-		monarch_name = "RÃ¢ma I"
+		name = "Râma"
+		monarch_name = "Râma I"
 		dynasty = "Aravidu"
 		birth_date = 1590.1.1
 		death_date = 1634.1.1
@@ -533,7 +533,7 @@ change_rajputs_or_marathas_or_nobles_land_share_effect = {
 
 1615.1.1 = {
 	monarch = {
-		name = "RÃ¢ma I"
+		name = "Râma I"
 		dynasty = "Aravidu"
 		ADM = 2
 		DIP = 2

@@ -254,7 +254,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 judaism_yom_kippur_aspect = {	#MIL aspect
 	cost = 100
 	modifier = {
-		infantry_cost = -0.05
+		infantry_cost = -0.1
 	}
 	monarch_power = mil
 	ai_will_do = {
@@ -274,7 +274,7 @@ judaism_yom_kippur_aspect = {	#MIL aspect
 judaism_remember_passover_aspect = {	#MIL aspect
 	cost = 100
 	modifier = {
-		defensiveness = 0.25
+		defensiveness = 0.33
 	}
 	monarch_power = mil
 	ai_will_do = {
@@ -289,8 +289,8 @@ judaism_remember_passover_aspect = {	#MIL aspect
 judaism_purim_teachings_aspect = {	#MIL aspect
 	cost = 100
 	modifier = {
-		land_morale = 0.05
-		naval_morale = 0.05
+		land_morale = 0.1
+		naval_morale = 0.1
 	}
 	monarch_power = mil
 	ai_will_do = {

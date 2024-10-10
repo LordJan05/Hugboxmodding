@@ -22,12 +22,12 @@ WoC_cuzco_1 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			if = {
-				limit = {
-					NOT = { is_religion_reformed = yes }
-				}
-				authority = 20
-			}
+			#if = {
+			#	limit = {
+			#		NOT = { is_religion_reformed = yes }
+			#	}
+			#	authority = 20
+			#}
 			army_size = 12
 			legitimacy_equivalent = 90
 		}
@@ -959,10 +959,10 @@ WoC_inca_2 = {
 		}
 		trigger = {
 			religion = inti
-			OR = {
-				authority = 80
-				is_religion_reformed = yes
-			}
+			#OR = {
+			#	authority = 80
+			#	is_religion_reformed = yes
+			#}
 			custom_trigger_tooltip = {
 				tooltip = INC_has_passed_3_religious_reforms
 				has_global_modifier_value = {
@@ -989,9 +989,9 @@ WoC_inca_2 = {
 		}
 		trigger = {
 			religion = inti
-			has_reformed_inti_religion_trigger = yes
+			#has_reformed_inti_religion_trigger = yes
 			
-			is_religion_reformed = yes
+			#is_religion_reformed = yes
 			
 			OR = {
 				monthly_adm = 9

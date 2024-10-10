@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 technology_group = indian
 primary_culture = nepali
+add_accepted_culture = bihari
 religion = hinduism
 capital = 4485	#Palpa
 add_country_modifier = {

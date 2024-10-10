@@ -346,8 +346,8 @@ estate_nobles_levies = {
 		}
 	} 
 	modifier_by_land_ownership = {
-		#global_tax_modifier = -0.10
-		global_manpower_modifier = 0.5
+		global_tax_modifier = -0.1
+		global_manpower_modifier = 0.30
 	}
 	influence_scaled_conditional_modifier = {
 		trigger = {
@@ -367,9 +367,9 @@ estate_nobles_levies = {
 	}
 	penalties = {
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+	#mechanics = {
+		#exempt_from_seize_land
+	#}
 	conditional_modifier = {
 		trigger = {
 			has_government_attribute = free_noble_levies
@@ -1166,7 +1166,7 @@ estate_nobles_golden_liberty = {
 	penalties = {
 	}
 	benefits = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 	mechanics = {
 		exempt_from_seize_land

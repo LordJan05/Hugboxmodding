@@ -4316,7 +4316,10 @@ reform_the_samurai_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		culture_group = japanese_g 
-		tag = JAP 
+		OR = {
+			tag = JAP
+			tag = IJP
+		}
 		OR = {
 			have_had_reform = reform_the_samurai_reform
 			has_reform = reform_the_samurai_reform

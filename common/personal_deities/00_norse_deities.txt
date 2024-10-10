@@ -10,11 +10,6 @@ odin = {
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 7
@@ -41,11 +36,6 @@ freya =
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 8
@@ -67,15 +57,10 @@ freya =
 
 tor = {
 	defensiveness = 0.2
-	artillery_fire = 0.75
+	artillery_fire = 0.5
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 9
@@ -113,11 +98,6 @@ tyr = {
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 10
@@ -143,11 +123,6 @@ njord = {
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 11
@@ -179,11 +154,6 @@ snotra = {
 	
 	potential = {
 		religion = norse_pagan_reformed
-		OR = {
-			tag = VIN
-			tag = NSE
-			tag = DAN
-		}
 	}
 	trigger = {}
 	sprite = 12

@@ -4324,7 +4324,6 @@ kor_built_the_wall = {
 }
 
 kor_built_the_wall_2 = {
-	fort_maintenance_modifier = -0.15
 	fort_maintenance_modifier = -0.25
 	garrison_size = 0.25
 	defensiveness = 0.25
@@ -7925,11 +7924,11 @@ fin_accelerated_assimilation_modifier = {
 	years_of_nationalism = -10 
 }
 fin_abundant_food_modifier = {
-	development_cost = -0.15 
+	development_cost = -0.075 
 	build_time = -0.25
 }
 fin_viipurin_linna_modifier = {
-	local_defender_dice_roll_bonus = 2 
+	local_defender_dice_roll_bonus = 1 
 	max_attrition = 3
 	local_hostile_attrition = 3
 }
@@ -7938,10 +7937,9 @@ fin_commercial_tar_modifier = {
 	local_ship_cost = -0.25
 }
 fin_white_death_descends_upon_europe = {
-	defensiveness = 0.2 
+	defensiveness = 0.15 
 	hostile_attrition = 1
 	max_hostile_attrition = 1
-	attack_bonus_in_capital_terrain = 1
 }
 
 fin_finnish_militarization_modifier = {
@@ -13325,15 +13323,15 @@ INC_kallanka_construction = {
 }
 
 estate_burghers_mountain_expansion_upgrade_mountains = {
-	local_development_cost = -0.35
+	local_development_cost = -0.175
 }
 
 estate_burghers_mountain_expansion_upgrade_highlands = {
-	local_development_cost = -0.2
+	local_development_cost = -0.1
 }
 
 estate_burghers_mountain_expansion_upgrade_hills = {
-	local_development_cost = -0.25
+	local_development_cost = -0.125
 }
 
 estate_burghers_mountain_expansion_penalty = {

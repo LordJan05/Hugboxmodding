@@ -60,6 +60,20 @@ country_event = {
 		add_stability = 1
 		add_prestige = 20
 	}
+	option = { # Incase did not get Ambrosian option
+		name = "ambrosian_republic.8.b"
+		trigger = {
+			NOT = { has_country_flag = ambrosian_republic_resolved }
+			NOT = { has_reform = ambrosian_republic }
+		}
+		add_stability = 1
+		add_prestige = 20
+		add_government_reform = ambrosian_republic
+		add_republican_tradition = 20
+		define_ruler = {
+			name = "Giorgio Lampugnano"
+		}
+	}
 }
 
 # France and the Emperor react
@@ -418,7 +432,7 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		had_country_flag = { flag = sforza_hired days = 700 }
+		had_country_flag = { flag = sforza_hired days = 600 }
 		has_leader = "Francesco Sforza"
 		any_owned_province = {
 			region = italy_region

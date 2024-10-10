@@ -139,11 +139,14 @@ swiss_cantons_mechanic = {
 				is_at_war = yes
 			}
 			effect = {
-				every_owned_province = {
-					limit = { has_fort_building_trigger = yes }
-					add_province_modifier = {
-						name = sea_swiss_cantons_3_influence_modifier
-						duration = 1825
+				custom_tooltip = sea_swiss_cantons_3_influence_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = { has_fort_building_trigger = yes }
+						add_province_modifier = {
+							name = sea_swiss_cantons_3_influence_modifier
+							duration = 1825
+						}
 					}
 				}
 			}

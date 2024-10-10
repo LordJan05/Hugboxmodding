@@ -23,7 +23,7 @@ blood_gathering_mechanic = {
 				}
 				modifier = {
 					land_morale = 0.1
-					manpower_in_own_culture_provinces = 0.2
+					manpower_in_own_culture_provinces = 0.1
 				}
 			}
 			scaled_modifier = {
@@ -40,8 +40,8 @@ blood_gathering_mechanic = {
 					has_country_flag = azt_tlaloc_deity
 				}
 				modifier = {
-					development_cost_in_primary_culture = -0.1
-					build_cost = -0.2
+					development_cost_in_primary_culture = -0.05
+					build_cost = -0.1
 				}
 			}
 			scaled_modifier = {

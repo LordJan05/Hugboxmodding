@@ -699,67 +699,67 @@ WoC_sunset_invasion_5 = {
 	}
 	has_country_shield = yes
 	
-	SUN_settling_europe = {
-		icon = mission_colonial
-		required_missions = { }
-		position = 15
-		provinces_to_highlight = {
-			continent = europe
-			NOT = { owned_by = ROOT }
-		}
-		trigger = {
-			num_of_owned_provinces_with = {
-				continent = europe
-				value = 10
-			}
-		}
-		effect = {
-			custom_tooltip = SUN_enable_establishment_of_european_colonies 
-			set_country_flag = SUN_enable_european_colonies_flag
-		}
-	}
+	#SUN_settling_europe = {
+	#	icon = mission_colonial
+	#	required_missions = { }
+	#	position = 15
+	#	provinces_to_highlight = {
+	#		continent = europe
+	#		NOT = { owned_by = ROOT }
+	#	}
+	#	trigger = {
+	#		num_of_owned_provinces_with = {
+	#			continent = europe
+	#			value = 10
+	#		}
+	#	}
+	#	effect = {
+	#		custom_tooltip = SUN_enable_establishment_of_european_colonies 
+	#		set_country_flag = SUN_enable_european_colonies_flag
+	#	}
+	#}
 	
-	SUN_colonial_system = {
-		icon = hand-picked_bureaucrats
-		required_missions = { SUN_settling_europe }
-		position = 17
-		provinces_to_highlight = {
-			owner = {
-				is_subject_of_type = european_colony
-				is_subject_of = ROOT
-				NOT = { total_development = 300 }
-			}
-		}
-		trigger = {
-			calc_true_if = {
-				all_subject_country = {
-					is_subject_of_type = european_colony
-					custom_trigger_tooltip = {
-						tooltip = total_development_tt_300
-						total_development = 300
-					}
-				}
-				amount = 3
-			}
-		}
-		effect = {
-			country_event_with_option_insight = {
-				id = sunset_invasion.7
-				option_1 = "
-					custom_tooltip = SUN_less_ld_for_colonies
-					set_country_flag = SUN_less_ld_for_colonies_flag
-				"
-				option_2 = "
-					custom_tooltip = SUN_gp_for_colonies
-					set_country_flag = SUN_gp_for_colonies_flag
-				"
-				option_3 = "
-					custom_tooltip = SUN_tariffs_for_colonies
-					set_country_flag = SUN_tariffs_for_colonies_flag
-				"
-			}
-		}
-	}
+	#SUN_colonial_system = {
+	#	icon = hand-picked_bureaucrats
+	#	required_missions = { SUN_settling_europe }
+	#	position = 17
+	#	provinces_to_highlight = {
+	#		owner = {
+	#			is_subject_of_type = european_colony
+	#			is_subject_of = ROOT
+	#			NOT = { total_development = 300 }
+	#		}
+	#	}
+	#	trigger = {
+	#		calc_true_if = {
+	#			all_subject_country = {
+	#				is_subject_of_type = european_colony
+	#				custom_trigger_tooltip = {
+	#					tooltip = total_development_tt_300
+	#					total_development = 300
+	#				}
+	#			}
+	#			amount = 3
+	#		}
+	#	}
+	#	effect = {
+	#		country_event_with_option_insight = {
+	#			id = sunset_invasion.7
+	#			option_1 = "
+	#				custom_tooltip = SUN_less_ld_for_colonies
+	#				set_country_flag = SUN_less_ld_for_colonies_flag
+	#			"
+	#			option_2 = "
+	#				custom_tooltip = SUN_gp_for_colonies
+	#				set_country_flag = SUN_gp_for_colonies_flag
+	#			"
+	#			option_3 = "
+	#				custom_tooltip = SUN_tariffs_for_colonies
+	#				set_country_flag = SUN_tariffs_for_colonies_flag
+	#			"
+	#		}
+	#	}
+	#}
 	
 	SUN_pacific = {
 		icon = mission_polynesian_navy_build

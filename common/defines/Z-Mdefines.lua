@@ -34,14 +34,9 @@ NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5475
 --NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 10		-- Will see how much affects.
 NDefines.NEconomy.TRADE_NON_CAPITAL_OFFICE = -0.2	-- Will see how much affects.
 
-NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
-NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.7
-
 NDefines.NMilitary.MAX_DRAFT_SIZE_TO_YEARLY_INCOME_COST_RATIO = 1.33 -- How much of your yearly income it costs to draft the above ratio's worth of units
 
 NDefines.NReligion.MAX_CHURCH_POWER = 300
-NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 20
-NDefines.NReligion.STARTING_HARMONY = 50.0
 NDefines.NReligion.YEARLY_HARMONY_INCREASE = 2.0
 NDefines.NReligion.HARMONY_LOSS_PER_DEV_CONVERTED = 0
 NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -5.0
@@ -55,7 +50,6 @@ NDefines.NReligion.PIETY_ABS_THRESHOLD = 2 -- Made custom button
 -- Zlewikk mod part:
 
 NDefines.NGame.END_DATE = "1836.1.2"
-NDefines.NGame.MAX_CLIENT_STATES = 15
 
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_TRUST_LOSS = 0
 --NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT = -0.1 -- I forgot what this did.
@@ -65,8 +59,9 @@ NDefines.NDiplomacy.MAX_FREE_CITIES = 0
 NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 1
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 1
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.003
+--NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.0025
+NDefines.NDiplomacy.HRE_HERETIC_PENALTY = 0
 NDefines.NDiplomacy.LACK_OF_ELECTORS_HIT = 0
---NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.0075
 NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_PENALTY_DAYS = 0
 
@@ -80,8 +75,6 @@ NDefines.NDiplomacy.SPY_NETWORK_AE_EFFECT = -0.4 -- -0.3
 NDefines.NCountry.HRE_MAX_RANK = 2
 NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 3
 
---NDefines.NCountry.NAT_FOCUS_DECREASE = 0 # For future
---NDefines.NCountry.NAT_FOCUS_INCREASE = 0
 NDefines.NCountry.NAT_FOCUS_YEARS = 15 -- 0
 NDefines.NCountry.NAT_FOCUS_YEARS_RANK = 0
 NDefines.NCountry.COLONIAL_CLAIM_VIOLATION = 0
@@ -98,7 +91,7 @@ NDefines.NEconomy.MAX_BUILDING_SLOTS = 16
 
 NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 0
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 2
-NDefines.NMilitary.ASSAULT_ATTACKER_LOSS = 2
+NDefines.NMilitary.ASSAULT_ATTACKER_LOSS = 1.5
 NDefines.NMilitary.WARDEC_COBELLI_FOR_DEFENDER_OF_THE_FAITH = 0
 
 NDefines.NMilitary.ARMY_DRILL_YEARLY_GAIN = 20.0
@@ -106,18 +99,24 @@ NDefines.NMilitary.ARMY_DRILL_SKILL_MONTHS = 90
 
 NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.15
 NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.25
+NDefines.NMilitary.INFANTRY_SPEED = 0.7
+NDefines.NMilitary.CAVALRY_SPEED = 0.8
+NDefines.NMilitary.ARTILLERY_SPEED = 0.6
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.15
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY = -0.15
-NDefines.NMilitary.CANNOT_RETREAT_DAYS = 6
 
 NDefines.NMilitary.PARTICIPATION_SCORE_BLOCKADE = 0.002
 NDefines.NMilitary.PARTICIPATION_SCORE_BATTLE = 0.05
 NDefines.NMilitary.PARTICIPATION_SCORE_SIEGE = 0.02
-NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 7
-NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 6
-NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 55
+NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.2 -- 0.4
+NDefines.NMilitary.WARGOAL_MAX_BONUS = 40 -- 25
+NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 8 -- 5
+NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 6 -- 3
+NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 55 -- 40
 
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 60.0
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 0
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 100
 
 -- AI stuff:
 NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.0 -- Vanilla 1.2

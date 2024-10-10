@@ -1702,8 +1702,10 @@ tur_african_conquest = {
 			add_navy_tradition = 25
 			if = {
 				limit = {
-					exists = MOR
-					ai = yes
+					MOR = {
+						exists = yes
+						ai = yes
+					}
 				}
 				add_casus_belli = {
 					type = cb_ottoman_subjugation_war
@@ -2436,8 +2438,10 @@ tur_egyptian_conquest = {
 		effect = {
 			if = {
 				limit = {
-					exists = TUN
-					ai = yes
+					TUN = {
+						exists = yes
+						ai = yes
+					}
 				}
 				add_casus_belli = {
 					type = cb_ottoman_subjugation_war
@@ -2719,8 +2723,10 @@ tur_egyptian_conquest = {
 			}
 			if = {
 				limit = {
-					exists = ADA
-					ai = yes
+					ADA = {
+						exists = yes
+						ai = yes
+					}
 				}
 				add_casus_belli = {
 					type = cb_ottoman_subjugation_war
@@ -3549,8 +3555,10 @@ tur_arabian_conquest = {
 		effect = {
 			if = {
 				limit = {
-					exists = YEM
-					ai = yes
+					YEM = {
+						exists = yes
+						ai = yes
+					}
 				}
 				add_casus_belli = {
 					type = cb_ottoman_subjugation_war

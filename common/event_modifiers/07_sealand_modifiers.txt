@@ -58,6 +58,10 @@ tib_tame_the_mountains_modifier = {
 	local_development_cost = -0.35
 }
 ################
+# New World canal prov:
+new_world_canal_tag_no_colonize = {
+	colonists = -5
+}
 # New World and Colonial Australia nerf:
 new_wrold_nerfs_modifier = {
 	local_development_cost = 0.15
@@ -130,6 +134,7 @@ mint_temple_modifier = {
 }
 war_college_supply_modifier = {
 	supply_limit_modifier = 2
+	supply_limit = 2
 }
 ##########################################
 # North-America:
@@ -979,59 +984,79 @@ zulu_warriors_units = {
 ########
 # Central:
 mini_cwezi_cult_modifier = {
-	improve_relation_modifier = 0.1
+	land_morale = 0.04
+	naval_morale = 0.04
 }
 mini_central_african_ancestor_cult_modifier = {
-	tolerance_own = 1
+	development_cost = -0.025
+	state_maintenance_modifier = -0.1
 }
 mini_mwari_cult_modifier = {
 	discipline = 0.015
+	ship_durability = 0.05
 }
 # Western
 mini_yemoja_cult_modifier = {
-	naval_maintenance_modifier = -0.075
+	legitimacy = 0.25
+	republican_tradition = 0.1
+	devotion = 0.25
+	horde_unity = 0.25
+	colonist_placement_chance = 0.05
 }
 mini_roog_cult_modifier = {
-	land_attrition = -0.075
+	reinforce_speed = 0.1
+	movement_speed = 0.05
 }
 mini_nyame_cult_modifier = {
-	diplomatic_reputation = 1
+	province_warscore_cost = -0.05
+	advisor_cost = -0.05
 
 }
 # Eastern:
 mini_enkai_cult_modifier = {
 	manpower_recovery_speed = 0.075
+	sailors_recovery_speed = 0.075
 }
 mini_waaq_cult_modifier = {
-	global_unrest = -1
+	global_trade_goods_size_modifier = 0.05
+	global_trade_power = 0.1
 }
 mini_zanahary_cult_modifier = {
-	war_exhaustion = -0.03
+	yearly_army_professionalism = 0.001
+	war_exhaustion = -0.04
 }
 # ROTW:
 mini_christianity_cult_modifier = {
-	global_own_trade_power = 0.125
+	missionaries = 1
+	technology_cost = -0.05
 }
 mini_islam_cult_modifier = {
-	global_institution_spread = 0.05
+	merchants = 1
+	idea_cost = -0.05
 }
 mini_buddhism_cult_modifier = {
-	build_cost = -0.05
+	monthly_splendor = 1
+	min_autonomy = -10
 }
 mini_dharmic_cult_modifier = {
-	global_trade_goods_size_modifier = 0.05
+	colonists = 1
+	governing_capacity_modifier = 0.1
 }
 mini_south_central_american_cult_modifier = {
-	land_morale = 0.025
+	gold_depletion_chance_modifier = -0.5
+	colony_development_boost = 1
 }
 mini_norse_cult_modifier = {
-	tolerance_heathen = 1
+	landing_penalty = -1
+	navy_tradition = 1
 }
 mini_jewish_cult_modifier = {
-	advisor_cost = -0.05
+	interest = -0.2
+	global_tax_modifier = 0.25
 }
 mini_zoroastrian_cult_modifier = {
-	merchants = 1
+	expand_infrastructure_cost_modifier = -0.25
+	centralize_state_cost = -0.25
 }
 ##########################################
 # Kilwa:
@@ -1052,9 +1077,8 @@ tercios_special_fire_units = {
 ##########################################
 # Portugal:
 henry_the_navigator = {
-	range = 0.15
-	naval_maintenance_modifier = -0.2
-	global_ship_recruit_speed = -0.2
+	naval_maintenance_modifier = -0.1
+	global_ship_recruit_speed = -0.1
 	naval_attrition = -0.1
 	sea_por_explo_influence = 0.1 # Portugal faction
 	may_explore = yes
@@ -1129,7 +1153,7 @@ tradenode_tangiers_modifier = {
 	trade_company_investment_cost = -0.15
 }
 sea_gen_sicily_modifier = {
-	allowed_marine_fraction = 0.5
+	allowed_marine_fraction = 0.33
 }
 sea_gen_corsica_modifier = {
 	galley_power = 0.15
@@ -1366,12 +1390,4 @@ mys_under_new_administration_modifier = {
 }
 mys_mega_fast_modifier = {
 	movement_speed = 0.05
-}
-# Byryatia:
-brt_warriors_wrath_modifier = {
-	shock_damage = 0.15
-}
-brt_fast_expansion_modifier = {
-	core_creation = -0.15
-	movement_speed = 0.15
 }

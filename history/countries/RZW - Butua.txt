@@ -25,6 +25,7 @@ capital = 1185	# Butua
 #Torwa Dynasty
 1444.1.1 = {
 	monarch = {
+		birth_date = 1411.1.1
 		name = "Dlembeu"
 		dynasty = "Torwa"
 		adm = 4

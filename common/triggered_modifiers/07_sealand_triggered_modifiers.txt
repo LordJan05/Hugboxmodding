@@ -533,6 +533,25 @@ sea_gen_northern_genoa_trade_modifier = {
 	infantry_power = 0.1
 }
 ##########################################
+# Exodus:
+sea_exodus_boost_modifier = {
+	potential = {
+		OR = {
+			tag = JOL
+			tag = TER
+		}
+		ai = no
+		NOT = { is_year = 1500 }
+	}
+	trigger = {
+		NOT = { is_year = 1500 }
+	}
+	range = 2
+	colonists = 1
+	may_explore = yes
+	global_tax_income = 48
+}
+##########################################
 # Electors
 sea_elector_splendor_modifier = {
 	potential = {

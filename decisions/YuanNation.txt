@@ -251,6 +251,7 @@ country_decisions = {
 					set_global_flag = sinicized_altaic_flag
 				}
 				custom_tooltip = sinicize_mongols_ct
+				change_technology_group = chinese
 			}
 			if = {
 				limit = { has_custom_ideas = no }

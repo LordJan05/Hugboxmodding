@@ -34,25 +34,7 @@ blessing_navjote = {
 		monthly_asha_vahishta = 0.5
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.9
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.7
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.5
-			}
-		}
+		factor = 20
 	}
 }
 
@@ -87,6 +69,6 @@ blessing_dakhma = {
 		monthly_asha_vahishta = 0.5
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 30
 	}
 }

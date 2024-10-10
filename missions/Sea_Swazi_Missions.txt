@@ -4496,7 +4496,6 @@ sealand_swz_missions_middle = {
 			add_adm_power = 200
 			add_dip_power = 200
 			add_mil_power = 200
-			country_event = { id = swazi_election_government.2 }
 			set_government_rank = 3
 		}
 	}

@@ -1,5 +1,5 @@
 fervor_trade = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -37,7 +37,7 @@ fervor_trade = {
 }
 
 fervor_war = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -62,7 +62,7 @@ fervor_war = {
 }
 
 fervor_stability = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -93,7 +93,7 @@ fervor_stability = {
 }
 
 fervor_diplomacy = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -118,7 +118,7 @@ fervor_diplomacy = {
 }
 
 fervor_trade_buffed = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}
@@ -156,7 +156,7 @@ fervor_trade_buffed = {
 }
 
 fervor_war_buffed = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}
@@ -181,7 +181,7 @@ fervor_war_buffed = {
 }
 
 fervor_stability_buffed = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}
@@ -212,7 +212,7 @@ fervor_stability_buffed = {
 }
 
 fervor_diplomacy_buffed = {
-	cost = 3
+	cost = 4
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}

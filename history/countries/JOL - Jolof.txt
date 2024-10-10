@@ -9,6 +9,17 @@ unlock_cult = nyame_cult
 capital = 1116
 religious_school = maliki_school
 
+add_country_modifier = {
+	name = "mjl_privateer_efficiency_debuff"
+	duration = -1
+}
+set_country_flag = no_colonial_nations
+add_country_modifier = {
+	name = new_world_splendor
+	duration = -1
+}
+add_mercantilism = 35
+
 change_estate_land_share = {
 	estate = estate_nobles
 	share = -0.502
@@ -115,6 +126,7 @@ change_estate_land_share = {
 1440.1.1 = {
 	monarch = {
 		name = "Leeyti Tyukuli"
+		birth_date = 1411.1.1
 		dynasty = "Ndiaye"
 		adm = 3
 		dip = 3
@@ -122,28 +134,28 @@ change_estate_land_share = {
 	}
 }
 
-1440.1.1 = {
-	heir = {
-		name = "N'Dyelen Mbey"
-		monarch_name = "N'Dyelen Mbey Leeyti"
-		dynasty = "Ndiaye"
-		birth_date = 1420.1.1
-		death_date = 1465.1.1
-		claim = 95
-		adm = 1
-		dip = 2
-		mil = 1
-	}
-}
+#1440.1.1 = {
+#	heir = {
+#		name = "N'Dyelen Mbey"
+#		monarch_name = "N'Dyelen Mbey Leeyti"
+#		dynasty = "Ndiaye"
+#		birth_date = 1420.1.1
+#		death_date = 1465.1.1
+#		claim = 95
+#		adm = 1
+#		dip = 2
+#		mil = 1
+#	}
+#}
 
-1444.1.1 = {
-	if = {
-		limit = {
-			has_government_attribute = has_internal_tribes
-		}
-		set_estate_privilege = estate_nobles_decentralized_tribe
-	}
-}
+#1444.1.1 = {
+#	if = {
+#		limit = {
+#			has_government_attribute = has_internal_tribes
+#		}
+#		set_estate_privilege = estate_nobles_decentralized_tribe
+#	}
+#}
 
 1450.1.1 = {
 	monarch = {

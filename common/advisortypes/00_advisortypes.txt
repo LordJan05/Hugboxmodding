@@ -5515,7 +5515,7 @@ advisor_siege_ability = {
 	}
 	
 	# Bonus
-	siege_ability = 0.15
+	siege_ability = 0.2
 	
 	skill_scaled_modifier = {
 		trigger = {

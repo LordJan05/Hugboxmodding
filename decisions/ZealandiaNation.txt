@@ -133,44 +133,25 @@ country_decisions = {
 	aotearoa_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			NOT = { exists = AOT }
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			#primary_culture = maori
-			capital_scope = {
-				colonial_region = colonial_australia
-				is_core = ROOT
-			}
-			colonial_australia = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
-			}
+			is_random_new_world = no
+			NOT = { has_country_flag = exodus_formed_nation_flag }
+			normal_or_historical_nations = yes
+			NOT = { tag = AOT }
+			OR = { tag = JOL tag = TER }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2737
-				province_id = 1107
-				province_id = 1109
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+				area = te_waipounamu_area
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				is_city = no
-			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			#is_free_or_tributary_trigger = yes
+			NOT = { exists = AOT }
 			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_australia
-				is_core = ROOT
-			}
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
 			num_of_owned_provinces_with = {
 				value = 7
 				OR = {
@@ -178,9 +159,7 @@ country_decisions = {
 					area = te_ika_a_maui_waho_area
 					area = te_waipounamu_area
 				}
-				is_city = yes
 			}
-			NOT = { exists = AOT }
 		}
 		effect = {
 			hidden_effect = {
@@ -193,56 +172,14 @@ country_decisions = {
 				}
 			}
 			change_tag = AOT
-			on_change_tag_effect = yes
 			change_primary_culture = maori
+			set_sea_exodus_stuff = yes
+			hidden_effect = {
+				every_owned_province = { change_culture = maori }
+			}
 			change_religion = dreamtime
-			if = {
-				limit = {
-					is_free_or_tributary_trigger = yes
-				}
-				swap_non_generic_missions = yes
-			}
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = maori_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			te_ika_a_maui_hauauru_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = AOT
-			}
-			te_ika_a_maui_waho_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = AOT
-			}
-			te_waipounamu_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = AOT
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 }

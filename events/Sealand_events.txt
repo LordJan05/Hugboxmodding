@@ -694,162 +694,162 @@ country_event = {
 	}
 }
 # Discover America for players
-country_event = {
-	id = sealand_events.7
-	title = sealand_events.7.t
-	desc = sealand_events.7.d
-	picture = BATTLE_eventPicture
-
-	hidden = yes
-   	mean_time_to_happen = {
-        	days = 1
-    	}
-	trigger = {
-		NOT = { is_year = 1450 }
-		NOT = { has_country_flag = discovered_america_flag }
-		capital_scope = {
-			OR = {
-				continent = north_america
-				continent = south_america
-			}
-		}
-		ai = no
-	}
-	immediate = {
-		every_province = {
-			limit = {
-				OR = {
-					continent = north_america
-					continent = south_america
-					superregion = near_east_superregion
-					superregion = persia_superregion
-					superregion = india_superregion
-				}
-			}
-			discover_country = ROOT
-		}
-		every_province = {
-			limit = {
-				OR = {
-					continent = north_america
-					continent = south_america
-					superregion = near_east_superregion
-					superregion = persia_superregion
-					superregion = india_superregion
-				}
-			}
-			sea_zone = {
-				discover_country = ROOT
-			}
-		}
-		set_country_flag = discovered_america_flag
-	}
-	option = { }
-}
+#country_event = {
+#	id = sealand_events.7
+#	title = sealand_events.7.t
+#	desc = sealand_events.7.d
+#	picture = BATTLE_eventPicture
+#
+#	hidden = yes
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	trigger = {
+#		NOT = { is_year = 1450 }
+#		NOT = { has_country_flag = discovered_america_flag }
+#		capital_scope = {
+#			OR = {
+#				continent = north_america
+#				continent = south_america
+#			}
+#		}
+#		ai = no
+#	}
+#	immediate = {
+#		every_province = {
+#			limit = {
+#				OR = {
+#					continent = north_america
+#					continent = south_america
+#					superregion = near_east_superregion
+#					superregion = persia_superregion
+#					superregion = india_superregion
+#				}
+#			}
+#			discover_country = ROOT
+#		}
+#		every_province = {
+#			limit = {
+#				OR = {
+#					continent = north_america
+#					continent = south_america
+#					superregion = near_east_superregion
+#					superregion = persia_superregion
+#					superregion = india_superregion
+#				}
+#			}
+#			sea_zone = {
+#				discover_country = ROOT
+#			}
+#		}
+#		set_country_flag = discovered_america_flag
+#	}
+#	option = { }
+#}
 # Discover more:
-country_event = {
-	id = sealand_events.8
-	title = sealand_events.7.t
-	desc = sealand_events.7.d
-	picture = BATTLE_eventPicture
-
-	hidden = yes
-   	mean_time_to_happen = {
-        	days = 1
-    	}
-	trigger = {
-		is_year = 1455
-		NOT = { is_year = 1460 }
-		NOT = { has_country_flag = discovered_america_more_flag }
-		capital_scope = {
-			OR = {
-				continent = north_america
-				continent = south_america
-			}
-		}
-		ai = no
-	}
-	immediate = {
-		every_province = {
-			limit = {
-				OR = {
-					superregion = tartary_superregion
-					superregion = far_east_superregion
-					superregion = china_superregion
-					superregion = east_indies_superregion
-				}
-			}
-			discover_country = ROOT
-		}
-		every_province = {
-			limit = {
-				OR = {
-					superregion = tartary_superregion
-					superregion = far_east_superregion
-					superregion = china_superregion
-					superregion = east_indies_superregion
-				}
-			}
-			sea_zone = {
-				discover_country = ROOT
-			}
-		}
-		set_country_flag = discovered_america_more_flag
-	}
-	option = { }
-}
+#country_event = {
+#	id = sealand_events.8
+#	title = sealand_events.7.t
+#	desc = sealand_events.7.d
+#	picture = BATTLE_eventPicture
+#
+#	hidden = yes
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	trigger = {
+#		is_year = 1455
+#		NOT = { is_year = 1460 }
+#		NOT = { has_country_flag = discovered_america_more_flag }
+#		capital_scope = {
+#			OR = {
+#				continent = north_america
+#				continent = south_america
+#			}
+#		}
+#		ai = no
+#	}
+#	immediate = {
+#		every_province = {
+#			limit = {
+#				OR = {
+#					superregion = tartary_superregion
+#					superregion = far_east_superregion
+#					superregion = china_superregion
+#					superregion = east_indies_superregion
+#				}
+#			}
+#			discover_country = ROOT
+#		}
+#		every_province = {
+#			limit = {
+#				OR = {
+#					superregion = tartary_superregion
+#					superregion = far_east_superregion
+#					superregion = china_superregion
+#					superregion = east_indies_superregion
+#				}
+#			}
+#			sea_zone = {
+#				discover_country = ROOT
+#			}
+#		}
+#		set_country_flag = discovered_america_more_flag
+#	}
+#	option = { }
+#}
 # Discover more more:
-country_event = {
-	id = sealand_events.9
-	title = sealand_events.7.t
-	desc = sealand_events.7.d
-	picture = BATTLE_eventPicture
-
-	hidden = yes
-   	mean_time_to_happen = {
-        	days = 1
-    	}
-	trigger = {
-		is_year = 1488
-		NOT = { is_year = 1500 }
-		NOT = { has_country_flag = discovered_america_more_more_flag }
-		capital_scope = {
-			OR = {
-				continent = north_america
-				continent = south_america
-			}
-		}
-		ai = no
-	}
-	immediate = {
-		every_province = {
-			limit = {
-				OR = {
-					superregion = eastern_europe_superregion
-					superregion = europe_superregion
-					superregion = africa_superregion
-					superregion = southern_africa_superregion
-				}
-			}
-			discover_country = ROOT
-		}
-		every_province = {
-			limit = {
-				OR = {
-					superregion = eastern_europe_superregion
-					superregion = europe_superregion
-					superregion = africa_superregion
-					superregion = southern_africa_superregion
-				}
-			}
-			sea_zone = {
-				discover_country = ROOT
-			}
-		}
-		set_country_flag = discovered_america_more_more_flag
-	}
-	option = { }
-}
+#country_event = {
+#	id = sealand_events.9
+#	title = sealand_events.7.t
+#	desc = sealand_events.7.d
+#	picture = BATTLE_eventPicture
+#
+#	hidden = yes
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	trigger = {
+#		is_year = 1488
+#		NOT = { is_year = 1500 }
+#		NOT = { has_country_flag = discovered_america_more_more_flag }
+#		capital_scope = {
+#			OR = {
+#				continent = north_america
+#				continent = south_america
+#			}
+#		}
+#		ai = no
+#	}
+#	immediate = {
+#		every_province = {
+#			limit = {
+#				OR = {
+#					superregion = eastern_europe_superregion
+#					superregion = europe_superregion
+#					superregion = africa_superregion
+#					superregion = southern_africa_superregion
+#				}
+#			}
+#			discover_country = ROOT
+#		}
+#		every_province = {
+#			limit = {
+#				OR = {
+#					superregion = eastern_europe_superregion
+#					superregion = europe_superregion
+#					superregion = africa_superregion
+#					superregion = southern_africa_superregion
+#				}
+#			}
+#			sea_zone = {
+#				discover_country = ROOT
+#			}
+#		}
+#		set_country_flag = discovered_america_more_more_flag
+#	}
+#	option = { }
+#}
 country_event = {
 	id = sealand_events.10
 	title = sealand_events.10.t
@@ -863,6 +863,7 @@ country_event = {
 			OR = {
 				NOT = { government = monarchy }
 				has_reform = native_basic_reform
+				tag = AZT
 			}
 		}
 		change_government = monarchy
@@ -904,14 +905,14 @@ country_event = {
 		change_government = tribal
 		add_government_reform = tribal_federation
 	}
-	option = {
-		name = sealand_events.10.e
-		trigger = {
-			NOT = { has_reform = native_basic_reform }
-		}
-		change_government = native
-		add_government_reform = native_clan_council_reform
-	}
+	#option = {
+	#	name = sealand_events.10.e
+	#	trigger = {
+	#		NOT = { has_reform = native_basic_reform }
+	#	}
+	#	change_government = native
+	#	add_government_reform = native_clan_council_reform
+	#}
 	option = {
 		name = sealand_events.10.f
 		if = {
@@ -1482,21 +1483,10 @@ country_event = {
 #		clr_country_flag = sea_fishing_game_success_flag
 #	}
 #}
-# Age of Discovery Colonial Growth:
-country_event = {
-	id = sealand_events.21
-	title = none
-	desc = none
-	picture = ADVISOR_eventPicture
-	hidden = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		has_age_ability = ab_portugal_colonial_growth
-		NOT = { has_country_flag = ab_portugal_colonial_growth_flag }
-	}
-	immediate = { set_country_flag = ab_portugal_colonial_growth_flag }
-	option = { }
-}
+# Age of Discovery Colonial Growth: # Removed
+#country_event = {
+#	id = sealand_events.21
+#}
 # Genoa building switch to normal:
 country_event = {
 	id = sealand_events.22
@@ -2498,11 +2488,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_tax_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_tax_building_trigger = yes } }
 		name = sealand_events.29.1
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_tax_building_trigger = yes }
+				limit = { controlled_by = ROOT has_tax_building_trigger = yes }
 				remove_building = temple
 				remove_building = cathedral
 			}
@@ -2510,11 +2500,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_trade_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_trade_building_trigger = yes } }
 		name = sealand_events.29.2
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_trade_building_trigger = yes }
+				limit = { controlled_by = ROOT has_trade_building_trigger = yes }
 				remove_building = marketplace
 				remove_building = trade_depot
 				remove_building = stock_exchange
@@ -2523,11 +2513,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_production_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_production_building_trigger = yes } }
 		name = sealand_events.29.3
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_production_building_trigger = yes }
+				limit = { controlled_by = ROOT has_production_building_trigger = yes }
 				remove_building = workshop
 				remove_building = counting_house
 			}
@@ -2535,11 +2525,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_dock_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_dock_building_trigger = yes } }
 		name = sealand_events.29.4
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_dock_building_trigger = yes }
+				limit = { controlled_by = ROOT has_dock_building_trigger = yes }
 				remove_building = dock
 				remove_building = drydock
 			}
@@ -2547,11 +2537,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_shipyard_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_shipyard_building_trigger = yes } }
 		name = sealand_events.29.5
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_shipyard_building_trigger = yes }
+				limit = { controlled_by = ROOT has_shipyard_building_trigger = yes }
 				remove_building = shipyard
 				remove_building = grand_shipyard
 			}
@@ -2559,11 +2549,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_manpower_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_manpower_building_trigger = yes } }
 		name = sealand_events.29.6
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_manpower_building_trigger = yes }
+				limit = { controlled_by = ROOT has_manpower_building_trigger = yes }
 				remove_building = barracks
 				remove_building = training_fields
 			}
@@ -2571,11 +2561,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_forcelimit_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_forcelimit_building_trigger = yes } }
 		name = sealand_events.29.7
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_forcelimit_building_trigger = yes }
+				limit = { controlled_by = ROOT has_forcelimit_building_trigger = yes }
 				remove_building = regimental_camp
 				remove_building = conscription_center
 			}
@@ -2583,11 +2573,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_fort_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_fort_building_trigger = yes } }
 		name = sealand_events.29.8
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_fort_building_trigger = yes }
+				limit = { controlled_by = ROOT has_fort_building_trigger = yes }
 				remove_building = fort_15th
 				remove_building = fort3
 				remove_building = fort_16th
@@ -2600,11 +2590,11 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_coast_defense_building_trigger = yes } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_coast_defense_building_trigger = yes } }
 		name = sealand_events.29.9
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_coast_defense_building_trigger = yes }
+				limit = { controlled_by = ROOT has_coast_defense_building_trigger = yes }
 				remove_building = coastal_defence
 				remove_building = naval_battery
 			}
@@ -2612,66 +2602,66 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = impressment_offices } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = impressment_offices } }
 		name = sealand_events.29.10
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = impressment_offices }
+				limit = { controlled_by = ROOT has_building = impressment_offices }
 				remove_building = impressment_offices
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = state_house } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = state_house } }
 		name = sealand_events.29.11
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = state_house }
+				limit = { controlled_by = ROOT has_building = state_house }
 				remove_building = state_house
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = soldier_households } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = soldier_households } }
 		name = sealand_events.29.12
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = soldier_households }
+				limit = { controlled_by = ROOT has_building = soldier_households }
 				remove_building = soldier_households
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = furnace } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = furnace } }
 		name = sealand_events.29.13
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = furnace }
+				limit = { controlled_by = ROOT has_building = furnace }
 				remove_building = furnace
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = mint } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = mint } }
 		name = sealand_events.29.14
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = mint }
+				limit = { controlled_by = ROOT has_building = mint }
 				remove_building = mint
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } } }
+		trigger = { any_owned_province = { controlled_by = ROOT OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } } }
 		name = sealand_events.29.15
 		hidden_effect = {
 			every_owned_province = {
-				limit = { OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } }
+				limit = { controlled_by = ROOT OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } }
 				remove_building = wharf
 				remove_building = weapons
 				remove_building = textile
@@ -2685,77 +2675,77 @@ country_event = { # buildings delete
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = wharf } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = wharf } }
 		name = sealand_events.29.16
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = wharf }
+				limit = { controlled_by = ROOT has_building = wharf }
 				remove_building = wharf
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = weapons } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = weapons } }
 		name = sealand_events.29.17
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = weapons }
+				limit = { controlled_by = ROOT has_building = weapons }
 				remove_building = weapons
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = textile } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = textile } }
 		name = sealand_events.29.18
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = textile }
+				limit = { controlled_by = ROOT has_building = textile }
 				remove_building = textile
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = plantations } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = plantations } }
 		name = sealand_events.29.19
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = plantations }
+				limit = { controlled_by = ROOT has_building = plantations }
 				remove_building = plantations
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = tradecompany } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = tradecompany } }
 		name = sealand_events.29.20
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = tradecompany }
+				limit = { controlled_by = ROOT has_building = tradecompany }
 				remove_building = tradecompany
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = farm_estate } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = farm_estate } }
 		name = sealand_events.29.21
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = farm_estate }
+				limit = { controlled_by = ROOT has_building = farm_estate }
 				remove_building = farm_estate
 			}
 		}
 		clr_country_flag = sea_clear_specific_building_flag
 	}
 	option = {
-		trigger = { any_owned_province = { has_building = mills } }
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = mills } }
 		name = sealand_events.29.22
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_building = mills }
+				limit = { controlled_by = ROOT has_building = mills }
 				remove_building = mills
 			}
 		}
@@ -3429,35 +3419,6 @@ country_event = {
 			desc = UNTIL_NEW_SWAZI_CONSORT
 		}
 		clr_country_flag = swazi_heir_died
-	}
-}
-# Swazi mission event:
-country_event = { # Become an Empire mission
-	id = swazi_election_government.2
-	title = swazi_election_government.2.t
-	desc = swazi_election_government.2.d
-	picture = BIG_BOOK_eventPicture
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = swazi_election_government.2.a
-		unlock_cult = yemoja_cult
-		custom_tooltip = zwz_yemoja_cult_tt
-		unlock_cult = roog_cult
-		custom_tooltip = zwz_roog_cult_tt
-		unlock_cult = nyame_cult
-		custom_tooltip = zwz_nyame_cult_tt
-	}
-	option = {
-		name = swazi_election_government.2.b
-		unlock_cult = enkai_cult
-		custom_tooltip = zwz_enkai_cult_tt
-		unlock_cult = waaq_cult
-		custom_tooltip = zwz_waaq_cult_tt
-		unlock_cult = zanahary_cult
-		custom_tooltip = zwz_zanahary_cult_tt
 	}
 }
 

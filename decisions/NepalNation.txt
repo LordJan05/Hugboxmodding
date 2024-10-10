@@ -6,6 +6,11 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_nepal_flag }
+			NOT = { is_or_was_tag = { tag = NPL } }
+			OR = {
+				NOT = { exists = NPL }
+				ai = no
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -14,10 +19,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				primary_culture = nepali
-				primary_culture = pahari
-			}
+			capital_scope = { superregion = india_superregion }
 			OR = {
 				ai = no
 				AND = {
@@ -37,6 +39,10 @@ country_decisions = {
 					ai = no
 				}
 			}
+			NOT = { has_country_flag = formed_india_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { has_country_flag = formed_rajputana_flag }
+			NOT = { has_country_flag = formed_mughal_empire_flag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -69,6 +75,10 @@ country_decisions = {
 			owns_core_province = 557
 			557 = {
 				is_state = yes
+			}
+			OR = {
+				primary_culture = nepali
+				primary_culture = pahari
 			}
 		}
 		effect = {

@@ -2013,7 +2013,7 @@ mam_missions_4 = {
 		effect = {
 			add_country_modifier = {
 				name = protector_of_the_islamic_realm_modifier
-				duration = -1
+				duration = 7300
 			}
 		}
 	}

@@ -1,8 +1,8 @@
 #5724 - Al-Najaf
 
-owner = QAR
-controller = QAR
-add_core = QAR
+owner = MSY
+controller = MSY
+add_claim = QAR
 add_core = BSR
 add_core = MSY
 culture = al_iraqiya_arabic

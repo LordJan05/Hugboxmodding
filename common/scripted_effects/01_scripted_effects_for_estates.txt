@@ -1942,9 +1942,9 @@ on_province_owner_change_estate_privileges_effect = {
                 limit = { has_terrain = hills }
                 add_province_modifier = { name = estate_burghers_mountain_expansion_upgrade_hills duration = -1 }
             }
-            else = { 
-                add_province_modifier = { name = estate_burghers_mountain_expansion_penalty duration = -1 }
-            }
+            #else = { 
+            #    add_province_modifier = { name = estate_burghers_mountain_expansion_penalty duration = -1 }
+            #}
         }
         else = {
             if = {

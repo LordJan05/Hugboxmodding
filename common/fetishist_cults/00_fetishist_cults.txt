@@ -1,11 +1,11 @@
 yemoja_cult = {
-	naval_maintenance_modifier = -0.15
+	legitimacy = 0.5
+	republican_tradition = 0.2
+	devotion = 0.5
+	horde_unity = 0.5
+	colonist_placement_chance = 0.1
 
 	allow = {
-		OR = {
-			has_unlocked_cult = yemoja_cult
-			technology_group = sub_saharan
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_yemoja_cult_modifier }
 		OR = {
@@ -30,13 +30,10 @@ yemoja_cult = {
 }
 
 roog_cult = {
-	land_attrition = -0.15
+	reinforce_speed = 0.2
+	movement_speed = 0.1
 
 	allow = {
-		OR = {
-			has_unlocked_cult = roog_cult
-			technology_group = sub_saharan
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_roog_cult_modifier }
 		OR = {
@@ -61,12 +58,9 @@ roog_cult = {
 }
 
 nyame_cult = {
-	diplomatic_reputation = 2
+	province_warscore_cost = -0.1
+	advisor_cost = -0.1
 	allow = {
-		OR = {
-			technology_group = sub_saharan
-			has_unlocked_cult = nyame_cult
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_nyame_cult_modifier }
 		OR = {
@@ -91,14 +85,6 @@ nyame_cult = {
 cwezi_cult = { #Great lakes / Kitara successor states
 	sprite = 4
 	allow  = {
-		OR = {
-			has_unlocked_cult = cwezi_cult
-			technology_group = central_african
-			AND = {
-				NOT = { technology_group = sub_saharan }
-				NOT = { technology_group = east_african }
-			}
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_cwezi_cult_modifier }
 		OR = {
@@ -111,7 +97,8 @@ cwezi_cult = { #Great lakes / Kitara successor states
 			}
 		}
 	}
-	improve_relation_modifier = 0.2
+	land_morale = 0.08
+	naval_morale = 0.08
 	ai_will_do = {
 		factor = 0
 	}
@@ -119,16 +106,9 @@ cwezi_cult = { #Great lakes / Kitara successor states
 
 central_african_ancestor_cult = {  #Name TBD (Woot, Mlira, Monomotapan religion)
 	sprite = 6
-	tolerance_own = 2
+	development_cost = -0.05
+	state_maintenance_modifier = -0.2
 	allow  = {
-		OR = {
-			has_unlocked_cult = central_african_ancestor_cult
-			technology_group = central_african
-			AND = {
-				NOT = { technology_group = sub_saharan }
-				NOT = { technology_group = east_african }
-			}
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_central_african_ancestor_cult_modifier }
 		OR = {
@@ -149,14 +129,6 @@ central_african_ancestor_cult = {  #Name TBD (Woot, Mlira, Monomotapan religion)
 mwari_cult = { #Semi-monotheistic religion from Zimbabwe plateau
 	sprite = 5
 	allow  = {
-		OR = {
-			has_unlocked_cult = mwari_cult
-			technology_group = central_african
-			AND = {
-				NOT = { technology_group = sub_saharan }
-				NOT = { technology_group = east_african }
-			}
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_mwari_cult_modifier }
 		OR = {
@@ -169,7 +141,8 @@ mwari_cult = { #Semi-monotheistic religion from Zimbabwe plateau
 			}
 		}
 	}
-	discipline = 0.025
+	discipline = 0.03
+	ship_durability = 0.1
 	ai_will_do = {
 		factor = 1000
 	}
@@ -181,10 +154,6 @@ enkai_cult = {
 	sailors_recovery_speed = 0.15
 	
 	allow = {
-		OR = {
-			has_unlocked_cult = enkai_cult
-			technology_group = east_african
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_enkai_cult_modifier }
 		OR = {
@@ -205,13 +174,10 @@ enkai_cult = {
 }
 
 waaq_cult = {
-	global_unrest = -2
+	global_trade_goods_size_modifier = 0.1
+	global_trade_power = 0.2
 
 	allow = {
-		OR = {
-			has_unlocked_cult = waaq_cult	
-			technology_group = east_african
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_waaq_cult_modifier }
 		OR = {
@@ -232,13 +198,10 @@ waaq_cult = {
 }
 
 zanahary_cult = {
-	war_exhaustion = -0.06
+	yearly_army_professionalism = 0.002
+	war_exhaustion = -0.08
 
 	allow = {
-		OR = {
-			has_unlocked_cult = zanahary_cult
-			technology_group = east_african
-		}
 		religion = shamanism
 		NOT = { has_ruler_modifier = mini_zanahary_cult_modifier }
 		OR = {
@@ -276,7 +239,8 @@ christianity_cult = {
 			}
 		}
 	}
-	global_own_trade_power = 0.25
+	missionaries = 2
+	technology_cost = -0.1
 	ai_will_do = {
 		factor = 3
 	}
@@ -298,7 +262,8 @@ islam_cult = {
 			}
 		}
 	}
-	global_institution_spread = 0.1
+	merchants = 2
+	idea_cost = -0.1
 	ai_will_do = {
 		factor = 0
 	}
@@ -320,8 +285,8 @@ buddhism_cult = {
 			}
 		}
 	}
-	#build_cost = -0.1
-	development_cost = -0.05
+	monthly_splendor = 2
+	min_autonomy = -20
 	ai_will_do = {
 		factor = 8
 	}
@@ -343,7 +308,8 @@ dharmic_cult = {
 			}
 		}
 	}
-	global_trade_goods_size_modifier = 0.1	
+	colonists = 2
+	governing_capacity_modifier = 0.2
 	ai_will_do = {
 		factor = 8
 	}
@@ -365,7 +331,8 @@ south_central_american_cult = {
 			}
 		}
 	}
-	land_morale = 0.05
+	gold_depletion_chance_modifier = -1
+	colony_development_boost = 2
 	ai_will_do = {
 		factor = 1000
 	}
@@ -387,7 +354,8 @@ norse_cult = {
 			}
 		}
 	}
-	tolerance_heathen = 2
+	landing_penalty = -2
+	navy_tradition = 2
 	ai_will_do = {
 		factor = 0
 	}
@@ -409,7 +377,8 @@ jewish_cult = {
 			}
 		}
 	}
-	advisor_cost = -0.1
+	interest = -0.4
+	global_tax_modifier = 0.5
 	ai_will_do = {
 		factor = 6
 	}
@@ -431,7 +400,8 @@ zoroastrian_cult = {
 			}
 		}
 	}
-	merchants = 2
+	expand_infrastructure_cost_modifier = -0.5
+	centralize_state_cost = -0.5
 	ai_will_do = {
 		factor = 4
 	}

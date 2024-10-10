@@ -1365,28 +1365,6 @@ nor_kalmar_union_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			if = {
-				limit = {
-					NOT = { legitimacy_equivalent = 80 }
-				}
-				add_legitimacy_equivalent = {
-					amount = 20
-					republican_tradition = 10
-				}
-			}
-			else = {
-				add_power_projection = {
-					type = mission_rewards_power_projection
-					amount = 25
-				}
-			}
-			scandinavia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			skaneland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1407,6 +1385,21 @@ nor_kalmar_union_mission_slot = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = { legitimacy_equivalent = 80 }
+				}
+				add_legitimacy_equivalent = {
+					amount = 20
+					republican_tradition = 10
+				}
+			}
+			else = {
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
 			}
 		}
 	}

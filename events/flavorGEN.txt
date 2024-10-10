@@ -625,6 +625,13 @@ country_event = {
 			}
 			remove_province_modifier = gen_lost_trade_support
 		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = sea_gen_steppe_cossacks_flag_for_decision }
+			}
+			custom_tooltip = sea_gen_unlock_steppe_cossacks_tt
+			set_country_flag = sea_gen_steppe_cossacks_flag_for_decision
+		}
 	}
 	
 }

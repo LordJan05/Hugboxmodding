@@ -205,32 +205,21 @@ can_burn_colony = {
 }
 
 can_colonize_province = {
-	condition = {
-		tooltip = "MJL_CANT_COLONIZE_OTHER_CN_REGION"
-		potential = {
-			FROM = {
-				is_colonial_nation = yes
-			}
-		}
-		allow = {
-			FROM = {
-				capital_scope = {
-					colonial_region = ROOT
-				}
-			}
-		}
-	}
-	condition = {
-		tooltip = "MJL_CANT_COLONIZE_OTHER_INDIA_SUPERREGION"
-		potential = {
-			FROM = {
-				has_reform = trade_company_government
-			}
-		}
-		allow = {
-			superregion = india_superregion
-		}
-	}
+	#condition = {
+	#	tooltip = "MJL_CANT_COLONIZE_OTHER_CN_REGION"
+	#	potential = {
+	#		FROM = {
+	#			is_colonial_nation = yes
+	#		}
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			capital_scope = {
+	#				colonial_region = ROOT
+	#			}
+	#		}
+	#	}
+	#}
 	condition = {
 		tooltip = "MJL_CANT_COLONIZE_OTHER_INDIA_SUPERREGION"
 		potential = {
@@ -248,6 +237,21 @@ can_colonize_province = {
 		allow = {
 			NOT = { province_id = 5001 }
 			NOT = { province_id = 5004 }
+		}
+	}
+	condition = {
+		tooltip = "SEA_EXODUS_CAN_ONLY_COLONIZE_COLONIAL_REGIONS"
+		potential = {
+			FROM = {
+				has_country_modifier = sea_exodus_boost_modifier 
+			}
+		}
+		allow = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				superregion = oceania_superregion
+			}
 		}
 	}
 }

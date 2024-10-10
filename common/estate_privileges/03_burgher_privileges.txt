@@ -3318,19 +3318,19 @@ estate_burghers_ARB_oasis_development = {
 	is_valid = {
 		has_country_flag = ARB_unlock_oasis_development_flag
 	}
-	on_granted = {
-		custom_tooltip = ARB_estate_burghers_arid_development_gt
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_climate = arid
-				}
-				add_province_modifier = {
-					name = ARB_estate_burghers_arid_climate_development
-					duration = -1
-				}
-			}
-		}
+	#on_granted = {
+		#custom_tooltip = ARB_estate_burghers_arid_development_gt
+		#hidden_effect = {
+			#every_owned_province = {
+				#limit = {
+					#has_climate = arid
+				#}
+				#add_province_modifier = {
+					#name = ARB_estate_burghers_arid_climate_development
+					#duration = -1
+				#}
+			#}
+		#}
 		
 		custom_tooltip = ARB_estate_burghers_desert_development_gt
 		hidden_effect = {

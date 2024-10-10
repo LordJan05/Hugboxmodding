@@ -7,7 +7,7 @@ bookmark =
 	center = 112
 	default = yes
 	
-	country = POL
+	country = SWI
 	
-	easy_country = POL
+	easy_country = SWI
 }

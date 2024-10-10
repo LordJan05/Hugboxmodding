@@ -375,7 +375,7 @@ spriteTypes = {
 	}
 	##
 	
-	## VENICE
+	## GENOA
 	spriteType = {
 		name = "GFX_faction_bg_sea_gen_aristocrats"	
 		texturefile = "gfx//interface//faction_blue_frame.tga"
@@ -1334,6 +1334,11 @@ spriteTypes = {
 	spriteType = {
 		name = "sea_piety_action_background"
 		texturefile = "gfx/interface/sea_custom_gui/sea_piety_action_background.dds"
+	}
+	spriteType = {
+		name = "sea_shinto_background"
+		texturefile = "gfx/interface/sea_custom_gui/sea_shinto_background.dds"
+		transparencecheck = yes
 	}
 	spriteType = {
 		name = "sea_primitive_religion_background"

@@ -1,8 +1,8 @@
-version="2.4"
+version="2.21"
+picture="thumbnail.png"
 tags={
 	"Balance"
 }
-name="Zlewikk-MJL Multiplayer Rebalance Pack"
-picture="thumbnail.png"
+name="Zlewikk-MJL MRP - Hugbox Edition 2"
 supported_version="v1.37.*"
-remote_file_id="2235590207"
+remote_file_id="3223118236"

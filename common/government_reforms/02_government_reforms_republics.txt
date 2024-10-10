@@ -1466,6 +1466,8 @@ colonial_government = {
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		global_foreign_trade_power = -0.5
+		interest = 2
 
 		transport_attrition = -0.5
 
@@ -1473,7 +1475,7 @@ colonial_government = {
 		liberty_desire = -30
 
 		#All players privateer debuff
-		privateer_efficiency = -0.4
+		privateer_efficiency = -1
 	}
 
 	custom_attributes = {
@@ -1549,6 +1551,8 @@ crown_colony_government = {
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		global_foreign_trade_power = -0.5
+		interest = 2
 
 		transport_attrition = -0.5
 
@@ -1556,7 +1560,7 @@ crown_colony_government = {
 		liberty_desire = -30
 
 		#All players privateer debuff
-		privateer_efficiency = -0.4
+		privateer_efficiency = -1
 	}
 	effect = {
 		hidden_effect = {
@@ -1631,6 +1635,8 @@ private_enterprise_colony_government = {
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		global_foreign_trade_power = -0.5
+		interest = 2
 
 		transport_attrition = -0.5
 
@@ -1638,7 +1644,7 @@ private_enterprise_colony_government = {
 		liberty_desire = -30
 
 		#All players privateer debuff
-		privateer_efficiency = -0.4
+		privateer_efficiency = -1
 	}
 
 	custom_attributes = {
@@ -1714,6 +1720,8 @@ self_governing_colony_government = {
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		global_foreign_trade_power = -0.5
+		interest = 2
 
 		transport_attrition = -0.5
 
@@ -1721,7 +1729,7 @@ self_governing_colony_government = {
 		liberty_desire = -30
 
 		#All players privateer debuff
-		privateer_efficiency = -0.4
+		privateer_efficiency = -1
 	}
 
 	custom_attributes = {
@@ -1789,6 +1797,8 @@ trade_company_government = {
 		mercenary_manpower = -0.5
 		global_trade_goods_size_modifier = -0.1
 		naval_morale = -0.1
+		global_foreign_trade_power = -0.5
+		interest = 2
 
 		transport_attrition = -0.5
 
@@ -1796,7 +1806,7 @@ trade_company_government = {
 		liberty_desire = -30
 
 		#All players privateer debuff
-		privateer_efficiency = -0.4
+		privateer_efficiency = -1
 	}
 	nation_designer_cost = 60
 	valid_for_nation_designer = yes

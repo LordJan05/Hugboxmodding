@@ -5247,7 +5247,10 @@ sca_swe_industrialize_norway_slot = {
 			was_tag = DAN
 			was_tag = SWE
 		}
-		tag = SCA
+		OR = {
+			tag = SCA
+			tag = KLU
+		}
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 	}

@@ -82,7 +82,15 @@ age_of_discovery = {
 		#	allow = {
 		#		religion_group = christian
 		#	}
-		#	personal_union  = 2
+		#	calc_true_if = {
+		#		all_subject_country = {
+		#			OR = {
+		#				is_subject_of_type = personal_union
+		#				is_subject_of_type = integrated_personal_union
+		#			}
+		#		}
+		#		amount = 2
+		#	}
 		#}
 		
 		obj_many_vassals = {
@@ -291,6 +299,7 @@ age_of_discovery = {
 		ab_portugal_colonial_growth = {
 			effect = { 
 				on_age_ability_taken = { age = age_of_discovery }
+				#set_country_flag = ab_portugal_colonial_growth_flag
 			}
 			allow = {
 				capital_scope = {
@@ -551,7 +560,6 @@ age_of_reformation = {
 		#	}
 		#	modifier = {
 		#		num_of_age_rewards = 1
-		#		num_of_age_rewards = 1
 		#	}
 		#	ai_will_do = {
 		#		factor = 0
@@ -562,9 +570,9 @@ age_of_reformation = {
 				on_age_ability_taken = { age = age_of_reformation }
 			}
 			allow = {
-				NOT = { has_country_flag = ab_portugal_colonial_growth_flag }
+				#NOT = { has_country_flag = ab_portugal_colonial_growth_flag }
 				is_subject = no
-				NOT = { num_of_colonists = 2 }
+				#NOT = { num_of_colonists = 2 }
 				NOT = { has_subject_of_type = crown_colony }
 				NOT = { has_subject_of_type = private_enterprise }
 				NOT = { has_subject_of_type = self_governing_colony }
@@ -915,9 +923,8 @@ age_of_absolutism = {
 				on_age_ability_taken = { age = age_of_absolutism }
 				custom_tooltip = mjl_max_absolutism_perma_tt
 				hidden_effect = {
-					country_event = { id = mjl_events.15 }
+					add_country_modifier = { name = mjl_absolutism_age_max_abso duration = -1 } 
 				}
-				#set_country_flag = mjl_absolutism_age_abso_ability
 			}
 			modifier = {
 				#max_absolutism = 25
@@ -1092,21 +1099,29 @@ age_of_absolutism = {
 		}
 
 		#ab_manchu_banner = {
-		#	effect = { 
-		#		on_age_ability_taken = { age = age_of_absolutism }
-		#	}
 		#	allow = {
 		#		OR = {
 		#			tag = MCH
 		#			tag = QNG
 		#		}
 		#	}
+		#	effect = {
+		#		on_age_ability_taken = { age = age_of_absolutism }
+		#		if = {
+		#			limit = {
+		#				NOT = { primary_culture = manchu }
+		#				NOT = { primary_culture = manchu_new }
+		#				NOT = { has_government_attribute = allow_banners }
+		#			}
+		#			custom_tooltip = ab_manchu_banner_tt
+		#		}
+		#	}
 		#	modifier = {
-		#		global_regiment_cost = -0.25
+		#		amount_of_banners = 0.5
 		#		num_of_age_rewards = 1
 		#	}
 		#	ai_will_do = {
-		#		factor = 1000
+		#		factor = 100
 		#	}
 		#}
 	}
@@ -1178,7 +1193,7 @@ age_of_revolutions = {
 				on_age_ability_taken = { age = age_of_revolutions }
 			}
 			modifier = {
-				liberty_desire_from_subject_development = -0.33
+				liberty_desire_from_subject_development = -0.5
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -1252,9 +1267,6 @@ age_of_revolutions = {
 		ab_same_contine_lib_desire = {
 			effect = { 
 				on_age_ability_taken = { age = age_of_revolutions }
-			}
-			effect = {
-				#set_country_flag = mjl_revolution_age_abso_ability
 				add_absolutism = 15
 			}
 			modifier = {
@@ -1299,6 +1311,8 @@ age_of_revolutions = {
 			allow = {
 				OR = {
 					tag = PRU
+					tag = PRA
+					tag = RHI
 					tag = GER
 					tag = HAB
 					tag = AUE
@@ -1340,7 +1354,7 @@ age_of_revolutions = {
 				tag = RUS
 			}
 			modifier = {
-				min_autonomy_in_territories = -0.1
+				min_autonomy_in_territories = -0.2
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {

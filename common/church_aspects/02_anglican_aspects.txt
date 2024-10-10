@@ -17,6 +17,26 @@ get_new_general_aspect = {
 	}
 }
 
+divorce_consort_aspect = {
+	sprite = "GFX_divorce_consort_icon"
+	cost = 100
+	trigger = {
+		NOT = {
+			prestige = 100
+		}
+	}
+	effect = {
+		add_prestige = 20
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { prestige = 0 }
+		}
+	}
+}
+
 gain_consort_aspect = {
 	sprite = "GFX_marry_local_suitor_icon"
 	cost = 100
@@ -48,25 +68,6 @@ gain_consort_aspect = {
 	}
 }
 
-divorce_consort_aspect = {
-	sprite = "GFX_divorce_consort_icon"
-	cost = 100
-	trigger = {
-		NOT = {
-			prestige = 100
-		}
-	}
-	effect = {
-		add_prestige = 20
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 2
-			NOT = { prestige = 0 }
-		}
-	}
-}
 dissolve_monasteries_aspect = {
 	sprite = "GFX_dissolve_monasteries_icon"
 	cost = 100

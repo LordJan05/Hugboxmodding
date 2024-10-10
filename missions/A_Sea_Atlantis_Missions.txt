@@ -229,18 +229,19 @@ sealand_atl_missions_2 = {
 					region = colombia_region
 				}
 			}
-			if = {
-				limit = {
-					OR = {
-						religion = animism
-						religion = inti
-						religion = nahuatl
-						religion = mesoamerican_religion
-					}
-				}
-				is_religion_reformed = yes
-			}
-			else = { has_institution = new_world_i }
+			#if = {
+			#	limit = {
+			#		OR = {
+			#			religion = animism
+			#			religion = inti
+			#			religion = nahuatl
+			#			religion = mesoamerican_religion
+			#		}
+			#	}
+			#	is_religion_reformed = yes
+			#}
+			#else = { has_institution = new_world_i }
+			has_institution = new_world_i
 		}
 		effect = {
 			change_tag = ATL

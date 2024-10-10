@@ -3668,7 +3668,23 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"
 		}
-
+		##
+		checkboxType = {
+			name = "build_gen_marketplace"
+			position = { x = 9 y = 129 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
+		}
+		
+		instantTextBoxType={
+			name = "gen_marketplace_cost"
+			position = {x = 9 y = 179 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+		##
 		checkboxType = {
 			name = "build_trade_depot"
 			position = { x = 61 y = 129 }
@@ -3684,7 +3700,23 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"
 		}
-
+		##
+		checkboxType = {
+			name = "build_gen_trade_depot"
+			position = { x = 61 y = 129 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
+		}
+		
+		instantTextBoxType={
+			name = "gen_trade_depot_cost"
+			position = {x = 61 y = 179 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+		##
 		iconType = {
 			name = "marketplace_to_trade_depot_arrow"
 			position = { x = 53 y = 138 }
@@ -3706,7 +3738,23 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"
 		}
-
+		##
+		checkboxType = {
+			name = "build_gen_stock_exchange"
+			position = { x = 113 y = 129 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
+		}
+		
+		instantTextBoxType={
+			name = "gen_stock_exchange_cost"
+			position = {x = 113 y = 179 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+		##
 		iconType = {
 			name = "trade_depot_to_stock_exchange_arrow"
 			position = { x = 105 y = 138 }

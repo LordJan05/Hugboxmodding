@@ -3829,10 +3829,10 @@ on_five_year_pulse = {
 		
 		#Theocracy Ideas		11 (9g 2b)
 		100 = ideagroups.1911
-		100 = ideagroups.1912
+		#100 = ideagroups.1912
 		100 = ideagroups.1913
-		100 = ideagroups.1914
-		100 = ideagroups.1915
+		#100 = ideagroups.1914
+		#100 = ideagroups.1915
 		100 = ideagroups.1916
 		100 = ideagroups.1917
 		100 = ideagroups.1918
@@ -4623,37 +4623,105 @@ on_province_religion_converted = {
 		}
 		remove_province_modifier = ottoman_siyasah_tax_reform_manpower
 	}
-	remove_province_modifier = "confucian_anglican_harmonization"
-	remove_province_modifier = "confucian_animist_harmonization"
-	remove_province_modifier = "confucian_catholic_harmonization"
-	remove_province_modifier = "confucian_coptic_harmonization"
-	remove_province_modifier = "confucian_fetishist_harmonization"
-	remove_province_modifier = "confucian_hindu_harmonization"
-	remove_province_modifier = "confucian_hussite_harmonization"
-	remove_province_modifier = "confucian_ibadi_harmonization"
-	remove_province_modifier = "confucian_inti_harmonization"
-	remove_province_modifier = "confucian_jewish_harmonization"
-	remove_province_modifier = "confucian_mahayanna_harmonization"
-	remove_province_modifier = "confucian_mayan_harmonization"
-	remove_province_modifier = "confucian_nahuatl_harmonization"
-	remove_province_modifier = "confucian_orthodox_harmonization"
-	remove_province_modifier = "confucian_protestant_harmonization"
-	remove_province_modifier = "confucian_reformed_harmonization"
-	remove_province_modifier = "confucian_shia_harmonization"
-	remove_province_modifier = "confucian_shinto_harmonization"
-	remove_province_modifier = "confucian_sikh_harmonization"
-	remove_province_modifier = "confucian_sunni_harmonization"
-	remove_province_modifier = "confucian_tengri_harmonization"
-	remove_province_modifier = "confucian_theravada_harmonization"
-	remove_province_modifier = "confucian_totemism_harmonization"
-	remove_province_modifier = "confucian_vajrayana_harmonization"
-	remove_province_modifier = "confucian_dreamtime_harmonization"
-	# nobody_expects_the
-	owner = {
-		change_variable = {
-			which = num_of_times_religion_converted
-			value = 1
-		}
+	if = {
+		limit = { has_province_modifier = confucian_anglican_harmonization }
+		remove_province_modifier = confucian_anglican_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_animist_harmonization }
+		remove_province_modifier = confucian_animist_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_catholic_harmonization }
+		remove_province_modifier = confucian_catholic_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_coptic_harmonization }
+		remove_province_modifier = confucian_coptic_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_fetishist_harmonization }
+		remove_province_modifier = confucian_fetishist_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_hindu_harmonization }
+		remove_province_modifier = confucian_hindu_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_hussite_harmonization }
+		remove_province_modifier = confucian_hussite_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_ibadi_harmonization }
+		remove_province_modifier = confucian_ibadi_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_inti_harmonization }
+		remove_province_modifier = confucian_inti_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_jewish_harmonization }
+		remove_province_modifier = confucian_jewish_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_mahayanna_harmonization }
+		remove_province_modifier = confucian_mahayanna_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_mayan_harmonization }
+		remove_province_modifier = confucian_mayan_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_nahuatl_harmonization }
+		remove_province_modifier = confucian_nahuatl_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_orthodox_harmonization }
+		remove_province_modifier = confucian_orthodox_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_protestant_harmonization }
+		remove_province_modifier = confucian_protestant_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_reformed_harmonization }
+		remove_province_modifier = confucian_reformed_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_shia_harmonization }
+		remove_province_modifier = confucian_shia_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_shinto_harmonization }
+		remove_province_modifier = confucian_shinto_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_sikh_harmonization }
+		remove_province_modifier = confucian_sikh_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_sunni_harmonization }
+		remove_province_modifier = confucian_sunni_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_tengri_harmonization }
+		remove_province_modifier = confucian_tengri_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_theravada_harmonization }
+		remove_province_modifier = confucian_theravada_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_totemism_harmonization }
+		remove_province_modifier = confucian_totemism_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_vajrayana_harmonization }
+		remove_province_modifier = confucian_vajrayana_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_dreamtime_harmonization }
+		remove_province_modifier = confucian_dreamtime_harmonization
 	}
 }
 
@@ -4709,31 +4777,106 @@ on_province_religion_changed = {
 		}
 		remove_province_modifier = ottoman_siyasah_tax_reform_manpower
 	}
-	remove_province_modifier = "confucian_anglican_harmonization"
-	remove_province_modifier = "confucian_animist_harmonization"
-	remove_province_modifier = "confucian_catholic_harmonization"
-	remove_province_modifier = "confucian_coptic_harmonization"
-	remove_province_modifier = "confucian_fetishist_harmonization"
-	remove_province_modifier = "confucian_hindu_harmonization"
-	remove_province_modifier = "confucian_hussite_harmonization"
-	remove_province_modifier = "confucian_ibadi_harmonization"
-	remove_province_modifier = "confucian_inti_harmonization"
-	remove_province_modifier = "confucian_jewish_harmonization"
-	remove_province_modifier = "confucian_mahayanna_harmonization"
-	remove_province_modifier = "confucian_mayan_harmonization"
-	remove_province_modifier = "confucian_nahuatl_harmonization"
-	remove_province_modifier = "confucian_orthodox_harmonization"
-	remove_province_modifier = "confucian_protestant_harmonization"
-	remove_province_modifier = "confucian_reformed_harmonization"
-	remove_province_modifier = "confucian_shia_harmonization"
-	remove_province_modifier = "confucian_shinto_harmonization"
-	remove_province_modifier = "confucian_sikh_harmonization"
-	remove_province_modifier = "confucian_sunni_harmonization"
-	remove_province_modifier = "confucian_tengri_harmonization"
-	remove_province_modifier = "confucian_theravada_harmonization"
-	remove_province_modifier = "confucian_totemism_harmonization"
-	remove_province_modifier = "confucian_vajrayana_harmonization"
-	remove_province_modifier = "confucian_dreamtime_harmonization"
+	if = {
+		limit = { has_province_modifier = confucian_anglican_harmonization }
+		remove_province_modifier = confucian_anglican_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_animist_harmonization }
+		remove_province_modifier = confucian_animist_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_catholic_harmonization }
+		remove_province_modifier = confucian_catholic_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_coptic_harmonization }
+		remove_province_modifier = confucian_coptic_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_fetishist_harmonization }
+		remove_province_modifier = confucian_fetishist_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_hindu_harmonization }
+		remove_province_modifier = confucian_hindu_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_hussite_harmonization }
+		remove_province_modifier = confucian_hussite_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_ibadi_harmonization }
+		remove_province_modifier = confucian_ibadi_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_inti_harmonization }
+		remove_province_modifier = confucian_inti_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_jewish_harmonization }
+		remove_province_modifier = confucian_jewish_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_mahayanna_harmonization }
+		remove_province_modifier = confucian_mahayanna_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_mayan_harmonization }
+		remove_province_modifier = confucian_mayan_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_nahuatl_harmonization }
+		remove_province_modifier = confucian_nahuatl_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_orthodox_harmonization }
+		remove_province_modifier = confucian_orthodox_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_protestant_harmonization }
+		remove_province_modifier = confucian_protestant_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_reformed_harmonization }
+		remove_province_modifier = confucian_reformed_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_shia_harmonization }
+		remove_province_modifier = confucian_shia_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_shinto_harmonization }
+		remove_province_modifier = confucian_shinto_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_sikh_harmonization }
+		remove_province_modifier = confucian_sikh_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_sunni_harmonization }
+		remove_province_modifier = confucian_sunni_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_tengri_harmonization }
+		remove_province_modifier = confucian_tengri_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_theravada_harmonization }
+		remove_province_modifier = confucian_theravada_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_totemism_harmonization }
+		remove_province_modifier = confucian_totemism_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_vajrayana_harmonization }
+		remove_province_modifier = confucian_vajrayana_harmonization
+	}
+	if = {
+		limit = { has_province_modifier = confucian_dreamtime_harmonization }
+		remove_province_modifier = confucian_dreamtime_harmonization
+	}
 }
 
 # province, manually conversion
@@ -4891,32 +5034,6 @@ on_province_owner_change = {
 			owner = { NOT = { has_reform = jap_gokaido_reform } }
 		}
 		remove_province_modifier = jap_gokaido_modifier
-	}
-	if = {
-		limit = { 
-			owner = { 
-				has_government_attribute = more_15_manpower_in_heathen_provinces
-			}
-			NOT ={ religion_group = owner }
-			NOT = { has_province_modifier = ottoman_siyasah_tax_reform_manpower }
-		}
-		add_province_modifier = {
-			name = ottoman_siyasah_tax_reform_manpower
-			duration = -1
-		}
-	}
-	if = {
-		limit = { 
-			owner = { 
-				has_government_attribute = more_15_manpower_in_heathen_provinces
-			}
-			NOT ={ religion_group = owner }
-			NOT = { has_province_modifier = ottoman_siyasah_tax_reform_manpower }
-		}
-		add_province_modifier = {
-			name = ottoman_siyasah_tax_reform_manpower
-			duration = -1
-		}
 	}
 	if = {
 		limit = { 
@@ -5282,23 +5399,23 @@ on_province_owner_change = {
 	}
 # PR Colonial Nation Province Ownership
 
-	if = { # Removed
-		limit = {
-			owner = {
-				is_colonial_nation = yes
-				capital_scope = {
-					NOT = { colonial_region = ROOT }
-				}
-			}
-		}
-		owner = {
-			colonial_parent = {
-				ROOT = {
-					cede_province = PREV
-				}
-			}
-		}
-	}
+	#if = { # Removed
+	#	limit = {
+	#		owner = {
+	#			is_colonial_nation = yes
+	#			capital_scope = {
+	#				NOT = { colonial_region = ROOT }
+	#			}
+	#		}
+	#	}
+	#	owner = {
+	#		colonial_parent = {
+	#			ROOT = {
+	#				cede_province = PREV
+	#			}
+	#		}
+	#	}
+	#}
 	##
 	if = {
 		limit = {
@@ -6559,23 +6676,23 @@ on_conquest = {
 		}
 	}
 	# DABE LINES
-	if = { # Removed
-		limit = {
-			owner = {
-				is_colonial_nation = yes
-				capital_scope = {
-					NOT = { colonial_region = ROOT }
-				}
-			}
-		}
-		owner = {
-			colonial_parent = {
-				ROOT = {
-					cede_province = PREV
-				}
-			}
-		}
-	}
+	#if = { # Removed
+	#	limit = {
+	#		owner = {
+	#			is_colonial_nation = yes
+	#			capital_scope = {
+	#				NOT = { colonial_region = ROOT }
+	#			}
+	#		}
+	#	}
+	#	owner = {
+	#		colonial_parent = {
+	#			ROOT = {
+	#				cede_province = PREV
+	#			}
+	#		}
+	#	}
+	#}
 	##
 	if = {
 		limit = {
@@ -7075,8 +7192,8 @@ on_centralized_state = {
 			owner = { has_government_attribute = centralize_state_no_reform_cost }
 		}
 		owner = {
-			add_adm_power = 50
-			change_government_reform_progress = 50
+			add_adm_power = 100
+			#change_government_reform_progress = 50
 		}
 	}
 	else_if = {
@@ -7084,16 +7201,8 @@ on_centralized_state = {
 			owner = { has_government_attribute = centralize_state_half_refund }
 		}
 		owner = {
-			add_adm_power = 25
-			change_government_reform_progress = 25
-		}
-	}
-	else_if = {
-		limit = {
-			owner = { has_government_attribute = sea_centralize_state_reformprgoress_refund }
-		}
-		owner = {
-			change_government_reform_progress = 50
+			add_adm_power = 50
+			#change_government_reform_progress = 25
 		}
 	}
 	if = {

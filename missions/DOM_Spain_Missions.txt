@@ -1932,6 +1932,10 @@ dom_cas_missions_3 = {
 				area = galicia_area
 				area = asturias_area
 				area = leon_area
+				area = extremadura_area
+				area = castille_area
+				area = toledo_area
+				area = lower_andalucia_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1962,6 +1966,22 @@ dom_cas_missions_3 = {
 				owned_by = ROOT
 			}
 			asturias_area = {
+				type = all
+				owned_by = ROOT
+			}
+			extremadura_area = {
+				type = all
+				owned_by = ROOT
+			}
+			castille_area = {
+				type = all
+				owned_by = ROOT
+			}
+			toledo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_andalucia_area = {
 				type = all
 				owned_by = ROOT
 			}

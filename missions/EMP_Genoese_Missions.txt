@@ -13,6 +13,7 @@ genoa_missions_africa = {
 		required_missions = { genoa_trade_node_power }
 		position = 2
 		trigger = {
+			NOT = { has_reform = cossacks_reform }
 			NOT = { any_hired_mercenary_company = { template = merc_genoa_crossbowmen_company } }
 			OR = {
 				mil_power = 300
@@ -263,7 +264,7 @@ emp_gen_missions_western_med = {
 						province_trade_power = 60
 					}
 				}
-				army_size_percentage = 1.5
+				army_size_percentage = 1
 			}
 		}
 		effect = {
@@ -1226,10 +1227,15 @@ genoa_europe_slot = {
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				region = crimea_region
-				has_terrain = steppe
-				value = 10
+			OR = {
+				capital_scope = {
+					area = crimea_area
+				}
+				num_of_owned_provinces_with = {
+					region = crimea_region
+					has_terrain = steppe
+					value = 10
+				}
 			}
 		}
 		effect = {
@@ -1241,6 +1247,12 @@ genoa_europe_slot = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = { any_owned_province = { region = italy_region } }
+				}
+				set_country_flag = sea_gen_steppe_cossacks_flag_for_decision
 			}
 		}
 	}
