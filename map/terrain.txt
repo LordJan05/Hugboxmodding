@@ -399,8 +399,6 @@ categories =  {
 			5668
 			#Oirat Split
 			2120 4208 5685 2444 2441 5710
-			#Jan Mayen
-			5790
 		}
 	}
 
