@@ -899,12 +899,18 @@ gold = {
 		modifier = {
 			factor = 100
 			OR = {
-				province_id = 856
+				province_id = 856		# Zacatecas
 				province_id = 4976
 				province_id = 4974
 				province_id = 4997
 				province_id = 1089
 				province_id = 1091
+				province_id = 852		# Mexico
+				province_id = 2626		# Tullucan
+				province_id = 4572		# Malinalco
+				province_id = 4571		# Tlacopan
+				province_id = 4570		# Texcoco
+				province_id = 975		# Potosi
 			}
 		}
 	}
