@@ -2,8 +2,8 @@
 
 #1839 - Suruga
 
-owner = TKD
-controller = TKD
+owner = IMG
+controller = IMG
 culture = togoku
 religion = shinto
 capital = "Sunpu"
@@ -13,7 +13,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = TKD
 add_core = IMG
 discovered_by = chinese
 discovered_by = MCH

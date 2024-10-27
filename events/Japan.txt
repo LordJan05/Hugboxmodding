@@ -355,3 +355,31 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = tokugawam.1
+	title = tokugawam.1.t
+	desc = tokugawam.1.desc
+	picture = COURT_eventPicture
+	
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		ai = no
+		tag = TKG
+		is_year = 1445
+	}
+
+	option = {
+		name = "TOKUGAWA" 
+			add_country_modifier = {
+			name = "Tokugawa"
+			duration = 10950
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -1841,7 +1841,7 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 	trade_goods_size = 3.0
 }
 
-skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
+skanemarket = { #Skï¿½nemarknaden - Biggest Herring Market in Europe
 	trade_goods_size = 2
 }
 
@@ -14191,6 +14191,12 @@ TIM_full_army_trad = {
 
 TIM_full_army_prof = {
 	yearly_army_professionalism = 0.01 
+}
+
+Tokugawa = {
+	global_tax_income = 60
+	years_of_nationalism = -5
+	discipline = 0.025
 }
 
 #Perisna Influence Counter
