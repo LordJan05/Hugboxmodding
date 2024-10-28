@@ -2,8 +2,8 @@
 
 #1018 - Izumo
 
-owner = AMA
-controller = AMA
+owner = TKD
+controller = TKD
 culture = japanese
 religion = shinto
 capital = "Matsue"
@@ -13,6 +13,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
+add_core = TKD
 add_core = AMA
 fort_15th = yes #Gassantoda Castle
 discovered_by = chinese
