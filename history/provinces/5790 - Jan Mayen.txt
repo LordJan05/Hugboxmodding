@@ -1,11 +1,11 @@
 owner = JMN
 controller = JMN
 add_core = JMN
-culture = slovene
-religion = catholic
+culture = jan_mayenese
+religion = bear_pagan_reformed
 base_tax = 3
 base_production = 3
-trade_goods = livestock
+trade_goods = fish
 base_manpower = 2
 capital = "Jan Mayen"
 is_city = yes

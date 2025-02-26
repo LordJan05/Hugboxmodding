@@ -1,0 +1,343 @@
+JMN_mission_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JMN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	JMN_build_up_island_1 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_1 } 
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			370 = {
+				cede_province = JMN
+				add_core = JMN
+				hidden_effect = {
+					remove_core = NOR
+				}
+			}
+		}
+	}
+
+}	
+JMN_mission_slot_2= {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JMN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	JMN_build_up_army2 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_1 } 
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			371 = {
+				cede_province = JMN
+				add_core = JMN
+				hidden_effect = {
+					remove_core = NOR
+				}
+			}
+		}
+	}
+
+	JMN_build_up_island_2 = {
+		icon = mission_japanese_samurai
+		position = 3
+		required_missions = { JMN_build_up_2 } 
+		trigger = {
+			AND = {
+				owns_core_province = 371
+				371 = {
+				development = 50
+				}
+
+				owns_core_province = 370
+				370 = {
+				development = 50
+				}
+
+				owns_core_province = 1979
+				1979 = {
+				development = 50
+				}
+
+				owns_core_province = 1978
+				1978 = {
+				development = 50
+				}
+			}
+		}
+		effect = {
+			371 = {
+				add_province_modifier = {
+					name = "jmn_dev_reward2"
+					duration = -1
+				}
+			}
+		
+			370 = {
+				add_province_modifier = {
+					name = "jmn_dev_reward2"
+					duration = -1
+				}
+			}
+
+			1979 = {
+				add_province_modifier = {
+					name = "jmn_dev_reward2"
+					duration = -1
+				}
+			}
+
+			1978 = {
+				add_province_modifier = {
+					name = "jmn_dev_reward2"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+
+JMN_mission_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JMN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	JMN_build_up_1 = {
+		icon = mission_japanese_samurai
+		position = 1
+		required_missions = {  } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 10
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_build_up_jan_mayen"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "jmn_incomeboost"
+				duration = -1
+			}
+		}
+	}
+
+	JMN_build_up_2 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_1 } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 15
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_build_up_jan_mayen2"
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = jmn_build_up_jan_mayen
+				}
+				center_of_trade = 3
+			}
+		}
+	}
+
+	JMN_build_up_3 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_2 } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 20
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_build_up_jan_mayen3"
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = jmn_build_up_jan_mayen2
+				}
+			}
+		}
+	}
+
+	JMN_build_up_4 = {
+		icon = mission_japanese_samurai
+		position = 3
+		required_missions = { JMN_build_up_3 } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 30
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_build_up_jan_mayen4"
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = jmn_build_up_jan_mayen3
+				}
+			}
+		}
+	}
+
+	JMN_build_up_5 = {
+		icon = mission_japanese_samurai
+		position = 4
+		required_missions = { JMN_build_up_4 } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 40
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_build_up_jan_mayen5"
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = jmn_build_up_jan_mayen4
+				}
+			}
+		}
+	}
+
+	JMN_build_up_6 = {
+		icon = mission_japanese_samurai
+		position = 4
+		required_missions = { JMN_build_up_5 } 
+		trigger = {
+			AND = {
+				owns_core_province = 5790
+				5790 = {
+				development = 50
+				}
+			}
+		}
+		effect = {
+			5790 = {
+				add_province_modifier = {
+					name = "jmn_dev_reward1"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+JMN_mission_slot_4= {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JMN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	JMN_build_up_island_4 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_1 } 
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			1979 = {
+				cede_province = JMN
+				add_core = JMN
+				hidden_effect = {
+					remove_core = NOR
+				}
+			}
+		}
+	}
+}
+
+JMN_mission_slot_5= {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JMN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	JMN_build_up_island_5 = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { JMN_build_up_1 } 
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			1978 = {
+				cede_province = JMN
+				add_core = JMN
+				hidden_effect = {
+					remove_core = NOR
+				}
+			}
+		}
+	}
+}

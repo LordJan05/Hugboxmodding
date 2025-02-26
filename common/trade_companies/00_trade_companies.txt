@@ -426,7 +426,7 @@ trade_company_north_sea = {
 		1978 1979 #subarctic_islands_area
 		370 371 #iceland_area
 		23 24 2752 4145 #western_norway
-		244 4375 
+		244 4375 5790
 	}
 	
 	# Specific

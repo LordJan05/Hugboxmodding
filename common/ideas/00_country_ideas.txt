@@ -9533,12 +9533,12 @@ CDL_ideas = {
 
 JMN_ideas = {
 	start = {
-		core_creation = -0.15
-		leader_land_shock = 1
+		global_tax_modifier = 0.2
+		production_efficiency = 0.1
 	}
 
 	bonus = {
-		land_maintenance_modifier = -0.05
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -9547,25 +9547,35 @@ JMN_ideas = {
 	free = yes
 
 	of_noble_bearing = {
-		prestige = 1
+		stability_cost_modifier = -0.15
 	}	
 	the_right_to_bear_arms = {
-		infantry_power = 0.2
+		infantry_power = 0.3
 	}
 	grizzly_terrain = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
+		prestige = 1
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 	}
 	keeping_our_bearings = {
-		naval_attrition = -0.15
+		
+		global_colonial_growth = 30
 	}
 	polarized_nation = {
-		num_accepted_cultures = 2
+		culture_conversion_cost = -0.2
+		build_cost = -0.05
 	}
 	come_bearing_gifts = {
-		improve_relation_modifier = 0.3
+		global_manpower_modifier = 0.1
+		
 	}
 	expand_the_bearocracy = {
-		development_cost = -0.1
+		technology_cost = -0.05
+		idea_cost = -0.05
 	}
 	
 }
