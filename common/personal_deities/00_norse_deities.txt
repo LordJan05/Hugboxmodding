@@ -57,7 +57,7 @@ freya =
 
 tor = {
 	defensiveness = 0.2
-	artillery_fire = 0.5
+	artillery_fire = 1.0
 	
 	potential = {
 		religion = norse_pagan_reformed

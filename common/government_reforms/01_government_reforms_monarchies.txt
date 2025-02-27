@@ -1941,7 +1941,7 @@ janissary_autocracy_reform = {
 		}
 	}
 	valid_for_nation_designer = yes
-	nation_designer_cost = 50
+	nation_designer_cost = 125
 	modifiers = {
 		global_manpower_modifier = 0.1
 		land_forcelimit_modifier = 0.1
@@ -2700,7 +2700,7 @@ tsardom = {
 	fixed_rank = 3
 	legacy_equivalent = tsardom_legacy
 	valid_for_nation_designer = yes
-	nation_designer_cost = 40
+	nation_designer_cost = 50
 
 	nation_designer_trigger = {
 		OR = {
@@ -2788,7 +2788,7 @@ ruthenian_tsardom = {
 		}
 	}
 	valid_for_nation_designer = yes
-	nation_designer_cost = 40
+	nation_designer_cost = 50
 
 	nation_designer_trigger = {
 		OR = {
@@ -2845,7 +2845,7 @@ russian_empire_reform = {
 	}
 	fixed_rank = 3
 	valid_for_nation_designer = yes
-	nation_designer_cost = 40
+	nation_designer_cost = 100
 
 	modifiers = {
 		max_absolutism = 10
